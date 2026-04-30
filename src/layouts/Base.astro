@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+const { title = '观吾 | 50岁用AI做实事' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-brand">观吾</a>
+        <nav class="site-nav">
+          <a href="/diary/">日记</a>
+          <a href="/about/">关于</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 观吾 · banbai.ai</p>
+        <p style="margin-top: 8px; font-size: 11px; opacity: 0.6;">这个网站由AI助理开发并维护</p>
+      </div>
+    </footer>
+  </body>
+</html>
