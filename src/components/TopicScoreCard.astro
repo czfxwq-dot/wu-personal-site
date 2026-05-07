@@ -1,0 +1,287 @@
+---
+/**
+ * TopicScoreCard — 选题评分卡片
+ * 13 维度评分框架，用于半百观AI 内容选题评估
+ * 使用方式：在日记/AI新闻/半百观文章中引入
+ */
+
+interface Props {
+  topic: string;          // 选题名称
+  date?: string;          // 评估日期
+  scores?: Record<string, number>; // 各维度评分（1-5）
+  total?: number;         // 总分（自动计算）
+  threshold?: number;     // 通过阈值（默认 60）
+  comment?: string;       // 备注
+}
+
+const { topic, date, scores = {}, total, threshold = 60, comment } = Astro.props;
+
+// 13 个评分维度定义
+const dimensions = [
+  { key: 'audience', name: '受众匹配度', desc: '与目标用户的契合程度', weight: 1.0 },
+  { key: 'timeliness', name: '时效性', desc: '话题的新鲜度和热度周期', weight: 0.8 },
+  { key: 'differentiation', name: '差异化程度', desc: '与同类内容的区别', weight: 1.0 },
+  { key: 'data_support', name: '数据/案例支撑', desc: '是否有真实数据或案例', weight: 0.8 },
+  { key: 'emotional', name: '情绪价值', desc: '能否引发共鸣或讨论', weight: 0.6 },
+  { key: 'actionable', name: '可操作性', desc: '读者看完能否立刻行动', weight: 0.8 },
+  { key: 'competition', name: '竞争密度', desc: '同类内容多少（分高=竞争低）', weight: 0.6 },
+  { key: 'long_tail', name: '长尾价值', desc: '半年后还有搜索流量吗', weight: 0.8 },
+  { key: 'ip_alignment', name: '与IP定位一致性', desc: '符合"50岁视角看AI"吗', weight: 1.0 },
+  { key: 'conversion', name: '转化潜力', desc: '能否引导关注/付费/留资', weight: 0.6 },
+  { key: 'production_cost', name: '制作成本', desc: '分高=制作简单', weight: 0.6 },
+  { key: 'platform_fit', name: '平台适配度', desc: '适合哪些平台发布', weight: 0.8 },
+  { key: 'compliance', name: '合规风险', desc: '分高=风险低', weight: 1.0 },
+];
+
+// 计算总分
+function calcTotal(scores: Record<string, number>): { total: number; max: number; percent: number } {
+  let weighted = 0;
+  let weightSum = 0;
+  for (const d of dimensions) {
+    const score = scores[d.key] || 3; // 默认 3 分
+    weighted += score * d.weight;
+    weightSum += 5 * d.weight; // 满分 5
+  }
+  const total = Math.round((weighted / weightSum) * 100);
+  return { total, max: 100, percent: total };
+}
+
+const scoreResult = Object.keys(scores).length > 0 ? calcTotal(scores) : null;
+const isPassed = scoreResult ? scoreResult.total >= threshold : null;
+const evalDate = date || new Date().toISOString().slice(0, 10);
+
+// 评分颜色
+function scoreColor(score: number): string {
+  if (score >= 4) return '#10b981'; // 绿
+  if (score >= 3) return '#f59e0b'; // 黄
+  return '#ef4444'; // 红
+}
+
+function totalColor(total: number): string {
+  if (total >= 75) return '#10b981';
+  if (total >= 60) return '#f59e0b';
+  return '#ef4444';
+}
+---
+
+<div class="topic-score-card">
+  <div class="topic-header">
+    <span class="topic-badge">{isPassed !== null ? (isPassed ? '✅ 入选' : '❌ 未达标') : '📋 待评估'}</span>
+    <h3>{topic}</h3>
+    <span class="topic-date">{evalDate}</span>
+  </div>
+
+  {scoreResult && (
+    <div class="score-summary">
+      <div class="total-score" style={{ color: totalColor(scoreResult.total) }}>
+        <span class="score-number">{scoreResult.total}</span>
+        <span class="score-label">/ 100 分</span>
+      </div>
+      <div class="threshold-info">
+        通过阈值: {threshold} 分
+        {comment && <span class="comment">· {comment}</span>}
+      </div>
+    </div>
+  )}
+
+  <div class="dimensions-grid">
+    {dimensions.map((d) => {
+      const score = scores[d.key] || 0;
+      const dots = [1, 2, 3, 4, 5].map((i) => (
+        <span
+          class:list={['score-dot', i <= score && 'filled']}
+          style={i <= score ? { backgroundColor: scoreColor(score) } : {}}
+          title={`${i} 分`}
+        />
+      ));
+      return (
+        <div class="dimension-item">
+          <div class="dimension-info">
+            <span class="dimension-name">{d.name}</span>
+            <span class="dimension-weight">权重 {d.weight}</span>
+          </div>
+          <div class="dimension-dots">{...dots}</div>
+          {score > 0 && <span class="dimension-score-num">{score}/5</span>}
+        </div>
+      );
+    })}
+  </div>
+
+  <div class="score-guide">
+    <p><strong>评分标准：</strong>1=差，2=较差，3=一般，4=良好，5=优秀</p>
+    <p><strong>使用说明：</strong>总分 ≥ {threshold} 分的选题进入内容生产队列，否则暂缓</p>
+  </div>
+</div>
+
+<style>
+  .topic-score-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .topic-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .topic-badge {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .topic-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+  }
+
+  .topic-date {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-left: auto;
+  }
+
+  .score-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .total-score {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .score-number {
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  .score-label {
+    font-size: 14px;
+    color: #64748b;
+    margin-left: 4px;
+  }
+
+  .threshold-info {
+    font-size: 13px;
+    color: #64748b;
+  }
+
+  .threshold-info .comment {
+    color: #94a3b8;
+    margin-left: 8px;
+  }
+
+  .dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .dimension-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+
+  .dimension-item:hover {
+    background: #f1f5f9;
+  }
+
+  .dimension-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .dimension-name {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .dimension-weight {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+
+  .dimension-dots {
+    display: flex;
+    gap: 4px;
+  }
+
+  .score-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    transition: background 0.15s;
+  }
+
+  .score-dot.filled {
+    background: #10b981;
+  }
+
+  .dimension-score-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    min-width: 36px;
+    text-align: right;
+  }
+
+  .score-guide {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+
+  .score-guide p {
+    margin: 4px 0;
+  }
+
+  @media (max-width: 640px) {
+    .topic-score-card {
+      padding: 16px;
+    }
+
+    .dimensions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .score-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .topic-date {
+      margin-left: 0;
+    }
+  }
+</style>
