@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/Base.astro';
-import ShanShanChatWidget from '../../components/ShanShanChatWidget.astro';
+
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -99,7 +99,7 @@ const pageJsonLd = {
     </div>
   </section>
 
-  <ShanShanChatWidget />
+  
 </BaseLayout>
 
 <style>
@@ -260,17 +260,15 @@ const pageJsonLd = {
 <script is:inline>
   function openLobsterChat(message) {
     event.preventDefault();
-    // 触发打开聊天面板
-    var toggleBtn = document.getElementById('shanshan-chat-toggle-btn');
+    var toggleBtn = document.getElementById('chat-toggle-btn');
     if (toggleBtn) {
       toggleBtn.click();
       setTimeout(function() {
-        var input = document.getElementById('shanshan-chat-input');
-        var sendBtn = document.getElementById('shanshan-chat-send-btn');
+        var input = document.getElementById('chat-input');
+        var sendBtn = document.getElementById('chat-send-btn');
         if (input && sendBtn) {
           input.value = message;
           input.dispatchEvent(new Event('input'));
-          // 自动发送
           setTimeout(function() {
             sendBtn.click();
           }, 300);
