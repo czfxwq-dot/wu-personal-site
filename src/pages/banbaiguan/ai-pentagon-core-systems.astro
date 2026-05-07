@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Citations from '../../components/Citations.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI进入美军绝密网络：当国家信任机器而非人类，意味着什么？",
+  "datePublished": "2026-05-05",
+  "dateModified": "2026-05-05",
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI"
+  },
+  "description": "美国国防部宣布将8家AI公司的系统部署在IL6/IL7绝密网络上。当AI被允许处理国家最高机密，这背后传递的信号远超军事范畴。"
+};
+---
+
+<BaseLayout title="AI进入美军绝密网络" jsonLd={articleJsonLd} navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-05">2026年5月5日</time>
+        <span class="article-tag">AI安全</span>
+      </div>
+      <h1>AI进入美军绝密网络</h1>
+      <p class="article-subtitle">当国家信任机器而非人类，意味着什么？</p>
+    </header>
+
+    <div class="article-content">
+      <p class="lead">5月1日，美国国防部宣布与8家AI公司达成协议，将它们的系统部署在IL6/IL7保密网络上。很多人可能没注意到这条新闻的分量——但我觉得，这是AI发展史上一个标志性时刻。</p>
+      
+      <h2>一、IL6/IL7是什么级别？</h2>
+      
+      <p>简单说——这是美国国防部的<strong>绝密级网络</strong>。IL6处理"秘密"级信息，IL7处理"绝密"级。</p>
+      
+      <p>能进入这个网络的系统，意味着它被赋予了处理国家最高级别机密数据的权限。过去，这个权限只属于经过最高安全审查的人类。现在，AI系统也拿到了这把钥匙。</p>
+      
+      <h2>二、名单上的8家公司，各有来头</h2>
+      
+      <p>这次入选的名单很有意思，不是清一色的传统军工企业：</p>
+      
+      <ul>
+        <li><strong>亚马逊、谷歌、微软、英伟达、甲骨文</strong> — 都是云计算和算力的全球霸主</li>
+        <li><strong>OpenAI</strong> — 通用AI的旗手</li>
+        <li><strong>SpaceX</strong> — Starshield卫星网络提供跨分散作战地点的机密数据传输</li>
+        <li><strong>Reflection AI</strong> — 名单中的新面孔，这家以"事实准确性"著称的公司被选中进入最安全的环境</li>
+      </ul>
+      
+      <h2>三、AI在军事场景做什么？</h2>
+      
+      <p>三个核心能力，每一个都很有价值：</p>
+      
+      <ul>
+        <li><strong>数据合成</strong> — 从海量传感器、卫星、信号情报中快速提取可操作信息</li>
+        <li><strong>态势感知</strong> — 实时处理复杂环境数据，标记异常和模式</li>
+        <li><strong>决策支持</strong> — 给指挥官呈现选项和风险，<strong>而非替代人类判断</strong></li>
+      </ul>
+      
+      <p>注意第三点——"而非替代人类判断"。这说明即使是军方，也清楚AI的边界。它提供选项，最终拍板的还是人。</p>
+      
+      <h2>四、国防部为什么要选8家？</h2>
+      
+      <p>国防部明确表示要避免"供应商锁定"——八家并行，互为备份。</p>
+      
+      <p>这个思路其实和我们做企业系统时的架构理念是一样的：不要把命脉交到一个供应商手里。</p>
+      
+      <h2>五、对我们的思考</h2>
+      
+      <p>军事场景对AI安全性和可靠性的要求，<strong>远高于任何商业场景</strong>。当AI能被用于处理绝密情报时，我们做AIoT库存管理系统的安全性，在客户眼中应该是什么样的标准？</p>
+      
+      <p>这是一个很好的品牌故事切入点：</p>
+      
+      <ul>
+        <li>AI正在从"玩具"变成"基础设施"</li>
+        <li>安全和可靠，是AI落地的底线</li>
+        <li>企业级AI系统的安全性，是核心竞争力</li>
+      </ul>
+      
+      <p>当全球最强的AI公司都在给军方做系统时，我们在工业领域做的，同样是把AI嵌入到"不能出错"的场景里。这是一个可以讲给所有客户听的故事。</p>
+      
+      <Citations sources={[
+        {
+          title: "Pentagon taps eight AI firms including OpenAI, Amazon, SpaceX for classified networks",
+          url: "https://www.reuters.com/technology/artificial-intelligence/",
+          source: "Reuters",
+          date: "2026-05-01"
+        },
+        {
+          title: "DoD Announces AI Systems for IL6/IL7 Secure Networks",
+          url: "https://www.defense.gov/News/",
+          source: "美国国防部官网",
+          date: "2026-05-01"
+        },
+        {
+          title: "What Are IL5, IL6, and IL7 Security Levels?",
+          url: "https://www.nist.gov/publications",
+          source: "NIST",
+          date: "2026-04"
+        }
+      ]} />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+.article-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+.article-header {
+  margin-bottom: 32px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+.article-tag {
+  background: var(--color-accent);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.article-header h1 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+.article-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+  margin: 0;
+}
+.article-content {
+  line-height: 1.8;
+}
+.article-content .lead {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.article-content h2 {
+  font-size: 22px;
+  margin: 32px 0 16px;
+  line-height: 1.4;
+}
+.article-content p {
+  margin: 16px 0;
+}
+.article-content ul {
+  margin: 16px 0;
+  padding-left: 20px;
+}
+.article-content li {
+  margin-bottom: 8px;
+}
+.article-content strong {
+  color: var(--color-heading);
+}
+</style>

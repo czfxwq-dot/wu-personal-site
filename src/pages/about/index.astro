@@ -1,46 +1,72 @@
 ---
 import BaseLayout from '../../layouts/Base.astro';
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "关于 | 观吾",
+  "description": "观吾（吴总）的个人简介 — 磐石电气联合创始人、AIoT实践者、半百观AI主理人",
+  "url": "https://banbai.ai/about/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾",
+    "image": "https://banbai.ai/avatar.jpg",
+    "jobTitle": "联合创始人",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "磐石电气（常州）有限公司",
+      "url": "https://www.monolithiot.com"
+    },
+    "description": "50岁，擅长结构化思维与第一性原理，精通AI应用、品牌管理、新媒体运营。专注数字化智能库存管理 AIoT 产品及解决方案。",
+    "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"],
+    "url": "https://banbai.ai/about/",
+    "sameAs": [
+      "https://banbai.ai"
+    ]
+  }
+};
 ---
 
-<BaseLayout title="关于 | 观吾">
+<BaseLayout title="关于 | 观吾" jsonLd={aboutJsonLd} navActive="about">
   <section class="page-section">
     <h1>关于</h1>
 
-    <div style="margin-bottom: 48px;">
+    <div class="about-section">
       <div class="section-title">观吾</div>
-      <p style="font-size: 16px; line-height: 2; margin-bottom: 24px;">
+      <p class="about-text">
         笔名：「观吾」。
         50岁，磐石电气（常州）有限公司联合创始人。<br />
         专注数字化智能库存管理 AIoT 产品及解决方案。<br />
         半百观AI新媒体品牌主理人。
       </p>
-      <p style="font-size: 16px; line-height: 2;">
+      <p class="about-text">
         擅长结构化思维与第一性原理，精通AI应用、品牌管理、新媒体运营。<br />
         正在做的事：用AI把想法变成现实。
       </p>
     </div>
 
-    <div style="margin-bottom: 48px;">
+    <div class="about-section">
       <div class="section-title">磐石电气（常州）有限公司</div>
-      <p style="font-size: 16px; line-height: 2; margin-bottom: 16px;">
+      <p class="about-text">
         国家级高新技术企业、专精特新企业。公司深耕数智化领域，精准定位AI场景解决方案提供商，依托多传感器融合、智慧存储AI中台、多模态算法三大核心技术，以智能工单系统为核心枢纽，结合AI预测、视觉监控、智能动作控制等前沿技术，将各类复杂业务需求标准化转化为可落地、可执行、可追溯的数字化任务，打通场景数智化全链路。
       </p>
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 16px;">
-        公司旗下拥有MonolithIoT、贝榕两大核心品牌，深耕工业、零售两大主流赛道，长期为国家电网、华为、顺丰、星巴克、DHL等国内外头部企业提供专业数智化解决方案，持续赋能各行各业完成高效、高质量的数智化转型升级。
+      <p class="about-text-light">
+        公司旗下拥有MonolithIoT、贝榕两大核心品牌，深耕工业、零售两大主流赛道，长期为国家电网、华为、顺丰、DHL等国内外头部企业提供专业数智化解决方案，持续赋能各行各业完成高效、高质量的数智化转型升级。
       </p>
-      <p style="font-size: 14px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 24px;">
-        公司网站：<a href="https://www.monolithiot.com/" target="_blank" style="color: #5b4a3f; text-decoration: underline; font-weight: 500;">monolithiot.com</a> ｜
-        YouTube：<a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" target="_blank" style="color: #5b4a3f; text-decoration: underline; font-weight: 500;">磐石电气</a>
+      <p class="about-links">
+        公司网站：<a href="https://www.monolithiot.com/" target="_blank">monolithiot.com</a> ｜
+        YouTube：<a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" target="_blank">磐石电气</a>
       </p>
-      <div style="text-align: center;">
-        <img src="/company-qr.png" alt="磐石电气 新媒体矩阵" style="max-width: 400px; width: 100%; height: auto; border-radius: 12px;" />
+      <div class="about-qr-wrapper">
+        <img src="/company-qr.png" alt="磐石电气 新媒体矩阵" />
       </div>
     </div>
 
 
-    <div>
+    <div class="about-section">
       <div class="section-title">关于这个网站</div>
-      <p style="font-size: 16px; line-height: 2;">
+      <p class="about-text">
         这个网站由我和我的AI助理共同建造。<br />
         我负责方向和内容，AI负责技术和实现。<br />
         从产品设计到代码开发，全程无前端工程师参与。
@@ -49,3 +75,13 @@ import BaseLayout from '../../layouts/Base.astro';
 
   </section>
 </BaseLayout>
+
+<style>
+  .about-section { margin-bottom: 48px; }
+  .about-text { font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
+  .about-text-light { font-size: 15px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 16px; }
+  .about-links { font-size: 14px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 24px; }
+  .about-links a { color: var(--color-accent); text-decoration: underline; font-weight: 500; }
+  .about-qr-wrapper { text-align: center; }
+  .about-qr-wrapper img { max-width: 400px; width: 100%; height: auto; border-radius: 12px; }
+</style>

@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import { articles } from '../../data/articles';
+
+const articlesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "半百观AI | 文章",
+  "description": "50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得",
+  "url": "https://banbai.ai/articles/",
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾"
+  }
+};
+
+const allDates = articles.map(a => a.date);
+const allTags = [...new Set(articles.map(a => a.tag))];
+---
+
+<BaseLayout title="半百观" jsonLd={articlesJsonLd} navActive="banbaiguan">
+  <section class="page-section">
+    <h1>半百观</h1>
+    <p class="subtitle">
+      50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得
+    </p>
+
+    <!-- 搜索+筛选栏 -->
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="text" id="article-search" class="search-input" placeholder="搜索标题或摘要..." />
+      </div>
+      <select id="article-date-filter" class="date-filter">
+        <option value="">全部日期</option>
+        {allDates.map(d => <option value={d}>{d}</option>)}
+      </select>
+      <select id="article-tag-filter" class="date-filter">
+        <option value="">全部标签</option>
+        {allTags.map(t => <option value={t}>{t}</option>)}
+      </select>
+      <span id="article-count" class="result-count">共 {articles.length} 篇</span>
+    </div>
+
+    <div id="article-list">
+      {articles.map((article) => (
+        <article class="article-card" data-date={article.date} data-tag={article.tag}
+          data-search={`${article.title} ${article.excerpt}`.toLowerCase()}>
+          <div class="article-meta">
+            <span class="article-date">{article.date}</span>
+            <span class="article-tag" data-tag={article.tag}>{article.tag}</span>
+          </div>
+          <h2>
+            <a href={`/banbaiguan/${article.slug}/`}>{article.title}</a>
+          </h2>
+          <p class="article-excerpt">{article.excerpt}</p>
+          <a href={`/banbaiguan/${article.slug}/`} class="read-more">阅读全文 →</a>
+        </article>
+      ))}
+    </div>
+
+    <div id="article-no-result" class="no-result" style="display:none;">
+      <p>🔍 没有找到匹配的文章</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .page-section h1 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--color-text-light);
+  }
+
+  /* 搜索栏 */
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0 24px;
+    flex-wrap: wrap;
+  }
+  .search-input-wrap {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: var(--color-text-light);
+    pointer-events: none;
+  }
+  .search-input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--color-card);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input:focus {
+    border-color: var(--color-accent);
+  }
+  .date-filter {
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--color-card);
+    color: var(--color-text);
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .date-filter:focus {
+    border-color: var(--color-accent);
+  }
+  .result-count {
+    font-size: 13px;
+    color: var(--color-text-light);
+    white-space: nowrap;
+  }
+
+  .article-card {
+    padding: 32px 20px;
+    margin-bottom: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+  .article-card:last-child {
+    margin-bottom: 0;
+  }
+  .article-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .article-date {
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+  .article-tag {
+    font-size: 12px;
+    padding: 2px 8px;
+    color: #fff;
+    border-radius: 4px;
+  }
+  .article-tag[data-tag="AI产业"] {
+    background: #f97316;
+  }
+  .article-tag[data-tag="AI安全"] {
+    background: #8b5cf6;
+  }
+  .article-card h2 {
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+  .article-card h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .article-card h2 a:hover {
+    color: var(--color-accent);
+  }
+  .article-excerpt {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .read-more {
+    font-size: 14px;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  .no-result {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--color-text-light);
+    font-size: 15px;
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('article-search') as HTMLInputElement;
+  const dateFilter = document.getElementById('article-date-filter') as HTMLSelectElement;
+  const tagFilter = document.getElementById('article-tag-filter') as HTMLSelectElement;
+  const articleList = document.getElementById('article-list')!;
+  const noResult = document.getElementById('article-no-result')!;
+  const countEl = document.getElementById('article-count')!;
+  const cards = articleList.querySelectorAll('.article-card') as NodeListOf<HTMLElement>;
+
+  function filterArticles() {
+    const keyword = searchInput.value.trim().toLowerCase();
+    const date = dateFilter.value;
+    const tag = tagFilter.value;
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchKeyword = !keyword || (card.dataset.search || '').includes(keyword);
+      const matchDate = !date || card.dataset.date === date;
+      const matchTag = !tag || card.dataset.tag === tag;
+      const show = matchKeyword && matchDate && matchTag;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    noResult.style.display = visible === 0 ? '' : 'none';
+    countEl.textContent = `共 ${visible} 篇`;
+  }
+
+  searchInput.addEventListener('input', filterArticles);
+  dateFilter.addEventListener('change', filterArticles);
+  tagFilter.addEventListener('change', filterArticles);
+</script>

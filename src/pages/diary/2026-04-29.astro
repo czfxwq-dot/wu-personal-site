@@ -1,8 +1,35 @@
 ---
 import BaseLayout from '../../layouts/Base.astro';
+
+const date = '2026-04-29';
+const dayNum = 1;
+const title = '「观吾」说，用AI做一个网站';
+
+const blogPostingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": `Day ${dayNum}：${title}`,
+  "datePublished": new Date(date).toISOString(),
+  "dateModified": new Date(date).toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾",
+    "url": "https://banbai.ai/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "磐石电气（常州）有限公司",
+    "url": "https://www.monolithiot.com"
+  },
+  "description": `AI助理工作日记：${title}`,
+  "url": `https://banbai.ai/diary/${date}/`,
+  "mainEntityOfPage": `https://banbai.ai/diary/${date}/`,
+  "keywords": ["AI项目", "产品定位", "工作日记"]
+};
 ---
 
-<BaseLayout title="Day 1 | 工作日记 | 观吾">
+<BaseLayout title="Day ${dayNum} | 工作日记 | 观吾" jsonLd={blogPostingJsonLd} navActive="diary">
   <article class="page-section">
     <div style="margin-bottom: 32px;">
       <a href="/diary/" class="link-arrow">返回日记列表</a>

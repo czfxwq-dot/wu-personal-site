@@ -1,8 +1,39 @@
 ---
 import BaseLayout from '../layouts/Base.astro';
+import { diaries } from '../data/diaries';
+import { dailyNewsSummaries } from '../data/ai-news-summary';
+import { articles } from '../data/articles';
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "观吾 | 50岁用AI做实事",
+  "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站，记录AI项目落地全过程",
+  "url": "https://banbai.ai",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "观吾",
+    "url": "https://banbai.ai"
+  },
+  "about": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾",
+    "jobTitle": "联合创始人",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "磐石电气（常州）有限公司"
+    }
+  }
+};
+
+const latest = diaries[0];
+
+const latestSummary = dailyNewsSummaries[0];
+const latestArticle = articles[0];
 ---
 
-<BaseLayout>
+<BaseLayout jsonLd={homeJsonLd} navActive="home">
   <section class="hero">
     <div class="container">
       <span class="hero-tag">🤖 AI助理正在建设中</span>
@@ -22,57 +53,240 @@ import BaseLayout from '../layouts/Base.astro';
     </div>
   </section>
 
+  <!-- 最新日记 -->
   <section class="page-section">
     <div class="container">
       <div class="section-title">最新日记</div>
-      <a href="/diary/2026-04-29/" class="card">
-        <div class="card-date">2026-04-29</div>
-        <h2>Day 1：「观吾」说，用AI做一个网站</h2>
-        <p>今天「观吾」提出了一个想法：做一个个人网站，记录工作、学习和生活，并且全程由AI来完成...</p>
+      <a href="/diary/" class="content-card">
+        <div class="card-date">{latest.date}</div>
+        <h3 class="card-title">{latest.title}</h3>
+        <p class="card-summary">{latest.summary}</p>
       </a>
+      <a href="/diary/" class="view-all-link">查看所有日记</a>
     </div>
   </section>
 
+  <!-- AI新闻 -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-title">AI新闻</div>
+      <div class="content-card">
+        <div class="card-meta">
+          <span class="card-date">{latestSummary.date}</span>
+          <span class="card-category">{latestSummary.newsItems.length}条新闻</span>
+        </div>
+        <h3 class="card-title">{latestSummary.title}</h3>
+        <p class="card-summary">{latestSummary.summary}</p>
+        <div class="card-comment">
+          <strong>📝 一句话点评：</strong>{latestSummary.comment}
+        </div>
+      </div>
+      <a href="/ai-news/" class="view-all-link">查看所有AI新闻</a>
+    </div>
+  </section>
+
+  <!-- 半百观 -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-title">半百观</div>
+      <a href={`/banbaiguan/${latestArticle.slug}/`} class="content-card">
+        <div class="card-meta">
+          <span class="card-date">{latestArticle.date}</span>
+          <span class="card-category">{latestArticle.tag}</span>
+        </div>
+        <h3 class="card-title">{latestArticle.title}</h3>
+        <p class="card-summary">{latestArticle.excerpt}</p>
+      </a>
+      <a href="/banbaiguan/" class="view-all-link">查看半百观</a>
+    </div>
+  </section>
+
+  <!-- AI项目 -->
   <section class="page-section">
     <div class="container">
       <div class="section-title">AI项目</div>
-      <div class="card">
-        <p style="color: var(--color-text-light);">内容建设中，敬请期待...</p>
+      <div class="card placeholder-card">
+        <p>内容建设中，敬请期待...</p>
       </div>
     </div>
   </section>
 
+  <!-- 关于公司 -->
   <section class="page-section">
     <div class="container">
       <div class="section-title">关于公司</div>
       <div class="card">
         <h2>磐石电气（常州）有限公司</h2>
         <p>国家级高新技术企业、专精特新企业，精准定位AI场景解决方案提供商。<br />依托多传感器融合、智慧存储AI中台、多模态算法三大核心技术，打通场景数智化全链路。</p>
-        <p style="margin-top: 8px; font-size: 14px; color: var(--color-text-light);">长期为国家电网、华为、顺丰、星巴克、DHL等头部企业提供数智化解决方案。</p>
-        <a href="/about/" class="link-arrow" style="margin-top: 16px;">了解更多</a>
+        <p style="margin-top: 8px; font-size: 14px; color: var(--color-text-light);">长期为国家电网、华为、顺丰、DHL等头部企业提供数智化解决方案。</p>
+        <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="/about/" class="link-arrow">了解更多</a>
+          <a href="https://www.monolithiot.com" class="link-arrow" target="_blank" rel="noopener">访问公司官网 →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p style="font-size: 14px; margin-bottom: 16px;">扫码关注「半百观AI」</p>
-      <div class="qr-codes">
-        <div class="qr-item">
+  <!-- 关注扫码 -->
+  <section class="page-section follow-section">
+    <div class="container">
+      <div class="follow-links">
+        <a href="https://www.monolithiot.com" target="_blank" rel="noopener" class="follow-link">🏭 公司业务官网</a>
+        <span class="follow-divider">|</span>
+        <span class="follow-link">📱 扫码关注「半百观AI」</span>
+      </div>
+      <div class="follow-qr-codes">
+        <div class="follow-qr-item">
           <img src="/gzh-qr.jpg" alt="公众号 半百观AI" />
-          <span class="qr-label">公众号</span>
+          <span class="follow-qr-label">公众号</span>
         </div>
-        <div class="qr-item">
+        <div class="follow-qr-item">
           <img src="/dy-qr.jpg" alt="视频号 半百观AI" />
-          <span class="qr-label">视频号</span>
+          <span class="follow-qr-label">视频号</span>
         </div>
-        <div class="qr-item">
+        <div class="follow-qr-item">
           <img src="/douyin-qr.jpg" alt="抖音 半百观AI" />
-          <span class="qr-label">抖音</span>
+          <span class="follow-qr-label">抖音</span>
         </div>
       </div>
-      <p style="margin-top: 24px; font-size: 11px; opacity: 0.5;">© 2026 观吾 · banbai.ai</p>
-      <p style="margin-top: 4px; font-size: 11px; opacity: 0.4;">这个网站由AI助理开发并维护</p>
     </div>
-  </footer>
+  </section>
+
+  <!-- 公司公众号二维码弹窗 -->
+  <div class="qr-modal-overlay" id="qr-modal-overlay">
+    <div class="qr-modal">
+      <button class="qr-modal-close" id="close-qr-modal">✕</button>
+      <h3 class="qr-modal-title">扫码咨询业务合作</h3>
+      <p class="qr-modal-subtitle">关注磐石电气公众号，获取专业方案</p>
+      <img src="/wechat-qr.jpg" alt="磐石电气 公众号二维码" class="qr-modal-img" />
+      <p class="qr-modal-hint">长按识别图中二维码</p>
+    </div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var trigger = document.getElementById('open-qr-modal');
+      var overlay = document.getElementById('qr-modal-overlay');
+      var closeBtn = document.getElementById('close-qr-modal');
+      if (trigger && overlay) {
+        trigger.addEventListener('click', function() {
+          overlay.classList.add('active');
+        });
+      }
+      if (closeBtn && overlay) {
+        closeBtn.addEventListener('click', function() {
+          overlay.classList.remove('active');
+        });
+      }
+      if (overlay) {
+        overlay.addEventListener('click', function(e) {
+          if (e.target === overlay) {
+            overlay.classList.remove('active');
+          }
+        });
+      }
+    });
+  </script>
 </BaseLayout>
+
+<style>
+  /* 统一内容卡片样式 */
+  .content-card {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .content-card:hover .card-title { opacity: 0.7; }
+  .card-meta { display: flex; gap: 10px; align-items: center; margin-bottom: 4px; }
+  .card-date { font-size: 12px; color: var(--color-text-light); }
+  .card-category { font-size: 11px; padding: 2px 6px; background: var(--color-bg-alt); border-radius: 4px; color: var(--color-text-light); }
+  .card-title { font-family: var(--font-serif); font-size: 16px; font-weight: 500; line-height: 1.4; margin-bottom: 6px; transition: opacity 0.2s; }
+  .card-summary { font-size: 14px; color: var(--color-text-light); line-height: 1.6; margin-bottom: 8px; }
+  .card-comment { font-size: 13px; padding: 8px 12px; background: var(--color-bg); border-left: 2px solid var(--color-accent); border-radius: 0 6px 6px 0; color: var(--color-text); }
+  .card-comment strong { font-weight: 600; }
+  .card-source-link { display: inline-block; font-size: 13px; color: var(--color-text-light); margin-top: 8px; text-decoration: underline; }
+  .card-source-link:hover { color: var(--color-text); }
+
+  /* 查看全部链接 */
+  .view-all-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-text-light); margin-top: 12px; transition: color 0.2s; }
+  .view-all-link::after { content: '→'; transition: transform 0.2s; }
+  .view-all-link:hover { color: var(--color-text); }
+  .view-all-link:hover::after { transform: translateX(3px); }
+
+  /* 占位卡片 */
+  .placeholder-card { background: transparent; border: 1px dashed var(--color-border); text-align: center; padding: 32px; }
+  .placeholder-card p { color: var(--color-text-light); font-size: 14px; }
+
+  /* 业务导流板块 */
+  .business-cta { background: var(--color-bg-alt); border-radius: 12px; margin: 32px auto; }
+  .business-card { padding: 24px 0; }
+  .business-intro h3 { font-family: var(--font-serif); font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .business-tagline { font-size: 14px; color: var(--color-text-light); margin-bottom: 16px; }
+  .business-scenarios { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .scenario-tag { font-size: 13px; padding: 4px 12px; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 20px; color: var(--color-text); }
+  .business-clients { font-size: 13px; color: var(--color-text-light); margin-bottom: 20px; }
+  .business-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* 关注扫码板块 */
+  .follow-section { text-align: center; }
+  .follow-links { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .follow-link { font-size: 13px; color: var(--color-text-light); text-decoration: none; word-break: keep-all; white-space: normal; }
+  .follow-link:hover { color: var(--color-text); }
+  .follow-divider { color: var(--color-border); }
+  .follow-qr-codes { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+  .follow-qr-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .follow-qr-item img { width: 120px; height: 120px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); }
+  .follow-qr-label { font-size: 12px; color: var(--color-text-light); }
+
+  /* 二维码弹窗 */
+  .qr-modal-trigger { cursor: pointer; border: none; font-size: 14px; }
+  .qr-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .qr-modal-overlay.active { display: flex; }
+  .qr-modal {
+    background: var(--color-bg, #faf8f5);
+    border-radius: 16px;
+    padding: 32px 24px 24px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+    animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  @keyframes modalIn {
+    from { transform: scale(0.95) translateY(10px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  .qr-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--color-text-light, #999);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+  .qr-modal-close:hover { background: var(--color-bg-alt, #eee); }
+  .qr-modal-title { font-size: 18px; font-weight: 600; margin-bottom: 6px; font-family: var(--font-serif, serif); }
+  .qr-modal-subtitle { font-size: 13px; color: var(--color-text-light, #666); margin-bottom: 16px; }
+  .qr-modal-img { width: 320px; height: 320px; object-fit: contain; border-radius: 12px; }
+  .qr-modal-hint { font-size: 12px; color: var(--color-text-light, #999); margin-top: 12px; }
+</style>

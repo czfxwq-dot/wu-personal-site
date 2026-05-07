@@ -1,0 +1,110 @@
+---
+/**
+ * Citations - 文章引用来源组件（GEO 优化）
+ * 
+ * 作用：
+ * 1. 让 AI 爬虫识别文章的引用来源（增强可信度）
+ * 2. 展示研究深度和事实依据
+ * 3. 提升 GEO（生成式引擎优化）权重
+ * 
+ * 使用方式：
+ * 在文章内容末尾添加：
+ * <Citations sources={[
+ *   { title: "文章标题", url: "https://...", source: "媒体名称", date: "2026-05-05" },
+ * ]} />
+ */
+
+interface Source {
+  title: string;
+  url: string;
+  source: string;
+  date?: string;
+}
+
+interface Props {
+  sources: Source[];
+  title?: string;
+}
+
+const { sources, title = '引用来源' } = Astro.props;
+---
+
+<section class="citations" aria-label="引用来源">
+  <h3 class="citations-title">📚 {title}</h3>
+  <ul class="citations-list">
+    {sources.map((s) => (
+      <li class="citation-item">
+        <a href={s.url} target="_blank" rel="noopener noreferrer" class="citation-link">
+          <span class="citation-source">{s.source}</span>
+          <span class="citation-title">{s.title}</span>
+          {s.date && <time class="citation-date" datetime={s.date}>{s.date}</time>}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="citations-note">
+    本文引用的来源均为公开报道，供读者进一步阅读。
+  </p>
+</section>
+
+<style>
+  .citations {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid var(--color-border);
+  }
+  .citations-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--color-heading);
+  }
+  .citations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .citation-item {
+    margin-bottom: 12px;
+  }
+  .citation-link {
+    display: block;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: var(--color-bg-alt);
+  }
+  .citation-link:hover {
+    border-color: var(--color-accent);
+    background: rgba(139, 92, 246, 0.05);
+  }
+  .citation-source {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .citation-title {
+    display: block;
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+  .citation-date {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+  }
+  .citations-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-style: italic;
+  }
+</style>

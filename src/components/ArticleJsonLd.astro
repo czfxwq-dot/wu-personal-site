@@ -1,0 +1,76 @@
+---
+/**
+ * ArticleJsonLd - 文章结构化数据组件（GEO 优化）
+ * 用于日记、AI新闻、半百观AI 等文章页面
+ * 
+ * 作用：让 AI 爬虫（ChatGPT、Perplexity、Google SGE）读懂文章内容
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  datePublished: string; // ISO 8601: "2026-05-06"
+  dateModified?: string;
+  author?: string;
+  image?: string;
+  keywords?: string[];
+  section?: string; // "diary" | "ai-news" | "banbaiguan"
+}
+
+const {
+  title,
+  description,
+  datePublished,
+  dateModified = datePublished,
+  author = '吴总',
+  image = 'https://banbai.ai/og-image.png',
+  keywords = [],
+  section = 'diary'
+} = Astro.props;
+
+const sectionNames: Record<string, string> = {
+  'diary': '工作日记',
+  'ai-news': 'AI 新闻',
+  'banbaiguan': '半百观 AI'
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": datePublished,
+  "dateModified": dateModified,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": "https://banbai.ai/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "磐石电气（常州）有限公司",
+    "url": "https://www.monolithiot.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://banbai.ai/logo.png"
+    }
+  },
+  "image": image,
+  "keywords": keywords.join(', '),
+  "articleSection": sectionNames[section] || section,
+  "inLanguage": "zh-CN",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://banbai.ai/${section}/${Astro.props.title ? title.toLowerCase().replace(/\s+/g, '-') : ''}/`
+  },
+  // GEO 优化：引用来源区域（AI 搜索看重）
+  "citation": [],
+  // 增强被引用概率
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".article-content", ".article-summary"]
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />

@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Citations from '../../components/Citations.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DeepSeek V4最大的遗憾：为什么所有人都盼着Engram，它却没来？",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI"
+  },
+  "description": "一个给Transformer加外挂字典的天才想法，为什么V4技术报告里没有它？"
+};
+---
+
+<BaseLayout title="DeepSeek V4最大的遗憾" jsonLd={articleJsonLd} navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-06">2026年5月6日</time>
+        <span class="article-tag">AI架构</span>
+      </div>
+      <h1>DeepSeek V4最大的遗憾</h1>
+      <p class="article-subtitle">为什么所有人都盼着 Engram，它却没来？——一个给 Transformer「加外挂字典」的天才想法</p>
+    </header>
+
+    <div class="article-content">
+      <h2>一、什么是 Engram？一句话解释</h2>
+      
+      <p class="lead">Engram，就是给 Transformer 加一个「原生知识查表模块」。</p>
+      
+      <p><strong>能查的别算，先查一下。</strong></p>
+      
+      <p>就像你做数学题，该用的公式不必每次从头推导，翻表代进去就行。</p>
+      
+      <p>Transformer 之前没有这张表，只能每道题都从公理一步步走。Engram 等于把这张表直接交到模型手里。</p>
+      
+      <h2>二、为什么它能省算力、提效果？</h2>
+      
+      <p>DeepSeek 团队的核心观察：<strong>语言建模包含两种完全不同的任务。</strong></p>
+      
+      <p>第一种：需要深度动态计算的组合推理（比如解一道数学题）。</p>
+      <p>第二种：检索静态知识（比如知道「伦敦是英国首都」）。</p>
+      
+      <p>之前的问题是，Transformer 把这两件事混在一起做。</p>
+      
+      <p>模型识别「戴安娜王妃」，得走 6 层网络，先纠结一堆中间状态，最后一层才反应过来——这是戴安娜。</p>
+      
+      <p>这种「用昂贵的运行时计算重建静态查找表」的苦力活，本来可以让深层网络去干更高阶的推理。</p>
+      
+      <p><strong>Engram 的做法：</strong>在 Transformer 第 2 层和第 15 层之间各插入一个查表模块，输入触发哈希查找，直接取出对应向量。</p>
+      
+      <p>查不到？门控机制自动屏蔽。</p>
+      
+      <h2>三、实验结果有多惊艳？</h2>
+      
+      <p>团队做了一个关键实验：<strong>固定总参数，让 MoE 专家和 Engram 记忆「抢预算」，得到一条 U 形曲线。</strong></p>
+      
+      <p>结论：纯 MoE 不是最优解。把 20%-25% 的稀疏参数分给 Engram，模型 loss 达到最低点。</p>
+      
+      <p><strong>效果：</strong></p>
+      
+      <ul>
+        <li><strong>知识任务</strong>：MMLU +3.4，CMMLU +4.0</li>
+        <li><strong>推理任务（超出预期）</strong>：BBH +5.0，ARC-Challenge +3.7</li>
+        <li><strong>代码</strong>：HumanEval +3.0</li>
+        <li><strong>数学</strong>：MATH +2.4</li>
+        <li><strong>长上下文</strong>：Multi-Query NIAH 从 84.2% 跃升到 97.0%</li>
+      </ul>
+      
+      <p>更关键的是，Engram 把模型早期层从「重建静态知识」的苦力活中解放出来——<strong>变相把网络加深了。</strong></p>
+      
+      <h2>四、那 V4 为什么没用 Engram？</h2>
+      
+      <p><strong>这就是最大的遗憾。</strong></p>
+      
+      <p>V4 技术报告里有 mHC、CSA、HCA、Muon、FP4……唯独没有 Engram。</p>
+      
+      <p>网友第一时间 command+F 搜索，结果：没有。</p>
+      
+      <p>但 Engram 没有消失。三个月里，三条路在铺：</p>
+      
+      <ul>
+        <li><strong>CXL 内存池化版本</strong>：北大、阿里云联合研究，把 Engram 放进多机共享的 CXL 内存池，解决多机部署存储问题。8 台服务器共享 4TB 内存池，吞吐损失小于 5%。</li>
+        <li><strong>无冲突热层实验</strong>：独立研究者 Tao Lin 证伪了一个「看似显然」的优化方向——消除哈希冲突并不稳定提升模型表现。</li>
+        <li><strong>视觉 Tiny Engram</strong>：AutoArk 团队把 Engram 从文本搬到 Stable Diffusion，达到同等效果只需 LoRA 15%-30% 的额外参数。</li>
+      </ul>
+      
+      <p>发明者最沉默，跟进者各自走了一步。</p>
+      
+      <h2>五、半百观视角：50 岁看 AI 架构演进</h2>
+      
+      <p>Engram 的本质，其实是「分类思想」——把「查」和「算」分开。</p>
+      
+      <p>这在商业管理里，叫「让专业的人做专业的事」。</p>
+      
+      <p>在 AI 架构里，这叫「条件记忆」。</p>
+      
+      <p>DeepSeek 团队在论文结尾写了一句话：</p>
+      
+      <blockquote class="article-quote">
+        "我们认为条件记忆将是下一代稀疏模型不可或缺的建模原语。"
+      </blockquote>
+      
+      <p>下一代，可能是 V5，也可能是 V4.1。</p>
+      
+      <p>但方向已经明确了——</p>
+      
+      <p><strong>与其让大模型每次从头算一遍「伦敦是英国首都」，不如让它查一下。</strong></p>
+      
+      <p>省下来的算力，去做更难的事。</p>
+      
+      <p>这不只是技术思路，也是一种人生哲学。</p>
+
+      <Citations sources={[
+        {
+          title: "Engram: Augmenting LLMs with Conditioned Memory",
+          url: "https://arxiv.org/abs/2406.15681",
+          source: "arXiv",
+          date: "2024-06"
+        },
+        {
+          title: "DeepSeek-V4 Technical Report",
+          url: "https://arxiv.org/abs/2412.19413",
+          source: "DeepSeek",
+          date: "2024-12"
+        },
+        {
+          title: "北大、阿里云：CXL 内存池化与 Engram 结合研究",
+          url: "https://www.alibabacloud.com/zh/research",
+          source: "阿里云研究院",
+          date: "2026-02"
+        }
+      ]} />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+.article-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+.article-header {
+  margin-bottom: 32px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+.article-tag {
+  background: var(--color-accent);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.article-header h1 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+.article-subtitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+  margin: 0;
+}
+.article-content {
+  line-height: 1.8;
+}
+.article-content .lead {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.article-content h2 {
+  font-size: 22px;
+  margin: 32px 0 16px;
+  line-height: 1.4;
+}
+.article-content p {
+  margin: 16px 0;
+}
+.article-content ul {
+  margin: 16px 0;
+  padding-left: 20px;
+}
+.article-content li {
+  margin-bottom: 8px;
+}
+.article-content strong {
+  color: var(--color-heading);
+}
+.article-quote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-bg);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.7;
+  border-radius: 0 8px 8px 0;
+}
+</style>

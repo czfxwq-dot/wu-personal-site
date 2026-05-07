@@ -1,0 +1,599 @@
+---
+/**
+ * ChatWidget - 右下角浮动聊天组件
+ * 通过 Cloudflare Worker 代理与 OpenClaw Gateway 对话
+ */
+
+// 配置 — 直连 Cloudflare Quick Tunnel（CORS 代理已加跨域头）
+const CHAT_API_URL = 'https://closes-reseller-digital-guided.trycloudflare.com/v1/chat/completions';
+const CHAT_API_HEADERS = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer bd75b779368fc2b5d26797c610583681c8f968321993a7f2',
+};
+---
+
+<div id="chat-widget-root">
+  <!-- 浮动按钮 -->
+  <button id="chat-toggle-btn" aria-label="打开AI助理对话" title="和山山对话">
+    <span class="chat-icon">🦞</span>
+  </button>
+
+  <!-- 对话面板 -->
+  <div id="chat-panel" class="hidden" role="dialog" aria-label="AI助理对话窗口">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span class="chat-avatar">🦞</span>
+        <div>
+          <span class="chat-title">山山 AI 助理</span>
+          <span class="chat-status" id="chat-status">在线</span>
+        </div>
+      </div>
+      <button id="chat-close-btn" aria-label="关闭对话">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-message bot">
+        <div class="message-avatar">🦞</div>
+        <div class="message-bubble">
+          <p>你好！我是山山，观吾网站的 AI 助理。</p>
+          <p>你可以问我关于网站内容、AI 应用、或任何你想聊的话题。有什么可以帮你的？</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <textarea
+        id="chat-input"
+        placeholder="输入你的问题..."
+        rows="1"
+        maxlength="2000"
+      ></textarea>
+      <button id="chat-send-btn" aria-label="发送消息" disabled>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 浮动按钮 */
+  #chat-widget-root {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  #chat-toggle-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-accent, #e8734a);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(232, 115, 74, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #chat-toggle-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(232, 115, 74, 0.5);
+  }
+
+  .chat-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  /* 对话面板 */
+  #chat-panel {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 380px;
+    max-width: calc(100vw - 48px);
+    height: 520px;
+    max-height: calc(100vh - 140px);
+    background: var(--color-bg, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-border, #e5e7eb);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  #chat-panel.hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    pointer-events: none;
+  }
+
+  /* 头部 */
+  .chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    background: var(--color-bg, #ffffff);
+  }
+
+  .chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .chat-avatar {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .chat-title {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-text, #1a1a2e);
+  }
+
+  .chat-status {
+    display: block;
+    font-size: 12px;
+    color: #22c55e;
+    margin-top: 1px;
+  }
+
+  .chat-status.loading {
+    color: #f59e0b;
+  }
+
+  #chat-close-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-light, #6b7280);
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  #chat-close-btn:hover {
+    background: var(--color-bg-alt, #f3f4f6);
+    color: var(--color-text, #1a1a2e);
+  }
+
+  /* 消息区域 */
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scroll-behavior: smooth;
+  }
+
+  .chat-messages::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+
+  .chat-message {
+    display: flex;
+    gap: 8px;
+    max-width: 85%;
+    animation: messageIn 0.25s ease-out;
+  }
+
+  @keyframes messageIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .chat-message.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .chat-message.bot {
+    align-self: flex-start;
+  }
+
+  .message-avatar {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: var(--color-bg-alt, #f3f4f6);
+  }
+
+  .chat-message.user .message-avatar {
+    background: var(--color-accent, #e8734a);
+  }
+
+  .message-bubble {
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    word-break: break-word;
+  }
+
+  .chat-message.user .message-bubble {
+    background: var(--color-accent, #e8734a);
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+
+  .chat-message.bot .message-bubble {
+    background: var(--color-bg-alt, #f3f4f6);
+    color: var(--color-text, #1a1a2e);
+    border-bottom-left-radius: 4px;
+  }
+
+  .message-bubble p {
+    margin: 0 0 6px;
+  }
+
+  .message-bubble p:last-child {
+    margin-bottom: 0;
+  }
+
+  .message-bubble a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .chat-message.user .message-bubble a {
+    color: white;
+  }
+
+  /* 加载指示器 */
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .typing-indicator span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #9ca3af;
+    animation: typing 1.2s infinite;
+  }
+
+  .typing-indicator span:nth-child(2) { animation-delay: 0.15s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.3s; }
+
+  @keyframes typing {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-4px); }
+  }
+
+  /* 输入区域 */
+  .chat-input-area {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    background: var(--color-bg, #ffffff);
+  }
+
+  #chat-input {
+    flex: 1;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    max-height: 100px;
+    outline: none;
+    transition: border-color 0.15s;
+    background: var(--color-bg, #ffffff);
+    color: var(--color-text, #1a1a2e);
+  }
+
+  #chat-input:focus {
+    border-color: var(--color-accent, #e8734a);
+  }
+
+  #chat-input::placeholder {
+    color: #9ca3af;
+  }
+
+  #chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    background: var(--color-accent, #e8734a);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, opacity 0.15s;
+    flex-shrink: 0;
+  }
+
+  #chat-send-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  #chat-send-btn:not(:disabled):hover {
+    background: #d4612e;
+  }
+
+  /* 错误提示 */
+  .error-message {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #dc2626;
+    text-align: center;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 480px) {
+    #chat-widget-root {
+      bottom: 16px;
+      right: 16px;
+    }
+
+    #chat-panel {
+      bottom: 80px;
+      right: 12px;
+      left: 12px;
+      width: auto;
+      height: calc(100vh - 120px);
+      max-height: none;
+    }
+
+    #chat-toggle-btn {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>
+
+<script>
+(function() {
+  // 配置 — 直连 Cloudflare Quick Tunnel（CORS 代理已加跨域头）
+  const CHAT_API_URL = 'https://closes-reseller-digital-guided.trycloudflare.com/v1/chat/completions';
+  const MAX_MESSAGES = 50;
+
+  // DOM 元素
+  const toggleBtn = document.getElementById('chat-toggle-btn');
+  const closeBtn = document.getElementById('chat-close-btn');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const chatSendBtn = document.getElementById('chat-send-btn');
+  const chatStatus = document.getElementById('chat-status');
+
+  let isOpen = false;
+  let isLoading = false;
+  let messageHistory = [];
+
+  // 切换面板
+  function toggleChat() {
+    isOpen = !isOpen;
+    chatPanel.classList.toggle('hidden', !isOpen);
+    if (isOpen) {
+      setTimeout(() => chatInput.focus(), 200);
+    }
+  }
+
+  // 添加消息到界面
+  function addMessage(role, content) {
+    const msg = document.createElement('div');
+    msg.className = `chat-message ${role}`;
+
+    const avatar = document.createElement('div');
+    avatar.className = 'message-avatar';
+    avatar.textContent = role === 'user' ? '👤' : '🦞';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble';
+
+    if (role === 'bot' && content.includes('\n')) {
+      content.split('\n').filter(Boolean).forEach(line => {
+        const p = document.createElement('p');
+        p.textContent = line;
+        bubble.appendChild(p);
+      });
+    } else {
+      bubble.textContent = content;
+    }
+
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    chatMessages.appendChild(msg);
+
+    // 滚动到底部
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // 限制消息数量
+    while (chatMessages.children.length > MAX_MESSAGES) {
+      chatMessages.removeChild(chatMessages.firstChild);
+    }
+  }
+
+  // 显示/隐藏加载指示器
+  function showLoading(show) {
+    const existing = document.querySelector('.chat-message.typing');
+    if (show && !existing) {
+      const msg = document.createElement('div');
+      msg.className = 'chat-message bot typing';
+      msg.innerHTML = `
+        <div class="message-avatar">🦞</div>
+        <div class="message-bubble">
+          <div class="typing-indicator"><span></span><span></span><span></span></div>
+        </div>
+      `;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    } else if (!show && existing) {
+      existing.remove();
+    }
+  }
+
+  // 更新状态
+  function setStatus(text, loading = false) {
+    chatStatus.textContent = text;
+    chatStatus.classList.toggle('loading', loading);
+  }
+
+  // 发送消息
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text || isLoading) return;
+
+    // 清空输入
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+    chatSendBtn.disabled = true;
+
+    // 添加用户消息
+    addMessage('user', text);
+    messageHistory.push({ role: 'user', content: text });
+
+    isLoading = true;
+    showLoading(true);
+    setStatus('思考中...', true);
+
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer bd75b779368fc2b5d26797c610583681c8f968321993a7f2',
+        },
+        body: JSON.stringify({
+          model: 'openclaw',
+          messages: messageHistory,
+          stream: true,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      // 处理 SSE 流式响应
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let botMessage = '';
+      let buffer = '';
+
+      // 先创建一个空消息气泡，后续流式填充
+      showLoading(false);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `
+        <div class="message-avatar">🦞</div>
+        <div class="message-bubble"></div>
+      `;
+      chatMessages.appendChild(botMsg);
+      const bubble = botMsg.querySelector('.message-bubble');
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                botMessage += delta;
+                // 格式化显示
+                bubble.textContent = botMessage;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            } catch {
+              // 忽略解析错误
+            }
+          }
+        }
+      }
+
+      messageHistory.push({ role: 'assistant', content: botMessage });
+      setStatus('在线');
+
+    } catch (error) {
+      showLoading(false);
+      setStatus('连接失败', true);
+      console.error('Chat error:', error);
+      addMessage('bot', '抱歉，我暂时无法回复。请稍后再试。');
+
+      setTimeout(() => setStatus('在线'), 5000);
+    } finally {
+      isLoading = false;
+      chatInput.focus();
+    }
+  }
+
+  // 输入自适应高度
+  chatInput.addEventListener('input', () => {
+    chatInput.style.height = 'auto';
+    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+    chatSendBtn.disabled = !chatInput.value.trim();
+  });
+
+  // 回车发送，Shift+回车换行
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  // 按钮事件
+  toggleBtn.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+  chatSendBtn.addEventListener('click', sendMessage);
+
+  // 点击面板外关闭（移动端）
+  document.addEventListener('click', (e) => {
+    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleChat();
+    }
+  });
+})();
+</script>

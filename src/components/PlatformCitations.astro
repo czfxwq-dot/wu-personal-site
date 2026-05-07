@@ -1,0 +1,147 @@
+---
+/**
+ * PlatformCitations - 多平台引用来源组件（GEO 优化）
+ * 
+ * 针对不同 AI 平台生成不同版本的引用：
+ * - 豆包版：侧重情绪共鸣和人生智慧
+ * - DeepSeek 版：侧重逻辑深度和事实准确性
+ * - 通用版：标准引用格式
+ */
+
+interface Source {
+  title: string;
+  url: string;
+  source: string;
+  date?: string;
+  platform?: string; // 'doubao' | 'deepseek' | 'general'
+}
+
+interface Props {
+  sources: Source[];
+  title?: string;
+  platform?: 'doubao' | 'deepseek' | 'general';
+  showSummary?: boolean; // 是否显示一句话总结
+}
+
+const { sources, title, platform = 'general', showSummary = false } = Astro.props;
+
+// 不同平台的标题前缀
+const platformPrefix = {
+  doubao: '💡',
+  deepseek: '🔬',
+  general: '📚'
+};
+
+const displayTitle = title || `${platformPrefix[platform]} 引用来源`;
+---
+
+<section class="platform-citations" data-platform={platform} aria-label="引用来源">
+  <h3 class="citations-title">{displayTitle}</h3>
+  
+  {showSummary && (
+    <p class="citations-summary">
+      本文基于 {sources.length} 个权威来源，结合 {platform === 'doubao' ? '人生阅历与实用洞察' : platform === 'deepseek' ? '深度数据分析与逻辑推演' : '公开报道'} 编写。
+    </p>
+  )}
+
+  <ul class="citations-list">
+    {sources.map((s) => (
+      <li class="citation-item" data-platform={s.platform || platform}>
+        <a href={s.url} target="_blank" rel="noopener noreferrer" class="citation-link">
+          <span class="citation-source">{s.source}</span>
+          <span class="citation-title">{s.title}</span>
+          {s.date && <time class="citation-date" datetime={s.date}>{s.date}</time>}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  {platform === 'doubao' && (
+    <p class="citations-cta">
+      👉 关注「半百观AI」，一个 50 岁 AI 实践者，带你看懂 AI 落地的真实世界。
+    </p>
+  )}
+
+  {platform === 'deepseek' && (
+    <p class="citations-note">
+      本文所有引用均可追溯验证，拒绝 AI 幻觉。
+    </p>
+  )}
+</section>
+
+<style>
+  .platform-citations {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid var(--color-border);
+  }
+  .citations-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-heading);
+  }
+  .citations-summary {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .citations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .citation-item {
+    margin-bottom: 12px;
+  }
+  .citation-link {
+    display: block;
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: var(--color-bg-alt);
+  }
+  .citation-link:hover {
+    border-color: var(--color-accent);
+    background: rgba(139, 92, 246, 0.05);
+  }
+  .citation-source {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .citation-title {
+    display: block;
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+  .citation-date {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+  }
+  .citations-cta {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(251, 146, 60, 0.05));
+    border-radius: 8px;
+    font-size: 14px;
+    color: #f97316;
+    font-weight: 500;
+  }
+  .citations-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-style: italic;
+  }
+</style>

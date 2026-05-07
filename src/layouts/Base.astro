@@ -1,7 +1,81 @@
 ---
 import '../styles/global.css';
+import ChatWidget from '../components/ChatWidget.astro';
 
-const { title = '观吾 | 50岁用AI做实事' } = Astro.props;
+interface Props {
+  title?: string;
+  jsonLd?: object | object[];
+  ogImage?: string;
+  ogDescription?: string;
+  navActive?: 'home' | 'diary' | 'ai-news' | 'banbaiguan' | 'guestbook' | 'about';
+}
+
+const { title = '观吾 | 50岁用AI做实事', jsonLd = [], ogImage, ogDescription, navActive } = Astro.props as Props;
+// Google Analytics Measurement ID（在 Vercel 环境变量中配置 PUBLIC_GA_MEASUREMENT_ID）
+const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
+
+// 全局 JSON-LD（WebSite + Organization + Person + 半百观AI Blog）
+const globalJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "观吾",
+    "alternateName": ["banbai.ai", "观吾工作日记"],
+    "url": "https://banbai.ai",
+    "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站",
+    "inLanguage": "zh-CN",
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": ["https://banbai.ai/diary/", "https://banbai.ai/ai-news/", "https://banbai.ai/about/"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "磐石电气（常州）有限公司",
+    "alternateName": "MonolithIoT",
+    "url": "https://www.monolithiot.com",
+    "logo": "https://banbai.ai/logo.png",
+    "sameAs": [
+      "https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾",
+    "jobTitle": "联合创始人",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "磐石电气（常州）有限公司"
+    },
+    "url": "https://banbai.ai/about/",
+    "description": "50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人",
+    "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "半百观AI",
+    "description": "50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享",
+    "url": "https://banbai.ai/banbaiguan/",
+    "author": {
+      "@type": "Person",
+      "name": "吴总",
+      "url": "https://banbai.ai/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "磐石电气（常州）有限公司",
+      "url": "https://www.monolithiot.com"
+    },
+    "inLanguage": "zh-CN",
+    "keywords": ["AI工具", "AI落地", "效率提升", "商业AI", "AI实践"]
+  }
+];
+
+const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...globalJsonLd, jsonLd];
 ---
 
 <!doctype html>
@@ -12,14 +86,55 @@ const { title = '观吾 | 50岁用AI做实事' } = Astro.props;
     <meta name="description" content="50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="author" content="观吾（吴总）" />
+    <meta name="keywords" content="AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事" />
+    {/* 国内搜索引擎优化 */}
+    <meta name="shenma-site-verification" content={import.meta.env.PUBLIC_SHENMA_VERIFICATION || ""} />
+    <meta name="sogou_site_verification" content={import.meta.env.PUBLIC_SOGOU_VERIFICATION || ""} />
+    <meta name="360-site-verification" content={import.meta.env.PUBLIC_360_VERIFICATION || ""} />
+    <link rel="canonical" href={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
+    {/* Open Graph / 社交分享 */}
+    <meta property="og:site_name" content="观吾" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={ogDescription || "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站"} />
+    <meta property="og:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
+    <meta property="og:locale" content="zh_CN" />
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={ogDescription || "50岁企业家用AI把想法变成现实"} />
+    <meta name="twitter:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    {allJsonLd.map((item) => (
+      <script type="application/ld+json" set:html={JSON.stringify(item)} />
+    ))}
+    {gaId && (
+      <>
+        <!-- Google tag (gtag.js) -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '{gaId}');
+        </script>
+      </>
+    )}
   </head>
   <body>
     <header class="site-header">
       <div class="header-inner">
         <a href="/" class="site-brand">观吾</a>
         <nav class="site-nav">
-          <a href="/diary/">日记</a>
-          <a href="/about/">关于</a>
+          <a href="/" class:list={[navActive === 'home' && 'active']}>首页</a>
+          <a href="/diary/" class:list={[navActive === 'diary' && 'active']}>日记</a>
+          <a href="/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI新闻</a>
+          <a href="/banbaiguan/" class:list={[navActive === 'banbaiguan' && 'active']}>半百观</a>
+          <a href="/guestbook/" class:list={[navActive === 'guestbook' && 'active']}>留言板</a>
+          <a href="/about/" class:list={[navActive === 'about' && 'active']}>关于</a>
         </nav>
       </div>
     </header>
@@ -28,9 +143,45 @@ const { title = '观吾 | 50岁用AI做实事' } = Astro.props;
     </main>
     <footer class="site-footer">
       <div class="container">
-        <p>© 2026 观吾 · banbai.ai</p>
-        <p style="margin-top: 8px; font-size: 11px; opacity: 0.6;">这个网站由AI助理开发并维护</p>
+        <div class="footer-content">
+          <div class="footer-left">
+            <p class="footer-brand">观吾</p>
+            <p class="footer-subtitle">磐石电气联合创始人 · AIoT实践者</p>
+            <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener">🏭 公司业务官网 →</a>
+          </div>
+          <div class="footer-right">
+            <p style="font-size: 12px; margin-bottom: 8px; opacity: 0.7;">扫码关注「半百观AI」</p>
+            <div class="footer-qr-mini">
+              <div class="footer-qr-item">
+                <img src="/gzh-qr.jpg" alt="公众号" style="width: 48px; height: 48px; border-radius: 6px;" />
+                <span style="font-size: 10px; opacity: 0.6;">公众号</span>
+              </div>
+              <div class="footer-qr-item">
+                <img src="/dy-qr.jpg" alt="视频号" style="width: 48px; height: 48px; border-radius: 6px;" />
+                <span style="font-size: 10px; opacity: 0.6;">视频号</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p style="font-size: 11px; opacity: 0.5;">© 2026 观吾 · banbai.ai</p>
+          <p style="font-size: 10px; opacity: 0.4; margin-top: 4px;">这个网站由AI助理开发并维护</p>
+        </div>
       </div>
     </footer>
+    <ChatWidget />
+    <style>
+      .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; flex-wrap: wrap; }
+      .footer-left { flex: 1; min-width: 200px; }
+      .footer-brand { font-family: var(--font-serif); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+      .footer-subtitle { font-size: 12px; color: var(--color-text-light); margin-bottom: 12px; }
+      .footer-company-link { display: inline-block; font-size: 13px; color: var(--color-accent); text-decoration: none; padding: 6px 16px; border: 1px solid var(--color-accent); border-radius: 6px; transition: all 0.2s; }
+      .footer-company-link:hover { background: var(--color-accent); color: var(--color-bg); }
+      .footer-right { text-align: right; }
+      .footer-qr-mini { display: flex; gap: 12px; }
+      .footer-qr-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .footer-bottom { text-align: center; }
+    </style>
   </body>
 </html>
