@@ -7,8 +7,8 @@ import { articles } from '../data/articles';
 const homeJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "观吾 | 50岁用AI做实事",
-  "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站，记录AI项目落地全过程",
+  "name": "观吾 | 50岁用AI做实事 — AI工具落地实践 · 半百观AI",
+  "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站，分享AI工具落地实践、AIoT解决方案、数字化智能库存管理",
   "url": "https://banbai.ai",
   "isPartOf": {
     "@type": "WebSite",
@@ -24,7 +24,8 @@ const homeJsonLd = {
       "@type": "Organization",
       "name": "磐石电气（常州）有限公司"
     }
-  }
+  },
+  "keywords": ["AI工具", "AI落地实践", "半百观AI", "AIoT", "数字化智能库存", "50岁学AI", "ChatGPT教程", "AI效率提升"]
 };
 
 const latest = diaries[0];
@@ -43,7 +44,7 @@ const latestArticle = articles[0];
     <div class="container hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-dot"></span>
-        <span>AI 实践者 · 观吾</span>
+        <span>AI 实践者 · 半百观AI主理人</span>
       </div>
       <h1 class="hero-title">
         50岁，用AI<br/>把想法变成现实
@@ -53,7 +54,8 @@ const latestArticle = articles[0];
       </p>
       <p class="hero-description">
         这不是一个普通的个人网站。<br/>
-        它是我和我的AI助理一起，从0到1建造出来的。
+        它是我和我的AI助理一起，从0到1建造出来的。<br/>
+        <span style="font-size: 14px; color: var(--color-text-tertiary);">分享AI工具落地实践 · 数字化智能库存管理 · 50岁学AI的真实故事</span>
       </p>
       <div class="hero-actions">
         <a href="/diary/" class="btn btn-primary">看工作日记 <span class="btn-arrow">→</span></a>

@@ -9,6 +9,12 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-07',
+    title: '山山 AI 助理重构，全站关注卡片上线，官网全面升级',
+    summary: '山山 AI 助理全面重构（🤖图标+4个快捷按钮+关注卡片）、FollowUsCard 全站底部上线（7平台）、TopicScoreCard 选题评分模板（13维度）、官网首页全面升级（DM Sans+靛蓝/金色品牌色+三栏网格+Hero动画+噪点纹理）、GitHub 自动部署上线（push即部署39秒）、AI 新闻 RSS 多源扩展（36氪+少数派）、全媒体运营体系规划（半百观AI统一7平台矩阵）。',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-06',
     title: 'ChatWidget 调试完成，GEO 全面优化',
     summary: 'ChatWidget CORS 修复 + Quick Tunnel 4 次变更、GEO 优化全站部署（JSON-LD/robots.txt/sitemap/AI 爬虫规则/引用来源）、DeepSeek V4 文章发布、ICP 备案等国内部署前置项取消、豆包+DeepSeek GEO 策略制定。',
