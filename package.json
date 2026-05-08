@@ -13,9 +13,9 @@
     "deploy": "node scripts/sync-data.mjs deploy && npm run build && npm run guard && npm run deploy:cf"
   },
   "dependencies": {
-    "@astrojs/node": "^7.0.4",
-    "@astrojs/vercel": "^7.8.2",
-    "astro": "^4.16.0",
+    "astro": "^4.16.0"
+  },
+  "devDependencies": {
     "tweetnacl": "^1.0.3",
     "tweetnacl-sealedbox-js": "^1.2.0",
     "tweetnacl-util": "^0.15.1"

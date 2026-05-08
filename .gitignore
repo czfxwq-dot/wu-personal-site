@@ -1,6 +1,8 @@
 node_modules/
 dist/
+docs/
 .env
+.env.*
 *.log
 .DS_Store
 .svelte-kit/
@@ -8,4 +10,4 @@ dist/
 .wrangler/
 tmp/
 .astro/
-dist/
+src/data/guestbook.json

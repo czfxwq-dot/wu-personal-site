@@ -73,7 +73,7 @@ const latestArticle = articles[0];
     <div class="container">
       <div class="grid-header">
         <div class="section-title">最近更新</div>
-        <span class="section-more">查看完整时间线 <span class="arrow">→</span></span>
+        <a href="/diary/" class="section-more">查看完整时间线 <span class="arrow">→</span></a>
       </div>
       <div class="grid-cards">
         <!-- 最新日记 -->
@@ -156,56 +156,21 @@ const latestArticle = articles[0];
       <p class="follow-subtitle">在各平台搜索「半百观AI」即可找到我们</p>
       <div class="follow-qr-codes">
         <div class="follow-qr-item">
-          <img src="/gzh-qr.jpg" alt="公众号 半百观AI" />
+          <img src="/gzh-qr.jpg" alt="公众号 半百观AI" loading="lazy" />
           <span class="follow-qr-label">公众号</span>
         </div>
         <div class="follow-qr-item">
-          <img src="/dy-qr.jpg" alt="视频号 半百观AI" />
+          <img src="/dy-qr.jpg" alt="视频号 半百观AI" loading="lazy" />
           <span class="follow-qr-label">视频号</span>
         </div>
         <div class="follow-qr-item">
-          <img src="/douyin-qr.jpg" alt="抖音 半百观AI" />
+          <img src="/douyin-qr.jpg" alt="抖音 半百观AI" loading="lazy" />
           <span class="follow-qr-label">抖音</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 公司公众号二维码弹窗 -->
-  <div class="qr-modal-overlay" id="qr-modal-overlay">
-    <div class="qr-modal">
-      <button class="qr-modal-close" id="close-qr-modal">✕</button>
-      <h3 class="qr-modal-title">扫码咨询业务合作</h3>
-      <p class="qr-modal-subtitle">关注磐石电气公众号，获取专业方案</p>
-      <img src="/wechat-qr.jpg" alt="磐石电气 公众号二维码" class="qr-modal-img" />
-      <p class="qr-modal-hint">长按识别图中二维码</p>
-    </div>
-  </div>
-
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-      var trigger = document.getElementById('open-qr-modal');
-      var overlay = document.getElementById('qr-modal-overlay');
-      var closeBtn = document.getElementById('close-qr-modal');
-      if (trigger && overlay) {
-        trigger.addEventListener('click', function() {
-          overlay.classList.add('active');
-        });
-      }
-      if (closeBtn && overlay) {
-        closeBtn.addEventListener('click', function() {
-          overlay.classList.remove('active');
-        });
-      }
-      if (overlay) {
-        overlay.addEventListener('click', function(e) {
-          if (e.target === overlay) {
-            overlay.classList.remove('active');
-          }
-        });
-      }
-    });
-  </script>
 </BaseLayout>
 
 <style>
@@ -657,90 +622,6 @@ const latestArticle = articles[0];
   .placeholder-card p {
     color: var(--color-text-tertiary);
     font-size: 15px;
-  }
-
-  /* ===================================================
-     二维码弹窗
-     =================================================== */
-  .qr-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-
-  .qr-modal-overlay.active {
-    display: flex;
-  }
-
-  .qr-modal {
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    padding: 36px 28px 28px;
-    max-width: 380px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    box-shadow: var(--shadow-lg);
-    animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  }
-
-  @keyframes modalIn {
-    from { transform: scale(0.95) translateY(10px); opacity: 0; }
-    to { transform: scale(1) translateY(0); opacity: 1; }
-  }
-
-  .qr-modal-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--color-text-tertiary);
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.2s;
-  }
-
-  .qr-modal-close:hover {
-    background: var(--color-bg-alt);
-  }
-
-  .qr-modal-title {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .qr-modal-subtitle {
-    font-size: 14px;
-    color: var(--color-text-secondary);
-    margin-bottom: 20px;
-  }
-
-  .qr-modal-img {
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
-    border-radius: var(--radius-md);
-  }
-
-  .qr-modal-hint {
-    font-size: 12px;
-    color: var(--color-text-tertiary);
-    margin-top: 14px;
   }
 
   /* ===================================================

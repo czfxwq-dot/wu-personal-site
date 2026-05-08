@@ -1,15 +1,8 @@
 ---
 /**
  * ChatWidget - 右下角浮动聊天组件
- * 通过 Cloudflare Worker 代理与 OpenClaw Gateway 对话
+ * 通过 Cloudflare Pages Functions 代理与 OpenClaw Gateway 对话
  */
-
-// 配置 — 直连 Cloudflare Quick Tunnel（CORS 代理已加跨域头）
-const CHAT_API_URL = 'https://closes-reseller-digital-guided.trycloudflare.com/v1/chat/completions';
-const CHAT_API_HEADERS = {
-  'Content-Type': 'application/json',
-  'Authorization': 'Bearer bd75b779368fc2b5d26797c610583681c8f968321993a7f2',
-};
 ---
 
 <div id="chat-widget-root">
@@ -475,8 +468,8 @@ const CHAT_API_HEADERS = {
 
 <script>
 (function() {
-  // 配置 — 直连 Cloudflare Quick Tunnel（CORS 代理已加跨域头）
-  const CHAT_API_URL = 'https://closes-reseller-digital-guided.trycloudflare.com/v1/chat/completions';
+  // 配置 — 通过 Pages Functions 代理，token 在服务端环境变量中
+  const CHAT_API_URL = '/api/chat';
   const MAX_MESSAGES = 50;
 
   // DOM 元素
@@ -541,10 +534,7 @@ const CHAT_API_HEADERS = {
     try {
       const response = await fetch(CHAT_API_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer bd75b779368fc2b5d26797c610583681c8f968321993a7f2',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'openclaw',
           messages: messageHistory,
@@ -698,10 +688,7 @@ const CHAT_API_HEADERS = {
     try {
       const response = await fetch(CHAT_API_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer bd75b779368fc2b5d26797c610583681c8f968321993a7f2',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'openclaw',
           messages: messageHistory,

@@ -36,28 +36,28 @@ const pageJsonLd = {
           <div class="service-icon">🍤</div>
           <h3>产品订购</h3>
           <p>多种口味小龙虾，麻辣、蒜香、十三香...新鲜配送到家</p>
-          <a href="#" class="service-link" onclick="openLobsterChat('我想订购小龙虾，有什么口味？')">在线咨询 →</a>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, '我想订购小龙虾，有什么口味？')">在线咨询 →</a>
         </div>
         
         <div class="service-card">
           <div class="service-icon">🤝</div>
           <h3>加盟合作</h3>
           <p>成熟的商业模式，完整的供应链支持，低门槛创业</p>
-          <a href="#" class="service-link" onclick="openLobsterChat('我想了解加盟政策')">了解详情 →</a>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, '我想了解加盟政策')">了解详情 →</a>
         </div>
         
         <div class="service-card">
           <div class="service-icon">🚚</div>
           <h3>冷链配送</h3>
           <p>全程冷链保鲜，同城当日达，全国48小时送达</p>
-          <a href="#" class="service-link" onclick="openLobsterChat('你们的配送范围和时间是怎样的？')">查询配送 →</a>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, '你们的配送范围和时间是怎样的？')">查询配送 →</a>
         </div>
         
         <div class="service-card">
           <div class="service-icon">📋</div>
           <h3>售后支持</h3>
           <p>7天无理由退换，品质保证，24小时在线客服</p>
-          <a href="#" class="service-link" onclick="openLobsterChat('我需要售后服务')">联系售后 →</a>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, '我需要售后服务')">联系售后 →</a>
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@ const pageJsonLd = {
 </style>
 
 <script is:inline>
-  function openLobsterChat(message) {
+  function openLobsterChat(event, message) {
     event.preventDefault();
     var toggleBtn = document.getElementById('chat-toggle-btn');
     if (toggleBtn) {
