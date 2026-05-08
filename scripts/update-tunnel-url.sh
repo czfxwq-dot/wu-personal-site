@@ -34,6 +34,6 @@ npm run build 2>&1 | tail -3
 # Deploy
 echo "Deploying to Production..."
 source .env
-npx wrangler pages deploy dist --project-name wu-personal-site --branch main --commit-dirty=true --commit-message "Auto: Quick Tunnel URL updated to $(echo $NEW_URL | cut -d'.' -f1)" 2>&1 | tail -5
+npx wrangler pages deploy docs --project-name wu-personal-site --branch main --commit-dirty=true --commit-message "Auto: Quick Tunnel URL updated to $(echo $NEW_URL | cut -d'.' -f1)" 2>&1 | tail -5
 
 echo "[$(date)] Done! New URL deployed: $NEW_URL"

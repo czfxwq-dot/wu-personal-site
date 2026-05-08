@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://banbai.ai',
-  outDir: 'dist',
+  outDir: 'docs',
 });
