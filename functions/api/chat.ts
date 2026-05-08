@@ -2,7 +2,7 @@
 // 代理请求到 OpenClaw Gateway
 // Gateway URL 和 Token 通过环境变量传入
 
-const CORS_ORIGIN = 'https://banbai.ai';
+const CORS_ORIGIN = 'https://wu-personal-site.pages.dev';
 
 export async function onRequestPost(context) {
   const { request, env } = context;
