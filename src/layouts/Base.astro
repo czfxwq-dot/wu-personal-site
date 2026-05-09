@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import ChatWidget from '../components/ChatWidget.astro';
-import FollowUsCard from '../components/FollowUsCard.astro';
 
 interface Props {
   title?: string;
@@ -22,12 +21,12 @@ const globalJsonLd = [
     "@type": "WebSite",
     "name": "观吾",
     "alternateName": ["banbai.ai", "观吾工作日记"],
-    "url": "https://banbai.ai",
+    "url": "https://ban-bai.com",
     "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站",
     "inLanguage": "zh-CN",
     "potentialAction": {
       "@type": "ReadAction",
-      "target": ["https://banbai.ai/diary/", "https://banbai.ai/ai-news/", "https://banbai.ai/about/"]
+      "target": ["https://ban-bai.com/diary/", "https://ban-bai.com/ai-news/", "https://ban-bai.com/about/"]
     }
   },
   {
@@ -36,7 +35,7 @@ const globalJsonLd = [
     "name": "磐石电气（常州）有限公司",
     "alternateName": "MonolithIoT",
     "url": "https://www.monolithiot.com",
-    "logo": "https://banbai.ai/logo.png",
+    "logo": "https://ban-bai.com/logo.png",
     "sameAs": [
       "https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"
     ]
@@ -51,7 +50,7 @@ const globalJsonLd = [
       "@type": "Organization",
       "name": "磐石电气（常州）有限公司"
     },
-    "url": "https://banbai.ai/about/",
+    "url": "https://ban-bai.com/about/",
     "description": "50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人",
     "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"]
   },
@@ -60,11 +59,11 @@ const globalJsonLd = [
     "@type": "Blog",
     "name": "半百观AI",
     "description": "50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享",
-    "url": "https://banbai.ai/banbaiguan/",
+    "url": "https://ban-bai.com/banbaiguan/",
     "author": {
       "@type": "Person",
       "name": "吴总",
-      "url": "https://banbai.ai/about/"
+      "url": "https://ban-bai.com/about/"
     },
     "publisher": {
       "@type": "Organization",
@@ -95,22 +94,22 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     <meta name="shenma-site-verification" content={import.meta.env.PUBLIC_SHENMA_VERIFICATION || ""} />
     <meta name="sogou_site_verification" content={import.meta.env.PUBLIC_SOGOU_VERIFICATION || ""} />
     <meta name="360-site-verification" content={import.meta.env.PUBLIC_360_VERIFICATION || ""} />
-    <link rel="canonical" href={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
+    <link rel="canonical" href={Astro.url?.href || `https://ban-bai.com${Astro.url?.pathname || ''}`} />
     {/* Open Graph / 社交分享 */}
     <meta property="og:site_name" content="观吾" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={ogDescription || "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站"} />
-    <meta property="og:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    <meta property="og:image" content={ogImage || "https://ban-bai.com/og-image.png"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
+    <meta property="og:url" content={Astro.url?.href || `https://ban-bai.com${Astro.url?.pathname || ''}`} />
     <meta property="og:locale" content="zh_CN" />
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={ogDescription || "50岁企业家用AI把想法变成现实"} />
-    <meta name="twitter:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    <meta name="twitter:image" content={ogImage || "https://ban-bai.com/og-image.png"} />
     {allJsonLd.map((item) => (
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
@@ -146,46 +145,39 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     </main>
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-left">
-            <p class="footer-brand">观吾</p>
-            <p class="footer-subtitle">磐石电气联合创始人 · AIoT实践者</p>
-            <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener">🏭 公司业务官网 →</a>
+        <!-- 第一层：联系磐石电气（常州）有限公司 -->
+        <div class="footer-company">
+          <p class="footer-company-title">联系磐石电气（常州）有限公司</p>
+          <div class="footer-company-links">
+            <a href="https://www.monolithiot.com" class="footer-link" target="_blank" rel="noopener">🏭 公司官网 →</a>
+            <a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" class="footer-link" target="_blank" rel="noopener">📺 YouTube →</a>
           </div>
-          <div class="footer-right">
-            <p style="font-size: 12px; margin-bottom: 8px; opacity: 0.7;">扫码关注「半百观AI」</p>
-            <div class="footer-qr-mini">
-              <div class="footer-qr-item">
-                <img src="/gzh-qr.jpg" alt="公众号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
-                <span style="font-size: 10px; opacity: 0.6;">公众号</span>
-              </div>
-              <div class="footer-qr-item">
-                <img src="/dy-qr.jpg" alt="视频号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
-                <span style="font-size: 10px; opacity: 0.6;">视频号</span>
-              </div>
-            </div>
+          <div class="footer-company-qr">
+            <img src="/company-qr.png" alt="磐石电气新媒体矩阵" loading="lazy" />
+            <span class="footer-qr-hint">扫码查看公司新媒体矩阵</span>
           </div>
         </div>
         <div class="footer-bottom">
-          <p style="font-size: 11px; opacity: 0.5;">© 2026 观吾 · banbai.ai</p>
-          <p style="font-size: 10px; opacity: 0.4; margin-top: 4px;">这个网站由AI助理开发并维护</p>
+          <p class="footer-copy">© 2026 观吾 · ban-bai.com</p>
+          <p class="footer-credit">这个网站由AI助理开发并维护</p>
         </div>
       </div>
     </footer>
     <ChatWidget />
-    <FollowUsCard />
     <style>
       .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
-      .footer-content { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; flex-wrap: wrap; }
-      .footer-left { flex: 1; min-width: 200px; }
-      .footer-brand { font-family: var(--font-serif); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-      .footer-subtitle { font-size: 12px; color: var(--color-text-light); margin-bottom: 12px; }
-      .footer-company-link { display: inline-block; font-size: 13px; color: var(--color-accent); text-decoration: none; padding: 6px 16px; border: 1px solid var(--color-accent); border-radius: 6px; transition: all 0.2s; }
-      .footer-company-link:hover { background: var(--color-accent); color: var(--color-bg); }
-      .footer-right { text-align: right; }
-      .footer-qr-mini { display: flex; gap: 12px; }
-      .footer-qr-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .footer-company { text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; }
+      .footer-company-title { font-family: var(--font-serif); font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--color-text); }
+      .footer-company-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+      .footer-link { font-size: 14px; color: var(--color-accent); text-decoration: none; transition: opacity 0.2s; }
+      .footer-link:hover { opacity: 0.7; }
+      .footer-company-qr { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+      .footer-company-qr img { max-width: 360px; width: 100%; height: auto; border-radius: 12px; }
+      .footer-qr-hint { font-size: 11px; color: var(--color-text-tertiary); }
       .footer-bottom { text-align: center; }
+      .footer-copy { font-size: 11px; opacity: 0.5; margin: 0; }
+      .footer-credit { font-size: 10px; opacity: 0.4; margin: 4px 0 0; }
+      .footer-v { content: "v2026-05-09"; }
     </style>
   </body>
 </html>

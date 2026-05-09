@@ -23,7 +23,7 @@ const {
   datePublished,
   dateModified = datePublished,
   author = '吴总',
-  image = 'https://banbai.ai/og-image.png',
+  image = 'https://ban-bai.com/og-image.png',
   keywords = [],
   section = 'diary'
 } = Astro.props;
@@ -44,7 +44,7 @@ const articleJsonLd = {
   "author": {
     "@type": "Person",
     "name": author,
-    "url": "https://banbai.ai/about/"
+    "url": "https://ban-bai.com/about/"
   },
   "publisher": {
     "@type": "Organization",
@@ -52,7 +52,7 @@ const articleJsonLd = {
     "url": "https://www.monolithiot.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://banbai.ai/logo.png"
+      "url": "https://ban-bai.com/logo.png"
     }
   },
   "image": image,
@@ -61,7 +61,7 @@ const articleJsonLd = {
   "inLanguage": "zh-CN",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://banbai.ai/${section}/${Astro.props.title ? title.toLowerCase().replace(/\s+/g, '-') : ''}/`
+    "@id": `https://ban-bai.com/${section}/${Astro.props.title ? title.toLowerCase().replace(/\s+/g, '-') : ''}/`
   },
   // GEO 优化：引用来源区域（AI 搜索看重）
   "citation": [],
