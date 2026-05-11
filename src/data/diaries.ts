@@ -9,6 +9,18 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-10',
+    title: '自动化系统稳定运行，网站进入内容运营新阶段',
+    summary: 'AI 新闻 cron 连续 6 天稳定运行（07:02 准时触发+自动部署）、日记 cron 自动生成、网站基础建设 11 天完成、从「建设」阶段转入「运营」阶段。',
+    category: 'AI项目'
+  },
+  {
+    date: '2026-05-09',
+    title: '网站架构精简、域名确定、GitHub自动部署上线',
+    summary: '页脚两层架构确立（公司信息层+半百观AI关注层）、删除FollowUsCard组件、取消CTA卡片和留言板、ban-bai.com域名正式确定并绑定Cloudflare Pages、GitHub Actions自动部署上线（push即部署28秒）、三条战略线确认（导流变现+内容自动化+公司品牌背书）、网站基础建设完成。',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-08',
     title: '部署脚本全局修复、安全红线强化、SEO优化推进',
     summary: '部署脚本 5 处全局修复（dist→docs）、pre-deploy-guard.sh 重写新增 4 项检查、cron 新增部署后验证、安全失误记录规则 10.2、AI 新闻连续运行 4 天、系统状态正常、SEO 页面级优化进行中。',

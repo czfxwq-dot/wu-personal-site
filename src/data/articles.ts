@@ -9,6 +9,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'claude-code-engineering-transformation',
+    date: '2026-05-10',
+    title: 'Claude Code不再帮你写代码了：它要替你管理整个工程团队',
+    excerpt: 'Anthropic在Code with Claude 2026上发布Claude Code重大升级，从编程助手升级为工程团队自动化基础设施，包含Routines调度、多智能体代码审查、CI Auto-fix等十余项新功能。',
+    tag: 'AI前沿'
+  },
+  {
+    slug: 'ai-dreaming-self-evolution',
+    date: '2026-05-10',
+    title: 'AI学会「做梦」自我进化：Anthropic这项功能，可能改变人机协作的终局',
+    excerpt: 'Anthropic在Code with Claude 2026大会上发布Dreaming功能，让AI在任务间隙自动进入休眠状态，审阅历史会话、整理记忆、发现错误模式。AI从"问答工具"到"自我进化的协作者"，可能就是下一个范式转换。',
+    tag: 'AI前沿'
+  },
+  {
     slug: 'deepseek-v4-engram-regret',
     date: '2026-05-06',
     title: 'DeepSeek V4 最大的遗憾：为什么所有人都盼着 Engram，它却没来？',
