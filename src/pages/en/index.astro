@@ -83,8 +83,8 @@ const latestArticle = articles[0];
             <span class="label-text">Diary</span>
           </div>
           <div class="card-date">{latest.date}</div>
-          <h3 class="card-heading">{latest.title}</h3>
-          <p class="card-excerpt">{latest.summary}</p>
+          <h3 class="card-heading">Day 15: SEO Full-Site Optimization</h3>
+          <p class="card-excerpt">Fixed robots.txt, rewrote 28 URL sitemaps, completed SEO for 26 pages, added hreflang multi-language tags, and resolved Core Web Vitals issues (LCP + CLS).</p>
         </a>
 
         <!-- AI News -->
@@ -94,23 +94,23 @@ const latestArticle = articles[0];
             <span class="label-text">AI News</span>
           </div>
           <div class="card-date">{latestSummary.date} · {latestSummary.newsItems.length} items</div>
-          <h3 class="card-heading">{latestSummary.title}</h3>
-          <p class="card-excerpt">{latestSummary.summary}</p>
+          <h3 class="card-heading">Today's AI Headlines</h3>
+          <p class="card-excerpt">AI industry developments, regulatory updates, and market trends — summarized daily in Chinese.</p>
           <div class="card-comment">
             <span class="comment-icon">💡</span>
-            {latestSummary.comment}
+            Daily AI news digest in Chinese. Covers industry trends, policy updates, and market analysis.
           </div>
         </a>
 
         <!-- BanbaiGuan -->
-        <a href={`/banbaiguan/${latestArticle.slug}/`} class="grid-card card-article">
+        <a href="/en/about/" class="grid-card card-article">
           <div class="card-label">
             <span class="label-icon">🎯</span>
-            <span class="label-text">BanbaiGuan AI</span>
+            <span class="label-text">About the Founder</span>
           </div>
-          <div class="card-date">{latestArticle.date}</div>
-          <h3 class="card-heading">{latestArticle.title}</h3>
-          <p class="card-excerpt">{latestArticle.excerpt}</p>
+          <div class="card-date">Est. 2026</div>
+          <h3 class="card-heading">Meet the 50-Year-Old AI Practitioner</h3>
+          <p class="card-excerpt">Co-founder of MonolithIoT. Building this website with his AI assistant — sharing his honest journey of adopting AI tools at 50.</p>
         </a>
       </div>
     </div>

@@ -141,7 +141,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a href="/" class="site-brand">观吾</a>
+        <a href={lang === 'en' ? '/en/' : '/'} class="site-brand">{lang === 'en' ? 'Guanwu' : '观吾'}</a>
         <nav class="site-nav">
           {lang === 'en' ? (
             <>
@@ -171,23 +171,23 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
       <div class="container">
         <!-- 第一层：联系磐石电气（常州）有限公司 -->
         <div class="footer-company">
-          <p class="footer-company-title">联系磐石电气（常州）有限公司</p>
+          <p class="footer-company-title">{lang === 'en' ? 'Contact MonolithIoT (Changzhou) Co., Ltd.' : '联系磐石电气（常州）有限公司'}</p>
           <div class="footer-company-links">
-            <a href="https://www.monolithiot.com" class="footer-link" target="_blank" rel="noopener">🏭 公司官网 →</a>
+            <a href="https://www.monolithiot.com" class="footer-link" target="_blank" rel="noopener">{lang === 'en' ? '🏭 Company Site →' : '🏭 公司官网 →'}</a>
             <a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" class="footer-link" target="_blank" rel="noopener">📺 YouTube →</a>
           </div>
           <div class="footer-company-qr">
-            <img src="/company-qr.png" alt="磐石电气新媒体矩阵" width="1080" height="328" loading="lazy" />
-            <span class="footer-qr-hint">扫码查看公司新媒体矩阵</span>
+            <img src="/company-qr.png" alt={lang === 'en' ? 'MonolithIoT New Media Matrix' : '磐石电气新媒体矩阵'} width="1080" height="328" loading="lazy" />
+            <span class="footer-qr-hint">{lang === 'en' ? 'Scan to view company social media' : '扫码查看公司新媒体矩阵'}</span>
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="footer-copy">© 2026 观吾 · ban-bai.com</p>
-          <p class="footer-credit">这个网站由AI助理开发并维护</p>
+          <p class="footer-copy">© 2026 {lang === 'en' ? 'Guanwu' : '观吾'} · ban-bai.com</p>
+          <p class="footer-credit">{lang === 'en' ? 'This site was built and maintained by an AI assistant' : '这个网站由AI助理开发并维护'}</p>
         </div>
       </div>
     </footer>
-    <ChatWidget />
+    <ChatWidget lang={lang} />
     <style>
       .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
       .footer-company { text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; }
