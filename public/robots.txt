@@ -23,4 +23,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://banbai.ai/sitemap.xml
+Sitemap: https://www.ban-bai.com/sitemap.xml

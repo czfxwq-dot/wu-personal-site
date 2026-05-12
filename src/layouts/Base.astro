@@ -88,6 +88,12 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
+    {/* hreflang 多语言标签 — 当前仅 zh-CN，预留未来 en 版本 */}
+    <link rel="alternate" hreflang="zh-CN" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || ''}`} />
+    <link rel="alternate" hreflang="x-default" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || ''}`} />
     <meta name="author" content="观吾（吴总）" />
     <meta name="keywords" content="AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事" />
     {/* 国内搜索引擎优化 */}
@@ -153,7 +159,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
             <a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" class="footer-link" target="_blank" rel="noopener">📺 YouTube →</a>
           </div>
           <div class="footer-company-qr">
-            <img src="/company-qr.png" alt="磐石电气新媒体矩阵" loading="lazy" />
+            <img src="/company-qr.png" alt="磐石电气新媒体矩阵" width="1080" height="328" loading="lazy" />
             <span class="footer-qr-hint">扫码查看公司新媒体矩阵</span>
           </div>
         </div>

@@ -3,8 +3,7 @@
    50岁成熟稳重的 AI 实践者气质
    =================================================== */
 
-/* 字体引入 */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600;700;800&display=swap');
+/* 字体已由 Base.astro 通过 <link preload> 异步加载，此处不再 @import */
 
 :root {
   /* 深靛蓝主色 — 沉稳、专业、有辨识度 */

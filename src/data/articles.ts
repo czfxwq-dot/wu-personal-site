@@ -9,6 +9,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'anthropic-revenue-80x',
+    date: '2026-05-11',
+    title: 'Anthropic一个季度营收暴增80倍，把自家基础设施搞崩溃了',
+    excerpt: 'CEO Dario Amodei披露：一个季度营收年化增长80倍，飙过300亿美元。算力不够用，紧急找SpaceX接手数据中心。对中小企业主：现在是AI最佳窗口期、别等完美方案、关注落地。',
+    tag: 'AI产业'
+  },
+  {
+    slug: 'deepseek-v4-open-source',
+    date: '2026-05-11',
+    title: 'DeepSeek V4开源：万亿参数、百万token上下文，中国AI又放大招',
+    excerpt: 'DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。对于中小企业来说，意味着企业知识库、代码辅助开发、智能客服升级都能用上了。技术民主化，这才是真正的革命。',
+    tag: 'AI产业'
+  },
+  {
     slug: 'claude-code-engineering-transformation',
     date: '2026-05-10',
     title: 'Claude Code不再帮你写代码了：它要替你管理整个工程团队',

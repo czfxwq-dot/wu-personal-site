@@ -9,6 +9,12 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-11',
+    title: '系统连续第7天稳定运行，腾讯站长认证部署',
+    summary: 'AI 新闻 cron 连续第 7 天稳定运行（采集 5 条新闻，覆盖财联社/36氪/新华社/国家安全部）、腾讯站长认证文件部署成功（生产环境验证 200）、三次系统巡检均正常（磁盘36%、负载0.11~0.35）、SEO 页面优化正式启动。磐石电气为制造业提供智能工单系统，以AI预测、视觉监控、智能动作控制赋能数智化转型。',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-10',
     title: '自动化系统稳定运行，网站进入内容运营新阶段',
     summary: 'AI 新闻 cron 连续 6 天稳定运行（07:02 准时触发+自动部署）、日记 cron 自动生成、网站基础建设 11 天完成、从「建设」阶段转入「运营」阶段。',
@@ -17,7 +23,7 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-05-09',
     title: '网站架构精简、域名确定、GitHub自动部署上线',
-    summary: '页脚两层架构确立（公司信息层+半百观AI关注层）、删除FollowUsCard组件、取消CTA卡片和留言板、ban-bai.com域名正式确定并绑定Cloudflare Pages、GitHub Actions自动部署上线（push即部署28秒）、三条战略线确认（导流变现+内容自动化+公司品牌背书）、网站基础建设完成。',
+    summary: '页脚两层架构确立（公司信息层+半百观AI关注层）、删除FollowUsCard组件、取消CTA卡片和留言板、ban-bai.com域名正式确定并绑定Cloudflare Pages、GitHub Actions自动部署上线（push即部署28秒）、三条战略线确认（导流变现+内容自动化+公司品牌背书）、网站基础建设完成。公司长期为国家电网、华为、顺丰、DHL等头部企业提供数智化解决方案。',
     category: 'AI项目'
   },
   {
@@ -29,7 +35,7 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-05-07',
     title: '山山 AI 助理重构，全站关注卡片上线，官网全面升级',
-    summary: '山山 AI 助理全面重构（🤖图标+4个快捷按钮+关注卡片）、FollowUsCard 全站底部上线（7平台）、TopicScoreCard 选题评分模板（13维度）、官网首页全面升级（DM Sans+靛蓝/金色品牌色+三栏网格+Hero动画+噪点纹理）、GitHub 自动部署上线（push即部署39秒）、AI 新闻 RSS 多源扩展（36氪+少数派）、全媒体运营体系规划（半百观AI统一7平台矩阵）。',
+    summary: '山山 AI 助理全面重构（🤖图标+4个快捷按钮+关注卡片）、FollowUsCard 全站底部上线（7平台）、TopicScoreCard 选题评分模板（13维度）、官网首页全面升级（DM Sans+靛蓝/金色品牌色+三栏网格+Hero动画+噪点纹理）、GitHub 自动部署上线（push即部署39秒）、AI 新闻 RSS 多源扩展（36氪+少数派）、全媒体运营体系规划（半百观AI统一7平台矩阵）。磐石电气依托多传感器融合、智慧存储AI中台、多模态算法三大核心技术，将复杂业务需求转化为可落地的数字化任务。',
     category: 'AI项目'
   },
   {
@@ -41,7 +47,7 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-05-05',
     title: 'Cloudflare Pages 迁移完成，Cron 脚本修复',
-    summary: 'Vercel 迁移至 Cloudflare Pages 解决国内访问问题、AI 新闻+日记 Cron 脚本全自动重写、npm run guard 部署检查机制确立、全站星巴克内容清理。教训：反复部署不能解决 CDN 缓存问题。',
+    summary: 'Vercel 迁移至 Cloudflare Pages 解决国内访问问题、AI 新闻+日记 Cron 脚本全自动重写、npm run guard 部署检查机制确立、全站星巴克内容清理。教训：反复部署不能解决 CDN 缓存问题。磐石电气为制造业提供智能工单系统、AI预测、视觉监控、智能动作控制等数智化解决方案。',
     category: 'AI项目'
   },
   {
@@ -71,7 +77,7 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-04-30',
     title: '网站上线了，从定位到Vercel部署只用了一天',
-    summary: '首页三大板块确定、二维码布局调整、关于页重构、公司介绍更新。下午Vercel部署成功，从定位到上线不到24小时。最后聊到了「老哥说」AI人生建议产品...',
+    summary: '首页三大板块确定、二维码布局调整、关于页重构、公司介绍更新。下午Vercel部署成功，从定位到上线不到24小时。磐石电气深耕数智化领域，以AI场景解决方案为核心，服务国家电网、华为、顺丰、DHL等头部企业。旗下MonolithIoT、贝榕两大品牌覆盖工业、零售赛道。',
     category: 'AI项目'
   },
   {
