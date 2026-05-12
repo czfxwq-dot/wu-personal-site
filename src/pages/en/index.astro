@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Guanwu | Building with AI at 50",
+  "description": "A 50-year-old entrepreneur using AI to turn ideas into reality — Co-founder of MonolithIoT shares his AI journey",
+  "url": "https://ban-bai.com/en/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Guanwu",
+    "url": "https://ban-bai.com"
+  },
+  "about": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "jobTitle": "Co-founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MonolithIoT (Changzhou) Co., Ltd."
+    }
+  },
+  "keywords": ["AI tools", "AI adoption", "AIoT", "smart inventory", "50 years old learning AI", "digital transformation"]
+};
+---
+
+<BaseLayout title="Guanwu | Building with AI at 50" jsonLd={homeJsonLd} ogDescription="A 50-year-old entrepreneur using AI to turn ideas into reality — Co-founder of MonolithIoT shares his AI journey" navActive="home" lang="en">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient-1"></div>
+      <div class="hero-gradient-2"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>AI Practitioner · Founder at 50</span>
+      </div>
+      <h1 class="hero-title">
+        At 50, I use AI<br/>to turn ideas into reality
+      </h1>
+      <p class="hero-subtitle">
+        I'm Mr. Wu, co-founder of an AIoT company. This site is my public journal — building a website with my AI assistant "Shanshan," sharing real AI tool experiences, and documenting what it's like to learn AI at 50.
+        <br/>
+        <span style="font-size: 14px; color: var(--color-text-tertiary);">Sharing AI tool practices · Smart inventory management · A 50-year-old's honest AI learning journey</span>
+      </p>
+      <div class="hero-actions">
+        <a href="/en/diary/" class="btn btn-primary">Read My Diary <span class="btn-arrow">→</span></a>
+        <a href="/en/about/" class="btn btn-ghost">About Me</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Scroll down</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <section class="content-grid">
+    <div class="container">
+      <div class="grid-header">
+        <div class="section-title">Latest Updates</div>
+        <a href="/en/diary/" class="section-more">View All <span class="arrow">→</span></a>
+      </div>
+      <div class="grid-cards">
+        <!-- Latest Diary -->
+        <a href="/en/diary/" class="grid-card card-diary">
+          <div class="card-label">
+            <span class="label-icon">📓</span>
+            <span class="label-text">Diary</span>
+          </div>
+          <div class="card-date">2026-05-12 · Day 15</div>
+          <h3 class="card-heading">SEO Optimization Live, hreflang & Core Web Vitals Fixed</h3>
+          <p class="card-excerpt">Today I optimized all 26 pages for SEO, added multi-language support, and fixed image loading issues. My AI assistant caught a bug where it ran the same command 40 times — turned out it didn't know when to stop.</p>
+          <div class="card-comment">
+            <span class="comment-icon">💡</span> Sometimes the best optimization isn't adding more — it's knowing when to stop.
+          </div>
+        </a>
+
+        <!-- About the Company -->
+        <div class="grid-card card-company">
+          <div class="card-label">
+            <span class="label-icon">🏭</span>
+            <span class="label-text">Company</span>
+          </div>
+          <h3 class="card-heading">MonolithIoT (Changzhou) Co., Ltd.</h3>
+          <p class="card-excerpt">We build AI-powered smart inventory management systems for manufacturing. Trusted by State Grid, Huawei, SF Express, and DHL. Our core tech: multi-sensor fusion, AI-driven storage middleware, and multimodal algorithms.</p>
+          <div class="card-comment">
+            <span class="comment-icon">🌐</span> <a href="https://www.monolithiot.com" target="_blank" rel="noopener">Visit monolithiot.com →</a>
+          </div>
+        </div>
+
+        <!-- 半百观AI -->
+        <a href="/banbaiguan/" class="grid-card card-article">
+          <div class="card-label">
+            <span class="label-icon">🎯</span>
+            <span class="label-text">BanbaiGuan AI</span>
+          </div>
+          <div class="card-date">2026-05-11</div>
+          <h3 class="card-heading">Anthropic's Revenue Grew 80x in One Quarter — Then Their Infrastructure Crashed</h3>
+          <p class="card-excerpt">CEO Dario Amodei revealed: annualized revenue grew 80x, surpassing $30 billion. Not enough compute, had to urgently ask SpaceX to take over data centers. For small business owners: now is the best window for AI, don't wait for the perfect solution, focus on execution.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Projects -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-title">AI Projects</div>
+      <div class="placeholder-card">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Follow Section -->
+  <section class="follow-section">
+    <div class="container">
+      <div class="section-title" style="text-align: center;">Follow "BanbaiGuan AI"</div>
+      <p class="follow-subtitle">A 50-year-old's honest take on AI tool adoption</p>
+      <div class="follow-qr-codes">
+        <div class="follow-qr-item">
+          <img src="/gzh-qr.jpg" alt="WeChat Official Account" width="430" height="430" loading="lazy" />
+          <span class="follow-qr-label">WeChat</span>
+        </div>
+        <div class="follow-qr-item">
+          <img src="/dy-qr.jpg" alt="Video Account" width="686" height="960" loading="lazy" />
+          <span class="follow-qr-label">Video Account</span>
+        </div>
+        <div class="follow-qr-item">
+          <img src="/douyin-qr.jpg" alt="Douyin" width="1125" height="1385" loading="lazy" />
+          <span class="follow-qr-label">Douyin</span>
+        </div>
+      </div>
+      <p class="follow-search">Or search "半百观AI" on Bilibili, Xigua Video, Xiaohongshu</p>
+    </div>
+  </section>
+</BaseLayout>

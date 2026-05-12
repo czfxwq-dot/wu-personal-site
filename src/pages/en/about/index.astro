@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "About | Guanwu",
+  "description": "Profile of Mr. Wu — Co-founder of MonolithIoT, AIoT practitioner, founder of BanbaiGuan AI",
+  "url": "https://ban-bai.com/en/about/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu",
+    "jobTitle": "Co-founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MonolithIoT (Changzhou) Co., Ltd.",
+      "url": "https://www.monolithiot.com"
+    },
+    "description": "50 years old, skilled in structured thinking and first principles, expert in AI applications, brand management, and new media operations.",
+    "knowsAbout": ["AI Applications", "AIoT", "Smart Inventory Management", "Brand Management", "New Media Operations"],
+    "url": "https://ban-bai.com/en/about/"
+  }
+};
+---
+
+<BaseLayout title="About | Guanwu — Co-founder of MonolithIoT" jsonLd={aboutJsonLd} ogDescription="Profile of Mr. Wu — Co-founder of MonolithIoT, AIoT practitioner, founder of BanbaiGuan AI" navActive="about" lang="en">
+  <section class="page-section">
+    <h1>About</h1>
+
+    <div class="about-section">
+      <div class="section-title">Guanwu (观吾)</div>
+      <p class="about-text">
+        Pen name: "Guanwu" — meaning "observe oneself."<br />
+        I'm 50, co-founder of MonolithIoT (Changzhou) Co., Ltd.<br />
+        I focus on AIoT solutions for smart inventory management.<br />
+        I also run "BanbaiGuan AI," my personal new media brand.
+      </p>
+      <p class="about-text">
+        I believe in structured thinking and first principles.<br />
+        What I'm doing now: using AI to turn ideas into reality.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <div class="section-title">MonolithIoT (Changzhou) Co., Ltd.</div>
+      <p class="about-text">
+        A national-level high-tech enterprise and "specialized, refined, distinctive, and innovative" company. We specialize in AI-driven scenario solutions, built on three core technologies: multi-sensor fusion, AI-powered storage middleware, and multimodal algorithms.
+      </p>
+      <p class="about-text-light">
+        Our flagship products — smart work order systems, AI-powered predictive analytics, visual monitoring, and intelligent action control — transform complex business needs into standardized, executable, and traceable digital tasks. We've been serving top-tier enterprises including State Grid, Huawei, SF Express, and DHL.
+      </p>
+      <p class="about-links">
+        Website: <a href="https://www.monolithiot.com/" target="_blank">monolithiot.com</a> ｜
+        YouTube: <a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" target="_blank">MonolithIoT</a>
+      </p>
+      <div class="about-qr-wrapper">
+        <img src="/company-qr.png" alt="MonolithIoT New Media Matrix" width="1080" height="328" />
+      </div>
+    </div>
+
+
+    <div class="about-section">
+      <div class="section-title">About This Website</div>
+      <p class="about-text">
+        This website was built by me and my AI assistant "Shanshan" (山山).<br />
+        I set the direction and content; Shanshan handles the code and technical implementation.<br />
+        From product design to deployment — no frontend engineer involved.
+      </p>
+      <p class="about-text-light">
+        Built with Astro, deployed on Cloudflare Pages. The AI news feed updates automatically every morning at 7 AM via cron job.
+      </p>
+    </div>
+
+  </section>
+</BaseLayout>
+
+<style>
+  .about-section { margin-bottom: 48px; }
+  .about-text { font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
+  .about-text-light { font-size: 15px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 16px; }
+  .about-links { font-size: 14px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 24px; }
+  .about-links a { color: var(--color-accent); text-decoration: underline; font-weight: 500; }
+  .about-qr-wrapper { text-align: center; }
+  .about-qr-wrapper img { max-width: 400px; width: 100%; height: auto; border-radius: 12px; }
+</style>

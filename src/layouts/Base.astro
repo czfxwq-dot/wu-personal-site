@@ -8,9 +8,15 @@ interface Props {
   ogImage?: string;
   ogDescription?: string;
   navActive?: 'home' | 'diary' | 'ai-news' | 'banbaiguan' | 'guestbook' | 'about';
+  lang?: 'zh' | 'en';
 }
 
-const { title = '观吾 | 50岁用AI做实事', jsonLd = [], ogImage, ogDescription, navActive } = Astro.props as Props;
+const { title = '观吾 | 50岁用AI做实事', jsonLd = [], ogImage, ogDescription, navActive, lang = 'zh' } = Astro.props as Props;
+
+// 多语言切换 URL
+const otherLangUrl = lang === 'en'
+  ? Astro.url.pathname.replace(/^\/en/, '') || '/'
+  : `/en${Astro.url.pathname}`;
 // Google Analytics Measurement ID（在 Vercel 环境变量中配置 PUBLIC_GA_MEASUREMENT_ID）
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 
@@ -79,7 +85,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang={lang === 'en' ? 'en' : 'zh-CN'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -137,12 +143,24 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
       <div class="header-inner">
         <a href="/" class="site-brand">观吾</a>
         <nav class="site-nav">
-          <a href="/" class:list={[navActive === 'home' && 'active']}>首页</a>
-          <a href="/diary/" class:list={[navActive === 'diary' && 'active']}>日记</a>
-          <a href="/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI新闻</a>
-          <a href="/banbaiguan/" class:list={[navActive === 'banbaiguan' && 'active']}>半百观</a>
-          <a href="/guestbook/" class:list={[navActive === 'guestbook' && 'active']}>留言板</a>
-          <a href="/about/" class:list={[navActive === 'about' && 'active']}>关于</a>
+          {lang === 'en' ? (
+            <>
+              <a href="/en/" class:list={[navActive === 'home' && 'active']}>Home</a>
+              <a href="/en/diary/" class:list={[navActive === 'diary' && 'active']}>Diary</a>
+              <a href="/en/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI News</a>
+              <a href="/en/about/" class:list={[navActive === 'about' && 'active']}>About</a>
+            </>
+          ) : (
+            <>
+              <a href="/" class:list={[navActive === 'home' && 'active']}>首页</a>
+              <a href="/diary/" class:list={[navActive === 'diary' && 'active']}>日记</a>
+              <a href="/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI新闻</a>
+              <a href="/banbaiguan/" class:list={[navActive === 'banbaiguan' && 'active']}>半百观</a>
+              <a href="/guestbook/" class:list={[navActive === 'guestbook' && 'active']}>留言板</a>
+              <a href="/about/" class:list={[navActive === 'about' && 'active']}>关于</a>
+            </>
+          )}
+          <a href={otherLangUrl} class="lang-switch">{lang === 'en' ? '中文' : 'EN'}</a>
         </nav>
       </div>
     </header>

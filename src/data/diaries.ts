@@ -9,6 +9,12 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-12',
+    title: 'SEO 全站优化上线，hreflang 与 Core Web Vitals 修复完成',
+    summary: 'robots.txt修复+sitemap.xml重写28URL、26个页面SEO补全(title+ogDescription+JSON-LD)、hreflang多语言标签上线(zh-CN+x-default)、Core Web Vitals修复(5张二维码加width/height、移除冗余Google Fonts)、系统自检发现重复命令循环问题并写入规则。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案。',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-11',
     title: '系统连续第7天稳定运行，腾讯站长认证部署',
     summary: 'AI 新闻 cron 连续第 7 天稳定运行（采集 5 条新闻，覆盖财联社/36氪/新华社/国家安全部）、腾讯站长认证文件部署成功（生产环境验证 200）、三次系统巡检均正常（磁盘36%、负载0.11~0.35）、SEO 页面优化正式启动。磐石电气为制造业提供智能工单系统，以AI预测、视觉监控、智能动作控制赋能数智化转型。',
