@@ -9,6 +9,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'html-is-new-markdown',
+    date: '2026-05-13',
+    title: 'AI学会自己写网页了，而你还在手动改Word排版？',
+    excerpt: 'Claude Code团队核心成员宣布"HTML is the new Markdown"，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从"帮你写字"变成"帮你做东西"。',
+    tag: 'AI前沿'
+  },
+  {
     slug: 'anthropic-revenue-80x',
     date: '2026-05-11',
     title: 'Anthropic一个季度营收暴增80倍，把自家基础设施搞崩溃了',
