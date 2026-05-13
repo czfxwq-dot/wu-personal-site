@@ -6,18 +6,18 @@
  */
 
 interface Props {
-  topic: string;          // 选题名称
-  date?: string;          // 评估日期
-  scores?: Record<string, number>; // 各维度评分（1-5）
-  total?: number;         // 总分（自动计算）
-  threshold?: number;     // 通过阈值（默认 60）
-  comment?: string;       // 备注
+  topic: string;
+  date?: string;
+  scores?: Record<string, number>;
+  total?: number;
+  threshold?: number;
+  comment?: string;
+  lang?: 'zh' | 'en';
 }
 
-const { topic, date, scores = {}, total, threshold = 60, comment } = Astro.props;
+const { topic, date, scores = {}, total, threshold = 60, comment, lang = 'zh' } = Astro.props;
 
-// 13 个评分维度定义
-const dimensions = [
+const dimensionsZh = [
   { key: 'audience', name: '受众匹配度', desc: '与目标用户的契合程度', weight: 1.0 },
   { key: 'timeliness', name: '时效性', desc: '话题的新鲜度和热度周期', weight: 0.8 },
   { key: 'differentiation', name: '差异化程度', desc: '与同类内容的区别', weight: 1.0 },
@@ -32,6 +32,33 @@ const dimensions = [
   { key: 'platform_fit', name: '平台适配度', desc: '适合哪些平台发布', weight: 0.8 },
   { key: 'compliance', name: '合规风险', desc: '分高=风险低', weight: 1.0 },
 ];
+
+const dimensionsEn = [
+  { key: 'audience', name: 'Audience Match', desc: 'Fit with target users', weight: 1.0 },
+  { key: 'timeliness', name: 'Timeliness', desc: 'Topic freshness and热度 cycle', weight: 0.8 },
+  { key: 'differentiation', name: 'Differentiation', desc: 'Distinction from similar content', weight: 1.0 },
+  { key: 'data_support', name: 'Data / Case Support', desc: 'Real data or cases backing', weight: 0.8 },
+  { key: 'emotional', name: 'Emotional Value', desc: 'Can it resonate or spark discussion', weight: 0.6 },
+  { key: 'actionable', name: 'Actionability', desc: 'Can readers act immediately after reading', weight: 0.8 },
+  { key: 'competition', name: 'Competition Density', desc: 'How much similar content exists (high=low competition)', weight: 0.6 },
+  { key: 'long_tail', name: 'Long-tail Value', desc: 'Will it still have search traffic in 6 months', weight: 0.8 },
+  { key: 'ip_alignment', name: 'IP Alignment', desc: 'Does it fit "50-year-old perspective on AI"', weight: 1.0 },
+  { key: 'conversion', name: 'Conversion Potential', desc: 'Can it drive follows/payments/leads', weight: 0.6 },
+  { key: 'production_cost', name: 'Production Cost', desc: 'High score = easy to produce', weight: 0.6 },
+  { key: 'platform_fit', name: 'Platform Fit', desc: 'Which platforms to publish on', weight: 0.8 },
+  { key: 'compliance', name: 'Compliance Risk', desc: 'High score = low risk', weight: 1.0 },
+];
+
+const dimensions = lang === 'en' ? dimensionsEn : dimensionsZh;
+
+const badgeText = lang === 'en'
+  ? (isPassed !== null ? (isPassed ? '✅ Approved' : '❌ Not Met') : '📋 Pending')
+  : (isPassed !== null ? (isPassed ? '✅ 入选' : '❌ 未达标') : '📋 待评估');
+
+const scoreLabel = lang === 'en' ? '/ 100 pts' : '/ 100 分';
+const thresholdLabel = lang === 'en' ? `Pass threshold: ${threshold} pts` : `通过阈值: ${threshold} 分`;
+const guideStandard = lang === 'en' ? 'Scoring: 1=Poor, 2=Below Avg, 3=Average, 4=Good, 5=Excellent' : '评分标准：1=差，2=较差，3=一般，4=良好，5=优秀';
+const guideUsage = lang === 'en' ? `Topics scoring ≥ ${threshold} enter the content production queue, otherwise deferred` : `总分 ≥ ${threshold} 分的选题进入内容生产队列，否则暂缓`;
 
 // 计算总分
 function calcTotal(scores: Record<string, number>): { total: number; max: number; percent: number } {
@@ -66,7 +93,7 @@ function totalColor(total: number): string {
 
 <div class="topic-score-card">
   <div class="topic-header">
-    <span class="topic-badge">{isPassed !== null ? (isPassed ? '✅ 入选' : '❌ 未达标') : '📋 待评估'}</span>
+    <span class="topic-badge">{badgeText}</span>
     <h3>{topic}</h3>
     <span class="topic-date">{evalDate}</span>
   </div>
@@ -75,10 +102,10 @@ function totalColor(total: number): string {
     <div class="score-summary">
       <div class="total-score" style={{ color: totalColor(scoreResult.total) }}>
         <span class="score-number">{scoreResult.total}</span>
-        <span class="score-label">/ 100 分</span>
+        <span class="score-label">{scoreLabel}</span>
       </div>
       <div class="threshold-info">
-        通过阈值: {threshold} 分
+        {thresholdLabel}
         {comment && <span class="comment">· {comment}</span>}
       </div>
     </div>
@@ -108,8 +135,8 @@ function totalColor(total: number): string {
   </div>
 
   <div class="score-guide">
-    <p><strong>评分标准：</strong>1=差，2=较差，3=一般，4=良好，5=优秀</p>
-    <p><strong>使用说明：</strong>总分 ≥ {threshold} 分的选题进入内容生产队列，否则暂缓</p>
+    <p><strong>{lang === 'en' ? 'Scoring Standard:' : '评分标准：'}</strong>{guideStandard}</p>
+    <p><strong>{lang === 'en' ? 'Usage:' : '使用说明：'}</strong>{guideUsage}</p>
   </div>
 </div>
 

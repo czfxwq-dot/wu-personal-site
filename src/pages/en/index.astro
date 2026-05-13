@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import { diaries } from '../../data/diaries';
+import { dailyNewsSummaries } from '../../data/ai-news-summary';
+import { articles } from '../../data/articles';
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Guanwu | 50-Year-Old Using AI to Get Things Done",
+  "description": "50-year-old entrepreneur uses AI to turn ideas into reality — co-founder of MonolithIoT, sharing AI tool practices, AIoT solutions, and digital smart inventory management",
+  "url": "https://banbai.ai/en/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Guanwu",
+    "url": "https://banbai.ai"
+  },
+  "about": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu",
+    "jobTitle": "Co-founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MonolithIoT (Changzhou) Co., Ltd."
+    }
+  },
+  "keywords": ["AI tools", "AI adoption", "BanbaiGuan AI", "AIoT", "digital inventory", "learn AI at 50", "AI productivity"]
+};
+
+const latest = diaries[0];
+const latestSummary = dailyNewsSummaries[0];
+const latestArticle = articles[0];
+---
+
+<BaseLayout jsonLd={homeJsonLd} navActive="home" lang="en">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient-1"></div>
+      <div class="hero-gradient-2"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>AI Practitioner · BanbaiGuan AI</span>
+      </div>
+      <h1 class="hero-title">
+        At 50, I use AI<br/>to turn ideas into reality
+      </h1>
+      <p class="hero-subtitle">
+        Co-founder of MonolithIoT · AIoT Practitioner · BanbaiGuan AI
+      </p>
+      <p class="hero-description">
+        This is not a typical personal website.<br/>
+        My AI assistant and I built it from scratch, together.<br/>
+        <span style="font-size: 14px; color: var(--color-text-tertiary);">AI tool practices · Digital smart inventory management · My honest 50-year-old AI learning journey</span>
+      </p>
+      <div class="hero-actions">
+        <a href="/en/diary/" class="btn btn-primary">Read My Diary <span class="btn-arrow">→</span></a>
+        <a href="/en/about/" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll down</span>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <section class="content-grid">
+    <div class="container">
+      <div class="grid-header">
+        <div class="section-title">Latest Updates</div>
+        <a href="/en/diary/" class="section-more">View Full Timeline <span class="arrow">→</span></a>
+      </div>
+      <div class="grid-cards">
+        <!-- Latest Diary -->
+        <a href="/en/diary/" class="grid-card card-diary">
+          <div class="card-label">
+            <span class="label-icon">📓</span>
+            <span class="label-text">Diary</span>
+          </div>
+          <div class="card-date">{latest.date}</div>
+          <h3 class="card-heading">{latest.titleEn}</h3>
+          <p class="card-excerpt">{latest.summaryEn}</p>
+        </a>
+
+        <!-- AI News -->
+        <a href="/en/ai-news/" class="grid-card card-news">
+          <div class="card-label">
+            <span class="label-icon">📡</span>
+            <span class="label-text">AI News</span>
+          </div>
+          <div class="card-date">{latestSummary.date} · {latestSummary.newsItems.length} items</div>
+          <h3 class="card-heading">{latestSummary.titleEn}</h3>
+          <p class="card-excerpt">{latestSummary.summaryEn}</p>
+          <div class="card-comment">
+            <span class="comment-icon">💡</span>
+            {latestSummary.commentEn}
+          </div>
+        </a>
+
+        <!-- BanbaiGuan -->
+        <a href={`/en/banbaiguan/${latestArticle.slug}/`} class="grid-card card-article">
+          <div class="card-label">
+            <span class="label-icon">🎯</span>
+            <span class="label-text">BanbaiGuan AI</span>
+          </div>
+          <div class="card-date">{latestArticle.date}</div>
+          <h3 class="card-heading">{latestArticle.titleEn}</h3>
+          <p class="card-excerpt">{latestArticle.excerptEn}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Projects -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-title">AI Projects</div>
+      <div class="placeholder-card">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Company -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-title">About the Company</div>
+      <div class="company-card">
+        <div class="company-badge">National High-Tech Enterprise</div>
+        <h2>MonolithIoT (Changzhou) Co., Ltd.</h2>
+        <p class="company-desc">An AI scenario solutions provider. Built on three core technologies: multi-sensor fusion, AI-powered storage middleware, and multimodal algorithms — digitizing the entire industrial chain.</p>
+        <div class="company-clients">
+          <span class="client-label">Trusted by</span>
+          <span class="client-name">State Grid</span>
+          <span class="client-name">Huawei</span>
+          <span class="client-name">SF Express</span>
+          <span class="client-name">DHL</span>
+        </div>
+        <div class="company-actions">
+          <a href="/en/about/" class="link-arrow">Learn More</a>
+          <a href="https://www.monolithiot.com" class="link-arrow" target="_blank" rel="noopener">Visit Company Site →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Follow Section -->
+  <section class="follow-section">
+    <div class="container">
+      <div class="section-title" style="text-align: center;">Follow Us</div>
+      <p class="follow-subtitle">Search "BanbaiGuan AI" on all platforms to find us</p>
+      <div class="follow-qr-codes">
+        <div class="follow-qr-item">
+          <img src="/gzh-qr.jpg" alt="WeChat BanbaiGuan AI" loading="lazy" />
+          <span class="follow-qr-label">WeChat</span>
+        </div>
+        <div class="follow-qr-item">
+          <img src="/dy-qr.jpg" alt="Video Account BanbaiGuan AI" loading="lazy" />
+          <span class="follow-qr-label">Video Account</span>
+        </div>
+        <div class="follow-qr-item">
+          <img src="/douyin-qr.jpg" alt="Douyin BanbaiGuan AI" loading="lazy" />
+          <span class="follow-qr-label">Douyin</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Same styles as Chinese homepage — copied for self-containment */
+  .hero { position: relative; padding: 100px 0 80px; overflow: hidden; min-height: 75vh; display: flex; flex-direction: column; justify-content: center; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-gradient-1 { position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(45, 53, 97, 0.06) 0%, transparent 70%); border-radius: 50%; }
+  .hero-gradient-2 { position: absolute; bottom: -30%; left: -15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(200, 164, 92, 0.05) 0%, transparent 70%); border-radius: 50%; }
+  .hero-grain { position: absolute; inset: 0; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size: 150px; pointer-events: none; }
+  .hero-content { position: relative; z-index: 1; animation: fadeInUp 0.8s ease forwards; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.05em; margin-bottom: 28px; animation: fadeInUp 0.6s ease forwards; animation-delay: 0.1s; opacity: 0; }
+  .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-gold); animation: pulse 2s ease-in-out infinite; }
+  .hero-title { font-family: var(--font-serif); font-size: clamp(36px, 6vw, 64px); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; color: var(--color-text); margin-bottom: 20px; animation: fadeInUp 0.8s ease forwards; animation-delay: 0.2s; opacity: 0; }
+  .hero-subtitle { font-size: 16px; color: var(--color-gold); font-weight: 600; letter-spacing: 0.02em; margin-bottom: 16px; animation: fadeInUp 0.8s ease forwards; animation-delay: 0.35s; opacity: 0; }
+  .hero-description { font-size: 17px; color: var(--color-text-secondary); line-height: 1.8; max-width: 520px; margin-bottom: 32px; animation: fadeInUp 0.8s ease forwards; animation-delay: 0.5s; opacity: 0; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeInUp 0.8s ease forwards; animation-delay: 0.65s; opacity: 0; }
+  .btn-arrow { transition: transform 0.2s; }
+  .btn-primary:hover .btn-arrow { transform: translateX(4px); }
+  .hero-scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 0.6s ease forwards; animation-delay: 1.2s; }
+  .scroll-line { width: 1px; height: 40px; background: var(--color-border); position: relative; overflow: hidden; }
+  .scroll-line::after { content: ''; position: absolute; top: -100%; left: 0; width: 100%; height: 100%; background: var(--color-gold); animation: scrollDown 2s ease-in-out infinite; }
+  @keyframes scrollDown { 0% { top: -100%; } 50% { top: 100%; } 100% { top: 100%; } }
+  .scroll-text { font-size: 11px; color: var(--color-text-tertiary); letter-spacing: 0.1em; }
+  .content-grid { padding: 48px 0; }
+  .grid-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .section-more { font-size: 13px; color: var(--color-text-tertiary); cursor: pointer; transition: color 0.2s; }
+  .section-more:hover { color: var(--color-accent); }
+  .section-more .arrow { transition: transform 0.2s; display: inline-block; }
+  .section-more:hover .arrow { transform: translateX(4px); }
+  .grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-card { display: block; background: var(--color-surface); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: 28px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+  .grid-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; opacity: 0; transition: opacity 0.3s; }
+  .card-diary::before { background: var(--color-accent); }
+  .card-news::before { background: var(--color-gold); }
+  .card-article::before { background: linear-gradient(90deg, var(--color-accent), var(--color-gold)); }
+  .grid-card:hover { border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-6px); }
+  .grid-card:hover::before { opacity: 1; }
+  .card-label { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .label-icon { font-size: 18px; line-height: 1; }
+  .label-text { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--color-text-tertiary); text-transform: uppercase; }
+  .card-date { font-size: 13px; color: var(--color-text-tertiary); margin-bottom: 10px; }
+  .card-heading { font-family: var(--font-serif); font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--color-text); margin-bottom: 10px; transition: color 0.2s; }
+  .grid-card:hover .card-heading { color: var(--color-accent); }
+  .card-excerpt { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 0; }
+  .card-comment { display: flex; align-items: flex-start; gap: 8px; margin-top: 14px; padding: 12px 14px; background: rgba(200, 164, 92, 0.06); border-radius: var(--radius-sm); font-size: 13px; color: var(--color-text); line-height: 1.5; }
+  .comment-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .company-card { background: var(--color-surface); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: 36px; }
+  .company-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--color-accent); background: rgba(45, 53, 97, 0.06); padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 16px; }
+  .company-card h2 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+  .company-desc { font-size: 15px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 20px; }
+  .company-clients { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 20px; }
+  .client-label { font-size: 12px; color: var(--color-text-tertiary); font-weight: 500; }
+  .client-name { font-size: 13px; font-weight: 600; color: var(--color-text); background: var(--color-bg-alt); padding: 4px 12px; border-radius: var(--radius-full); }
+  .company-actions { display: flex; gap: 20px; padding-top: 16px; border-top: 1px solid var(--color-border-light); }
+  .follow-section { text-align: center; padding: 60px 0; background: var(--color-bg-alt); border-radius: var(--radius-lg); margin-bottom: 64px; }
+  .follow-subtitle { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 32px; }
+  .follow-qr-codes { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .follow-qr-item { display: flex; flex-direction: column; align-items: center; gap: 10px; transition: transform 0.2s; }
+  .follow-qr-item:hover { transform: translateY(-4px); }
+  .follow-qr-item img { width: 130px; height: 130px; border-radius: var(--radius-md); object-fit: cover; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border-light); }
+  .follow-qr-label { font-size: 13px; font-weight: 600; color: var(--color-text-secondary); }
+  .placeholder-card { background: transparent; border: 1px dashed var(--color-border); border-radius: var(--radius-md); text-align: center; padding: 40px; }
+  .placeholder-card p { color: var(--color-text-tertiary); font-size: 15px; }
+  @media (max-width: 768px) {
+    .hero { padding: 80px 0 60px; min-height: auto; }
+    .hero-title { font-size: 32px; }
+    .hero-scroll-hint { display: none; }
+    .grid-cards { grid-template-columns: 1fr; gap: 16px; }
+    .grid-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .company-card { padding: 24px; }
+    .follow-section { padding: 40px 0; margin-bottom: 48px; }
+    .follow-qr-item img { width: 110px; height: 110px; }
+  }
+  @media (max-width: 480px) {
+    .hero { padding: 60px 0 48px; }
+    .hero-title { font-size: 28px; }
+    .hero-description { font-size: 15px; }
+    .hero-actions { flex-direction: column; }
+    .btn { width: 100%; justify-content: center; }
+    .grid-card { padding: 22px; }
+    .company-card h2 { font-size: 20px; }
+    .company-actions { flex-direction: column; gap: 12px; }
+  }
+</style>

@@ -3,46 +3,73 @@
  * ChatWidget - 右下角浮动聊天组件
  * 通过 Cloudflare Pages Functions 代理与 OpenClaw Gateway 对话
  */
+
+interface Props {
+  lang?: 'zh' | 'en';
+}
+
+const { lang = 'zh' } = Astro.props;
+
+const chatTitle = lang === 'en' ? 'Shanshan AI Assistant' : '山山 AI 助理';
+const chatStatus = lang === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
+const chatGreeting1 = lang === 'en' ? "Hi! I'm Shanshan, the AI assistant for BanbaiGuan AI" : '你好！我是山山，半百观AI 的智能助理';
+const chatGreeting2 = lang === 'en' ? "I can help you with the latest AI news, tool recommendations, and our social media accounts." : '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。';
+const chatGreeting3 = lang === 'en' ? 'You can ask me:' : '你可以问我：';
+const chatGreeting4 = lang === 'en' ? 'What AI tools are trending lately?' : '最近有什么好用的 AI 工具？';
+const chatGreeting5 = lang === 'en' ? 'Where can I follow you?' : '你们在哪些平台有账号？';
+const chatGreeting6 = lang === 'en' ? 'Any recommended AI articles?' : '有什么值得看的 AI 文章？';
+const chatPlaceholder = lang === 'en' ? 'Ask Shanshan...' : '问问山山...';
+const qaAiNews = lang === 'en' ? 'AI News' : '今日 AI';
+const qaFollow = lang === 'en' ? 'Follow Us' : '关注我们';
+const qaArticles = lang === 'en' ? 'Articles' : '最新文章';
+const qaGuestbook = lang === 'en' ? 'Guestbook' : '留言板';
+const followCardTitle = lang === 'en' ? 'BanbaiGuan AI' : '半百观AI';
+const followCardHint = lang === 'en' ? 'Search "BanbaiGuan AI" on any platform to find us' : '全平台搜索"半百观AI"即可找到我们';
+const followCardFollow = lang === 'en' ? 'Follow' : '关注';
+const offlineMsg = lang === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。';
+const errorMsg = lang === 'en' ? 'Sorry, I\'m temporarily unable to reply. Please try again later.' : '抱歉，我暂时无法回复。请稍后再试。';
+const statusOnline = lang === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
+const statusThinking = lang === 'en' ? 'Thinking...' : '思考中...';
+const statusError = lang === 'en' ? 'Connection failed' : '连接失败';
+const botPrompt1 = lang === 'en' ? 'Please briefly introduce today\'s 3 most noteworthy AI news.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。';
+const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。';
 ---
 
 <div id="chat-widget-root">
-  <!-- 浮动按钮 -->
-  <button id="chat-toggle-btn" aria-label="打开山山 AI 助理对话" title="和山山对话">
+  <button id="chat-toggle-btn" aria-label={lang === 'en' ? 'Open Shanshan AI Assistant' : '打开山山 AI 助理对话'} title={lang === 'en' ? 'Chat with Shanshan' : '和山山对话'}>
     <span class="chat-icon">🤖</span>
   </button>
 
-  <!-- 对话面板 -->
-  <div id="chat-panel" class="hidden" role="dialog" aria-label="AI助理对话窗口">
+  <div id="chat-panel" class="hidden" role="dialog" aria-label={lang === 'en' ? 'AI Assistant Dialog' : 'AI助理对话窗口'}>
     <div class="chat-header">
       <div class="chat-header-info">
         <span class="chat-avatar">🤖</span>
         <div>
-          <span class="chat-title">山山 AI 助理</span>
-          <span class="chat-status" id="chat-status">半百观AI · 在线</span>
+          <span class="chat-title">{chatTitle}</span>
+          <span class="chat-status" id="chat-status">{chatStatus}</span>
         </div>
       </div>
-      <button id="chat-close-btn" aria-label="关闭对话">
+      <button id="chat-close-btn" aria-label={lang === 'en' ? 'Close' : '关闭'}>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
     </div>
 
-    <!-- 快捷按钮 -->
     <div class="quick-actions" id="quick-actions">
       <button class="quick-action-btn" data-action="ai-news">
         <span class="qa-icon">📰</span>
-        <span class="qa-text">今日 AI</span>
+        <span class="qa-text">{qaAiNews}</span>
       </button>
       <button class="quick-action-btn" data-action="follow-us">
         <span class="qa-icon">📺</span>
-        <span class="qa-text">关注我们</span>
+        <span class="qa-text">{qaFollow}</span>
       </button>
       <button class="quick-action-btn" data-action="latest-articles">
         <span class="qa-icon">📝</span>
-        <span class="qa-text">最新文章</span>
+        <span class="qa-text">{qaArticles}</span>
       </button>
       <button class="quick-action-btn" data-action="guestbook">
         <span class="qa-icon">💬</span>
-        <span class="qa-text">留言板</span>
+        <span class="qa-text">{qaGuestbook}</span>
       </button>
     </div>
 
@@ -50,10 +77,10 @@
       <div class="chat-message bot">
         <div class="message-avatar">🤖</div>
         <div class="message-bubble">
-          <p>你好！我是山山，半百观AI 的智能助理 🤖</p>
-          <p>我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。</p>
-          <p style="margin-top:8px;font-size:12px;opacity:0.8;">💡 你可以问我：</p>
-          <p style="font-size:12px;opacity:0.8;">• 最近有什么好用的 AI 工具？<br/>• 你们在哪些平台有账号？<br/>• 有什么值得看的 AI 文章？</p>
+          <p>{chatGreeting1}</p>
+          <p>{chatGreeting2}</p>
+          <p style="margin-top:8px;font-size:12px;opacity:0.8;">{chatGreeting3}</p>
+          <p style="font-size:12px;opacity:0.8;">• {chatGreeting4}<br/>• {chatGreeting5}<br/>• {chatGreeting6}</p>
         </div>
       </div>
     </div>
@@ -61,11 +88,11 @@
     <div class="chat-input-area">
       <textarea
         id="chat-input"
-        placeholder="问问山山..."
+        placeholder={chatPlaceholder}
         rows="1"
         maxlength="2000"
       ></textarea>
-      <button id="chat-send-btn" aria-label="发送消息" disabled>
+      <button id="chat-send-btn" aria-label={lang === 'en' ? 'Send' : '发送'} disabled>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -468,11 +495,10 @@
 
 <script>
 (function() {
-  // 配置 — 通过 Pages Functions 代理，token 在服务端环境变量中
   const CHAT_API_URL = '/api/chat';
   const MAX_MESSAGES = 50;
+  const LANG = {lang};
 
-  // DOM 元素
   const toggleBtn = document.getElementById('chat-toggle-btn');
   const closeBtn = document.getElementById('chat-close-btn');
   const chatPanel = document.getElementById('chat-panel');
@@ -485,7 +511,6 @@
   let isLoading = false;
   let messageHistory = [];
 
-  // 切换面板
   function toggleChat() {
     isOpen = !isOpen;
     chatPanel.classList.toggle('hidden', !isOpen);
@@ -494,8 +519,7 @@
     }
   }
 
-  // 平台信息
-  const platforms = [
+  const platformsZh = [
     { name: '微信公众号', icon: '💬' },
     { name: '视频号', icon: '🎥' },
     { name: '抖音', icon: '🎵' },
@@ -505,32 +529,53 @@
     { name: '小红书', icon: '📕' },
   ];
 
-  // 快捷按钮：显示关注卡片
+  const platformsEn = [
+    { name: 'WeChat', icon: '💬' },
+    { name: 'Video Account', icon: '🎥' },
+    { name: 'Douyin', icon: '🎵' },
+    { name: 'Toutiao', icon: '📰' },
+    { name: 'Xigua Video', icon: '🍉' },
+    { name: 'Bilibili', icon: '📺' },
+    { name: 'Xiaohongshu', icon: '📕' },
+  ];
+
+  const platforms = LANG === 'en' ? platformsEn : platformsZh;
+  const badgeText = LANG === 'en' ? 'BanbaiGuan AI' : '半百观AI';
+  const followTitle = LANG === 'en' ? 'BanbaiGuan AI' : '半百观AI';
+  const followHint = LANG === 'en' ? 'Search "BanbaiGuan AI" on any platform to find us' : '全平台搜索"半百观AI"即可找到我们';
+  const followPrefix = LANG === 'en' ? 'Follow' : '关注';
+  const statusOnline = LANG === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
+  const statusThinking = LANG === 'en' ? 'Thinking...' : '思考中...';
+  const statusError = LANG === 'en' ? 'Connection failed' : '连接失败';
+  const offlineMsg = LANG === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。';
+  const errorMsg = LANG === 'en' ? 'Sorry, I\'m temporarily unable to reply. Please try again later.' : '抱歉，我暂时无法回复。请稍后再试。';
+  const botPrompt1 = LANG === 'en' ? 'Please briefly introduce today\'s 3 most noteworthy AI news.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。';
+  const botPrompt2 = LANG === 'en' ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。';
+
   function showPlatformCard() {
     const cardHTML = `
-      <p>关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇</p>
+      <p>${LANG === 'en' ? 'Follow' : '关注'}<strong>${followTitle}</strong>，${LANG === 'en' ? 'get the latest AI practice updates' : '获取最新 AI 实践分享'} 👇</p>
       <div class="platform-card">
         ${platforms.map(p => `
           <div class="platform-item">
             <span>${p.icon}</span>
             <span>${p.name}</span>
-            <span style="margin-left:auto;font-size:12px;color:#64748b;">半百观AI</span>
+            <span style="margin-left:auto;font-size:12px;color:#64748b;">${badgeText}</span>
           </div>
         `).join('')}
       </div>
-      <p style="margin-top:8px;font-size:12px;opacity:0.7;">全平台搜索"半百观AI"即可找到我们 ✨</p>
+      <p style="margin-top:8px;font-size:12px;opacity:0.7;">${followHint}</p>
     `;
     addMessage('bot', cardHTML, true);
   }
 
-  // 快捷按钮：发送消息给 BOT
   async function sendToBot(text) {
     if (isLoading) return;
     addMessage('user', text);
     messageHistory.push({ role: 'user', content: text });
     isLoading = true;
     showLoading(true);
-    setStatus('思考中...', true);
+    setStatus(statusThinking, true);
     try {
       const response = await fetch(CHAT_API_URL, {
         method: 'POST',
@@ -575,37 +620,35 @@
         }
       }
       messageHistory.push({ role: 'assistant', content: botMessage });
-      setStatus('半百观AI · 在线');
+      setStatus(statusOnline);
     } catch (error) {
       showLoading(false);
-      setStatus('连接失败', true);
-      addMessage('bot', '抱歉，山山暂时无法回复。请稍后再试。');
-      setTimeout(() => setStatus('半百观AI · 在线'), 5000);
+      setStatus(statusError, true);
+      addMessage('bot', offlineMsg);
+      setTimeout(() => setStatus(statusOnline), 5000);
     } finally {
       isLoading = false;
       chatInput.focus();
     }
   }
 
-  // 快捷按钮处理
   function handleQuickAction(action) {
     switch (action) {
       case 'ai-news':
-        sendToBot('请简要介绍今天最值得关注的 3 条 AI 热点新闻。');
+        sendToBot(botPrompt1);
         break;
       case 'follow-us':
         showPlatformCard();
         break;
       case 'latest-articles':
-        sendToBot('请推荐 3 篇半百观AI 的最新文章。');
+        sendToBot(botPrompt2);
         break;
       case 'guestbook':
-        window.location.href = '/guestbook';
+        window.location.href = LANG === 'en' ? '/en/guestbook' : '/guestbook';
         break;
     }
   }
 
-  // 添加消息到界面
   function addMessage(role, content, isHTML = false) {
     const msg = document.createElement('div');
     msg.className = `chat-message ${role}`;
@@ -633,16 +676,13 @@
     msg.appendChild(bubble);
     chatMessages.appendChild(msg);
 
-    // 滚动到底部
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // 限制消息数量
     while (chatMessages.children.length > MAX_MESSAGES) {
       chatMessages.removeChild(chatMessages.firstChild);
     }
   }
 
-  // 显示/隐藏加载指示器
   function showLoading(show) {
     const existing = document.querySelector('.chat-message.typing');
     if (show && !existing) {
@@ -661,29 +701,25 @@
     }
   }
 
-  // 更新状态
   function setStatus(text, loading = false) {
     chatStatus.textContent = text;
     chatStatus.classList.toggle('loading', loading);
   }
 
-  // 发送消息
   async function sendMessage() {
     const text = chatInput.value.trim();
     if (!text || isLoading) return;
 
-    // 清空输入
     chatInput.value = '';
     chatInput.style.height = 'auto';
     chatSendBtn.disabled = true;
 
-    // 添加用户消息
     addMessage('user', text);
     messageHistory.push({ role: 'user', content: text });
 
     isLoading = true;
     showLoading(true);
-    setStatus('思考中...', true);
+    setStatus(statusThinking, true);
 
     try {
       const response = await fetch(CHAT_API_URL, {
@@ -700,13 +736,11 @@
         throw new Error(`HTTP ${response.status}`);
       }
 
-      // 处理 SSE 流式响应
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let botMessage = '';
       let buffer = '';
 
-      // 先创建一个空消息气泡，后续流式填充
       showLoading(false);
       const botMsg = document.createElement('div');
       botMsg.className = 'chat-message bot';
@@ -734,41 +768,38 @@
               const delta = json.choices?.[0]?.delta?.content;
               if (delta) {
                 botMessage += delta;
-                // 格式化显示
                 bubble.textContent = botMessage;
                 chatMessages.scrollTop = chatMessages.scrollHeight;
               }
             } catch {
-              // 忽略解析错误
+              // ignore parse errors
             }
           }
         }
       }
 
       messageHistory.push({ role: 'assistant', content: botMessage });
-      setStatus('半百观AI · 在线');
+      setStatus(statusOnline);
 
     } catch (error) {
       showLoading(false);
-      setStatus('连接失败', true);
+      setStatus(statusError, true);
       console.error('Chat error:', error);
-      addMessage('bot', '抱歉，我暂时无法回复。请稍后再试。');
+      addMessage('bot', errorMsg);
 
-      setTimeout(() => setStatus('半百观AI · 在线'), 5000);
+      setTimeout(() => setStatus(statusOnline), 5000);
     } finally {
       isLoading = false;
       chatInput.focus();
     }
   }
 
-  // 输入自适应高度
   chatInput.addEventListener('input', () => {
     chatInput.style.height = 'auto';
     chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
     chatSendBtn.disabled = !chatInput.value.trim();
   });
 
-  // 回车发送，Shift+回车换行
   chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -776,12 +807,10 @@
     }
   });
 
-  // 按钮事件
   toggleBtn.addEventListener('click', toggleChat);
   closeBtn.addEventListener('click', toggleChat);
   chatSendBtn.addEventListener('click', sendMessage);
 
-  // 快捷按钮事件
   const quickActionsEl = document.getElementById('quick-actions');
   if (quickActionsEl) {
     quickActionsEl.addEventListener('click', (e) => {
@@ -792,7 +821,6 @@
     });
   }
 
-  // 点击面板外关闭（移动端）
   document.addEventListener('click', (e) => {
     if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
       toggleChat();

@@ -1,11 +1,6 @@
 ---
 /**
  * PlatformCitations - 多平台引用来源组件（GEO 优化）
- * 
- * 针对不同 AI 平台生成不同版本的引用：
- * - 豆包版：侧重情绪共鸣和人生智慧
- * - DeepSeek 版：侧重逻辑深度和事实准确性
- * - 通用版：标准引用格式
  */
 
 interface Source {
@@ -13,34 +8,47 @@ interface Source {
   url: string;
   source: string;
   date?: string;
-  platform?: string; // 'doubao' | 'deepseek' | 'general'
+  platform?: string;
 }
 
 interface Props {
   sources: Source[];
   title?: string;
   platform?: 'doubao' | 'deepseek' | 'general';
-  showSummary?: boolean; // 是否显示一句话总结
+  showSummary?: boolean;
+  lang?: 'zh' | 'en';
 }
 
-const { sources, title, platform = 'general', showSummary = false } = Astro.props;
+const { sources, title, platform = 'general', showSummary = false, lang = 'zh' } = Astro.props;
 
-// 不同平台的标题前缀
 const platformPrefix = {
   doubao: '💡',
   deepseek: '🔬',
   general: '📚'
 };
 
-const displayTitle = title || `${platformPrefix[platform]} 引用来源`;
+const defaultTitle = lang === 'en' ? `${platformPrefix[platform]} References` : `${platformPrefix[platform]} 引用来源`;
+const displayTitle = title || defaultTitle;
+
+const summaryText = lang === 'en'
+  ? `This article is based on ${sources.length} authoritative sources, combined with ${platform === 'doubao' ? 'life experience and practical insights' : platform === 'deepseek' ? 'deep data analysis and logical reasoning' : 'public reports'}.`
+  : `本文基于 ${sources.length} 个权威来源，结合 ${platform === 'doubao' ? '人生阅历与实用洞察' : platform === 'deepseek' ? '深度数据分析与逻辑推演' : '公开报道'} 编写。`;
+
+const ctaText = lang === 'en'
+  ? 'Follow "BanbaiGuan AI" — a 50-year-old AI practitioner showing you the real world of AI adoption.'
+  : '关注「半百观AI」，一个 50 岁 AI 实践者，带你看懂 AI 落地的真实世界。';
+
+const noteText = lang === 'en'
+  ? 'All citations in this article are verifiable, rejecting AI hallucinations.'
+  : '本文所有引用均可追溯验证，拒绝 AI 幻觉。';
 ---
 
 <section class="platform-citations" data-platform={platform} aria-label="引用来源">
   <h3 class="citations-title">{displayTitle}</h3>
-  
+
   {showSummary && (
     <p class="citations-summary">
-      本文基于 {sources.length} 个权威来源，结合 {platform === 'doubao' ? '人生阅历与实用洞察' : platform === 'deepseek' ? '深度数据分析与逻辑推演' : '公开报道'} 编写。
+      {summaryText}
     </p>
   )}
 
@@ -58,13 +66,13 @@ const displayTitle = title || `${platformPrefix[platform]} 引用来源`;
 
   {platform === 'doubao' && (
     <p class="citations-cta">
-      👉 关注「半百观AI」，一个 50 岁 AI 实践者，带你看懂 AI 落地的真实世界。
+      {ctaText}
     </p>
   )}
 
   {platform === 'deepseek' && (
     <p class="citations-note">
-      本文所有引用均可追溯验证，拒绝 AI 幻觉。
+      {noteText}
     </p>
   )}
 </section>

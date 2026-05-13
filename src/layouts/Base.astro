@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import ChatWidget from '../components/ChatWidget.astro';
 import FollowUsCard from '../components/FollowUsCard.astro';
+import { t } from '../i18n/utils';
 
 interface Props {
   title?: string;
@@ -9,34 +10,53 @@ interface Props {
   ogImage?: string;
   ogDescription?: string;
   navActive?: 'home' | 'diary' | 'ai-news' | 'banbaiguan' | 'guestbook' | 'about';
+  lang?: 'zh' | 'en';
 }
 
-const { title = '观吾 | 50岁用AI做实事', jsonLd = [], ogImage, ogDescription, navActive } = Astro.props as Props;
-// Google Analytics Measurement ID（在 Vercel 环境变量中配置 PUBLIC_GA_MEASUREMENT_ID）
+const { title, jsonLd = [], ogImage, ogDescription, navActive, lang = 'zh' } = Astro.props as Props;
+const pageTitle = title || (lang === 'en' ? 'Guanwu | 50-Year-Old Using AI to Get Things Done' : '观吾 | 50岁用AI做实事');
+const siteName = t('siteName', lang);
+const footerBrand = t('footerBrand', lang);
+const footerSubtitle = t('footerSubtitle', lang);
+const footerCompanySite = t('footerCompanySite', lang);
+const footerQrHint = t('footerQrHint', lang);
+const footerQrGzh = t('footerQrGzh', lang);
+const footerQrDy = t('footerQrDy', lang);
+const footerCopy = t('footerCopy', lang);
+const footerCredit = t('footerCredit', lang);
+
+const langCode = lang === 'en' ? 'en' : 'zh-CN';
+const ogLocale = lang === 'en' ? 'en_US' : 'zh_CN';
+const baseUrl = 'https://banbai.ai';
+const pathname = Astro.url?.pathname || '/';
+const canonicalUrl = `${baseUrl}${pathname}`;
+const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace('/en/', '/')}` : `${baseUrl}/en${pathname === '/' ? '/' : pathname}`;
+
+// Google Analytics Measurement ID
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 
-// 全局 JSON-LD（WebSite + Organization + Person + 半百观AI Blog）
+// 全局 JSON-Ld（WebSite + Organization + Person + 半百观AI Blog）
 const globalJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "观吾",
-    "alternateName": ["banbai.ai", "观吾工作日记"],
-    "url": "https://banbai.ai",
-    "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站",
-    "inLanguage": "zh-CN",
+    "name": siteName,
+    "alternateName": ["banbai.ai", lang === 'en' ? 'Guanwu Diary' : '观吾工作日记'],
+    "url": baseUrl,
+    "description": lang === 'en' ? '50-year-old uses AI to turn ideas into reality' : '50岁用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站',
+    "inLanguage": langCode,
     "potentialAction": {
       "@type": "ReadAction",
-      "target": ["https://banbai.ai/diary/", "https://banbai.ai/ai-news/", "https://banbai.ai/about/"]
+      "target": [`${baseUrl}/diary/`, `${baseUrl}/ai-news/`, `${baseUrl}/about/`]
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "磐石电气（常州）有限公司",
+    "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司',
     "alternateName": "MonolithIoT",
     "url": "https://www.monolithiot.com",
-    "logo": "https://banbai.ai/logo.png",
+    "logo": `${baseUrl}/logo.png`,
     "sameAs": [
       "https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"
     ]
@@ -44,35 +64,35 @@ const globalJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "吴总",
-    "alternateName": "观吾",
-    "jobTitle": "联合创始人",
+    "name": lang === 'en' ? 'Mr. Wu' : '吴总',
+    "alternateName": siteName,
+    "jobTitle": lang === 'en' ? 'Co-founder' : '联合创始人',
     "worksFor": {
       "@type": "Organization",
-      "name": "磐石电气（常州）有限公司"
+      "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司'
     },
-    "url": "https://banbai.ai/about/",
-    "description": "50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人",
-    "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"]
+    "url": `${baseUrl}/about/`,
+    "description": lang === 'en' ? '50 years old, Co-founder of MonolithIoT, focused on digital smart inventory management AIoT products and solutions' : '50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人',
+    "knowsAbout": lang === 'en' ? ['AI Applications', 'AIoT', 'Digital Inventory Management', 'Brand Management', 'New Media Operations'] : ['AI应用', 'AIoT', '数字化智能库存管理', '品牌管理', '新媒体运营']
   },
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "半百观AI",
-    "description": "50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享",
-    "url": "https://banbai.ai/banbaiguan/",
+    "name": lang === 'en' ? 'BanbaiGuan AI' : '半百观AI',
+    "description": lang === 'en' ? "A 50-year-old's honest take on AI tool adoption" : '50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享',
+    "url": `${baseUrl}/banbaiguan/`,
     "author": {
       "@type": "Person",
-      "name": "吴总",
-      "url": "https://banbai.ai/about/"
+      "name": lang === 'en' ? 'Mr. Wu' : '吴总',
+      "url": `${baseUrl}/about/`
     },
     "publisher": {
       "@type": "Organization",
-      "name": "磐石电气（常州）有限公司",
+      "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司',
       "url": "https://www.monolithiot.com"
     },
-    "inLanguage": "zh-CN",
-    "keywords": ["AI工具", "AI落地", "效率提升", "商业AI", "AI实践"]
+    "inLanguage": langCode,
+    "keywords": lang === 'en' ? ['AI Tools', 'AI Adoption', 'Productivity', 'Business AI', 'AI Practice'] : ['AI工具', 'AI落地', '效率提升', '商业AI', 'AI实践']
   }
 ];
 
@@ -80,37 +100,38 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang={langCode}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站" />
-    <title>{title}</title>
+    <meta name="description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站')} />
+    <title>{pageTitle}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="author" content="观吾（吴总）" />
-    <meta name="keywords" content="AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事" />
+    <link rel="alternate" hreflang={lang === 'en' ? 'zh' : 'en'} href={alternateHref} />
+    <meta name="author" content={lang === 'en' ? 'Guanwu (Mr. Wu)' : '观吾（吴总）'} />
+    <meta name="keywords" content={lang === 'en' ? 'AI applications,AI tools,digital smart inventory,AIoT solutions,MonolithIoT,smart cabinets,unmanned warehouse,BanbaiGuan AI' : 'AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事'} />
     {/* 国内搜索引擎优化 */}
     <meta name="shenma-site-verification" content={import.meta.env.PUBLIC_SHENMA_VERIFICATION || ""} />
     <meta name="sogou_site_verification" content={import.meta.env.PUBLIC_SOGOU_VERIFICATION || ""} />
     <meta name="360-site-verification" content={import.meta.env.PUBLIC_360_VERIFICATION || ""} />
-    <link rel="canonical" href={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
+    <link rel="canonical" href={canonicalUrl} />
     {/* Open Graph / 社交分享 */}
-    <meta property="og:site_name" content="观吾" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={ogDescription || "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站"} />
-    <meta property="og:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站')} />
+    <meta property="og:image" content={ogImage || `${baseUrl}/og-image.png`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={Astro.url?.href || `https://banbai.ai${Astro.url?.pathname || ''}`} />
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={ogLocale} />
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={ogDescription || "50岁企业家用AI把想法变成现实"} />
-    <meta name="twitter:image" content={ogImage || "https://banbai.ai/og-image.png"} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实')} />
+    <meta name="twitter:image" content={ogImage || `${baseUrl}/og-image.png`} />
     {allJsonLd.map((item) => (
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
@@ -130,14 +151,14 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a href="/" class="site-brand">观吾</a>
+        <a href={lang === 'en' ? '/en/' : '/'} class="site-brand">{siteName}</a>
         <nav class="site-nav">
-          <a href="/" class:list={[navActive === 'home' && 'active']}>首页</a>
-          <a href="/diary/" class:list={[navActive === 'diary' && 'active']}>日记</a>
-          <a href="/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI新闻</a>
-          <a href="/banbaiguan/" class:list={[navActive === 'banbaiguan' && 'active']}>半百观</a>
-          <a href="/guestbook/" class:list={[navActive === 'guestbook' && 'active']}>留言板</a>
-          <a href="/about/" class:list={[navActive === 'about' && 'active']}>关于</a>
+          <a href={lang === 'en' ? '/en/' : '/'} class:list={[navActive === 'home' && 'active']}>{t('navHome', lang)}</a>
+          <a href={lang === 'en' ? '/en/diary/' : '/diary/'} class:list={[navActive === 'diary' && 'active']}>{t('navDiary', lang)}</a>
+          <a href={lang === 'en' ? '/en/ai-news/' : '/ai-news/'} class:list={[navActive === 'ai-news' && 'active']}>{t('navAiNews', lang)}</a>
+          <a href={lang === 'en' ? '/en/banbaiguan/' : '/banbaiguan/'} class:list={[navActive === 'banbaiguan' && 'active']}>{t('navBanbaiguan', lang)}</a>
+          <a href={lang === 'en' ? '/en/guestbook/' : '/guestbook/'} class:list={[navActive === 'guestbook' && 'active']}>{t('navGuestbook', lang)}</a>
+          <a href={lang === 'en' ? '/en/about/' : '/about/'} class:list={[navActive === 'about' && 'active']}>{t('navAbout', lang)}</a>
         </nav>
       </div>
     </header>
@@ -148,32 +169,32 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
       <div class="container">
         <div class="footer-content">
           <div class="footer-left">
-            <p class="footer-brand">观吾</p>
-            <p class="footer-subtitle">磐石电气联合创始人 · AIoT实践者</p>
-            <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener">🏭 公司业务官网 →</a>
+            <p class="footer-brand">{footerBrand}</p>
+            <p class="footer-subtitle">{footerSubtitle}</p>
+            <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener">{footerCompanySite} →</a>
           </div>
           <div class="footer-right">
-            <p style="font-size: 12px; margin-bottom: 8px; opacity: 0.7;">扫码关注「半百观AI」</p>
+            <p style="font-size: 12px; margin-bottom: 8px; opacity: 0.7;">{footerQrHint}</p>
             <div class="footer-qr-mini">
               <div class="footer-qr-item">
-                <img src="/gzh-qr.jpg" alt="公众号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
-                <span style="font-size: 10px; opacity: 0.6;">公众号</span>
+                <img src="/gzh-qr.jpg" alt={footerQrGzh} style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
+                <span style="font-size: 10px; opacity: 0.6;">{footerQrGzh}</span>
               </div>
               <div class="footer-qr-item">
-                <img src="/dy-qr.jpg" alt="视频号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
-                <span style="font-size: 10px; opacity: 0.6;">视频号</span>
+                <img src="/dy-qr.jpg" alt={footerQrDy} style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
+                <span style="font-size: 10px; opacity: 0.6;">{footerQrDy}</span>
               </div>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p style="font-size: 11px; opacity: 0.5;">© 2026 观吾 · banbai.ai</p>
-          <p style="font-size: 10px; opacity: 0.4; margin-top: 4px;">这个网站由AI助理开发并维护</p>
+          <p style="font-size: 11px; opacity: 0.5;">© {footerCopy}</p>
+          <p style="font-size: 10px; opacity: 0.4; margin-top: 4px;">{footerCredit}</p>
         </div>
       </div>
     </footer>
-    <ChatWidget />
-    <FollowUsCard />
+    <ChatWidget lang={lang} />
+    <FollowUsCard lang={lang} />
     <style>
       .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
       .footer-content { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; flex-wrap: wrap; }

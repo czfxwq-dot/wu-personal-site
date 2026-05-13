@@ -1,17 +1,6 @@
 ---
 /**
  * Citations - 文章引用来源组件（GEO 优化）
- * 
- * 作用：
- * 1. 让 AI 爬虫识别文章的引用来源（增强可信度）
- * 2. 展示研究深度和事实依据
- * 3. 提升 GEO（生成式引擎优化）权重
- * 
- * 使用方式：
- * 在文章内容末尾添加：
- * <Citations sources={[
- *   { title: "文章标题", url: "https://...", source: "媒体名称", date: "2026-05-05" },
- * ]} />
  */
 
 interface Source {
@@ -24,13 +13,20 @@ interface Source {
 interface Props {
   sources: Source[];
   title?: string;
+  lang?: 'zh' | 'en';
 }
 
-const { sources, title = '引用来源' } = Astro.props;
+const { sources, title, lang = 'zh' } = Astro.props;
+
+const defaultTitle = lang === 'en' ? 'References' : '引用来源';
+const displayTitle = title || defaultTitle;
+const note = lang === 'en'
+  ? 'All sources cited in this article are from public reports for further reading.'
+  : '本文引用的来源均为公开报道，供读者进一步阅读。';
 ---
 
-<section class="citations" aria-label="引用来源">
-  <h3 class="citations-title">📚 {title}</h3>
+<section class="citations" aria-label={defaultTitle}>
+  <h3 class="citations-title">📚 {displayTitle}</h3>
   <ul class="citations-list">
     {sources.map((s) => (
       <li class="citation-item">
@@ -43,7 +39,7 @@ const { sources, title = '引用来源' } = Astro.props;
     ))}
   </ul>
   <p class="citations-note">
-    本文引用的来源均为公开报道，供读者进一步阅读。
+    {note}
   </p>
 </section>
 
