@@ -46,10 +46,10 @@ const allDates = diaries.map(d => d.date);
 
     <div id="diary-list">
       {diaries.map((diary, i) => (
-        <a href={`/en/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.title} ${diary.summary}`.toLowerCase()}>
+        <a href={`/en/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.titleEn || diary.title} ${diary.summaryEn || diary.summary}`.toLowerCase()}>
           <div class="card-date">{diary.date}</div>
-          <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.title}</h2>
-          <p>{diary.summary}</p>
+          <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.titleEn || diary.title}</h2>
+          <p>{diary.summaryEn || diary.summary}</p>
         </a>
       ))}
     </div>

@@ -2,58 +2,82 @@
 // 格式：date, title(汇总标题), summary(汇总摘要), newsItems(具体新闻列表), comment(一句话点评)
 export interface NewsItem {
   title: string;
+  titleEn?: string;
   summary: string;
+  summaryEn?: string;
   source: string;
   category: string;
+  categoryEn?: string;
   url?: string; // 原始新闻链接
 }
 
 export interface DailyNewsSummary {
   date: string;
   title: string;
+  titleEn?: string;
   summary: string;
+  summaryEn?: string;
   newsItems: NewsItem[];
   comment: string;
+  commentEn?: string;
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
     date: '2026-05-13',
     title: 'AI新闻 | Anthropic洽谈融资300亿美元估值超9000亿 + 谷歌将Gemini植入安卓底层打造跨设备智能系统 + 首届香港具身智能产业峰会举行',
+    titleEn: 'AI News | Anthropic $30B Funding at $900B Valuation + Google Gemini Deep in Android + Hong Kong Embodied AI Summit',
     summary: '今日AI行业三大看点：Anthropic正洽谈新一轮融资，拟募资至少300亿美元，投前估值超9000亿美元，或成迄今最大规模融资；谷歌在Google I/O前夕宣布将Gemini Intelligence深度植入安卓底层，从聊天机器人转型为跨手机、浏览器、汽车、笔记本的智能操作系统，苹果WWDC面临压力；首届香港具身智能产业峰会暨智元APC2026成功举行，聚焦具身智能产业化落地。',
+    summaryEn: 'Three key stories today: Anthropic seeks $30B funding at $900B+ valuation; Google embeds Gemini deep into Android as a cross-device OS; first Hong Kong embodied AI summit focuses on commercialization.',
     newsItems: [
       {
         title: 'Anthropic洽谈融资300亿美元，估值超9000亿美元',
+        titleEn: 'Anthropic Seeks $30B Funding, Valuation Over $900B',
         summary: '知情人士称，Anthropic PBC正与投资者展开初步磋商，计划募资至少300亿美元，讨论以超过9000亿美元的投前估值进行融资，最快可能在本月底完成。公司正考虑最早于10月进行IPO。OpenAI在3月完成的一轮融资中最新估值为8520亿美元。',
+        summaryEn: 'Anthropic PBC is in early talks to raise at least $30B at a $900B+ pre-money valuation, potentially closing by end of month. IPO considered as early as October. OpenAI latest valued at $852B.',
         source: '新浪财经',
-        category: '投资'
+        category: '投资',
+        categoryEn: 'Investment'
       },
       {
         title: '谷歌将Gemini植入安卓底层，打造跨设备智能系统',
+        titleEn: 'Google Embeds Gemini Deep into Android for Cross-Device AI',
         summary: '谷歌在Google I/O前夕宣布将Gemini Intelligence从聊天机器人升级为横跨手机、浏览器、汽车和笔记本的操作系统级智能。Gemini可跨应用移动、理解屏幕内容、完成复杂任务，如从Gmail提取信息构建购物车并预订餐厅。该公司称正在从操作系统过渡到智能系统。该功能将从今夏开始分批推出，覆盖超过2.5亿辆搭载Android Auto的汽车。苹果WWDC面临压力。',
+        summaryEn: 'Google upgrades Gemini from chatbot to OS-level intelligence across phones, browsers, cars, and laptops. Rolling out this summer to 250M+ Android Auto vehicles. Apple WWDC faces pressure.',
         source: '新浪财经',
-        category: '大模型'
+        category: '大模型',
+        categoryEn: 'LLM'
       },
       {
         title: '首届香港具身智能产业峰会暨智元APC2026成功举行',
+        titleEn: 'First Hong Kong Embodied AI Summit Held',
         summary: '首届香港具身智能产业峰会暨智元APC2026于5月12日成功举行，聚焦具身智能技术的产业化落地。智元机器人等具身智能领域企业参展，展示人形机器人在工业制造、服务场景中的应用成果。',
+        summaryEn: 'First Hong Kong embodied AI summit held May 12, focusing on commercialization. Companies showcased humanoid robots for industrial and service applications.',
         source: '新浪科技',
-        category: '硬件'
+        category: '硬件',
+        categoryEn: 'Hardware'
       },
       {
         title: '快手回应分拆可灵：或引入外部融资，拟议方案仍处初步阶段',
+        titleEn: 'Kuaishou Confirms Potential Spin-off of Kling AI',
         summary: '快手回应分拆可灵AI业务事宜称，或引入外部融资，但拟议方案仍处于初步阶段。可灵是快手旗下的AI视频生成模型，此前已在多个平台引起广泛关注。',
+        summaryEn: 'Kuaishou confirms it may bring in external funding for Kling AI spin-off, but plans are still preliminary. Kling is Kuaishou\'s AI video generation model.',
         source: '新浪财经',
-        category: '大模型'
+        category: '大模型',
+        categoryEn: 'LLM'
       },
       {
         title: 'OpenAI与微软达成合作协议，到2030年将节省970亿美元成本',
+        titleEn: 'OpenAI & Microsoft Deal to Save $97B by 2030',
         summary: 'OpenAI通过与微软达成最新合作协议，计划到2030年节省970亿美元成本。这一深度合作将进一步巩固两家在AI算力基础设施领域的协同优势。',
+        summaryEn: 'OpenAI and Microsoft reach cooperation deal to save $97B in costs by 2030, deepening collaboration on AI compute infrastructure.',
         source: '新浪财经',
-        category: '产业'
+        category: '产业',
+        categoryEn: 'Industry'
       }
     ],
-    comment: 'Anthropic 300亿美元融资若落地，将超过OpenAI的8520亿估值，AI大模型融资竞赛白热化。谷歌将Gemini深度植入安卓，标志着AI从应用层走向系统层，手机操作系统竞争范式转换。具身智能峰会落地香港，人形机器人产业加速从实验室走向商业场景。'
+    comment: 'Anthropic 300亿美元融资若落地，将超过OpenAI的8520亿估值，AI大模型融资竞赛白热化。谷歌将Gemini深度植入安卓，标志着AI从应用层走向系统层，手机操作系统竞争范式转换。具身智能峰会落地香港，人形机器人产业加速从实验室走向商业场景。',
+    commentEn: 'Anthropic\'s $30B funding would surpass OpenAI\'s $852B valuation — AI funding race intensifies. Google embedding Gemini into Android marks AI\'s shift from app layer to system layer. Embodied AI summit in Hong Kong signals humanoid robots accelerating from lab to market.'
   },
   {
     date: '2026-05-12',

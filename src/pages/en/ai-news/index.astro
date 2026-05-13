@@ -39,8 +39,8 @@ const sortedNews = [...dailyNewsSummaries].sort((a, b) => b.date.localeCompare(a
         {sortedNews.map((day) => (
           <div class="news-card">
             <div class="news-date-header">{day.date}</div>
-            <h2 class="news-title">{day.title}</h2>
-            <p class="news-summary">{day.summary}</p>
+            <h2 class="news-title">{day.titleEn || day.title}</h2>
+            <p class="news-summary">{day.summaryEn || day.summary}</p>
             {day.newsItems && day.newsItems.length > 0 && (
               <div class="news-items">
                 {day.newsItems.map((item, i) => (
@@ -49,12 +49,12 @@ const sortedNews = [...dailyNewsSummaries].sort((a, b) => b.date.localeCompare(a
                     <div class="news-item-content">
                       <strong>
                         {item.url ? (
-                          <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
-                        ) : item.title}
+                          <a href={item.url} target="_blank" rel="noopener noreferrer">{item.titleEn || item.title}</a>
+                        ) : item.titleEn || item.title}
                       </strong>
-                      <p>{item.summary}</p>
+                      <p>{item.summaryEn || item.summary}</p>
                       <div class="news-item-meta">
-                        <span class="news-tag">{item.category}</span>
+                        <span class="news-tag">{item.categoryEn || item.category}</span>
                         <span class="news-source">
                           {item.source}
                           {item.url && (

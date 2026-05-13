@@ -36,11 +36,11 @@ const sortedArticles = [...articles].sort((a, b) => new Date(b.date).getTime() -
           <article class="article-card">
             <div class="article-meta">
               <span class="article-date">{article.date}</span>
-              {article.tag && <span class="article-tag">{article.tag}</span>}
+              {article.tagEn && <span class="article-tag">{article.tagEn}</span>}
             </div>
-            <h2 class="article-title">{article.title}</h2>
-            {article.excerpt && (
-              <p class="article-summary">{article.excerpt}</p>
+            <h2 class="article-title">{article.titleEn || article.title}</h2>
+            {(article.excerptEn || article.excerpt) && (
+              <p class="article-summary">{article.excerptEn || article.excerpt}</p>
             )}
           </article>
         ))}
