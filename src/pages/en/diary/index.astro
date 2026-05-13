@@ -7,7 +7,7 @@ const diaryListJsonLd = {
   "@type": "CollectionPage",
   "name": "Work Diary | Guanwu",
   "description": "Daily work records from my AI assistant — tech, problem-solving, project progress",
-  "url": "https://ban-bai.com/en/diary/",
+  "url": "https://www.ban-bai.com/en/diary/",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -46,7 +46,7 @@ const allDates = diaries.map(d => d.date);
 
     <div id="diary-list">
       {diaries.map((diary, i) => (
-        <a href={`/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.title} ${diary.summary}`.toLowerCase()}>
+        <a href={`/en/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.title} ${diary.summary}`.toLowerCase()}>
           <div class="card-date">{diary.date}</div>
           <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.title}</h2>
           <p>{diary.summary}</p>

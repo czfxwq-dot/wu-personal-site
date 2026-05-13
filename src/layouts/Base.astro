@@ -20,8 +20,64 @@ const otherLangUrl = lang === 'en'
 // Google Analytics Measurement ID（在 Vercel 环境变量中配置 PUBLIC_GA_MEASUREMENT_ID）
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 
-// 全局 JSON-LD（WebSite + Organization + Person + 半百观AI Blog）
-const globalJsonLd = [
+// 多语言 site name / description
+const siteName = lang === 'en' ? 'Guanwu' : '观吾';
+const siteDescription = lang === 'en'
+  ? 'A 50-year-old entrepreneur using AI to turn ideas into reality'
+  : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站';
+const siteAuthor = lang === 'en' ? 'Mr. Wu (Guanwu)' : '观吾（吴总）';
+const siteKeywords = lang === 'en'
+  ? 'AI tools,AI adoption,50 years old learning AI,digital transformation,MonolithIoT,smart inventory,AIoT,BanbaiGuan AI'
+  : 'AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事';
+const ogLocale = lang === 'en' ? 'en_US' : 'zh_CN';
+
+// 全局 JSON-LD（WebSite + Organization + Person + Blog）
+const globalJsonLd = lang === 'en' ? [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Guanwu",
+    "alternateName": ["banbai.ai", "Guanwu Diary"],
+    "url": "https://www.ban-bai.com",
+    "description": "A 50-year-old entrepreneur using AI to turn ideas into reality",
+    "inLanguage": "en",
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": ["https://www.ban-bai.com/en/diary/", "https://www.ban-bai.com/en/ai-news/", "https://www.ban-bai.com/en/about/"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MonolithIoT (Changzhou) Co., Ltd.",
+    "alternateName": "MonolithIoT",
+    "url": "https://www.monolithiot.com",
+    "logo": "https://www.ban-bai.com/logo.png",
+    "sameAs": ["https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu",
+    "jobTitle": "Co-founder",
+    "worksFor": { "@type": "Organization", "name": "MonolithIoT (Changzhou) Co., Ltd." },
+    "url": "https://www.ban-bai.com/en/about/",
+    "description": "50-year-old co-founder of MonolithIoT, AIoT practitioner, founder of BanbaiGuan AI",
+    "knowsAbout": ["AI Applications", "AIoT", "Smart Inventory Management", "Brand Management", "New Media Operations"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "BanbaiGuan AI",
+    "description": "A 50-year-old's honest take on AI tool adoption — real stories of using AI in business",
+    "url": "https://www.ban-bai.com/en/banbaiguan/",
+    "author": { "@type": "Person", "name": "Mr. Wu", "url": "https://www.ban-bai.com/en/about/" },
+    "publisher": { "@type": "Organization", "name": "MonolithIoT (Changzhou) Co., Ltd.", "url": "https://www.monolithiot.com" },
+    "inLanguage": "en",
+    "keywords": ["AI tools", "AI adoption", "productivity", "business AI", "AI practice"]
+  }
+] : [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -42,9 +98,7 @@ const globalJsonLd = [
     "alternateName": "MonolithIoT",
     "url": "https://www.monolithiot.com",
     "logo": "https://ban-bai.com/logo.png",
-    "sameAs": [
-      "https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"
-    ]
+    "sameAs": ["https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"]
   },
   {
     "@context": "https://schema.org",
@@ -52,10 +106,7 @@ const globalJsonLd = [
     "name": "吴总",
     "alternateName": "观吾",
     "jobTitle": "联合创始人",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "磐石电气（常州）有限公司"
-    },
+    "worksFor": { "@type": "Organization", "name": "磐石电气（常州）有限公司" },
     "url": "https://ban-bai.com/about/",
     "description": "50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人",
     "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"]
@@ -66,16 +117,8 @@ const globalJsonLd = [
     "name": "半百观AI",
     "description": "50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享",
     "url": "https://ban-bai.com/banbaiguan/",
-    "author": {
-      "@type": "Person",
-      "name": "吴总",
-      "url": "https://ban-bai.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "磐石电气（常州）有限公司",
-      "url": "https://www.monolithiot.com"
-    },
+    "author": { "@type": "Person", "name": "吴总", "url": "https://ban-bai.com/about/" },
+    "publisher": { "@type": "Organization", "name": "磐石电气（常州）有限公司", "url": "https://www.monolithiot.com" },
     "inLanguage": "zh-CN",
     "keywords": ["AI工具", "AI落地", "效率提升", "商业AI", "AI实践"]
   }
@@ -89,7 +132,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站" />
+    <meta name="description" content={siteDescription} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,31 +140,45 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
-    {/* hreflang 多语言标签 — 当前仅 zh-CN，预留未来 en 版本 */}
-    <link rel="alternate" hreflang="zh-CN" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || ''}`} />
-    <link rel="alternate" hreflang="x-default" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || ''}`} />
-    <meta name="author" content="观吾（吴总）" />
-    <meta name="keywords" content="AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事" />
+    {/* hreflang 多语言标签 */}
+    {lang === 'en'
+      ? (
+        <>
+          <link rel="alternate" hreflang="en" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || ''}`} />
+          <link rel="alternate" hreflang="zh-CN" href={`https://www.ban-bai.com${Astro.url?.pathname?.replace(/^\/en/, '') || '/'}`} />
+          <link rel="alternate" hreflang="x-default" href={`https://www.ban-bai.com${Astro.url?.pathname?.replace(/^\/en/, '') || '/'}`} />
+        </>
+      )
+      : (
+        <>
+          <link rel="alternate" hreflang="zh-CN" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || '/'}`} />
+          <link rel="alternate" hreflang="en" href={`https://www.ban-bai.com/en${Astro.url?.pathname || '/'}`} />
+          <link rel="alternate" hreflang="x-default" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || '/'}`} />
+        </>
+      )
+    }
+    <meta name="author" content={siteAuthor} />
+    <meta name="keywords" content={siteKeywords} />
     {/* 国内搜索引擎优化 */}
     <meta name="shenma-site-verification" content={import.meta.env.PUBLIC_SHENMA_VERIFICATION || ""} />
     <meta name="sogou_site_verification" content={import.meta.env.PUBLIC_SOGOU_VERIFICATION || ""} />
     <meta name="360-site-verification" content={import.meta.env.PUBLIC_360_VERIFICATION || ""} />
-    <link rel="canonical" href={Astro.url?.href || `https://ban-bai.com${Astro.url?.pathname || ''}`} />
+    <link rel="canonical" href={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || '/'}`} />
     {/* Open Graph / 社交分享 */}
-    <meta property="og:site_name" content="观吾" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={ogDescription || "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站"} />
-    <meta property="og:image" content={ogImage || "https://ban-bai.com/og-image.png"} />
+    <meta property="og:description" content={ogDescription || siteDescription} />
+    <meta property="og:image" content={ogImage || "https://www.ban-bai.com/og-image.png"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={Astro.url?.href || `https://ban-bai.com${Astro.url?.pathname || ''}`} />
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content={Astro.url?.href || `https://www.ban-bai.com${Astro.url?.pathname || '/'}`} />
+    <meta property="og:locale" content={ogLocale} />
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={ogDescription || "50岁企业家用AI把想法变成现实"} />
-    <meta name="twitter:image" content={ogImage || "https://ban-bai.com/og-image.png"} />
+    <meta name="twitter:description" content={ogDescription || siteDescription} />
+    <meta name="twitter:image" content={ogImage || "https://www.ban-bai.com/og-image.png"} />
     {allJsonLd.map((item) => (
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
@@ -148,6 +205,8 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
               <a href="/en/" class:list={[navActive === 'home' && 'active']}>Home</a>
               <a href="/en/diary/" class:list={[navActive === 'diary' && 'active']}>Diary</a>
               <a href="/en/ai-news/" class:list={[navActive === 'ai-news' && 'active']}>AI News</a>
+              <a href="/en/banbaiguan/" class:list={[navActive === 'banbaiguan' && 'active']}>Banbai View</a>
+              <a href="/en/guestbook/" class:list={[navActive === 'guestbook' && 'active']}>Guestbook</a>
               <a href="/en/about/" class:list={[navActive === 'about' && 'active']}>About</a>
             </>
           ) : (
