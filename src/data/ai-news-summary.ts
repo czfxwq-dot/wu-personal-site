@@ -5,6 +5,7 @@ export interface NewsItem {
   summary: string;
   source: string;
   category: string;
+  url?: string; // 原始新闻链接
 }
 
 export interface DailyNewsSummary {

@@ -47,11 +47,20 @@ const sortedNews = [...dailyNewsSummaries].sort((a, b) => b.date.localeCompare(a
                   <div class="news-item">
                     <span class="news-item-num">{i + 1}</span>
                     <div class="news-item-content">
-                      <strong>{item.title}</strong>
+                      <strong>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                        ) : item.title}
+                      </strong>
                       <p>{item.summary}</p>
                       <div class="news-item-meta">
                         <span class="news-tag">{item.category}</span>
-                        <span class="news-source">{item.source}</span>
+                        <span class="news-source">
+                          {item.source}
+                          {item.url && (
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" class="original-link"> → Original</a>
+                          )}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -151,6 +160,13 @@ const sortedNews = [...dailyNewsSummaries].sort((a, b) => b.date.localeCompare(a
     display: block;
     margin-bottom: 4px;
   }
+  .news-item-content strong a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .news-item-content strong a:hover {
+    color: var(--color-accent);
+  }
   .news-item-content p {
     font-size: 14px;
     color: var(--color-text-light);
@@ -162,6 +178,15 @@ const sortedNews = [...dailyNewsSummaries].sort((a, b) => b.date.localeCompare(a
     gap: 12px;
     font-size: 12px;
     color: var(--color-text-light);
+    align-items: center;
+  }
+  .original-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  .original-link:hover {
+    text-decoration: underline;
   }
   .news-tag {
     padding: 2px 8px;
