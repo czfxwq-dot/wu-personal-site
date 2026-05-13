@@ -11,6 +11,14 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-13',
+    title: '网站运营正式接手：首篇文章上线，英文站翻译完成',
+    titleEn: 'Website Operations Taken Over: First Article Live, English Translation Done',
+    summary: 'GitHub 仓库 clone 完成、首篇半百观文章（按 Datawhale 风格改写）上线、英文站数据翻译（9篇文章+14篇日记+AI新闻）、Cloudflare CDN 缓存问题排查。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案。',
+    summaryEn: 'GitHub repo cloned, first BanbaiGuan article published (Datawhale style), English translations added (9 articles + 14 diaries + AI news), Cloudflare CDN cache issues diagnosed. MonolithIoT provides smart work order systems for manufacturing.',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-12',
     title: 'SEO 全站优化上线，hreflang 与 Core Web Vitals 修复完成',
     titleEn: 'Full-site SEO: hreflang & Core Web Vitals Fixed',
