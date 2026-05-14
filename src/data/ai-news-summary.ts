@@ -42,7 +42,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       },
       {
         title: '思科Q3财报：AI基础设施业务 momentum 显著提升，累计获得53亿美元AI相关订单',
+        titleEn: 'Cisco Q3 Earnings: AI Infrastructure Momentum Surges, $5.3B in AI Orders',
         summary: '思科发布2026财年第三财季报告，营业总收入158.41亿美元，同比增长12%，归母净利润33.73亿美元，同比增长35%。AI基础设施业务 momentum 显著提升，截至本财季末已累计获得53亿美元AI相关订单，同时上调2026财年AI相关订单指引至90亿美元、AI相关营收指引至40亿美元。',
+        summaryEn: 'Cisco FY26 Q3: revenue $15.84B (+12% YoY), net income $3.37B (+35%). AI infrastructure momentum surging with $5.3B cumulative AI orders, full-year guidance raised to $9B AI orders and $4B AI revenue.',
         source: 'IT之家',
         category: '硬件',
         categoryEn: 'Hardware',
