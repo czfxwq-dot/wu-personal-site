@@ -67,6 +67,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
           <div class="news-day-header">
             <time datetime={day.date}>{formatDate(day.date)}</time>
             <span class="news-count">{day.newsItems.length}条</span>
+            <span class="read-time">{Math.max(1, Math.ceil(day.summary.length / 300))} min</span>
           </div>
           
           <h2 class="news-day-title">{day.title}</h2>
@@ -227,6 +228,13 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     border-radius: 4px;
     color: var(--color-text-light);
   }
+  .read-time {
+    font-size: 11px;
+    color: var(--color-text-light);
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
   .news-day-title {
     font-family: var(--font-serif);
     font-size: 20px;
@@ -381,27 +389,22 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     let visibleDays = 0;
 
     days.forEach(day => {
-      const dayMatchKeyword = !keyword || (day.dataset.search || '').includes(keyword);
       const dayMatchDate = !date || day.dataset.date === date;
 
-      // Category filter: check if any news-item in this day matches the category
       const items = day.querySelectorAll('.news-item') as NodeListOf<HTMLElement>;
-      let hasMatchingItem = !category;
-      if (category) {
-        items.forEach(item => {
-          if (item.dataset.category === category) {
-            hasMatchingItem = true;
-          }
-        });
-      }
+      let dayHasVisibleItem = false;
 
-      // Also filter individual items by keyword
       items.forEach(item => {
         const itemMatchKeyword = !keyword || (item.dataset.itemSearch || '').includes(keyword);
-        item.style.display = itemMatchKeyword ? '' : 'none';
+        const itemMatchCategory = !category || item.dataset.category === category;
+        const itemShow = itemMatchKeyword && itemMatchCategory;
+        item.style.display = itemShow ? '' : 'none';
+        if (itemShow) dayHasVisibleItem = true;
       });
 
-      const show = dayMatchKeyword && dayMatchDate && hasMatchingItem;
+      // 关键词搜索时也检查整日标题是否匹配（保证"一句话点评"可被搜索）
+      const daySearchMatch = !keyword || (day.dataset.search || '').includes(keyword);
+      const show = dayMatchDate && dayHasVisibleItem && daySearchMatch;
       day.style.display = show ? '' : 'none';
       if (show) visibleDays++;
     });

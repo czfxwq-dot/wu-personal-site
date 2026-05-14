@@ -46,12 +46,15 @@ const allTags = [...new Set(articles.map(a => a.tag))];
     </div>
 
     <div id="article-list">
-      {articles.map((article) => (
+      {articles.map((article) => {
+        const readTime = Math.max(2, Math.ceil(article.excerpt.length / 200));
+        return (
         <article class="article-card" data-date={article.date} data-tag={article.tag}
           data-search={`${article.title} ${article.excerpt}`.toLowerCase()}>
           <div class="article-meta">
             <span class="article-date">{article.date}</span>
             <span class="article-tag" data-tag={article.tag}>{article.tag}</span>
+            <span class="read-time">{readTime} min</span>
           </div>
           <h2>
             <a href={`/banbaiguan/${article.slug}/`}>{article.title}</a>
@@ -59,7 +62,8 @@ const allTags = [...new Set(articles.map(a => a.tag))];
           <p class="article-excerpt">{article.excerpt}</p>
           <a href={`/banbaiguan/${article.slug}/`} class="read-more">阅读全文 →</a>
         </article>
-      ))}
+        );
+      })}
     </div>
 
     <div id="article-no-result" class="no-result" style="display:none;">
@@ -160,6 +164,13 @@ const allTags = [...new Set(articles.map(a => a.tag))];
   .article-date {
     font-size: 13px;
     color: var(--color-text-light);
+  }
+  .read-time {
+    font-size: 11px;
+    color: var(--color-text-light);
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
   }
   .article-tag {
     font-size: 12px;

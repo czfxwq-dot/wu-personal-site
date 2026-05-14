@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import ChatWidget from '../components/ChatWidget.astro';
-import FollowUsCard from '../components/FollowUsCard.astro';
 import { t } from '../i18n/utils';
 
 interface Props {
@@ -174,6 +173,11 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
           <a href={lang === 'en' ? '/en/banbaiguan/' : '/banbaiguan/'} class:list={[navActive === 'banbaiguan' && 'active']}>{t('navBanbaiguan', lang)}</a>
           <a href={lang === 'en' ? '/en/guestbook/' : '/guestbook/'} class:list={[navActive === 'guestbook' && 'active']}>{t('navGuestbook', lang)}</a>
           <a href={lang === 'en' ? '/en/about/' : '/about/'} class:list={[navActive === 'about' && 'active']}>{t('navAbout', lang)}</a>
+          <button class="theme-toggle" aria-label="Toggle dark mode" title="切换主题">
+            <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
           <a href={alternateHref} class="lang-switch">{lang === 'en' ? '中文' : 'EN'}</a>
         </nav>
       </div>
@@ -186,11 +190,10 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
         <div class="footer-content">
           <div class="footer-left">
             <p class="footer-brand">{footerBrand}</p>
-            <p class="footer-subtitle">{footerSubtitle}</p>
             <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener">{footerCompanySite} →</a>
           </div>
           <div class="footer-right">
-            <p style="font-size: 12px; margin-bottom: 8px; opacity: 0.7;">{footerQrHint}</p>
+            <p style="font-size: 12px; opacity: 0.6;">{footerQrHint}</p>
             <div class="footer-qr-mini">
               <div class="footer-qr-item">
                 <img src="/gzh-qr.jpg" alt={footerQrGzh} style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" />
@@ -204,25 +207,45 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
           </div>
         </div>
         <div class="footer-bottom">
-          <p style="font-size: 11px; opacity: 0.5;">© {footerCopy}</p>
-          <p style="font-size: 10px; opacity: 0.4; margin-top: 4px;">{footerCredit}</p>
+          <p style="font-size: 11px; opacity: 0.4;">© {footerCopy}</p>
         </div>
       </div>
     </footer>
     <ChatWidget lang={lang} />
-    <FollowUsCard lang={lang} />
+    <script is:inline>
+      // 暗色模式切换 — 立即执行，避免闪烁
+      (function() {
+        const html = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark') html.setAttribute('data-theme', 'dark');
+        else if (stored === 'light') html.setAttribute('data-theme', 'light');
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var btn = document.querySelector('.theme-toggle');
+          if (!btn) return;
+          btn.addEventListener('click', function() {
+            var current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+              html.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+            } else {
+              html.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        });
+      })();
+    </script>
     <style>
-      .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
-      .footer-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; }
+      .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 24px 0 16px; margin-top: 48px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-bottom: 16px; }
       .footer-left { flex: 1; }
       .footer-brand { font-family: var(--font-serif); font-size: 14px; font-weight: 600; margin: 0 0 4px; }
-      .footer-subtitle { font-size: 11px; color: var(--color-text-light); margin: 0 0 4px; }
       .footer-company-link { font-size: 12px; color: var(--color-accent); text-decoration: none; }
       .footer-company-link:hover { text-decoration: underline; }
       .footer-qr-mini { display: flex; gap: 8px; }
       .footer-qr-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
       .footer-bottom { text-align: center; }
-      .footer-v { content: "v2026-05-14"; }
     </style>
   </body>
 </html>

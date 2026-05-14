@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "页面未找到 | 观吾",
+  "description": "404 — 你访问的页面不存在"
+};
+---
+
+<BaseLayout title="404 | 页面未找到 — 观吾" jsonLd={jsonLd} ogDescription="404 — 你访问的页面不存在" navActive="home">
+  <section class="not-found">
+    <div class="container not-found-content">
+      <div class="error-code">404</div>
+      <h1>页面不存在</h1>
+      <p class="not-found-text">
+        你访问的页面可能已被移动、删除，或链接已失效。
+      </p>
+      <div class="not-found-actions">
+        <a href="/" class="btn btn-primary">返回首页 <span class="btn-arrow">→</span></a>
+        <a href="/diary/" class="btn btn-ghost">查看工作日记</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .error-code {
+    font-family: var(--font-serif);
+    font-size: clamp(80px, 15vw, 140px);
+    font-weight: 800;
+    color: var(--color-accent);
+    opacity: 0.08;
+    line-height: 1;
+    margin-bottom: -40px;
+  }
+
+  .not-found-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .not-found-text {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    max-width: 400px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  .not-found-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

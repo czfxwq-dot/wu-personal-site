@@ -32,12 +32,13 @@ function formatDate(iso: string): string {
       给观吾留句话，AI 会自动回复你 ✍️
     </p>
     <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 32px; font-style: italic;">
-      💡 完全自主运营，不依赖任何第三方平台
+      <span class="info-icon" style="display:inline-block;width:16px;height:16px;border:1px solid var(--color-border);border-radius:50%;text-align:center;line-height:14px;font-size:10px;margin-right:4px;font-style:normal;">i</span>
+      完全自主运营，不依赖任何第三方平台
     </p>
 
     <!-- 留言表单 -->
     <div class="guestbook-form-card">
-      <h3 style="margin-bottom: 16px;">✏️ 写留言</h3>
+      <h3 style="margin-bottom: 16px;"><span class="form-icon">✎</span> 写留言</h3>
       <form id="guestbook-form">
         <div class="form-group">
           <label for="gb-name">你的名字</label>
@@ -58,16 +59,16 @@ function formatDate(iso: string): string {
         </button>
       </form>
       <div id="form-success" class="success-msg" style="display: none;">
-        ✅ 留言成功！AI 助理会尽快回复你 💬
+        <span class="success-icon">✓</span> 留言成功！AI 助理会尽快回复你
       </div>
       <div id="form-error" class="error-msg" style="display: none;"></div>
     </div>
 
     <!-- 留言列表（静态渲染） -->
     <div style="margin-top: 40px;">
-      <h3 style="margin-bottom: 20px;">💬 往期留言</h3>
+      <h3 style="margin-bottom: 20px;"><span class="msg-icon">◈</span> 往期留言</h3>
       {messages.length === 0 ? (
-        <p class="empty-state">还没有留言，来做第一个吧 ✍️</p>
+        <p class="empty-state">还没有留言，来做第一个吧</p>
       ) : (
         messages.map((msg) => (
           <div class="message-card">
@@ -95,6 +96,22 @@ function formatDate(iso: string): string {
     border-radius: 12px;
     padding: 24px;
     max-width: 600px;
+  }
+  .form-icon, .msg-icon {
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    color: var(--color-accent);
+    margin-right: 6px;
+    font-weight: 700;
+  }
+  .success-msg {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 8px;
+    color: var(--color-success);
+    font-size: 14px;
   }
   .form-group {
     margin-bottom: 16px;

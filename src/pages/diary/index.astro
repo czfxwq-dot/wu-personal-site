@@ -58,13 +58,19 @@ const allDates = diaries.map(d => d.date);
     </div>
 
     <div id="diary-list">
-      {diaries.map((diary, i) => (
+      {diaries.map((diary, i) => {
+        const readTime = Math.max(1, Math.ceil(diary.summary.length / 300));
+        return (
         <a href={`/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.title} ${diary.summary}`.toLowerCase()}>
-          <div class="card-date">{diary.date}</div>
+          <div class="card-date">
+            {diary.date}
+            <span class="read-time">{readTime} min read</span>
+          </div>
           <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.title}</h2>
           <p>{diary.summary}</p>
         </a>
-      ))}
+        );
+      })}
     </div>
 
     <div id="diary-no-result" class="no-result" style="display:none;">
@@ -168,6 +174,17 @@ const allDates = diaries.map(d => d.date);
     color: var(--color-accent);
     font-weight: 500;
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .read-time {
+    font-size: 11px;
+    color: var(--color-text-light);
+    font-weight: 400;
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
   }
   .card h2 {
     font-size: 18px;
