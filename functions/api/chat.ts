@@ -2,12 +2,20 @@
 // 代理请求到 OpenClaw Gateway
 // Gateway URL 和 Token 通过环境变量传入
 
-const CORS_ORIGIN = 'https://wu-personal-site.pages.dev';
+const ALLOWED_ORIGINS = [
+  'https://wu-personal-site.pages.dev',
+  'https://www.ban-bai.com',
+  'https://ban-bai.com',
+];
+
+function getOrigin(request: Request) {
+  return request.headers.get('Origin') || ALLOWED_ORIGINS[0];
+}
 
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  const GATEWAY_URL = env.GATEWAY_URL || 'http://127.0.0.1:18789';
+  const GATEWAY_URL = env.GATEWAY_URL || 'https://amendments-fragrance-morrison-philadelphia.trycloudflare.com';
   const GATEWAY_TOKEN = env.GATEWAY_TOKEN || '';
 
   let body;
@@ -52,10 +60,11 @@ export async function onRequestPost(context) {
     const { readable, writable } = new TransformStream();
     gatewayResponse.body.pipeTo(writable);
 
+    const origin = getOrigin(request);
     return new Response(readable, {
       headers: {
         'Content-Type': 'text/event-stream',
-        'Access-Control-Allow-Origin': CORS_ORIGIN,
+        'Access-Control-Allow-Origin': origin,
         'Cache-Control': 'no-cache',
       }
     });
@@ -68,10 +77,11 @@ export async function onRequestPost(context) {
   }
 }
 
-export async function onRequestOptions() {
+export async function onRequestOptions(context: { request: Request }) {
+  const { request } = context;
   return new Response(null, {
     headers: {
-      'Access-Control-Allow-Origin': CORS_ORIGIN,
+      'Access-Control-Allow-Origin': getOrigin(request),
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     }
