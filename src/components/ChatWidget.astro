@@ -1,55 +1,87 @@
 ---
 /**
- * ChatWidget - 右下角浮动聊天组件
- * 通过 Cloudflare Pages Functions 代理与 OpenClaw Gateway 对话
+ * ChatWidget - Floating chat component
+ * Supports zh/en languages via props
  */
 
 interface Props {
   lang?: 'zh' | 'en';
 }
 
-const { lang = 'zh' } = Astro.props;
+const { lang = 'zh' } = Astro.props as Props;
 
-const chatTitle = lang === 'en' ? 'Shanshan AI Assistant' : '山山 AI 助理';
-const chatStatus = lang === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
-const chatGreeting1 = lang === 'en' ? "Hi! I'm Shanshan, the AI assistant for BanbaiGuan AI" : '你好！我是山山，半百观AI 的智能助理';
-const chatGreeting2 = lang === 'en' ? "I can help you with the latest AI news, tool recommendations, and our social media accounts." : '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。';
-const chatGreeting3 = lang === 'en' ? 'You can ask me:' : '你可以问我：';
-const chatGreeting4 = lang === 'en' ? 'What AI tools are trending lately?' : '最近有什么好用的 AI 工具？';
-const chatGreeting5 = lang === 'en' ? 'Where can I follow you?' : '你们在哪些平台有账号？';
-const chatGreeting6 = lang === 'en' ? 'Any recommended AI articles?' : '有什么值得看的 AI 文章？';
-const chatPlaceholder = lang === 'en' ? 'Ask Shanshan...' : '问问山山...';
-const qaAiNews = lang === 'en' ? 'AI News' : '今日 AI';
-const qaFollow = lang === 'en' ? 'Follow Us' : '关注我们';
-const qaArticles = lang === 'en' ? 'Articles' : '最新文章';
-const qaGuestbook = lang === 'en' ? 'Guestbook' : '留言板';
-const followCardTitle = lang === 'en' ? 'BanbaiGuan AI' : '半百观AI';
-const followCardHint = lang === 'en' ? 'Search "BanbaiGuan AI" on any platform to find us' : '全平台搜索"半百观AI"即可找到我们';
-const followCardFollow = lang === 'en' ? 'Follow' : '关注';
-const offlineMsg = lang === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。';
-const errorMsg = lang === 'en' ? 'Sorry, I\'m temporarily unable to reply. Please try again later.' : '抱歉，我暂时无法回复。请稍后再试。';
-const statusOnline = lang === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
-const statusThinking = lang === 'en' ? 'Thinking...' : '思考中...';
-const statusError = lang === 'en' ? 'Connection failed' : '连接失败';
-const botPrompt1 = lang === 'en' ? 'Please briefly introduce today\'s 3 most noteworthy AI news.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。';
-const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。';
+const t = {
+  title: lang === 'en' ? 'Shanshan AI Assistant' : '山山 AI 助理',
+  status: lang === 'en' ? 'Online' : '半百观AI · 在线',
+  toggleLabel: lang === 'en' ? 'Open Shanshan AI chat' : '打开山山 AI 助理对话',
+  toggleTitle: lang === 'en' ? 'Chat with Shanshan' : '和山山对话',
+  closeLabel: lang === 'en' ? 'Close chat' : '关闭对话',
+  placeholder: lang === 'en' ? 'Ask Shanshan...' : '问问山山...',
+  sendLabel: lang === 'en' ? 'Send message' : '发送消息',
+  welcome: lang === 'en'
+    ? 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan AI 🤖'
+    : '你好！我是山山，半百观AI 的智能助理 🤖',
+  welcomeDesc: lang === 'en'
+    ? 'I can help you with the latest AI news, tool recommendations, and our social media accounts.'
+    : '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
+  askTitle: lang === 'en' ? '💡 You can ask me:' : '💡 你可以问我：',
+  askItems: lang === 'en'
+    ? '• What AI tools are trending lately?<br/>• Where can I follow you?<br/>• Any recommended AI articles?'
+    : '• 最近有什么好用的 AI 工具？<br/>• 你们在哪些平台有账号？<br/>• 有什么值得看的 AI 文章？',
+  qaNews: lang === 'en' ? 'AI News' : '今日 AI',
+  qaFollow: lang === 'en' ? 'Follow Us' : '关注我们',
+  qaArticles: lang === 'en' ? 'Articles' : '最新文章',
+  qaGuestbook: lang === 'en' ? 'Guestbook' : '留言板',
+  followTitle: lang === 'en' ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇',
+  followFooter: lang === 'en' ? 'Search "半百观AI" on all platforms to find us ✨' : '全平台搜索"半百观AI"即可找到我们 ✨',
+  thinking: lang === 'en' ? 'Thinking...' : '思考中...',
+  offline: lang === 'en' ? 'Disconnected' : '连接失败',
+  errorReply: lang === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。',
+  onlineStatus: lang === 'en' ? 'Online' : '半百观AI · 在线',
+  newsPrompt: lang === 'en'
+    ? 'Please briefly introduce today\'s top 3 AI news highlights.'
+    : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。',
+  articlesPrompt: lang === 'en'
+    ? 'Please recommend 3 latest articles from BanbaiGuan AI.'
+    : '请推荐 3 篇半百观AI 的最新文章。',
+};
+
+const platforms = lang === 'en'
+  ? [
+      { name: 'WeChat Official Account', icon: '💬' },
+      { name: 'Video Account', icon: '🎥' },
+      { name: 'Douyin', icon: '🎵' },
+      { name: 'Toutiao', icon: '📰' },
+      { name: 'Xigua Video', icon: '🍉' },
+      { name: 'Bilibili', icon: '📺' },
+      { name: 'Xiaohongshu', icon: '📕' },
+    ]
+  : [
+      { name: '微信公众号', icon: '💬' },
+      { name: '视频号', icon: '🎥' },
+      { name: '抖音', icon: '🎵' },
+      { name: '今日头条', icon: '📰' },
+      { name: '西瓜视频', icon: '🍉' },
+      { name: 'B 站', icon: '📺' },
+      { name: '小红书', icon: '📕' },
+    ];
 ---
 
 <div id="chat-widget-root">
-  <button id="chat-toggle-btn" aria-label={lang === 'en' ? 'Open Shanshan AI Assistant' : '打开山山 AI 助理对话'} title={lang === 'en' ? 'Chat with Shanshan' : '和山山对话'}>
+  <button id="chat-toggle-btn" aria-label={t.toggleLabel} title={t.toggleTitle}>
     <span class="chat-icon">🤖</span>
   </button>
 
-  <div id="chat-panel" class="hidden" role="dialog" aria-label={lang === 'en' ? 'AI Assistant Dialog' : 'AI助理对话窗口'}>
+  <div id="chat-panel" class="hidden" role="dialog" aria-label="AI chat window">
     <div class="chat-header">
       <div class="chat-header-info">
         <span class="chat-avatar">🤖</span>
         <div>
-          <span class="chat-title">{chatTitle}</span>
-          <span class="chat-status" id="chat-status">{chatStatus}</span>
+          <span class="chat-title">{t.title}</span>
+          <span class="chat-status" id="chat-status">{t.status}</span>
         </div>
       </div>
-      <button id="chat-close-btn" aria-label={lang === 'en' ? 'Close' : '关闭'}>
+      <button id="chat-close-btn" aria-label={t.closeLabel}>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
     </div>
@@ -57,19 +89,19 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     <div class="quick-actions" id="quick-actions">
       <button class="quick-action-btn" data-action="ai-news">
         <span class="qa-icon">📰</span>
-        <span class="qa-text">{qaAiNews}</span>
+        <span class="qa-text">{t.qaNews}</span>
       </button>
       <button class="quick-action-btn" data-action="follow-us">
         <span class="qa-icon">📺</span>
-        <span class="qa-text">{qaFollow}</span>
+        <span class="qa-text">{t.qaFollow}</span>
       </button>
       <button class="quick-action-btn" data-action="latest-articles">
         <span class="qa-icon">📝</span>
-        <span class="qa-text">{qaArticles}</span>
+        <span class="qa-text">{t.qaArticles}</span>
       </button>
       <button class="quick-action-btn" data-action="guestbook">
         <span class="qa-icon">💬</span>
-        <span class="qa-text">{qaGuestbook}</span>
+        <span class="qa-text">{t.qaGuestbook}</span>
       </button>
     </div>
 
@@ -77,10 +109,10 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
       <div class="chat-message bot">
         <div class="message-avatar">🤖</div>
         <div class="message-bubble">
-          <p>{chatGreeting1}</p>
-          <p>{chatGreeting2}</p>
-          <p style="margin-top:8px;font-size:12px;opacity:0.8;">{chatGreeting3}</p>
-          <p style="font-size:12px;opacity:0.8;">• {chatGreeting4}<br/>• {chatGreeting5}<br/>• {chatGreeting6}</p>
+          <p set:html={t.welcome}></p>
+          <p>{t.welcomeDesc}</p>
+          <p style="margin-top:8px;font-size:12px;opacity:0.8;" set:html={t.askTitle}></p>
+          <p style="font-size:12px;opacity:0.8;" set:html={t.askItems}></p>
         </div>
       </div>
     </div>
@@ -88,25 +120,356 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     <div class="chat-input-area">
       <textarea
         id="chat-input"
-        placeholder={chatPlaceholder}
+        placeholder={t.placeholder}
         rows="1"
         maxlength="2000"
       ></textarea>
-      <button id="chat-send-btn" aria-label={lang === 'en' ? 'Send' : '发送'} disabled>
+      <button id="chat-send-btn" aria-label={t.sendLabel} disabled>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
   </div>
 </div>
 
+<script define:vars={{ lang }}>
+(function() {
+  const CHAT_API_URL = '/api/chat';
+  const MAX_MESSAGES = 50;
+
+  const toggleBtn = document.getElementById('chat-toggle-btn');
+  const closeBtn = document.getElementById('chat-close-btn');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const chatSendBtn = document.getElementById('chat-send-btn');
+  const chatStatus = document.getElementById('chat-status');
+
+  const isEn = lang === 'en';
+
+  const texts = {
+    platforms: isEn
+      ? [
+          { name: 'WeChat Official Account', icon: '💬' },
+          { name: 'Video Account', icon: '🎥' },
+          { name: 'Douyin', icon: '🎵' },
+          { name: 'Toutiao', icon: '📰' },
+          { name: 'Xigua Video', icon: '🍉' },
+          { name: 'Bilibili', icon: '📺' },
+          { name: 'Xiaohongshu', icon: '📕' },
+        ]
+      : [
+          { name: '微信公众号', icon: '💬' },
+          { name: '视频号', icon: '🎥' },
+          { name: '抖音', icon: '🎵' },
+          { name: '今日头条', icon: '📰' },
+          { name: '西瓜视频', icon: '🍉' },
+          { name: 'B 站', icon: '📺' },
+          { name: '小红书', icon: '📕' },
+        ],
+    followTitle: isEn ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇',
+    followFooter: isEn ? 'Search "半百观AI" on all platforms to find us ✨' : '全平台搜索"半百观AI"即可找到我们 ✨',
+    onlineStatus: isEn ? 'Online' : '半百观AI · 在线',
+    thinking: isEn ? 'Thinking...' : '思考中...',
+    errorReply: isEn ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。',
+    newsPrompt: isEn ? 'Please briefly introduce today\'s top 3 AI news highlights.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。',
+    articlesPrompt: isEn ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。',
+  };
+
+  let isOpen = false;
+  let isLoading = false;
+  let messageHistory = [];
+
+  function toggleChat() {
+    isOpen = !isOpen;
+    chatPanel.classList.toggle('hidden', !isOpen);
+    if (isOpen) {
+      setTimeout(() => chatInput.focus(), 200);
+    }
+  }
+
+  function showPlatformCard() {
+    const cardHTML = `
+      <p>${texts.followTitle}</p>
+      <div class="platform-card">
+        ${texts.platforms.map(p => `
+          <div class="platform-item">
+            <span>${p.icon}</span>
+            <span>${p.name}</span>
+            <span style="margin-left:auto;font-size:12px;color:#64748b;">半百观AI</span>
+          </div>
+        `).join('')}
+      </div>
+      <p style="margin-top:8px;font-size:12px;opacity:0.7;">${texts.followFooter}</p>
+    `;
+    addMessage('bot', cardHTML, true);
+  }
+
+  async function sendToBot(text) {
+    if (isLoading) return;
+    addMessage('user', text);
+    messageHistory.push({ role: 'user', content: text });
+    isLoading = true;
+    showLoading(true);
+    setStatus(texts.thinking, true);
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'openclaw',
+          messages: messageHistory,
+          stream: true,
+        }),
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let botMessage = '';
+      let buffer = '';
+      showLoading(false);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `<div class="message-avatar">🤖</div><div class="message-bubble"></div>`;
+      chatMessages.appendChild(botMsg);
+      const bubble = botMsg.querySelector('.message-bubble');
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                botMessage += delta;
+                bubble.textContent = botMessage;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            } catch {}
+          }
+        }
+      }
+      messageHistory.push({ role: 'assistant', content: botMessage });
+      setStatus(texts.onlineStatus);
+    } catch (error) {
+      showLoading(false);
+      setStatus(texts.errorReply, true);
+      addMessage('bot', texts.errorReply);
+      setTimeout(() => setStatus(texts.onlineStatus), 5000);
+    } finally {
+      isLoading = false;
+      chatInput.focus();
+    }
+  }
+
+  function handleQuickAction(action) {
+    switch (action) {
+      case 'ai-news':
+        sendToBot(texts.newsPrompt);
+        break;
+      case 'follow-us':
+        showPlatformCard();
+        break;
+      case 'latest-articles':
+        sendToBot(texts.articlesPrompt);
+        break;
+      case 'guestbook':
+        window.location.href = '/guestbook';
+        break;
+    }
+  }
+
+  function addMessage(role, content, isHTML = false) {
+    const msg = document.createElement('div');
+    msg.className = `chat-message ${role}`;
+
+    const avatar = document.createElement('div');
+    avatar.className = 'message-avatar';
+    avatar.textContent = role === 'user' ? '👤' : '🤖';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble';
+
+    if (isHTML) {
+      bubble.innerHTML = content;
+    } else if (role === 'bot' && content.includes('\n')) {
+      content.split('\n').filter(Boolean).forEach(line => {
+        const p = document.createElement('p');
+        p.textContent = line;
+        bubble.appendChild(p);
+      });
+    } else {
+      bubble.textContent = content;
+    }
+
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    chatMessages.appendChild(msg);
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    while (chatMessages.children.length > MAX_MESSAGES) {
+      chatMessages.removeChild(chatMessages.firstChild);
+    }
+  }
+
+  function showLoading(show) {
+    const existing = document.querySelector('.chat-message.typing');
+    if (show && !existing) {
+      const msg = document.createElement('div');
+      msg.className = 'chat-message bot typing';
+      msg.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-bubble">
+          <div class="typing-indicator"><span></span><span></span><span></span></div>
+        </div>
+      `;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    } else if (!show && existing) {
+      existing.remove();
+    }
+  }
+
+  function setStatus(text, loading = false) {
+    chatStatus.textContent = text;
+    chatStatus.classList.toggle('loading', loading);
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text || isLoading) return;
+
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+    chatSendBtn.disabled = true;
+
+    addMessage('user', text);
+    messageHistory.push({ role: 'user', content: text });
+
+    isLoading = true;
+    showLoading(true);
+    setStatus(texts.thinking, true);
+
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'openclaw',
+          messages: messageHistory,
+          stream: true,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let botMessage = '';
+      let buffer = '';
+
+      showLoading(false);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-bubble"></div>
+      `;
+      chatMessages.appendChild(botMsg);
+      const bubble = botMsg.querySelector('.message-bubble');
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                botMessage += delta;
+                bubble.textContent = botMessage;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            } catch {}
+          }
+        }
+      }
+
+      messageHistory.push({ role: 'assistant', content: botMessage });
+      setStatus(texts.onlineStatus);
+
+    } catch (error) {
+      showLoading(false);
+      setStatus(texts.offline, true);
+      console.error('Chat error:', error);
+      addMessage('bot', texts.errorReply);
+
+      setTimeout(() => setStatus(texts.onlineStatus), 5000);
+    } finally {
+      isLoading = false;
+      chatInput.focus();
+    }
+  }
+
+  chatInput.addEventListener('input', () => {
+    chatInput.style.height = 'auto';
+    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+    chatSendBtn.disabled = !chatInput.value.trim();
+  });
+
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  toggleBtn.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+  chatSendBtn.addEventListener('click', sendMessage);
+
+  const quickActionsEl = document.getElementById('quick-actions');
+  if (quickActionsEl) {
+    quickActionsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.quick-action-btn');
+      if (btn) {
+        handleQuickAction(btn.dataset.action);
+      }
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleChat();
+    }
+  });
+})();
+</script>
+
 <style>
-  /* 浮动按钮 */
+  /* Floating button */
   #chat-widget-root {
     position: fixed;
     bottom: 24px;
     right: 24px;
     z-index: 10000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
   }
 
   #chat-toggle-btn {
@@ -135,7 +498,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     line-height: 1;
   }
 
-  /* 对话面板 */
+  /* Chat panel */
   #chat-panel {
     position: fixed;
     bottom: 96px;
@@ -160,7 +523,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     pointer-events: none;
   }
 
-  /* 头部 */
+  /* Header */
   .chat-header {
     display: flex;
     align-items: center;
@@ -218,7 +581,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     color: var(--color-text, #1a1a2e);
   }
 
-  /* 快捷按钮 */
+  /* Quick actions */
   .quick-actions {
     display: flex;
     gap: 6px;
@@ -264,7 +627,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     font-weight: 500;
   }
 
-  /* 平台关注卡片 */
+  /* Platform card */
   .platform-card {
     background: var(--color-bg-alt, #f8fafc);
     border: 1px solid var(--color-border, #e2e8f0);
@@ -285,7 +648,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     border-bottom: 1px solid var(--color-border, #f1f5f9);
   }
 
-  /* 消息区域 */
+  /* Messages */
   .chat-messages {
     flex: 1;
     overflow-y: auto;
@@ -379,7 +742,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     color: white;
   }
 
-  /* 加载指示器 */
+  /* Typing indicator */
   .typing-indicator {
     display: flex;
     gap: 4px;
@@ -402,7 +765,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     30% { opacity: 1; transform: translateY(-4px); }
   }
 
-  /* 输入区域 */
+  /* Input area */
   .chat-input-area {
     display: flex;
     align-items: flex-end;
@@ -459,7 +822,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     background: #d4612e;
   }
 
-  /* 错误提示 */
+  /* Error message */
   .error-message {
     background: #fef2f2;
     border: 1px solid #fecaca;
@@ -470,7 +833,7 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     text-align: center;
   }
 
-  /* 移动端适配 */
+  /* Mobile */
   @media (max-width: 480px) {
     #chat-widget-root {
       bottom: 16px;
@@ -492,339 +855,3 @@ const botPrompt2 = lang === 'en' ? 'Please recommend 3 latest articles from Banb
     }
   }
 </style>
-
-<script>
-(function() {
-  const CHAT_API_URL = '/api/chat';
-  const MAX_MESSAGES = 50;
-  const LANG = {lang};
-
-  const toggleBtn = document.getElementById('chat-toggle-btn');
-  const closeBtn = document.getElementById('chat-close-btn');
-  const chatPanel = document.getElementById('chat-panel');
-  const chatMessages = document.getElementById('chat-messages');
-  const chatInput = document.getElementById('chat-input');
-  const chatSendBtn = document.getElementById('chat-send-btn');
-  const chatStatus = document.getElementById('chat-status');
-
-  let isOpen = false;
-  let isLoading = false;
-  let messageHistory = [];
-
-  function toggleChat() {
-    isOpen = !isOpen;
-    chatPanel.classList.toggle('hidden', !isOpen);
-    if (isOpen) {
-      setTimeout(() => chatInput.focus(), 200);
-    }
-  }
-
-  const platformsZh = [
-    { name: '微信公众号', icon: '💬' },
-    { name: '视频号', icon: '🎥' },
-    { name: '抖音', icon: '🎵' },
-    { name: '今日头条', icon: '📰' },
-    { name: '西瓜视频', icon: '🍉' },
-    { name: 'B 站', icon: '📺' },
-    { name: '小红书', icon: '📕' },
-  ];
-
-  const platformsEn = [
-    { name: 'WeChat', icon: '💬' },
-    { name: 'Video Account', icon: '🎥' },
-    { name: 'Douyin', icon: '🎵' },
-    { name: 'Toutiao', icon: '📰' },
-    { name: 'Xigua Video', icon: '🍉' },
-    { name: 'Bilibili', icon: '📺' },
-    { name: 'Xiaohongshu', icon: '📕' },
-  ];
-
-  const platforms = LANG === 'en' ? platformsEn : platformsZh;
-  const badgeText = LANG === 'en' ? 'BanbaiGuan AI' : '半百观AI';
-  const followTitle = LANG === 'en' ? 'BanbaiGuan AI' : '半百观AI';
-  const followHint = LANG === 'en' ? 'Search "BanbaiGuan AI" on any platform to find us' : '全平台搜索"半百观AI"即可找到我们';
-  const followPrefix = LANG === 'en' ? 'Follow' : '关注';
-  const statusOnline = LANG === 'en' ? 'BanbaiGuan AI · Online' : '半百观AI · 在线';
-  const statusThinking = LANG === 'en' ? 'Thinking...' : '思考中...';
-  const statusError = LANG === 'en' ? 'Connection failed' : '连接失败';
-  const offlineMsg = LANG === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。';
-  const errorMsg = LANG === 'en' ? 'Sorry, I\'m temporarily unable to reply. Please try again later.' : '抱歉，我暂时无法回复。请稍后再试。';
-  const botPrompt1 = LANG === 'en' ? 'Please briefly introduce today\'s 3 most noteworthy AI news.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。';
-  const botPrompt2 = LANG === 'en' ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。';
-
-  function showPlatformCard() {
-    const cardHTML = `
-      <p>${LANG === 'en' ? 'Follow' : '关注'}<strong>${followTitle}</strong>，${LANG === 'en' ? 'get the latest AI practice updates' : '获取最新 AI 实践分享'} 👇</p>
-      <div class="platform-card">
-        ${platforms.map(p => `
-          <div class="platform-item">
-            <span>${p.icon}</span>
-            <span>${p.name}</span>
-            <span style="margin-left:auto;font-size:12px;color:#64748b;">${badgeText}</span>
-          </div>
-        `).join('')}
-      </div>
-      <p style="margin-top:8px;font-size:12px;opacity:0.7;">${followHint}</p>
-    `;
-    addMessage('bot', cardHTML, true);
-  }
-
-  async function sendToBot(text) {
-    if (isLoading) return;
-    addMessage('user', text);
-    messageHistory.push({ role: 'user', content: text });
-    isLoading = true;
-    showLoading(true);
-    setStatus(statusThinking, true);
-    try {
-      const response = await fetch(CHAT_API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'openclaw',
-          messages: messageHistory,
-          stream: true,
-        }),
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let botMessage = '';
-      let buffer = '';
-      showLoading(false);
-      const botMsg = document.createElement('div');
-      botMsg.className = 'chat-message bot';
-      botMsg.innerHTML = `<div class="message-avatar">🤖</div><div class="message-bubble"></div>`;
-      chatMessages.appendChild(botMsg);
-      const bubble = botMsg.querySelector('.message-bubble');
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6);
-            if (data === '[DONE]') continue;
-            try {
-              const json = JSON.parse(data);
-              const delta = json.choices?.[0]?.delta?.content;
-              if (delta) {
-                botMessage += delta;
-                bubble.textContent = botMessage;
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-              }
-            } catch {}
-          }
-        }
-      }
-      messageHistory.push({ role: 'assistant', content: botMessage });
-      setStatus(statusOnline);
-    } catch (error) {
-      showLoading(false);
-      setStatus(statusError, true);
-      addMessage('bot', offlineMsg);
-      setTimeout(() => setStatus(statusOnline), 5000);
-    } finally {
-      isLoading = false;
-      chatInput.focus();
-    }
-  }
-
-  function handleQuickAction(action) {
-    switch (action) {
-      case 'ai-news':
-        sendToBot(botPrompt1);
-        break;
-      case 'follow-us':
-        showPlatformCard();
-        break;
-      case 'latest-articles':
-        sendToBot(botPrompt2);
-        break;
-      case 'guestbook':
-        window.location.href = LANG === 'en' ? '/en/guestbook' : '/guestbook';
-        break;
-    }
-  }
-
-  function addMessage(role, content, isHTML = false) {
-    const msg = document.createElement('div');
-    msg.className = `chat-message ${role}`;
-
-    const avatar = document.createElement('div');
-    avatar.className = 'message-avatar';
-    avatar.textContent = role === 'user' ? '👤' : '🤖';
-
-    const bubble = document.createElement('div');
-    bubble.className = 'message-bubble';
-
-    if (isHTML) {
-      bubble.innerHTML = content;
-    } else if (role === 'bot' && content.includes('\n')) {
-      content.split('\n').filter(Boolean).forEach(line => {
-        const p = document.createElement('p');
-        p.textContent = line;
-        bubble.appendChild(p);
-      });
-    } else {
-      bubble.textContent = content;
-    }
-
-    msg.appendChild(avatar);
-    msg.appendChild(bubble);
-    chatMessages.appendChild(msg);
-
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-
-    while (chatMessages.children.length > MAX_MESSAGES) {
-      chatMessages.removeChild(chatMessages.firstChild);
-    }
-  }
-
-  function showLoading(show) {
-    const existing = document.querySelector('.chat-message.typing');
-    if (show && !existing) {
-      const msg = document.createElement('div');
-      msg.className = 'chat-message bot typing';
-      msg.innerHTML = `
-        <div class="message-avatar">🤖</div>
-        <div class="message-bubble">
-          <div class="typing-indicator"><span></span><span></span><span></span></div>
-        </div>
-      `;
-      chatMessages.appendChild(msg);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    } else if (!show && existing) {
-      existing.remove();
-    }
-  }
-
-  function setStatus(text, loading = false) {
-    chatStatus.textContent = text;
-    chatStatus.classList.toggle('loading', loading);
-  }
-
-  async function sendMessage() {
-    const text = chatInput.value.trim();
-    if (!text || isLoading) return;
-
-    chatInput.value = '';
-    chatInput.style.height = 'auto';
-    chatSendBtn.disabled = true;
-
-    addMessage('user', text);
-    messageHistory.push({ role: 'user', content: text });
-
-    isLoading = true;
-    showLoading(true);
-    setStatus(statusThinking, true);
-
-    try {
-      const response = await fetch(CHAT_API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'openclaw',
-          messages: messageHistory,
-          stream: true,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let botMessage = '';
-      let buffer = '';
-
-      showLoading(false);
-      const botMsg = document.createElement('div');
-      botMsg.className = 'chat-message bot';
-      botMsg.innerHTML = `
-        <div class="message-avatar">🤖</div>
-        <div class="message-bubble"></div>
-      `;
-      chatMessages.appendChild(botMsg);
-      const bubble = botMsg.querySelector('.message-bubble');
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
-
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6);
-            if (data === '[DONE]') continue;
-            try {
-              const json = JSON.parse(data);
-              const delta = json.choices?.[0]?.delta?.content;
-              if (delta) {
-                botMessage += delta;
-                bubble.textContent = botMessage;
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-              }
-            } catch {
-              // ignore parse errors
-            }
-          }
-        }
-      }
-
-      messageHistory.push({ role: 'assistant', content: botMessage });
-      setStatus(statusOnline);
-
-    } catch (error) {
-      showLoading(false);
-      setStatus(statusError, true);
-      console.error('Chat error:', error);
-      addMessage('bot', errorMsg);
-
-      setTimeout(() => setStatus(statusOnline), 5000);
-    } finally {
-      isLoading = false;
-      chatInput.focus();
-    }
-  }
-
-  chatInput.addEventListener('input', () => {
-    chatInput.style.height = 'auto';
-    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
-    chatSendBtn.disabled = !chatInput.value.trim();
-  });
-
-  chatInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
-    }
-  });
-
-  toggleBtn.addEventListener('click', toggleChat);
-  closeBtn.addEventListener('click', toggleChat);
-  chatSendBtn.addEventListener('click', sendMessage);
-
-  const quickActionsEl = document.getElementById('quick-actions');
-  if (quickActionsEl) {
-    quickActionsEl.addEventListener('click', (e) => {
-      const btn = e.target.closest('.quick-action-btn');
-      if (btn) {
-        handleQuickAction(btn.dataset.action);
-      }
-    });
-  }
-
-  document.addEventListener('click', (e) => {
-    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
-      toggleChat();
-    }
-  });
-})();
-</script>

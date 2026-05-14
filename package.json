@@ -8,8 +8,8 @@
     "preview": "astro preview",
     "check:data": "node scripts/sync-data.mjs check",
     "fix:data": "node scripts/sync-data.mjs fix",
-    "guard": "node scripts/pre-deploy-guard.mjs",
-    "deploy:cf": "source .env && npx wrangler pages deploy dist --project-name wu-personal-site --branch main --commit-dirty=true",
+    "guard": "bash scripts/pre-deploy-guard.sh",
+    "deploy:cf": "source .env && npx wrangler pages deploy docs --project-name wu-personal-site --branch main --commit-dirty=true",
     "deploy": "node scripts/sync-data.mjs deploy && npm run build && npm run guard && npm run deploy:cf"
   },
   "dependencies": {

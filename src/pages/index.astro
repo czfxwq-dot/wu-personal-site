@@ -9,11 +9,11 @@ const homeJsonLd = {
   "@type": "WebPage",
   "name": "观吾 | 50岁用AI做实事 — AI工具落地实践 · 半百观AI",
   "description": "50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站，分享AI工具落地实践、AIoT解决方案、数字化智能库存管理",
-  "url": "https://banbai.ai",
+  "url": "https://ban-bai.com",
   "isPartOf": {
     "@type": "WebSite",
     "name": "观吾",
-    "url": "https://banbai.ai"
+    "url": "https://ban-bai.com"
   },
   "about": {
     "@type": "Person",
@@ -33,7 +33,7 @@ const latestSummary = dailyNewsSummaries[0];
 const latestArticle = articles[0];
 ---
 
-<BaseLayout jsonLd={homeJsonLd} navActive="home">
+<BaseLayout title="观吾 | 50岁用AI做实事 — AI工具落地实践" jsonLd={homeJsonLd} ogDescription="50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站，分享AI工具落地实践、AIoT解决方案、数字化智能库存管理" navActive="home">
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
@@ -149,25 +149,26 @@ const latestArticle = articles[0];
     </div>
   </section>
 
-  <!-- 关注扫码 -->
+  <!-- 关注扫码 — 第二层：半百观AI -->
   <section class="follow-section">
     <div class="container">
-      <div class="section-title" style="text-align: center;">关注我们</div>
-      <p class="follow-subtitle">在各平台搜索「半百观AI」即可找到我们</p>
+      <div class="section-title" style="text-align: center;">关注「半百观AI」</div>
+      <p class="follow-subtitle">50岁视角看AI工具落地实践</p>
       <div class="follow-qr-codes">
         <div class="follow-qr-item">
-          <img src="/gzh-qr.jpg" alt="公众号 半百观AI" loading="lazy" />
-          <span class="follow-qr-label">公众号</span>
+          <img src="/gzh-qr.jpg" alt="微信公众号 半百观AI" width="430" height="430" loading="lazy" />
+          <span class="follow-qr-label">微信公众号</span>
         </div>
         <div class="follow-qr-item">
-          <img src="/dy-qr.jpg" alt="视频号 半百观AI" loading="lazy" />
+          <img src="/dy-qr.jpg" alt="视频号 半百观AI" width="686" height="960" loading="lazy" />
           <span class="follow-qr-label">视频号</span>
         </div>
         <div class="follow-qr-item">
-          <img src="/douyin-qr.jpg" alt="抖音 半百观AI" loading="lazy" />
+          <img src="/douyin-qr.jpg" alt="抖音 半百观AI" width="1125" height="1385" loading="lazy" />
           <span class="follow-qr-label">抖音</span>
         </div>
       </div>
+      <p class="follow-search">也可在今日头条 · B站 · 西瓜视频 搜索「半百观AI」</p>
     </div>
   </section>
 
@@ -606,6 +607,13 @@ const latestArticle = articles[0];
     font-size: 13px;
     font-weight: 600;
     color: var(--color-text-secondary);
+  }
+
+  .follow-search {
+    font-size: 13px;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin-top: 24px;
   }
 
   /* ===================================================

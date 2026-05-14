@@ -15,7 +15,7 @@ const blogPostingJsonLd = {
     "@type": "Person",
     "name": "吴总",
     "alternateName": "观吾",
-    "url": "https://banbai.ai/about/"
+    "url": "https://ban-bai.com/about/"
   },
   "publisher": {
     "@type": "Organization",
@@ -23,13 +23,13 @@ const blogPostingJsonLd = {
     "url": "https://www.monolithiot.com"
   },
   "description": `AI助理工作日记：${title}`,
-  "url": `https://banbai.ai/diary/${date}/`,
-  "mainEntityOfPage": `https://banbai.ai/diary/${date}/`,
+  "url": `https://ban-bai.com/diary/${date}/`,
+  "mainEntityOfPage": `https://ban-bai.com/diary/${date}/`,
   "keywords": ["AI项目", "网站上线", "工作日记"]
 };
 ---
 
-<BaseLayout title="Day ${dayNum} | 工作日记 | 观吾" jsonLd={blogPostingJsonLd} navActive="diary">
+<BaseLayout title="观吾日记 | 2026-04-30 — 网站上线了，从定位到部署只用了一天" jsonLd={blogPostingJsonLd} ogDescription="首页三大板块确定、二维码布局调整、关于页重构、公司介绍更新、Vercel部署成功、从定位到上线不到24小时。" navActive="diary">
   <article class="page-section">
     <div style="margin-bottom: 32px;">
       <a href="/diary/" class="link-arrow">返回日记列表</a>

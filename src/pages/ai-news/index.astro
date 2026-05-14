@@ -13,7 +13,7 @@ const newsJsonLd = {
   "@type": "CollectionPage",
   "name": "AI新闻 | 观吾",
   "description": "每天AI行业重大新闻汇总 + 一句话点评",
-  "url": "https://banbai.ai/ai-news/",
+  "url": "https://ban-bai.com/ai-news/",
   "author": {
     "@type": "Person",
     "name": "吴总",
@@ -28,7 +28,7 @@ const newsJsonLd = {
 const allDates = dailyNewsSummaries.map(d => d.date);
 ---
 
-<BaseLayout title="AI新闻 | 观吾" jsonLd={newsJsonLd} navActive="ai-news">
+<BaseLayout title="AI新闻 | 每天AI行业重大新闻汇总 - 观吾" jsonLd={newsJsonLd} ogDescription="每天AI行业重大新闻汇总 + 一句话点评，覆盖大模型、硬件、产业、投资、政策等方向" navActive="ai-news">
   <section class="page-section">
     <h1>AI新闻</h1>
     <p class="subtitle">
@@ -78,10 +78,19 @@ const allDates = dailyNewsSummaries.map(d => d.date);
                 data-item-search={`${item.title} ${item.summary} ${item.source}`.toLowerCase()}>
                 <div class="news-item-header">
                   <span class="news-item-category" data-category={item.category}>{item.category}</span>
-                  <h3>{item.title}</h3>
+                  <h3>
+                    {item.url ? (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                    ) : item.title}
+                  </h3>
                 </div>
                 <p class="news-item-text">{item.summary}</p>
-                <span class="news-item-source">{item.source}</span>
+                <span class="news-item-source">
+                  {item.source}
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="news-item-link"> → 原文</a>
+                  )}
+                </span>
               </div>
             ))}
           </div>
@@ -277,6 +286,13 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     margin: 0;
     font-weight: 500;
   }
+  .news-item-header h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .news-item-header h3 a:hover {
+    color: var(--color-accent);
+  }
   .news-item-text {
     font-size: 14px;
     line-height: 1.6;
@@ -286,6 +302,13 @@ const allDates = dailyNewsSummaries.map(d => d.date);
   .news-item-source {
     font-size: 12px;
     color: var(--color-text-light);
+  }
+  .news-item-link {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .news-item-link:hover {
+    text-decoration: underline;
   }
   .news-comment {
     padding: 12px 16px;

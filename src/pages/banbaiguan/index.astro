@@ -7,7 +7,7 @@ const articlesJsonLd = {
   "@type": "CollectionPage",
   "name": "半百观AI | 文章",
   "description": "50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得",
-  "url": "https://banbai.ai/articles/",
+  "url": "https://ban-bai.com/articles/",
   "author": {
     "@type": "Person",
     "name": "吴总",
@@ -19,7 +19,7 @@ const allDates = articles.map(a => a.date);
 const allTags = [...new Set(articles.map(a => a.tag))];
 ---
 
-<BaseLayout title="半百观" jsonLd={articlesJsonLd} navActive="banbaiguan">
+<BaseLayout title="半百观 | 50岁AI实践者的深度思考" jsonLd={articlesJsonLd} ogDescription="50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得，半百观AI专栏文章合集" navActive="banbaiguan">
   <section class="page-section">
     <h1>半百观</h1>
     <p class="subtitle">
@@ -172,6 +172,9 @@ const allTags = [...new Set(articles.map(a => a.tag))];
   }
   .article-tag[data-tag="AI安全"] {
     background: #8b5cf6;
+  }
+  .article-tag[data-tag="AI前沿"] {
+    background: #06b6d4;
   }
   .article-card h2 {
     font-size: 20px;

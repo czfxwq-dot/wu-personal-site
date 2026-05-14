@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import Citations from '../../components/Citations.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI学会「做梦」自我进化：Anthropic这项功能，可能改变人机协作的终局",
+  "datePublished": "2026-05-10",
+  "dateModified": "2026-05-10",
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "半百观AI"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI"
+  },
+  "description": "Anthropic在Code with Claude 2026大会上发布Dreaming功能，让AI在任务间隙自动进入休眠状态，审阅历史会话、整理记忆、发现错误模式，实现跨会话自我进化。"
+};
+---
+
+<BaseLayout title="AI学会「做梦」自我进化 | 半百观" jsonLd={articleJsonLd} ogDescription="Anthropic在Code with Claude 2026大会上发布Dreaming功能，让AI在任务间隙自动进入休眠状态，审阅历史会话、整理记忆、发现错误模式，实现跨会话自我进化。" navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-10">2026年5月10日</time>
+        <span class="article-tag">AI前沿</span>
+      </div>
+      <h1>AI学会「做梦」自我进化</h1>
+      <p class="article-subtitle">Anthropic这项功能，可能改变人机协作的终局</p>
+    </header>
+
+    <div class="article-content">
+      <p class="lead">Anthropic在刚刚结束的Code with Claude 2026大会上，发布了一个让我反复看了三遍的功能：Dreaming——让AI学会"做梦"。</p>
+      
+      <p>你没看错，是做梦。</p>
+
+      <p>这不是噱头。Anthropic给Claude的智能体平台加了一个后台进程，让AI在任务间隙自动进入一种"休眠"状态，在休眠中审阅过去的会话记录、整理记忆库、发现反复出现的错误模式，然后生成优化后的新记忆。</p>
+
+      <p>用50岁的话来说：这不就是人脑晚上睡觉时做的事情吗？把白天学到的碎片知识，整合成长期记忆。</p>
+
+      <blockquote>"我们不再只是在做聊天机器人，我们在做会自我进化的协作者。"</blockquote>
+
+      <p class="quote-source">—— Dario Amodei</p>
+
+      <h2>一、三个核心能力，一个逻辑</h2>
+
+      <p><strong>第一，Dreaming（梦境记忆蒸馏）。</strong>定期在后台运行，读过去最多100个历史会话，合并重复数据、更新过时条目、提炼宏观规律。法律科技公司Harvey用它后，任务完成率翻了约6倍。</p>
+
+      <p><strong>第二，Outcomes（结果驱动执行）。</strong>开发者定义"成功标准"，系统分配独立的评分智能体给AI打分，不达标就打回去重写。内部测试显示，docx文档生成成功率提高8.4%，pptx提高10.1%。</p>
+
+      <p><strong>第三，Multiagent Orchestration（多智能体编排）。</strong>主智能体把任务拆成多个子任务，分配给专项子智能体并行处理。在月球采矿无人机着陆模拟中，安全评分从67%提到100%。</p>
+
+      <p>这三个能力的底层逻辑只有一个：让AI从"每次从零出发"变成"跨会话累积学习"。</p>
+
+      <blockquote>"这不是工具的升级，这是AI角色从螺丝刀到员工的质变。"</blockquote>
+
+      <h2>二、算力的暗战</h2>
+
+      <p>你可能注意到，这次大会最火的新闻其实是Anthropic和SpaceX签了协议——租下马斯克Colossus 1数据中心的全部算力，包含22万张英伟达GPU。</p>
+
+      <p>这事有意思。三个月前马斯克还在公开骂Anthropic"反人类且邪恶"，现在就把全部算力租给它了。</p>
+
+      <p>但我看到的不只是商业合作，是一个更深层的信号：算力正在成为AI公司最大的战略瓶颈。Anthropic第一季度收入暴增80倍，预期才10倍，结果根本扛不住。</p>
+
+      <p>而且马斯克在协议里藏了一个条款：如果Anthropic的AI做出危害人类的行为，SpaceX有权随时收回算力。这叫什么？"自毁开关"。租给你，但随时能拔你的插头。</p>
+
+      <h2>三、国内该对标什么？</h2>
+
+      <p>国内的Manus、字节Coze、阿里的智能体平台都在追赶"Agents as Infrastructure"这条叙事线，让企业零代码搭建AI智能体。但Anthropic已经跑到下一个阶段了——让智能体"跨会话自我演进"。</p>
+
+      <p>这已经不是"工具怎么好用"的竞争，而是"AI员工成熟度"的竞争。</p>
+
+      <h2>四、半百视角</h2>
+
+      <p>我今年50岁，经历了互联网从无到有的整个周期。回顾过去二十年，技术革命往往不是由某一个产品触发的，而是由某个"范式转换"。</p>
+
+      <p>从命令行到图形界面，是范式转换。从桌面到移动，是范式转换。</p>
+
+      <p>AI从"问答工具"到"自我进化的协作者"，可能就是下一个范式转换。</p>
+
+      <p>Dreaming的意义不在于"AI能做梦"这个噱头，而在于：Anthropic在认真思考一个问题——怎么让AI不需要人类盯着，也能越干越好。</p>
+
+      <p>对企业来说，这意味着AI员工的培训成本会越来越低，适应速度会越来越快。你今天教它一次，明天它可能自己就能总结出规律。</p>
+
+      <p>当然，离真正的"自主进化"还很远。Dreaming目前还是研究预览阶段。但趋势已经很明显——AI正在从被使用者变成合作者。</p>
+
+      <p>作为创业者，我们应该问的不是"AI会不会取代人"，而是"我怎么让AI成为我最聪明的员工"。</p>
+
+      <blockquote>"未来企业的竞争力，不在于你有多少AI工具，而在于你让AI进化到什么程度。"</blockquote>
+
+      <p class="quote-source">—— 半百观AI</p>
+
+      <h2>💡 行动建议</h2>
+
+      <p><strong>如果你是一家企业的管理者：</strong></p>
+
+      <ul>
+        <li>评估现有AI工具是否支持"跨会话记忆"——不支持的话，每次都是从零开始</li>
+        <li>关注多智能体编排的落地场景——哪些业务环节可以拆成子任务并行处理</li>
+        <li>建立AI输出评分标准——像Outcomes一样，用规则而不是感觉来评估AI质量</li>
+      </ul>
+
+      <p><strong>如果你是AI从业者：</strong></p>
+
+      <ul>
+        <li>研究Dreaming的技术实现思路：异步记忆整理 + 人类审核 + 增量优化</li>
+        <li>思考如何把这个思路迁移到国产大模型的应用层</li>
+      </ul>
+
+      <p class="sources">📌 来源：Anthropic Code with Claude 2026开发者大会 | 快科技 | 36氪</p>
+    </div>
+
+    <footer class="article-footer">
+      <p>📌 半百观AI — 50岁视角看AI落地实践</p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+.article-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+}
+
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.article-tag {
+  background: #e8edf5;
+  color: #4a5568;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: #1a202c;
+}
+
+.article-subtitle {
+  font-size: 18px;
+  color: #718096;
+  margin: 0;
+}
+
+.article-content {
+  line-height: 1.8;
+  color: #2d3748;
+}
+
+.article-content p {
+  margin: 0 0 20px;
+}
+
+.article-content .lead {
+  font-size: 18px;
+  color: #1a202c;
+  font-weight: 500;
+}
+
+.article-content h2 {
+  font-size: 24px;
+  color: #1a202c;
+  margin: 40px 0 16px;
+  padding-top: 10px;
+}
+
+.article-content blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid #4a5568;
+  background: #f7fafc;
+  font-style: italic;
+  color: #4a5568;
+}
+
+.article-content .quote-source {
+  font-size: 14px;
+  color: #718096;
+  margin-top: -12px;
+  font-style: normal;
+}
+
+.article-content ul {
+  padding-left: 24px;
+  margin: 0 0 20px;
+}
+
+.article-content li {
+  margin-bottom: 8px;
+}
+
+.article-content .sources {
+  font-size: 13px;
+  color: #718096;
+  margin-top: 32px;
+}
+
+.article-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #718096;
+}
+
+@media (max-width: 640px) {
+  .article-page {
+    padding: 40px 16px 30px;
+  }
+  .article-header h1 {
+    font-size: 26px;
+  }
+  .article-content h2 {
+    font-size: 20px;
+  }
+}
+</style>

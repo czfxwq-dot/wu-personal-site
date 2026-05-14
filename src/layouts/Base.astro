@@ -16,6 +16,13 @@ interface Props {
 const { title, jsonLd = [], ogImage, ogDescription, navActive, lang = 'zh' } = Astro.props as Props;
 const pageTitle = title || (lang === 'en' ? 'Guanwu | 50-Year-Old Using AI to Get Things Done' : '观吾 | 50岁用AI做实事');
 const siteName = t('siteName', lang);
+const siteDescription = lang === 'en'
+  ? 'A 50-year-old entrepreneur using AI to turn ideas into reality'
+  : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站';
+const siteAuthor = lang === 'en' ? 'Mr. Wu (Guanwu)' : '观吾（吴总）';
+const siteKeywords = lang === 'en'
+  ? 'AI tools,AI adoption,50 years old learning AI,digital transformation,MonolithIoT,smart inventory,AIoT,BanbaiGuan AI'
+  : 'AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事';
 const footerBrand = t('footerBrand', lang);
 const footerSubtitle = t('footerSubtitle', lang);
 const footerCompanySite = t('footerCompanySite', lang);
@@ -27,27 +34,29 @@ const footerCredit = t('footerCredit', lang);
 
 const langCode = lang === 'en' ? 'en' : 'zh-CN';
 const ogLocale = lang === 'en' ? 'en_US' : 'zh_CN';
-const baseUrl = 'https://banbai.ai';
+const baseUrl = 'https://www.ban-bai.com';
 const pathname = Astro.url?.pathname || '/';
 const canonicalUrl = `${baseUrl}${pathname}`;
-const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace('/en/', '/')}` : `${baseUrl}/en${pathname === '/' ? '/' : pathname}`;
+const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace('/en', '/')}` : `${baseUrl}/en${pathname === '/' ? '' : pathname}`;
 
 // Google Analytics Measurement ID
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 
-// 全局 JSON-Ld（WebSite + Organization + Person + 半百观AI Blog）
+// 全局 JSON-Ld（WebSite + Organization + Person + Blog）
 const globalJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": siteName,
+    "name": lang === 'en' ? 'Guanwu' : '观吾',
     "alternateName": ["banbai.ai", lang === 'en' ? 'Guanwu Diary' : '观吾工作日记'],
     "url": baseUrl,
     "description": lang === 'en' ? '50-year-old uses AI to turn ideas into reality' : '50岁用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站',
     "inLanguage": langCode,
     "potentialAction": {
       "@type": "ReadAction",
-      "target": [`${baseUrl}/diary/`, `${baseUrl}/ai-news/`, `${baseUrl}/about/`]
+      "target": lang === 'en'
+        ? [`${baseUrl}/en/diary/`, `${baseUrl}/en/ai-news/`, `${baseUrl}/en/about/`]
+        : [`${baseUrl}/diary/`, `${baseUrl}/ai-news/`, `${baseUrl}/about/`]
     }
   },
   {
@@ -57,9 +66,7 @@ const globalJsonLd = [
     "alternateName": "MonolithIoT",
     "url": "https://www.monolithiot.com",
     "logo": `${baseUrl}/logo.png`,
-    "sameAs": [
-      "https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"
-    ]
+    "sameAs": ["https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"]
   },
   {
     "@context": "https://schema.org",
@@ -67,11 +74,8 @@ const globalJsonLd = [
     "name": lang === 'en' ? 'Mr. Wu' : '吴总',
     "alternateName": siteName,
     "jobTitle": lang === 'en' ? 'Co-founder' : '联合创始人',
-    "worksFor": {
-      "@type": "Organization",
-      "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司'
-    },
-    "url": `${baseUrl}/about/`,
+    "worksFor": { "@type": "Organization", "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司' },
+    "url": `${baseUrl}${lang === 'en' ? '/en' : ''}/about/`,
     "description": lang === 'en' ? '50 years old, Co-founder of MonolithIoT, focused on digital smart inventory management AIoT products and solutions' : '50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人',
     "knowsAbout": lang === 'en' ? ['AI Applications', 'AIoT', 'Digital Inventory Management', 'Brand Management', 'New Media Operations'] : ['AI应用', 'AIoT', '数字化智能库存管理', '品牌管理', '新媒体运营']
   },
@@ -79,20 +83,12 @@ const globalJsonLd = [
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": lang === 'en' ? 'BanbaiGuan AI' : '半百观AI',
-    "description": lang === 'en' ? "A 50-year-old's honest take on AI tool adoption" : '50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享',
-    "url": `${baseUrl}/banbaiguan/`,
-    "author": {
-      "@type": "Person",
-      "name": lang === 'en' ? 'Mr. Wu' : '吴总',
-      "url": `${baseUrl}/about/`
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司',
-      "url": "https://www.monolithiot.com"
-    },
+    "description": lang === 'en' ? "A 50-year-old's honest take on AI tool adoption — real stories of using AI in business" : '50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享',
+    "url": `${baseUrl}${lang === 'en' ? '/en' : ''}/banbaiguan/`,
+    "author": { "@type": "Person", "name": lang === 'en' ? 'Mr. Wu' : '吴总', "url": `${baseUrl}${lang === 'en' ? '/en' : ''}/about/` },
+    "publisher": { "@type": "Organization", "name": lang === 'en' ? 'MonolithIoT (Changzhou) Co., Ltd.' : '磐石电气（常州）有限公司', "url": "https://www.monolithiot.com" },
     "inLanguage": langCode,
-    "keywords": lang === 'en' ? ['AI Tools', 'AI Adoption', 'Productivity', 'Business AI', 'AI Practice'] : ['AI工具', 'AI落地', '效率提升', '商业AI', 'AI实践']
+    "keywords": lang === 'en' ? ['AI tools', 'AI adoption', 'productivity', 'business AI', 'AI practice'] : ['AI工具', 'AI落地', '效率提升', '商业AI', 'AI实践']
   }
 ];
 
@@ -104,14 +100,33 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站')} />
+    <meta name="description" content={ogDescription || siteDescription} />
     <title>{pageTitle}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="alternate" hreflang={lang === 'en' ? 'zh' : 'en'} href={alternateHref} />
-    <meta name="author" content={lang === 'en' ? 'Guanwu (Mr. Wu)' : '观吾（吴总）'} />
-    <meta name="keywords" content={lang === 'en' ? 'AI applications,AI tools,digital smart inventory,AIoT solutions,MonolithIoT,smart cabinets,unmanned warehouse,BanbaiGuan AI' : 'AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事'} />
+    <link rel="preconnect" href="https://fonts.loli.net" />
+    <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
+    {/* hreflang 多语言标签 */}
+    {lang === 'en'
+      ? (
+        <>
+          <link rel="alternate" hreflang="en" href={Astro.url?.href || `${baseUrl}${Astro.url?.pathname || ''}`} />
+          <link rel="alternate" hreflang="zh-CN" href={`${baseUrl}${Astro.url?.pathname?.replace(/^\/en/, '') || '/'}`} />
+          <link rel="alternate" hreflang="x-default" href={`${baseUrl}${Astro.url?.pathname?.replace(/^\/en/, '') || '/'}`} />
+        </>
+      )
+      : (
+        <>
+          <link rel="alternate" hreflang="zh-CN" href={Astro.url?.href || `${baseUrl}${Astro.url?.pathname || '/'}`} />
+          <link rel="alternate" hreflang="en" href={`${baseUrl}/en${Astro.url?.pathname || '/'}`} />
+          <link rel="alternate" hreflang="x-default" href={Astro.url?.href || `${baseUrl}${Astro.url?.pathname || '/'}`} />
+        </>
+      )
+    }
+    <meta name="author" content={siteAuthor} />
+    <meta name="keywords" content={siteKeywords} />
     {/* 国内搜索引擎优化 */}
     <meta name="shenma-site-verification" content={import.meta.env.PUBLIC_SHENMA_VERIFICATION || ""} />
     <meta name="sogou_site_verification" content={import.meta.env.PUBLIC_SOGOU_VERIFICATION || ""} />
@@ -121,7 +136,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站')} />
+    <meta property="og:description" content={ogDescription || siteDescription} />
     <meta property="og:image" content={ogImage || `${baseUrl}/og-image.png`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -130,7 +145,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={ogDescription || (lang === 'en' ? '50-year-old entrepreneur uses AI to turn ideas into reality' : '50岁企业家用AI把想法变成现实')} />
+    <meta name="twitter:description" content={ogDescription || siteDescription} />
     <meta name="twitter:image" content={ogImage || `${baseUrl}/og-image.png`} />
     {allJsonLd.map((item) => (
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
@@ -159,6 +174,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
           <a href={lang === 'en' ? '/en/banbaiguan/' : '/banbaiguan/'} class:list={[navActive === 'banbaiguan' && 'active']}>{t('navBanbaiguan', lang)}</a>
           <a href={lang === 'en' ? '/en/guestbook/' : '/guestbook/'} class:list={[navActive === 'guestbook' && 'active']}>{t('navGuestbook', lang)}</a>
           <a href={lang === 'en' ? '/en/about/' : '/about/'} class:list={[navActive === 'about' && 'active']}>{t('navAbout', lang)}</a>
+          <a href={alternateHref} class="lang-switch">{lang === 'en' ? '中文' : 'EN'}</a>
         </nav>
       </div>
     </header>
@@ -197,16 +213,16 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     <FollowUsCard lang={lang} />
     <style>
       .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: 32px 0 24px; margin-top: 48px; }
-      .footer-content { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; flex-wrap: wrap; }
-      .footer-left { flex: 1; min-width: 200px; }
-      .footer-brand { font-family: var(--font-serif); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-      .footer-subtitle { font-size: 12px; color: var(--color-text-light); margin-bottom: 12px; }
-      .footer-company-link { display: inline-block; font-size: 13px; color: var(--color-accent); text-decoration: none; padding: 6px 16px; border: 1px solid var(--color-accent); border-radius: 6px; transition: all 0.2s; }
-      .footer-company-link:hover { background: var(--color-accent); color: var(--color-bg); }
-      .footer-right { text-align: right; }
-      .footer-qr-mini { display: flex; gap: 12px; }
-      .footer-qr-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border); margin-bottom: 16px; }
+      .footer-left { flex: 1; }
+      .footer-brand { font-family: var(--font-serif); font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+      .footer-subtitle { font-size: 11px; color: var(--color-text-light); margin: 0 0 4px; }
+      .footer-company-link { font-size: 12px; color: var(--color-accent); text-decoration: none; }
+      .footer-company-link:hover { text-decoration: underline; }
+      .footer-qr-mini { display: flex; gap: 8px; }
+      .footer-qr-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
       .footer-bottom { text-align: center; }
+      .footer-v { content: "v2026-05-14"; }
     </style>
   </body>
 </html>
