@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-14',
+    title: 'AI新闻 | 中国累计868款生成式AI服务完成备案 + 思科AI相关订单超53亿美元 + 亚马逊Alexa购物版上线',
+    summary: '今日AI行业三大看点：国家网信办数据显示截至4月30日累计868款生成式人工智能服务完成备案，530款应用完成登记；思科2026财年第三财季AI基础设施业务 momentum 显著提升，截至本财季末累计获得53亿美元AI相关订单，全年AI相关订单指引上调至90亿美元；亚马逊将Alexa Plus引入官网，推出AI购物助手Alexa购物版，支持智能推荐、降价提醒、自动复购等功能。',
+    newsItems: [
+      {
+        title: '截至4月30日累计有868款生成式人工智能服务完成备案',
+        summary: '据国家网信办消息，2026年3月至4月新增72款生成式人工智能服务完成备案，新增49款应用完成登记。截至4月30日，累计有868款生成式人工智能服务完成备案，530款生成式人工智能应用或功能完成登记，反映国内AI服务备案持续快速增长。',
+        source: '36氪/网信中国',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3807695701663496'
+      },
+      {
+        title: '思科Q3财报：AI基础设施业务 momentum 显著提升，累计获得53亿美元AI相关订单',
+        summary: '思科发布2026财年第三财季报告，营业总收入158.41亿美元，同比增长12%，归母净利润33.73亿美元，同比增长35%。AI基础设施业务 momentum 显著提升，截至本财季末已累计获得53亿美元AI相关订单，同时上调2026财年AI相关订单指引至90亿美元、AI相关营收指引至40亿美元。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/950/073.htm'
+      },
+      {
+        title: '亚马逊Alexa购物版上线，支持智能推荐、降价提醒、自动复购',
+        summary: '亚马逊正将Alexa Plus引入官网，推出全新AI购物助手Alexa购物版，取代原有Rufus。支持设置降价提醒、商品对比、自动复购等功能，用户可自定义规则实现自动下单。依托多模型推理能力，可全网抓取信息并结合用户画像给出定制化购物建议。该服务面向所有美国亚马逊用户开放，无需注册Alexa账号。',
+        source: 'IT之家',
+        category: '应用',
+        url: 'https://www.ithome.com/0/950/073.htm'
+      },
+      {
+        title: '阿里财报：AI投资开始获得回报，MiniMax、智谱、月之暗面成印钞机',
+        summary: '阿里公布截至2026年3月31日季度财报，利息收入和投资净收益同比增幅322%至875.12亿元，核心原因是投资的MiniMax、智谱于2026年上市且收入利润大幅增长。阿里云收入同比增长38%至416.26亿元，外部商业化收入增速提升至40%，为9个季度以来最快增速。',
+        source: '虎嗅',
+        category: '投资',
+        url: 'https://www.huxiu.com/article'
+      },
+      {
+        title: '美股大型科技股盘前涨跌不一，美光科技涨超4%',
+        summary: '美股大型科技股盘前涨跌不一，美光科技涨超4%，英特尔涨超2%，英伟达涨超1%，特斯拉涨0.17%，Meta跌0.86%，微软跌0.61%，苹果跌0.17%。热门中概股盘前多数下跌，阿里巴巴跌超3%。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3807719301242854'
+      }
+    ],
+    comment: '国内AI服务备案突破868款，监管框架持续完善。思科AI订单指引大幅上调至90亿美元，企业AI基础设施建设需求持续爆发。亚马逊将AI深度整合购物场景，标志着AI从对话式交互走向交易式交互的新阶段。阿里AI投资开始兑现收益，一鱼两吃战略奏效。'
+  },
+  {
     date: '2026-05-13',
     title: 'AI新闻 | Anthropic洽谈融资300亿美元估值超9000亿 + 谷歌将Gemini植入安卓底层打造跨设备智能系统 + 首届香港具身智能产业峰会举行',
     titleEn: 'AI News | Anthropic $30B Funding at $900B Valuation + Google Gemini Deep in Android + Hong Kong Embodied AI Summit',
