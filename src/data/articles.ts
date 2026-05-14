@@ -22,6 +22,16 @@ export const articles: ArticleEntry[] = [
     tagEn: 'AI Frontier'
   },
   {
+    slug: 'drive-shaft-ai-future',
+    date: '2026-05-15',
+    title: '1890年的那根传动轴，正在预言AI的未来',
+    titleEn: 'The Drive Shaft of 1890 Is Predicting AI\'s Future',
+    excerpt: '1890年的工厂，一根传动轴锁死了全厂。电来了，老板们只是换了动力源，却没拆掉那根轴。40年后才有人想到：既然每台机器都能单独接电，为什么还要那根轴？今天的AI，就是1890年的电。',
+    excerptEn: 'In 1890s factories, a single drive shaft locked everything. Electricity came, but bosses only swapped the power source—they didn\'t remove the shaft. It took 40 years for someone to ask: if each machine can plug in independently, why keep the shaft? Today\'s AI is 1890s electricity.',
+    tag: 'AI落地',
+    tagEn: 'AI Adoption'
+  },
+  {
     slug: 'html-is-new-markdown',
     date: '2026-05-13',
     title: 'AI学会自己写网页了，而你还在手动改Word排版？',
