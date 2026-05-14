@@ -50,7 +50,7 @@ export async function onRequestPost(context) {
         'Authorization': `Bearer ${GATEWAY_TOKEN}`,
       },
       body: JSON.stringify({
-        model: 'openclaw/xs-001',
+        model: 'openclaw/knowledge-admin',
         stream: true,
         messages: body.messages,
       }),
