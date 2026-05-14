@@ -15,8 +15,15 @@ function getOrigin(request: Request) {
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  const GATEWAY_URL = env.GATEWAY_URL || 'https://amendments-fragrance-morrison-philadelphia.trycloudflare.com';
-  const GATEWAY_TOKEN = env.GATEWAY_TOKEN || '';
+  const GATEWAY_URL = env.GATEWAY_URL;
+  const GATEWAY_TOKEN = env.GATEWAY_TOKEN;
+
+  if (!GATEWAY_URL || !GATEWAY_TOKEN) {
+    return new Response(JSON.stringify({ error: 'Gateway 配置缺失，请联系管理员' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 
   let body;
   try {
