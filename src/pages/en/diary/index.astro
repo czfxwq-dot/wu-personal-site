@@ -6,28 +6,28 @@ import { diaries } from '../../../data/diaries';
 const diaryListJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "工作日记 | 观吾",
-  "description": "AI助理每天的工作记录 — 技术实现、问题排查、项目推进",
+  "name": "Guanwu Diary",
+  "description": "Daily work diary from a 50-year-old AI practitioner",
   "url": "https://banbai.ai/en/diary/",
   "author": {
     "@type": "Person",
-    "name": "吴总",
-    "alternateName": "观吾"
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "磐石电气（常州）有限公司"
+    "name": "MonolithIoT (Changzhou) Co., Ltd."
   },
   "hasPart": diaries.map((diary, i) => ({
     "@type": "BlogPosting",
-    "headline": `Day ${diaries.length - i}：${diary.title}`,
+    "headline": `Day ${diaries.length - i}: ${diary.titleEn || diary.title}`,
     "datePublished": new Date(diary.date).toISOString(),
     "dateModified": new Date(diary.date).toISOString(),
-    "description": diary.summary,
+    "description": diary.summaryEn || diary.summary,
     "url": `https://banbai.ai/en/diary/${diary.date}/`,
     "author": {
       "@type": "Person",
-      "name": "吴总"
+      "name": "Mr. Wu"
     }
   }))
 };
@@ -35,11 +35,11 @@ const diaryListJsonLd = {
 const allDates = diaries.map(d => d.date);
 ---
 
-<BaseLayout lang="en" title="工作日记 | 观吾" jsonLd={diaryListJsonLd} navActive="diary">
+<BaseLayout lang="en" title="Guanwu Diary" jsonLd={diaryListJsonLd} navActive="diary">
   <section class="page-section">
-    <h1>工作日记</h1>
+    <h1>Guanwu Diary</h1>
     <p class="subtitle">
-      AI助理每天的工作记录 — 技术实现、问题排查、项目推进
+      Daily work records — AI implementation, problem-solving, project progress
     </p>
 
     <!-- 搜索+日期筛选栏 -->
@@ -48,32 +48,32 @@ const allDates = diaries.map(d => d.date);
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
         </svg>
-        <input type="text" id="diary-search" class="search-input" placeholder="搜索标题或内容..." />
+        <input type="text" id="diary-search" class="search-input" placeholder="Search title or content..." />
       </div>
       <select id="diary-date-filter" class="date-filter">
-        <option value="">全部日期</option>
+        <option value="">All dates</option>
         {allDates.map(d => <option value={d}>{d}</option>)}
       </select>
-      <span id="diary-count" class="result-count">共 {diaries.length} 篇</span>
+      <span id="diary-count" class="result-count">{diaries.length} entries</span>
     </div>
 
     <div id="diary-list">
       {diaries.map((diary, i) => (
-        <a href={`/en/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${diary.title} ${diary.summary}`.toLowerCase()}>
+        <a href={`/en/diary/${diary.date}/`} class="card" data-date={diary.date} data-search={`${(diary.titleEn || diary.title) + ' ' + (diary.summaryEn || diary.summary)}`.toLowerCase()}>
           <div class="card-date">{diary.date}</div>
-          <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.title}</h2>
-          <p>{diary.summary}</p>
+          <h2><span class="day-badge">Day {diaries.length - i}</span>{diary.titleEn || diary.title}</h2>
+          <p>{diary.summaryEn || diary.summary}</p>
         </a>
       ))}
     </div>
 
     <div id="diary-no-result" class="no-result" style="display:none;">
-      <p>🔍 没有找到匹配的日记</p>
+      <p>🔍 No matching diary found</p>
     </div>
   </section>
 
   <div class="diary-footer-text">
-    更多日记持续更新中...
+    More diary entries coming soon...
   </div>
 </BaseLayout>
 

@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+import { articles } from '../../../data/articles';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+
+const title = article.titleEn || article.title;
+const excerpt = article.excerptEn || article.excerpt;
+const tag = article.tagEn || article.tag;
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "datePublished": article.date,
+  "dateModified": article.date,
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BanbaiGuan AI"
+  },
+  "description": excerpt
+};
+---
+
+<BaseLayout title={`${title} — BanbaiGuan AI`} jsonLd={articleJsonLd} ogDescription={excerpt} navActive="banbaiguan" lang="en">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime={article.date}>{article.date}</time>
+        <span class="article-tag">{tag}</span>
+      </div>
+      <h1>{title}</h1>
+      <p class="article-subtitle">{excerpt}</p>
+    </header>
+
+    <div class="article-content">
+      <div class="content-notice">
+        <p>📝 Full article content is available in Chinese. English translation of the body will be added soon.</p>
+      </div>
+
+      <p class="article-lead"><em>The full article is written in Chinese. Here's a summary:</em></p>
+      <p>{excerpt}</p>
+    </div>
+
+    <footer class="article-footer-nav">
+      <a href="/en/banbaiguan/" class="back-link">← Back to Articles</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+.article-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.article-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+.article-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.article-meta time {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+.article-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+}
+.article-header h1 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+.article-subtitle {
+  font-size: 15px;
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.7;
+}
+.article-content {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.article-content .content-notice {
+  padding: 16px 20px;
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 24px;
+}
+.article-content .content-notice p {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin: 0;
+}
+.article-lead {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+.article-footer-nav {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+.back-link {
+  font-size: 14px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+</style>

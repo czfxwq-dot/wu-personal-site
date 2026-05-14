@@ -5,25 +5,25 @@ import { articles } from '../../../data/articles';
 const articlesJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "半百观AI | 文章",
-  "description": "50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得",
-  "url": "https://banbai.ai/articles/",
+  "name": "BanbaiGuan AI | Articles",
+  "description": "Deep thinking from a 50-year-old AI practitioner — AI adoption, business insights, entrepreneurship",
+  "url": "https://banbai.ai/en/banbaiguan/",
   "author": {
     "@type": "Person",
-    "name": "吴总",
-    "alternateName": "观吾"
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
   }
 };
 
 const allDates = articles.map(a => a.date);
-const allTags = [...new Set(articles.map(a => a.tag))];
+const allTags = [...new Set(articles.map(a => a.tagEn || a.tag))];
 ---
 
-<BaseLayout lang="en" title="半百观" jsonLd={articlesJsonLd} navActive="banbaiguan">
+<BaseLayout lang="en" title="BanbaiGuan AI" jsonLd={articlesJsonLd} navActive="banbaiguan">
   <section class="page-section">
-    <h1>半百观</h1>
+    <h1>BanbaiGuan AI</h1>
     <p class="subtitle">
-      50岁AI实践者的深度思考 — AI落地、商业洞察、创业心得
+      Deep thinking from a 50-year-old AI practitioner — AI adoption, business insights, entrepreneurship
     </p>
 
     <!-- 搜索+筛选栏 -->
@@ -32,38 +32,38 @@ const allTags = [...new Set(articles.map(a => a.tag))];
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
         </svg>
-        <input type="text" id="article-search" class="search-input" placeholder="搜索标题或摘要..." />
+        <input type="text" id="article-search" class="search-input" placeholder="Search title or excerpt..." />
       </div>
       <select id="article-date-filter" class="date-filter">
-        <option value="">全部日期</option>
+        <option value="">All dates</option>
         {allDates.map(d => <option value={d}>{d}</option>)}
       </select>
       <select id="article-tag-filter" class="date-filter">
-        <option value="">全部标签</option>
+        <option value="">All tags</option>
         {allTags.map(t => <option value={t}>{t}</option>)}
       </select>
-      <span id="article-count" class="result-count">共 {articles.length} 篇</span>
+      <span id="article-count" class="result-count">{articles.length} articles</span>
     </div>
 
     <div id="article-list">
       {articles.map((article) => (
-        <article class="article-card" data-date={article.date} data-tag={article.tag}
-          data-search={`${article.title} ${article.excerpt}`.toLowerCase()}>
+        <article class="article-card" data-date={article.date} data-tag={article.tagEn || article.tag}
+          data-search={`${(article.titleEn || article.title) + ' ' + (article.excerptEn || article.excerpt)}`.toLowerCase()}>
           <div class="article-meta">
             <span class="article-date">{article.date}</span>
-            <span class="article-tag" data-tag={article.tag}>{article.tag}</span>
+            <span class="article-tag" data-tag={article.tag}>{article.tagEn || article.tag}</span>
           </div>
           <h2>
-            <a href={`/en/banbaiguan/${article.slug}/`}>{article.title}</a>
+            <a href={`/en/banbaiguan/${article.slug}/`}>{article.titleEn || article.title}</a>
           </h2>
-          <p class="article-excerpt">{article.excerpt}</p>
-          <a href={`/en/banbaiguan/${article.slug}/`} class="read-more">阅读全文 →</a>
+          <p class="article-excerpt">{article.excerptEn || article.excerpt}</p>
+          <a href={`/en/banbaiguan/${article.slug}/`} class="read-more">Read More →</a>
         </article>
       ))}
     </div>
 
     <div id="article-no-result" class="no-result" style="display:none;">
-      <p>🔍 没有找到匹配的文章</p>
+      <p>🔍 No matching articles found</p>
     </div>
   </section>
 </BaseLayout>

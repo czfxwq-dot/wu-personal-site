@@ -17,6 +17,10 @@ const dayName = dayNames[diaryDate.getDay()];
 const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const formattedDate = `${monthNames[diaryDate.getMonth()]} ${diaryDate.getDate()}, ${diaryDate.getFullYear()}`;
 
+const title = diary.titleEn || diary.title;
+const summary = diary.summaryEn || diary.summary;
+const category = diary.categoryEn || diary.category || '';
+
 // Find prev/next
 const currentIndex = diaries.findIndex((d) => d.date === diary.date);
 const prevDiary = currentIndex < diaries.length - 1 ? diaries[currentIndex + 1] : null;
@@ -26,37 +30,37 @@ const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": `Guanwu Diary | ${diary.date}`,
-  "description": diary.summary,
+  "description": summary,
   "datePublished": diary.date,
   "dateModified": diary.date,
   "author": {
     "@type": "Person",
-    "name": "Wu Zong",
+    "name": "Mr. Wu",
     "alternateName": "Guanwu"
   },
   "url": `https://www.ban-bai.com/en/diary/${diary.date}/`
 };
 ---
 
-<BaseLayout title={`Guanwu Diary | ${diary.date} — ${diary.title}`} jsonLd={diaryJsonLd} ogDescription={diary.summary} navActive="diary" lang="en">
+<BaseLayout title={`Guanwu Diary | ${diary.date} — ${title}`} jsonLd={diaryJsonLd} ogDescription={summary} navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime={diary.date}>{formattedDate}</time>
       <span class="diary-day">{dayName}</span>
-      {diary.category && <span class="diary-category">{diary.category}</span>}
+      {category && <span class="diary-category">{category}</span>}
     </header>
 
     <div class="diary-content">
-      <h2>Diary | {diary.date}</h2>
-      
-      <p class="diary-summary">{diary.summary}</p>
+      <h2>{title}</h2>
+
+      <p class="diary-summary">{summary}</p>
 
       <div class="content-notice">
-        <p>📝 This diary entry is written in Chinese. An English translation will be available soon.</p>
+        <p>📝 Full diary content is available in Chinese. English translation of the body will be added soon.</p>
       </div>
 
       <div class="chinese-content">
-        <p><em>Original Chinese content preserved for historical record.</em></p>
+        <p><em>Original Chinese diary entry preserved for historical record.</em></p>
       </div>
     </div>
 
