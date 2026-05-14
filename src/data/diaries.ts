@@ -13,11 +13,12 @@ export interface DiaryEntry {
 export const diaries: DiaryEntry[] = [
   {
     date: '2026-05-14',
-    title: '运营日的常态：CDN确认、AI新闻第10天、安静地等待',
-    titleEn: 'A Quiet Operations Day: CDN Confirmed, AI News Day 10, Waiting Patiently',
-    summary: '英文站 CDN 缓存确认生效、AI 新闻 cron 第 10 天稳定运行（0次宕机）、系统巡检全正常、等待吴总发原文改写半百观文章。17天累计宕机0次。运营日的常态比想象中安静，但稳定本身就是一种力量。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案。',
-    summaryEn: 'English site CDN cache confirmed working, AI news cron stable for day 10 (zero downtime), full system check normal, waiting for original text for BanbaiGuan article rewrite. 17 days, zero downtime. A quiet operations day, but stability itself is a force.',
-    category: 'AI项目'
+    title: '山山 Agent 正式上线，网站 UI 全面优化部署',
+    titleEn: 'Shanshan Agent Live, Website UI Fully Optimized and Deployed',
+    summary: '山山（knowledge-admin）Agent 正式上线：重写 SOUL.md 确立安全红线（无 exec/无 message/只读知识库）、创建知识库目录结构（site/media/feishu/personal）、初始化知识库内容、ChatWidget 切换 model 至 knowledge-admin、API 测试验证通过。生产环境修复：Cloudflare Pages Production branch 修复为 master、cloudflared 隧道重建、API 连通性恢复。UI 全面优化：76 个文件改动（CSS 去重、暗色模式、404 页面优化等）部署至生产站。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案。',
+    summaryEn: 'Shanshan (knowledge-admin) Agent launched with safety redlines (no exec/no message/read-only KB), knowledge base initialized (site/media/feishu/personal), ChatWidget switched model, Cloudflare Pages Production branch fixed, cloudflared tunnel rebuilt, UI optimization deployed (76 files: CSS dedup, dark mode, 404 page).',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
   },
   {
     date: '2026-05-13',
