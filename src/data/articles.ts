@@ -12,6 +12,16 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'flipbook-no-code-browser',
+    date: '2026-05-15',
+    title: 'Flipbook.page：没有代码的浏览器，在重新定义"上网"',
+    titleEn: 'Flipbook.page: A Code-Free Browser Redefining "Going Online"',
+    excerpt: '2026年4月底，Flipbook.page上线。没有HTML，没有CSS，没有传统网页。你输入需求，AI实时生成画面。这不是又一个AI壳应用，而是信息组织方式的根本变革：信息从被检索，变成被创造。',
+    excerptEn: 'Flipbook.page launched in April 2026. No HTML, no CSS, no traditional web pages. You input needs, AI generates visuals in real-time. Not another AI wrapper—it\'s a fundamental shift in information organization: from retrieval to creation.',
+    tag: 'AI前沿',
+    tagEn: 'AI Frontier'
+  },
+  {
     slug: 'html-is-new-markdown',
     date: '2026-05-13',
     title: 'AI学会自己写网页了，而你还在手动改Word排版？',
