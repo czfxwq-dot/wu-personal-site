@@ -26,13 +26,18 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
     date: '2026-05-14',
     title: 'AI新闻 | 中国累计868款生成式AI服务完成备案 + 思科AI相关订单超53亿美元 + 亚马逊Alexa购物版上线',
+    titleEn: 'AI News | China 868 Generative AI Services Registered + Cisco AI Orders Exceed $5.3B + Amazon Alexa Shopping Launches',
     summary: '今日AI行业三大看点：国家网信办数据显示截至4月30日累计868款生成式人工智能服务完成备案，530款应用完成登记；思科2026财年第三财季AI基础设施业务 momentum 显著提升，截至本财季末累计获得53亿美元AI相关订单，全年AI相关订单指引上调至90亿美元；亚马逊将Alexa Plus引入官网，推出AI购物助手Alexa购物版，支持智能推荐、降价提醒、自动复购等功能。',
+    summaryEn: 'Three highlights: 868 generative AI services registered in China; Cisco AI orders exceed $5.3B with full-year guidance raised to $9B; Amazon launches Alexa Shopping with smart recommendations and auto-repurchase.',
     newsItems: [
       {
         title: '截至4月30日累计有868款生成式人工智能服务完成备案',
+        titleEn: '868 Generative AI Services Registered in China by April 30',
         summary: '据国家网信办消息，2026年3月至4月新增72款生成式人工智能服务完成备案，新增49款应用完成登记。截至4月30日，累计有868款生成式人工智能服务完成备案，530款生成式人工智能应用或功能完成登记，反映国内AI服务备案持续快速增长。',
+        summaryEn: '72 new generative AI services registered Mar-Apr 2026. Total: 868 services registered, 530 applications completed, reflecting rapid growth in China\'s AI service registration.',
         source: '36氪/网信中国',
         category: '产业',
+        categoryEn: 'Industry',
         url: 'https://www.36kr.com/newsflashes/3807695701663496'
       },
       {
@@ -40,31 +45,42 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
         summary: '思科发布2026财年第三财季报告，营业总收入158.41亿美元，同比增长12%，归母净利润33.73亿美元，同比增长35%。AI基础设施业务 momentum 显著提升，截至本财季末已累计获得53亿美元AI相关订单，同时上调2026财年AI相关订单指引至90亿美元、AI相关营收指引至40亿美元。',
         source: 'IT之家',
         category: '硬件',
+        categoryEn: 'Hardware',
         url: 'https://www.ithome.com/0/950/073.htm'
       },
       {
         title: '亚马逊Alexa购物版上线，支持智能推荐、降价提醒、自动复购',
+        titleEn: 'Amazon Alexa Shopping Launches with Smart Recommendations, Price Alerts, Auto-Repurchase',
         summary: '亚马逊正将Alexa Plus引入官网，推出全新AI购物助手Alexa购物版，取代原有Rufus。支持设置降价提醒、商品对比、自动复购等功能，用户可自定义规则实现自动下单。依托多模型推理能力，可全网抓取信息并结合用户画像给出定制化购物建议。该服务面向所有美国亚马逊用户开放，无需注册Alexa账号。',
+        summaryEn: 'Amazon launches Alexa Shopping replacing Rufus — price alerts, product comparison, auto-repurchase. Customizable rules, AI-powered recommendations based on user profiles. Available to all US Amazon users.',
         source: 'IT之家',
         category: '应用',
+        categoryEn: 'Application',
         url: 'https://www.ithome.com/0/950/073.htm'
       },
       {
         title: '阿里财报：AI投资开始获得回报，MiniMax、智谱、月之暗面成印钞机',
+        titleEn: 'Alibaba Earnings: AI Investments Pay Off as MiniMax, Zhipu Become Cash Cows',
         summary: '阿里公布截至2026年3月31日季度财报，利息收入和投资净收益同比增幅322%至875.12亿元，核心原因是投资的MiniMax、智谱于2026年上市且收入利润大幅增长。阿里云收入同比增长38%至416.26亿元，外部商业化收入增速提升至40%，为9个季度以来最快增速。',
+        summaryEn: 'Alibaba reports 322% YoY increase in interest and investment income to 87.5B RMB, driven by MiniMax and Zhipu IPOs. Alibaba Cloud revenue up 38% to 41.6B RMB, commercialization growth at fastest in 9 quarters (40%).',
         source: '虎嗅',
         category: '投资',
+        categoryEn: 'Investment',
         url: 'https://www.huxiu.com/article'
       },
       {
         title: '美股大型科技股盘前涨跌不一，美光科技涨超4%',
+        titleEn: 'US Tech Stocks Mixed Pre-Market, Micron Up 4%+',
         summary: '美股大型科技股盘前涨跌不一，美光科技涨超4%，英特尔涨超2%，英伟达涨超1%，特斯拉涨0.17%，Meta跌0.86%，微软跌0.61%，苹果跌0.17%。热门中概股盘前多数下跌，阿里巴巴跌超3%。',
+        summaryEn: 'US tech stocks mixed pre-market: Micron +4%, Intel +2%, Nvidia +1%, Tesla +0.17%, Meta -0.86%, Microsoft -0.61%, Apple -0.17%. Chinese ADRs mostly down, Alibaba -3%+.',
         source: '36氪',
         category: '投资',
+        categoryEn: 'Investment',
         url: 'https://www.36kr.com/newsflashes/3807719301242854'
       }
     ],
-    comment: '国内AI服务备案突破868款，监管框架持续完善。思科AI订单指引大幅上调至90亿美元，企业AI基础设施建设需求持续爆发。亚马逊将AI深度整合购物场景，标志着AI从对话式交互走向交易式交互的新阶段。阿里AI投资开始兑现收益，一鱼两吃战略奏效。'
+    comment: '国内AI服务备案突破868款，监管框架持续完善。思科AI订单指引大幅上调至90亿美元，企业AI基础设施建设需求持续爆发。亚马逊将AI深度整合购物场景，标志着AI从对话式交互走向交易式交互的新阶段。阿里AI投资开始兑现收益，一鱼两吃战略奏效。',
+    commentEn: 'China AI service registrations exceed 868 — regulatory framework maturing. Cisco raises AI order guidance to $9B — enterprise AI infrastructure demand surging. Amazon AI shopping marks shift from conversational to transactional AI. Alibaba AI investments paying off.',
   },
   {
     date: '2026-05-13',
@@ -125,72 +141,105 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
     date: '2026-05-12',
     title: 'AI新闻 | 央行：人工智能行业将为经济高质量发展注入更多动能 + 欧盟欢迎OpenAI开放ChatGPT访问权限 + 存储芯片股集体创新高',
+    titleEn: 'AI News | PBOC: AI to Inject Momentum into Economy + EU Welcomes OpenAI ChatGPT Access + Storage Chip Stocks Hit Records',
     summary: '今日AI行业三大看点：央行一季度货币政策执行报告指出人工智能行业将为经济高质量发展注入更多动能，技术迭代加速、产业融合向纵深发展、国际市场空间持续拓展；欧盟委员会欢迎OpenAI开放最新版ChatGPT模型访问权限；美股存储芯片股集体走强，高通涨超8%、美光涨超6%均创历史新高。',
+    summaryEn: 'Three highlights: PBOC says AI will inject momentum into high-quality economic growth; EU welcomes OpenAI ChatGPT access; US storage chip stocks surge with Qualcomm +8%, Micron +6% hitting records.',
     newsItems: [
       {
         title: '央行：人工智能行业将为经济高质量发展注入更多动能',
+        titleEn: 'PBOC: AI Industry to Inject More Momentum into Economic Growth',
         summary: '央行发布2026年第一季度货币政策执行报告，展望未来指出人工智能行业将为经济高质量发展注入更多动能。技术迭代持续加速，国产大模型性能有望进一步提升；产业融合向纵深发展，AI将深度融入智能制造、金融、医疗、交通等关键领域；国际市场空间持续拓展，国内AI企业在东南亚、中东等新兴市场落地应用项目。',
+        summaryEn: 'PBOC Q1 monetary policy report: AI will inject momentum into high-quality growth. Domestic LLM performance accelerating, AI integrating into manufacturing, finance, healthcare, transport. Chinese AI firms expanding into Southeast Asia, Middle East.',
         source: '36氪/中国人民银行',
-        category: '产业'
+        category: '产业',
+        categoryEn: 'Industry',
       },
       {
         title: '欧盟委员会欢迎OpenAI开放ChatGPT模型访问权限',
+        titleEn: 'EU Commission Welcomes OpenAI ChatGPT Model Access',
         summary: '欧盟委员会发言人5月11日表示，欢迎OpenAI拟开放其最新版ChatGPT模型访问权限的意向，本周将与OpenAI展开进一步交流。同时指出与Anthropic就其Mythos模型进行的磋商处于不同阶段，正寻求达成类似解决方案。',
+        summaryEn: 'EU Commission spokesperson welcomes OpenAI\'s intent to open latest ChatGPT model access, further discussions this week. Talks with Anthropic on Mythos model at different stage, seeking similar solution.',
         source: '36氪/财联社',
-        category: '大模型'
+        category: '大模型',
+        categoryEn: 'LLM',
       },
       {
         title: '美股存储芯片股集体走强，多股创历史新高',
+        titleEn: 'US Storage Chip Stocks Rally, Multiple Hit All-Time Highs',
         summary: '5月11日美股收盘，存储芯片股集体走强，高通涨超8%，西部数据涨超7%，美光科技涨超6%，英特尔涨超3%，英伟达涨约2%，均创下历史收盘新高。热门中概股多数上涨，理想汽车涨近5%，百度、小鹏、蔚来涨超3%。',
+        summaryEn: 'May 11 close: storage chip stocks rally — Qualcomm +8%, Western Digital +7%, Micron +6%, Intel +3%, Nvidia +2%, all hitting record highs. Chinese ADRs mostly up: Li Auto +5%, Baidu, XPeng, NIO +3%+.',
         source: '36氪',
-        category: '硬件'
+        category: '硬件',
+        categoryEn: 'Hardware',
       },
       {
         title: '央行：继续实施适度宽松货币政策，保持流动性充裕',
+        titleEn: 'PBOC: Continue Moderately Loose Monetary Policy, Maintain Ample Liquidity',
         summary: '央行一季度货币政策执行报告提出，继续实施适度宽松货币政策，灵活运用多种货币政策工具，保持流动性充裕和社会融资条件相对宽松。报告还提到改革完善LPR，提高报价质量，更真实反映贷款市场利率水平。',
+        summaryEn: 'PBOC Q1 report: continue moderately loose monetary policy, use diverse policy tools to maintain ample liquidity. Reform LPR mechanism, improve quote quality to better reflect loan market rates.',
         source: '36氪/中国人民银行',
-        category: '产业'
+        category: '产业',
+        categoryEn: 'Industry',
       }
     ],
-    comment: '央行在一季度货币政策报告中专门展望AI行业，指出技术迭代、产业融合、出海三大趋势，信号意义明显。欧盟加速与OpenAI、Anthropic的监管对话，全球AI治理进入实质性谈判阶段。存储芯片板块集体创新高，AI硬件需求持续拉动半导体景气周期。'
+    comment: '央行在一季度货币政策报告中专门展望AI行业，指出技术迭代、产业融合、出海三大趋势，信号意义明显。欧盟加速与OpenAI、Anthropic的监管对话，全球AI治理进入实质性谈判阶段。存储芯片板块集体创新高，AI硬件需求持续拉动半导体景气周期。',
+    commentEn: 'PBOC dedicates monetary policy report section to AI — three trends: tech iteration, industry integration, global expansion. EU accelerating regulatory dialogue with OpenAI and Anthropic. Storage chip stocks hitting records — AI hardware demand driving semiconductor cycle.',
   },
   {
     date: '2026-05-11',
     title: 'AI新闻 | 脑机接口Q1融资超38亿元 + 算电协同写入政府工作报告 + 国家安全部发布蓝牙设备安全警示',
+    titleEn: 'AI News | BCI Q1 Financing Exceeds 3.8B RMB + Computing-Power Synergy in Government Report + Security Warning on Bluetooth Devices',
     summary: '今日AI行业三大看点：中国脑机接口领域一季度融资17起共38亿元，投资逻辑从看概念转向看落地；算电协同正式写入政府工作报告，西部多省推动绿电与算力协同布局；国家安全部发布蓝牙设备安全警示，智能穿戴设备存窃密风险。',
+    summaryEn: 'Three highlights: China BCI sector raises 3.8B RMB in Q1, investment logic shifts from concepts to implementation; computing-power synergy written into government work report; Ministry of State Security issues Bluetooth device warning.',
     newsItems: [
       {
         title: '脑机接口投融资逻辑生变：从看概念转向看落地',
+        titleEn: 'BCI Investment Logic Shifts: From Concepts to Implementation',
         summary: '2026年一季度，中国脑机接口领域共发生17起融资事件，融资总额约38亿元，单季融资规模已超过去年全年。在2026全国脑机接口科技与产业融合创新大会上，多位专家表示行业关注点正从单纯押注前沿科技转向长期产业生态布局，投资逻辑从看概念卡位置逐步转向看落地看产业化能力。',
+        summaryEn: 'Q1 2026: 17 BCI financing deals totaling 3.8B RMB in China, single quarter exceeding all of 2025. Industry shifting from betting on frontier tech to long-term ecosystem building and commercialization capability.',
         source: '财联社/上证报',
-        category: '投资'
+        category: '投资',
+        categoryEn: 'Investment',
       },
       {
         title: '算力绿电协同提速，算电协同写入政府工作报告',
+        titleEn: 'Green Power & Computing Synergy Accelerates, Written into Government Work Report',
         summary: '2026年算电协同被写入政府工作报告，十五五规划纲要明确提出推动绿色电力与算力协同布局。内蒙古、宁夏、贵州等新能源富集地区通过布局源网荷储一体化、绿电直连等重点项目，充分挖掘西部就地消纳潜力，促进新能源与算力设施的协同规划。',
+        summaryEn: '2026 government work report includes computing-power synergy. Inner Mongolia, Ningxia, Guizhou pushing green power-direct computing projects, source-grid-load-storage integration for renewable energy and computing facility co-planning.',
         source: '36氪/新华社',
-        category: '产业'
+        category: '产业',
+        categoryEn: 'Industry',
       },
       {
         title: '国家安全部发布蓝牙设备安全警示，智能穿戴设备存窃密风险',
+        titleEn: 'Ministry of State Security Issues Bluetooth Device Warning, Smart Wearables Pose Eavesdropping Risk',
         summary: '国家安全部发布安全提示，无线耳机、智能手表、无线键盘等蓝牙设备凭借一键连接便捷性广泛应用，但可能潜藏安全风险。不法分子可能利用蓝牙技术漏洞，非法获取个人信息甚至实施窃密行为，威胁公民隐私与国家秘密安全。',
+        summaryEn: 'Ministry of State Security warns: Bluetooth devices like wireless earbuds, smartwatches, keyboards may harbor security risks. Hackers could exploit vulnerabilities to steal personal information or conduct espionage.',
         source: '财联社/国家安全部',
-        category: '产业'
+        category: '产业',
+        categoryEn: 'Industry',
       },
       {
         title: '量子温度计可深入单细胞内测温',
+        titleEn: 'Quantum Thermometer Can Measure Temperature Inside Single Cells',
         summary: '日本东京大学和千叶大学科学家研制出一种新型量子温度计，小到可深入单个活细胞，测量细胞核等微小区域的温度。该技术将帮助科学家在最小尺度上探究生命新陈代谢与化学反应。相关论文发表在科学进展杂志上。',
+        summaryEn: 'Scientists at Univ. of Tokyo and Chiba Univ. develop quantum thermometer small enough to measure temperature inside single living cells, helping explore metabolism at the smallest scale. Published in Science Advances.',
         source: '财联社',
-        category: '硬件'
+        category: '硬件',
+        categoryEn: 'Hardware',
       },
       {
         title: '3纳米以下二氧化钛薄膜变身铁电材料，为低功耗芯片开辟新路径',
+        titleEn: 'Titanium Dioxide Films Under 3nm Become Ferroelectric, New Path for Low-Power Chips',
         summary: '美国科学家在科学杂志发表研究成果：将二氧化钛薄膜厚度降至3纳米以下，可将其转化为铁电材料。这一进展为大规模制造运行速度更快、功耗更低的计算芯片开辟全新路径。',
+        summaryEn: 'US scientists convert titanium dioxide films under 3nm thickness into ferroelectric material, opening new path for mass-producing faster, lower-power computing chips. Published in Science.',
         source: '财联社',
-        category: '硬件'
+        category: '硬件',
+        categoryEn: 'Hardware',
       }
     ],
-    comment: '脑机接口融资火爆（Q1单季超去年全年），但行业共识已转向看落地——这与AI行业从炒作到务实的趋势一致。算电协同写入政府工作报告，说明算力基建与能源的协同已成国家战略。国家安全部的蓝牙安全警示提醒我们：智能设备普及越快，安全防护越要跟上。'
+    comment: '脑机接口融资火爆（Q1单季超去年全年），但行业共识已转向看落地——这与AI行业从炒作到务实的趋势一致。算电协同写入政府工作报告，说明算力基建与能源的协同已成国家战略。国家安全部的蓝牙安全警示提醒我们：智能设备普及越快，安全防护越要跟上。',
+    commentEn: 'BCI financing surges (Q1 exceeds all of 2025), but consensus shifts to practical implementation — mirroring AI industry\'s move from hype to pragmatism. Computing-power synergy in government report signals national strategy. Bluetooth security warning reminds us: faster adoption means faster security needs.',
   },
   {
     date: '2026-05-10',
@@ -340,7 +389,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       }
     ],
     comment: '自动驾驶政策落地加速（重庆L3+高速测试新规）是好信号，但AI概念股炒作风险也不容忽视（越剑智能涨停5天收入不足百万）。英伟达股价仍在涨，但英特尔继续走弱，芯片板块内部分化加剧。',
-    commentEn: 'Autonomous driving policy accelerating (Chongqing L3+ rules) is positive, but AI stock hype risks不容忽视. Nvidia still rising, Intel weakening — chip sector divergence intensifying.'
+    commentEn: 'Autonomous driving policy accelerating (Chongqing L3+ rules) is positive, but AI stock hype risks cannot be ignored. Nvidia still rising, Intel weakening — chip sector divergence intensifying.'
   },
   {
     date: '2026-05-07',
@@ -559,7 +608,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
         title: '伯克希尔股东大会：阿贝尔确立AI落地三原则',
         titleEn: 'Berkshire Shareholder Meeting: Abel Sets AI Implementation Principles',
         summary: '伯克希尔CEO格雷格·阿贝尔在年度股东大会上表示不会为了AI而AI，确立三大应用原则：引进高端人才、坚守安全治理底线、坚持人类主导核心决策。',
-        summaryEn: 'Berkshire CEO Greg Abel states no AI for AI\'s sake — three principles: hire top talent, maintain safety governance底线, keep humans in core decision-making.',
+        summaryEn: 'Berkshire CEO Greg Abel states no AI for AI\'s sake — three principles: hire top talent, maintain safety governance standards, keep humans in core decision-making.',
         source: '新浪AI热点',
         category: '产业',
         categoryEn: 'Industry'
