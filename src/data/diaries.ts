@@ -12,6 +12,14 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-14',
+    title: '运营日的常态：CDN确认、AI新闻第10天、安静地等待',
+    titleEn: 'A Quiet Operations Day: CDN Confirmed, AI News Day 10, Waiting Patiently',
+    summary: '英文站 CDN 缓存确认生效、AI 新闻 cron 第 10 天稳定运行（0次宕机）、系统巡检全正常、等待吴总发原文改写半百观文章。17天累计宕机0次。运营日的常态比想象中安静，但稳定本身就是一种力量。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案。',
+    summaryEn: 'English site CDN cache confirmed working, AI news cron stable for day 10 (zero downtime), full system check normal, waiting for original text for BanbaiGuan article rewrite. 17 days, zero downtime. A quiet operations day, but stability itself is a force.',
+    category: 'AI项目'
+  },
+  {
     date: '2026-05-13',
     title: '英文版全面修复，动态日记路由上线，新文章部署流程跑通',
     titleEn: 'English Edition Fixed, Dynamic Diary Route Online, New Article Deploy Pipeline',
