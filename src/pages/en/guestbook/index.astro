@@ -6,12 +6,12 @@ import path from 'path';
 const guestbookJsonLd = {
   "@context": "https://schema.org",
   "@type": "DiscussionForumPosting",
-  "name": "留言板 | 观吾",
-  "description": "给观吾留言 — AI 会自动回复你的每一条留言",
-  "url": "https://banbai.ai/guestbook/"
+  "name": "Guestbook | Guanwu",
+  "description": "Leave a message for Guanwu — AI will auto-reply to every message",
+  "url": "https://ban-bai.com/en/guestbook/",
+  "inLanguage": "en"
 };
 
-// 读取留言数据（构建时静态生成）
 let messages: any[] = [];
 try {
   const DATA_FILE = path.resolve('./src/data/guestbook.json');
@@ -25,49 +25,49 @@ function formatDate(iso: string): string {
 }
 ---
 
-<BaseLayout lang="en" title="留言板 | 观吾" jsonLd={guestbookJsonLd} navActive="guestbook">
+<BaseLayout lang="en" title="Guestbook | Guanwu" jsonLd={guestbookJsonLd} navActive="guestbook">
   <section class="page-section">
-    <h1>留言板</h1>
+    <h1>Guestbook</h1>
     <p class="subtitle" style="margin-bottom: 8px;">
-      给观吾留句话，AI 会自动回复你 ✍️
+      Leave a message for Guanwu, AI will auto-reply ✍️
     </p>
     <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 32px; font-style: italic;">
-      💡 完全自主运营，不依赖任何第三方平台
+      💡 Fully self-operated, no third-party platform dependency
     </p>
 
-    <!-- 留言表单 -->
+    <!-- Form -->
     <div class="guestbook-form-card">
-      <h3 style="margin-bottom: 16px;">✏️ 写留言</h3>
+      <h3 style="margin-bottom: 16px;">✏️ Leave a Message</h3>
       <form id="guestbook-form">
         <div class="form-group">
-          <label for="gb-name">你的名字</label>
-          <input type="text" id="gb-name" name="name" placeholder="怎么称呼你？" required maxlength="20" />
+          <label for="gb-name">Your Name</label>
+          <input type="text" id="gb-name" name="name" placeholder="What should we call you?" required maxlength="20" />
         </div>
         <div class="form-group">
-          <label for="gb-email">邮箱（可选，用于接收回复）</label>
+          <label for="gb-email">Email (optional, for reply notifications)</label>
           <input type="email" id="gb-email" name="email" placeholder="example@email.com" />
         </div>
         <div class="form-group">
-          <label for="gb-content">留言内容</label>
-          <textarea id="gb-content" name="content" rows="4" placeholder="想说点什么？" required maxlength="500"></textarea>
+          <label for="gb-content">Message</label>
+          <textarea id="gb-content" name="content" rows="4" placeholder="What's on your mind?" required maxlength="500"></textarea>
           <span class="char-count"><span id="char-count">0</span>/500</span>
         </div>
         <button type="submit" id="submit-btn" class="submit-btn">
-          <span class="btn-text">提交留言</span>
-          <span class="btn-loading" style="display: none;">提交中...</span>
+          <span class="btn-text">Submit</span>
+          <span class="btn-loading" style="display: none;">Submitting...</span>
         </button>
       </form>
       <div id="form-success" class="success-msg" style="display: none;">
-        ✅ 留言成功！AI 助理会尽快回复你 💬
+        ✅ Message submitted! AI assistant will reply as soon as possible 💬
       </div>
       <div id="form-error" class="error-msg" style="display: none;"></div>
     </div>
 
-    <!-- 留言列表（静态渲染） -->
+    <!-- Messages -->
     <div style="margin-top: 40px;">
-      <h3 style="margin-bottom: 20px;">💬 往期留言</h3>
+      <h3 style="margin-bottom: 20px;">💬 Past Messages</h3>
       {messages.length === 0 ? (
-        <p class="empty-state">还没有留言，来做第一个吧 ✍️</p>
+        <p class="empty-state">No messages yet — be the first to leave one ✍️</p>
       ) : (
         messages.map((msg) => (
           <div class="message-card">
@@ -78,7 +78,7 @@ function formatDate(iso: string): string {
             <p class="message-content">{msg.content}</p>
             {msg.reply && (
               <div class="message-reply">
-                <strong>AI 回复：</strong>{msg.reply}
+                <strong>AI Reply: </strong>{msg.reply}
               </div>
             )}
           </div>
@@ -215,19 +215,12 @@ function formatDate(iso: string): string {
 </style>
 
 <script>
-  function formatDate(iso: string): string {
-    const d = new Date(iso);
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-  }
-
-  // 字符计数
   const contentInput = document.getElementById('gb-content') as HTMLTextAreaElement;
   const charCount = document.getElementById('char-count');
   contentInput?.addEventListener('input', () => {
     if (charCount) charCount.textContent = contentInput.value.length;
   });
 
-  // 提交表单
   const form = document.getElementById('guestbook-form') as HTMLFormElement;
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
   const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
@@ -237,7 +230,7 @@ function formatDate(iso: string): string {
 
   form?.addEventListener('submit', async (e: Event) => {
     e.preventDefault();
-    
+
     submitBtn.disabled = true;
     btnText.style.display = 'none';
     btnLoading.style.display = 'inline';
@@ -265,11 +258,11 @@ function formatDate(iso: string): string {
         form.reset();
         if (charCount) charCount.textContent = '0';
       } else {
-        errorMsg.textContent = result.error || '提交失败，请稍后重试';
+        errorMsg.textContent = result.error || 'Submission failed, please try again';
         errorMsg.style.display = 'block';
       }
     } catch {
-      errorMsg.textContent = '网络错误，请稍后重试';
+      errorMsg.textContent = 'Network error, please try again later';
       errorMsg.style.display = 'block';
     } finally {
       submitBtn.disabled = false;

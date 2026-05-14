@@ -1,105 +1,105 @@
 ---
 import BaseLayout from '../../../layouts/Base.astro';
 
-
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "云半百小龙虾 - 在线业务咨询",
-  "description": "云半百小龙虾业务在线咨询服务，产品订购、加盟合作、售后支持一站式服务",
-  "url": "https://banbai.ai/lobster/"
+  "name": "Cloud Banbai Crayfish — Business Inquiry",
+  "description": "Cloud Banbai Crayfish business consultation, product ordering, partnership, and after-sales support",
+  "url": "https://ban-bai.com/en/lobster/",
+  "inLanguage": "en"
 };
 ---
 
 <BaseLayout lang="en" jsonLd={pageJsonLd}>
   <section class="hero">
     <div class="container">
-      <span class="hero-tag">🦞 云半百小龙虾</span>
+      <span class="hero-tag">🦞 Cloud Banbai Crayfish</span>
       <h1>
-        云半百小龙虾
-        <span>新鲜·正宗·美味</span>
+        Cloud Banbai Crayfish
+        <span>Fresh · Authentic · Delicious</span>
       </h1>
       <p class="subtitle">
-        点击右下角🦞按钮，立即咨询我们的业务顾问<br />
-        产品订购、加盟合作、售后支持，一站式在线服务
+        Click the 🦞 button in the corner to consult our business advisor<br />
+        Product ordering, partnership, after-sales — all online
       </p>
     </div>
   </section>
 
-  <!-- 业务板块 -->
+  <!-- Services -->
   <section class="page-section">
     <div class="container">
-      <div class="section-title">我们的服务</div>
-      
+      <div class="section-title">Our Services</div>
+
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">🍤</div>
-          <h3>产品订购</h3>
-          <p>多种口味小龙虾，麻辣、蒜香、十三香...新鲜配送到家</p>
-          <a href="#" class="service-link" onclick="openLobsterChat(event, '我想订购小龙虾，有什么口味？')">在线咨询 →</a>
+          <h3>Product Ordering</h3>
+          <p>Multiple flavors: spicy, garlic, thirteen-spice... delivered fresh to your door</p>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, 'I want to order crayfish, what flavors are available?')">Order Online →</a>
         </div>
-        
+
         <div class="service-card">
           <div class="service-icon">🤝</div>
-          <h3>加盟合作</h3>
-          <p>成熟的商业模式，完整的供应链支持，低门槛创业</p>
-          <a href="#" class="service-link" onclick="openLobsterChat(event, '我想了解加盟政策')">了解详情 →</a>
+          <h3>Partnership</h3>
+          <p>Mature business model, complete supply chain support, low-barrier entrepreneurship</p>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, 'I want to learn about partnership opportunities')">Learn More →</a>
         </div>
-        
+
         <div class="service-card">
           <div class="service-icon">🚚</div>
-          <h3>冷链配送</h3>
-          <p>全程冷链保鲜，同城当日达，全国48小时送达</p>
-          <a href="#" class="service-link" onclick="openLobsterChat(event, '你们的配送范围和时间是怎样的？')">查询配送 →</a>
+          <h3>Cold Chain Delivery</h3>
+          <p>Full cold-chain freshness, same-day local delivery, 48-hour nationwide shipping</p>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, 'What is your delivery coverage and timeline?')">Check Delivery →</a>
         </div>
-        
+
         <div class="service-card">
           <div class="service-icon">📋</div>
-          <h3>售后支持</h3>
-          <p>7天无理由退换，品质保证，24小时在线客服</p>
-          <a href="#" class="service-link" onclick="openLobsterChat(event, '我需要售后服务')">联系售后 →</a>
+          <h3>After-Sales Support</h3>
+          <p>7-day no-reason return, quality guaranteed, 24/7 online customer service</p>
+          <a href="#" class="service-link" onclick="openLobsterChat(event, 'I need after-sales support')">Contact Support →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 品牌介绍 -->
+  <!-- Brand -->
   <section class="page-section">
     <div class="container">
-      <div class="section-title">品牌故事</div>
+      <div class="section-title">Our Story</div>
       <div class="brand-story">
-        <h2>云半百小龙虾</h2>
-        <p>源自对品质的执着追求，每一只小龙虾都经过严格筛选，确保新鲜、安全、美味。我们致力于为消费者提供最优质的龙虾餐饮体验。</p>
+        <h2>Cloud Banbai Crayfish</h2>
+        <p>Driven by a commitment to quality, every crayfish is carefully selected to ensure freshness, safety, and taste. We strive to deliver the finest crayfish dining experience.</p>
         <div class="brand-stats">
           <div class="stat">
             <span class="stat-number">100%</span>
-            <span class="stat-label">活虾现做</span>
+            <span class="stat-label">Live Crayfish</span>
           </div>
           <div class="stat">
             <span class="stat-number">24h</span>
-            <span class="stat-label">在线客服</span>
+            <span class="stat-label">Online Support</span>
           </div>
           <div class="stat">
-            <span class="stat-number">7天</span>
-            <span class="stat-label">无理由退换</span>
+            <span class="stat-number">7 Days</span>
+            <span class="stat-label">Free Returns</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 在线对话提示 -->
+  <!-- Chat CTA -->
   <section class="page-section chat-cta">
     <div class="container">
       <div class="cta-card">
-        <h2>💬 需要帮助？</h2>
-        <p>点击右下角的🦞按钮，与我们的AI业务顾问对话</p>
-        <p class="cta-hint">支持产品咨询、订购引导、加盟合作、售后支持等</p>
+        <h2>💬 Need Help?</h2>
+        <p>Click the 🦞 button in the corner to chat with our AI business advisor</p>
+        <p class="cta-hint">Supports product inquiry, ordering guidance, partnership, and after-sales</p>
       </div>
     </div>
   </section>
 
-  
+
 </BaseLayout>
 
 <style>
@@ -136,14 +136,14 @@ const pageJsonLd = {
     color: #6b7280;
     line-height: 1.6;
   }
-  
+
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     margin-top: 16px;
   }
-  
+
   .service-card {
     background: white;
     border: 1px solid #fecaca;
@@ -182,7 +182,7 @@ const pageJsonLd = {
   .service-link:hover {
     text-decoration: underline;
   }
-  
+
   .brand-story {
     max-width: 700px;
     margin: 0 auto;
@@ -221,7 +221,7 @@ const pageJsonLd = {
     color: #6b7280;
     margin-top: 4px;
   }
-  
+
   .chat-cta {
     text-align: center;
   }
@@ -246,7 +246,7 @@ const pageJsonLd = {
     font-size: 13px;
     color: #9ca3af;
   }
-  
+
   @media (max-width: 640px) {
     .brand-stats {
       gap: 20px;

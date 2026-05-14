@@ -4,72 +4,80 @@ import BaseLayout from '../../../layouts/Base.astro';
 const aboutJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "name": "关于 | 观吾",
-  "description": "观吾（吴总）的个人简介 — 磐石电气联合创始人、AIoT实践者、半百观AI主理人",
-  "url": "https://banbai.ai/about/",
+  "name": "About | Guanwu",
+  "description": "Mr. Wu's personal profile — Co-founder of MonolithIoT, AIoT practitioner, BanbaiGuan AI founder",
+  "url": "https://ban-bai.com/en/about/",
+  "inLanguage": "en",
   "mainEntity": {
     "@type": "Person",
-    "name": "吴总",
-    "alternateName": "观吾",
-    "image": "https://banbai.ai/avatar.jpg",
-    "jobTitle": "联合创始人",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu",
+    "image": "https://ban-bai.com/avatar.jpg",
+    "jobTitle": "Co-founder",
     "worksFor": {
       "@type": "Organization",
-      "name": "磐石电气（常州）有限公司",
+      "name": "MonolithIoT (Changzhou) Co., Ltd.",
       "url": "https://www.monolithiot.com"
     },
-    "description": "50岁，擅长结构化思维与第一性原理，精通AI应用、品牌管理、新媒体运营。专注数字化智能库存管理 AIoT 产品及解决方案。",
-    "knowsAbout": ["AI应用", "AIoT", "数字化智能库存管理", "品牌管理", "新媒体运营"],
-    "url": "https://banbai.ai/about/",
+    "description": "At 50, skilled in structured thinking and first-principles reasoning. Expert in AI applications, brand management, and new media operations.",
+    "knowsAbout": ["AI Applications", "AIoT", "Digital Inventory Management", "Brand Management", "New Media Operations"],
+    "url": "https://ban-bai.com/en/about/",
     "sameAs": [
-      "https://banbai.ai"
+      "https://ban-bai.com"
     ]
   }
 };
 ---
 
-<BaseLayout lang="en" title="关于 | 观吾" jsonLd={aboutJsonLd} navActive="about">
+<BaseLayout lang="en" title="About | Guanwu" jsonLd={aboutJsonLd} navActive="about">
   <section class="page-section">
-    <h1>关于</h1>
+    <h1>About</h1>
 
     <div class="about-section">
-      <div class="section-title">观吾</div>
+      <div class="section-title">Guanwu</div>
       <p class="about-text">
-        笔名：「观吾」。
-        50岁，磐石电气（常州）有限公司联合创始人。<br />
-        专注数字化智能库存管理 AIoT 产品及解决方案。<br />
-        半百观AI新媒体品牌主理人。
+        Pen name: "Guanwu" (观吾 — reflect on oneself).<br />
+        Co-founder of MonolithIoT (Changzhou) Co., Ltd.<br />
+        Focused on digital smart inventory management AIoT products and solutions.<br />
+        Founder of BanbaiGuan AI new media brand.
       </p>
       <p class="about-text">
-        擅长结构化思维与第一性原理，精通AI应用、品牌管理、新媒体运营。<br />
-        正在做的事：用AI把想法变成现实。
+        Skilled in structured thinking and first-principles reasoning.<br />
+        Expert in AI applications, brand management, and new media operations.<br />
+        What I'm doing now: using AI to turn ideas into reality.
       </p>
     </div>
 
     <div class="about-section">
-      <div class="section-title">磐石电气（常州）有限公司</div>
+      <div class="section-title">MonolithIoT (Changzhou) Co., Ltd.</div>
       <p class="about-text">
-        国家级高新技术企业、专精特新企业。公司深耕数智化领域，精准定位AI场景解决方案提供商，依托多传感器融合、智慧存储AI中台、多模态算法三大核心技术，以智能工单系统为核心枢纽，结合AI预测、视觉监控、智能动作控制等前沿技术，将各类复杂业务需求标准化转化为可落地、可执行、可追溯的数字化任务，打通场景数智化全链路。
+        National high-tech enterprise, specializing in digital intelligence solutions.
+        MonolithIoT positions itself as an AI scenario solutions provider, built on three core technologies:
+        multi-sensor fusion, AI-powered storage middleware, and multimodal algorithms.
+        The smart work order system serves as the central hub, combined with AI prediction, visual monitoring,
+        and intelligent action control — transforming complex business requirements into standardized,
+        actionable, and traceable digital tasks across the entire industrial chain.
       </p>
       <p class="about-text-light">
-        公司旗下拥有MonolithIoT、贝榕两大核心品牌，深耕工业、零售两大主流赛道，长期为国家电网、华为、顺丰、DHL等国内外头部企业提供专业数智化解决方案，持续赋能各行各业完成高效、高质量的数智化转型升级。
+        Two core brands — MonolithIoT and Beirong — serve industrial and retail sectors,
+        providing digital solutions for State Grid, Huawei, SF Express, DHL, and other leading enterprises.
       </p>
       <p class="about-links">
-        公司网站：<a href="https://www.monolithiot.com/" target="_blank">monolithiot.com</a> ｜
-        YouTube：<a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" target="_blank">磐石电气</a>
+        Company website: <a href="https://www.monolithiot.com/" target="_blank">monolithiot.com</a> ｜
+        YouTube: <a href="https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw" target="_blank">MonolithIoT</a>
       </p>
       <div class="about-qr-wrapper">
-        <img src="/company-qr.png" alt="磐石电气 新媒体矩阵" />
+        <img src="/company-qr.png" alt="MonolithIoT Social Media" />
       </div>
     </div>
 
 
     <div class="about-section">
-      <div class="section-title">关于这个网站</div>
+      <div class="section-title">About This Website</div>
       <p class="about-text">
-        这个网站由我和我的AI助理共同建造。<br />
-        我负责方向和内容，AI负责技术和实现。<br />
-        从产品设计到代码开发，全程无前端工程师参与。
+        This website was built by me and my AI assistant, together.<br />
+        I handle direction and content; AI handles technology and implementation.<br />
+        From product design to code development — no frontend engineer involved.
       </p>
     </div>
 

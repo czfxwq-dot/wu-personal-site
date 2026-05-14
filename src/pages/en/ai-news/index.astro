@@ -1,94 +1,86 @@
 ---
 import BaseLayout from '../../../layouts/Base.astro';
 import { dailyNewsSummaries } from '../../../data/ai-news-summary';
+import { t } from '../../../i18n/utils';
 
-function formatDate(dateStr: string): string {
-  const d = new Date(dateStr);
-  const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${weekdays[d.getDay()]}`;
-}
+const allCategories = ['LLM', 'Hardware', 'Industry', 'Investment', 'Policy', 'Research', 'Tools'];
 
 const newsJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "AI新闻 | 观吾",
-  "description": "每天AI行业重大新闻汇总 + 一句话点评",
-  "url": "https://banbai.ai/ai-news/",
+  "name": "AI News | Guanwu",
+  "description": "Daily AI industry news roundup with one-line commentary",
+  "url": "https://ban-bai.com/en/ai-news/",
+  "inLanguage": "en",
   "author": {
     "@type": "Person",
-    "name": "吴总",
-    "alternateName": "观吾"
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "磐石电气（常州）有限公司"
+    "name": "MonolithIoT (Changzhou) Co., Ltd."
   }
 };
 
 const allDates = dailyNewsSummaries.map(d => d.date);
 ---
 
-<BaseLayout lang="en" title="AI新闻 | 观吾" jsonLd={newsJsonLd} navActive="ai-news">
+<BaseLayout lang="en" title={t('navAiNews', 'en') + ' | Guanwu'} jsonLd={newsJsonLd} navActive="ai-news">
   <section class="page-section">
-    <h1>AI新闻</h1>
+    <h1>{t('navAiNews', 'en')}</h1>
     <p class="subtitle">
-      每天AI行业重大新闻汇总 + 一句话点评
+      Daily AI industry news roundup with one-line commentary
     </p>
 
-    <!-- 搜索+日期筛选栏 -->
+    <!-- Search + filters -->
     <div class="search-bar">
       <div class="search-input-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
         </svg>
-        <input type="text" id="news-search" class="search-input" placeholder="搜索新闻标题或内容..." />
+        <input type="text" id="news-search" class="search-input" placeholder="Search titles or content..." />
       </div>
       <select id="news-date-filter" class="date-filter">
-        <option value="">全部日期</option>
+        <option value="">All Dates</option>
         {allDates.map(d => <option value={d}>{d}</option>)}
       </select>
       <select id="news-category-filter" class="date-filter">
-        <option value="">全部类别</option>
-        <option value="大模型">大模型</option>
-        <option value="硬件">硬件</option>
-        <option value="产业">产业</option>
-        <option value="投资">投资</option>
-        <option value="政策">政策</option>
-        <option value="研究">研究</option>
-        <option value="工具">工具</option>
+        <option value="">All Categories</option>
+        {allCategories.map(c => <option value={c}>{c}</option>)}
       </select>
-      <span id="news-count" class="result-count">共 {dailyNewsSummaries.length} 天</span>
+      <span id="news-count" class="result-count">{dailyNewsSummaries.length} days total</span>
     </div>
 
     <div id="news-list">
       {dailyNewsSummaries.map((day) => (
         <div class="news-day" data-date={day.date}
-          data-search={`${day.title} ${day.summary} ${day.comment} ${day.newsItems.map(n => `${n.title} ${n.summary} ${n.source}`).join(' ')}`.toLowerCase()}>
+          data-search={`${day.titleEn || day.title} ${day.summaryEn || day.summary} ${day.commentEn || day.comment} ${day.newsItems.map(n => `${n.titleEn || n.title} ${n.summaryEn || n.summary} ${n.source}`).join(' ')}`.toLowerCase()}>
           <div class="news-day-header">
-            <time datetime={day.date}>{formatDate(day.date)}</time>
-            <span class="news-count">{day.newsItems.length}条</span>
+            <time datetime={day.date}>{day.date}</time>
+            <span class="news-count">{day.newsItems.length} items</span>
           </div>
-          
-          <h2 class="news-day-title">{day.title}</h2>
-          <p class="news-day-summary">{day.summary}</p>
-          
+
+          <h2 class="news-day-title">{day.titleEn || day.title}</h2>
+          <p class="news-day-summary">{day.summaryEn || day.summary}</p>
+
           <div class="news-items">
             {day.newsItems.map((item) => (
-              <div class="news-item" data-category={item.category}
-                data-item-search={`${item.title} ${item.summary} ${item.source}`.toLowerCase()}>
+              <div class="news-item" data-category={item.categoryEn || item.category}
+                data-item-search={`${item.titleEn || item.title} ${item.summaryEn || item.summary} ${item.source}`.toLowerCase()}>
                 <div class="news-item-header">
-                  <span class="news-item-category" data-category={item.category}>{item.category}</span>
-                  <h3>{item.title}</h3>
+                  <span class="news-item-category" data-category={item.categoryEn || item.category}>{item.categoryEn || item.category}</span>
+                  <h3>{item.titleEn || item.title}</h3>
                 </div>
-                <p class="news-item-text">{item.summary}</p>
+                <p class="news-item-text">{item.summaryEn || item.summary}</p>
                 <span class="news-item-source">{item.source}</span>
               </div>
             ))}
           </div>
 
-          {day.comment && (
+          {(day.commentEn || day.comment) && (
             <div class="news-comment">
-              <strong>📝 一句话点评：</strong>{day.comment}
+              <strong>One-line commentary: </strong>{day.commentEn || day.comment}
             </div>
           )}
         </div>
@@ -96,20 +88,20 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     </div>
 
     <div id="news-no-result" class="no-result" style="display:none;">
-      <p>🔍 没有找到匹配的新闻</p>
+      <p>No matching news found</p>
     </div>
 
-    <!-- GEO 优化：来源说明 -->
+    <!-- Sources -->
     <div class="sources-note">
-      <h3>📰 新闻来源</h3>
-      <p>AI新闻来源于以下权威渠道，每天精选并汇总：</p>
+      <h3>News Sources</h3>
+      <p>AI news is curated daily from the following authoritative channels:</p>
       <div class="sources-list">
         <a href="https://techcrunch.com/tag/artificial-intelligence/" target="_blank" rel="noopener">TechCrunch AI</a>
         <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener">The Verge AI</a>
         <a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener">VentureBeat AI</a>
         <a href="https://www.wired.com/tag/artificial-intelligence/" target="_blank" rel="noopener">WIRED AI</a>
-        <a href="https://36kr.com/" target="_blank" rel="noopener">36氪</a>
-        <a href="https://www.jiqizhixin.com/" target="_blank" rel="noopener">机器之心</a>
+        <a href="https://36kr.com/" target="_blank" rel="noopener">36Kr</a>
+        <a href="https://www.jiqizhixin.com/" target="_blank" rel="noopener">Jiqizhixin</a>
         <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a>
         <a href="https://openai.com/news" target="_blank" rel="noopener">OpenAI News</a>
       </div>
@@ -133,7 +125,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     color: var(--color-text-light);
   }
 
-  /* 搜索栏 */
+  /* Search bar */
   .search-bar {
     display: flex;
     gap: 10px;
@@ -251,25 +243,25 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     display: inline-block;
     margin-bottom: 6px;
   }
-  .news-item-category[data-category="硬件"] {
-    background: #f97316;
-  }
-  .news-item-category[data-category="大模型"] {
+  .news-item-category[data-category="LLM"] {
     background: #8b5cf6;
   }
-  .news-item-category[data-category="产业"] {
+  .news-item-category[data-category="Hardware"] {
+    background: #f97316;
+  }
+  .news-item-category[data-category="Industry"] {
     background: #0ea5e9;
   }
-  .news-item-category[data-category="投资"] {
+  .news-item-category[data-category="Investment"] {
     background: #22c55e;
   }
-  .news-item-category[data-category="政策"] {
+  .news-item-category[data-category="Policy"] {
     background: #ef4444;
   }
-  .news-item-category[data-category="研究"] {
+  .news-item-category[data-category="Research"] {
     background: #6366f1;
   }
-  .news-item-category[data-category="工具"] {
+  .news-item-category[data-category="Tools"] {
     background: #14b8a6;
   }
   .news-item-header h3 {
@@ -302,7 +294,6 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     font-size: 15px;
   }
 
-  /* 新闻来源 */
   .sources-note {
     margin-top: 32px;
     padding: 20px;
@@ -361,7 +352,6 @@ const allDates = dailyNewsSummaries.map(d => d.date);
       const dayMatchKeyword = !keyword || (day.dataset.search || '').includes(keyword);
       const dayMatchDate = !date || day.dataset.date === date;
 
-      // Category filter: check if any news-item in this day matches the category
       const items = day.querySelectorAll('.news-item') as NodeListOf<HTMLElement>;
       let hasMatchingItem = !category;
       if (category) {
@@ -372,7 +362,6 @@ const allDates = dailyNewsSummaries.map(d => d.date);
         });
       }
 
-      // Also filter individual items by keyword
       items.forEach(item => {
         const itemMatchKeyword = !keyword || (item.dataset.itemSearch || '').includes(keyword);
         item.style.display = itemMatchKeyword ? '' : 'none';
@@ -384,7 +373,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     });
 
     noResult.style.display = visibleDays === 0 ? '' : 'none';
-    countEl.textContent = `共 ${visibleDays} 天`;
+    countEl.textContent = `${days.length} days total`;
   }
 
   searchInput.addEventListener('input', filterNews);
