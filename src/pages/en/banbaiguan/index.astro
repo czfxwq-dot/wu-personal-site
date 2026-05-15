@@ -51,7 +51,7 @@ const allTags = [...new Set(articles.map(a => a.tagEn || a.tag))];
           data-search={`${(article.titleEn || article.title) + ' ' + (article.excerptEn || article.excerpt)}`.toLowerCase()}>
           <div class="article-meta">
             <span class="article-date">{article.date}</span>
-            <span class="article-tag" data-tag={article.tag}>{article.tagEn || article.tag}</span>
+            <span class="article-tag" data-tag={article.tagEn || article.tag}>{article.tagEn || article.tag}</span>
           </div>
           <h2>
             <a href={`/en/banbaiguan/${article.slug}/`}>{article.titleEn || article.title}</a>
@@ -167,11 +167,17 @@ const allTags = [...new Set(articles.map(a => a.tagEn || a.tag))];
     color: #fff;
     border-radius: 4px;
   }
+  .article-tag[data-tag="AI Industry"],
   .article-tag[data-tag="AI产业"] {
     background: #f97316;
   }
+  .article-tag[data-tag="AI Security"],
   .article-tag[data-tag="AI安全"] {
     background: #8b5cf6;
+  }
+  .article-tag[data-tag="AI Frontier"],
+  .article-tag[data-tag="AI前沿"] {
+    background: #06b6d4;
   }
   .article-card h2 {
     font-size: 20px;
@@ -231,7 +237,7 @@ const allTags = [...new Set(articles.map(a => a.tagEn || a.tag))];
     });
 
     noResult.style.display = visible === 0 ? '' : 'none';
-    countEl.textContent = `共 ${visible} 篇`;
+    countEl.textContent = `${visible} articles`;
   }
 
   searchInput.addEventListener('input', filterArticles);

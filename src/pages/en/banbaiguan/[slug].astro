@@ -35,6 +35,9 @@ const articleJsonLd = {
 ---
 
 <BaseLayout title={`${title} — BanbaiGuan AI`} jsonLd={articleJsonLd} ogDescription={excerpt} navActive="banbaiguan" lang="en">
+  <script type="application/json" id="article-data">
+    {JSON.stringify(articles.map(a => ({ slug: a.slug, title: a.title, titleEn: a.titleEn })))}
+  </script>
   <article class="article-page">
     <header class="article-header">
       <div class="article-meta">
@@ -55,9 +58,38 @@ const articleJsonLd = {
     </div>
 
     <footer class="article-footer-nav">
-      <a href="/en/banbaiguan/" class="back-link">← Back to Articles</a>
+      <nav class="article-nav">
+        <a href="#prev" class="prev" id="nav-prev">← Previous</a>
+        <a href="/en/banbaiguan/" class="back">← Back to Articles</a>
+        <a href="#next" class="next" id="nav-next">Next →</a>
+      </nav>
     </footer>
   </article>
+
+<script>
+  const articles = JSON.parse(document.getElementById('article-data')?.textContent || '[]');
+  const currentSlug = window.location.pathname.split('/').filter(Boolean).pop().replace(/\/$/, '');
+  const idx = articles.findIndex(a => a.slug === currentSlug);
+  
+  const prevEl = document.getElementById('nav-prev');
+  const nextEl = document.getElementById('nav-next');
+  
+  if (idx > 0) {
+    prevEl.href = `/en/banbaiguan/${articles[idx - 1].slug}/`;
+    prevEl.textContent = `← ${articles[idx - 1].titleEn || articles[idx - 1].title}`;
+    prevEl.style.maxWidth = '40%';
+  } else {
+    prevEl.style.visibility = 'hidden';
+  }
+  
+  if (idx < articles.length - 1) {
+    nextEl.href = `/en/banbaiguan/${articles[idx + 1].slug}/`;
+    nextEl.textContent = `${articles[idx + 1].titleEn || articles[idx + 1].title} →`;
+    nextEl.style.maxWidth = '40%';
+  } else {
+    nextEl.style.visibility = 'hidden';
+  }
+</script>
 </BaseLayout>
 
 <style>
@@ -124,6 +156,25 @@ const articleJsonLd = {
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid var(--color-border);
+}
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.article-nav a {
+  font-size: 14px;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+.article-nav a:hover {
+  color: var(--color-accent);
+}
+.article-nav .back {
+  color: var(--color-accent);
+  font-weight: 500;
 }
 .back-link {
   font-size: 14px;

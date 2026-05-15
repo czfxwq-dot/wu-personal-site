@@ -141,7 +141,13 @@ const articleJsonLd = {
         }
       ]} />
     </div>
-  </article>
+  
+      <nav class="article-nav" data-astro-cid-article-nav>
+        <a href="/banbaiguan/ai-dreaming-self-evolution/" class="prev" data-astro-cid-article-nav>← AI学会「做梦」…</a>
+        <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <a href="/banbaiguan/ai-pentagon-core-systems/" class="next" data-astro-cid-article-nav>AI进入美军绝密… →</a>
+      </nav>
+    </article>
 </BaseLayout>
 
 <style>
@@ -214,4 +220,55 @@ const articleJsonLd = {
   line-height: 1.7;
   border-radius: 0 8px 8px 0;
 }
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+  }
+  .article-nav a, .article-nav span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+  }
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    max-width: 40%;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+    font-size: 14px;
+  }
 </style>

@@ -1,61 +1,39 @@
 ---
-// AI学会自己写网页了，而你还在手动改Word排版？
-const title = 'AI学会自己写网页了，而你还在手动改Word排版？';
-const date = '2026-05-13';
-const summary = 'Claude Code团队核心成员宣布"HTML is the new Markdown"，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从"帮你写字"变成"帮你做东西"。';
-const keywords = ['Claude Code', 'HTML', 'Markdown', 'AI效率', '中小企业', 'AI落地', 'Anthropic'];
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": 'AI学会自己写网页了，而你还在手动改Word排版？',
+  "datePublished": '2026-05-13',
+  "dateModified": '2026-05-13',
+  "description": 'Claude Code团队核心成员宣布"HTML is the new Markdown"，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从"帮你写字"变成"帮你做东西"。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['Claude Code', 'HTML', 'Markdown', 'AI效率', '中小企业', 'AI落地', 'Anthropic']
+};
 ---
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} | 半百观AI</title>
-  <meta name="description" content={summary}>
-  <meta name="keywords" content={keywords.join(',')}>
-  <meta property="og:title" content={title}>
-  <meta property="og:description" content={summary}>
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="观吾">
-  <meta property="og:locale" content="zh_CN">
-  <script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": summary,
-    "datePublished": date,
-    "dateModified": date,
-    "author": {
-      "@type": "Person",
-      "name": "吴总",
-      "url": "https://ban-bai.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "半百观AI",
-      "url": "https://ban-bai.com/banbaiguan/"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ban-bai.com/banbaiguan/html-is-new-markdown/`
-    },
-    "keywords": keywords
-  })}
-  </script>
-</head>
-<body>
+<BaseLayout title="AI学会自己写网页了 | 半百观" jsonLd={articleJsonLd} ogDescription={'Claude Code团队核心成员宣布"HTML is the new Markdown"，900万人围观。AI正在从"帮你写字"变成"帮你做东西"。'} navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-13">2026年5月13日</time>
+        <span class="article-tag">AI前沿</span>
+      </div>
+      <h1>AI学会自己写网页了</h1>
+      <p class="article-subtitle">而你还在手动改Word排版？</p>
+    </header>
 
-<header class="article-header">
-  <div class="article-meta">
-    <span class="article-category">半百观AI</span>
-    <span class="article-date">{date}</span>
-  </div>
-  <h1 class="article-title">{title}</h1>
-</header>
-
-<article class="article-content">
+    <div class="article-content">
 
 <section class="article-section">
   <p>Anthropic 的 Claude Code 团队，最近做了一件让程序员圈子炸了的事。</p>
@@ -103,108 +81,172 @@ const keywords = ['Claude Code', 'HTML', 'Markdown', 'AI效率', '中小企业',
   <p>这不是程序员的胜利，是所有人的机会。</p>
 </section>
 
-</article>
+    </div>
 
-<div class="article-footer">
-  <div class="editor-note">
-    <span class="note-icon">💡</span>
-    <p><strong>编者按：</strong>AI 最可怕的不是技术有多强，而是它正在让技术变得越来越不重要。当你不需要懂代码也能做出专业级产出的时候，门槛就不存在了。关键不是"AI 能做什么"，而是"你愿不愿意用它"。</p>
-  </div>
-  <p class="article-source">🔗 来源：Thariq Shihipar on X | <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener">The Unreasonable Effectiveness of HTML</a></p>
-  <p class="article-signature">半百观AI | 一个50岁AI实践者的日常观察</p>
-</div>
-
-</body>
-</html>
+    <footer class="article-footer">
+      <div class="editor-note">
+        <span class="note-icon">💡</span>
+        <p><strong>编者按：</strong>AI 最可怕的不是技术有多强，而是它正在让技术变得越来越不重要。当你不需要懂代码也能做出专业级产出的时候，门槛就不存在了。关键不是"AI 能做什么"，而是"你愿不愿意用它"。</p>
+      </div>
+      <p class="article-source">🔗 来源：Thariq Shihipar on X | <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener">The Unreasonable Effectiveness of HTML</a></p>
+      <p class="article-signature">半百观AI | 一个50岁AI实践者的日常观察</p>
+      <nav class="article-nav" data-astro-cid-article-nav>
+        <a href="/banbaiguan/drive-shaft-ai-future/" class="prev" data-astro-cid-article-nav>← 1890年的那根传动轴…</a>
+        <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <a href="/banbaiguan/anthropic-revenue-80x/" class="next" data-astro-cid-article-nav>Anthropic营收暴增… →</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
 
 <style>
-:global(.article-header) {
-  max-width: 680px;
-  margin: 40px auto 30px;
-  padding: 0 20px;
+.article-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
 }
-:global(.article-meta) {
+
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-meta {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
   margin-bottom: 16px;
   font-size: 14px;
-}
-:global(.article-category) {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-:global(.article-date) {
   color: var(--color-text-secondary);
 }
-:global(.article-title) {
-  font-size: 28px;
-  line-height: 1.4;
+
+.article-tag {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.article-subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
   margin: 0;
-  font-weight: 700;
 }
-:global(.article-content) {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-:global(.article-section) {
-  margin-bottom: 32px;
-}
-:global(.article-section h2) {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
-}
-:global(.article-content p) {
-  font-size: 16px;
+
+.article-content {
   line-height: 1.8;
   color: var(--color-text-secondary);
-  margin-bottom: 12px;
 }
-:global(.article-content strong) {
-  color: var(--color-text-primary);
+
+.article-content p {
+  margin: 0 0 20px;
 }
-:global(.article-content blockquote) {
-  border-left: 3px solid var(--color-primary);
-  margin: 16px 0;
-  padding: 12px 16px;
+
+.article-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  padding-top: 10px;
+  color: var(--color-text);
+}
+
+.article-content strong {
+  color: var(--color-text);
+}
+
+.article-content blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--color-accent);
   background: var(--color-bg-secondary);
   font-style: italic;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
-:global(.article-footer) {
-  max-width: 680px;
-  margin: 40px auto;
-  padding: 0 20px;
-  border-top: 1px solid var(--color-border);
+
+.article-footer {
+  margin-top: 40px;
   padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-text-secondary);
 }
-:global(.editor-note) {
+
+.editor-note {
   background: var(--color-bg-secondary);
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
-:global(.note-icon) {
+
+.note-icon {
   font-size: 18px;
 }
-:global(.article-source) {
+
+.article-source {
   font-size: 14px;
   color: var(--color-text-tertiary);
   margin-bottom: 12px;
 }
-:global(.article-source a) {
-  color: var(--color-primary);
+
+.article-source a {
+  color: var(--color-accent);
   text-decoration: none;
 }
-:global(.article-source a:hover) {
+
+.article-source a:hover {
   text-decoration: underline;
 }
-:global(.article-signature) {
+
+.article-signature {
   font-size: 14px;
   color: var(--color-text-tertiary);
   text-align: center;
 }
+
+@media (max-width: 640px) {
+  .article-page {
+    padding: 40px 16px 30px;
+  }
+  .article-header h1 {
+    font-size: 26px;
+  }
+  .article-content h2 {
+    font-size: 20px;
+  }
+}
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    max-width: 40%;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+    font-size: 14px;
+  }
 </style>

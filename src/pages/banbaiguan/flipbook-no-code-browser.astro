@@ -1,61 +1,39 @@
 ---
-// Flipbook.page：没有代码的浏览器，在重新定义"上网"
-const title = 'Flipbook.page：没有代码的浏览器，在重新定义"上网"';
-const date = '2026-05-15';
-const summary = '2026年4月底，Flipbook.page上线。没有HTML，没有CSS，没有传统网页。你输入需求，AI实时生成画面。这不是又一个AI壳应用，而是信息组织方式的根本变革：信息从被检索，变成被创造。';
-const keywords = ['Flipbook', 'AI浏览器', '信息检索', 'AI落地', '中小企业', '交互设计', 'AI前沿'];
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": 'Flipbook.page：没有代码的浏览器，在重新定义"上网"',
+  "datePublished": '2026-05-15',
+  "dateModified": '2026-05-15',
+  "description": '2026年4月底，Flipbook.page上线。没有HTML，没有CSS，没有传统网页。你输入需求，AI实时生成画面。这不是又一个AI壳应用，而是信息组织方式的根本变革：信息从被检索，变成被创造。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['Flipbook', 'AI浏览器', '信息检索', 'AI落地', '中小企业', '交互设计', 'AI前沿']
+};
 ---
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} | 半百观AI</title>
-  <meta name="description" content={summary}>
-  <meta name="keywords" content={keywords.join(',')}>
-  <meta property="og:title" content={title}>
-  <meta property="og:description" content={summary}>
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="观吾">
-  <meta property="og:locale" content="zh_CN">
-  <script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": summary,
-    "datePublished": date,
-    "dateModified": date,
-    "author": {
-      "@type": "Person",
-      "name": "吴总",
-      "url": "https://ban-bai.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "半百观AI",
-      "url": "https://ban-bai.com/banbaiguan/"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ban-bai.com/banbaiguan/flipbook-no-code-browser/`
-    },
-    "keywords": keywords
-  })}
-  </script>
-</head>
-<body>
+<BaseLayout title="Flipbook.page没有代码的浏览器 | 半百观" jsonLd={articleJsonLd} ogDescription="2026年4月底，Flipbook.page上线。没有HTML，没有CSS，没有传统网页。你输入需求，AI实时生成画面。" navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-15">2026年5月15日</time>
+        <span class="article-tag">AI前沿</span>
+      </div>
+      <h1>Flipbook.page：没有代码的浏览器</h1>
+      <p class="article-subtitle">在重新定义"上网"</p>
+    </header>
 
-<header class="article-header">
-  <div class="article-meta">
-    <span class="article-category">半百观AI</span>
-    <span class="article-date">{date}</span>
-  </div>
-  <h1 class="article-title">{title}</h1>
-</header>
-
-<article class="article-content">
+    <div class="article-content">
 
 <section class="article-section">
   <p>一个浏览器，没有HTML，没有CSS，没有传统意义上的"网页"。</p>
@@ -115,108 +93,163 @@ const keywords = ['Flipbook', 'AI浏览器', '信息检索', 'AI落地', '中小
   <p><strong>第四，生态会不会长出来。</strong>传统浏览器长出了整个互联网生态，Flipbook能不能长出类似的生态？有没有开发者愿意在它的平台上创作？</p>
 </section>
 
-</article>
+    </div>
 
-<div class="article-footer">
-  <div class="editor-note">
-    <span class="note-icon">💡</span>
-    <p><strong>吴总点评：</strong>Flipbook.page 不是一个完美的产品，但它代表了一个值得认真看待的可能性——如果信息不再需要被"写"出来，而是被"想"出来，那我们过去二十年积累的所有关于信息呈现的技能、工具、商业模式，哪些会升值，哪些会归零？没有答案，但保持关注本身就是一种准备。</p>
-  </div>
-  <p class="article-source">🔗 来源：Flipbook.page</p>
-  <p class="article-signature">半百观AI | 一个50岁AI实践者的日常观察</p>
-</div>
-
-</body>
-</html>
+    <footer class="article-footer">
+      <div class="editor-note">
+        <span class="note-icon">💡</span>
+        <p><strong>吴总点评：</strong>Flipbook.page 不是一个完美的产品，但它代表了一个值得认真看待的可能性——如果信息不再需要被"写"出来，而是被"想"出来，那我们过去二十年积累的所有关于信息呈现的技能、工具、商业模式，哪些会升值，哪些会归零？没有答案，但保持关注本身就是一种准备。</p>
+      </div>
+      <p class="article-source">🔗 来源：Flipbook.page</p>
+      <p class="article-signature">半百观AI | 一个50岁AI实践者的日常观察</p>
+      <nav class="article-nav" data-astro-cid-article-nav>
+        <span class="disabled" data-astro-cid-article-nav>&nbsp;</span>
+        <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <a href="/banbaiguan/drive-shaft-ai-future/" class="next" data-astro-cid-article-nav>1890年的那根传动轴… →</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
 
 <style>
-:global(.article-header) {
-  max-width: 680px;
-  margin: 40px auto 30px;
-  padding: 0 20px;
+.article-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
 }
-:global(.article-meta) {
+
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-meta {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
   margin-bottom: 16px;
   font-size: 14px;
-}
-:global(.article-category) {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-:global(.article-date) {
   color: var(--color-text-secondary);
 }
-:global(.article-title) {
-  font-size: 28px;
-  line-height: 1.4;
+
+.article-tag {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.article-subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
   margin: 0;
-  font-weight: 700;
 }
-:global(.article-content) {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-:global(.article-section) {
-  margin-bottom: 32px;
-}
-:global(.article-section h2) {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
-}
-:global(.article-content p) {
-  font-size: 16px;
+
+.article-content {
   line-height: 1.8;
   color: var(--color-text-secondary);
-  margin-bottom: 12px;
 }
-:global(.article-content strong) {
-  color: var(--color-text-primary);
+
+.article-content p {
+  margin: 0 0 20px;
 }
-:global(.article-content blockquote) {
-  border-left: 3px solid var(--color-primary);
-  margin: 16px 0;
-  padding: 12px 16px;
+
+.article-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  padding-top: 10px;
+  color: var(--color-text);
+}
+
+.article-content strong {
+  color: var(--color-text);
+}
+
+.article-content blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--color-accent);
   background: var(--color-bg-secondary);
   font-style: italic;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
-:global(.article-footer) {
-  max-width: 680px;
-  margin: 40px auto;
-  padding: 0 20px;
-  border-top: 1px solid var(--color-border);
+
+.article-footer {
+  margin-top: 40px;
   padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-text-secondary);
 }
-:global(.editor-note) {
+
+.editor-note {
   background: var(--color-bg-secondary);
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
-:global(.note-icon) {
+
+.note-icon {
   font-size: 18px;
 }
-:global(.article-source) {
+
+.article-source {
   font-size: 14px;
   color: var(--color-text-tertiary);
   margin-bottom: 12px;
 }
-:global(.article-source a) {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-:global(.article-source a:hover) {
-  text-decoration: underline;
-}
-:global(.article-signature) {
+
+.article-signature {
   font-size: 14px;
   color: var(--color-text-tertiary);
   text-align: center;
 }
+
+@media (max-width: 640px) {
+  .article-page {
+    padding: 40px 16px 30px;
+  }
+  .article-header h1 {
+    font-size: 26px;
+  }
+  .article-content h2 {
+    font-size: 20px;
+  }
+}
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    max-width: 40%;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+    font-size: 14px;
+  }
 </style>

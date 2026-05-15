@@ -115,6 +115,11 @@ const articleJsonLd = {
 
     <footer class="article-footer">
       <p>📌 半百观AI — 50岁视角看AI落地实践</p>
+      <nav class="article-nav" data-astro-cid-article-nav>
+        <a href="/banbaiguan/claude-code-engineering-transformation/" class="prev" data-astro-cid-article-nav>← Claude Code不…</a>
+        <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <a href="/banbaiguan/deepseek-v4-engram-regret/" class="next" data-astro-cid-article-nav>DeepSeek V4 … →</a>
+      </nav>
     </footer>
   </article>
 </BaseLayout>
@@ -232,4 +237,55 @@ const articleJsonLd = {
     font-size: 20px;
   }
 }
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+  }
+  .article-nav a, .article-nav span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+  }
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    max-width: 40%;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+    font-size: 14px;
+  }
 </style>

@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-15',
+    title: 'AI 新闻 Cron 诊断修复，日记 SOP 质量升级',
+    titleEn: 'AI News Cron Diagnosed, Diary SOP Quality Upgraded',
+    summary: 'AI 新闻 Cron 连续失败诊断（consecutiveErrors: 2）：Gateway 正常、RSS 源可用（36氪测试通过）、根因为 SearXNG baseUrl 未配置导致 web_search 失效。现有 4 个 RSS 源白名单（36氪/IT之家/开源中国/虎嗅）国内可用。两个修复方案：A-配置 SearXNG 环境变量，B-改用纯 RSS 方案。日记自动生成今日内容并部署，日记 SOP 质量升级：第一人称叙事+6 板块结构（开篇钩子/故事/待办/教训/成绩单/关于吴总）。磐石电气为制造业提供 MonolithIoT 智能工单系统、AIoT 数智化转型解决方案，服务国家电网、华为、顺丰、DHL 等头部企业。',
+    summaryEn: 'AI News Cron diagnosed (consecutiveErrors: 2): Gateway OK, RSS sources verified (36Kr passed), root cause is missing SearXNG baseUrl. 4 RSS sources available in China. Two fix options: configure SearXNG or pure RSS. Diary auto-generated with upgraded SOP quality (first-person narrative + 6-section structure).',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-14',
     title: '山山 Agent 正式上线，网站 UI 全面优化部署',
     titleEn: 'Shanshan Agent Live, Website UI Fully Optimized and Deployed',

@@ -1,26 +1,356 @@
-<!DOCTYPE html><html lang="zh-CN" data-astro-cid-d455rm66> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI学会自己写网页了，而你还在手动改Word排版？ | 半百观AI</title><meta name="description" content="Claude Code团队核心成员宣布&#34;HTML is the new Markdown&#34;，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从&#34;帮你写字&#34;变成&#34;帮你做东西&#34;。"><meta name="keywords" content="Claude Code,HTML,Markdown,AI效率,中小企业,AI落地,Anthropic"><meta property="og:title" content="AI学会自己写网页了，而你还在手动改Word排版？"><meta property="og:description" content="Claude Code团队核心成员宣布&#34;HTML is the new Markdown&#34;，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从&#34;帮你写字&#34;变成&#34;帮你做东西&#34;。"><meta property="og:type" content="article"><meta property="og:site_name" content="观吾"><meta property="og:locale" content="zh_CN"><script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": summary,
-    "datePublished": date,
-    "dateModified": date,
-    "author": {
-      "@type": "Person",
-      "name": "吴总",
-      "url": "https://ban-bai.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "半百观AI",
-      "url": "https://ban-bai.com/banbaiguan/"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ban-bai.com/banbaiguan/html-is-new-markdown/`
-    },
-    "keywords": keywords
-  })}
-  </script><style>.article-header{max-width:680px;margin:40px auto 30px;padding:0 20px}.article-meta{display:flex;gap:12px;align-items:center;margin-bottom:16px;font-size:14px}.article-category{color:var(--color-primary);font-weight:600}.article-date{color:var(--color-text-secondary)}.article-title{font-size:28px;line-height:1.4;margin:0;font-weight:700}.article-content{max-width:680px;margin:0 auto;padding:0 20px}.article-section{margin-bottom:32px}.article-section h2{font-size:20px;font-weight:600;margin-bottom:12px;color:var(--color-text-primary)}.article-content p{font-size:16px;line-height:1.8;color:var(--color-text-secondary);margin-bottom:12px}.article-content strong{color:var(--color-text-primary)}.article-content blockquote{border-left:3px solid var(--color-primary);margin:16px 0;padding:12px 16px;background:var(--color-bg-secondary);font-style:italic;color:var(--color-text-primary)}.article-footer{max-width:680px;margin:40px auto;padding:20px 20px 0;border-top:1px solid var(--color-border)}.editor-note{background:var(--color-bg-secondary);padding:16px;border-radius:8px;margin-bottom:20px}.note-icon{font-size:18px}.article-source{font-size:14px;color:var(--color-text-tertiary);margin-bottom:12px}.article-source a{color:var(--color-primary);text-decoration:none}.article-source a:hover{text-decoration:underline}.article-signature{font-size:14px;color:var(--color-text-tertiary);text-align:center}
-</style></head> <body data-astro-cid-d455rm66> <header class="article-header" data-astro-cid-d455rm66> <div class="article-meta" data-astro-cid-d455rm66> <span class="article-category" data-astro-cid-d455rm66>半百观AI</span> <span class="article-date" data-astro-cid-d455rm66>2026-05-13</span> </div> <h1 class="article-title" data-astro-cid-d455rm66>AI学会自己写网页了，而你还在手动改Word排版？</h1> </header> <article class="article-content" data-astro-cid-d455rm66> <section class="article-section" data-astro-cid-d455rm66> <p data-astro-cid-d455rm66>Anthropic 的 Claude Code 团队，最近做了一件让程序员圈子炸了的事。</p> <p data-astro-cid-d455rm66>团队核心成员 Thariq 在 X 上发了一篇帖子，标题很直白：</p> <blockquote data-astro-cid-d455rm66>"HTML is the new Markdown."</blockquote> <p data-astro-cid-d455rm66>翻译成大白话就是：<strong data-astro-cid-d455rm66>我以后不用 Markdown 了，改让 AI 生成 HTML。</strong></p> <p data-astro-cid-d455rm66>帖子发了几个小时，900万人围观。</p> <p data-astro-cid-d455rm66>不是因为他说"Markdown 不好"，而是因为他给了一个所有人都能看懂的理由：</p> <blockquote data-astro-cid-d455rm66>"我几乎停止为所有内容编写 Markdown 文件了。超过100行的 Markdown，我读起来就十分吃力。"</blockquote> <p data-astro-cid-d455rm66>这句话，很多用过 AI 写长文档的人，应该深有体会。</p> <p data-astro-cid-d455rm66>AI 生成的 Markdown 计划书，开头看着挺整齐。翻到第二页，全是"一、背景分析"、"二、实施方案"——像在喝白开水。</p> <p data-astro-cid-d455rm66>超过100行？说实话，我自己都不想看第二遍。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>他到底发现了什么？</h2> <p data-astro-cid-d455rm66>Thariq 做了个对比。</p> <p data-astro-cid-d455rm66>用 Markdown，AI 只能给你：纯文本、标题、列表。想画个图？ASCII 字符凑合。想加个颜色？Unicode 字符模拟。</p> <p data-astro-cid-d455rm66>用 HTML，AI 能给你：SVG 图表、交互式页面、带数据的仪表盘、配色完整的方案页。</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>同样的内容，同样的 AI，输出格式换了，信息密度直接翻了几倍。</strong></p> <p data-astro-cid-d455rm66>这不是技术问题，是表达效率问题。</p> <p data-astro-cid-d455rm66>有个细节很有意思。他写这篇文章的时候，让 Claude Code 扫描自己的文件夹，找出所有用 HTML 生成的文件，自动分类整理，然后生成了一个汇总页面。文章里展示的那些图表，全是 AI 基于上下文自动生成的。</p> <p data-astro-cid-d455rm66>整个过程，他不需要写一行代码。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>但这跟普通人有什么关系？</h2> <p data-astro-cid-d455rm66>你可能会想：我又不是程序员，Markdown 和 HTML 关我什么事？</p> <p data-astro-cid-d455rm66>关系很大。</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>这背后透露一个信号：AI 正在从"帮你写字"变成"帮你做东西"。</strong></p> <p data-astro-cid-d455rm66>以前你用 AI 写文章，它给你一段文字。你复制到 Word，调格式，排个版，半小时没了。</p> <p data-astro-cid-d455rm66>现在 AI 能直接给你一个排版好的页面——带图表、有配色、结构清晰。你要做的，只是把内容给它，然后说："做成网页。"</p> <p data-astro-cid-d455rm66>这对中小企业主意味着什么？</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>以后做一份商业计划书，不需要找设计师排版，不需要找人做 PPT。你把要点告诉 AI，它直接生成一份可以直接展示的页面。</strong></p> <p data-astro-cid-d455rm66>这不是未来，是现在就能干的事。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>一个反常识的结论</h2> <p data-astro-cid-d455rm66>Thariq 在文章里还提到一件事，我觉得特别有意思。</p> <p data-astro-cid-d455rm66>很多人以为，HTML 比 Markdown 复杂，普通人根本搞不定。</p> <p data-astro-cid-d455rm66>但他的体验恰恰相反：</p> <blockquote data-astro-cid-d455rm66>"以前我不知道该怎么编辑 HTML 代码。Claude 直接给了我带内联注释的可编辑 HTML 代码。问题解决了，我的工作效率也提高了。"</blockquote> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>AI 让复杂的东西变简单了。</strong></p> <p data-astro-cid-d455rm66>这不是程序员的胜利，是所有人的机会。</p> </section> </article> <div class="article-footer" data-astro-cid-d455rm66> <div class="editor-note" data-astro-cid-d455rm66> <span class="note-icon" data-astro-cid-d455rm66>💡</span> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>编者按：</strong>AI 最可怕的不是技术有多强，而是它正在让技术变得越来越不重要。当你不需要懂代码也能做出专业级产出的时候，门槛就不存在了。关键不是"AI 能做什么"，而是"你愿不愿意用它"。</p> </div> <p class="article-source" data-astro-cid-d455rm66>🔗 来源：Thariq Shihipar on X | <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener" data-astro-cid-d455rm66>The Unreasonable Effectiveness of HTML</a></p> <p class="article-signature" data-astro-cid-d455rm66>半百观AI | 一个50岁AI实践者的日常观察</p> </div> </body></html>
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-5hce7sga> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Claude Code团队核心成员宣布&#34;HTML is the new Markdown&#34;，900万人围观。AI正在从&#34;帮你写字&#34;变成&#34;帮你做东西&#34;。"><title>AI学会自己写网页了 | 半百观</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.loli.net"><link rel="preconnect" href="https://gstatic.loli.net" crossorigin><link rel="preload" as="style" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap"></noscript><link rel="alternate" hreflang="zh-CN" href="https://ban-bai.com/banbaiguan/html-is-new-markdown/"><link rel="alternate" hreflang="en" href="https://www.ban-bai.com/en/banbaiguan/html-is-new-markdown/"><link rel="alternate" hreflang="x-default" href="https://ban-bai.com/banbaiguan/html-is-new-markdown/"><meta name="author" content="观吾（吴总）"><meta name="keywords" content="AI应用,AI工具,数字化智能库存,AIoT解决方案,磐石电气,智能货柜,无人仓库,线边仓,MRO智能柜,半百观AI,50岁用AI做实事"><meta name="shenma-site-verification" content=""><meta name="sogou_site_verification" content=""><meta name="360-site-verification" content=""><link rel="canonical" href="https://www.ban-bai.com/banbaiguan/html-is-new-markdown/"><meta property="og:site_name" content="观吾"><meta property="og:type" content="website"><meta property="og:title" content="AI学会自己写网页了 | 半百观"><meta property="og:description" content="Claude Code团队核心成员宣布&#34;HTML is the new Markdown&#34;，900万人围观。AI正在从&#34;帮你写字&#34;变成&#34;帮你做东西&#34;。"><meta property="og:image" content="https://www.ban-bai.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://www.ban-bai.com/banbaiguan/html-is-new-markdown/"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI学会自己写网页了 | 半百观"><meta name="twitter:description" content="Claude Code团队核心成员宣布&#34;HTML is the new Markdown&#34;，900万人围观。AI正在从&#34;帮你写字&#34;变成&#34;帮你做东西&#34;。"><meta name="twitter:image" content="https://www.ban-bai.com/og-image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"观吾","alternateName":["banbai.ai","观吾工作日记"],"url":"https://www.ban-bai.com","description":"50岁用AI把想法变成现实 — 磐石电气联合创始人吴总的个人网站","inLanguage":"zh-CN","potentialAction":{"@type":"ReadAction","target":["https://www.ban-bai.com/diary/","https://www.ban-bai.com/ai-news/","https://www.ban-bai.com/about/"]}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"磐石电气（常州）有限公司","alternateName":"MonolithIoT","url":"https://www.monolithiot.com","logo":"https://www.ban-bai.com/logo.png","sameAs":["https://www.youtube.com/channel/UC6x3JFjaUw3nMOen2PXDtsw"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"吴总","alternateName":"观吾","jobTitle":"联合创始人","worksFor":{"@type":"Organization","name":"磐石电气（常州）有限公司"},"url":"https://www.ban-bai.com/about/","description":"50岁，磐石电气联合创始人，专注数字化智能库存管理 AIoT 产品及解决方案，半百观AI主理人","knowsAbout":["AI应用","AIoT","数字化智能库存管理","品牌管理","新媒体运营"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"半百观AI","description":"50岁视角看AI工具落地实践 — AI工具、效率提升、商业落地真实分享","url":"https://www.ban-bai.com/banbaiguan/","author":{"@type":"Person","name":"吴总","url":"https://www.ban-bai.com/about/"},"publisher":{"@type":"Organization","name":"磐石电气（常州）有限公司","url":"https://www.monolithiot.com"},"inLanguage":"zh-CN","keywords":["AI工具","AI落地","效率提升","商业AI","AI实践"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI学会自己写网页了，而你还在手动改Word排版？","datePublished":"2026-05-13","dateModified":"2026-05-13","description":"Claude Code团队核心成员宣布\"HTML is the new Markdown\"，900万人围观。这不是程序员的事，这是所有人的机会：AI正在从\"帮你写字\"变成\"帮你做东西\"。","author":{"@type":"Person","name":"吴总","url":"https://ban-bai.com/about/"},"publisher":{"@type":"Organization","name":"半百观AI","url":"https://ban-bai.com/banbaiguan/"},"keywords":["Claude Code","HTML","Markdown","AI效率","中小企业","AI落地","Anthropic"]}</script><link rel="stylesheet" href="/_astro/index.C0b-mR6D.css">
+<style>.article-page[data-astro-cid-d455rm66]{max-width:720px;margin:0 auto;padding:60px 20px 40px}.article-header[data-astro-cid-d455rm66]{margin-bottom:40px}.article-meta[data-astro-cid-d455rm66]{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:14px;color:var(--color-text-secondary)}.article-tag[data-astro-cid-d455rm66]{background:var(--color-bg-secondary);color:var(--color-text-secondary);padding:2px 10px;border-radius:12px;font-size:12px}.article-header[data-astro-cid-d455rm66] h1[data-astro-cid-d455rm66]{font-size:32px;line-height:1.3;margin:0 0 12px;color:var(--color-text)}.article-subtitle[data-astro-cid-d455rm66]{font-size:18px;color:var(--color-text-secondary);margin:0}.article-content[data-astro-cid-d455rm66]{line-height:1.8;color:var(--color-text-secondary)}.article-content[data-astro-cid-d455rm66] p[data-astro-cid-d455rm66]{margin:0 0 20px}.article-content[data-astro-cid-d455rm66] h2[data-astro-cid-d455rm66]{font-size:20px;font-weight:600;margin:40px 0 16px;padding-top:10px;color:var(--color-text)}.article-content[data-astro-cid-d455rm66] strong[data-astro-cid-d455rm66]{color:var(--color-text)}.article-content[data-astro-cid-d455rm66] blockquote[data-astro-cid-d455rm66]{margin:24px 0;padding:16px 20px;border-left:4px solid var(--color-accent);background:var(--color-bg-secondary);font-style:italic;color:var(--color-text-secondary)}.article-footer[data-astro-cid-d455rm66]{margin-top:40px;padding-top:20px;border-top:1px solid var(--color-border);font-size:14px;color:var(--color-text-secondary)}.editor-note[data-astro-cid-d455rm66]{background:var(--color-bg-secondary);padding:16px;border-radius:8px;margin-bottom:20px}.note-icon[data-astro-cid-d455rm66]{font-size:18px}.article-source[data-astro-cid-d455rm66]{font-size:14px;color:var(--color-text-tertiary);margin-bottom:12px}.article-source[data-astro-cid-d455rm66] a[data-astro-cid-d455rm66]{color:var(--color-accent);text-decoration:none}.article-source[data-astro-cid-d455rm66] a[data-astro-cid-d455rm66]:hover{text-decoration:underline}.article-signature[data-astro-cid-d455rm66]{font-size:14px;color:var(--color-text-tertiary);text-align:center}@media (max-width: 640px){.article-page[data-astro-cid-d455rm66]{padding:40px 16px 30px}.article-header[data-astro-cid-d455rm66] h1[data-astro-cid-d455rm66]{font-size:26px}.article-content[data-astro-cid-d455rm66] h2[data-astro-cid-d455rm66]{font-size:20px}}.article-nav[data-astro-cid-d455rm66]{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:1px solid var(--color-border);flex-wrap:wrap;gap:8px}.article-nav[data-astro-cid-d455rm66] a[data-astro-cid-d455rm66]{font-size:14px;color:var(--color-text-light);text-decoration:none;max-width:40%}.article-nav[data-astro-cid-d455rm66] a[data-astro-cid-d455rm66]:hover{color:var(--color-accent)}.article-nav[data-astro-cid-d455rm66] .back[data-astro-cid-d455rm66]{color:var(--color-accent);font-weight:500}.article-nav[data-astro-cid-d455rm66] .disabled[data-astro-cid-d455rm66]{visibility:hidden;font-size:14px}
+</style></head> <body data-astro-cid-5hce7sga> <header class="site-header" data-astro-cid-5hce7sga> <div class="header-inner" data-astro-cid-5hce7sga> <a href="/" class="site-brand" data-astro-cid-5hce7sga>观吾</a> <nav class="site-nav" data-astro-cid-5hce7sga> <a href="/" data-astro-cid-5hce7sga>首页</a> <a href="/diary/" data-astro-cid-5hce7sga>日记</a> <a href="/ai-news/" data-astro-cid-5hce7sga>AI新闻</a> <a href="/banbaiguan/" class="active" data-astro-cid-5hce7sga>半百观</a> <a href="/guestbook/" data-astro-cid-5hce7sga>留言板</a> <a href="/about/" data-astro-cid-5hce7sga>关于</a> <button class="theme-toggle" aria-label="Toggle dark mode" title="切换主题" data-astro-cid-5hce7sga> <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5hce7sga> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" data-astro-cid-5hce7sga></path> </svg> </button> <a href="https://www.ban-bai.com/en/banbaiguan/html-is-new-markdown/" class="lang-switch" data-astro-cid-5hce7sga>EN</a> </nav> </div> </header> <main class="container" data-astro-cid-5hce7sga>  <article class="article-page" data-astro-cid-d455rm66> <header class="article-header" data-astro-cid-d455rm66> <div class="article-meta" data-astro-cid-d455rm66> <time datetime="2026-05-13" data-astro-cid-d455rm66>2026年5月13日</time> <span class="article-tag" data-astro-cid-d455rm66>AI前沿</span> </div> <h1 data-astro-cid-d455rm66>AI学会自己写网页了</h1> <p class="article-subtitle" data-astro-cid-d455rm66>而你还在手动改Word排版？</p> </header> <div class="article-content" data-astro-cid-d455rm66> <section class="article-section" data-astro-cid-d455rm66> <p data-astro-cid-d455rm66>Anthropic 的 Claude Code 团队，最近做了一件让程序员圈子炸了的事。</p> <p data-astro-cid-d455rm66>团队核心成员 Thariq 在 X 上发了一篇帖子，标题很直白：</p> <blockquote data-astro-cid-d455rm66>"HTML is the new Markdown."</blockquote> <p data-astro-cid-d455rm66>翻译成大白话就是：<strong data-astro-cid-d455rm66>我以后不用 Markdown 了，改让 AI 生成 HTML。</strong></p> <p data-astro-cid-d455rm66>帖子发了几个小时，900万人围观。</p> <p data-astro-cid-d455rm66>不是因为他说"Markdown 不好"，而是因为他给了一个所有人都能看懂的理由：</p> <blockquote data-astro-cid-d455rm66>"我几乎停止为所有内容编写 Markdown 文件了。超过100行的 Markdown，我读起来就十分吃力。"</blockquote> <p data-astro-cid-d455rm66>这句话，很多用过 AI 写长文档的人，应该深有体会。</p> <p data-astro-cid-d455rm66>AI 生成的 Markdown 计划书，开头看着挺整齐。翻到第二页，全是"一、背景分析"、"二、实施方案"——像在喝白开水。</p> <p data-astro-cid-d455rm66>超过100行？说实话，我自己都不想看第二遍。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>他到底发现了什么？</h2> <p data-astro-cid-d455rm66>Thariq 做了个对比。</p> <p data-astro-cid-d455rm66>用 Markdown，AI 只能给你：纯文本、标题、列表。想画个图？ASCII 字符凑合。想加个颜色？Unicode 字符模拟。</p> <p data-astro-cid-d455rm66>用 HTML，AI 能给你：SVG 图表、交互式页面、带数据的仪表盘、配色完整的方案页。</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>同样的内容，同样的 AI，输出格式换了，信息密度直接翻了几倍。</strong></p> <p data-astro-cid-d455rm66>这不是技术问题，是表达效率问题。</p> <p data-astro-cid-d455rm66>有个细节很有意思。他写这篇文章的时候，让 Claude Code 扫描自己的文件夹，找出所有用 HTML 生成的文件，自动分类整理，然后生成了一个汇总页面。文章里展示的那些图表，全是 AI 基于上下文自动生成的。</p> <p data-astro-cid-d455rm66>整个过程，他不需要写一行代码。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>但这跟普通人有什么关系？</h2> <p data-astro-cid-d455rm66>你可能会想：我又不是程序员，Markdown 和 HTML 关我什么事？</p> <p data-astro-cid-d455rm66>关系很大。</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>这背后透露一个信号：AI 正在从"帮你写字"变成"帮你做东西"。</strong></p> <p data-astro-cid-d455rm66>以前你用 AI 写文章，它给你一段文字。你复制到 Word，调格式，排个版，半小时没了。</p> <p data-astro-cid-d455rm66>现在 AI 能直接给你一个排版好的页面——带图表、有配色、结构清晰。你要做的，只是把内容给它，然后说："做成网页。"</p> <p data-astro-cid-d455rm66>这对中小企业主意味着什么？</p> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>以后做一份商业计划书，不需要找设计师排版，不需要找人做 PPT。你把要点告诉 AI，它直接生成一份可以直接展示的页面。</strong></p> <p data-astro-cid-d455rm66>这不是未来，是现在就能干的事。</p> </section> <section class="article-section" data-astro-cid-d455rm66> <h2 data-astro-cid-d455rm66>一个反常识的结论</h2> <p data-astro-cid-d455rm66>Thariq 在文章里还提到一件事，我觉得特别有意思。</p> <p data-astro-cid-d455rm66>很多人以为，HTML 比 Markdown 复杂，普通人根本搞不定。</p> <p data-astro-cid-d455rm66>但他的体验恰恰相反：</p> <blockquote data-astro-cid-d455rm66>"以前我不知道该怎么编辑 HTML 代码。Claude 直接给了我带内联注释的可编辑 HTML 代码。问题解决了，我的工作效率也提高了。"</blockquote> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>AI 让复杂的东西变简单了。</strong></p> <p data-astro-cid-d455rm66>这不是程序员的胜利，是所有人的机会。</p> </section> </div> <footer class="article-footer" data-astro-cid-d455rm66> <div class="editor-note" data-astro-cid-d455rm66> <span class="note-icon" data-astro-cid-d455rm66>💡</span> <p data-astro-cid-d455rm66><strong data-astro-cid-d455rm66>编者按：</strong>AI 最可怕的不是技术有多强，而是它正在让技术变得越来越不重要。当你不需要懂代码也能做出专业级产出的时候，门槛就不存在了。关键不是"AI 能做什么"，而是"你愿不愿意用它"。</p> </div> <p class="article-source" data-astro-cid-d455rm66>🔗 来源：Thariq Shihipar on X | <a href="https://thariqs.github.io/html-effectiveness/" target="_blank" rel="noopener" data-astro-cid-d455rm66>The Unreasonable Effectiveness of HTML</a></p> <p class="article-signature" data-astro-cid-d455rm66>半百观AI | 一个50岁AI实践者的日常观察</p> <nav class="article-nav" data-astro-cid-article-nav data-astro-cid-d455rm66> <a href="/banbaiguan/drive-shaft-ai-future/" class="prev" data-astro-cid-article-nav data-astro-cid-d455rm66>← 1890年的那根传动轴…</a> <a href="/banbaiguan/" class="back" data-astro-cid-article-nav data-astro-cid-d455rm66>返回文章列表</a> <a href="/banbaiguan/anthropic-revenue-80x/" class="next" data-astro-cid-article-nav data-astro-cid-d455rm66>Anthropic营收暴增… →</a> </nav> </footer> </article>  </main> <footer class="site-footer" data-astro-cid-5hce7sga> <div class="container" data-astro-cid-5hce7sga> <div class="footer-content" data-astro-cid-5hce7sga> <div class="footer-left" data-astro-cid-5hce7sga> <p class="footer-brand" data-astro-cid-5hce7sga>观吾</p> <a href="https://www.monolithiot.com" class="footer-company-link" target="_blank" rel="noopener" data-astro-cid-5hce7sga>公司业务官网 →</a> </div> <div class="footer-right" data-astro-cid-5hce7sga> <p style="font-size: 12px; opacity: 0.6;" data-astro-cid-5hce7sga>扫码关注「半百观AI」</p> <div class="footer-qr-mini" data-astro-cid-5hce7sga> <div class="footer-qr-item" data-astro-cid-5hce7sga> <img src="/gzh-qr.jpg" alt="公众号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" data-astro-cid-5hce7sga> <span style="font-size: 10px; opacity: 0.6;" data-astro-cid-5hce7sga>公众号</span> </div> <div class="footer-qr-item" data-astro-cid-5hce7sga> <img src="/dy-qr.jpg" alt="视频号" style="width: 48px; height: 48px; border-radius: 6px;" loading="lazy" data-astro-cid-5hce7sga> <span style="font-size: 10px; opacity: 0.6;" data-astro-cid-5hce7sga>视频号</span> </div> </div> </div> </div> <div class="footer-bottom" data-astro-cid-5hce7sga> <p style="font-size: 11px; opacity: 0.4;" data-astro-cid-5hce7sga>© 2026 观吾 · banbai.ai</p> </div> </div> </footer> <div id="chat-widget-root" data-astro-cid-ryytxnzt> <button id="chat-toggle-btn" aria-label="打开山山 AI 助理对话" title="和山山对话" data-astro-cid-ryytxnzt> <span class="chat-icon" data-astro-cid-ryytxnzt>🤖</span> </button> <div id="chat-panel" class="hidden" role="dialog" aria-label="AI chat window" data-astro-cid-ryytxnzt> <div class="chat-header" data-astro-cid-ryytxnzt> <div class="chat-header-info" data-astro-cid-ryytxnzt> <span class="chat-avatar" data-astro-cid-ryytxnzt>🤖</span> <div data-astro-cid-ryytxnzt> <span class="chat-title" data-astro-cid-ryytxnzt>山山 AI 助理</span> <span class="chat-status" id="chat-status" data-astro-cid-ryytxnzt>半百观AI · 在线</span> </div> </div> <button id="chat-close-btn" aria-label="关闭对话" data-astro-cid-ryytxnzt> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" data-astro-cid-ryytxnzt><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-astro-cid-ryytxnzt></path></svg> </button> </div> <div class="quick-actions" id="quick-actions" data-astro-cid-ryytxnzt> <button class="quick-action-btn" data-action="ai-news" data-astro-cid-ryytxnzt> <span class="qa-icon" data-astro-cid-ryytxnzt>📰</span> <span class="qa-text" data-astro-cid-ryytxnzt>今日 AI</span> </button> <button class="quick-action-btn" data-action="follow-us" data-astro-cid-ryytxnzt> <span class="qa-icon" data-astro-cid-ryytxnzt>📺</span> <span class="qa-text" data-astro-cid-ryytxnzt>关注我们</span> </button> <button class="quick-action-btn" data-action="latest-articles" data-astro-cid-ryytxnzt> <span class="qa-icon" data-astro-cid-ryytxnzt>📝</span> <span class="qa-text" data-astro-cid-ryytxnzt>最新文章</span> </button> <button class="quick-action-btn" data-action="guestbook" data-astro-cid-ryytxnzt> <span class="qa-icon" data-astro-cid-ryytxnzt>💬</span> <span class="qa-text" data-astro-cid-ryytxnzt>留言板</span> </button> </div> <div class="chat-messages" id="chat-messages" data-astro-cid-ryytxnzt> <div class="chat-message bot" data-astro-cid-ryytxnzt> <div class="message-avatar" data-astro-cid-ryytxnzt>🤖</div> <div class="message-bubble" data-astro-cid-ryytxnzt> <p data-astro-cid-ryytxnzt>你好！我是山山，半百观AI 的智能助理 🤖</p> <p data-astro-cid-ryytxnzt>我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。</p> <p style="margin-top:8px;font-size:12px;opacity:0.8;" data-astro-cid-ryytxnzt>💡 你可以问我：</p> <p style="font-size:12px;opacity:0.8;" data-astro-cid-ryytxnzt>• 最近有什么好用的 AI 工具？<br/>• 你们在哪些平台有账号？<br/>• 有什么值得看的 AI 文章？</p> </div> </div> </div> <div class="chat-input-area" data-astro-cid-ryytxnzt> <textarea id="chat-input" placeholder="问问山山..." rows="1" maxlength="2000" data-astro-cid-ryytxnzt></textarea> <button id="chat-send-btn" aria-label="发送消息" disabled data-astro-cid-ryytxnzt> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" data-astro-cid-ryytxnzt><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ryytxnzt></path></svg> </button> </div> </div> </div> <script>(function(){const lang = "zh";
+
+(function() {
+  const CHAT_API_URL = '/api/chat';
+  const MAX_MESSAGES = 50;
+
+  const toggleBtn = document.getElementById('chat-toggle-btn');
+  const closeBtn = document.getElementById('chat-close-btn');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const chatSendBtn = document.getElementById('chat-send-btn');
+  const chatStatus = document.getElementById('chat-status');
+
+  const isEn = lang === 'en';
+
+  const texts = {
+    platforms: isEn
+      ? [
+          { name: 'WeChat Official Account', icon: '💬' },
+          { name: 'Video Account', icon: '🎥' },
+          { name: 'Douyin', icon: '🎵' },
+          { name: 'Toutiao', icon: '📰' },
+          { name: 'Xigua Video', icon: '🍉' },
+          { name: 'Bilibili', icon: '📺' },
+          { name: 'Xiaohongshu', icon: '📕' },
+        ]
+      : [
+          { name: '微信公众号', icon: '💬' },
+          { name: '视频号', icon: '🎥' },
+          { name: '抖音', icon: '🎵' },
+          { name: '今日头条', icon: '📰' },
+          { name: '西瓜视频', icon: '🍉' },
+          { name: 'B 站', icon: '📺' },
+          { name: '小红书', icon: '📕' },
+        ],
+    followTitle: isEn ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇',
+    followFooter: isEn ? 'Search "半百观AI" on all platforms to find us ✨' : '全平台搜索"半百观AI"即可找到我们 ✨',
+    onlineStatus: isEn ? 'Online' : '半百观AI · 在线',
+    thinking: isEn ? 'Thinking...' : '思考中...',
+    errorReply: isEn ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。',
+    newsPrompt: isEn ? 'Please briefly introduce today\'s top 3 AI news highlights.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。',
+    articlesPrompt: isEn ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。',
+  };
+
+  let isOpen = false;
+  let isLoading = false;
+  let messageHistory = [];
+
+  function toggleChat() {
+    isOpen = !isOpen;
+    chatPanel.classList.toggle('hidden', !isOpen);
+    if (isOpen) {
+      setTimeout(() => chatInput.focus(), 200);
+    }
+  }
+
+  function showPlatformCard() {
+    const cardHTML = `
+      <p>${texts.followTitle}</p>
+      <div class="platform-card">
+        ${texts.platforms.map(p => `
+          <div class="platform-item">
+            <span>${p.icon}</span>
+            <span>${p.name}</span>
+            <span style="margin-left:auto;font-size:12px;color:#64748b;">半百观AI</span>
+          </div>
+        `).join('')}
+      </div>
+      <p style="margin-top:8px;font-size:12px;opacity:0.7;">${texts.followFooter}</p>
+    `;
+    addMessage('bot', cardHTML, true);
+  }
+
+  async function sendToBot(text) {
+    if (isLoading) return;
+    addMessage('user', text);
+    messageHistory.push({ role: 'user', content: text });
+    isLoading = true;
+    showLoading(true);
+    setStatus(texts.thinking, true);
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'openclaw',
+          messages: messageHistory,
+          stream: true,
+        }),
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let botMessage = '';
+      let buffer = '';
+      showLoading(false);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `<div class="message-avatar">🤖</div><div class="message-bubble"></div>`;
+      chatMessages.appendChild(botMsg);
+      const bubble = botMsg.querySelector('.message-bubble');
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                botMessage += delta;
+                bubble.textContent = botMessage;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            } catch {}
+          }
+        }
+      }
+      messageHistory.push({ role: 'assistant', content: botMessage });
+      setStatus(texts.onlineStatus);
+    } catch (error) {
+      showLoading(false);
+      setStatus(texts.errorReply, true);
+      addMessage('bot', texts.errorReply);
+      setTimeout(() => setStatus(texts.onlineStatus), 5000);
+    } finally {
+      isLoading = false;
+      chatInput.focus();
+    }
+  }
+
+  function handleQuickAction(action) {
+    switch (action) {
+      case 'ai-news':
+        sendToBot(texts.newsPrompt);
+        break;
+      case 'follow-us':
+        showPlatformCard();
+        break;
+      case 'latest-articles':
+        sendToBot(texts.articlesPrompt);
+        break;
+      case 'guestbook':
+        window.location.href = '/guestbook';
+        break;
+    }
+  }
+
+  function addMessage(role, content, isHTML = false) {
+    const msg = document.createElement('div');
+    msg.className = `chat-message ${role}`;
+
+    const avatar = document.createElement('div');
+    avatar.className = 'message-avatar';
+    avatar.textContent = role === 'user' ? '👤' : '🤖';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble';
+
+    if (isHTML) {
+      bubble.innerHTML = content;
+    } else if (role === 'bot' && content.includes('\n')) {
+      content.split('\n').filter(Boolean).forEach(line => {
+        const p = document.createElement('p');
+        p.textContent = line;
+        bubble.appendChild(p);
+      });
+    } else {
+      bubble.textContent = content;
+    }
+
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+    chatMessages.appendChild(msg);
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    while (chatMessages.children.length > MAX_MESSAGES) {
+      chatMessages.removeChild(chatMessages.firstChild);
+    }
+  }
+
+  function showLoading(show) {
+    const existing = document.querySelector('.chat-message.typing');
+    if (show && !existing) {
+      const msg = document.createElement('div');
+      msg.className = 'chat-message bot typing';
+      msg.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-bubble">
+          <div class="typing-indicator"><span></span><span></span><span></span></div>
+        </div>
+      `;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    } else if (!show && existing) {
+      existing.remove();
+    }
+  }
+
+  function setStatus(text, loading = false) {
+    chatStatus.textContent = text;
+    chatStatus.classList.toggle('loading', loading);
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text || isLoading) return;
+
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+    chatSendBtn.disabled = true;
+
+    addMessage('user', text);
+    messageHistory.push({ role: 'user', content: text });
+
+    isLoading = true;
+    showLoading(true);
+    setStatus(texts.thinking, true);
+
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'openclaw',
+          messages: messageHistory,
+          stream: true,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let botMessage = '';
+      let buffer = '';
+
+      showLoading(false);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-bubble"></div>
+      `;
+      chatMessages.appendChild(botMsg);
+      const bubble = botMsg.querySelector('.message-bubble');
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                botMessage += delta;
+                bubble.textContent = botMessage;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            } catch {}
+          }
+        }
+      }
+
+      messageHistory.push({ role: 'assistant', content: botMessage });
+      setStatus(texts.onlineStatus);
+
+    } catch (error) {
+      showLoading(false);
+      setStatus(texts.offline, true);
+      console.error('Chat error:', error);
+      addMessage('bot', texts.errorReply);
+
+      setTimeout(() => setStatus(texts.onlineStatus), 5000);
+    } finally {
+      isLoading = false;
+      chatInput.focus();
+    }
+  }
+
+  chatInput.addEventListener('input', () => {
+    chatInput.style.height = 'auto';
+    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+    chatSendBtn.disabled = !chatInput.value.trim();
+  });
+
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  toggleBtn.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+  chatSendBtn.addEventListener('click', sendMessage);
+
+  const quickActionsEl = document.getElementById('quick-actions');
+  if (quickActionsEl) {
+    quickActionsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.quick-action-btn');
+      if (btn) {
+        handleQuickAction(btn.dataset.action);
+      }
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleChat();
+    }
+  });
+})();
+})();</script>  <script>
+      // 暗色模式切换 — 立即执行，避免闪烁
+      (function() {
+        const html = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark') html.setAttribute('data-theme', 'dark');
+        else if (stored === 'light') html.setAttribute('data-theme', 'light');
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var btn = document.querySelector('.theme-toggle');
+          if (!btn) return;
+          btn.addEventListener('click', function() {
+            var current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+              html.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+            } else {
+              html.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        });
+      })();
+    </script>  </body> </html> 

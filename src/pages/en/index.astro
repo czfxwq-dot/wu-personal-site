@@ -103,12 +103,12 @@ const latestArticle = articles[0];
         </a>
 
         <!-- BanbaiGuan -->
-        <a href={`/en/banbaiguan/${latestArticle.slug}/`} class="grid-card card-article">
+        <a href="/en/banbaiguan/" class="grid-card card-article">
           <div class="card-label">
             <span class="label-icon">🎯</span>
             <span class="label-text">BanbaiGuan AI</span>
           </div>
-          <div class="card-date">{latestArticle.date}</div>
+          <div class="card-date">{latestArticle.date} · {articles.length} articles</div>
           <h3 class="card-heading">{latestArticle.titleEn}</h3>
           <p class="card-excerpt">{latestArticle.excerptEn}</p>
         </a>

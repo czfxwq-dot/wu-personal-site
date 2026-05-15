@@ -1,61 +1,39 @@
 ---
-// DeepSeek V4开源：万亿参数、百万token上下文，中国AI又放大招
-const title = 'DeepSeek V4开源：万亿参数、百万token上下文，中国AI又放大招';
-const date = '2026-05-11';
-const summary = 'DeepSeek V4正式开源，两个版本（V4-Pro 1.6万亿参数、V4-Flash 2840亿参数），百万token上下文标配，MIT开源协议。对于中小企业来说，意味着企业知识库、代码辅助开发、智能客服升级都能用上了。技术民主化，这才是真正的革命。';
-const keywords = ['DeepSeek', '开源', '大模型', '万亿参数', '百万token', '中小企业', '企业知识库', '技术民主化'];
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": 'DeepSeek V4开源：万亿参数、百万token上下文，中国AI又放大招',
+  "datePublished": '2026-05-11',
+  "dateModified": '2026-05-11',
+  "description": 'DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。对于中小企业来说，意味着企业知识库、代码辅助开发、智能客服升级都能用上了。技术民主化，这才是真正的革命。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['DeepSeek', '开源', '大模型', '万亿参数', '百万token', '中小企业', '企业知识库', '技术民主化']
+};
 ---
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} | 半百观AI</title>
-  <meta name="description" content={summary}>
-  <meta name="keywords" content={keywords.join(',')}>
-  <meta property="og:title" content={title}>
-  <meta property="og:description" content={summary}>
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="观吾">
-  <meta property="og:locale" content="zh_CN">
-  <script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": summary,
-    "datePublished": date,
-    "dateModified": date,
-    "author": {
-      "@type": "Person",
-      "name": "吴总",
-      "url": "https://ban-bai.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "半百观AI",
-      "url": "https://ban-bai.com/banbaiguan/"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ban-bai.com/banbaiguan/deepseek-v4-open-source/`
-    },
-    "keywords": keywords
-  })}
-  </script>
-</head>
-<body>
+<BaseLayout title="DeepSeek V4开源 | 半百观" jsonLd={articleJsonLd} ogDescription="DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。" navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-11">2026年5月11日</time>
+        <span class="article-tag">AI产业</span>
+      </div>
+      <h1>DeepSeek V4开源：万亿参数、百万token上下文</h1>
+      <p class="article-subtitle">中国AI又放大招</p>
+    </header>
 
-<header class="article-header">
-  <div class="article-meta">
-    <span class="article-category">半百观AI</span>
-    <span class="article-date">{date}</span>
-  </div>
-  <h1 class="article-title">{title}</h1>
-</header>
-
-<article class="article-content">
+    <div class="article-content">
 
 <section class="article-section">
   <h2>01 一句话总结：大，而且开源</h2>
@@ -97,74 +75,126 @@ const keywords = ['DeepSeek', '开源', '大模型', '万亿参数', '百万toke
   <p>不是因为模型变大了，而是因为门槛变低了。</p>
 </section>
 
-</article>
+    </div>
 
-<div class="article-footer">
-  <p class="article-signature">半百观AI | 一个50岁AI实践者的日常观察</p>
-</div>
-
-</body>
-</html>
+    <footer class="article-footer">
+      <p>📌 半百观AI — 50岁视角看AI落地实践</p>
+      <nav class="article-nav" data-astro-cid-article-nav>
+        <a href="/banbaiguan/anthropic-revenue-80x/" class="prev" data-astro-cid-article-nav>← Anthropic营收暴增80倍…</a>
+        <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <a href="/banbaiguan/claude-code-engineering-transformation/" class="next" data-astro-cid-article-nav>Claude Code不再帮你… →</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
 
 <style>
-:global(.article-header) {
-  max-width: 680px;
-  margin: 40px auto 30px;
-  padding: 0 20px;
+.article-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
 }
-:global(.article-meta) {
+
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-meta {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
   margin-bottom: 16px;
   font-size: 14px;
-}
-:global(.article-category) {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-:global(.article-date) {
   color: var(--color-text-secondary);
 }
-:global(.article-title) {
-  font-size: 28px;
-  line-height: 1.4;
+
+.article-tag {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.article-subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
   margin: 0;
-  font-weight: 700;
 }
-:global(.article-content) {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-:global(.article-section) {
-  margin-bottom: 32px;
-}
-:global(.article-section h2) {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
-}
-:global(.article-content p) {
-  font-size: 16px;
+
+.article-content {
   line-height: 1.8;
   color: var(--color-text-secondary);
-  margin-bottom: 12px;
 }
-:global(.article-content strong) {
-  color: var(--color-text-primary);
+
+.article-content p {
+  margin: 0 0 20px;
 }
-:global(.article-footer) {
-  max-width: 680px;
-  margin: 40px auto;
-  padding: 0 20px;
-  border-top: 1px solid var(--color-border);
+
+.article-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  padding-top: 10px;
+  color: var(--color-text);
+}
+
+.article-content strong {
+  color: var(--color-text);
+}
+
+.article-footer {
+  margin-top: 40px;
   padding-top: 20px;
-}
-:global(.article-signature) {
+  border-top: 1px solid var(--color-border);
   font-size: 14px;
-  color: var(--color-text-tertiary);
-  text-align: center;
+  color: var(--color-text-secondary);
 }
+
+@media (max-width: 640px) {
+  .article-page {
+    padding: 40px 16px 30px;
+  }
+  .article-header h1 {
+    font-size: 26px;
+  }
+  .article-content h2 {
+    font-size: 20px;
+  }
+}
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-nav a {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    max-width: 40%;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  .article-nav .disabled {
+    visibility: hidden;
+    font-size: 14px;
+  }
 </style>

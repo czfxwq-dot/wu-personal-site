@@ -24,6 +24,138 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-16',
+    title: 'AI新闻 | 英国警告AI网络攻击能力远超专业人员 + 阿里发布Qoder 1.0智能体开发台 + Anthropic推Claude for Legal + 微软砍掉Claude Code许可 + xAI发布Grok Build',
+    titleEn: 'AI News | UK Warns AI Cyber Attack Capability Surpasses Professionals + Alibaba Launches Qoder 1.0 + Anthropic Claude for Legal + Microsoft Cuts Claude Code + xAI Grok Build',
+    summary: '今日AI行业五大看点：英国财政部等三部门联合警告最先进AI模型网络攻击能力远超专业人员；阿里发布Qoder 1.0从AI IDE升级为智能体自主开发工作台；Anthropic发布Claude for Legal面向法律行业AI助手；微软内部大规模取消Claude Code许可要求开发者改用Copilot CLI；xAI发布Grok Build面向编码和自动化的Agentic CLI工具。',
+    summaryEn: 'Five highlights: UK warns top AI models\' cyber attack capabilities far exceed human professionals; Alibaba Qoder 1.0 upgrades to agentic autonomous dev workspace; Anthropic Claude for Legal targets legal industry; Microsoft cancels Claude Code licenses internally; xAI releases Grok Build agentic CLI for coding.',
+    newsItems: [
+      {
+        title: '英国多部门联合警告：当前最先进AI模型网络攻击能力已远超专业人员',
+        titleEn: 'UK Joint Warning: Top AI Models\' Cyber Attack Capability Far Exceeds Professionals',
+        summary: '英国财政部、英格兰银行及金融行为监管局发布联合警告，当前最先进AI模型在网络攻击领域已展现出远超普通专业人员的能力，且攻击速度更快、覆盖范围更大、成本更低。一旦这些能力被恶意利用，企业运营安全、客户数据及金融市场稳定性都可能面临更严重的网络安全威胁。',
+        summaryEn: 'UK Treasury, Bank of England, and FCA jointly warn that top AI models demonstrate cyber attack capabilities far exceeding human professionals, with faster speed, broader scope, and lower cost.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/951/144.htm'
+      },
+      {
+        title: '阿里发布Qoder 1.0：智能体自主开发工作台',
+        titleEn: 'Alibaba Releases Qoder 1.0: Agentic Autonomous Development Workspace',
+        summary: '阿里正式发布Qoder 1.0，从AI IDE升级为智能体自主开发工作台。用户只需专注需求定义，Agent团队即可自动驾驶，自主完成执行、验证和交付全流程。Quest从IDE内一个模式升级为独立视窗，集成任务管理、状态追踪、产物审查和知识调用等能力。支持Windows、macOS和Linux。',
+        summaryEn: 'Alibaba officially releases Qoder 1.0, upgrading from AI IDE to agentic autonomous dev workspace. Users define goals, agents handle execution, validation, and delivery autonomously.',
+        source: '开源中国',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.oschina.net/news/441008'
+      },
+      {
+        title: 'Anthropic发布Claude for Legal：面向法律行业的AI助手套件',
+        titleEn: 'Anthropic Launches Claude for Legal: AI Assistant Suite for Legal Industry',
+        summary: 'Anthropic正式发布Claude for Legal，面向法律工作流程的AI助手参考实现。覆盖企业内部法务、隐私、产品、诉讼、监管、AI治理、知识产权等场景。提供两种使用方式：作为Claude Cowork或Claude Code插件安装，或通过Claude Managed Agents API部署在自有工作流引擎背后。',
+        summaryEn: 'Anthropic launches Claude for Legal, covering in-house counsel, privacy, product, litigation, regulation, AI governance, and IP. Available as Claude Cowork/Code plugin or via Managed Agents API.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/441163'
+      },
+      {
+        title: 'Claude Code太好用，微软决定砍掉它',
+        titleEn: 'Claude Code Too Good, Microsoft Decides to Cut It',
+        summary: '微软正在内部大规模取消Claude Code的使用许可，数千名开发者被要求在6月30日微软当前财年最后一天前，改用GitHub Copilot CLI。这反映出Claude Code在生产环境中表现优异，甚至威胁到微软自家AI编程工具的市场地位。',
+        summaryEn: 'Microsoft is mass-canceling Claude Code licenses internally, requiring thousands of developers to switch to GitHub Copilot CLI by June 30, reflecting Claude Code\'s strong production performance.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/441067'
+      },
+      {
+        title: 'xAI发布Agentic CLI工具Grok Build',
+        titleEn: 'xAI Releases Agentic CLI Tool Grok Build',
+        summary: 'xAI发布Grok Build早期测试版，面向SuperGrok Heavy订阅用户。该工具定位为智能开发助手，具备自主推理能力，可分析项目结构、编写代码、调试问题并自动化重复性开发工作流程。与传命令行工具不同，Grok Build能理解开发者意图并执行复杂编码任务。',
+        summaryEn: 'xAI releases Grok Build early test for SuperGrok Heavy users. Autonomous reasoning capabilities for code analysis, writing, debugging, and automating repetitive dev workflows.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/441096'
+      }
+    ],
+    comment: 'AI网络安全风险升级（英国三部门联合警告），AI编程工具竞争白热化（微软砍Claude Code转向Copilot），AI行业垂直化加速（法律场景Claude for Legal），国产AI开发平台阿里Qoder 1.0主打Agent自主开发。各大科技巨头围绕AI编程工具的竞争正在从功能比拼转向生态锁定。',
+    commentEn: 'AI cybersecurity risks escalate (UK tri-agency warning), AI coding tool competition intensifies (Microsoft drops Claude Code for Copilot), vertical AI acceleration (Claude for Legal), Alibaba Qoder 1.0 focuses on autonomous agent development. Big tech competition around AI coding tools is shifting from feature race to ecosystem lock-in.',
+  },
+  {
+    date: '2026-05-15',
+    title: 'AI新闻 | Anthropic称90%代码由AI完成 + 腾讯混元3.0调用量登顶全球 + 美国批准H200售华 + 具身智能化工场景方案首发',
+    titleEn: 'AI News | Anthropic 90% Code AI-Written + Tencent Hunyuan 3.0 Tops Global + US Approves H200 Sales to China + Embodied AI Chemical Scenario Debuts',
+    summary: '今日AI行业三大看点：Anthropic CFO透露公司已用AI编写90%的代码，白领工作重心从执行转向监督；腾讯2026Q1财报显示混元3.0上线两周以3.03万亿Token周调用量登顶全球榜首，Hy3 Preview连续三周登顶OpenRouter全球总榜；浙江人形机器人创新中心联合施耐德电气全球首发具身智能化工实验场景解决方案。',
+    summaryEn: 'Three highlights: Anthropic CFO says 90% of company code is AI-written; Tencent Hunyuan 3.0 tops global with 3.03T weekly token calls; Zhejiang humanoid robot center debuts embodied AI chemical experiment solution with Schneider Electric.',
+    newsItems: [
+      {
+        title: 'Anthropic高管：公司90%代码已由AI完成',
+        titleEn: 'Anthropic Exec: 90% of Company Code Written by AI',
+        summary: 'Anthropic首席财务官表示，AI已编写公司90%的代码，使白领工作重心从执行转向监督。这些言论透露出这家硅谷顶级AI公司对未来白领工作的看法：AI未必会直接消灭大量岗位，但会自动化掉员工日常工作中的大部分执行任务，使员工逐渐变成AI系统的"监督者"。',
+        summaryEn: 'Anthropic CFO says AI has written 90% of company code, shifting white-collar work from execution to oversight. AI may not eliminate jobs directly but will automate most execution tasks.',
+        source: '36氪',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.36kr.com/newsflashes/3809038235049737'
+      },
+      {
+        title: '腾讯Q1财报：混元3.0上线两周调用量登顶全球，AI投入持续加大',
+        titleEn: 'Tencent Q1: Hunyuan 3.0 Tops Global Calls in Two Weeks, AI Investment Surges',
+        summary: '腾讯2026Q1财报显示，混元3.0上线仅两周就以3.03万亿Token周调用量登顶全球榜首；Hy3 Preview连续三周登顶OpenRouter全球总榜，工具调用、编程两大细分场景排名第一。Q1资本开支同比增长16.2%达319.4亿元，研发投入同比增长19%达225.4亿元，主要用于AI基础设施和人才。',
+        summaryEn: 'Tencent Q1 2026: Hunyuan 3.0 tops global with 3.03T weekly token calls in just two weeks. Hy3 Preview tops OpenRouter for three consecutive weeks. Capex +16.2% to 31.9B RMB, R&D +19% to 22.5B RMB for AI infrastructure.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article'
+      },
+      {
+        title: '浙江人形机器人联合施耐德电气首发具身智能化工实验场景解决方案',
+        titleEn: 'Zhejiang Humanoid Robot & Schneider Electric Debut Embodied AI Chemical Solution',
+        summary: '浙江人形机器人创新中心联合施耐德电气，全球首发具身智能化工实验场景解决方案。该方案以NAVIAI-WA2轮臂式人形机器人为核心，适配施耐德PLC及协作机械臂，标志着人形机器人在工业化工场景的落地探索迈出重要一步。',
+        summaryEn: 'Zhejiang Humanoid Robot Innovation Center and Schneider Electric debut embodied AI chemical experiment solution, centered on NAVIAI-WA2 wheeled-arm humanoid robot with Schneider PLC and collaborative arms.',
+        source: '36氪',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.36kr.com/newsflashes/3809083605048840'
+      },
+      {
+        title: '法拉第未来转型实体AI生态公司，EAI机器人业务首季创收',
+        titleEn: 'Faraday Future Pivots to Physical AI, EAI Robot Revenue in Q1',
+        summary: '法拉第未来2026财年Q1正式完成向实体AI生态公司转型，EAI机器人业务成为全新收入引擎，实现交付首季度即产生收入并实现正向单品毛利。截至4月底EAI机器人累计发货68台，全年发货目标上调至1500台。美国SEC结束长达四年的调查未处罚，公司获5700万美元新融资。',
+        summaryEn: 'Faraday Future completes pivot to Physical AI company in Q1 FY2026. EAI robot business generates revenue with positive unit margin. 68 units shipped, full-year target raised to 1,500. SEC ends 4-year probe with no penalties. $57M new financing secured.',
+        source: 'IT之家',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.ithome.com/0/950/655.htm'
+      },
+      {
+        title: '郭明錤：苹果正基于Intel 18A-P工艺开发处理器，培养新供应商对冲台积电风险',
+        titleEn: 'Ming-Chi Kuo: Apple Developing Chips on Intel 18A-P, Diversifying from TSMC',
+        summary: '天风国际分析师郭明錤发布产业调查，苹果确认已在Intel 18A-P系列上启动针对iPhone、iPad及Mac处理器的开发项目。苹果正在有系统地培养英特尔成为关键供应商，以降低对台积电的单一依赖。iPhone相关处理器占比约80%，2027年计划放量生产，台积电仍占90%以上供应比重。',
+        summaryEn: 'Analyst Ming-Chi Kuo reports Apple has started A/M series processor development on Intel 18A-P for iPhone, iPad, Mac. Apple systematically cultivating Intel as key supplier to reduce TSMC dependency. 2027 volume production planned, TSMC still holds 90%+ share.',
+        source: 'IT之家',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.ithome.com/0/950/655.htm'
+      },
+      {
+        title: '美国批准H200芯片向约10家中国公司销售，但尚未有实际交付',
+        titleEn: 'US Approves H200 Chip Sales to ~10 China Firms, No Deliveries Yet',
+        summary: '据CNBC报道，美国商务部已批准约10家中国公司（包括阿里巴巴、腾讯、字节跳动、京东）购买英伟达H200芯片，每家获批企业最多可购买7.5万颗。联想、富士康等分销商也获批。然而，由于中方担心进口芯片会削弱国产AI芯片发展，目前尚未有任何实际交付。黄仁勋随特朗普代表团访京，寻求突破。英伟达此前在华AI加速器市场份额已降至零。',
+        summaryEn: 'US Commerce Dept approved ~10 Chinese companies (Alibaba, Tencent, ByteDance, JD.com) to buy Nvidia H200 chips, up to 75,000 per buyer. Lenovo, Foxconn also approved as distributors. However, no deliveries yet as China fears imports could weaken domestic AI chip development. Jensen Huang joins Trump Beijing trip seeking breakthrough. Nvidia\'s China AI accelerator share has fallen to zero.',
+        source: 'CNBC',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.cnbc.com/2026/05/14/us-clears-h200-chip-sales-to-10-china-firms-as-nvidia-ceo-looks-for-breakthrough.html'
+      }
+    ],
+    comment: 'Anthropic用AI写90%代码的表态验证了AI编程已从工具变成生产力基础设施。腾讯混元3.0调用量登顶全球，说明国产大模型正在从"能用"走向"好用"。具身智能化工场景首发，人形机器人从展示走向真实工业应用。法拉第未来转型实体AI，EAI机器人业务实现首季创收。美国批准H200向约10家中国公司销售，但中方尚未放行交付——中美AI芯片博弈进入新阶段。苹果培养英特尔对冲台积电风险，半导体供应链格局正在重构。',
+    commentEn: 'Anthropic\'s 90% AI-written code validates AI coding as production infrastructure. Tencent Hunyuan 3.0 topping global calls shows Chinese LLMs maturing. Embodied AI chemical solution debut marks humanoid robots moving from showcase to real industrial use. US approves H200 sales to ~10 China firms but Beijing hasn\'t cleared deliveries — US-China AI chip博弈 enters new phase. Apple cultivating Intel reshapes semiconductor supply chain.',
+  },
+  {
     date: '2026-05-14',
     title: 'AI新闻 | 中国累计868款生成式AI服务完成备案 + 思科AI相关订单超53亿美元 + 亚马逊Alexa购物版上线',
     titleEn: 'AI News | China 868 Generative AI Services Registered + Cisco AI Orders Exceed $5.3B + Amazon Alexa Shopping Launches',

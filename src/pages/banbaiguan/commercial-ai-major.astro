@@ -116,9 +116,12 @@ const articleJsonLd = {
         }
       ]} />
 
-      <div class="article-footer">
-        <p>关注「半百观AI」，一个50岁AI实践者，带你看懂AI落地的真实世界。</p>
-        <a href="/banbaiguan/" class="back-link">← 返回文章列表</a>
+      <div class="article-footer" data-astro-cid-vgwvf3tu>
+        <p data-astro-cid-vgwvf3tu>关注「半百观AI」，一个50岁AI实践者，带你看懂AI落地的真实世界。</p>
+        <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/anthropic-introspection-adapter/" class="prev" data-astro-cid-article-nav>← AI终于学会「自我坦白」：An…</a>
+<a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+<span class="disabled" data-astro-cid-article-nav></span>
+</div>
       </div>
     </div>
   </article>
@@ -207,5 +210,28 @@ const articleJsonLd = {
   }
   .back-link:hover {
     text-decoration: underline;
+  }
+
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+  }
+  .article-nav a, .article-nav span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .article-nav a:hover {
+    color: var(--color-accent);
+  }
+  .article-nav .back {
+    color: var(--color-accent);
+  }
+  .article-nav .disabled {
+    visibility: hidden;
   }
 </style>
