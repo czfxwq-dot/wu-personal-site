@@ -1,0 +1,357 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const adminJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "留言板管理 | 观吾"
+};
+---
+
+<BaseLayout title="留言板管理 | 观吾" jsonLd={adminJsonLd} ogDescription="观吾留言板管理后台" lang="zh">
+  <section class="admin-section">
+    <div class="admin-header">
+      <h1>留言板管理</h1>
+      <div class="admin-meta">
+        <span id="last-refresh">加载中…</span>
+        <button class="refresh-btn" id="refresh-btn">↻ 刷新</button>
+      </div>
+    </div>
+
+    <!-- 统计卡片 -->
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" id="stat-total">—</span>
+        <span class="stat-label">总留言</span>
+      </div>
+      <div class="stat-card stat-suggestion">
+        <span class="stat-number" id="stat-suggestion">—</span>
+        <span class="stat-label">💡 建议</span>
+      </div>
+      <div class="stat-card stat-bug">
+        <span class="stat-number" id="stat-bug">—</span>
+        <span class="stat-label">🐛 问题</span>
+      </div>
+      <div class="stat-card stat-cooperation">
+        <span class="stat-number" id="stat-cooperation">—</span>
+        <span class="stat-label">🤝 合作</span>
+      </div>
+      <div class="stat-card stat-praise">
+        <span class="stat-number" id="stat-praise">—</span>
+        <span class="stat-label">❤️ 鼓励</span>
+      </div>
+      <div class="stat-card stat-discussion">
+        <span class="stat-number" id="stat-discussion">—</span>
+        <span class="stat-label">💬 讨论</span>
+      </div>
+    </div>
+
+    <!-- 筛选 -->
+    <div class="filter-bar">
+      <span class="filter-label">筛选：</span>
+      <button class="filter-btn active" data-category="all">全部</button>
+      <button class="filter-btn" data-category="suggestion">💡 建议</button>
+      <button class="filter-btn" data-category="bug">🐛 问题</button>
+      <button class="filter-btn" data-category="cooperation">🤝 合作</button>
+      <button class="filter-btn" data-category="praise">❤️ 鼓励</button>
+      <button class="filter-btn" data-category="discussion">💬 讨论</button>
+    </div>
+
+    <!-- 留言列表 -->
+    <div class="admin-messages" id="admin-messages">
+      <div class="loading-state">加载中…</div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .admin-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .admin-header h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .admin-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+  .refresh-btn {
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .refresh-btn:hover { opacity: 0.9; }
+
+  /* 统计卡片 */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  .stat-label {
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+  .stat-suggestion { border-left: 3px solid #3b82f6; }
+  .stat-bug { border-left: 3px solid #ef4444; }
+  .stat-cooperation { border-left: 3px solid #f59e0b; }
+  .stat-praise { border-left: 3px solid #ec4899; }
+  .stat-discussion { border-left: 3px solid #8b5cf6; }
+
+  /* 筛选 */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .filter-label {
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin-right: 4px;
+    line-height: 32px;
+  }
+  .filter-btn {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+  }
+  .filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .filter-btn.active {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+  }
+
+  /* 管理留言列表 */
+  .admin-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .admin-msg {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .admin-msg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 12px;
+  }
+  .admin-msg-tag {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--color-bg-secondary);
+    white-space: nowrap;
+  }
+  .admin-msg-date {
+    font-size: 12px;
+    color: var(--color-text-light);
+    white-space: nowrap;
+  }
+  .admin-msg-content {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .admin-msg-contact {
+    font-size: 12px;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+  }
+  .admin-msg-contact strong {
+    color: var(--color-text-secondary);
+  }
+  .admin-msg-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .admin-msg-actions a {
+    font-size: 12px;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .admin-msg-actions a:hover {
+    color: var(--color-accent);
+  }
+  .loading-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--color-text-light);
+  }
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--color-text-light);
+    font-size: 14px;
+  }
+</style>
+
+<script>
+  // 简单的认证检查（生产环境应该用真正的认证）
+  const ADMIN_KEY = 'gb-admin-2026';
+
+  // 检查认证
+  function checkAuth(): boolean {
+    const stored = sessionStorage.getItem('gb-admin-auth');
+    if (stored === 'ok') return true;
+
+    const input = prompt('输入管理密码：');
+    if (input === ADMIN_KEY) {
+      sessionStorage.setItem('gb-admin-auth', 'ok');
+      return true;
+    }
+    if (input !== null) {
+      alert('密码错误');
+    }
+    return false;
+  }
+
+  if (!checkAuth()) {
+    document.body.innerHTML = '<p style="text-align:center;padding:40px;color:#999;">未授权访问</p>';
+    throw new Error('Unauthorized');
+  }
+
+  let currentFilter = 'all';
+
+  async function loadData() {
+    const container = document.getElementById('admin-messages');
+    const refreshBtn = document.getElementById('refresh-btn');
+    const lastRefresh = document.getElementById('last-refresh');
+
+    if (refreshBtn) refreshBtn.disabled = true;
+    if (container) container.innerHTML = '<div class="loading-state">加载中…</div>';
+
+    const url = new URL('/api/guestbook', window.location.origin);
+    url.searchParams.set('admin', 'true');
+    if (currentFilter !== 'all') {
+      url.searchParams.set('category', currentFilter);
+    }
+
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      // 更新统计
+      if (data.stats) {
+        const s = data.stats;
+        const el = (id: string) => document.getElementById(id);
+        if (el('stat-total')) el('stat-total')!.textContent = String(s.total);
+        if (el('stat-suggestion')) el('stat-suggestion')!.textContent = String(s.byCategory?.suggestion || 0);
+        if (el('stat-bug')) el('stat-bug')!.textContent = String(s.byCategory?.bug || 0);
+        if (el('stat-cooperation')) el('stat-cooperation')!.textContent = String(s.byCategory?.cooperation || 0);
+        if (el('stat-praise')) el('stat-praise')!.textContent = String(s.byCategory?.praise || 0);
+        if (el('stat-discussion')) el('stat-discussion')!.textContent = String(s.byCategory?.discussion || 0);
+      }
+
+      if (!data.messages || data.messages.length === 0) {
+        if (container) container.innerHTML = '<div class="empty-state">暂无留言</div>';
+        return;
+      }
+
+      if (container) {
+        container.innerHTML = data.messages.map((msg: any) => {
+          const date = new Date(msg.createdAt);
+          const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+          const hasContact = msg.contact && msg.contact !== '*用户未留联系方式*';
+
+          return `
+            <div class="admin-msg">
+              <div class="admin-msg-header">
+                <span class="admin-msg-tag">${msg.categoryLabel}</span>
+                <span class="admin-msg-date">${dateStr}</span>
+              </div>
+              <div class="admin-msg-content">${escapeHtml(msg.content)}</div>
+              ${hasContact ? `<div class="admin-msg-contact">📮 <strong>联系方式：</strong>${escapeHtml(msg.contact)}</div>` : ''}
+              ${msg.aiReply ? `
+                <div class="msg-reply-label">AI 回复</div>
+                <div class="msg-reply" style="padding:10px 12px;background:var(--color-bg);border-left:3px solid var(--color-accent);border-radius:0 8px 8px 0;font-size:13px;color:var(--color-text-secondary);white-space:pre-line;margin-top:8px;">${escapeHtml(msg.aiReply)}</div>
+              ` : ''}
+              <div class="admin-msg-actions">
+                <a href="${msg.url}" target="_blank" rel="noopener">在 GitHub 查看 →</a>
+                <a href="${msg.url}/comments" target="_blank" rel="noopener">添加评论 →</a>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      if (lastRefresh) {
+        const now = new Date();
+        lastRefresh.textContent = `最后刷新：${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+      }
+    } catch (err) {
+      if (container) container.innerHTML = '<div class="empty-state">加载失败，请刷新重试</div>';
+    } finally {
+      if (refreshBtn) refreshBtn.disabled = false;
+    }
+  }
+
+  function escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // 筛选按钮
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-category') || 'all';
+      loadData();
+    });
+  });
+
+  // 刷新按钮
+  document.getElementById('refresh-btn')?.addEventListener('click', loadData);
+
+  // 初始加载
+  loadData();
+</script>

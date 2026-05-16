@@ -1,130 +1,193 @@
 ---
 import BaseLayout from '../../layouts/Base.astro';
-import { promises as fs } from 'fs';
-import path from 'path';
 
 const guestbookJsonLd = {
   "@context": "https://schema.org",
   "@type": "DiscussionForumPosting",
   "name": "留言板 | 观吾",
-  "description": "给观吾留言 — AI 会自动回复你的每一条留言",
+  "description": "给观吾留句话，AI 会自动回复你",
   "url": "https://ban-bai.com/guestbook/"
 };
-
-// 读取留言数据（构建时静态生成）
-let messages: any[] = [];
-try {
-  const DATA_FILE = path.resolve('./src/data/guestbook.json');
-  const raw = await fs.readFile(DATA_FILE, 'utf-8');
-  messages = JSON.parse(raw).reverse();
-} catch {}
-
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-}
 ---
 
-<BaseLayout title="留言板 | 给观吾留言 - AI自动回复" jsonLd={guestbookJsonLd} ogDescription="给观吾（吴总）留言 — AI 会自动回复你的每一条留言，分享你的想法或提问" navActive="guestbook">
+<BaseLayout title="留言板 | 给观吾留句话" jsonLd={guestbookJsonLd} ogDescription="想说什么直接写，AI 会自动回复你。匿名留言，零门槛。" navActive="guestbook">
   <section class="page-section">
     <h1>留言板</h1>
     <p class="subtitle" style="margin-bottom: 8px;">
-      给观吾留句话，AI 会自动回复你 ✍️
+      想说什么直接写，AI 会自动回复你 ✍️
     </p>
-    <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 32px; font-style: italic;">
-      <span class="info-icon" style="display:inline-block;width:16px;height:16px;border:1px solid var(--color-border);border-radius:50%;text-align:center;line-height:14px;font-size:10px;margin-right:4px;font-style:normal;">i</span>
-      完全自主运营，不依赖任何第三方平台
+    <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 40px; font-style: italic;">
+      匿名留言，零门槛 — 建议、合作、吐槽、鼓励，什么都可以
     </p>
 
-    <!-- 留言表单 -->
-    <div class="guestbook-form-card">
-      <h3 style="margin-bottom: 16px;"><span class="form-icon">✎</span> 写留言</h3>
-      <form id="guestbook-form">
-        <div class="form-group">
-          <label for="gb-name">你的名字</label>
-          <input type="text" id="gb-name" name="name" placeholder="怎么称呼你？" required maxlength="20" />
+    <!-- 留言表单 — 极简设计 -->
+    <div class="guestbook-card" id="guestbook-card">
+      <div class="input-area">
+        <div class="whiteboard">
+          <textarea 
+            id="gb-content" 
+            placeholder="想说点什么？&#10;&#10;比如：&#10;· 你们的 AI 新闻挺及时&#10;· 建议加个暗色模式&#10;· 有没有合作的可能"
+            maxlength="1000"
+          ></textarea>
+          <span id="char-count" class="char-count">0/1000</span>
         </div>
-        <div class="form-group">
-          <label for="gb-email">邮箱（可选，用于接收回复）</label>
-          <input type="email" id="gb-email" name="email" placeholder="example@email.com" />
-        </div>
-        <div class="form-group">
-          <label for="gb-content">留言内容</label>
-          <textarea id="gb-content" name="content" rows="4" placeholder="想说点什么？" required maxlength="500"></textarea>
-          <span class="char-count"><span id="char-count">0</span>/500</span>
-        </div>
-        <button type="submit" id="submit-btn" class="submit-btn">
-          <span class="btn-text">提交留言</span>
-          <span class="btn-loading" style="display: none;">提交中...</span>
-        </button>
-      </form>
-      <div id="form-success" class="success-msg" style="display: none;">
-        <span class="success-icon">✓</span> 留言成功！AI 助理会尽快回复你
       </div>
-      <div id="form-error" class="error-msg" style="display: none;"></div>
+
+      <div class="contact-area" id="contact-area">
+        <button type="button" class="contact-toggle" id="contact-toggle">
+          <span class="toggle-icon">+</span>
+          留个联系方式，方便回复你（可选）
+        </button>
+        <div class="contact-fields" id="contact-fields" style="display: none;">
+          <input 
+            type="text" 
+            id="gb-contact" 
+            placeholder="微信 / 邮箱 / 手机号，怎么方便怎么留"
+            maxlength="100"
+          />
+        </div>
+      </div>
+
+      <button type="button" class="submit-btn" id="submit-btn">
+        <span class="btn-text">提交</span>
+        <span class="btn-loading" style="display: none;">
+          <span class="spinner"></span>
+          AI 正在阅读你的留言…
+        </span>
+      </button>
     </div>
 
-    <!-- 留言列表（静态渲染） -->
-    <div style="margin-top: 40px;">
-      <h3 style="margin-bottom: 20px;"><span class="msg-icon">◈</span> 往期留言</h3>
-      {messages.length === 0 ? (
-        <p class="empty-state">还没有留言，来做第一个吧</p>
-      ) : (
-        messages.map((msg) => (
-          <div class="message-card">
-            <div class="message-header">
-              <span class="message-author">{msg.name}</span>
-              <span class="message-date">{formatDate(msg.createdAt)}</span>
-            </div>
-            <p class="message-content">{msg.content}</p>
-            {msg.reply && (
-              <div class="message-reply">
-                <strong>AI 回复：</strong>{msg.reply}
-              </div>
-            )}
-          </div>
-        ))
-      )}
+    <!-- AI 即时回复卡片 -->
+    <div id="reply-card" class="reply-card" style="display: none;">
+      <div class="reply-header">
+        <span class="reply-category" id="reply-category"></span>
+        <span class="reply-time" id="reply-time"></span>
+      </div>
+      <div class="reply-content" id="reply-content"></div>
+      <div class="reply-footer">
+        <button class="share-btn" id="share-btn">
+          <span>↗</span> 分享这条回复
+        </button>
+      </div>
+    </div>
+
+    <!-- 往期留言 -->
+    <div class="messages-section" id="messages-section">
+      <h3 style="margin-bottom: 20px; font-size: 16px;">
+        近期留言
+        <span id="message-count" class="message-count" style="font-size: 13px; color: var(--color-text-light); font-weight: 400;"></span>
+      </h3>
+      <div id="messages-list" class="messages-list">
+        <div class="loading-placeholder">
+          <span class="spinner-small"></span>
+          加载中…
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .guestbook-form-card {
+  .page-section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .page-section h1 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* 极简留言卡片 */
+  .guestbook-card {
     background: var(--color-card);
     border: 1px solid var(--color-border);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 24px;
-    max-width: 600px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s;
   }
-  .form-icon, .msg-icon {
-    display: inline-block;
+  .guestbook-card:focus-within {
+    box-shadow: 0 0 0 2px var(--color-accent);
+  }
+
+  /* 输入区域 — 白板风格 */
+  .input-area {
+    margin-bottom: 8px;
+  }
+  .whiteboard {
+    position: relative;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 16px;
+    transition: border-color 0.2s;
+  }
+  .whiteboard:focus-within {
+    border-color: var(--color-accent);
+  }
+  .whiteboard textarea {
+    width: 100%;
+    min-height: 120px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
     font-size: 16px;
-    font-style: normal;
-    color: var(--color-accent);
-    margin-right: 6px;
-    font-weight: 700;
+    line-height: 1.8;
+    color: var(--color-text);
+    resize: vertical;
+    outline: none;
   }
-  .success-msg {
-    margin-top: 16px;
-    padding: 12px 16px;
-    background: rgba(34, 197, 94, 0.1);
-    border-radius: 8px;
-    color: var(--color-success);
-    font-size: 14px;
+  .whiteboard textarea::placeholder {
+    color: var(--color-text-light);
   }
-  .form-group {
+  .char-count {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: var(--color-text-light);
+    padding-top: 4px;
+  }
+
+  /* 联系方式 — 可折叠 */
+  .contact-area {
     margin-bottom: 16px;
   }
-  .form-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 6px;
-    color: var(--color-text);
+  .contact-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
-  .form-group input,
-  .form-group textarea {
+  .contact-toggle:hover {
+    color: var(--color-accent);
+  }
+  .toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    font-size: 12px;
+    transition: transform 0.2s;
+  }
+  .contact-toggle.open .toggle-icon {
+    transform: rotate(45deg);
+  }
+  .contact-fields input {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--color-border);
@@ -134,164 +197,404 @@ function formatDate(iso: string): string {
     background: var(--color-bg);
     color: var(--color-text);
     box-sizing: border-box;
-    transition: border-color 0.2s;
   }
-  .form-group input:focus,
-  .form-group textarea:focus {
+  .contact-fields input:focus {
     outline: none;
     border-color: var(--color-accent);
   }
-  .form-group textarea {
-    resize: vertical;
-  }
-  .char-count {
-    display: block;
-    text-align: right;
-    font-size: 12px;
-    color: var(--color-text-light);
-    margin-top: 4px;
-  }
+
+  /* 提交按钮 */
   .submit-btn {
     display: block;
     width: 100%;
-    padding: 12px 24px;
+    padding: 14px 24px;
     background: var(--color-accent);
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
   }
   .submit-btn:hover {
     opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  .submit-btn:active {
+    transform: translateY(0);
   }
   .submit-btn:disabled {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: not-allowed;
+    transform: none;
   }
-  .success-msg {
-    margin-top: 16px;
-    padding: 12px 16px;
-    background: #e6f7e6;
-    border-radius: 8px;
-    color: #2d7d2d;
+  .btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* AI 回复卡片 */
+  .reply-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-accent);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    animation: slideUp 0.3s ease-out;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .reply-category {
     font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
   }
-  .error-msg {
-    margin-top: 16px;
-    padding: 12px 16px;
-    background: #fde8e8;
+  .reply-time {
+    font-size: 12px;
+    color: var(--color-text-light);
+  }
+  .reply-content {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    white-space: pre-line;
+    margin-bottom: 16px;
+  }
+  .reply-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+  }
+  .share-btn {
+    background: none;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    color: #c0392b;
-    font-size: 14px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
   }
-  .message-card {
+  .share-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  /* 往期留言 */
+  .messages-section {
+    margin-top: 48px;
+  }
+  .message-count {
+    font-weight: 400;
+  }
+  .messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .msg-item {
     background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
+    padding: 16px;
+    transition: border-color 0.2s;
   }
-  .message-header {
+  .msg-item:hover {
+    border-color: var(--color-accent);
+  }
+  .msg-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
   }
-  .message-author {
-    font-weight: 600;
-    font-size: 14px;
+  .msg-category-tag {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
   }
-  .message-date {
+  .msg-date {
     font-size: 12px;
     color: var(--color-text-light);
   }
-  .message-content {
+  .msg-content {
     font-size: 14px;
     line-height: 1.7;
-    margin-bottom: 12px;
+    color: var(--color-text);
+    margin-bottom: 8px;
   }
-  .message-reply {
-    padding: 12px 16px;
+  .msg-reply {
+    padding: 10px 12px;
     background: var(--color-bg);
     border-left: 3px solid var(--color-accent);
     border-radius: 0 8px 8px 0;
-    font-size: 14px;
-    color: var(--color-text);
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    white-space: pre-line;
   }
-  .message-reply strong {
+  .msg-reply-label {
     font-weight: 600;
+    font-size: 12px;
+    color: var(--color-accent);
+    margin-bottom: 4px;
+  }
+  .loading-placeholder {
+    text-align: center;
+    padding: 40px;
+    color: var(--color-text-light);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .spinner-small {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
   }
   .empty-state {
     text-align: center;
-    color: var(--color-text-light);
     padding: 40px;
+    color: var(--color-text-light);
+    font-size: 14px;
+  }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: var(--color-text);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 9999;
+    transition: transform 0.3s ease-out;
+  }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (max-width: 640px) {
+    .page-section {
+      padding: 30px 16px;
+    }
+    .page-section h1 {
+      font-size: 24px;
+    }
+    .guestbook-card {
+      padding: 16px;
+    }
+    .whiteboard {
+      padding: 12px;
+    }
+    .whiteboard textarea {
+      min-height: 100px;
+      font-size: 15px;
+    }
   }
 </style>
 
 <script>
-  function formatDate(iso: string): string {
-    const d = new Date(iso);
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-  }
-
-  // 字符计数
+  // 字数统计
   const contentInput = document.getElementById('gb-content') as HTMLTextAreaElement;
   const charCount = document.getElementById('char-count');
   contentInput?.addEventListener('input', () => {
-    if (charCount) charCount.textContent = contentInput.value.length;
+    if (charCount) charCount.textContent = `${contentInput.value.length}/1000`;
   });
 
-  // 提交表单
-  const form = document.getElementById('guestbook-form') as HTMLFormElement;
+  // 联系方式折叠
+  const contactToggle = document.getElementById('contact-toggle') as HTMLButtonElement;
+  const contactFields = document.getElementById('contact-fields');
+  contactToggle?.addEventListener('click', () => {
+    const isOpen = contactFields?.style.display !== 'none';
+    if (contactFields) contactFields.style.display = isOpen ? 'none' : 'block';
+    contactToggle.classList.toggle('open', !isOpen);
+  });
+
+  // Toast
+  function showToast(message: string, duration = 3000) {
+    let toast = document.querySelector('.toast') as HTMLElement;
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast?.classList.remove('show'), duration);
+  }
+
+  // 提交留言
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
   const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
   const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLElement;
-  const successMsg = document.getElementById('form-success');
-  const errorMsg = document.getElementById('form-error');
 
-  form?.addEventListener('submit', async (e: Event) => {
-    e.preventDefault();
-    
+  submitBtn?.addEventListener('click', async () => {
+    const content = contentInput?.value.trim();
+    if (!content) {
+      showToast('✍️ 先写点什么吧');
+      contentInput?.focus();
+      return;
+    }
+    if (content.length < 2) {
+      showToast('✍️ 至少写两个字吧');
+      return;
+    }
+
+    const contact = (document.getElementById('gb-contact') as HTMLInputElement)?.value.trim() || '';
+
     submitBtn.disabled = true;
     btnText.style.display = 'none';
-    btnLoading.style.display = 'inline';
-    successMsg.style.display = 'none';
-    errorMsg.style.display = 'none';
-
-    const formData = new FormData(form);
-    const data = {
-      name: formData.get('name'),
-      content: formData.get('content'),
-      email: formData.get('email') || '',
-    };
+    if (btnLoading) btnLoading.style.display = 'inline-flex';
 
     try {
       const res = await fetch('/api/guestbook', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ content, contact }),
       });
 
       const result = await res.json();
 
       if (res.ok && result.success) {
-        successMsg.style.display = 'block';
-        form.reset();
-        if (charCount) charCount.textContent = '0';
+        // 显示 AI 回复卡片
+        const replyCard = document.getElementById('reply-card');
+        const replyCategory = document.getElementById('reply-category');
+        const replyTime = document.getElementById('reply-time');
+        const replyContent = document.getElementById('reply-content');
+
+        if (replyCard) replyCard.style.display = 'block';
+        if (replyCategory) replyCategory.textContent = result.category.label;
+        if (replyTime) replyTime.textContent = '刚刚';
+        if (replyContent) replyContent.textContent = result.autoReply;
+
+        // 清空输入框
+        if (contentInput) {
+          contentInput.value = '';
+          if (charCount) charCount.textContent = '0/1000';
+        }
+
+        showToast('✅ 留言已提交，AI 已回复');
+
+        // 滚动到回复卡片
+        setTimeout(() => {
+          replyCard?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 200);
+
+        // 刷新留言列表
+        loadMessages();
       } else {
-        errorMsg.textContent = result.error || '提交失败，请稍后重试';
-        errorMsg.style.display = 'block';
+        showToast('❌ ' + (result.error || '提交失败，请稍后重试'));
       }
     } catch {
-      errorMsg.textContent = '网络错误，请稍后重试';
-      errorMsg.style.display = 'block';
+      showToast('❌ 网络错误，请稍后重试');
     } finally {
       submitBtn.disabled = false;
       btnText.style.display = 'inline';
-      btnLoading.style.display = 'none';
+      if (btnLoading) btnLoading.style.display = 'none';
     }
   });
+
+  // 分享按钮
+  document.getElementById('share-btn')?.addEventListener('click', async () => {
+    const replyContent = document.getElementById('reply-content')?.textContent || '';
+    const category = document.getElementById('reply-category')?.textContent || '';
+    const shareText = `来自观吾留言板 · ${category}\n\n${replyContent}\n\nhttps://ban-bai.com/guestbook/`;
+
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(shareText);
+      showToast('✅ 已复制到剪贴板，可以分享了');
+    } else {
+      showToast('❌ 复制失败，请手动复制');
+    }
+  });
+
+  // 加载留言
+  async function loadMessages() {
+    const list = document.getElementById('messages-list');
+    const count = document.getElementById('message-count');
+    if (!list) return;
+
+    try {
+      const res = await fetch('/api/guestbook');
+      const data = await res.json();
+
+      if (!data.messages || data.messages.length === 0) {
+        list.innerHTML = '<div class="empty-state">还没有留言，来做第一个吧 ✍️</div>';
+        if (count) count.textContent = '';
+        return;
+      }
+
+      if (count) count.textContent = `(${data.stats.total})`;
+
+      // 显示最近 10 条
+      const recent = data.messages.slice(0, 10);
+      list.innerHTML = recent.map((msg: any) => {
+        const date = new Date(msg.createdAt);
+        const dateStr = `${date.getMonth() + 1}月${date.getDate()}日`;
+        return `
+          <div class="msg-item">
+            <div class="msg-header">
+              <span class="msg-category-tag">${msg.categoryLabel}</span>
+              <span class="msg-date">${dateStr}</span>
+            </div>
+            <div class="msg-content">${escapeHtml(msg.content.substring(0, 200))}</div>
+            ${msg.aiReply ? `
+              <div class="msg-reply-label">AI 回复</div>
+              <div class="msg-reply">${escapeHtml(msg.aiReply.substring(0, 300))}</div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+    } catch {
+      if (list) list.innerHTML = '<div class="empty-state">加载失败，请刷新重试</div>';
+    }
+  }
+
+  function escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // 初始加载
+  loadMessages();
 </script>
