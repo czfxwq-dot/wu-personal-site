@@ -59,6 +59,7 @@ const latestArticle = articles[0];
       </p>
       <div class="hero-actions">
         <a href="/diary/" class="btn btn-primary">看工作日记 <span class="btn-arrow">→</span></a>
+        <button class="btn btn-accent" id="hero-chat-btn">💬 和 AI 助理聊聊</button>
         <a href="/about/" class="btn btn-ghost">了解更多</a>
       </div>
     </div>
@@ -172,6 +173,127 @@ const latestArticle = articles[0];
     </div>
   </section>
 
+
+<script>
+  // Inline chat for homepage
+  (function() {
+    const input = document.getElementById('inline-chat-input');
+    const sendBtn = document.getElementById('inline-chat-send');
+    const messages = document.getElementById('inline-chat-messages');
+    if (!input || !sendBtn || !messages) return;
+
+    let isTyping = false;
+
+    function addMessage(text, type) {
+      const msg = document.createElement('div');
+      msg.className = 'chat-msg ' + type;
+      msg.innerHTML = type === 'bot'
+        ? '<span class="msg-avatar">🤖</span><div class="msg-bubble">' + text.replace(/\n/g, '<br/>') + '</div>'
+        : '<span class="msg-avatar">👤</span><div class="msg-bubble">' + text + '</div>';
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function showTyping() {
+      isTyping = true;
+      sendBtn.disabled = true;
+      const msg = document.createElement('div');
+      msg.className = 'chat-msg bot typing-indicator-wrap';
+      msg.innerHTML = '<span class="msg-avatar">🤖</span><div class="msg-bubble"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function hideTyping() {
+      isTyping = false;
+      sendBtn.disabled = false;
+      const el = document.querySelector('.typing-indicator-wrap');
+      if (el) el.remove();
+    }
+
+    async function send() {
+      const text = input.value.trim();
+      if (!text || isTyping) return;
+      addMessage(text, 'user');
+      input.value = '';
+      showTyping();
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text }),
+        });
+        hideTyping();
+
+        // Handle SSE streaming
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let botReply = '';
+        let buffer = '';
+
+        // Create bot message bubble
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg bot';
+        msg.innerHTML = '<span class="msg-avatar">🤖</span><div class="msg-bubble"></div>';
+        messages.appendChild(msg);
+        const bubble = msg.querySelector('.msg-bubble');
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6);
+              if (data === '[DONE]') continue;
+              try {
+                const json = JSON.parse(data);
+                const delta = json.choices?.[0]?.delta?.content;
+                if (delta) {
+                  botReply += delta;
+                  bubble.innerHTML = botReply.replace(/\n/g, '<br/>');
+                  messages.scrollTop = messages.scrollHeight;
+                }
+              } catch {}
+            }
+          }
+        }
+
+        if (!botReply) {
+          bubble.textContent = '抱歉，我暂时无法回答。请稍后再试。';
+        }
+      } catch(e) {
+        hideTyping();
+        addMessage('网络错误，请稍后再试。', 'bot');
+      }
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); send(); }
+    });
+  })();
+
+  // Hero "和 AI 助理聊聊" button triggers floating chat
+  (function() {
+    const heroBtn = document.getElementById('hero-chat-btn');
+    if (!heroBtn) return;
+    heroBtn.addEventListener('click', function() {
+      // Trigger existing ChatWidget toggle
+      const toggleBtn = document.getElementById('chat-toggle-btn');
+      if (toggleBtn) toggleBtn.click();
+      else {
+        // Fallback: scroll to inline chat
+        const inlineChat = document.querySelector('.chat-inline');
+        if (inlineChat) inlineChat.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  })();
+</script>
+
 </BaseLayout>
 
 <style>
@@ -210,7 +332,162 @@ const latestArticle = articles[0];
     transition: transform 0.2s;
   }
 
+  .btn-accent {
+    background: #7c3aed;
+    color: white;
+    border: 2px solid #7c3aed;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-accent:hover {
+    background: #6d28d9;
+    border-color: #6d28d9;
+  }
   .btn-primary:hover .btn-arrow {
     transform: translateX(4px);
   }
+
+  /* 内联聊天区块 */
+  .chat-inline {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 32px 24px;
+  }
+
+  .chat-inline-subtitle {
+    text-align: center;
+    color: var(--color-text-tertiary, #6b7280);
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 20px;
+  }
+
+  .chat-inline-box {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  .chat-inline-messages {
+    padding: 16px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .chat-msg {
+    display: flex;
+    gap: 8px;
+    max-width: 85%;
+    animation: msgIn 0.3s ease;
+  }
+
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .chat-msg.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .chat-msg.bot {
+    align-self: flex-start;
+  }
+
+  .msg-avatar {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .msg-bubble {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .chat-msg.bot .msg-bubble {
+    background: #f3f4f6;
+    border-top-left-radius: 4px;
+  }
+
+  .chat-msg.user .msg-bubble {
+    background: #4f46e5;
+    color: white;
+    border-top-right-radius: 4px;
+  }
+
+  .chat-inline-input {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .chat-inline-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+  }
+
+  .chat-inline-input input:focus {
+    border-color: #4f46e5;
+  }
+
+  .chat-inline-input button {
+    padding: 10px 20px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+
+  .chat-inline-input button:hover {
+    background: #4338ca;
+  }
+
+  .chat-inline-input button:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+  }
+
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .typing-indicator span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #9ca3af;
+    animation: typingDot 1.4s infinite;
+  }
+
+  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes typingDot {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-4px); }
+  }
+
 </style>

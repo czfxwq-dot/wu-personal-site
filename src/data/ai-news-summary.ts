@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-17',
+    title: 'AI新闻 | OpenAI与苹果联盟濒临破裂 + OpenAI重组布罗克曼接管产品 + 阿里健康发布医学AI助手氢离子 + 网易接入DeepSeek-V4 + SpaceXAI合并后超50名员工离职',
+    titleEn: 'AI News | OpenAI-Apple Alliance Near Breakup + OpenAI Reorg Brockman Takes Product + Alibaba Health Medical AI Assistant + NetEase Integrates DeepSeek-V4 + SpaceXAI 50+ Staff Exit',
+    summary: '今日AI行业五大看点：彭博社报道OpenAI已聘请外部律所拟对苹果发起违约诉讼，2024年WWDC上宣布的AI合作濒临破裂；OpenAI宣布公司重组，联合创始人布罗克曼正式接管产品战略，整合ChatGPT、Codex和API到核心产品团队；阿里健康发布医学AI助手"氢离子"，接入BMJ旗下70本医学期刊资源；网易新闻和小蜜蜂正式接入DeepSeek-V4大模型；SpaceXAI合并后超50名员工离职，人才流失严重。',
+    summaryEn: 'Five highlights: Bloomberg reports OpenAI hired outside counsel to sue Apple for breach, 2024 WWDC AI partnership near breakup; OpenAI reorg with co-founder Brockman taking product strategy, integrating ChatGPT/Codex/API; Alibaba Health launches medical AI assistant with BMJ journal access; NetEase integrates DeepSeek-V4; SpaceXAI sees 50+ staff exit after merger.',
+    newsItems: [
+      {
+        title: 'OpenAI与苹果的"联盟"即将破裂，拟发起违约诉讼',
+        titleEn: 'OpenAI-Apple Alliance Near Breakup, Breach Lawsuit Planned',
+        summary: '据彭博社5月15日报道，苹果和OpenAI的合作可能出现变数。OpenAI已聘请外部律所，计划对苹果发起"违约诉讼"。双方合作正式官宣于2024年6月苹果WWDC，当时ChatGPT被深度集成到iOS系统中。这一变化可能重塑AI在手机操作系统的竞争格局。',
+        summaryEn: 'Bloomberg reports OpenAI hired outside counsel to sue Apple for breach. Partnership announced at WWDC 2024 with ChatGPT deep integration into iOS. This shift could reshape AI competition in mobile OS.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4858946.html'
+      },
+      {
+        title: 'OpenAI再次重组高管团队：布罗克曼正式接管产品',
+        titleEn: 'OpenAI Reorg: Brockman Officially Takes Over Product',
+        summary: 'OpenAI向员工宣布公司重组以整合产品线。联合创始人兼总裁Greg Brockman将负责公司产品战略，同时继续负责人工智能基础设施。OpenAI将旗下ChatGPT、Codex以及面向开发者的API整合到一个核心产品团队中，标志着公司从研究导向向产品导向的进一步转变。',
+        summaryEn: 'OpenAI announces reorg to integrate product lines. Co-founder and President Greg Brockman takes product strategy and AI infrastructure. ChatGPT, Codex, and developer API consolidated into one core product team.',
+        source: '36氪',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.36kr.com/newsflashes/3811623947476489'
+      },
+      {
+        title: '阿里健康正式发布医学AI助手"氢离子"，接入BMJ顶级期刊资源',
+        titleEn: 'Alibaba Health Launches Medical AI Assistant with BMJ Integration',
+        summary: '阿里健康正式发布医学AI助手"氢离子"，同时宣布与英国BMJ集团达成独家合作。BMJ旗下70本医学期刊过去十年的内容资源接入氢离子，这是国际顶级期刊首次与中国AI平台达成此类合作。氢离子聚焦循证医学，采用四层架构：PICO+GRADE结构化理解、检索增强、模型微调、专家评审闭环。超300位中国临床专家参与共建。',
+        summaryEn: 'Alibaba Health launches medical AI assistant with exclusive BMJ partnership. 70 BMJ medical journals integrated — first time top international journals partner with Chinese AI platform. 300+ clinical experts involved in building evaluation standards.',
+        source: '36氪',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.36kr.com/newsflashes/3811712103423746'
+      },
+      {
+        title: '网易新闻、网易小蜜蜂宣布已接入DeepSeek-V4大模型',
+        titleEn: 'NetEase News and XiaoMifeng Integrate DeepSeek-V4 LLM',
+        summary: '网易传媒旗下网易新闻、网易小蜜蜂正式宣布接入DeepSeek-V4大模型，全面升级新闻资讯分发、智能内容创作、社区互动服务、AI工具辅助及个性化推荐等核心场景。网易小蜜蜂近期还将推出"校园龙虾养成计划"，将AI技术融入年轻用户日常社交场景。',
+        summaryEn: 'NetEase News and XiaoMifeng integrate DeepSeek-V4 LLM, upgrading news distribution, AI content creation, community interaction, AI tools, and personalized recommendations. Campus social AI features coming soon.',
+        source: '36氪',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.36kr.com/newsflashes/3811663965560329'
+      },
+      {
+        title: 'SpaceXAI合并后人才流失持续：超50名员工离开，竞对挖角严重',
+        titleEn: 'SpaceXAI Talent Drain Continues: 50+ Staff Exit, Competitors Poaching',
+        summary: '自马斯克将人工智能团队合并并更名为SpaceXAI以来，公司面临严重人才流失。自2月以来已有超过50名员工选择离开，包括编程、世界模型和Grok语音等关键团队负责人。至少11名xAI员工跳槽至Meta，另有至少7人加入Mira Murati创立的Thinking Machines Lab。',
+        summaryEn: 'Since Musk merged AI teams into SpaceXAI, 50+ employees have left since February, including heads of coding, world models, and Grok voice teams. At least 11 joined Meta, 7 joined Thinking Machines Lab.',
+        source: '开源中国',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.oschina.net/news/441118'
+      }
+    ],
+    comment: 'OpenAI与苹果联盟濒临破裂是本周最大产业新闻——AI在手机OS的竞争格局可能重塑，苹果或将转向自研或其他合作伙伴。OpenAI内部重组标志着从"研究实验室"向"产品公司"的彻底转型。阿里健康医学AI助手接入BMJ顶级期刊资源，是AI+医疗垂直化的标志性事件。DeepSeek-V4持续扩大生态影响力，网易接入说明国产大模型正加速进入主流应用。SpaceXAI人才流失反映大模型领域"人才战"持续升级。',
+    commentEn: 'OpenAI-Apple breakup looming is the biggest industry news — AI mobile OS landscape could reshape. OpenAI reorg marks transition from research lab to product company. Alibaba Health medical AI with BMJ is landmark for vertical AI in healthcare. DeepSeek-V4 expanding ecosystem influence as NetEase integration shows Chinese LLMs entering mainstream. SpaceXAI brain drain reflects intensifying AI talent war.',
+  },
+  {
     date: '2026-05-16',
     title: 'AI新闻 | 英国警告AI网络攻击能力远超专业人员 + 阿里发布Qoder 1.0智能体开发台 + Anthropic推Claude for Legal + 微软砍掉Claude Code许可 + xAI发布Grok Build',
     titleEn: 'AI News | UK Warns AI Cyber Attack Capability Surpasses Professionals + Alibaba Launches Qoder 1.0 + Anthropic Claude for Legal + Microsoft Cuts Claude Code + xAI Grok Build',
