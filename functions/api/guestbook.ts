@@ -1,6 +1,6 @@
 // Cloudflare Pages Function: guestbook API
-// POST: 用户提交留言 → 快速本地回复 + 异步 LLM 补充
-// GET: 获取留言列表
+// POST /api/guestbook - 用户提交留言 → Gateway LLM 智能回复
+// GET /api/guestbook - 获取留言列表
 
 const REPO = 'czfxwq-dot/wu-personal-site';
 const ALLOWED_ORIGINS = [
@@ -17,12 +17,103 @@ function cors(request: Request): Record<string, string> {
   };
 }
 
-// ========== 关键词分类 ==========
+// ========== LLM 智能分析（Gateway 直连） ==========
 
-function classifyMessage(content: string): { category: string; categoryLabel: string; emoji: string; priority: string; needsOwner: boolean } {
+function buildSystemPrompt(content: string): string {
+  return `你是观吾网站(ban-bai.com)的留言回复助手，代表吴总（创始人）回复用户留言。
+
+## 网站背景
+观吾是吴总的个人品牌网站，有两大板块：
+1. 半百观AI（个人IP）：
+   - AI新闻：聚合36氪、少数派等权威科技媒体的RSS，AI翻译标题摘要，链接跳转原文
+   - 日记：吴总的AI实践思考和工作经验
+   - 定位：50岁视角看AI，AI工具落地实践
+2. 公司业务：数字化智能库存管理AIoT
+   - 产品：智能货架/货柜、无人仓库、无人零售店、制造业线边仓、MRO智能柜
+
+## 回复规则
+- 针对用户留言的具体问题作答，不说"收到"、"会尽快回复"等客套话
+- AI新闻类提问：明确说明来源是36氪/少数派RSS，AI翻译可能有偏差，建议看原文
+- 合作/产品咨询：回复邮箱 czfxwq@gmail.com
+- 字数50-150，语气真诚专业有温度
+- 吴总50岁，语气可以像一位资深从业者
+
+## 用户留言
+${content}
+
+请直接回复用户。`
+}
+
+async function analyze(content: string, env: any): Promise<{
+  category: string; categoryLabel: string; emoji: string;
+  priority: string; needsOwner: boolean; reply: string;
+}> {
+  const { GATEWAY_URL, GATEWAY_TOKEN } = env;
+
+  if (!GATEWAY_URL || !GATEWAY_TOKEN) {
+    return fallbackAnalyze(content);
+  }
+
+  try {
+    // Step 1: 生成回复（这是核心）
+    const res = await fetch(`${GATEWAY_URL}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GATEWAY_TOKEN}`,
+      },
+      body: JSON.stringify({
+        model: 'openclaw/knowledge-admin',
+        stream: false,
+        temperature: 0.7,
+        max_tokens: 400,
+        messages: [
+          { role: 'system', content: buildSystemPrompt(content) },
+          { role: 'user', content: content },
+        ],
+      }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      const reply = data.choices?.[0]?.message?.content?.trim() || '';
+
+      // Step 2: 本地分类（不调用LLM，避免超时）
+      const classification = classifyLocal(content);
+
+      // 判断是否需要吴总处理
+      const needsOwner = classification.needsOwner;
+      const priority = classification.priority;
+
+      return {
+        category: classification.category,
+        categoryLabel: classification.categoryLabel,
+        emoji: classification.emoji,
+        priority,
+        needsOwner,
+        reply: reply || fallbackReply(content),
+      };
+    }
+  } catch (e) {
+    console.error('Gateway analysis failed:', e);
+  }
+
+  return fallbackAnalyze(content);
+}
+
+// ========== 本地分类 ==========
+
+function classifyLocal(content: string): {
+  category: string; categoryLabel: string; emoji: string;
+  priority: string; needsOwner: boolean;
+} {
   const text = content.toLowerCase();
+
   if (text.includes('合作') || text.includes('商务') || text.includes('渠道') || text.includes('代理') || text.includes('定制') || text.includes('采购')) {
     return { category: 'cooperation', categoryLabel: '🤝 合作意向', emoji: '🤝', priority: 'high', needsOwner: true };
+  }
+  if (text.includes('产品') || text.includes('货架') || text.includes('货柜') || text.includes('仓库') || text.includes('解决方案') || text.includes('价格') || text.includes('多少钱') || text.includes('demo') || text.includes('试用')) {
+    return { category: 'cooperation', categoryLabel: '📦 产品咨询', emoji: '📦', priority: 'high', needsOwner: true };
   }
   if (text.includes('bug') || text.includes('错误') || text.includes('坏') || text.includes('打不开') || text.includes('不工作') || text.includes('报错') || text.includes('崩溃')) {
     return { category: 'bug', categoryLabel: '🔧 问题反馈', emoji: '🔧', priority: 'medium', needsOwner: false };
@@ -39,43 +130,34 @@ function classifyMessage(content: string): { category: string; categoryLabel: st
   return { category: 'discussion', categoryLabel: '💬 讨论', emoji: '💬', priority: 'low', needsOwner: false };
 }
 
-// ========== 本地模板回复（精心编写，有实质内容） ==========
+// ========== Fallback ==========
 
-function fallbackReply(content: string, classification: { category: string }): string {
+function fallbackAnalyze(content: string) {
+  const c = classifyLocal(content);
+  return { ...c, reply: fallbackReply(content) };
+}
+
+function fallbackReply(content: string): string {
   const text = content.toLowerCase();
-
-  // AI 新闻相关
   if (text.includes('新闻') || text.includes('准确') || text.includes('翻译') || text.includes('来源') || text.includes('正确') || text.includes('内容')) {
     return '观吾的AI新闻栏目聚合了36氪、少数派等权威科技媒体的RSS内容，标题和摘要由AI自动翻译生成，链接会跳转原文。翻译偶尔可能有偏差，建议以原文为准。我们也在持续优化翻译质量，欢迎发现错误时留言告知！';
   }
-
-  // 网站用途
   if (text.includes('干什么') || text.includes('做什么') || text.includes('有什么用') || text.includes('什么意思')) {
     return '观吾是吴总的个人品牌网站，包含两大板块：「半百观AI」分享AI工具落地实践（含AI新闻和日记），以及公司业务——数字化智能库存管理AIoT解决方案（智能货架、无人仓库等）。欢迎了解更多！';
   }
-
-  // 合作
-  if (text.includes('合作') || text.includes('商务') || text.includes('渠道')) {
-    return '感谢你的合作意向！我们专注数字化智能库存管理AIoT领域，非常欢迎深入聊聊合作可能。请邮件联系 czfxwq@gmail.com，我们会尽快安排对接。';
+  if (text.includes('合作') || text.includes('商务') || text.includes('渠道') || text.includes('产品') || text.includes('货架')) {
+    return '感谢你的关注！请邮件联系 czfxwq@gmail.com，我们会安排专人对接。';
   }
-
-  // 问题
   if (text.includes('bug') || text.includes('错误') || text.includes('坏') || text.includes('打不开')) {
-    return '感谢反馈问题！我们会尽快排查修复。如果方便，请补充复现步骤，帮助我们更快定位。';
+    return '感谢反馈问题！我们会尽快排查修复。如果方便，请补充复现步骤。';
   }
-
-  // 建议
   if (text.includes('建议') || text.includes('想法') || text.includes('功能')) {
     return '感谢建议！我们会认真考虑每一条反馈，持续优化网站体验。';
   }
-
-  // 鼓励
   if (text.includes('好') || text.includes('棒') || text.includes('喜欢') || text.includes('感谢')) {
     return '谢谢你的鼓励！你的支持是我们持续更新的动力。';
   }
-
-  // 默认
-  return '感谢你的留言！欢迎继续交流。如果有任何问题或建议，随时留言。';
+  return '感谢你的留言！欢迎继续交流。';
 }
 
 // ========== POST: 提交留言 ==========
@@ -109,11 +191,10 @@ export async function onRequestPost(context: { request: Request; env: any }) {
     });
   }
 
-  // 1. 本地快速分类
-  const classification = classifyMessage(content);
-  const quickReply = fallbackReply(content, classification);
+  // LLM 智能分析（Gateway 直连，约15秒）
+  const analysis = await analyze(content, env);
 
-  const title = `${classification.emoji} ${content.substring(0, 50)}${content.length > 50 ? '…' : ''}`;
+  const title = `${analysis.emoji} ${content.substring(0, 50)}${content.length > 50 ? '…' : ''}`;
   const priorityLabels: Record<string, string> = {
     urgent: '🔴 紧急', high: '🟠 重要', medium: '🟡 普通', low: '🟢 低优',
   };
@@ -121,18 +202,16 @@ export async function onRequestPost(context: { request: Request; env: any }) {
   const issueBody = [
     `## 📝 留言内容\n\n${content}`,
     contact ? `## 📮 联系方式\n\n${contact}` : '## 📮 联系方式\n\n*用户未留*',
-    `## 🤖 AI 分析\n\n- **分类**: ${classification.categoryLabel}\n- **优先级**: ${priorityLabels[classification.priority]}\n- **需负责人处理**: ${classification.needsOwner ? '✅ 是' : '❌ 否'}`,
-    `## 🤖 AI 回复\n\n${quickReply}`,
+    `## 🤖 AI 分析\n\n- **分类**: ${analysis.categoryLabel}\n- **优先级**: ${priorityLabels[analysis.priority]}\n- **需负责人处理**: ${analysis.needsOwner ? '✅ 是' : '❌ 否'}`,
+    `## 🤖 AI 回复\n\n${analysis.reply}`,
     `---\n\n> 自动创建于观吾留言板`,
   ].join('\n\n');
 
-  const labels = ['guestbook', classification.category];
-  if (classification.needsOwner) labels.push('needs-owner');
-  if (classification.priority === 'urgent') labels.push('urgent');
-  if (classification.priority === 'high') labels.push('important');
+  const labels = ['guestbook', analysis.category];
+  if (analysis.needsOwner) labels.push('needs-owner');
+  if (analysis.priority === 'urgent') labels.push('urgent');
+  if (analysis.priority === 'high') labels.push('important');
 
-  // 创建 Issue
-  let issueNumber = 0;
   try {
     const res = await fetch(`https://api.github.com/repos/${REPO}/issues`, {
       method: 'POST',
@@ -145,69 +224,33 @@ export async function onRequestPost(context: { request: Request; env: any }) {
       body: JSON.stringify({ title, body: issueBody, labels }),
     });
 
-    if (res.ok) {
-      const issue = await res.json();
-      issueNumber = issue.number;
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error('GitHub API error:', errText);
+      return new Response(JSON.stringify({ error: '留言提交失败' }), {
+        status: 500, headers: { 'Content-Type': 'application/json', ...cors(request) }
+      });
     }
+
+    const issue = await res.json();
+
+    return new Response(JSON.stringify({
+      success: true,
+      issueId: issue.number,
+      category: { label: analysis.categoryLabel, emoji: analysis.emoji },
+      priority: analysis.priority,
+      needsOwner: analysis.needsOwner,
+      aiReply: analysis.reply,
+    }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json', ...cors(request) }
+    });
   } catch (error) {
-    console.error('GitHub API error:', error);
+    console.error('Guestbook error:', error);
+    return new Response(JSON.stringify({ error: '留言提交失败' }), {
+      status: 500, headers: { 'Content-Type': 'application/json', ...cors(request) }
+    });
   }
-
-  // 异步：调用 Gateway 生成 LLM 回复并追加到 Issue
-  const { GATEWAY_URL, GATEWAY_TOKEN } = env;
-  if (GATEWAY_URL && GATEWAY_TOKEN && !GATEWAY_URL.includes('localhost') && !GATEWAY_URL.includes('127.0.0.1') && issueNumber > 0) {
-    (async () => {
-      try {
-        const systemPrompt = `你是观吾网站(ban-bai.com)的智能留言助理。观吾是吴总的个人品牌网站：
-
-1. 半百观AI：AI新闻（聚合36氪/少数派RSS，AI翻译，链接跳转原文）、日记（AI实践分享）
-2. 公司业务：数字化智能库存管理AIoT（智能货架、无人仓库、线边仓等）
-
-用户留言：${content}
-
-请直接回复用户，语气真诚、专业、有温度。针对用户的具体问题给出有意义的回答，不要说"收到"等客套话。50-150字。`;
-
-        const res = await fetch(`${GATEWAY_URL}/v1/chat/completions`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${GATEWAY_TOKEN}` },
-          body: JSON.stringify({ model: 'openclaw/knowledge-admin', stream: false, max_tokens: 400, messages: [{ role: 'system', content: systemPrompt }] }),
-        });
-        if (res.ok) {
-          const data = await res.json();
-          const llmReply = data.choices?.[0]?.message?.content?.trim();
-          if (llmReply && llmReply.length > 10) {
-            const issuesRes = await fetch(`https://api.github.com/repos/${REPO}/issues?labels=guestbook&state=all&per_page=1&sort=created&direction=desc`, {
-              headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
-            });
-            if (issuesRes.ok) {
-              const issues = await issuesRes.json();
-              if (issues.length > 0 && issues[0].comments_url) {
-                await fetch(issues[0].comments_url, {
-                  method: 'POST',
-                  headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ body: `🤖 **AI 详细回复**\n\n${llmReply}` }),
-                });
-              }
-            }
-          }
-        }
-      } catch (e) {
-        console.error('Async LLM reply failed:', e);
-      }
-    })();
-  }
-
-  return new Response(JSON.stringify({
-    success: true,
-    issueId: issueNumber,
-    category: { label: classification.categoryLabel, emoji: classification.emoji },
-    priority: classification.priority,
-    needsOwner: classification.needsOwner,
-    aiReply: quickReply,
-  }), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json', ...cors(request) }
-  });
 }
 
 // ========== GET: 获取留言 ==========
