@@ -286,7 +286,9 @@ export async function onRequestGet(context: { request: Request; env: any }) {
   }
 
   try {
-    let apiUrl = `https://api.github.com/repos/${REPO}/issues?labels=guestbook&state=all&per_page=50&sort=created&direction=desc`;
+    // 公开模式：只显示 open 的留言
+    const stateParam = isAdmin ? 'all' : 'open';
+    let apiUrl = `https://api.github.com/repos/${REPO}/issues?labels=guestbook&state=${stateParam}&per_page=50&sort=created&direction=desc`;
 
     if (isAdmin) {
       const category = url.searchParams.get('category');
