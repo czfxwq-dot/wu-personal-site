@@ -231,7 +231,7 @@ export async function onRequestGet(context: { request: Request; env: any }) {
         const categoryMatch = body.match(/类别: `([^`]+)`/);
         const replyMatch = body.match(/## 🤖 AI 自动回复\n\n([\s\S]*?)\n\n---/);
 
-        const categoryLabel = body.match(/\*\*(🔘[^*]+)\*\*/);
+        const categoryLabel = body.match(/\*\*([^*]+)\*\*/);
 
         return {
           id: issue.number,
