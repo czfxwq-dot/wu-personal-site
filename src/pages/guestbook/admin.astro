@@ -1,14 +1,8 @@
 ---
 import BaseLayout from '../../layouts/Base.astro';
-
-const adminJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "留言板管理 | 观吾"
-};
 ---
 
-<BaseLayout title="留言板管理 | 观吾" jsonLd={adminJsonLd} ogDescription="观吾留言板管理后台" lang="zh">
+<BaseLayout title="留言板管理 | 观吾" jsonLd={{"@context":"https://schema.org","@type":"WebPage","name":"留言板管理"}} lang="zh">
   <section class="admin-section">
     <div class="admin-header">
       <h1>留言板管理</h1>
@@ -18,8 +12,12 @@ const adminJsonLd = {
       </div>
     </div>
 
-    <!-- 统计卡片 -->
+    <!-- 关键指标 -->
     <div class="stats-grid" id="stats-grid">
+      <div class="stat-card stat-needs-owner">
+        <span class="stat-number" id="stat-needs-owner">—</span>
+        <span class="stat-label">🔔 需要你处理</span>
+      </div>
       <div class="stat-card">
         <span class="stat-number" id="stat-total">—</span>
         <span class="stat-label">总留言</span>
@@ -30,7 +28,7 @@ const adminJsonLd = {
       </div>
       <div class="stat-card stat-bug">
         <span class="stat-number" id="stat-bug">—</span>
-        <span class="stat-label">🐛 问题</span>
+        <span class="stat-label">🔧 问题</span>
       </div>
       <div class="stat-card stat-cooperation">
         <span class="stat-number" id="stat-cooperation">—</span>
@@ -40,21 +38,17 @@ const adminJsonLd = {
         <span class="stat-number" id="stat-praise">—</span>
         <span class="stat-label">❤️ 鼓励</span>
       </div>
-      <div class="stat-card stat-discussion">
-        <span class="stat-number" id="stat-discussion">—</span>
-        <span class="stat-label">💬 讨论</span>
-      </div>
     </div>
 
-    <!-- 筛选 -->
+    <!-- 快速筛选 -->
     <div class="filter-bar">
       <span class="filter-label">筛选：</span>
-      <button class="filter-btn active" data-category="all">全部</button>
-      <button class="filter-btn" data-category="suggestion">💡 建议</button>
-      <button class="filter-btn" data-category="bug">🐛 问题</button>
-      <button class="filter-btn" data-category="cooperation">🤝 合作</button>
-      <button class="filter-btn" data-category="praise">❤️ 鼓励</button>
-      <button class="filter-btn" data-category="discussion">💬 讨论</button>
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="needs-owner" style="border-color:#ef4444;color:#ef4444;">🔔 需你处理</button>
+      <button class="filter-btn" data-filter="suggestion">💡 建议</button>
+      <button class="filter-btn" data-filter="cooperation">🤝 合作</button>
+      <button class="filter-btn" data-filter="bug">🔧 问题</button>
+      <button class="filter-btn" data-filter="inquiry">❓ 咨询</button>
     </div>
 
     <!-- 留言列表 -->
@@ -65,191 +59,59 @@ const adminJsonLd = {
 </BaseLayout>
 
 <style>
-  .admin-section {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 32px 20px;
-  }
-  .admin-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  .admin-header h1 {
-    font-size: 22px;
-    margin: 0;
-  }
-  .admin-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    color: var(--color-text-light);
-  }
-  .refresh-btn {
-    background: var(--color-accent);
-    color: #fff;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-  }
+  .admin-section { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+  .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .admin-header h1 { font-size: 22px; margin: 0; }
+  .admin-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--color-text-light); }
+  .refresh-btn { background: var(--color-accent); color: #fff; border: none; padding: 6px 14px; border-radius: 6px; font-size: 13px; cursor: pointer; }
   .refresh-btn:hover { opacity: 0.9; }
+  .refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-  /* 统计卡片 */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .stat-card {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-  }
-  .stat-number {
-    display: block;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--color-text);
-  }
-  .stat-label {
-    font-size: 13px;
-    color: var(--color-text-light);
-  }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 16px; text-align: center; }
+  .stat-number { display: block; font-size: 28px; font-weight: 700; }
+  .stat-label { font-size: 13px; color: var(--color-text-light); }
+  .stat-needs-owner { border-left: 3px solid #ef4444; background: #fef2f2; }
+  .stat-needs-owner .stat-number { color: #ef4444; }
   .stat-suggestion { border-left: 3px solid #3b82f6; }
   .stat-bug { border-left: 3px solid #ef4444; }
   .stat-cooperation { border-left: 3px solid #f59e0b; }
   .stat-praise { border-left: 3px solid #ec4899; }
-  .stat-discussion { border-left: 3px solid #8b5cf6; }
 
-  /* 筛选 */
-  .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .filter-label {
-    font-size: 14px;
-    color: var(--color-text-light);
-    margin-right: 4px;
-    line-height: 32px;
-  }
-  .filter-btn {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    color: var(--color-text-secondary);
-    transition: all 0.2s;
-  }
-  .filter-btn:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-  }
-  .filter-btn.active {
-    background: var(--color-accent);
-    color: #fff;
-    border-color: var(--color-accent);
-  }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border); }
+  .filter-label { font-size: 14px; color: var(--color-text-light); margin-right: 4px; line-height: 32px; }
+  .filter-btn { background: var(--color-bg); border: 1px solid var(--color-border); padding: 6px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; color: var(--color-text-secondary); transition: all 0.2s; }
+  .filter-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .filter-btn.active { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
 
-  /* 管理留言列表 */
-  .admin-messages {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .admin-msg {
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 16px;
-  }
-  .admin-msg-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    gap: 12px;
-  }
-  .admin-msg-tag {
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 6px;
-    background: var(--color-bg-secondary);
-    white-space: nowrap;
-  }
-  .admin-msg-date {
-    font-size: 12px;
-    color: var(--color-text-light);
-    white-space: nowrap;
-  }
-  .admin-msg-content {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-  .admin-msg-contact {
-    font-size: 12px;
-    color: var(--color-accent);
-    margin-bottom: 8px;
-  }
-  .admin-msg-contact strong {
-    color: var(--color-text-secondary);
-  }
-  .admin-msg-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .admin-msg-actions a {
-    font-size: 12px;
-    color: var(--color-text-light);
-    text-decoration: none;
-  }
-  .admin-msg-actions a:hover {
-    color: var(--color-accent);
-  }
-  .loading-state {
-    text-align: center;
-    padding: 40px;
-    color: var(--color-text-light);
-  }
-  .empty-state {
-    text-align: center;
-    padding: 40px;
-    color: var(--color-text-light);
-    font-size: 14px;
-  }
+  .admin-messages { display: flex; flex-direction: column; gap: 12px; }
+  .admin-msg { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 16px; }
+  .admin-msg.needs-owner { border-left: 3px solid #ef4444; }
+  .admin-msg-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 12px; }
+  .admin-msg-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .admin-msg-tag { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--color-bg-secondary); }
+  .admin-msg-tag.needs-owner { background: #fef2f2; color: #ef4444; font-weight: 600; }
+  .admin-msg-date { font-size: 12px; color: var(--color-text-light); white-space: nowrap; }
+  .admin-msg-content { font-size: 14px; line-height: 1.7; margin-bottom: 8px; }
+  .admin-msg-contact { font-size: 12px; color: var(--color-accent); margin-bottom: 8px; }
+  .msg-reply-label { font-weight: 600; font-size: 12px; color: var(--color-accent); }
+  .msg-reply { padding: 10px 12px; background: var(--color-bg); border-left: 3px solid var(--color-accent); border-radius: 0 8px 8px 0; font-size: 13px; color: var(--color-text-secondary); white-space: pre-line; margin-top: 8px; }
+  .admin-msg-actions { display: flex; gap: 8px; margin-top: 8px; }
+  .admin-msg-actions a { font-size: 12px; color: var(--color-text-light); text-decoration: none; }
+  .admin-msg-actions a:hover { color: var(--color-accent); }
+  .loading-state { text-align: center; padding: 40px; color: var(--color-text-light); }
+  .empty-state { text-align: center; padding: 40px; color: var(--color-text-light); font-size: 14px; }
 </style>
 
 <script>
-  // 简单的认证检查（生产环境应该用真正的认证）
   const ADMIN_KEY = 'gb-admin-2026';
 
-  // 检查认证
   function checkAuth(): boolean {
     const stored = sessionStorage.getItem('gb-admin-auth');
     if (stored === 'ok') return true;
-
     const input = prompt('输入管理密码：');
-    if (input === ADMIN_KEY) {
-      sessionStorage.setItem('gb-admin-auth', 'ok');
-      return true;
-    }
-    if (input !== null) {
-      alert('密码错误');
-    }
+    if (input === ADMIN_KEY) { sessionStorage.setItem('gb-admin-auth', 'ok'); return true; }
+    if (input !== null) alert('密码错误');
     return false;
   }
 
@@ -259,6 +121,7 @@ const adminJsonLd = {
   }
 
   let currentFilter = 'all';
+  let allMessages: any[] = [];
 
   async function loadData() {
     const container = document.getElementById('admin-messages');
@@ -270,67 +133,90 @@ const adminJsonLd = {
 
     const url = new URL('/api/guestbook', window.location.origin);
     url.searchParams.set('admin', 'true');
-    if (currentFilter !== 'all') {
-      url.searchParams.set('category', currentFilter);
-    }
 
     try {
       const res = await fetch(url);
       const data = await res.json();
+      allMessages = data.messages || [];
 
-      // 更新统计
-      if (data.stats) {
-        const s = data.stats;
-        const el = (id: string) => document.getElementById(id);
-        if (el('stat-total')) el('stat-total')!.textContent = String(s.total);
-        if (el('stat-suggestion')) el('stat-suggestion')!.textContent = String(s.byCategory?.suggestion || 0);
-        if (el('stat-bug')) el('stat-bug')!.textContent = String(s.byCategory?.bug || 0);
-        if (el('stat-cooperation')) el('stat-cooperation')!.textContent = String(s.byCategory?.cooperation || 0);
-        if (el('stat-praise')) el('stat-praise')!.textContent = String(s.byCategory?.praise || 0);
-        if (el('stat-discussion')) el('stat-discussion')!.textContent = String(s.byCategory?.discussion || 0);
-      }
+      // 统计
+      const s = data.stats || {};
+      const needsOwnerCount = allMessages.filter(m => m.needsOwner && m.state === 'open').length;
+      const el = (id: string) => document.getElementById(id);
+      if (el('stat-needs-owner')) el('stat-needs-owner')!.textContent = String(needsOwnerCount);
+      if (el('stat-total')) el('stat-total')!.textContent = String(s.total);
 
-      if (!data.messages || data.messages.length === 0) {
-        if (container) container.innerHTML = '<div class="empty-state">暂无留言</div>';
-        return;
-      }
+      const byCategory: Record<string, number> = {};
+      allMessages.forEach(m => {
+        const cat = m.categoryLabel || '💬 讨论';
+        byCategory[cat] = (byCategory[cat] || 0) + 1;
+      });
+      if (el('stat-suggestion')) el('stat-suggestion')!.textContent = String(byCategory['💡 产品建议'] || 0);
+      if (el('stat-bug')) el('stat-bug')!.textContent = String(byCategory['🔧 问题反馈'] || 0);
+      if (el('stat-cooperation')) el('stat-cooperation')!.textContent = String(byCategory['🤝 合作意向'] || 0);
+      if (el('stat-praise')) el('stat-praise')!.textContent = String(byCategory['❤️ 鼓励'] || 0);
 
-      if (container) {
-        container.innerHTML = data.messages.map((msg: any) => {
-          const date = new Date(msg.createdAt);
-          const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
-          const hasContact = msg.contact && msg.contact !== '*用户未留联系方式*';
-
-          return `
-            <div class="admin-msg">
-              <div class="admin-msg-header">
-                <span class="admin-msg-tag">${msg.categoryLabel}</span>
-                <span class="admin-msg-date">${dateStr}</span>
-              </div>
-              <div class="admin-msg-content">${escapeHtml(msg.content)}</div>
-              ${hasContact ? `<div class="admin-msg-contact">📮 <strong>联系方式：</strong>${escapeHtml(msg.contact)}</div>` : ''}
-              ${msg.aiReply ? `
-                <div class="msg-reply-label">AI 回复</div>
-                <div class="msg-reply" style="padding:10px 12px;background:var(--color-bg);border-left:3px solid var(--color-accent);border-radius:0 8px 8px 0;font-size:13px;color:var(--color-text-secondary);white-space:pre-line;margin-top:8px;">${escapeHtml(msg.aiReply)}</div>
-              ` : ''}
-              <div class="admin-msg-actions">
-                <a href="${msg.url}" target="_blank" rel="noopener">在 GitHub 查看 →</a>
-                <a href="${msg.url}/comments" target="_blank" rel="noopener">添加评论 →</a>
-              </div>
-            </div>
-          `;
-        }).join('');
-      }
+      renderMessages();
 
       if (lastRefresh) {
         const now = new Date();
         lastRefresh.textContent = `最后刷新：${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
       }
-    } catch (err) {
+    } catch {
       if (container) container.innerHTML = '<div class="empty-state">加载失败，请刷新重试</div>';
     } finally {
       if (refreshBtn) refreshBtn.disabled = false;
     }
+  }
+
+  function renderMessages() {
+    const container = document.getElementById('admin-messages');
+    if (!container) return;
+
+    let filtered = allMessages;
+    if (currentFilter === 'needs-owner') {
+      filtered = allMessages.filter(m => m.needsOwner && m.state === 'open');
+    } else if (currentFilter !== 'all') {
+      filtered = allMessages.filter(m => {
+        const label = m.categoryLabel || '';
+        if (currentFilter === 'suggestion') return label.includes('建议');
+        if (currentFilter === 'cooperation') return label.includes('合作');
+        if (currentFilter === 'bug') return label.includes('问题') || label.includes('反馈');
+        if (currentFilter === 'inquiry') return label.includes('咨询');
+        return false;
+      });
+    }
+
+    if (filtered.length === 0) {
+      container.innerHTML = '<div class="empty-state">暂无留言</div>';
+      return;
+    }
+
+    container.innerHTML = filtered.map((msg: any) => {
+      const date = new Date(msg.createdAt);
+      const dateStr = `${date.getMonth()+1}月${date.getDate()}日 ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+      const hasContact = msg.contact && msg.contact !== '*用户未留*';
+
+      return `
+        <div class="admin-msg ${msg.needsOwner ? 'needs-owner' : ''}">
+          <div class="admin-msg-header">
+            <div class="admin-msg-tags">
+              <span class="admin-msg-tag">${msg.categoryLabel || '💬 讨论'}</span>
+              ${msg.needsOwner ? '<span class="admin-msg-tag needs-owner">🔔 需处理</span>' : ''}
+              ${msg.priority ? `<span class="admin-msg-tag">${msg.priority}</span>` : ''}
+            </div>
+            <span class="admin-msg-date">${dateStr}</span>
+          </div>
+          <div class="admin-msg-content">${escapeHtml(msg.content)}</div>
+          ${hasContact ? `<div class="admin-msg-contact">📮 <strong>联系方式：</strong>${escapeHtml(msg.contact)}</div>` : ''}
+          ${msg.aiReply ? `<div class="msg-reply-label">AI 回复</div><div class="msg-reply">${escapeHtml(msg.aiReply)}</div>` : ''}
+          <div class="admin-msg-actions">
+            <a href="${msg.url}" target="_blank" rel="noopener">GitHub →</a>
+            ${msg.comments > 0 ? `<a href="${msg.url}#issuecomment-${msg.comments}" target="_blank" rel="noopener">评论(${msg.comments}) →</a>` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
   }
 
   function escapeHtml(text: string): string {
@@ -339,19 +225,16 @@ const adminJsonLd = {
     return div.innerHTML;
   }
 
-  // 筛选按钮
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      currentFilter = btn.getAttribute('data-category') || 'all';
-      loadData();
+      currentFilter = btn.getAttribute('data-filter') || 'all';
+      renderMessages();
     });
   });
 
-  // 刷新按钮
   document.getElementById('refresh-btn')?.addEventListener('click', loadData);
 
-  // 初始加载
   loadData();
 </script>

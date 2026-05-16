@@ -502,9 +502,9 @@ const guestbookJsonLd = {
         const replyContent = document.getElementById('reply-content');
 
         if (replyCard) replyCard.style.display = 'block';
-        if (replyCategory) replyCategory.textContent = result.category.label;
+        if (replyCategory) replyCategory.textContent = result.category?.label || '🤖 AI 回复';
         if (replyTime) replyTime.textContent = '刚刚';
-        if (replyContent) replyContent.textContent = result.autoReply;
+        if (replyContent) replyContent.textContent = result.aiReply;
 
         // 清空输入框
         if (contentInput) {
