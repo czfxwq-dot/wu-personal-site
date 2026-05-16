@@ -22,15 +22,8 @@ function cors(request: Request): Record<string, string> {
 
 const SYSTEM_PROMPT = `你是观吾网站的智能留言助理。观吾是一家专注于"数字化智能库存管理 AIoT"的公司，产品包括智能货架/货柜、无人仓库、无人零售店、制造业线边仓等。旗下还有个人 IP 品牌"半百观AI"，分享 AI 工具落地实践。
 
-请分析用户留言，输出 JSON 格式：
-{
-  "category": 分类（suggestion/product/bug/cooperation/praise/discussion/inquiry）,
-  "categoryLabel": 中文标签（如 "💡 产品建议" / "🤝 合作意向" / "🔧 问题反馈" / "❤️ 鼓励" / "💬 讨论" / "❓ 咨询"）,
-  "emoji": 对应 emoji,
-  "priority": "low" | "medium" | "high" | "urgent",
-  "needsOwner": 是否需要负责人亲自处理（true/false）,
-  "reply": 用中文直接回复用户，语气真诚、专业、有温度，不要套话，根据观吾的业务和实际情况回答（100字以内）
-}
+请分析用户留言，只输出 JSON 格式，不要其他内容。JSON 格式如下：
+{"category": 分类, "categoryLabel": 中文标签, "emoji": 对应emoji, "priority": "low"|"medium"|"high"|"urgent", "needsOwner": true/false, "reply": "回复内容"}
 
 分类规则：
 - suggestion: 产品功能建议
@@ -61,55 +54,91 @@ async function llmAnalyze(content: string, env: any): Promise<{
   needsOwner: boolean;
   reply: string;
 }> {
-  const { GATEWAY_URL, GATEWAY_TOKEN } = env;
+  const { CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN } = env;
 
-  if (!GATEWAY_URL || !GATEWAY_TOKEN) {
-    // 降级：关键词分类
-    return fallbackClassify(content);
-  }
+  // 优先使用 Cloudflare Workers AI
+  if (CLOUDFLARE_ACCOUNT_ID && CLOUDFLARE_API_TOKEN) {
+    try {
+      const res = await fetch(
+        `https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/meta/llama-3.1-8b-instruct`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          },
+          body: JSON.stringify({
+            messages: [
+              { role: 'system', content: SYSTEM_PROMPT + '\n\n只输出 JSON，不要其他内容。' },
+              { role: 'user', content: content },
+            ],
+          }),
+        }
+      );
 
-  try {
-    const res = await fetch(`${GATEWAY_URL}/v1/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${GATEWAY_TOKEN}`,
-      },
-      body: JSON.stringify({
-        model: 'openclaw/knowledge-admin',
-        stream: false,
-        temperature: 0.7,
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          { role: 'user', content: content },
-        ],
-      }),
-    });
-
-    if (!res.ok) throw new Error(`Gateway ${res.status}`);
-
-    const data = await res.json();
-    const replyText = data.choices?.[0]?.message?.content || '';
-
-    // 解析 JSON 回复
-    const jsonMatch = replyText.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const parsed = JSON.parse(jsonMatch[0]);
-      return {
-        category: parsed.category || 'discussion',
-        categoryLabel: parsed.categoryLabel || '💬 讨论',
-        emoji: parsed.emoji || '💬',
-        priority: parsed.priority || 'low',
-        needsOwner: !!parsed.needsOwner,
-        reply: parsed.reply || defaultReply('discussion'),
-      };
+      if (res.ok) {
+        const data = await res.json();
+        const replyText = data?.result?.response || '';
+        const jsonMatch = replyText.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          const parsed = JSON.parse(jsonMatch[0]);
+          return {
+            category: parsed.category || 'discussion',
+            categoryLabel: parsed.categoryLabel || '💬 讨论',
+            emoji: parsed.emoji || '💬',
+            priority: parsed.priority || 'low',
+            needsOwner: !!parsed.needsOwner,
+            reply: parsed.reply || defaultReply('discussion'),
+          };
+        }
+      }
+    } catch (e) {
+      console.error('Workers AI failed:', e);
     }
-
-    return fallbackClassify(content);
-  } catch (e) {
-    console.error('LLM analysis failed, using fallback:', e);
-    return fallbackClassify(content);
   }
+
+  // 也尝试 Gateway（如果是公网可达的）
+  const { GATEWAY_URL, GATEWAY_TOKEN } = env;
+  if (GATEWAY_URL && GATEWAY_TOKEN && !GATEWAY_URL.includes('localhost') && !GATEWAY_URL.includes('127.0.0.1')) {
+    try {
+      const res = await fetch(`${GATEWAY_URL}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${GATEWAY_TOKEN}`,
+        },
+        body: JSON.stringify({
+          model: 'openclaw/knowledge-admin',
+          stream: false,
+          temperature: 0.7,
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT },
+            { role: 'user', content: content },
+          ],
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const replyText = data.choices?.[0]?.message?.content || '';
+        const jsonMatch = replyText.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          const parsed = JSON.parse(jsonMatch[0]);
+          return {
+            category: parsed.category || 'discussion',
+            categoryLabel: parsed.categoryLabel || '💬 讨论',
+            emoji: parsed.emoji || '💬',
+            priority: parsed.priority || 'low',
+            needsOwner: !!parsed.needsOwner,
+            reply: parsed.reply || defaultReply('discussion'),
+          };
+        }
+      }
+    } catch (e) {
+      console.error('Gateway failed:', e);
+    }
+  }
+
+  return fallbackClassify(content);
 }
 
 function fallbackClassify(content: string) {
