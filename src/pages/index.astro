@@ -188,7 +188,7 @@ const latestArticle = articles[0];
       const msg = document.createElement('div');
       msg.className = 'chat-msg ' + type;
       msg.innerHTML = type === 'bot'
-        ? '<span class="msg-avatar">🤖</span><div class="msg-bubble">' + text.replace(/\n/g, '<br/>') + '</div>'
+        ? '<span class="msg-avatar">🦞</span><div class="msg-bubble">' + text.replace(/\n/g, '<br/>') + '</div>'
         : '<span class="msg-avatar">👤</span><div class="msg-bubble">' + text + '</div>';
       messages.appendChild(msg);
       messages.scrollTop = messages.scrollHeight;
@@ -199,7 +199,7 @@ const latestArticle = articles[0];
       sendBtn.disabled = true;
       const msg = document.createElement('div');
       msg.className = 'chat-msg bot typing-indicator-wrap';
-      msg.innerHTML = '<span class="msg-avatar">🤖</span><div class="msg-bubble"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
+      msg.innerHTML = '<span class="msg-avatar">🦞</span><div class="msg-bubble"><div class="typing-indicator"><span></span><span></span><span></span></div></div>';
       messages.appendChild(msg);
       messages.scrollTop = messages.scrollHeight;
     }
@@ -235,7 +235,7 @@ const latestArticle = articles[0];
         // Create bot message bubble
         const msg = document.createElement('div');
         msg.className = 'chat-msg bot';
-        msg.innerHTML = '<span class="msg-avatar">🤖</span><div class="msg-bubble"></div>';
+        msg.innerHTML = '<span class="msg-avatar">🦞</span><div class="msg-bubble"></div>';
         messages.appendChild(msg);
         const bubble = msg.querySelector('.msg-bubble');
 

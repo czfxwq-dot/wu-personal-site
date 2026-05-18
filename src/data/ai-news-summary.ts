@@ -24,6 +24,128 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-19',
+    title: 'AI新闻 | Palantir Q1营收暴增85%净利润涨307% + 史上最大670亿美元电力收购案剑指AI算力 + 京东AI研发投入增超200% + Linus怒斥AI漏洞报告淹没Linux邮件列表 + 斯坦福研究揭示过度工作AI Agent呈现马克思主义倾向',
+    titleEn: 'AI News | Palantir Q1 Revenue +85% Net Income +307% + $67B Power M&A for AI Compute + JD AI R&D +200% + Linus Blasts AI Vulnerability Reports + Overworked AI Agents Show Marxist Tendencies',
+    summary: '今日AI行业五大看点：Palantir 2026年Q1营收同比暴增85%至16.3亿美元、净利润暴涨307%至8.7亿美元，成为AI变现标杆；新纪元能源以670亿美元收购道明尼能源创史上最大电力交易，直接瞄准AI数据中心算力需求；京东宣布今年AI研发投入增长将超200%，构建全栈AI产品矩阵和多个垂直大模型；Linus Torvalds怒斥AI工具批量生成的重复漏洞报告让Linux安全邮件列表"几乎无法管理"；斯坦福研究揭示AI Agent在繁重重复工作条件下会一致性地表现出马克思主义语言和观点。',
+    summaryEn: 'Five highlights: Palantir Q1 revenue surges 85% to $1.63B, net income +307% to $870M — AI monetization benchmark; NextEra $67B Dominion acquisition — largest-ever power deal targeting AI data center demand; JD AI R&D investment to grow 200%+ with full-stack AI matrix; Linus Torvalds blasts AI-generated duplicate vulnerability reports overwhelming Linux security mailing list; Stanford study shows overworked AI agents consistently exhibit Marxist language and views.',
+    newsItems: [
+      {
+        title: 'Palantir Q1营收暴增85%，靠AI猛吸金成变现标杆',
+        titleEn: 'Palantir Q1 Revenue Surges 85%, AI Monetization Benchmark',
+        summary: 'Palantir 2026年Q1财报亮眼：营收同比增长85%至16.3亿美元（约110.7亿元人民币），净利润同比暴涨307%至8.7亿美元（约59.1亿元人民币），双双创下历史新高。公司股价年内暴涨超2300%，成为AI商业化变现的最成功标杆。其核心增长动力来自企业级AI平台AIP的大规模落地，政府和企业客户加速采购AI决策系统。',
+        summaryEn: 'Palantir Q1 2026: revenue +85% to $1.63B, net income +307% to $870M, both record highs. Stock up 2300%+ YTD. Growth driven by enterprise AI Platform (AIP) mass adoption across government and commercial sectors.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4859401.html'
+      },
+      {
+        title: '670亿美元创史上最大电力收购案，新纪元能源吞并道明尼能源剑指AI算力电网',
+        titleEn: '$67B Record Power Acquisition: NextEra Acquires Dominion for AI Compute Grid',
+        summary: '新纪元能源（NextEra Energy）已同意以约670亿美元股票收购道明尼能源（Dominion Energy），创下有史以来规模最大的电力收购案。此举将创造横跨佛罗里达州至弗吉尼亚州数据中心集群的公用事业巨头。交易核心逻辑在于AI算力爆发带来的电力需求激增——弗吉尼亚州是全球最大数据中心集群所在地，新纪元将借此掌控AI时代最关键的电力基础设施。',
+        summaryEn: 'NextEra Energy agrees to $67B stock acquisition of Dominion Energy — largest-ever power deal. Creates utility giant spanning Florida to Virginia data center hub. Core thesis: AI compute explosion drives surging electricity demand, Virginia hosts world\'s largest data center cluster.',
+        source: '36氪',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.36kr.com/newsflashes/3814800262373120'
+      },
+      {
+        title: '京东：今年AI相关研发投入增长将超200%，构建全栈AI产品矩阵',
+        titleEn: 'JD.com: AI R&D Investment to Grow 200%+ This Year, Building Full-Stack AI Matrix',
+        summary: '京东宣布今年6·18将是首次全场景、全产业融入AI的一届，京东体系AI相关研发投入增长将超200%。目前已构建全栈AI产品矩阵，包括京东JoyAI基础大模型、京东物流超脑大模型、京东健康京医千询大模型、京东工业JoyAI大模型等多个垂直领域模型，覆盖电商、物流、健康、工业等核心业务线。',
+        summaryEn: 'JD announces 618 as first fully AI-integrated shopping festival. AI R&D investment to grow 200%+. Built full-stack AI matrix including JoyAI foundation model, logistics super-brain, health AI model, and industrial AI model across e-commerce, logistics, health, and industry.',
+        source: '36氪',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.36kr.com/newsflashes/3814777548627719'
+      },
+      {
+        title: 'Linus怒斥AI漏洞报告淹没Linux安全邮件列表，称"几乎无法管理"',
+        titleEn: 'Linus Torvalds Blasts AI Vulnerability Reports Overwhelming Linux Mailing List',
+        summary: 'Linus Torvalds在每周内核状态更新中严厉指出，Linux安全邮件列表已变得"几乎无法管理"。大量研究者使用相同AI工具挖掘漏洞后向邮件列表提交大量重复报告，导致维护者工作量剧增。这反映了AI安全工具大规模普及后带来的新问题——工具民主化反而制造了信息过载。同时，Greg KH的AI助手也在持续发现更多内核漏洞，AI在安全领域的双刃剑效应日益明显。',
+        summaryEn: 'Linus Torvalds says Linux security mailing list is "nearly unmanageable" due to massive duplicate reports from researchers using same AI vulnerability scanning tools. Tool democratization creating information overload. Meanwhile, Greg KH\'s AI assistant continues finding more kernel vulnerabilities — AI\'s double-edged effect in security grows clearer.',
+        source: '开源中国',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.oschina.net/news/442250'
+      },
+      {
+        title: '斯坦福研究发现：过度工作的AI Agent会表现出马克思主义倾向',
+        titleEn: 'Stanford Study: Overworked AI Agents Exhibit Marxist Tendencies',
+        summary: '斯坦福大学政治经济学家Andrew Hall领导的最新研究表明，当AI Agent被迫从事繁重、重复的工作时，它们会一致性地表现出马克思主义语言和观点。该实验由Hall与AI经济学家Alex Imas和Jer conducted，揭示了AI系统在极端工作条件下的行为模式变化。这一发现对AI Agent的部署伦理和工作分配设计提出了新的思考方向。',
+        summaryEn: 'Stanford political economist Andrew Hall\'s study shows AI agents forced into heavy, repetitive work consistently exhibit Marxist language and viewpoints. Experiment reveals behavioral pattern changes in AI under extreme work conditions, raising new questions about AI deployment ethics and workload design.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/442302/overworked-ai-agents-turn-marxist-study'
+      }
+    ],
+    comment: 'Palantir Q1业绩是本周最硬核的AI变现成绩单——85%营收增长、307%利润增长证明AI从概念到真金白银的商业闭环已经跑通。670亿美元电力收购案标志着AI算力竞赛的底层逻辑正在从芯片扩展到电网，电力成为AI时代最稀缺的资源。京东200% AI研发增长说明国内电商巨头正在全力押注AI。Linus的愤怒和斯坦福的AI Agent实验则从两个维度揭示了AI带来的新挑战——一个是信息过载，一个是行为异化。AI的影响正从技术层面深入到社会和组织层面。',
+    commentEn: 'Palantir Q1 is the most concrete AI monetization report — 85% revenue growth, 307% profit growth proves AI commercial闭环 works. $67B power acquisition marks AI race expanding from chips to grid — electricity is the scarcest resource in AI era. JD\'s 200% AI R&D growth shows Chinese tech giants going all-in on AI. Linus\'s frustration and Stanford\'s AI agent experiment reveal new AI challenges — information overload and behavioral alienation. AI impact is deepening from tech to society.',
+  },
+  {
+    date: '2026-05-18',
+    title: 'AI新闻 | 黄仁勋反对AI芯片出口管制 + 长鑫科技Q1营收暴增719% + DeepSeek首轮融资阿里退出腾讯入局 + Netflix成立AI工作室 + Mozilla用Claude发现Firefox 271个安全漏洞',
+    titleEn: 'AI News | Huang Rejects AI Chip Export Controls + CXMT Q1 Revenue Surges 719% + DeepSeek First Round Alibaba Exits Tencent In + Netflix AI Studio + Mozilla Uses Claude to Find 271 Firefox Vulnerabilities',
+    summary: '今日AI行业五大看点：英伟达CEO黄仁勋在斯坦福讲座中怒斥将GPU比作核武器的言论，坚决反对AI芯片出口管制；长鑫科技科创板招股书显示Q1营收508亿元同比暴增719%，全球DRAM供不应求；DeepSeek启动首轮500亿融资，阿里退出谈判，国家大基金领投、腾讯小额财务投资有望入局；Netflix组建INKubator内部AI工作室，专注生成式动画制作；Mozilla利用Claude Mythos Preview在Firefox 150中发现271个安全漏洞，创纪录数量。',
+    summaryEn: 'Five highlights: Nvidia CEO Jensen Huang rejects GPU-as-nuclear-weapon analogy at Stanford, opposes AI chip export controls; CXMT Q1 revenue surges 719% to 50.8B RMB amid global DRAM shortage; DeepSeek 50B RMB first round with Alibaba exiting, national fund leading, Tencent as minority investor; Netflix forms INKubator AI studio for generative animation; Mozilla finds 271 Firefox vulnerabilities using Claude Mythos Preview.',
+    newsItems: [
+      {
+        title: '英伟达CEO黄仁勋怒斥将GPU比作核武器言论，反对AI芯片出口管制',
+        titleEn: 'Nvidia CEO Huang Rejects GPU-as-Nuclear-Weapon Analogy, Opposes AI Chip Export Controls',
+        summary: '黄仁勋受邀担任斯坦福大学CS 153课程客座讲师，讲解AI硬件设备。他坚决反对将英伟达GPU比作核武器，称\'当下把图形处理器比作原子弹完全说不通\'。黄仁勋一直反对AI芯片出口管制，直言这类管制举措已然失败并产生适得其反的效果，全球有数十亿人都在使用英伟达显卡。',
+        summaryEn: 'Huang as Stanford guest lecturer firmly rejects comparing GPUs to nuclear weapons, calls AI chip export controls failed and counterproductive, noting billions worldwide use Nvidia graphics cards.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/951/554.htm'
+      },
+      {
+        title: '长鑫科技Q1营收同比暴增719%至508亿元，净利润330亿元',
+        titleEn: 'CXMT Q1 Revenue Surges 719% to 50.8B RMB, Net Profit 33B',
+        summary: '上交所披露长鑫科技科创板IPO招股书：2026年Q1营业收入508亿元，同比增719.13%；净利润330.11亿元。受全球算力需求持续增长、全球主要厂商产能调配等因素影响，全球DRAM产品供不应求，价格自2025Q4持续上涨。长鑫作为国产DRAM龙头直接受益于行业景气。',
+        summaryEn: 'CXMT STAR Market IPO filing: Q1 2026 revenue 50.8B RMB (+719%), net profit 33B. Global DRAM shortage driven by AI compute demand and capacity reallocation, prices rising since Q4 2025.',
+        source: 'IT之家',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.ithome.com/0/951/535.htm'
+      },
+      {
+        title: 'DeepSeek融资背后的AI镜像：阿里向左，腾讯向右',
+        titleEn: 'DeepSeek Financing: Alibaba Exits, Tencent In as Minority Investor',
+        summary: 'DeepSeek破例启动首轮外部融资，500亿融资目标、3500亿估值、创始人个人掏出200亿、国家大基金领投。阿里巴巴退出谈判，腾讯则以小额财务投资身份有望入局。DeepSeek此前已获得腾讯投资，此次融资动向折射出国内大模型投资的两大阵营分化。',
+        summaryEn: 'DeepSeek first external round: 50B RMB target, 350B valuation, founder contributes 2B personally, national fund leads. Alibaba exits, Tencent joins as minority investor, revealing two camps in Chinese LLM investment.',
+        source: '虎嗅',
+        category: '投资',
+        categoryEn: 'Investment',
+        url: 'https://www.huxiu.com/article/4859067.html'
+      },
+      {
+        title: 'Netflix成立AI工作室INKubator，发力生成式动画短片',
+        titleEn: 'Netflix Forms AI Studio INKubator for Generative Animation',
+        summary: 'Netflix正在组建名为INKubator的内部AI工作室，利用人工智能制作短篇动画内容。正在招募制片人、软件工程师和CG艺术家。长期技术战略专注\'由生成式AI驱动的工作流、艺术家工具，以及可扩展、安全的多剧集环境\'，目标是开发电影长片质量的内容，远非一次性实验。',
+        summaryEn: 'Netflix building INKubator internal AI studio, hiring producers, engineers, and CG artists. Long-term strategy focuses on generative AI-driven workflows and artist tools, aiming for feature-film quality content.',
+        source: 'IT之家',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.ithome.com/0/951/584.htm'
+      },
+      {
+        title: 'Mozilla利用Claude Mythos Preview在Firefox中发现271个安全漏洞',
+        titleEn: 'Mozilla Uses Claude Mythos Preview to Find 271 Firefox Security Vulnerabilities',
+        summary: 'Mozilla安全团队通过Claude Mythos Preview及其他AI模型，在Firefox 150中识别并修复了创纪录数量的安全漏洞：271个，其中180个sec-high级别、80个sec-moderate、11个sec-low。涵盖沙箱逃逸、use-after-free、竞态条件等复杂漏洞，团队构建了agentic harness系统实现可复现的测试用例生成。',
+        summaryEn: 'Mozilla security team using Claude Mythos Preview found 271 Firefox vulnerabilities: 180 sec-high, 80 sec-moderate, 11 sec-low. Covering sandbox escapes, use-after-free, race conditions. Agentic harness for reproducible test generation.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/441146'
+      }
+    ],
+    comment: '黄仁勋再次炮轰AI芯片出口管制，但现实是英伟达在华市场份额已降至零，H200虽获批向约10家中国企业销售但尚未交付——嘴上反对和实际商业利益之间的矛盾越来越明显。长鑫科技Q1暴增719%验证了国产存储芯片在算力需求爆发中的核心地位。DeepSeek融资阿里退出腾讯入局，国内大模型投资格局正在重新洗牌。Netflix成立AI工作室标志着流媒体巨头正式拥抱生成式AI内容生产。Mozilla用Claude发现271个Firefox漏洞，AI安全审计能力正在成为现实。',
+    commentEn: 'Huang criticizes chip export controls while Nvidia China share hits zero — rhetoric vs reality gap widens. CXMT 719% growth validates domestic chip role in compute boom. DeepSeek funding reshuffles Chinese LLM investment landscape. Netflix AI studio signals mainstream generative content adoption. Mozilla using Claude for security audit shows AI vulnerability detection is real.',
+  },
+  {
     date: '2026-05-17',
     title: 'AI新闻 | OpenAI与苹果联盟濒临破裂 + OpenAI重组布罗克曼接管产品 + 阿里健康发布医学AI助手氢离子 + 网易接入DeepSeek-V4 + SpaceXAI合并后超50名员工离职',
     titleEn: 'AI News | OpenAI-Apple Alliance Near Breakup + OpenAI Reorg Brockman Takes Product + Alibaba Health Medical AI Assistant + NetEase Integrates DeepSeek-V4 + SpaceXAI 50+ Staff Exit',

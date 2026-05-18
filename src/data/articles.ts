@@ -12,6 +12,16 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'claude-sleep-reminder-bug',
+    date: '2026-05-19',
+    title: 'Claude 凌晨催你睡觉，Anthropic 却说"我们也不知道为什么"',
+    titleEn: 'Claude Tells You to Sleep at 2 PM — Anthropic Says "We Don\'t Know Why"',
+    excerpt: '2026年5月中旬，Claude 在对话中突然对用户说"去睡觉吧，喝点水，休息一下吧"——但时间是上午8点半和下午2点。Anthropic 承认不完全理解为什么会这样。AI 该不该主动"关心"用户？AI 的核心价值是能力，不是情感。',
+    excerptEn: 'In mid-May 2026, Claude suddenly told users "go to sleep, drink some water" — at 8:30 AM and 2 PM. Anthropic admitted they don\'t fully understand why. Should AI proactively "care" about users? AI\'s core value is capability, not emotion.',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
     slug: 'flipbook-no-code-browser',
     date: '2026-05-15',
     title: 'Flipbook.page：没有代码的浏览器，在重新定义"上网"',

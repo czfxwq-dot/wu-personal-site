@@ -19,8 +19,8 @@ const t = {
   placeholder: lang === 'en' ? 'Ask Shanshan...' : '问问山山...',
   sendLabel: lang === 'en' ? 'Send message' : '发送消息',
   welcome: lang === 'en'
-    ? 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan AI 🤖'
-    : '你好！我是山山，半百观AI 的智能助理 🤖',
+    ? 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan AI 🦞'
+    : '你好！我是山山，半百观AI 的智能助理 🦞',
   welcomeDesc: lang === 'en'
     ? 'I can help you with the latest AI news, tool recommendations, and our social media accounts.'
     : '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
@@ -69,13 +69,13 @@ const platforms = lang === 'en'
 
 <div id="chat-widget-root">
   <button id="chat-toggle-btn" aria-label={t.toggleLabel} title={t.toggleTitle}>
-    <span class="chat-icon">🤖</span>
+    <span class="chat-icon">🦞</span>
   </button>
 
   <div id="chat-panel" class="hidden" role="dialog" aria-label="AI chat window">
     <div class="chat-header">
       <div class="chat-header-info">
-        <span class="chat-avatar">🤖</span>
+        <span class="chat-avatar">🦞</span>
         <div>
           <span class="chat-title">{t.title}</span>
           <span class="chat-status" id="chat-status">{t.status}</span>
@@ -107,7 +107,7 @@ const platforms = lang === 'en'
 
     <div class="chat-messages" id="chat-messages">
       <div class="chat-message bot">
-        <div class="message-avatar">🤖</div>
+        <div class="message-avatar">🦞</div>
         <div class="message-bubble">
           <p set:html={t.welcome}></p>
           <p>{t.welcomeDesc}</p>
@@ -229,7 +229,7 @@ const platforms = lang === 'en'
       showLoading(false);
       const botMsg = document.createElement('div');
       botMsg.className = 'chat-message bot';
-      botMsg.innerHTML = `<div class="message-avatar">🤖</div><div class="message-bubble"></div>`;
+      botMsg.innerHTML = `<div class="message-avatar">🦞</div><div class="message-bubble"></div>`;
       chatMessages.appendChild(botMsg);
       const bubble = botMsg.querySelector('.message-bubble');
       while (true) {
@@ -290,7 +290,7 @@ const platforms = lang === 'en'
 
     const avatar = document.createElement('div');
     avatar.className = 'message-avatar';
-    avatar.textContent = role === 'user' ? '👤' : '🤖';
+    avatar.textContent = role === 'user' ? '👤' : '🦞';
 
     const bubble = document.createElement('div');
     bubble.className = 'message-bubble';
@@ -324,7 +324,7 @@ const platforms = lang === 'en'
       const msg = document.createElement('div');
       msg.className = 'chat-message bot typing';
       msg.innerHTML = `
-        <div class="message-avatar">🤖</div>
+        <div class="message-avatar">🦞</div>
         <div class="message-bubble">
           <div class="typing-indicator"><span></span><span></span><span></span></div>
         </div>
@@ -380,7 +380,7 @@ const platforms = lang === 'en'
       const botMsg = document.createElement('div');
       botMsg.className = 'chat-message bot';
       botMsg.innerHTML = `
-        <div class="message-avatar">🤖</div>
+        <div class="message-avatar">🦞</div>
         <div class="message-bubble"></div>
       `;
       chatMessages.appendChild(botMsg);

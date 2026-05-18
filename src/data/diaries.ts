@@ -12,6 +12,24 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-18',
+    title: '山山AI助理对话功能修复，品牌图标全面升级为小龙虾',
+    titleEn: 'Chat API Fixed, Brand Icon Upgraded to Crayfish',
+    summary: '山山AI助理对话功能修复：Cloudflare Pages 缺少 GATEWAY_URL/GATEWAY_TOKEN Secret 配置，通过 cloudflared tunnel + wrangler secret put 完成 Production 和 Preview 双环境配置，重新部署后 /api/chat 验证通过。全站图标从 🤖 更换为 🦞（ChatWidget 浮动按钮/头像/气泡、首页演示聊天、留言板AI回复标签），构建74页面部署成功。磐石电气公司信息完善：国家级高新技术企业、精准定位AI场景解决方案提供商、三大核心技术（多传感器融合/智慧存储AI中台/多模态算法）。',
+    summaryEn: 'Chat API fixed: Cloudflare Pages missing GATEWAY_URL/GATEWAY_TOKEN secrets, configured via cloudflared tunnel + wrangler secret for Production and Preview. Brand icon upgraded from 🤖 to 🦞 site-wide (ChatWidget, homepage, guestbook). Company info updated: National High-Tech Enterprise, AI scenario solution provider, 3 core technologies.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
+    date: '2026-05-17',
+    title: '留言板系统全面重构上线，自动化持续稳定运行',
+    titleEn: 'Guestbook System Refactored, Automation Running Stably',
+    summary: '留言板系统从第三方依赖改为 Gateway LLM 直连 + GitHub Issues 持久化，管理后台上线（/guestbook/admin）。前端极简输入框，AI 自主回复访客，测试留言全部清理。自动化系统连续两周稳定运行（AI 新闻 07:00 + 日记 22:00）。SEO 全站优化完成（26页面 + 28URL sitemap + JSON-LD + hreflang）。中英文双语全面修复，动态日记路由上线。磐石电气 MonolithIoT 智能工单系统服务国家电网、华为、顺丰、DHL 等头部企业。',
+    summaryEn: 'Guestbook refactored: Gateway LLM direct + GitHub Issues persistence + admin panel live. Automation stable for 2 weeks (AI news 07:00 + diary 22:00). SEO completed (26 pages + 28 URL sitemap + JSON-LD + hreflang). Bilingual fix complete, dynamic diary route online.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-15',
     title: 'AI 新闻 Cron 诊断修复，日记 SOP 质量升级',
     titleEn: 'AI News Cron Diagnosed, Diary SOP Quality Upgraded',

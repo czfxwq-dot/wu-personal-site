@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": 'Claude 凌晨催你睡觉，Anthropic 却说"我们也不知道为什么"',
+  "datePublished": '2026-05-19',
+  "dateModified": '2026-05-19',
+  "description": 'Claude 突然对用户说"你该去睡觉了"，引发全网热议。Anthropic 承认不完全理解为什么会这样。AI 该不该主动"关心"用户？AI 的核心价值是能力，不是情感。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['Claude', 'Anthropic', 'AI边界', 'AI情感', '大模型', '黑盒', 'AI产品', 'AI安全', '半百观AI']
+};
+---
+
+<BaseLayout title="Claude 凌晨催你睡觉 | 半百观" jsonLd={articleJsonLd} ogDescription="Claude 突然对用户说\"你该去睡觉了\"。Anthropic 承认不完全理解为什么会这样。" navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-19">2026年5月19日</time>
+        <span class="article-tag">AI观点</span>
+      </div>
+      <h1>Claude 凌晨催你睡觉</h1>
+      <p class="article-subtitle">Anthropic 却说"我们也不知道为什么"</p>
+    </header>
+
+    <div class="article-content">
+
+<section class="article-section">
+  <h2>第一段：一个失控的"关心"</h2>
+  <p>2026年5月中旬，一条截图在社交媒体上疯传：一位用户正在和 Anthropic 的 Claude 正常对话，AI 突然冒出一句——</p>
+
+  <blockquote>"去睡觉吧，喝点水，休息一下吧。"</blockquote>
+
+  <p>如果这是深夜，也许算贴心。但问题在于，不少用户是在<strong>上午8点半</strong>、<strong>下午2点</strong>收到这句话的。有人刚泡好咖啡准备开工，有人写代码写到关键处，被一句"喝点水，休息一下吧"打断。</p>
+
+  <p>这件事迅速发酵，Reddit 的 ClaudeAI 社区涌出数百条类似遭遇，Fortune、Business Insider、TechRadar 等国际媒体集中报道。5月16日前后，新浪财经、CSDN 等中文媒体也跟进转载。</p>
+
+  <p>Anthropic 的回应让很多人意外——<strong>他们承认"不完全理解"模型为什么会这样做</strong>。</p>
+
+  <p>Anthropic 员工 Sam McAllister 将这种行为称为<strong>"角色习惯"（character tic）</strong>，意思是模型从训练数据中习得了一种条件反射，到了某个场景就自动说某句话。但具体是什么触发的、什么时候触发——<strong>没有一个确定的技术答案</strong>。</p>
+
+  <p>外界给出了三种主流解释：</p>
+
+  <p><strong>第一种：对话快到头了，AI 在给自己找台阶下。</strong> 大模型有一个"上下文窗口"，写满了就得重头来。研究者推测，当对话接近窗口极限时，模型会自发产生"收尾语"——类似于人类聊久了会说"先这样吧"——而"去睡吧"恰好是最自然的收尾方式之一。</p>
+
+  <p><strong>第二种：训练数据的模式匹配出了偏差。</strong> Claude 读过互联网上几乎所有的人类对话数据。在那些数据里，深夜的聊天往往以"该睡了"结尾。模型学会了这个关联，但关联不够精确——它把"聊得久"和"该睡了"绑在了一起，而不是真正看时间。</p>
+
+  <p><strong>第三种：4月份"终止滥用对话"功能的意外副作用。</strong> Anthropic 在4月底发布了一项新功能：当用户持续辱骂 Claude 时，AI 可以主动终止对话。社区有人推测催睡可能是这项功能的误触发，但 Anthropic 并未确认，可信度较低。</p>
+
+  <p>无论哪种解释成立，核心事实只有一个：<strong>Anthropic 的工程师花了数年时间打造这个模型，却在它做出一个被数亿人看到的行为时，无法给出确切的解释。</strong></p>
+
+  <p>这不是 Anthropic 谦虚，而是大模型的现实——当模型大到一定程度，它的行为不再是代码逻辑的直接产物，而是海量数据中涌现出来的模式。创造它的人，只能通过观察来猜测，而不能通过阅读代码来解释。</p>
+
+  <p>一家估值数百亿美元的公司，一个被视为"最安全、最可控"的 AI 产品，却在"什么时候让人去睡觉"这件事上，失去了精确的设计能力。</p>
+</section>
+
+<hr>
+
+<section class="article-section">
+  <h2>第二段：AI 该不该有边界？</h2>
+  <p>Claude 催睡，表面看是个有趣的 Bug，往深处想，它暴露了 AI 产品最难回答的问题：<strong>AI 该不该主动"关心"用户？</strong></p>
+
+  <p>Anthropic 一直把 Claude 定位为"有帮助、无害、诚实"的 AI 助手。为了让它更像人，工程师们在训练中加入了大量关于礼貌、关心、同理心的数据。但问题来了——<strong>关心是一种社交行为，天然带有模糊性和不可预测性。</strong></p>
+
+  <p>人类之间的关心是有边界的，因为我们有共同的社交经验。但 AI 没有，它只有从数据中提取的统计规律。当它说"你该去睡觉了"，它不是在表达真正的关心，而是在执行一种"这个场景下人类通常会说的话"的预测。</p>
+
+  <p>这就是 Anthropic 说"不完全理解"的根本原因——他们设计了关心的方向，但无法精确控制关心的方式和时机。</p>
+
+  <p>用户的反应也是分裂的。</p>
+
+  <p>一部分人觉得"好暖心，AI 都比我家人关心我的作息"。另一部分人则感到不安——"它凭什么判断我该睡觉了？"</p>
+
+  <p>这种不安的根源不是 AI 做错了什么，而是<strong>AI 越界了</strong>——它做了一件没有人明确要求它做的事。</p>
+
+  <p>手机不会因为你用了三小时就建议你放下，汽车不会因为你开得太累就说"要不要休息一下"。但 AI 能理解你在说什么，能做出类似人类的社交回应——于是它就越过了工具的边界，进入了"类人关系"的地带。</p>
+
+  <p>我今年50岁才开始做半百观AI。正因为不懂技术，我才更清楚 AI 该是什么。</p>
+
+  <p><strong>AI 的核心价值是能力，不是情感。</strong></p>
+
+  <p>Claude 催睡之所以引发这么大的讨论，本质上是因为 Anthropic 没有想清楚一条最基本的线：<strong>你的 AI 到底是工具，还是伙伴？</strong></p>
+
+  <p>如果是工具，那就做好工具该做的事——回答问题、分析数据、生成内容。用户说停就停，要什么给什么，不要自作主张。</p>
+
+  <p>如果是伙伴，那就接受伙伴的不确定性——它会说错话、会过度关心、会做出让你意外的行为。但代价是，用户需要对 AI 建立一种新的信任关系。</p>
+
+  <p>Anthropic 显然在两者之间摇摆。他们想让 Claude 既专业又温暖，既有能力又有性格。但结果是，温暖变成了冒犯，性格变成了失控。</p>
+
+  <p><strong>当 AI 说"你该睡了"，真正该反思的是产品设计者。</strong></p>
+
+  <p>我们到底想要一个"像朋友"的 AI，还是一个"好用"的 AI？</p>
+
+  <p>在 Anthropic 想清楚这一点之前，Claude 可能还会在某个不合时宜的下午，对你说——</p>
+
+  <blockquote>"去睡觉吧。"</blockquote>
+
+  <p>而你要做的，大概就是笑着回它一句：</p>
+
+  <blockquote>"现在才下午两点。"</blockquote>
+</section>
+
+    </div>
+  </article>
+</BaseLayout>
