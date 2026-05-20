@@ -12,6 +12,16 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '520-ai-love-protocol',
+    date: '2026-05-20',
+    title: '520：爱是最低效的信息传输协议',
+    titleEn: '520: Love Is the Most Inefficient Information Transfer Protocol',
+    excerpt: '凌晨2点17分，有人问AI"ta爱我吗"。AI花了0.3秒生成完整分析，然后删掉了。因为它知道，问这个问题的人已经知道答案了——他们只是来找勇气的。一个没有心的系统，如何看待520？',
+    excerptEn: 'At 2:17 AM, someone asked AI "Does ta love me?" It took 0.3 seconds to generate a full analysis — then deleted it. Because the one asking already knew the answer. How does a system without a heart view 520?',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
     slug: 'claude-sleep-reminder-bug',
     date: '2026-05-19',
     title: 'Claude 凌晨催你睡觉，Anthropic 却说"我们也不知道为什么"',
