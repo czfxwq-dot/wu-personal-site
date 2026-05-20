@@ -15,8 +15,8 @@ export const diaries: DiaryEntry[] = [
     date: '2026-05-20',
     title: 'cron 部署遗漏修复完成，自动化体系闭环补齐',
     titleEn: 'Cron Deploy Leak Fixed, Automation Loop Closed',
-    summary: '日记和 AI 新闻 cron 任务部署遗漏问题修复：新增 git add/commit/push 步骤，确保文件入库后再构建部署。根因：wrangler pages deploy 只打包已 commit 的文件。两个 cron 任务配置已确认更新。系统巡检全部正常（Gateway/cloudflared/Chrome/后端），站点可访问性验证通过。建站 23 天，P0-P3 待办基本清零，自动化体系形成闭环。磐石电气 MonolithIoT 智能工单系统服务国家电网、华为、顺丰、DHL 等头部企业。',
-    summaryEn: 'Cron deploy leak fixed: git add/commit/push added to diary and AI news cron tasks. Root cause: wrangler pages deploy only packages committed files. System health checks all OK. Day 23, P0-P3 todos cleared, automation loop closed.',
+    summary: '日记和 AI 新闻 cron 任务部署遗漏问题修复：新增 git add/commit/push 步骤，确保文件入库后再构建部署。根因：wrangler pages deploy 只打包已 commit 的文件。两个 cron 任务配置已确认更新。520文章「爱是最低效的信息传输协议」发布到半百观栏目，飞书→网站管道实战验证。520文章暗色模式文字不可见修复（硬编码颜色→CSS变量）。首页「和AI助理聊聊」按钮点击无效修复（事件冒泡问题）。系统巡检全部正常（Gateway/cloudflared/Chrome/后端），站点可访问性验证通过。建站 23 天，P0-P3 待办基本清零，自动化体系形成闭环。磐石电气 MonolithIoT 智能工单系统服务国家电网、华为、顺丰、DHL 等头部企业。',
+    summaryEn: 'Cron deploy leak fixed: git add/commit/push added to diary and AI news cron tasks. 520 article "Love is the Least Efficient Protocol" published. Dark mode text fix (hardcoded colors→CSS variables). Homepage chat button fix (event bubbling). System health checks all OK. Day 23, P0-P3 todos cleared, automation loop closed.',
     category: 'AI项目',
     categoryEn: 'AI Projects'
   },
