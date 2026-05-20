@@ -12,6 +12,24 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-20',
+    title: 'cron 部署遗漏修复完成，自动化体系闭环补齐',
+    titleEn: 'Cron Deploy Leak Fixed, Automation Loop Closed',
+    summary: '日记和 AI 新闻 cron 任务部署遗漏问题修复：新增 git add/commit/push 步骤，确保文件入库后再构建部署。根因：wrangler pages deploy 只打包已 commit 的文件。两个 cron 任务配置已确认更新。系统巡检全部正常（Gateway/cloudflared/Chrome/后端），站点可访问性验证通过。建站 23 天，P0-P3 待办基本清零，自动化体系形成闭环。磐石电气 MonolithIoT 智能工单系统服务国家电网、华为、顺丰、DHL 等头部企业。',
+    summaryEn: 'Cron deploy leak fixed: git add/commit/push added to diary and AI news cron tasks. Root cause: wrangler pages deploy only packages committed files. System health checks all OK. Day 23, P0-P3 todos cleared, automation loop closed.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
+    date: '2026-05-19',
+    title: '飞书文章一键发布上线，飞书→网站内容管道打通',
+    titleEn: 'Feishu-to-Website Pipeline: One-Click Article Publishing Live',
+    summary: '飞书文档→Astro页面→Cloudflare Pages部署流程打通，首篇文章「Claude凌晨催你睡觉，Anthropic却说我们也不知道为什么」07:30准时上线。系统早间巡检全部正常（Gateway/cloudflared/AI新闻数据源），自动化体系稳定运行。待办P0-P3基本清零，网站从技术基建阶段转入内容运营阶段。磐石电气MonolithIoT智能工单系统服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Feishu-to-website pipeline打通: document→Astro page→Cloudflare Pages deploy, first article live at 07:30. System health checks all OK (Gateway/cloudflared/AI news). P0-P3 todos basically cleared, website entering content operations phase.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-18',
     title: '山山AI助理对话功能修复，品牌图标全面升级为小龙虾',
     titleEn: 'Chat API Fixed, Brand Icon Upgraded to Crayfish',

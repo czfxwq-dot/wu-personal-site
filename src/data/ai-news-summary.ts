@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-20',
+    title: 'AI新闻 | Google I/O 2026发布Gemini 3.5 Flash + 硅谷算力荒H200一夜涨价30% + Anthropic收购SDK厂商Stainless + Cursor推出Composer 2.5 AI编程智能体 + 地平线开源4亿参数机器人小脑大模型HoloMotion-1',
+    titleEn: 'AI News | Google I/O 2026 Releases Gemini 3.5 Flash + Silicon Valley Compute Shortage H200 +30% Overnight + Anthropic Acquires Stainless SDK + Cursor Launches Composer 2.5 + Horizon Open-Sources 400M Robot Brain Model HoloMotion-1',
+    summary: '今日AI行业五大看点：Google I/O 2026开发者大会发布Gemini 3.5 Flash等多款AI模型，将Gemini Intelligence深度植入安卓底层打造跨设备智能系统；硅谷算力荒加剧H200一夜涨价30%连英伟达内部都申请不到训练卡；Anthropic宣布收购SDK工具厂商Stainless强化AI智能体连接能力；Cursor推出Composer 2.5基于文本反馈的定向强化学习AI编程智能体；地平线开源4亿参数人形机器人小脑大模型HoloMotion-1支持端侧300FPS实时运行。',
+    summaryEn: 'Five highlights: Google I/O 2026 releases Gemini 3.5 Flash and embeds Gemini deep into Android for cross-device intelligence; Silicon Valley compute shortage intensifies with H200 up 30% overnight even Nvidia internally cannot get training cards; Anthropic acquires Stainless SDK to strengthen AI agent connectivity; Cursor launches Composer 2.5 AI coding agent with text-feedback-based RL; Horizon open-sources 400M-parameter humanoid robot brain model HoloMotion-1 supporting 300FPS edge inference.',
+    newsItems: [
+      {
+        title: 'Google I/O 2026开发者大会发布Gemini 3.5 Flash等AI模型，全面升级跨设备智能',
+        titleEn: 'Google I/O 2026 Releases Gemini 3.5 Flash and Upgrades Cross-Device Intelligence',
+        summary: 'Google在I/O 2026开发者大会上发布多款AI模型，其中Gemini 3.5 Flash是本次重点。回顾过去半年AI圈的热度与Google关系不大，但Google一贯策略是攒大招在I/O一口气放出。大会展示了将Gemini Intelligence深度植入安卓底层，从聊天机器人升级为跨手机、浏览器、汽车、笔记本的操作系统级智能系统，覆盖超2.5亿辆Android Auto汽车。',
+        summaryEn: 'Google I/O 2026 features Gemini 3.5 Flash and deeper Android integration. Gemini Intelligence evolves from chatbot to OS-level cross-device intelligence spanning phones, browsers, cars, and laptops, covering 250M+ Android Auto vehicles.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article/4859733.html'
+      },
+      {
+        title: '硅谷深陷算力荒：H200一夜涨价30%，H100抢到缺货，Karpathy也未能幸免',
+        titleEn: 'Silicon Valley Compute Shortage: H200 Up 30% Overnight, H100 Sold Out',
+        summary: '2026年5月硅谷AI算力饥荒达到前所未有的高度。英伟达H200显卡一夜之间涨价30%，H100全面缺货。连英伟达内部负责应用深度学习研究团队的Bryan Catanzaro找黄仁勋申请训练卡都被回复"那些卡已经卖掉了"。Karpathy等顶级研究者同样面临算力排队困境。算力短缺正在成为制约AI模型训练和迭代的核心瓶颈。',
+        summaryEn: 'May 2026 Silicon Valley compute shortage reaches unprecedented levels. Nvidia H200 up 30% overnight, H100 sold out. Even Nvidia internal researchers cannot get training cards. Compute scarcity is becoming the core bottleneck for AI model training.',
+        source: '虎嗅',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.huxiu.com/article/4859697.html'
+      },
+      {
+        title: 'Anthropic收购SDK工具厂商Stainless，强化AI智能体连接能力',
+        titleEn: 'Anthropic Acquires Stainless SDK to Strengthen AI Agent Connectivity',
+        summary: 'Anthropic宣布收购Stainless，后者是SDK和MCP服务器工具领域的领先厂商，成立于2022年，自Anthropic API最早期起即为所有官方Anthropic SDK的生成提供支持。数百家公司依赖Stainless来生成SDK、CLI和MCP服务器，将API规范转换为TypeScript、Python、Go、Java、Kotlin等多语言代码。此次收购旨在扩展AI智能体的连接能力，让智能体能够触达更多系统。',
+        summaryEn: 'Anthropic acquires Stainless, a leading SDK and MCP server tool provider since 2022 that generates all official Anthropic SDKs. Hundreds of companies rely on Stainless for SDK, CLI, and MCP server generation across TypeScript, Python, Go, Java, Kotlin.',
+        source: '开源中国',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.oschina.net/news/442648/anthropic-acquires-stainless'
+      },
+      {
+        title: 'Cursor推出Composer 2.5：基于文本反馈的定向强化学习AI编程智能体',
+        titleEn: 'Cursor Launches Composer 2.5 AI Coding Agent with Text-Feedback RL',
+        summary: 'Cursor正式推出Composer 2.5 AI编程智能体，相较于v2版本更擅长在长时间运行任务中持续工作，更可靠地遵循复杂指令，协作体验更加顺畅。采用基于文本反馈的定向强化学习、分片Muon与双网格HSDP等前沿优化方法。基于Moonshot的Kimi K2.5开源检查点构建，每百万输出token仅需2.50美元。同时正与SpaceXAI合作从零训练更大规模模型。',
+        summaryEn: 'Cursor launches Composer 2.5 AI coding agent with text-feedback-based RL, sharded Muon, and dual-grid HSDP. Built on Moonshot Kimi K2.5 open checkpoint at $2.50 per million output tokens. Partnering with SpaceXAI to train a significantly larger model.',
+        source: '开源中国',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.oschina.net/news/442627/composer-2-5'
+      },
+      {
+        title: '地平线开源4亿参数机器人小脑大模型HoloMotion-1，支持端侧300FPS实时运行',
+        titleEn: 'Horizon Open-Sources 400M Robot Brain Model HoloMotion-1, 300FPS Edge Inference',
+        summary: '地平线正式发布并开源HoloMotion-1，面向人形机器人全身控制打造的4亿参数级机器人小脑大模型。采用MoE-Transformer policy架构，结合MoE稀疏激活与KV-cache推理机制，在保持4亿参数容量的的同时降低单步推理开销，实现端侧约300FPS的实时运行能力，显著高于常见50Hz控制频率要求，建模更复杂的身体协同关系。',
+        summaryEn: 'Horizon open-sources HoloMotion-1, a 400M-parameter robot cerebellum model for humanoid full-body control. Uses MoE-Transformer with sparse activation and KV-cache, achieving ~300FPS edge inference vs typical 50Hz control frequency.',
+        source: '开源中国',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.oschina.net/news/442809'
+      }
+    ],
+    comment: 'Google I/O 2026是本周最受关注的AI事件，Gemini 3.5 Flash的发布加上Gemini深度植入安卓的策略，标志着Google终于从"攒大招"走向全面铺开。硅谷算力荒H200涨价30%连英伟达内部都拿不到卡，说明AI算力瓶颈已从资本投入问题变成物理供给问题。Anthropic收购Stainless是布局AI智能体生态的重要一步，让Claude能连接更多系统。Cursor Composer 2.5和地平线HoloMotion-1分别代表了AI编程和人形机器人两个前沿方向的最新进展。',
+    commentEn: 'Google I/O 2026 with Gemini 3.5 Flash and deep Android integration marks Google shift from big reveals to full rollout. Silicon Valley compute shortage with H200 up 30% even internally at Nvidia shows compute bottleneck has shifted from capital to physical supply. Anthropic Stainless acquisition positions Claude for broader agent connectivity. Cursor 2.5 and Horizon HoloMotion-1 represent cutting-edge progress in AI coding and humanoid robotics.',
+  },
+  {
     date: '2026-05-19',
     title: 'AI新闻 | Palantir Q1营收暴增85%净利润涨307% + 史上最大670亿美元电力收购案剑指AI算力 + 京东AI研发投入增超200% + Linus怒斥AI漏洞报告淹没Linux邮件列表 + 斯坦福研究揭示过度工作AI Agent呈现马克思主义倾向',
     titleEn: 'AI News | Palantir Q1 Revenue +85% Net Income +307% + $67B Power M&A for AI Compute + JD AI R&D +200% + Linus Blasts AI Vulnerability Reports + Overworked AI Agents Show Marxist Tendencies',
