@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-21',
+    title: 'AI新闻 | 英伟达Q1净利润583亿美元同比+211% + OpenAI最快本周五提交IPO招股书草案 + Karpathy官宣加盟Anthropic重返LLM研发 + Meta启动8000人大规模裁员 + DeepSeek组建Harness团队进军Agent赛道',
+    titleEn: 'AI News | Nvidia Q1 Net Income $58.3B +211% YoY + OpenAI IPO Draft This Friday + Karpathy Joins Anthropic + Meta 8000 Layoffs + DeepSeek Builds Harness Team for Agents',
+    summary: '今日AI行业五大看点：英伟达发布2027财年Q1财报营收816亿美元同比+85%净利润583亿美元同比+211%创历史新高OpenAI最快本周五提交IPO招股书草案冲刺9月上市Karpathy官宣加盟Anthropic重返LLM研发一线Meta启动8000人大规模裁员约占员工总数一成DeepSeek组建Harness团队正式进军Agent赛道提出Model+Harness=Agent公式。',
+    summaryEn: 'Five highlights: Nvidia Q1 revenue $81.6B +85% net income $58.3B +211% record high; OpenAI IPO draft filing as early as Friday targeting September listing; Karpathy joins Anthropic returning to LLM R&D; Meta cuts 8000 jobs ~10% of workforce; DeepSeek builds Harness team for Agent race with Model+Harness=Agent formula.',
+    newsItems: [
+      {
+        title: '英伟达2027财年Q1净利润583亿美元同比增长211%，营收816亿美元创历史新高',
+        titleEn: 'Nvidia FY27 Q1 Net Income $58.3B +211% YoY, Revenue $81.6B Record High',
+        summary: '英伟达发布2027财年第一财季财报：营业总收入816.15亿美元同比增长85%归母净利润583.21亿美元同比增长211%经营现金流503.44亿美元同比增长83.64%。数据中心GPU和AI加速器持续供不应求，算力需求推动公司业绩再创新高。',
+        summaryEn: 'Nvidia FY27 Q1: revenue $81.6B +85% YoY, net income $58.3B +211%, operating cash flow $50.3B +83.6%. Data center GPUs and AI accelerators remain in high demand, compute needs driving record performance.',
+        source: '36氪',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.36kr.com/newsflashes/3818231393633412'
+      },
+      {
+        title: '冲刺9月上市，OpenAI最快本周五提交IPO招股书草案',
+        titleEn: 'OpenAI IPO Draft This Friday, Targeting September Listing',
+        summary: '据CNBC报道OpenAI最快本周五递交首次公开募股招股书草案朝资本市场迈出关键一步。CEO奥特曼希望最早2026年9月上市。OpenAI正与高盛摩根士丹利合作推动申报和承销安排。马斯克诉讼失利后上市筹备从预期走向执行阶段。',
+        summaryEn: 'CNBC reports OpenAI may file IPO draft as early as Friday, a key step toward public markets. CEO Altman targets September 2026 listing. Working with Goldman Sachs and Morgan Stanley. After Musk lawsuit setback, IPO prep moves from planning to execution.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/953/090.htm'
+      },
+      {
+        title: 'Andrej Karpathy官宣加盟Anthropic，重返LLM研发一线',
+        titleEn: 'Andrej Karpathy Joins Anthropic, Returns to LLM R&D',
+        summary: 'AI领域最具影响力的研究者之一Andrej Karpathy在X平台宣布正式加入Anthropic。Karpathy曾任特斯拉Autopilot视觉团队负责人、OpenAI联合创始人，此次加入OpenAI的死对头Anthropic获得AI社区高度关注。他称未来几年将是LLM关键形成期。虎嗅评论称Anthropic这次真的要超车了。',
+        summaryEn: 'AI researcher Andrej Karpathy announced joining Anthropic on X. Former Tesla Autopilot visual team lead and OpenAI co-founder. The move to OpenAI rival Anthropic draws major community attention. He says coming years will be crucial formative period for LLMs.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article/4859986.html'
+      },
+      {
+        title: 'Meta启动8000人大规模裁员，约占员工总数一成',
+        titleEn: 'Meta Launches 8000 Layoffs, ~10% of Workforce',
+        summary: 'Meta现有7.8万名员工约一成已陆续收到裁员通知分三批向全球不同地区员工下发裁员通知。合规风控、网络安全以及内容设计部门员工已受到波及。美国区被裁员工可获16周基础补偿金外加每服务一年额外两周。这是Meta继2023年裁员后的又一轮大规模人员优化。',
+        summaryEn: 'Meta has 78000 employees ~10% received layoff notices rolled out in three batches globally. Compliance, cybersecurity, and content design departments affected. US employees get 16 weeks base plus 2 weeks per year of service. This follows Meta 2023 layoffs.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/953/074.htm'
+      },
+      {
+        title: 'DeepSeek组建Harness团队进军Agent赛道：Model+Harness=Agent',
+        titleEn: 'DeepSeek Builds Harness Team for Agent Race: Model+Harness=Agent',
+        summary: 'DeepSeek近期公布Agent Harness产品经理招聘信息开始组建Harness团队目标是将前沿模型能力转化为领先的Agent产品。DeepSeek给出简洁公式Model+Harness=Agent其中Harness是让Agent可靠工作的工程外壳负责约束验证纠错和收敛。这一概念在AI行业迅速获得共识。',
+        summaryEn: 'DeepSeek recruiting Agent Harness product manager to build team converting frontier model capabilities into leading Agent products. Formula: Model+Harness=Agent. Harness is the engineering shell making Agents reliable handling constraint validation error correction and convergence. Concept rapidly gaining industry consensus.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/443198'
+      }
+    ],
+    comment: '英伟达583亿美元净利润再次刷新AI算力商业化的天花板证明GPU和AI加速器市场仍在高速增长轨道上。OpenAI提交IPO草案标志着这家估值最高的AI创业公司正式走向公开资本市场Karpathy跳槽Anthropic是AI人才争夺战的最新高潮。Meta 8000人裁员反映科技巨头在AI投入巨大的同时也在优化非AI核心业务线。DeepSeek的Harness理念点出了当前AI Agent发展的核心命题模型本身只是起点工程化能力才是决胜关键。',
+    commentEn: 'Nvidia $58.3B net income again pushes the ceiling of AI compute commercialization proving GPU market still on high growth track. OpenAI IPO draft marks the most valuable AI startup heading to public markets. Karpathy to Anthropic is the latest peak in AI talent war. Meta 8000 layoffs shows tech giants optimizing non-AI core lines while investing heavily in AI. DeepSeek Harness concept highlights core thesis: models are just the start engineering capability wins the race.',
+  },
+  {
     date: '2026-05-20',
     title: 'AI新闻 | Google I/O 2026发布Gemini 3.5 Flash + 硅谷算力荒H200一夜涨价30% + Anthropic收购SDK厂商Stainless + Cursor推出Composer 2.5 AI编程智能体 + 地平线开源4亿参数机器人小脑大模型HoloMotion-1',
     titleEn: 'AI News | Google I/O 2026 Releases Gemini 3.5 Flash + Silicon Valley Compute Shortage H200 +30% Overnight + Anthropic Acquires Stainless SDK + Cursor Launches Composer 2.5 + Horizon Open-Sources 400M Robot Brain Model HoloMotion-1',
