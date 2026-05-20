@@ -281,12 +281,16 @@ const latestArticle = articles[0];
   (function() {
     const heroBtn = document.getElementById('hero-chat-btn');
     if (!heroBtn) return;
-    heroBtn.addEventListener('click', function() {
-      // Trigger existing ChatWidget toggle
-      const toggleBtn = document.getElementById('chat-toggle-btn');
-      if (toggleBtn) toggleBtn.click();
-      else {
-        // Fallback: scroll to inline chat
+    heroBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Directly open chat panel to avoid event bubbling issues
+      const chatPanel = document.getElementById('chat-panel');
+      const chatInput = document.getElementById('chat-input');
+      if (chatPanel) {
+        chatPanel.classList.remove('hidden');
+        setTimeout(() => chatInput && chatInput.focus(), 200);
+      } else {
         const inlineChat = document.querySelector('.chat-inline');
         if (inlineChat) inlineChat.scrollIntoView({ behavior: 'smooth' });
       }
