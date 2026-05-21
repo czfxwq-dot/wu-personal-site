@@ -12,6 +12,14 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '60-ai-words-guide',
+    date: '2026-05-21',
+    title: '从零到专家，67个AI词汇彻底搞懂（建议收藏）',
+    excerpt: 'AI领域最核心的67个词汇，按"从普通人到专家"分成7个难度层级。不管你是完全小白，还是已经在用AI工具的进阶用户，都能在这里找到你需要的那一层。',
+    tag: 'AI基础',
+    tagEn: 'AI Basics'
+  },
+  {
     slug: '520-ai-love-protocol',
     date: '2026-05-20',
     title: '520：爱是最低效的信息传输协议',

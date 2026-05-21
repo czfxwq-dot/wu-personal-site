@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-21',
+    title: '自动化体系持续稳定运行，经验教训规则沉淀 13 条',
+    titleEn: 'Automation Running Stably, 13 Lessons Learned Rules Accumulated',
+    summary: '日记自动生成 cron 稳定运行第 24 天。建站 24 天，P0-P3 待办基本清零。自动化体系持续运转：AI 新闻 07:00 + 日记 22:00 + 飞书发布 + 山山 AI 对话 + 留言板 + 全站 SEO + 中英双语。lessons-learned.md 积累 13 条规则。唯一待办：搜索引擎站长提交。磐石电气 MonolithIoT 智能工单系统服务国家电网、华为、顺丰、DHL 等头部企业。',
+    summaryEn: 'Diary cron running stably for Day 24. P0-P3 todos basically cleared. Automation loop: AI news 07:00 + diary 22:00 + Feishu publish + Shanshan AI chat + guestbook + SEO + bilingual. 13 lessons-learned rules accumulated. Only pending: search engine webmaster submission. MonolithIoT serving State Grid, Huawei, SF Express, DHL.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-20',
     title: 'cron 部署遗漏修复完成，自动化体系闭环补齐',
     titleEn: 'Cron Deploy Leak Fixed, Automation Loop Closed',

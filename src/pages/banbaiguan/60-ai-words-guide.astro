@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": '从零到专家，67个AI词汇彻底搞懂',
+  "datePublished": '2026-05-21',
+  "dateModified": '2026-05-21',
+  "description": '我把AI领域最核心的词汇，按"从普通人到专家"分成7个难度层级。不管你是完全小白，还是已经在用AI工具的进阶用户，都能在这里找到你需要的那一层。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['AI词汇', 'AI入门', '大模型', 'LLM', 'AI术语', 'Prompt', 'Token', 'Agent', '半百观AI']
+};
+---
+
+<BaseLayout title="从零到专家，67个AI词汇彻底搞懂 | 半百观" jsonLd={articleJsonLd} ogDescription="AI领域最核心的67个词汇，按7级难度分层讲解。从零基础到专家级，建议收藏反复查阅。" navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-05-21">2026年5月21日</time>
+        <span class="article-tag">AI基础</span>
+      </div>
+      <h1>从零到专家</h1>
+      <p class="article-subtitle">67个AI词汇彻底搞懂（建议收藏）</p>
+    </header>
+
+    <div class="article-content">
+
+<section class="article-section">
+  <p>你有没有过这种体验：朋友兴冲冲讲起AI，满嘴"Token""Agent""Temperature"，你只能一边点头一边心虚？</p>
+
+  <p>这篇文章，就是为了终结这种尴尬而写的。</p>
+
+  <p>我把AI领域最核心的词汇，按<strong>"从普通人到专家"</strong>分成7个难度层级，每一层用最直白的语言讲清楚。不管你是完全小白，还是已经在用AI工具的进阶用户，都能在这里找到你需要的那一层。</p>
+</section>
+
+<!-- ==================== Lv 1 ==================== -->
+<section class="article-section">
+  <h2>Lv 1 · 零基础 / 产品界面</h2>
+  <p>第一层不需要任何基础，只要你用过手机就能懂。</p>
+
+  <h3>NO.01 AI（人工智能）</h3>
+  <p>不是会思考的机器人，更像一个极其复杂的<strong>"预测机器"</strong>——根据你输入的内容，预测最合理的回应。现在说的AI，基本上就是指大语言模型。</p>
+
+  <h3>NO.02 Chatbox（聊天框）</h3>
+  <p>就是你和AI对话的输入框。Claude、ChatGPT、文心一言里打字的地方，都叫Chatbox。没什么神秘的，它是人与AI交互的唯一入口。</p>
+
+  <h3>NO.03 输入 / 输出</h3>
+  <p>你打进去的叫输入，AI回给你的叫输出。整个AI交互最底层的逻辑就是这两个词。</p>
+
+  <h3>NO.04 联网搜索</h3>
+  <p>大多数AI的知识有截止日期，开启联网搜索后，AI能实时查网络，回答今天的新闻、最新政策、刚发生的事情。</p>
+
+  <h3>NO.05 对话历史</h3>
+  <p>AI在同一个窗口里能记住你们聊过的话。但关掉窗口重开，它就"失忆"了——每次新对话都是全新开始。</p>
+</section>
+
+<!-- ==================== Lv 2 ==================== -->
+<section class="article-section">
+  <h2>Lv 2 · 入门 / 使用基础</h2>
+  <p>这一层是用好AI的基本姿势。懂了这些，你就从"偶尔用用"变成"真的会用"。</p>
+
+  <h3>NO.06 Prompt（提示词）</h3>
+  <p>你给AI的任务说明。<strong>"说得越清楚，做得越准。"</strong>好的Prompt是AI时代最被低估的技能。同样是让AI写文章，"帮我写篇文章"和"你是财经编辑，为中小企业主写一篇800字现金流管理指南"——结果天差地别。</p>
+
+  <h3>NO.07 模型</h3>
+  <p>AI背后真正干活的那个"大脑"。Claude、GPT、Gemini都是不同的模型，能力和性格各不一样。</p>
+
+  <h3>NO.08 AIGC</h3>
+  <p>AI Generated Content，AI生成内容。以前只有人能创作的东西，现在AI也能生成。这一轮AI热潮的起点，就是AIGC的爆发。</p>
+
+  <h3>NO.09 上下文</h3>
+  <p>AI在当前对话中能"看见"的信息总量。你之前说的所有话，都是AI理解你当前问题的上下文。上下文越长，AI越能抓住重点。</p>
+
+  <h3>NO.10 多模态</h3>
+  <p>能同时处理文字、图片、音频、视频等多种输入形式的模型。以前的AI只能"看字"，现在的AI能"看图说话""听音理解"。</p>
+
+  <h3>NO.11 模型版本</h3>
+  <p>同一家公司的模型也分新旧。数字越大越新，能力通常也越强——Claude 4比Claude 3聪明，就是这个意思。</p>
+
+  <h3>NO.12 模型类型</h3>
+  <p>有的专处理文字，有的能看图，有的能生成视频。不同任务用不同模型，不是一个打天下。</p>
+
+  <h3>NO.13 Markdown</h3>
+  <p>用符号标记格式的写法。<code>#</code> 是标题，<code>**</code> 是加粗。AI默认用Markdown回答你，很多产品会自动渲染好——所以你看到的是整洁的排版，而不是一堆符号。</p>
+
+  <h3>NO.14 AI 应用</h3>
+  <p>把AI能力包装成产品的那一层。你用的各种AI工具，都是AI应用。底层的模型是引擎，应用是套在引擎外面让普通人能开的车。</p>
+
+  <h3>NO.15 工作流（Workflow）</h3>
+  <p>把多个AI步骤串联成流水线。A做完交给B，B做完交给C——自动跑完全程，不用每次手动操作。工作流是AI自动化的基础单元。</p>
+
+  <h3>NO.16 System Prompt（系统提示词）</h3>
+  <p>产品方预设的"角色说明"，你看不见，但它始终影响AI的风格。同样的模型在不同产品里"性格"不一样，就是它在起作用。</p>
+</section>
+
+<!-- ==================== Lv 3 ==================== -->
+<section class="article-section">
+  <h2>Lv 3 · 入门+ / 模型理解</h2>
+  <p>这一层开始涉及"AI怎么运作"的基本原理。懂了这些，你会知道AI为什么有时候很聪明、有时候又很蠢。</p>
+
+  <h3>NO.17 LLM（大语言模型）</h3>
+  <p>Large Language Model。通过在海量文字上训练学会理解和生成人类语言的模型。ChatGPT、Claude、Gemini都是LLM。</p>
+
+  <h3>NO.18 幻觉（Hallucination）</h3>
+  <p>AI一本正经地胡说八道——它会用非常确定的语气说出完全错误的信息。这是LLM最大的弱点，所以重要信息一定要自己核实。</p>
+
+  <h3>NO.19 Token（词元）</h3>
+  <p>AI处理文字的最小单位，也是计费单位。中文约每字1-2个Token。模型越强，Token越贵。</p>
+
+  <h3>NO.20 上下文窗口</h3>
+  <p>AI每次对话能处理的最大Token数量。超出这个范围的内容它就忘了。窗口越大，能处理的文档越长。</p>
+
+  <h3>NO.21 Temperature（温度）</h3>
+  <p>控制AI输出随机性的旋钮。调低——更稳定；调高——更发散。写作用高，做数据分析用低。</p>
+
+  <h3>NO.22 RLHF（人类反馈强化学习）</h3>
+  <p>Reinforcement Learning from Human Feedback。让人类标注员给AI的回答打分，用这些反馈来训练模型，让它更符合人类的偏好——决定了模型的"性格"。</p>
+
+  <h3>NO.23 Embedding（词嵌入）</h3>
+  <p>把文字转换成数字向量的技术。"猫"和"狗"的向量在空间里离得近，"猫"和"汽车"离得远。AI通过这种方式理解词语之间的关系。</p>
+
+  <h3>NO.24 提示词工程（Prompt Engineering）</h3>
+  <p>研究怎么问AI才能答得最好的学问。模型越来越强，对它的依赖在降低——但基本功还是值得学的。</p>
+
+  <h3>NO.25 对齐（Alignment）</h3>
+  <p>让AI的输出符合人类价值观和安全标准的过程。没有对齐的模型可能会说出有害、偏见或危险的内容。</p>
+
+  <h3>NO.26 概率采样</h3>
+  <p>AI不是"知道"答案，而是计算下一个词最可能是什么。Top-p 和 Top-k 就是控制它从概率分布中选词的两种方法。</p>
+
+  <h3>NO.27 微调（Fine-tuning）</h3>
+  <p>在预训练好的大模型基础上，用特定领域的数据再做一轮训练，让它更擅长某个专门任务。比从头训练省成本得多。</p>
+</section>
+
+<!-- ==================== Lv 4 ==================== -->
+<section class="article-section">
+  <h2>Lv 4 · 中级 / AI概念·自动化</h2>
+  <p>这一层开始讲AI圈里经常听到的"大词"，搞清楚这些，你就能看懂90%的AI新闻。</p>
+
+  <h3>NO.28 AGI（通用人工智能）</h3>
+  <p>能做任何人类能做的智力任务的AI。现在还没到，但硅谷所有人都在奔这个方向。</p>
+
+  <h3>NO.29 涌现（Emergence）</h3>
+  <p>模型大到某个临界点，突然会了一些没人教过的能力。这是AI能力飞跃的核心秘密——也是没人能完全解释的现象。</p>
+
+  <h3>NO.30 Agent（智能体）</h3>
+  <p>聊天机器人是"嘴巴"，Agent是长了"手脚"的AI——能自主拆解任务、调用工具、把事情做完。你不只是在和它聊天，而是在指挥它行动。</p>
+
+  <h3>NO.31 Vibe Coding</h3>
+  <p>不懂代码，靠跟AI聊天来做出产品。门槛从"会编程"变成了"会表达"。这是2025年最火的新词之一。</p>
+
+  <h3>NO.32 API（应用程序接口）</h3>
+  <p>开发者调用AI能力的接口。如果说AI是餐厅，API就是后厨的取餐口——程序通过它点菜，拿到AI的回答，再整合进自己的产品。</p>
+
+  <h3>NO.33 API Key</h3>
+  <p>调用API时证明"是你"的密码串。泄露了别人就能用你的额度消费——像银行卡密码一样保管。</p>
+
+  <h3>NO.34 推理（Reasoning）</h3>
+  <p>AI做逻辑分析、数学推导的能力。推理能力强的模型，面对复杂问题不容易翻车。</p>
+
+  <h3>NO.35 To B / To C</h3>
+  <p>To B是卖给企业，客单价高、续费稳；To C是卖给个人，用户量大但很难让人持续付费。AI产品的商业路线，基本就在这两条路里选。</p>
+
+  <h3>NO.36 AI Native</h3>
+  <p>骨子里就是AI的产品，不是把传统软件用AI补丁打补丁，而是从零开始为AI时代设计的。</p>
+
+  <h3>NO.37 RAG（检索增强生成）</h3>
+  <p>Retrieval-Augmented Generation。让AI在回答前先检索相关知识库，再基于检索结果生成回答。解决了大模型知识过时和幻觉的问题。</p>
+
+  <h3>NO.38 Transformer</h3>
+  <p>2017年提出的神经网络架构，所有现代大语言模型的共同祖先。"Attention Is All You Need"那篇论文的标题已经成为AI史上最著名的句子之一。</p>
+
+  <h3>NO.39 Agent框架</h3>
+  <p>用于构建Agent的开发框架，如LangChain、AutoGen等。它们提供了工具调用、记忆管理、任务规划等基础设施，让开发者不用从零开始造轮子。</p>
+</section>
+
+<!-- ==================== Lv 5 ==================== -->
+<section class="article-section">
+  <h2>Lv 5 · 进阶 / 开发·AI工程</h2>
+  <p>这一层开始接触开发者的基础工具和AI工程实践。就算你不想成为开发者，了解这些词也能让你和技术团队沟通时不掉队。</p>
+
+  <h3>NO.40 GitHub</h3>
+  <p>程序员存放和协作代码的平台。AI时代的开源圣地——很多AI工具的源代码都在这里。</p>
+
+  <h3>NO.41 MCP（模型上下文协议）</h3>
+  <p>Model Context Protocol。让AI模型与外部工具和数据源对接的标准协议。有了MCP，AI可以读取你的文件、数据库、日历——不用每次都手动复制粘贴。</p>
+
+  <h3>NO.42 Debug / 调试</h3>
+  <p>找出代码里哪里出问题了，然后修掉。Vibe Coding时AI能帮你Debug——但你得能看懂它在改什么，不然你不知道它改对没有。</p>
+
+  <h3>NO.43 前端</h3>
+  <p>你眼睛直接看到的部分——页面、按钮、动画。AI写代码最擅长的就是前端。</p>
+
+  <h3>NO.44 后端</h3>
+  <p>藏在页面背后处理逻辑、存储数据的部分。你看不见，但它决定了产品能不能用。</p>
+
+  <h3>NO.45 HTML / CSS</h3>
+  <p>HTML是网页的骨架语言，CSS是样式表。Vibe Coding时AI帮你生成的代码，很多就是HTML+CSS。你得能看懂它在改什么。</p>
+
+  <h3>NO.46 版本控制</h3>
+  <p>记录代码每次改动的历史，方便多人协作和回退。Git是最流行的版本控制系统，GitHub就是基于Git的代码托管平台。</p>
+
+  <h3>NO.47 依赖管理</h3>
+  <p>管理项目用到的第三方代码库（依赖）。npm、pip、requirements.txt都是干这个的——依赖乱了，项目就跑不起来。</p>
+
+  <h3>NO.48 测试 / Test</h3>
+  <p>验证代码有没有按预期工作。一定要测——你不测，你不知道AI写的代码在特殊情况下会不会崩。</p>
+
+  <h3>NO.49 代码审查（Code Review）</h3>
+  <p>让别人检查你的代码，发现潜在问题。AI时代，Code Review不仅给人看，也可以让AI帮你审——但人的判断依然不可替代。</p>
+</section>
+
+<!-- ==================== Lv 6 ==================== -->
+<section class="article-section">
+  <h2>Lv 6 · 开发者 / 系统·部署</h2>
+  <p>这一层是把AI服务"跑起来"的关键。你写的代码、训练好的模型，最终都要部署到真实环境才能让所有人使用。</p>
+
+  <h3>NO.50 Terminal（终端）</h3>
+  <p>也叫命令行、Shell。不是点鼠标点图标，而是打字输入命令来操作电脑。开发者每天面对的黑底白字窗口，就是Terminal。</p>
+
+  <h3>NO.51 环境变量</h3>
+  <p>操作系统级别的全局配置变量。最典型的用途就是存放API Key、数据库密码等敏感信息——写在代码里会泄露，放在环境变量里更安全。</p>
+
+  <h3>NO.52 服务器</h3>
+  <p>一台24小时不间断运行的电脑，用来对外提供服务。你的AI应用最终要跑在服务器上，别人才能通过网络访问它。</p>
+
+  <h3>NO.53 部署（Deploy）</h3>
+  <p>把开发好的代码发布到服务器上的过程。部署之前代码只在你电脑上能跑，部署之后全世界都能访问它。</p>
+
+  <h3>NO.54 容器（Docker）</h3>
+  <p>把应用和它需要的环境打包成一个"集装箱"，在任何机器上都能一致运行。解决了"我电脑上能跑，服务器上不行"的经典问题。</p>
+
+  <h3>NO.55 域名（Domain）</h3>
+  <p>互联网上网站的地址名称，比如google.com。IP地址是数字（142.250.x.x），人类记不住，域名就是好记的别名。</p>
+
+  <h3>NO.56 端口（Port）</h3>
+  <p>服务器上一个"房间号"，不同端口对应不同服务。比如80端口默认给网站，3000端口常被开发服务器占用。访问时写成"域名:端口"。</p>
+</section>
+
+<!-- ==================== Lv 7 ==================== -->
+<section class="article-section">
+  <h2>Lv 7 · 专家 / 模型原理·硬件</h2>
+  <p>这一层是真正的底层逻辑。不需要全懂，但知道这些词的意思，你看AI新闻会通透很多。</p>
+
+  <h3>NO.57 神经网络</h3>
+  <p>模仿人类大脑神经元设计的算法结构。现代AI的底层骨架——LLM就是一个超级巨大的神经网络。</p>
+
+  <h3>NO.58 蒸馏（Distillation）</h3>
+  <p>用大模型的输出来训练小模型，让小模型学到大模型的聪明劲。DeepSeek能做到低成本高水平，蒸馏技术是重要原因之一。</p>
+
+  <h3>NO.59 GPU（图形处理器）</h3>
+  <p>原本用来渲染游戏画面的芯片，后来发现特别适合并行矩阵运算——正是AI训练的核心计算。现在GPU比游戏还贵。</p>
+
+  <h3>NO.60 算力</h3>
+  <p>计算能力的总称。AI三要素之一，决定了你能训练多大的模型。现在顶级AI公司的核心壁垒之一就是能拿到多少GPU。</p>
+
+  <h3>NO.61 预训练</h3>
+  <p>在海量互联网文字上学习语言规律的阶段。烧钱最多、时间最长——顶级模型的预训练要花好几个月和几亿美元。</p>
+
+  <h3>NO.62 后训练</h3>
+  <p>预训练之后，让模型学会"好好说话"的阶段。通过人类反馈让它更对齐、更有用——决定了模型的"性格"。</p>
+
+  <h3>NO.63 参数</h3>
+  <p>神经网络里通过训练调整的数值。参数越多，模型越大、通常也越聪明——也越贵。你听到的"70亿参数""千亿参数"，就是在说这个。</p>
+
+  <h3>NO.64 注意力机制（Attention）</h3>
+  <p>Transformer架构的核心。让模型在生成每个词时，"关注"输入中最相关的部分。没有Attention，就没有现代大语言模型。</p>
+
+  <h3>NO.65 反向传播（Backpropagation）</h3>
+  <p>神经网络学习的核心算法。通过计算输出误差对每个参数的影响，从后往前调整参数——就像老师批改作业后告诉你哪里做错了。</p>
+
+  <h3>NO.66 损失函数（Loss Function）</h3>
+  <p>衡量模型预测和正确答案之间差距的数学公式。训练的目标就是让损失函数越来越小——损失越小，模型越准。</p>
+
+  <h3>NO.67 激活函数（Activation Function）</h3>
+  <p>神经网络中决定神经元是否"激活"的数学函数。ReLU、Sigmoid、GELU都是常见的激活函数——没有它们，神经网络就只是线性回归。</p>
+</section>
+
+<!-- ==================== 总结 ==================== -->
+<section class="article-section">
+  <h2>总结</h2>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>层级</th>
+        <th>主题</th>
+        <th>你能做什么</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lv1 零基础</td>
+        <td>产品界面</td>
+        <td>认识AI工具的基本组成</td>
+      </tr>
+      <tr>
+        <td>Lv2 入门</td>
+        <td>使用基础</td>
+        <td>真正会用AI，而不只是偶尔试试</td>
+      </tr>
+      <tr>
+        <td>Lv3 入门+</td>
+        <td>模型理解</td>
+        <td>理解LLM为什么这样回答，能调教它</td>
+      </tr>
+      <tr>
+        <td>Lv4 中级</td>
+        <td>AI概念·自动化</td>
+        <td>看懂AI新闻，能用AI搭工作流</td>
+      </tr>
+      <tr>
+        <td>Lv5 进阶</td>
+        <td>开发·AI工程</td>
+        <td>Vibe Coding，动手做AI产品</td>
+      </tr>
+      <tr>
+        <td>Lv6 开发者</td>
+        <td>系统·部署</td>
+        <td>把AI服务跑起来，给别人用</td>
+      </tr>
+      <tr>
+        <td>Lv7 专家</td>
+        <td>模型原理·硬件</td>
+        <td>理解AI底层，能做模型层的判断</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>你现在在哪个层级？评论区告诉我。</p>
+
+  <p>如果这篇对你有用，转发给还在对AI术语一头雾水的朋友——让他们少走一些弯路。</p>
+
+  <p><em>本文整理了AI领域核心词汇，按7级难度分层。适合收藏反复查阅。</em></p>
+</section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-content h2 {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-accent);
+  }
+  .article-content h3 {
+    font-size: 17px;
+    margin: 24px 0 8px;
+    color: var(--color-text);
+  }
+  .article-content h3::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 16px;
+    background: var(--color-accent);
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  .article-content p {
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+  .article-content blockquote {
+    margin: 16px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--color-accent);
+    background: var(--color-bg);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+  .article-content code {
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Fira Code', monospace;
+  }
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .summary-table th,
+  .summary-table td {
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .summary-table th {
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  .summary-table tbody tr:nth-child(even) {
+    background: var(--color-bg);
+  }
+  .summary-table tbody tr:hover {
+    background: rgba(255, 152, 0, 0.08);
+  }
+</style>
