@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-22',
+    title: 'AI新闻 | Anthropic即将迎来首个盈利季度营收翻番至109亿美元 + Google搜索框25年来最大改版新增信息Agent功能 + Anthropic洽谈使用微软AI芯片打破英伟达垄断 + 腾讯混元翻译模型Hy-MT2开源支持33语种 + 剪映国际版CapCut与谷歌Gemini深度合作',
+    titleEn: 'AI News | Anthropic First Profitable Quarter Revenue Doubles to $10.9B + Google Search 25-Year Biggest Redesign with Info Agent + Anthropic Negotiates Microsoft AI Chips + Tencent Hy-MT2 Translation Model Open-Sourced + CapCut Integrates with Gemini',
+    summary: '今日AI行业五大看点：Anthropic向投资者透露Q2收入预计翻番至109亿美元首次实现营业利润季度营收增速超Zoom疫情期间Google搜索框25年来最大改版新增信息Agent功能可24小时追踪用户指定话题Anthropic洽谈租用微软自研AI芯片打破英伟达垄断腾讯混元全新翻译模型Hy-MT2开源支持33语种互译剪映国际版CapCut与谷歌合作编辑功能将集成到Gemini应用。',
+    summaryEn: 'Five highlights: Anthropic Q2 revenue expected to double to $10.9B first operating profit quarterly growth outpaces Zoom pandemic era Google Search biggest redesign in 25 years with info Agent Anthropic negotiates Microsoft AI chips Tencent Hy-MT2 translation model open-sourced supporting 33 languages CapCut editing features integrating into Gemini.',
+    newsItems: [
+      {
+        title: 'Anthropic即将迎来首个盈利季度，Q2收入预计翻番至109亿美元',
+        titleEn: 'Anthropic Approaches First Profitable Quarter, Q2 Revenue Expected to Double to $10.9B',
+        summary: '华尔街日报报道Anthropic向投资者透露Q2收入预计翻番至109亿美元季度营收增速超Zoom疫情期间和谷歌Facebook IPO前水平。Q1销售额达48亿美元预计6月季度的营业利润为5.59亿美元作为当前融资轮的一部分此轮融资很可能使其估值超过OpenAI。',
+        summaryEn: 'WSJ reports Anthropic told investors Q2 revenue expected to double to $10.9B outpacing Zoom pandemic and Google/Meta IPO-era growth. Q1 sales reached $4.8B with projected operating profit of $559M. Current funding round likely to push valuation past OpenAI.',
+        source: '开源中国',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.oschina.net/news/443735'
+      },
+      {
+        title: 'Google搜索框25年来最大改版，新增"信息Agent"功能可24小时持续追踪',
+        titleEn: 'Google Search 25-Year Biggest Redesign with Info Agent for 24/7 Topic Tracking',
+        summary: 'Google I/O 2026大会上发布搜索框全面升级被内部称为25年来最大变化。新搜索框不再只是返回链接列表而是能理解用户意图构建个性化体验核心是AI驱动的交互体验。新增信息Agent功能可24小时不间断追踪用户指定话题并自动整合信息生成可视化内容根据上下文创建专属小工具。',
+        summaryEn: 'Google I/O 2026 unveils Search box upgrade internally called biggest change in 25 years. New search understands user intent builds personalized experiences rather than returning link lists. Info Agent feature tracks topics 24/7 auto-integrates information generates visuals and creates contextual mini-tools.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/443934'
+      },
+      {
+        title: 'Anthropic洽谈使用微软自研AI芯片，或打破英伟达算力垄断',
+        titleEn: 'Anthropic Negotiates Microsoft AI Chips, May Break Nvidia Compute Monopoly',
+        summary: '据The Information报道Anthropic正洽谈租用搭载微软自研AI服务器芯片的算力服务器以扩充AI产品算力资源。微软一直力图效仿谷歌亚马逊研发可替代英伟达芯片的产品打破AI算力领域垄断。知情人士称双方洽谈尚处于初步阶段最终未必能达成正式协议。',
+        summaryEn: 'The Information reports Anthropic is negotiating to rent servers with Microsoft custom AI chips to expand compute resources. Microsoft aims to develop alternatives to Nvidia GPUs breaking compute monopoly. Sources say talks are preliminary and may not result in a formal agreement.',
+        source: 'IT之家',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.ithome.com/0/953/649.htm'
+      },
+      {
+        title: '腾讯混元全新翻译模型Hy-MT2开源，支持33语种互译和5种方言',
+        titleEn: 'Tencent Hunyuan Hy-MT2 Translation Model Open-Sourced, 33 Languages and 5 Dialects',
+        summary: '腾讯混元翻译模型Hy-MT2正式开源包含1.8B、7B、30B-A3B三个尺寸均支持33个语种互译和5种民汉方言。同步开源翻译指令遵循测试集IFMTBench支持翻译风格变换和指定术语翻译等指令。推出腾讯Hy翻译小程序支持语音输入和端侧离线翻译。',
+        summaryEn: 'Tencent Hunyuan Hy-MT2 open-sourced in 1.8B, 7B, and 30B-A3B sizes, supporting 33 languages and 5 dialects. Includes IFMTBench instruction-following benchmark for translation style and terminology. Hy Translation mini-app supports voice input and offline edge translation.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/443884'
+      },
+      {
+        title: '剪映国际版CapCut与谷歌合作，编辑功能将集成到Gemini应用',
+        titleEn: 'CapCut Partners Google, Editing Features to Integrate into Gemini App',
+        summary: '剪映国际版CapCut宣布与谷歌Gemini展开合作用户很快将能够直接在Gemini应用中使用CapCut的创意与编辑功能来编辑图像和视频。双方表示创作工作流将变得更加互联无缝创作未来将更加对话化直观化。这不是两家公司的首次合作此前谷歌曾测试允许用户直接在CapCut中导出和编辑谷歌相册内容。',
+        summaryEn: 'CapCut announces partnership with Google Gemini. Users will soon use CapCut creative and editing features directly within Gemini for image and video editing. Both companies say creative workflows will become more interconnected. Not their first collaboration following earlier Google Photos integration testing.',
+        source: 'IT之家',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.ithome.com/0/953/662.htm'
+      }
+    ],
+    comment: 'Anthropic盈利拐点到来是AI行业里程碑事件说明大模型公司从烧钱走向商业化正循环Google搜索25年最大改版标志着搜索引擎从链接索引进化为AI交互平台信息Agent概念可能重新定义搜索形态Anthropic洽谈微软芯片说明算力多元化正在实质性推进打破英伟达一家独大的格局腾讯Hy-MT2开源和CapCut×Gemini合作分别代表国产大模型出海和应用层AI融合的最新进展。',
+    commentEn: 'Anthropic profitability milestone shows LLM companies transitioning from cash-burn to commercialization. Google Search 25-year redesign marks evolution from link index to AI interactive platform. Anthropic-Microsoft chip talks signal real compute diversification breaking Nvidia monopoly. Tencent Hy-MT2 open-source and CapCut-Gemini partnership represent latest Chinese LLM global expansion and app-level AI integration.',
+  },
+  {
     date: '2026-05-21',
     title: 'AI新闻 | 英伟达Q1净利润583亿美元同比+211% + OpenAI最快本周五提交IPO招股书草案 + Karpathy官宣加盟Anthropic重返LLM研发 + Meta启动8000人大规模裁员 + DeepSeek组建Harness团队进军Agent赛道',
     titleEn: 'AI News | Nvidia Q1 Net Income $58.3B +211% YoY + OpenAI IPO Draft This Friday + Karpathy Joins Anthropic + Meta 8000 Layoffs + DeepSeek Builds Harness Team for Agents',
