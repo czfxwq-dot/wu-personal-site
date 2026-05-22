@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-23',
+    title: 'AI新闻 | AI三巨头SpaceX+OpenAI+Anthropic冲刺IPO市值逼近4万亿美元 + 炬坤机器人发布全球首款工业级五指灵巧手 + 京东618将用AI数字人打造全网首档AI购物直播晚会 + 微软35年老将离职帮助Windows适应Agent时代 + 苹果总市值站上4.5万亿美元创新高',
+    titleEn: 'AI News | AI Big Three SpaceX+OpenAI+Anthropic Rush IPO with $4T Valuation + Torch-hand1 World First Industrial Five-Finger Dexterous Hand + JD 618 AI Digital Human Shopping Gala + Microsoft 35-Year Veteran Leaves to Help Windows Adapt to Agent Era + Apple Market Cap Hits $4.5T',
+    summary: '今日AI行业五大看点：SpaceX OpenAI Anthropic三家公司冲刺IPO市值逼近4万亿美元已超互联网泡沫前全部IPO总和；炬坤机器人发布全球首款工业级五指灵巧手Torch-hand1专为工业场景打造；京东618推出全网首档AI数字人购物直播晚会经典IP由AI演绎；微软35年老将优素福迈赫迪宣布离职最后一年帮助Windows适应Agent时代推动One Copilot愿景；苹果股价再创新高总市值突破4.5万亿美元5月连创新高。',
+    summaryEn: 'Five highlights: SpaceX OpenAI Anthropic three companies rush IPO with combined market cap approaching $4T surpassing all pre-dotcom-bubble IPOs combined; Torch-hand1 world first industrial five-finger dexterous hand for industrial scenarios; JD 618 launches first AI digital human shopping gala with AI演绎 classic IPs; Microsoft 35-year veteran Mehdi announces departure to help Windows adapt to Agent era; Apple stock hits record with $4.5T market cap.',
+    newsItems: [
+      {
+        title: 'AI三巨头的万亿IPO前夜：SpaceX+OpenAI+Anthropic冲刺上市，总市值逼近4万亿美元',
+        titleEn: 'AI Big Three IPO Eve: SpaceX+OpenAI+Anthropic Rush IPO with Combined $4T Valuation',
+        summary: '接近4万亿美元市值的AI资产正在冲刺上市这只是SpaceX OpenAI与Anthropic三家公司却已经超过了互联网泡沫破灭前全部2600家公司IPO市值的总和。它们的收入膨胀速度比互联网时代更快亏损规模也同样如此。SpaceX的招股书已经公开市场普遍预期它将募资75亿美元成为史上最大IPO之一。OpenAI最快本周五提交IPO招股书草案冲刺9月上市。Anthropic也向投资者透露Q2收入预计翻番至109亿美元首次实现营业利润。',
+        summaryEn: 'AI assets approaching $4T market cap are rushing to IPO — just SpaceX OpenAI and Anthropic — already surpassing all 2600 pre-dotcom-bubble IPOs combined. Revenue growing faster than internet era losses scaling similarly. SpaceX prospectus filed OpenAI IPO draft expected this Friday Anthropic Q2 revenue doubling to $10.9B.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4860758.html'
+      },
+      {
+        title: '炬坤机器人发布全球首款工业级五指灵巧手Torch-hand1',
+        titleEn: 'Torch-hand1 World First Industrial Five-Finger Dexterous Hand Released',
+        summary: '炬坤机器人近日发布全球首款工业五指灵巧手Torch-hand1专为工业场景打造可适配多种复杂场景作业需求。该灵巧手面向工业级应用场景设计相比实验室级灵巧手更注重可靠性耐用性和成本控制标志着人形机器人核心零部件向产业化迈出关键一步。',
+        summaryEn: 'Torch Kun Robot releases world first industrial five-finger dexterous hand Torch-hand1 designed for industrial scenarios with emphasis on reliability durability and cost control — a key step toward commercialization of humanoid robot core components.',
+        source: '36氪',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.36kr.com/newsflashes/3820393192083592'
+      },
+      {
+        title: '京东618将用AI数字人打造全网首档AI购物直播晚会',
+        titleEn: 'JD 618 Launches First AI Digital Human Shopping Live Gala',
+        summary: '京东宣布将于6月1日晚8点推出全网首档AI购物直播晚会《京东618·赛博联欢会》。晚会将以AI数字人形象演绎多个经典IP将AI技术深度融入电商直播场景。这是AI数字人在电商领域的最新应用探索有望为618大促带来全新的互动购物体验。',
+        summaryEn: 'JD announces first AI shopping live gala on June 1 at 8pm featuring AI digital human performances of classic IPs — the latest AI application in e-commerce livestreaming for 618 shopping festival.',
+        source: '36氪',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.36kr.com/newsflashes/3820427661398407'
+      },
+      {
+        title: '微软35年老将优素福·迈赫迪宣布离职，最后一年将帮助Windows适应Agent时代',
+        titleEn: 'Microsoft 35-Year Veteran Mehdi Announces Departure, Will Help Windows Adapt to Agent Era',
+        summary: '在微软工作35年的资深高管优素福·迈赫迪将在下一财年结束后离开公司。迈赫迪目前负责微软AI与Copilot产品营销他表示最后一年将帮助Windows适应Agent时代推动Microsoft 365服务增长并实现One Copilot愿景。这标志着微软AI商业化关键人物的交接窗口Agent正成为操作系统级战略方向。',
+        summaryEn: '35-year Microsoft veteran Yousef Mehdi will depart after next fiscal year. Currently leading Microsoft AI and Copilot product marketing he will help Windows adapt to Agent era push M365 growth and realize One Copilot vision in his final year.',
+        source: 'IT之家',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.ithome.com/0/954/215.htm'
+      },
+      {
+        title: '苹果股价再创新高，总市值站上4.5万亿美元',
+        titleEn: 'Apple Stock Hits Record, Market Cap Reaches $4.5 Trillion',
+        summary: '美股开盘苹果公司股价上涨1.56%报309.74美元总市值达到4.5万亿美元约合30.65万亿元人民币。进入5月之后苹果股价连创新高5月15日首次站上300美元关口。苹果2026财年Q2营收达1111亿美元AI相关功能持续推进为股价提供支撑。',
+        summaryEn: 'Apple stock up 1.56% to $309.74 market cap reaching $4.5T. May sees consecutive records first crossing $300 on May 15. Apple FY26 Q2 revenue at $111.1B with AI features driving continued momentum.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/954/218.htm'
+      }
+    ],
+    comment: 'AI三巨头IPO前夜是本周最值得关注的产业事件接近4万亿美元的总市值已超互联网泡沫前全部IPO总和说明AI行业正迎来前所未有的资本化浪潮。炬坤工业级五指灵巧手和人形机器人零部件产业化是具身智能落地的关键信号。京东AI数字人直播晚会代表AI在电商场景的深度渗透。微软老将离职前帮助Windows适应Agent时代说明Agent已从应用层走向操作系统层。苹果4.5万亿美元市值创新高反映AI对传统科技巨头估值的持续拉动效应。',
+    commentEn: 'AI Big Three IPO eve is the most notable industry event — $4T combined valuation surpasses all pre-dotcom-bubble IPOs marking unprecedented AI capitalization wave. Torch Kun industrial dexterous hand signals embodied AI commercialization. JD AI digital human gala represents deep AI penetration in e-commerce. Microsoft veteran helping Windows adapt to Agent era shows Agent moving from app layer to OS layer. Apple $4.5T market cap reflects AI valuation pull on legacy tech giants.',
+  },
+  {
     date: '2026-05-22',
     title: 'AI新闻 | Anthropic即将迎来首个盈利季度营收翻番至109亿美元 + Google搜索框25年来最大改版新增信息Agent功能 + Anthropic洽谈使用微软AI芯片打破英伟达垄断 + 腾讯混元翻译模型Hy-MT2开源支持33语种 + 剪映国际版CapCut与谷歌Gemini深度合作',
     titleEn: 'AI News | Anthropic First Profitable Quarter Revenue Doubles to $10.9B + Google Search 25-Year Biggest Redesign with Info Agent + Anthropic Negotiates Microsoft AI Chips + Tencent Hy-MT2 Translation Model Open-Sourced + CapCut Integrates with Gemini',
