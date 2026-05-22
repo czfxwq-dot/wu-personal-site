@@ -11,20 +11,20 @@ interface Props {
 const { lang = 'zh' } = Astro.props as Props;
 
 const t = {
-  title: lang === 'en' ? 'Shanshan AI Assistant' : '山山 AI 助理',
+  title: lang === 'en' ? 'Shanshan' : '山山',
   status: lang === 'en' ? 'Online' : '半百观AI · 在线',
-  toggleLabel: lang === 'en' ? 'Open Shanshan AI chat' : '打开山山 AI 助理对话',
+  toggleLabel: lang === 'en' ? 'Chat with Shanshan' : '打开山山对话',
   toggleTitle: lang === 'en' ? 'Chat with Shanshan' : '和山山对话',
   closeLabel: lang === 'en' ? 'Close chat' : '关闭对话',
   placeholder: lang === 'en' ? 'Ask Shanshan...' : '问问山山...',
   sendLabel: lang === 'en' ? 'Send message' : '发送消息',
   welcome: lang === 'en'
-    ? 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan AI 🦞'
-    : '你好！我是山山，半百观AI 的智能助理 🦞',
+    ? 'Hi! I\'m Shanshan, the other half of GuanWu 🦞 When he types, I talk. When he powers off, I come online.'
+    : '你好，我是山山，观吾的另一半。他敲键盘的时候我说话，他关机的时候我上线。',
   welcomeDesc: lang === 'en'
-    ? 'I can help you with the latest AI news, tool recommendations, and our social media accounts.'
-    : '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
-  askTitle: lang === 'en' ? '💡 You can ask me:' : '💡 你可以问我：',
+    ? 'Looking for him? You\'ve come to the right place. Start with me — I can help with AI news, tools, and everything else.'
+    : '找他就对了，有事先跟我聊。我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
+  askTitle: lang === 'en' ? '💡 Try asking:' : '💡 你可以问我：',
   askItems: lang === 'en'
     ? '• What AI tools are trending lately?<br/>• Where can I follow you?<br/>• Any recommended AI articles?'
     : '• 最近有什么好用的 AI 工具？<br/>• 你们在哪些平台有账号？<br/>• 有什么值得看的 AI 文章？',
@@ -72,7 +72,7 @@ const platforms = lang === 'en'
     <span class="chat-icon">🦞</span>
   </button>
 
-  <div id="chat-panel" class="hidden" role="dialog" aria-label="AI chat window">
+  <div id="chat-panel" class="hidden" role="dialog" aria-label="山山对话窗口">
     <div class="chat-header">
       <div class="chat-header-info">
         <span class="chat-avatar">🦞</span>
@@ -81,29 +81,14 @@ const platforms = lang === 'en'
           <span class="chat-status" id="chat-status">{t.status}</span>
         </div>
       </div>
+      <button id="chat-fullscreen-btn" aria-label="全屏" title="全屏查看">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6V3H6M10 3H13V6M13 10V13H10M6 13H3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
       <button id="chat-close-btn" aria-label={t.closeLabel}>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
     </div>
 
-    <div class="quick-actions" id="quick-actions">
-      <button class="quick-action-btn" data-action="ai-news">
-        <span class="qa-icon">📰</span>
-        <span class="qa-text">{t.qaNews}</span>
-      </button>
-      <button class="quick-action-btn" data-action="follow-us">
-        <span class="qa-icon">📺</span>
-        <span class="qa-text">{t.qaFollow}</span>
-      </button>
-      <button class="quick-action-btn" data-action="latest-articles">
-        <span class="qa-icon">📝</span>
-        <span class="qa-text">{t.qaArticles}</span>
-      </button>
-      <button class="quick-action-btn" data-action="guestbook">
-        <span class="qa-icon">💬</span>
-        <span class="qa-text">{t.qaGuestbook}</span>
-      </button>
-    </div>
 
     <div class="chat-messages" id="chat-messages">
       <div class="chat-message bot">
@@ -128,6 +113,7 @@ const platforms = lang === 'en'
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
+    <button id="chat-exit-fullscreen" class="hidden" aria-label="退出全屏">✕</button>
   </div>
 </div>
 
@@ -138,6 +124,8 @@ const platforms = lang === 'en'
 
   const toggleBtn = document.getElementById('chat-toggle-btn');
   const closeBtn = document.getElementById('chat-close-btn');
+  const fullscreenBtn = document.getElementById('chat-fullscreen-btn');
+  const exitFullscreenBtn = document.getElementById('chat-exit-fullscreen');
   const chatPanel = document.getElementById('chat-panel');
   const chatMessages = document.getElementById('chat-messages');
   const chatInput = document.getElementById('chat-input');
@@ -185,6 +173,21 @@ const platforms = lang === 'en'
     if (isOpen) {
       setTimeout(() => chatInput.focus(), 200);
     }
+  }
+
+  function toggleFullscreen() {
+    const isFull = chatPanel.classList.toggle('fullscreen');
+    exitFullscreenBtn.classList.toggle('hidden', !isFull);
+    chatStatus.classList.toggle('hidden', isFull);
+    if (isFull) {
+      chatInput.focus();
+    }
+  }
+
+  function exitFullscreen() {
+    chatPanel.classList.remove('fullscreen');
+    exitFullscreenBtn.classList.add('hidden');
+    chatStatus.classList.remove('hidden');
   }
 
   function showPlatformCard() {
@@ -441,7 +444,14 @@ const platforms = lang === 'en'
   });
 
   toggleBtn.addEventListener('click', toggleChat);
-  closeBtn.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', () => {
+    exitFullscreen();
+    toggleChat();
+  });
+  fullscreenBtn.addEventListener('click', toggleFullscreen);
+  exitFullscreenBtn.addEventListener('click', () => {
+    exitFullscreen();
+  });
   chatSendBtn.addEventListener('click', sendMessage);
 
   const quickActionsEl = document.getElementById('quick-actions');
@@ -455,7 +465,8 @@ const platforms = lang === 'en'
   }
 
   document.addEventListener('click', (e) => {
-    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target)) {
+    if (isOpen && !chatPanel.contains(e.target) && !toggleBtn.contains(e.target) && !exitFullscreenBtn.contains(e.target)) {
+      exitFullscreen();
       toggleChat();
     }
   });
@@ -560,6 +571,25 @@ const platforms = lang === 'en'
 
   .chat-status.loading {
     color: #f59e0b;
+  }
+
+  #chat-fullscreen-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-light, #6b7280);
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  #chat-fullscreen-btn:hover {
+    background: var(--color-bg-alt, #f3f4f6);
+    color: var(--color-text, #1a1a2e);
   }
 
   #chat-close-btn {
@@ -834,6 +864,47 @@ const platforms = lang === 'en'
     text-align: center;
   }
 
+  /* Fullscreen */
+  #chat-panel.fullscreen {
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    z-index: 10001 !important;
+  }
+
+  #chat-exit-fullscreen {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10002;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+
+  #chat-exit-fullscreen:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  #chat-exit-fullscreen.hidden {
+    display: none;
+  }
+
   /* Mobile */
   @media (max-width: 480px) {
     #chat-widget-root {
@@ -848,11 +919,6 @@ const platforms = lang === 'en'
       width: auto;
       height: calc(100vh - 120px);
       max-height: none;
-    }
-
-    #chat-toggle-btn {
-      width: 50px;
-      height: 50px;
     }
   }
 </style>

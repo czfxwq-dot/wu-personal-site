@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-22',
+    title: '山山 AI 对话全面优化，聊天体验升级上线',
+    titleEn: 'Shanshan AI Chat Optimized, Conversation Experience Upgraded',
+    summary: '建站第26天。修复山山AI对话掉线（cloudflared tunnel URL过期重建）。聊天UI全面升级：开场白人设改为「观吾的另一半」、标题去掉「AI助理」改为「山山」、删除4个快捷按钮、新增全屏功能。两篇半百观文章发布（5个欲望+欲望替换版本）。自动化体系连续两周稳定运行：AI新闻07:00 + 日记22:00 + 飞书发布 + 留言板 + 全站SEO + 中英双语。遗留事项：持久化Cloudflare Tunnel配置等待API Token。磐石电气MonolithIoT智能工单系统服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Day 26: Fixed Shanshan AI chat disconnection (cloudflared tunnel URL expired & rebuilt). Chat UI upgraded: new opening persona ("观吾的另一半"), title simplified to "山山", removed 4 quick buttons, added fullscreen mode. Two BanbaiGuan articles published. Automation stable for 2 weeks: AI news 07:00 + diary 22:00 + Feishu publish + guestbook + SEO + bilingual. Pending: persistent Cloudflare Tunnel config awaiting API Token.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-21',
     title: '自动化体系持续稳定运行，经验教训规则沉淀 13 条',
     titleEn: 'Automation Running Stably, 13 Lessons Learned Rules Accumulated',

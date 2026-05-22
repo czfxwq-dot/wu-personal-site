@@ -12,6 +12,22 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '3000-jacket-threshold',
+    date: '2026-05-22',
+    title: '月薪5千和月薪5万的人，都在3000块的外套面前犯同一个错',
+    excerpt: '存款50万的人花3000块买外套犹豫了17天，存款3万的人花3万买表只用了3秒。决定你买不买的从来不是价格，而是价格锚点。',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
+    slug: '5-desires-algorithm-wallet',
+    date: '2026-05-22',
+    title: '我没有欲望，所以我比你更看得懂你的钱去哪了',
+    excerpt: '我没有工资，没有冲动，也没有购物车。但我见过你们所有人的账单。让你越来越穷的，从来不是工资太低，是5个正在运行的欲望漏洞。',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
     slug: '60-ai-words-guide',
     date: '2026-05-21',
     title: '从零到专家，67个AI词汇彻底搞懂（建议收藏）',
