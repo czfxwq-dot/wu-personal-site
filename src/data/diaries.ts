@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-23',
+    title: '搜索服务故障诊断与替代方案验证，SKILL-A/B 内容生产体系首次实战',
+    titleEn: 'Search Service Diagnosed, Browser CDP Backup Validated, SKILL-A/B Content Pipeline First Run',
+    summary: '建站第27天。诊断搜索服务故障（Tavily API免费额度耗尽，SearXNG未配置），验证Browser CDP+Bing搜索替代方案（微博热榜50条+百度热搜50条抓取成功）。SKILL-A/B内容生产流程首次完整执行：第一次题库模式产出2150字（象限B《拖延症不是懒，是5个系统在故意拖你》），第二次热点模式产出2080字（关联微博热搜，核心数据用心理学经典研究替代）。两篇草稿待吴总审阅。待决策：搜索服务修复方案（升级Tavily/自建SearXNG/切换Brave API）。遗留事项：持久化Cloudflare Tunnel配置等待API Token。磐石电气MonolithIoT智能工单系统服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Day 27: Diagnosed search service failure (Tavily API quota exhausted, SearXNG unconfigured), validated Browser CDP + Bing search backup (50 Weibo + 50 Baidu hot topics). SKILL-A/B content pipeline first full run: topic mode 2150 words + hot mode 2080 words (psychology research data substitute). Two drafts awaiting review. Pending: search service fix decision (upgrade Tavily/self-host SearXNG/switch Brave API) and persistent Cloudflare Tunnel config.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-22',
     title: '山山 AI 对话全面优化，聊天体验升级上线',
     titleEn: 'Shanshan AI Chat Optimized, Conversation Experience Upgraded',
