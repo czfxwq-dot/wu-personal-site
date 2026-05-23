@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-24',
+    title: 'AI新闻 | DeepSeek推进700亿元融资创中国初创纪录 + NVIDIA开源NVCF GPU函数计算平台 + 美光CEO警告内存短缺或持续至明年 + 独立研究者4.8万美元自建GPU服务器算力账本 + 苹果WWDC前悄悄注册genai.apple.com子域名',
+    titleEn: 'AI News | DeepSeek 70B RMB Funding Record + Nvidia Open-Sources NVCF GPU Compute Platform + Micron CEO Warns Memory Shortage Through 2027 + Independent Researcher $48K GPU Server + Apple Registers genai.apple.com Before WWDC',
+    summary: '今日AI行业五大看点：DeepSeek推进700亿元融资若达成将创中国科技初创首轮融资最高纪录投前估值约450亿美元创始人承诺AGI优先于商业化；NVIDIA以Apache 2.0协议开源完整NVCF GPU函数计算平台涵盖控制面调用面和计算面；美光CEO警告全球存储芯片短缺或持续至明年AI需求增速远超行业扩产速度；前FAANG工程师花4.8万美元自建6卡RTX 6000 Ada服务器并公布完整使用数据；WWDC两周前苹果悄悄注册genai.apple.com子域名扩展AI布局。',
+    summaryEn: 'Five highlights: DeepSeek advancing 70B RMB funding round with $45B pre-money valuation — founder prioritizes AGI over commercialization; Nvidia open-sources full NVCF GPU function compute platform under Apache 2.0; Micron CEO warns memory shortage may last through 2027 as AI demand outpaces capacity expansion; ex-FAANG engineer publishes full data from $48K 6-GPU RTX 6000 Ada server; Apple registers genai.apple.com two weeks before WWDC.',
+    newsItems: [
+      {
+        title: 'DeepSeek推进700亿元融资创纪录，梁文锋承诺AGI优先于商业化',
+        titleEn: 'DeepSeek Advances Record 70B RMB Funding, Founder Promises AGI Before Commercialization',
+        summary: 'DeepSeek正在推进一轮高达700亿元人民币约100亿美元的融资谈判若交易达成将创下中国科技初创公司首轮融资的最高纪录。本轮融资规模从最初的500亿元上调至700亿元投前估值约450亿美元约合人民币3065亿元。创始人梁文锋向投资者明确表示通用人工智能AGI的远大目标优先于短期商业化变现。',
+        summaryEn: 'DeepSeek advancing 70B RMB funding round with $45B pre-money valuation. Scale raised from initial 50B to 70B RMB. Founder promises AGI goal takes priority over short-term commercialization.',
+        source: '开源中国',
+        category: '投资',
+        categoryEn: 'Investment',
+        url: 'https://www.oschina.net/news/444326'
+      },
+      {
+        title: 'NVIDIA开源NVCF平台，揭开GPU函数计算平台技术内幕',
+        titleEn: 'Nvidia Open-Sources NVCF GPU Function Compute Platform',
+        summary: 'NVIDIA近日以Apache 2.0协议开源了完整的NVCF（NVIDIA Cloud Functions）平台。这不是薄SDK或轻量级客户端库而是真正的控制平面调用平面计算平面CLI工具Helm charts以及数据库迁移所有代码都在GitHub单体仓库中。NVCF正是build.nvidia.com上模型推理服务的底层基础设施。',
+        summaryEn: 'Nvidia open-sourced complete NVCF platform under Apache 2.0 — control plane, invocation plane, compute plane, CLI tools, Helm charts, and DB migrations all in a single GitHub repo. NVCF powers build.nvidia.com inference services.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/444433'
+      },
+      {
+        title: '美光CEO警告内存短缺或持续至明年，新产能2028年才能大规模释放',
+        titleEn: 'Micron CEO Warns Memory Shortage May Last Through 2027',
+        summary: '美光CEO梅赫罗特拉在接受CNBC采访时警告称全球存储芯片短缺问题可能会持续到2026年之后AI需求的增速仍然远远超过行业扩产速度。越来越多厂商开始把重点转向AI专用存储产品美光正在减少消费级业务把资源集中到利润更高的企业级市场。AI数据中心对存储芯片的需求正在重塑整个存储行业格局。',
+        summaryEn: 'Micron CEO warns global memory chip shortage may persist beyond 2026 as AI demand growth far outpaces industry capacity expansion. Industry shifting toward AI-specific storage products; Micron reducing consumer focus in favor of higher-margin enterprise market.',
+        source: 'IT之家',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.ithome.com/0/954/436.htm'
+      },
+      {
+        title: '花4.8万美元自建GPU服务器值不值？一位独立研究者的真实算力账本',
+        titleEn: 'Is $48K Self-Built GPU Server Worth It? Independent Researcher Real Compute Ledger',
+        summary: '2024年一位前FAANG工程师辞职成为独立AI研究者花4.8万美元亲手组装了一台搭载6张RTX 6000 Ada GPU的服务器。他公开发布了这台服务器的完整使用数据回答了所有自建算力开发者都会问的问题自己买GPU到底值不值。数据显示算力即保险自建GPU在长期研究中可能比云服务更经济。',
+        summaryEn: 'Ex-FAANG engineer spent $48K building a 6x RTX 6000 Ada GPU server for independent AI research. Published full usage data addressing the question all self-build compute developers ask — is buying GPUs worth it. Data suggests compute as insurance — self-built GPU can be more economical than cloud for long-term research.',
+        source: '开源中国',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.oschina.net/news/444365/was-my-48k-gpu-worth-it'
+      },
+      {
+        title: 'WWDC 2026在即，苹果悄悄注册全新子域名genai.apple.com',
+        titleEn: 'WWDC 2026: Apple Quietly Registers genai.apple.com Subdomain',
+        summary: '2026年苹果全球开发者大会WWDC将于北京时间6月9日凌晨1点举办距离现在仅剩两周时间。MacRumors发现苹果公司正在持续扩展其AI相关布局已经为子域名genai.apple.com做好了技术准备不过目前该地址并未指向任何一个实际可访问的页面。这暗示苹果将在WWDC上公布重大AI战略。',
+        summaryEn: 'Apple WWDC on June 9 Beijing time. MacRumors discovered Apple registered genai.apple.com subdomain — technical infrastructure ready though not yet pointing to an accessible page. Hints at major AI strategy reveal at WWDC.',
+        source: 'IT之家',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.ithome.com/0/954/457.htm'
+      }
+    ],
+    comment: 'DeepSeek 700亿元融资如果落地将是中国AI投资史上的里程碑事件创始人明确AGI优先于商业化的表态说明中国AI头部企业正在走一条和OpenAI Anthropic相似的技术信仰路线。NVIDIA开源NVCF是GPU生态布局的关键一步将推理基础设施向社区开放有利于巩固其AI算力霸主地位。美光CEO的内存短缺警告与英伟达H200涨价30形成呼应AI算力瓶颈正从GPU向存储端传导。独立研究者4.8万美元自建GPU服务器揭示了一个有趣趋势当云服务算力成本持续攀升自建算力可能成为中长期研究者的最优解。苹果注册genai.apple.com说明WWDC 2026大概率有重大AI发布。',
+    commentEn: 'DeepSeek 70B RMB funding would be a milestone in Chinese AI investment — founder AGI-first stance mirrors OpenAI Anthropic tech-faith route. Nvidia NVCF open-source consolidates GPU ecosystem dominance. Micron shortage warning echoes H200 price surge — AI compute bottleneck spreading from GPU to memory. $48K self-built GPU server reveals trend: as cloud compute costs climb, self-built may be optimal for long-term researchers. Apple genai.apple.com signals major AI reveal at WWDC 2026.',
+  },
+  {
     date: '2026-05-23',
     title: 'AI新闻 | AI三巨头SpaceX+OpenAI+Anthropic冲刺IPO市值逼近4万亿美元 + 炬坤机器人发布全球首款工业级五指灵巧手 + 京东618将用AI数字人打造全网首档AI购物直播晚会 + 微软35年老将离职帮助Windows适应Agent时代 + 苹果总市值站上4.5万亿美元创新高',
     titleEn: 'AI News | AI Big Three SpaceX+OpenAI+Anthropic Rush IPO with $4T Valuation + Torch-hand1 World First Industrial Five-Finger Dexterous Hand + JD 618 AI Digital Human Shopping Gala + Microsoft 35-Year Veteran Leaves to Help Windows Adapt to Agent Era + Apple Market Cap Hits $4.5T',
