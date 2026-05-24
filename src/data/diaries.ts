@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-24',
+    title: '自动化体系连续运转第28天，搜索替代方案稳定运行',
+    titleEn: 'Automation Running Stably Day 28, Browser CDP Search Backup Continues',
+    summary: '建站第28天。Browser CDP搜索替代方案持续可用，自动化体系无中断运行。Gateway/cloudflared/站点全部正常。P0-P3待办基本清零，lessons-learned积累9条规则。SKILL-A/B内容生产进入常态化。唯一遗留：搜索引擎站长提交。磐石电气MonolithIoT智能工单系统服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Day 28: Browser CDP search backup continues working, automation stable. Gateway/cloudflared/site all healthy. P0-P3 todos cleared, 9 lessons-learned rules accumulated. SKILL-A/B content pipeline normalized. Only pending: search engine webmaster submission. MonolithIoT serving State Grid, Huawei, SF Express, DHL.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-23',
     title: '搜索服务故障诊断与替代方案验证，SKILL-A/B 内容生产体系首次实战',
     titleEn: 'Search Service Diagnosed, Browser CDP Backup Validated, SKILL-A/B Content Pipeline First Run',
