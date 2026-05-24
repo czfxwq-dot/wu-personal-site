@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-25',
+    title: 'AI新闻 | 周鸿祎谈马斯克十年后人类不驾车预言 + Q1 AI领域融资超1100亿元国产大模型暴增 + Cloudflare CEO称AI正在把人分成三个物种 + 硅谷AI精英的双面游戏 + 韩国前五大企业AI芯片出口占比达44%',
+    titleEn: 'AI News | Zhou Hongyi on Musk Self-Driving Prediction + Q1 AI Funding 110B RMB + Cloudflare CEO AI Dividing Humans into Three Species + Silicon Valley AI Elite Two-Faced Game + Korea Top 5 Firms 44% Export from AI Chips',
+    summary: '今日AI行业五大看点：周鸿祎评马斯克十年后人类不驾车预言指出AI下一阶段从信息流转入物理世界改变物流人流车流；一季度AI领域融资近600起总额超1100亿元同比激增185%月之暗面阶跃星辰等国产大模型拿下超300亿元融资；Cloudflare CEO称AI大厂正把人分成三类绝大多数将被淘汰；不应忽视硅谷AI精英的双面游戏公开表态与实际部署存在系统性背离；受AI热潮带动韩国一季度前五大企业出口占比达44%三星SK海力士存储芯片需求激增。',
+    summaryEn: 'Five highlights: Zhou Hongyi on Musk prediction that AI will shift from information flow to physical world logistics; Q1 AI funding nearly 600 deals totaling 110B RMB up 185% YoY with Chinese LLMs raising 30B+; Cloudflare CEO says AI divides humans into three species with majority facing elimination; Silicon Valley AI elite public statements diverge systematically from actual deployments; Korea top 5 firms account for 44% of exports driven by AI chip demand surge.',
+    newsItems: [
+      {
+        title: '周鸿祎谈马斯克大尺度预言：十年后人类都不开车了？',
+        titleEn: 'Zhou Hongyi on Musk Prediction: Humans Won\'t Drive in 10 Years?',
+        summary: '5月24日周鸿祎发视频谈马斯克关于十年后人类都不开车的预言：AI的下一阶段不是在屏幕里变得更会聊天而是在真实世界里变得越来越能干活。过去AI主要改变的是信息流接下来它要改变的是物流人流车流甚至整个物理世界的运行方式。自动驾驶将重新定义人类出行方式和物理世界交互模式。',
+        summaryEn: 'Zhou Hongyi discusses Musk prediction: AI\'s next phase is not better chatbots but real-world capability. Past AI changed information flow; future AI will change logistics, human traffic, vehicle traffic, and physical world operations.',
+        source: '36氪',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.36kr.com/newsflashes/3822814415589768'
+      },
+      {
+        title: '一季度AI领域融资超1100亿元，国产大模型融资金额暴增',
+        titleEn: 'Q1 AI Funding Over 110B RMB, Chinese LLM Funding Surges',
+        summary: '一季度人工智能领域融资近600起总额超1100亿元同比激增185.4%。5月月之暗面阶跃星辰等国产大模型拿下超过300亿元融资。具身智能同样受市场关注维他动力鹿明机器人等接连斩获数亿元融资。AI创业公司融资后主要投向三大方向研发算力建设和人才储备。头部大模型公司2025年研发投入普遍达到数十亿远超当期营收。',
+        summaryEn: 'Q1 AI sector saw nearly 600 funding deals totaling 110B RMB, up 185.4% YoY. Moonshot AI and StepFun raised 30B+ RMB in May. Embodied AI also attracting billions. AI startups channel funding into R&D, compute infrastructure, and talent.',
+        source: '36氪',
+        category: '投资',
+        categoryEn: 'Investment',
+        url: 'https://www.36kr.com/newsflashes/3822775103607172'
+      },
+      {
+        title: 'AI大厂正把人分成三个物种，绝大多数属于将被淘汰的那一种',
+        titleEn: 'AI Giants Dividing Humans into Three Species, Majority Will Be Eliminated',
+        summary: 'Cloudflare创始人兼CEO Matthew Prince提出AI正在将人类分成三个物种的论断。作为互联网基础设施的隐形管道工Cloudflare每天承载海量网站访问其观察具有行业前瞻性。文章分析指出AI时代绝大多数人可能面临被淘汰风险只有极少数能够掌握AI工具的人将保持竞争力。',
+        summaryEn: 'Cloudflare CEO Matthew Prince argues AI is dividing humans into three species with the majority facing elimination. As infrastructure provider serving millions of websites daily, Cloudflare\'s observation carries industry foresight. Only those mastering AI tools will remain competitive.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4861064.html'
+      },
+      {
+        title: '不应忽视硅谷AI精英的双面游戏：表层威胁论与里层断代领先',
+        titleEn: 'Silicon Valley AI Elite Two-Faced Game: Surface Threats vs Actual Dominance',
+        summary: '硅谷AI精英在公开场合的表态与他们真实的判断和资源部署之间存在系统性背离。表层通过威胁论扩大政策弹药包括出口管制打击蒸馏限制云租赁；里层用代差武器锁定真实的断代领先。面对硅谷释放的烟雾弹从DeepSeek爆发开始中国舆论场基本被其叙事节奏带偏。文章呼吁看清硅谷AI精英的真实战略意图。',
+        summaryEn: 'Silicon Valley AI elite exhibit systematic divergence between public statements and actual resource deployment. Surface: threat narratives for export controls and restrictions. Underlying: maintaining generational tech lead. Article calls for看清 strategic intentions behind public posturing.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4861047.html'
+      },
+      {
+        title: '一季度韩国前五大企业出口占比达44%，AI芯片需求推动存储芯片激增',
+        titleEn: 'Korea Top 5 Firms 44% Export Share, AI Chip Demand Drives Memory Surge',
+        summary: '受人工智能热潮带动全球存储芯片需求激增三星电子SK海力士等五家头部企业一季度出口额占韩国出口总额比重约44%。AI数据中心对高带宽存储芯片的需求持续攀升推动韩国存储芯片出口大幅增长。全球DRAM供不应求格局进一步加剧。',
+        summaryEn: 'AI boom drives global memory chip demand surge. Samsung SK Hynix and top 5 firms account for 44% of Korea\'s total exports in Q1. AI data center demand for HBM continues climbing, exacerbating global DRAM supply shortage.',
+        source: '36氪',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.36kr.com/newsflashes/3822778731368838'
+      }
+    ],
+    comment: '周鸿祎对马斯克预言的解读点出了AI发展的重要转折从数字世界走向物理世界AI不再只是处理信息而是要操控物流人流和车流。一季度1100亿元融资额同比暴增185%说明中国AI投资热潮远未退烧国产大模型和具身智能双轮驱动。Cloudflare CEO的三个物种论虽刺耳但值得警醒AI时代的核心竞争力正在从知识储备转向AI工具驾驭能力。硅谷AI精英的双面游戏揭示了一个被忽视的事实公开的政策叙事与真实的资源部署存在系统性背离。韩国出口数据从侧面印证了AI算力需求正在重塑全球半导体产业链。',
+    commentEn: 'Zhou\'s reading of Musk prediction highlights AI\'s pivot from digital to physical world. Q1 110B RMB funding up 185% shows Chinese AI investment boom far from cooling. Cloudflare CEO\'s three species warning: core competitiveness shifting from knowledge储备 to AI tool mastery. Silicon Valley two-faced game reveals systematic divergence between public policy narratives and actual resource deployment. Korea export data confirms AI compute demand reshaping global semiconductor supply chain.',
+  },
+  {
     date: '2026-05-24',
     title: 'AI新闻 | DeepSeek推进700亿元融资创中国初创纪录 + NVIDIA开源NVCF GPU函数计算平台 + 美光CEO警告内存短缺或持续至明年 + 独立研究者4.8万美元自建GPU服务器算力账本 + 苹果WWDC前悄悄注册genai.apple.com子域名',
     titleEn: 'AI News | DeepSeek 70B RMB Funding Record + Nvidia Open-Sources NVCF GPU Compute Platform + Micron CEO Warns Memory Shortage Through 2027 + Independent Researcher $48K GPU Server + Apple Registers genai.apple.com Before WWDC',
