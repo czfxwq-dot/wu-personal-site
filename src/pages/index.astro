@@ -31,6 +31,12 @@ const homeJsonLd = {
 const latest = diaries[0];
 const latestSummary = dailyNewsSummaries[0];
 const latestArticle = articles[0];
+
+function truncate(str: string, maxLen: number): string {
+  if (!str) return '';
+  if (str.length <= maxLen) return str;
+  return str.slice(0, maxLen) + '…';
+}
 ---
 
 <BaseLayout title="观吾 | 50岁用AI做实事 — AI工具落地实践" jsonLd={homeJsonLd} ogDescription="观吾，不只是一个人的网站——这是我和AI助理共同成长、共同学习的记录，也是50岁的创业者借助AI把想法变成现实的真实故事" navActive="home">
@@ -69,7 +75,40 @@ const latestArticle = articles[0];
     </div>
   </section>
 
-  <!-- 内容网格 — 三栏并排 -->
+  <!-- 三类入口 -->
+  <section class="entry-section">
+    <div class="container">
+      <div class="section-subtitle">你想了解什么？</div>
+      <div class="entry-cards">
+        <a href="/diary/" class="entry-card entry-learn">
+          <span class="entry-icon">🛠️</span>
+          <div class="entry-info">
+            <h3>想学习 AI 工具</h3>
+            <p>看工作日记，每天记录真实实践</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+        <a href="/about/" class="entry-card entry-business">
+          <span class="entry-icon">🏭</span>
+          <div class="entry-info">
+            <h3>想做企业 AI 落地</h3>
+            <p>了解磐石电气和 MonolithIoT 解决方案</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+        <a href="/banbaiguan/" class="entry-card entry-story">
+          <span class="entry-icon">📖</span>
+          <div class="entry-info">
+            <h3>想看我如何用 AI 工作</h3>
+            <p>半百观AI文章 + AI 新闻 + 完整时间线</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选更新 — 每类一条 -->
   <section class="content-grid">
     <div class="container">
       <div class="grid-header">
@@ -85,7 +124,7 @@ const latestArticle = articles[0];
           </div>
           <div class="card-date">{latest.date}</div>
           <h3 class="card-heading">{latest.title}</h3>
-          <p class="card-excerpt">{latest.summary}</p>
+          <p class="card-excerpt">{truncate(latest.summary, 120)}</p>
         </a>
 
         <!-- AI新闻 -->
@@ -96,11 +135,7 @@ const latestArticle = articles[0];
           </div>
           <div class="card-date">{latestSummary.date} · {latestSummary.newsItems.length} 条</div>
           <h3 class="card-heading">{latestSummary.title}</h3>
-          <p class="card-excerpt">{latestSummary.summary}</p>
-          <div class="card-comment">
-            <span class="comment-icon">💡</span>
-            {latestSummary.comment}
-          </div>
+          <p class="card-excerpt">{truncate(latestSummary.summary, 120)}</p>
         </a>
 
         <!-- 半百观 -->
@@ -111,18 +146,47 @@ const latestArticle = articles[0];
           </div>
           <div class="card-date">{latestArticle.date} · {articles.length} 篇</div>
           <h3 class="card-heading">{latestArticle.title}</h3>
-          <p class="card-excerpt">{latestArticle.excerpt}</p>
+          <p class="card-excerpt">{truncate(latestArticle.excerpt, 120)}</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- AI项目 -->
+  <!-- 正在运行的 AI 实践 -->
   <section class="page-section">
     <div class="container">
-      <div class="section-title">AI 项目</div>
-      <div class="placeholder-card">
-        <p>正在规划中，敬请期待 <span class="placeholder-dots">· · ·</span></p>
+      <div class="section-title">正在运行的 AI 实践</div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <span class="project-icon">🦞</span>
+          <h3>山山 AI 助理</h3>
+          <p>基于 Gateway LLM 的智能对话系统，支持访客互动、知识库查询、内容推荐</p>
+          <span class="project-status status-live">● 已上线</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📰</span>
+          <h3>自动化内容系统</h3>
+          <p>AI 新闻每日 07:00 自动采集、摘要、部署；飞书文档一键发布到网站</p>
+          <span class="project-status status-live">● 已上线</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📓</span>
+          <h3>工作日记系统</h3>
+          <p>每日 22:00 自动生成工作日记，记录建站进展、经验教训、技术决策</p>
+          <span class="project-status status-live">● 已上线</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📊</span>
+          <h3>AI 新闻系统</h3>
+          <p>多源 RSS + 国内搜索引擎采集，自动摘要、评论、发布到站点</p>
+          <span class="project-status status-live">● 已上线</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">🔧</span>
+          <h3>SKILL-A/B 内容生产</h3>
+          <p>选题决策 + 写作执行双流程，7问评分 + 18项自检，产出高质量半百观文章</p>
+          <span class="project-status status-live">● 已上线</span>
+        </div>
       </div>
     </div>
   </section>
@@ -492,6 +556,134 @@ const latestArticle = articles[0];
   @keyframes typingDot {
     0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
     30% { opacity: 1; transform: translateY(-4px); }
+  }
+
+  /* 三类入口 */
+  .entry-section {
+    padding: 32px 0 16px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .entry-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .entry-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px;
+    background: var(--color-card-bg, #fff);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    cursor: pointer;
+  }
+  .entry-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.1);
+    transform: translateY(-2px);
+  }
+  .entry-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .entry-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 4px;
+  }
+  .entry-info p {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .entry-arrow {
+    font-size: 18px;
+    color: var(--color-accent);
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .entry-card:hover .entry-arrow {
+    transform: translateX(4px);
+  }
+
+  /* 精选更新 — 精简摘要 */
+  .card-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 正在运行的 AI 实践 */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .project-card {
+    padding: 24px;
+    background: var(--color-card-bg, #fff);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    transition: border-color 0.2s, box-shadow 0.15s, transform 0.15s;
+  }
+  .project-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+    transform: translateY(-2px);
+  }
+  .project-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .project-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 8px;
+  }
+  .project-card p {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+  .project-status {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  .status-live {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+  }
+
+  /* 响应式 */
+  @media (max-width: 768px) {
+    .entry-cards {
+      grid-template-columns: 1fr;
+    }
+    .entry-card {
+      padding: 16px 18px;
+    }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
 </style>

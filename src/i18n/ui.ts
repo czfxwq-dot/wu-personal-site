@@ -50,7 +50,7 @@ export const ui = {
     footerQrHint: '扫码关注「半百观AI」',
     footerQrGzh: '公众号',
     footerQrDy: '视频号',
-    footerCopy: '2026 观吾 · banbai.ai',
+    footerCopy: '2026 观吾 · ban-bai.com',
     footerCredit: '这个网站由AI助理开发并维护',
 
     // FollowUsCard
