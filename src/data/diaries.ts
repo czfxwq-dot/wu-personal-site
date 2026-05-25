@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-25',
+    title: '网站品牌全面升级，首页新增三类入口卡片',
+    titleEn: 'Website Brand Upgrade, Homepage Gets Three Entry Cards',
+    summary: '建站第31天。根据吴总5点审核意见完成首页全面升级：新增三类入口卡片（想学习AI工具/想做企业AI落地/想看AI工作方式）；最近更新摘要截断至120字符降低信息密度；AI项目区从规划中改为正在运行的AI实践展示5个真实项目；关于页新增50岁用AI故事章节；品牌命名统一为ban-bai.com。自动化体系连续一个月稳定运行。系统早午两次巡检全部正常。磐石电气MonolithIoT智能工单系统服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Day 31: Full homepage brand upgrade per 5 review points: three entry cards, summary trimmed, AI projects updated to 5 live projects, about page added 50yo AI story, brand unified to ban-bai.com. Automation stable one month. System health checks all OK. MonolithIoT serving State Grid, Huawei, SF Express, DHL.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-24',
     title: '自动化体系连续运转第28天，搜索替代方案稳定运行',
     titleEn: 'Automation Running Stably Day 28, Browser CDP Search Backup Continues',
