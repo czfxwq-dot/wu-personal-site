@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-26',
+    title: 'AI新闻 | 阶跃星辰获1.5亿元战略投资 + 加文·贝克评AI泡沫与前沿模型格局 + Anthropic盈利数据被质疑为公关包装 + 智元发布Motion-Between BFM-2运动基座模型 + DeepSeek十万亿美元硬件生态蓝图',
+    titleEn: 'AI News | StepFun Gets 150M RMB Strategic Investment + Gavin Baker on AI Bubble + Anthropic Profitability Questioned as PR Swindle + Zhiyuan Motion-Between BFM-2 Model + DeepSeek $10T Hardware Blueprint',
+    summary: '今日AI行业五大看点：米奥会展拟1.5亿元认购阶跃星辰股份显示国产大模型融资热度不减；ARK Invest加文·贝克最新对话指出AI正从无限套餐转向按量付费Anthropic烧钱比OpenAI少80%；科技评论人Ed Zitron系统拆解Anthropic首次盈利数据称其为精心包装的公关戏码；智元机器人发布全球首个端到端Motion-Between BFM-2运动基座模型；分析师深度拆解DeepSeek通过算法创新撬动十万亿美元AI硬件生态的战略。',
+    summaryEn: 'Five highlights: Mio会展 150M RMB investment in StepFun signals continued Chinese LLM funding heat; ARK Invest Gavin Baker says AI shifting from unlimited to pay-per-use Anthropic burns 80% less than OpenAI; Tech commentator Ed Zitron dismantles Anthropic first-profit claims as packaged PR; Zhiyuan Robot releases world first end-to-end Motion-Between BFM-2 motion foundation model; Analyst deep-dives DeepSeek $10T AI hardware ecosystem blueprint via algorithm innovation.',
+    newsItems: [
+      {
+        title: '米奥会展拟1.5亿元认购阶跃星辰股份',
+        titleEn: 'Mio会展 Plans 150M RMB Investment in StepFun',
+        summary: '米奥会展公告拟以自有资金1.5亿元认购上海阶跃星辰智能科技股份有限公司股份获得少数股东权益。阶跃星辰是国产大模型赛道的重要参与者此前5月已拿下超300亿元融资中的一部分。本次投资不涉及关联交易公司不参与阶跃星辰日常经营管理投资存在技术研判偏差收益未达预期等风险。',
+        summaryEn: 'Mio会展 announces 150M RMB investment in Shanghai StepFun AI Technology for minority stake. StepFun is a key player in Chinese LLM race having secured significant funding in May. Non-related party transaction with investment risks including technical misjudgment and returns below expectations.',
+        source: '36氪',
+        category: '投资',
+        categoryEn: 'Investment',
+        url: 'https://www.36kr.com/newsflashes/3824694921188227'
+      },
+      {
+        title: '加文·贝克最新对话：AI正从无限套餐转向按量付费',
+        titleEn: 'Gavin Baker: AI Shifting from Unlimited to Pay-Per-Use',
+        summary: 'ARK Invest投资总监加文·贝克发表最新对话深入分析前沿模型晶圆及巨头格局。核心观点包括Anthropic烧掉的钱可能比OpenAI少80%AI正从无限量套餐转向按杯付费OpenAI和Anthropic的ARR远超2000亿美元电力短缺可能从2027至2028年开始缓解轨道算力将真正解决问题。如果只能盯一个指标判断AI泡沫他会盯台积电产能决策。',
+        summaryEn: 'ARK Invest investment director Gavin Baker deep-dives frontier models wafers and mega-cap landscape. Key points: Anthropic may burn 80% less than OpenAI AI shifting from unlimited to per-cup pricing combined ARR exceeds $200B power shortage may ease from 2027-2028 orbital compute will solve the problem. To judge AI bubble watch TSMC capacity decisions.',
+        source: 'IT之家',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.ithome.com/0/955/075.htm'
+      },
+      {
+        title: 'Anthropic盈利数据被指为精心包装的公关戏码',
+        titleEn: 'Anthropic Profitability Data Called a Packaged PR Swindle',
+        summary: '科技评论人Ed Zitron在Newsletter发表长文系统性拆解Anthropic通过华尔街日报释放的首次盈利消息认为这是通过特定两个月成本折扣人为压低的财报口径以及刻意选择的披露时机向市场注入信心。事件触发点是华尔街日报5月20日报道Anthropic有望在2026年Q2实现首个运营利润季度预计营收翻倍至109亿美元运营利润约5.59亿美元。',
+        summaryEn: 'Tech commentator Ed Zitron publishes deep analysis dismantling Anthropic first-profit claims via WSJ. Argues the narrative relies on specific two-month cost discounts artificially lowered reporting standards and carefully timed disclosure. WSJ reported on May 20 that Anthropic expects first operating profit in Q2 2026 with revenue doubling to $10.9B.',
+        source: '开源中国',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.oschina.net/news/445810/anthropics-profitability-swindle'
+      },
+      {
+        title: '智元发布全球首个端到端Motion-Between BFM-2运动基座模型',
+        titleEn: 'Zhiyuan Releases World First End-to-End Motion-Between BFM-2 Motion Foundation Model',
+        summary: '智元机器人正式发布全球首个端到端Motion-Between BFM-2运动基座模型首次在大规全身运动基座中引入端到端DOF Feather Motion Generator生成式训练机制。通过对机器人全身动力学状态空间进行连续概率建模打造任意当前状态恢复到任意随机指令构型的运动基座模型。该模型拥有真正的运动推理能力无论机器人处于何种杂乱姿态均可自主推演从当前到目标状态的完整演化路径。',
+        summaryEn: 'Zhiyuan Robot releases world first end-to-end Motion-Between BFM-2 motion foundation model introducing DOF Feather Motion Generator generative training for full-body motion. Uses continuous probabilistic modeling of robot dynamics to recover from any current pose to any target configuration with true motion reasoning capability.',
+        source: '开源中国',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.oschina.net/news/445807'
+      },
+      {
+        title: 'DeepSeek十万亿美元宏图：算法创新撬动中国AI硬件生态',
+        titleEn: 'DeepSeek $10T Blueprint: Algorithm Innovation Drives China AI Hardware Ecosystem',
+        summary: '技术分析师Bookworm Engineer长文深度拆解DeepSeek战略意图不仅是一家前沿AI实验室更在悄然构建撬动十万亿美元硬件生态的体系。核心突破在于推理阶段KV缓存开销DeepSeek V4百万token上下文仅需5.48GB显存而GLM5需60GBQwen3需89GB不到前者十分之一。通过算法创新DeepSeek正在重新定义AI硬件竞争规则降低对昂贵算力的依赖。',
+        summaryEn: 'Analyst Bookworm Engineer deep-dives DeepSeek strategy as not just a frontier AI lab but quietly building a $10T hardware ecosystem. Key breakthrough: KV cache overhead at million-token context DeepSeek V4 needs only 5.48GB vs GLM5 60GB and Qwen3 89GB — less than one-tenth. Algorithm innovation redefines AI hardware competition rules reducing dependence on expensive compute.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/445744'
+      }
+    ],
+    comment: '阶跃星辰获投资印证国产大模型融资热度仍在持续。加文·贝克的对话提供了一个稀缺的投资视角把AI产业放在更宏观的资本市场框架中审视Anthropic烧钱效率优于OpenAI的判断值得关注。Ed Zitron对Anthropic盈利数据的拆解提醒投资者在AI热潮中保持理性盈利口径的选择性披露值得警惕。智元BFM-2运动基座模型代表人形机器人从工程控制向运动推理的关键跃迁。DeepSeek的算法创新路线证明中国AI企业不仅在追赶模型能力更在底层架构上探索差异化竞争路径。',
+    commentEn: 'StepFun investment confirms Chinese LLM funding heat persists. Gavin Baker provides rare investment macro lens on AI industry — Anthropic burning 80% less than OpenAI is noteworthy. Ed Zitron dismantling Anthropic profitability reminds investors to stay rational amid AI hype — selective profit reporting deserves scrutiny. Zhiyuan BFM-2 marks humanoid robot transition from engineering control to motion reasoning. DeepSeek algorithm innovation proves Chinese AI firms are differentiating at architecture level not just chasing model capability.',
+  },
+  {
     date: '2026-05-25',
     title: 'AI新闻 | 周鸿祎谈马斯克十年后人类不驾车预言 + Q1 AI领域融资超1100亿元国产大模型暴增 + Cloudflare CEO称AI正在把人分成三个物种 + 硅谷AI精英的双面游戏 + 韩国前五大企业AI芯片出口占比达44%',
     titleEn: 'AI News | Zhou Hongyi on Musk Self-Driving Prediction + Q1 AI Funding 110B RMB + Cloudflare CEO AI Dividing Humans into Three Species + Silicon Valley AI Elite Two-Faced Game + Korea Top 5 Firms 44% Export from AI Chips',
