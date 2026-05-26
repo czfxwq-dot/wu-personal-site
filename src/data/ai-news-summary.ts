@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-27',
+    title: 'AI新闻 | 华为发布韬定律引领3D芯片设计革命 + 马斯克宣布Grok V9-Medium 1.5万亿参数模型完成训练 + 大模型集体涨价豆包试水付费DeepSeek API打2.5折 + 面壁智能联合清华开源1.58-bit端侧大模型 + 昆仑万维天工发布高性能Agent模型SkyClaw-v1.0',
+    titleEn: 'AI News | Huawei Tau Law Leads 3D Chip Design Revolution + Musk Announces Grok V9-Medium 1.5T Parameter Model + LLM Price Wars Doubao Paid + MiniMax Opens Sources 1.58-bit Edge Model + Kunlun Wanwei SkyClaw-v1.0 Agent Model',
+    summary: '今日AI行业五大看点：华为何庭波在国际电路与系统研讨会上正式提出韬定律将芯片设计从2D平面推向3D逻辑折叠六年已量产381款芯片马斯克宣布Grok V9-Medium 1.5万亿参数模型完成训练加入Cursor数据集大模型进入收费时代豆包试水付费DeepSeek API价格打至2.5折面壁智能联合清华开源1.58-bit端侧大模型推理显存释放约6倍昆仑万维天工发布支持百万token上下文的高性能Agent模型SkyClaw-v1.0。',
+    summaryEn: 'Five highlights: Huawei Tau Law shifts chip design from 2D to 3D logic folding 381 chips already mass-produced Musk announces Grok V9-Medium 1.5T parameter model trained with Cursor data LLMs enter paid era with Doubao trial and DeepSeek API at 25 discount MiniMax open-sources 1.58-bit edge model with 6x memory savings Kunlun Wanwei launches SkyClaw-v1.0 Agent model supporting 1M token context.',
+    newsItems: [
+      {
+        title: '华为发布韬定律引领芯片设计从2D走向3D逻辑折叠',
+        titleEn: 'Huawei Tau Law Leads Chip Design from 2D to 3D Logic Folding',
+        summary: '华为董事半导体业务部总裁何庭波在国际电路与系统研讨会上正式提出韬τ定律将芯片设计从2D平面优化推向标准单元堆叠的3D重构。过去六年基于该理念已成功设计并量产381款芯片预计到2031年华为高端芯片晶体管密度将达到1.4纳米制程同等水平。北大团队随后火速官宣真3D EDA工具原型在面向韬定律3D逻辑折叠设计方向取得关键进展。',
+        summaryEn: 'Huawei semiconductor VP He Tingbo officially proposes Tau Law at ISSCS shifting chip design from 2D to 3D logic folding. 381 chips already mass-produced over 6 years targeting 1.4nm-equivalent density by 2031. PKU team announces real 3D EDA tool prototype following the Tau Law direction.',
+        source: '虎嗅',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.huxiu.com/article/4861800.html'
+      },
+      {
+        title: '马斯克宣布Grok V9-Medium 1.5万亿参数模型完成训练',
+        titleEn: 'Musk Announces Grok V9-Medium 1.5 Trillion Parameter Model Training Complete',
+        summary: '马斯克通过X平台宣布Grok基座模型V9-Medium 1.5万亿参数已完成训练评估良好预计2-3周内公开发布这是xAI迄今参数量最大的公开版本之一训练数据特别加入了大量Cursor代码数据集被视为xAI提升编程能力的战略落地。',
+        summaryEn: 'Musk announces Grok V9-Medium 1.5T parameter model training complete on X platform with good eval results public release expected in 2-3 weeks. Largest xAI public model to date trained with Cursor code datasets as strategic move to boost coding capability.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/446254'
+      },
+      {
+        title: '大模型进入收费时代豆包试水付费DeepSeek API打至2.5折',
+        titleEn: 'LLMs Enter Paid Era Doubao Trial DeepSeek API at 25% Price',
+        summary: '大模型商业化迎来分裂一幕字节跳动旗下豆包开始试水付费模式遭遇用户吐槽另一边DeepSeek-V4-Pro把API价格打到2.5折输入缓存命中价格降至原价十分之一并宣布从6月起进一步降价。大模型从免费走向收费与价格战并存的格局正在形成。',
+        summaryEn: 'LLM commercialization reaches split reality ByteDance Doubao trial paid model faces user backlash while DeepSeek-V4-Pro cuts API price to 25 percent and cache hit to one tenth with further cuts from June. Free-to-paid transition and price wars coexist in the LLM landscape.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article/4861767.html'
+      },
+      {
+        title: '面壁智能联合清华开源1.58-bit端侧大模型BitCPM-CANN',
+        titleEn: 'MiniMax and Tsinghua Open-Source 1.58-bit Edge LLM BitCPM-CANN',
+        summary: '面壁智能联合清华大学开源社区正式发布BitCPM-CANN在华为昇腾上原生完成低比特大模型训练包含0.5B至8B四个尺寸相比传统BF16精度推理阶段释放约6倍显存红利模型能力保留率维持90%至97.2%对手机等端侧设备部署具有重大意义。',
+        summaryEn: 'MiniMax and Tsinghua open-source BitCPM-CANN low-bit LLM training natively on Huawei Ascend in 0.5B to 8B sizes. 6x memory savings versus BF16 with 90-97.2 percent capability retention significant for edge device deployment.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/446114'
+      },
+      {
+        title: '昆仑万维天工AI发布高性能Agent模型SkyClaw-v1.0',
+        titleEn: 'Kunlun Wanwei Tiangong AI Releases SkyClaw-v1.0 Agent Model',
+        summary: '天工AI正式推出高性能Agent模型SkyClaw-v1.0支持百万token上下文重点优化复杂工具调用多轮任务执行代码生成文件编辑交互式应用构建与研究型数据分析经过大规模mid-train高质量合成任务SFT与端到端强化学习优化即日起开放2至4周免费试用。',
+        summaryEn: 'Tiangong AI launches SkyClaw-v1.0 Agent model supporting 1M token context optimized for complex tool calling multi-turn task execution code generation and data analysis. Trained with mid-train SFT and end-to-end RL. Free trial for 2-4 weeks starting today.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/446248'
+      }
+    ],
+    comment: '华为韬定律的提出标志着中国企业在半导体领域从跟随走向引领3D逻辑折叠技术为后摩尔定律时代的芯片设计开辟了新路径六年381款芯片的量产数据证明了这不是纸面理论。Grok V9-Medium 1.5万亿参数的完成训练表明大模型军备竞赛仍在加速加入Cursor数据更是精准切中编程能力这一差异化赛道。大模型集体涨价与DeepSeek降价并存反映出行业正从烧钱换用户走向商业化变现与价格竞争的十字路口。面壁智能1.58-bit端侧模型6倍显存释放是AI落地的关键一步让大模型真正跑上手机等终端设备。昆仑万维SkyClaw-v1.0百万token上下文Agent模型则代表了大模型从聊天向自主执行的演进方向。',
+    commentEn: 'Huawei Tau Law marks Chinese semiconductors shifting from follower to leader 3D logic folding opens new path for post-Moore chip design. Grok V9-Medium 1.5T with Cursor data targets coding differentiation. LLM price wars and paid models signal industry pivot from burn-to-user to monetization. MiniMax 1.58-bit 6x memory saving is key for edge AI deployment. SkyClaw-v1.0 1M context Agent model represents LLM evolution from chat to autonomous execution.',
+  },
+  {
     date: '2026-05-26',
     title: 'AI新闻 | 阶跃星辰获1.5亿元战略投资 + 加文·贝克评AI泡沫与前沿模型格局 + Anthropic盈利数据被质疑为公关包装 + 智元发布Motion-Between BFM-2运动基座模型 + DeepSeek十万亿美元硬件生态蓝图',
     titleEn: 'AI News | StepFun Gets 150M RMB Strategic Investment + Gavin Baker on AI Bubble + Anthropic Profitability Questioned as PR Swindle + Zhiyuan Motion-Between BFM-2 Model + DeepSeek $10T Hardware Blueprint',
