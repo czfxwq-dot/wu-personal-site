@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-26',
+    title: '部署平台与DNS一致性铁律确立，有头vs无头SaaS文章上线',
+    titleEn: 'Deploy-DNS Consistency Iron Rule Established, Headed vs Headless SaaS Article Published',
+    summary: '建站第32天。发布「Agent时代，企业软件该有头还是无头？」文章。因DNS指向Cloudflare Pages而文章只部署到Vercel导致404，经历Vercel↔Cloudflare Pages反复切换后确立三条部署铁律：部署平台必须与DNS统一、国内访问优先、不删除Pages域名绑定。网站最终完全恢复，文章上线。自动化体系持续稳定运行。',
+    summaryEn: 'Day 32: Published "Headed vs Headless SaaS in Agent Era" article. DNS pointed to Cloudflare Pages while article deployed to Vercel, causing 404. After Vercel↔Cloudflare switching, established three deploy iron rules: platform-DNS consistency, domestic-first, never delete Pages domain binding. Site fully restored.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-25',
     title: '网站品牌全面升级，首页新增三类入口卡片',
     titleEn: 'Website Brand Upgrade, Homepage Gets Three Entry Cards',
