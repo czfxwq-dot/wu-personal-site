@@ -610,6 +610,50 @@ article p, article li {
 }
 
 /* ===================================================
+   文章表格样式
+   =================================================== */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+article th,
+article td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+}
+
+article th {
+  background: var(--color-bg-alt);
+  font-weight: 600;
+  color: var(--color-heading);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+article td {
+  color: var(--color-text);
+}
+
+article tbody tr:hover {
+  background: var(--color-bg-alt);
+}
+
+article tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===================================================
    首页专用 — 内容网格
    =================================================== */
 .content-grid {
