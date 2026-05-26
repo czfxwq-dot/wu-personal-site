@@ -12,6 +12,14 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'headed-vs-headless-saas',
+    date: '2026-05-26',
+    title: 'Agent时代，企业软件该"有头"还是"无头"？',
+    excerpt: 'SaaS已死还是无头只是小众？真相是分层共生。企业管理者如何在Agent时代选型有头SaaS和无头SaaS。',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
     slug: '3000-jacket-threshold',
     date: '2026-05-22',
     title: '月薪5千和月薪5万的人，都在3000块的外套面前犯同一个错',
