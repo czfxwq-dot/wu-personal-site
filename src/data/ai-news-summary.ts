@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-28',
+    title: 'AI新闻 | 宇树科技冲刺人形机器人第一股6月1日IPO上会 + 华为提出韬定律引领芯片3D逻辑折叠革命 + OpenAI高薪招募安全专家应对AI自我进化风险 + 可灵AI三月ARR近5亿美元同比增4倍 + 谷歌搜索Agent化改革引发用户逃离DuckDuckGo安装量飙升30%',
+    titleEn: 'AI News | Unitree IPO June 1 Humanoid Robot First Stock + Huawei Tau Law 3D Chip Revolution + OpenAI Hires Safety Experts for AI Self-Evolution Risk + Kling AI March ARR $500M + Google Search Agent Reform Drives Users to DuckDuckGo',
+    summary: '今日AI行业五大看点：宇树科技定于6月1日IPO上会冲刺人形机器人第一股智元机器人联合创始人同步引发行业关注华为何庭波提出韬定律将芯片设计从2D推向3D逻辑折叠已量产381款芯片OpenAI高薪招募安全研究员专门应对AI递归式自我改进风险快手可灵AI三月ARR近5亿美元同比增4倍B端API和P端订阅双轮驱动谷歌搜索Agent化改革引发用户强烈反弹DuckDuckGo安装量飙升30%。',
+    summaryEn: 'Five highlights: Unitree IPO June 1 targeting first humanoid robot stock Huawei Tau Law shifts chip design to 3D logic folding with 381 chips mass-produced OpenAI hires safety researchers for AI recursive self-evolution risk Kling AI March ARR $500M up 4x driven by B2B API and consumer subscriptions Google Search Agent reform triggers user backlash with DuckDuckGo installs surging 30%.',
+    newsItems: [
+      {
+        title: '宇树IPO智元夺权人形机器人双雄将占据八成出货量',
+        titleEn: 'Unitree IPO Zhiyuan Power Shift Humanoid Robot Duo to Capture 80% Shipments',
+        summary: '人形机器人赛道再迎资本与产业节点双重催化。5月25日上交所公告显示宇树科技定于6月1日IPO上会冲刺人形机器人第一股。5月26日智元机器人联合创始人B站百万UP主稚晖君宣布内部调整引发关注。行业预测两家龙头将占据人形机器人市场八成出货量标志该赛道进入寡头竞争阶段。A股人形机器人概念随之活跃多只相关股票涨停。',
+        summaryEn: 'Humanoid robot sector sees dual catalysts of capital and industry. Unitree Technology IPO hearing scheduled for June 1 targeting first humanoid robot stock. Zhiyuan Robot co-founder internal adjustment sparks attention. Industry predicts the duo will capture 80% of humanoid robot shipments marking oligopoly competition phase.',
+        source: '虎嗅',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.huxiu.com/article/4862169.html'
+      },
+      {
+        title: '华为提出韬定律芯片竞争不再只看几纳米了',
+        titleEn: 'Huawei Proposes Tau Law Chip Competition Beyond Nanometers',
+        summary: '2026年5月25日在IEEE ISCAS 2026国际电路与系统研讨会上华为董事半导体业务部总裁何庭波发表半导体新路径探索演讲正式提出韬τ定律。该定律将芯片竞争维度从传统的制程微缩扩展到计算等待时间压缩和3D逻辑折叠。过去六年华为基于该理念已成功设计并量产381款芯片预计到2031年高端芯片晶体管密度将达到1.4纳米制程同等水平。北大团队随后官宣真3D EDA工具原型取得关键进展。',
+        summaryEn: 'At IEEE ISCAS 2026 Huawei semiconductor VP He Tingbo officially proposes Tau Law expanding chip competition beyond process shrinkage to compute latency compression and 3D logic folding. 381 chips mass-produced over 6 years targeting 1.4nm-equivalent density by 2031. PKU team announces 3D EDA tool prototype progress.',
+        source: '虎嗅',
+        category: '硬件',
+        categoryEn: 'Hardware',
+        url: 'https://www.huxiu.com/article/4862160.html'
+      },
+      {
+        title: 'OpenAI高薪招募安全专家以应对AI自我进化风险',
+        titleEn: 'OpenAI Recruits Safety Experts for AI Self-Evolution Risk',
+        summary: 'OpenAI宣布面向全球高薪招募安全研究员专门研究AI递归式自我改进带来的风险。该岗位归入Preparedness团队核心职责涵盖防止AI模型造成严重危害保护模型免受数据投毒攻击开发解释模型行为的工具以及监控AI系统能力边界。当GPT-4级别模型已能在多数认知任务上与人类比肩递归自我改进的安全性成为行业必须直面的关键命题。',
+        summaryEn: 'OpenAI announces global recruitment of safety researchers for AI recursive self-improvement risks. Role falls under Preparedness team covering harm prevention data poisoning defense model interpretability and capability boundary monitoring. With GPT-4 level models matching humans on most cognitive tasks recursive self-improvement safety becomes a critical industry challenge.',
+        source: '开源中国',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.oschina.net/news/446943'
+      },
+      {
+        title: '可灵AI三月ARR近5亿美元较去年同期增长4倍',
+        titleEn: 'Kling AI March ARR Near $500M Up 4x Year-over-Year',
+        summary: '快手创始人程哮在2026年Q1业绩电话会上披露可灵AI三月年化收入运行率ARR近5亿美元较去年三月的1亿美元增长4倍。收入高速增长主要来自B端企业客户API调用收入和P端付费会员订阅收入双轮驱动。同时快手AI漫剧营销消耗同比增长超100倍3月底单日营销消耗峰值突破2000万元AI显著降低了漫剧生产成本推动供给快速扩张。',
+        summaryEn: 'Kuaishou CEO reveals Kling AI March ARR near $500M up 4x from $100M last March. Growth driven by B2B enterprise API calls and consumer subscription revenue. Kuaishou AI comic drama marketing consumption up 100x YoY with daily peak exceeding 20M RMB as AI dramatically reduces production costs and expands supply.',
+        source: '36氪',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.36kr.com/newsflashes/3827487780492161'
+      },
+      {
+        title: '谷歌搜索Agent化改革引发用户逃离DuckDuckGo安装量飙升30%',
+        titleEn: 'Google Search Agent Reform Drives Users to DuckDuckGo Installs Up 30%',
+        summary: 'Google I/O 2026宣布用AI Agent取代传统蓝色链接列表引发用户强烈反弹。5月20日至25日DuckDuckGo应用安装量平均周同比增长18.1%并在5月25日达到峰值同比飙升30.5%。社交媒体和新闻评论区大量用户表达对AI主导搜索结果的不满偏好传统简洁的搜索体验。这一事件标志着搜索引擎行业在AI转型中面临用户体验与商业化之间的关键平衡挑战。',
+        summaryEn: 'Google I/O 2026 announcement replacing blue links with AI Agent triggers strong user backlash. May 20-25 DuckDuckGo app installs up 18.1% WoW and 30.5% YoY at peak. Social media fills with user complaints about AI-dominated search results preferring traditional clean search experience. Key challenge balancing AI transformation with user experience.',
+        source: '开源中国',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.oschina.net/news/446882'
+      }
+    ],
+    comment: '宇树科技冲刺人形机器人第一股IPO标志着具身智能正式进入资本化快车道人形机器人从实验室走向产业化已不再是概念验证。华为韬定律的提出代表中国芯片企业正在探索超越摩尔定律的全新路径3D逻辑折叠和381款芯片量产数据说明这不是纸面理论而是经过工程验证的技术路线。OpenAI招募AI自我进化安全专家反映了前沿实验室对AGI安全的前瞻性布局当模型能力逼近人类递归自我改进的风险必须被严肃对待。可灵AI ARR近5亿美元证明中国AI应用产品已经具备全球竞争力的商业化能力快手AI漫剧百亿级消耗更是AI原生内容的最佳商业案例。谷歌搜索Agent化引发的用户逃离提醒所有AI产品团队技术先进性不等于用户接受度在AI替代传统体验的过程中保持用户选择权至关重要。',
+    commentEn: 'Unitree IPO marks embodied AI entering fast-track capitalization humanoid robots moving from lab to industrialization. Huawei Tau Law explores beyond Moore 3D logic folding with 381 chips proves engineering-validated tech route not just theory. OpenAI AI self-evolution safety hiring reflects AGI safety foresight as recursive self-improvement risks must be addressed. Kling AI $500M ARR proves Chinese AI products have globally competitive commercialization capability. Google Search agent-driven user exodus reminds all AI teams technological advancement does not equal user acceptance preserving user choice during AI transitions is critical.',
+  },
+  {
     date: '2026-05-27',
     title: 'AI新闻 | 华为发布韬定律引领3D芯片设计革命 + 马斯克宣布Grok V9-Medium 1.5万亿参数模型完成训练 + 大模型集体涨价豆包试水付费DeepSeek API打2.5折 + 面壁智能联合清华开源1.58-bit端侧大模型 + 昆仑万维天工发布高性能Agent模型SkyClaw-v1.0',
     titleEn: 'AI News | Huawei Tau Law Leads 3D Chip Design Revolution + Musk Announces Grok V9-Medium 1.5T Parameter Model + LLM Price Wars Doubao Paid + MiniMax Opens Sources 1.58-bit Edge Model + Kunlun Wanwei SkyClaw-v1.0 Agent Model',
