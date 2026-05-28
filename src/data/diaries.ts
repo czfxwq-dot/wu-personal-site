@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-28',
+    title: '建站第34天，文章表格暗色模式修复上线',
+    titleEn: 'Day 34: Article Table Dark Mode Fixed',
+    summary: '建站第34天。吴总反馈文章表格暗色模式文字不可见，排查为global.css缺少--color-bg-secondary和--color-bg-tertiary暗色变量定义。修复后线上验证通过（#252333/#2a2840）。新增第14条经验规则：CSS主题变量完整性检查。AI新闻+日记自动化体系持续稳定运行超一个月。P0-P3待办基本清零。',
+    summaryEn: 'Day 34: Fixed article table dark mode text invisible issue (missing CSS variables --color-bg-secondary/--color-bg-tertiary in global.css). Added 14th lessons-learned rule: CSS theme variable completeness check. Automation running stable for over a month. P0-P3 todos cleared.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-27',
     title: '建站第33天，自动化体系持续稳定运行',
     titleEn: 'Day 33: Automation Running Stably',
