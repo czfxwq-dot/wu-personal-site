@@ -23,6 +23,8 @@
   --color-heading: #1a1a2e;        /* 标题文字色 */
   --color-text-light: #9ca3af;     /* 浅色辅助文字 */
   --color-card: #ffffff;           /* 卡片背景 */
+  --color-bg-secondary: #f5f5f5;   /* 次要背景（表头等） */
+  --color-bg-tertiary: #fafafa;    /* 三级背景（表格斑马行） */
   --color-success: #22c55e;
   --color-danger: #ef4444;
 
@@ -55,6 +57,8 @@
     --color-heading: #e8e6f0;
     --color-text-light: #6b7280;
     --color-card: #1e1c2a;
+    --color-bg-secondary: #252333;
+    --color-bg-tertiary: #2a2840;
     --color-accent: #818cf8;
     --color-accent-light: #a5b4fc;
     --color-accent-hover: #6366f1;
@@ -80,6 +84,8 @@
   --color-heading: #e8e6f0;
   --color-text-light: #6b7280;
   --color-card: #1e1c2a;
+  --color-bg-secondary: #252333;
+  --color-bg-tertiary: #2a2840;
   --color-accent: #818cf8;
   --color-accent-light: #a5b4fc;
   --color-accent-hover: #6366f1;
