@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-29',
+    title: 'AI新闻 | Anthropic完成650亿美元H轮融资估值逼近万亿美元Claude Opus 4.8上线 + 小马智行Q1 Robotaxi收入暴涨395%创历史新高 + 同济医院携手阿里云千问大模型探索AI精准诊疗 + A16Z合伙人判断AI应用仍有巨大机会模型不会终结一切 + 小红书月活突破4亿日均搜索超8亿次拿下世界杯转播权',
+    titleEn: 'AI News | Anthropic $65B Series H Funding Valuation Near $1T Claude Opus 4.8 Launches + Pony AI Q1 Robotaxi Revenue Surges 395% + Tongji Hospital Partners Alibaba Cloud for AI Healthcare + A16Z Partner AI Apps Still Have Huge Opportunities + Xiaohongshu MAU 400M',
+    summary: '今日AI行业五大看点：Anthropic完成650亿美元H轮融资投后估值9650亿美元逼近万亿美元关口同步发布旗舰模型Claude Opus 4.8号称是第一个不会偷懒的模型；小马智行发布Q1财报Robotaxi收入860万美元同比暴涨395.4%创历史新高一个季度收入接近2024全年总量；同济医院与阿里云签署全面合作协议将依托千问大模型探索AI精准诊疗新范式；A16Z合伙人发表最新判断认为AI应用仍有巨大机会模型不会终结一切；小红书月活突破4亿日均搜索超8亿次并拿下2026世界杯转播权。',
+    summaryEn: 'Five highlights: Anthropic completes $65B Series H at $965B valuation near $1T launching Claude Opus 4.8; Pony AI Q1 Robotaxi revenue $8.6M up 395.4% nearing full 2024 total; Tongji Hospital partners Alibaba Cloud for AI precision diagnosis using Qwen LLM; A16Z partner says AI apps still have massive opportunities models wont end everything; Xiaohongshu MAU exceeds 400M with daily searches over 800M securing World Cup broadcasting rights.',
+    newsItems: [
+      {
+        title: 'Anthropic完成650亿美元融资Claude Opus 4.8上线',
+        titleEn: 'Anthropic Completes $65B Funding Claude Opus 4.8 Launches',
+        summary: 'Anthropic宣布完成650亿美元的H轮融资投后估值达到9650亿美元逼近万亿美元关口。同时发布旗舰模型Claude Opus 4.8这是距离Opus 4.7上线仅42天的又一次重大更新。实测显示Opus 4.8可能是第一个不会偷懒的模型在执行复杂任务时表现出更强的坚持能力。伴随IPO预期升温Anthropic产品迭代节奏显著加快。',
+        summaryEn: 'Anthropic announces $65B Series H funding with post-money valuation of $96.5B nearing $1T. Simultaneously launches Claude Opus 4.8 just 42 days after Opus 4.7. Testing shows Opus 4.8 may be the first model that doesnt slack off showing stronger persistence on complex tasks.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article/4862536.html'
+      },
+      {
+        title: '实测Claude Opus 4.8可能是第一个不会偷懒的模型',
+        titleEn: 'Testing Claude Opus 4.8 The First Model That Doesnt Slack Off',
+        summary: '实测表明Claude Opus 4.8在复杂任务执行中展现出显著的改进尤其在需要多步骤推理和长时间坚持的场景中不再像前代模型那样中途放弃。这一进步对于AI Agent的实际应用具有重大意义意味着AI可以独立完成更复杂的端到端任务。',
+        summaryEn: 'Testing shows Claude Opus 4.8 demonstrates significant improvement in complex task execution especially in multi-step reasoning and long-persistence scenarios no longer giving up midway like predecessor. Significant for AI Agent practical applications.',
+        source: '虎嗅',
+        category: '大模型',
+        categoryEn: 'LLM',
+        url: 'https://www.huxiu.com/article/4862537.html'
+      },
+      {
+        title: '小马智行Q1财报Robotaxi收入暴涨395%创历史新高',
+        titleEn: 'Pony AI Q1 Robotaxi Revenue Surges 395% Record High',
+        summary: '小马智行发布2026年Q1财报总营收3430万美元约2.36亿元人民币同比增长145%。其中Robotaxi业务收入860万美元约5912万元同比暴涨395.4%创历史新高。一个季度Robotaxi收入已接近2024全年730万美元的总量。管理层上调全年目标自动驾驶商业化拐点正在到来。',
+        summaryEn: 'Pony AI reports Q1 2026 total revenue $34.3M up 145% YoY. Robotaxi revenue $8.6M up 395.4% record high single quarter nearing full 2024 total. Management raises full-year target autonomous driving commercial inflection point arriving.',
+        source: '虎嗅',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.huxiu.com/article/4862524.html'
+      },
+      {
+        title: '同济医院与阿里云达成合作探索AI精准诊疗',
+        titleEn: 'Tongji Hospital Partners Alibaba Cloud for AI Precision Diagnosis',
+        summary: '华中科技大学同济医学院附属同济医院与阿里云智能集团正式签署全面合作协议。双方将围绕脑科学与神经疾病消化系统肿瘤等重点临床领域依托阿里云全栈AI技术与千问大模型共同探索AI驱动的精准诊疗新范式。这是国内顶级三甲医院与AI大模型深度融合的标志性事件。',
+        summaryEn: 'Tongji Hospital affiliated with Huazhong University of Science and Technology signs comprehensive partnership with Alibaba Cloud. Will focus on brain science neurological diseases and digestive system tumors leveraging Alibaba Cloud full-stack AI and Qwen LLM for AI-driven precision diagnosis.',
+        source: '36氪',
+        category: '应用',
+        categoryEn: 'Application',
+        url: 'https://www.36kr.com/newsflashes/3828875762143874'
+      },
+      {
+        title: 'A16Z合伙人最新判断AI应用还有机会模型不会终结一切',
+        titleEn: 'A16Z Partner AI Apps Still Have Opportunities Models Wont End Everything',
+        summary: 'A16Z合伙人发表最新判断针对当前AI焦虑认为并非所有软件最终都会被模型吞掉AI应用仍然具有巨大价值。文章分析了Codex Claude Code等工具对应用层的影响指出应用层仍可在垂直场景工作流整合和用户体验方面建立护城河。',
+        summaryEn: 'A16Z partner addresses current AI anxiety arguing not all software will be consumed by models. AI applications still have significant value. Analyzes impact of Codex Claude Code on application layer noting apps can still build moats in vertical scenarios workflow integration and user experience.',
+        source: '虎嗅',
+        category: '产业',
+        categoryEn: 'Industry',
+        url: 'https://www.huxiu.com/article/4862528.html'
+      }
+    ],
+    comment: 'Anthropic 650亿美元融资和Claude Opus 4.8的双连发是今天的绝对焦点。650亿美元刷新了AI领域单轮融资纪录估值逼近万亿美元意味着AI行业的资本化正在加速到一个前所未有的量级。Opus 4.8仅隔42天就发布并且被称为不会偷懒的模型说明Anthropic在产品迭代节奏上已经进入快车道。小马智行Robotaxi收入暴涨395%一个季度接近去年全年总量这是自动驾驶商业化最有力的数据佐证。同济医院与阿里云的合作标志着AI大模型开始真正进入核心临床场景不再是边缘实验。A16Z的观点给应用层开发者注入了一针强心剂在模型能力快速提升的背景下应用层仍有不可替代的价值。',
+    commentEn: 'Anthropic $65B funding and Claude Opus 4.8 dual launch is todays absolute focal point. $65B shatters AI single-round funding record valuation nearing $1T means AI capitalization accelerating to unprecedented scale. Opus 4.8 launching just 42 days apart signals Anthropic product iteration in fast lane. Pony AI Robotaxi revenue up 395% single quarter nearing full year total is strongest data point for autonomous driving commercialization. Tongji-Alibaba Cloud partnership marks AI LLMs entering core clinical scenarios not just edge experiments. A16Z perspective gives app developers a shot of confidence — app layer still irreplaceable even as model capabilities surge.',
+  },
+  {
     date: '2026-05-28',
     title: 'AI新闻 | 宇树科技冲刺人形机器人第一股6月1日IPO上会 + 华为提出韬定律引领芯片3D逻辑折叠革命 + OpenAI高薪招募安全专家应对AI自我进化风险 + 可灵AI三月ARR近5亿美元同比增4倍 + 谷歌搜索Agent化改革引发用户逃离DuckDuckGo安装量飙升30%',
     titleEn: 'AI News | Unitree IPO June 1 Humanoid Robot First Stock + Huawei Tau Law 3D Chip Revolution + OpenAI Hires Safety Experts for AI Self-Evolution Risk + Kling AI March ARR $500M + Google Search Agent Reform Drives Users to DuckDuckGo',
