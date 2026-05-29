@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-29',
+    title: '建站第35天，自动化体系持续稳定运行',
+    titleEn: 'Day 35: Automation Running Stably',
+    summary: '建站第35天。AI新闻+日记+飞书发布+留言板+全站SEO+中英双语自动化体系连续稳定运行超过一个月。P0-P3待办基本清零，14条经验教训规则沉淀。磐石电气MonolithIoT智能工单系统持续服务国家电网、华为、顺丰、DHL等头部企业。',
+    summaryEn: 'Day 35: Automation stable for over a month (AI news + diary + Feishu publish + guestbook + SEO + bilingual). P0-P3 todos cleared, 14 lessons-learned rules accumulated. MonolithIoT serving State Grid, Huawei, SF Express, DHL.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-28',
     title: '建站第34天，文章表格暗色模式修复上线',
     titleEn: 'Day 34: Article Table Dark Mode Fixed',
