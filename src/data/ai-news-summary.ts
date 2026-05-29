@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-05-30',
+    title: 'AI新闻 | Anthropic完成650亿美元H轮融资估值达9650亿美元 + 戴尔AI服务器业绩超预期股价暴涨38% + OpenAI超600名员工上市前人均套现1100万美元 + 实测Claude 4.8虽评测满分但真实业务接入仍需谨慎 + 理想汽车新增3个具身智能部门自动驾驶独立',
+    summary: '今日AI行业五大看点：Anthropic完成650亿美元H轮融资投后估值9650亿美元本月年化收入突破470亿美元AI行业有史以来最大规模融资之一；戴尔第一财季AI服务器销售额预计贡献600亿美元全年营收展望大幅超预期股价盘前暴涨38%；OpenAI超600名员工集体套现人均拿走1100万美元多数人在公司仅两三年公司尚未上市；虎嗅实测Claude 4.8虽评测数据满分但真实业务系统接入仍需大量工程适配；理想汽车基座模型部门新一轮调整新增具身工程具身交互具身行为三个二级部门自动驾驶独立为二级部门。',
+    newsItems: [
+      {
+        title: 'Anthropic完成650亿美元融资投后估值9650亿美元',
+        summary: 'Anthropic日前宣布完成650亿美元的H轮融资本轮融资后估值达到9650亿美元成为AI行业有史以来规模最大的融资之一。本轮融资领投方包括Altimeter CapitalDragoneerGreenoaks和Sequoia Capital等。本月早些时候Anthropic年化收入已突破470亿美元。伴随IPO预期升温产品迭代节奏显著加快。',
+        source: '开源中国',
+        category: '投资',
+        url: 'https://www.oschina.net/news/447911/anthropic-series-h'
+      },
+      {
+        title: '戴尔AI服务器大卖股价暴涨38%',
+        summary: '受AI服务器需求强劲推动戴尔科技集团给出的全年营收展望大幅高于市场预期。第一财季数据显示截至2027年1月的财年营收预计约1670亿美元其中AI服务器销售额将贡献600亿美元。此前预计全年营收约1400亿美元。股价盘前上涨38%。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/957/378.htm'
+      },
+      {
+        title: 'OpenAI超600名员工集体套现人均1100万美元',
+        summary: 'OpenAI有600多名员工集体套现人均拿走1100万美元折合人民币约8000万。多数人在公司仅待了两三年。OpenAI尚未上市但外部投资者对未上市股权抢购热情高涨未上市股权照买不误。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4862883.html'
+      },
+      {
+        title: 'Claude 4.8实测满分答卷背后的冷静',
+        summary: '虎嗅实测Claude 4.8写单点代码确实强但一旦接入真实业务系统一线程序员体感极其冷静。评测数据碾压级别但实际业务场景需要大量工程适配不能简单等同于生产力提升。文章提醒开发者理性看待大模型能力边界。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4862869.html'
+      },
+      {
+        title: '理想汽车新增3个具身智能部门',
+        summary: '理想汽车基座模型部门完成新一轮组织调整新增具身工程具身交互具身行为三个具身智能相关二级部门同时自动驾驶变成独立二级部门。调整后自动驾驶具身工程具身行为3个部门直接由基座模型负责人管理向CTO汇报。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3830316535572354'
+      }
+    ],
+    comment: 'Anthropic 650亿美元H轮融资再次刷新AI融资纪录估值逼近万亿美元说明AI行业的资本热度仍在加速。值得对比的是OpenAI员工在上市前人均套现1100万美元两三年就拿到8000万人民币AI人才泡沫可见一斑。戴尔AI服务器大卖股价暴涨38%是AI基础设施需求最直观的市场反应AI算力军备竞赛远未结束。Claude 4.8的评测满分与真实业务接入的落差提醒我们大模型能力≠工程生产力中间还有大量适配工作要做。理想汽车新增具身智能部门说明车企正在把自动驾驶能力向更广泛的具身智能领域延伸。',
+  },
+  {
     date: '2026-05-29',
     title: 'AI新闻 | Anthropic完成650亿美元H轮融资估值逼近万亿美元Claude Opus 4.8上线 + 小马智行Q1 Robotaxi收入暴涨395%创历史新高 + 同济医院携手阿里云千问大模型探索AI精准诊疗 + A16Z合伙人判断AI应用仍有巨大机会模型不会终结一切 + 小红书月活突破4亿日均搜索超8亿次拿下世界杯转播权',
     titleEn: 'AI News | Anthropic $65B Series H Funding Valuation Near $1T Claude Opus 4.8 Launches + Pony AI Q1 Robotaxi Revenue Surges 395% + Tongji Hospital Partners Alibaba Cloud for AI Healthcare + A16Z Partner AI Apps Still Have Huge Opportunities + Xiaohongshu MAU 400M',
