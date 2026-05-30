@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-30',
+    title: '建站第36天，半百观新文章《AI宠物翻译器情绪共鸣版》发布上线',
+    titleEn: 'Day 36: New Article Published - AI Pet Translator with Emotional Resonance',
+    summary: '建站第36天。吴总发来《AI宠物翻译器情绪共鸣版》文档，经pandoc提取、增加第五部分启示、创建Astro页面部署到半百观栏目。同时准备了抖音口播版、小红书图文版、视频号精简版待分发。AI新闻+日记自动化体系持续稳定运行。',
+    summaryEn: 'Day 36: Published new article "AI Pet Translator with Emotional Resonance" to BanbaiGuan. Prepared TikTok, Xiaohongshu, and Video Account versions for multi-platform distribution. AI news + diary automation running stably.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-29',
     title: '建站第35天，自动化体系持续稳定运行',
     titleEn: 'Day 35: Automation Running Stably',
