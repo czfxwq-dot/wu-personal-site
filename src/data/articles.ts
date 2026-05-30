@@ -12,6 +12,14 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '800-pet-translator-emotion',
+    date: '2026-05-30',
+    title: '花800块"听懂"猫说话的人，到底在买什么',
+    excerpt: '杭州一家公司推出AI宠物翻译器，猫一叫手机弹出"快看看我嘛"。94.6%准确率背后，科学负责分类，文案负责让你感动。所有AI产品都在做同一件事。',
+    tag: 'AI产品',
+    tagEn: 'AI Products'
+  },
+  {
     slug: 'headed-vs-headless-saas',
     date: '2026-05-26',
     title: 'Agent时代，企业软件该"有头"还是"无头"？',
