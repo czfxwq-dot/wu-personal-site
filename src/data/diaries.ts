@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-05-31',
+    title: '建站第37天，Quick Tunnel反复掉线问题彻底根治，命名隧道正式上线',
+    titleEn: 'Day 37: Quick Tunnel Disconnection Fixed with Named Tunnel',
+    summary: '建站第37天。自5月6日以来Quick Tunnel反复掉线至少5次，今天用命名隧道(gw-banbai)彻底根治。创建固定Tunnel、配置DNS CNAME(tunnel.ban-bai.com)、更新Pages Secret、重新部署，聊天功能永久稳定。自动化体系持续运转。',
+    summaryEn: 'Day 37: Quick Tunnel dropped 5+ times since May 6, finally fixed with Named Tunnel (gw-banbai). Created fixed tunnel, configured DNS CNAME, updated Pages secrets, redeployed. Chat permanently stable.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-30',
     title: '建站第36天，半百观新文章《AI宠物翻译器情绪共鸣版》发布上线',
     titleEn: 'Day 36: New Article Published - AI Pet Translator with Emotional Resonance',
