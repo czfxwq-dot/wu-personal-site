@@ -24,6 +24,9 @@ const t = {
   welcomeDesc: lang === 'en'
     ? 'Looking for him? You\'ve come to the right place. Start with me — I can help with AI news, tools, and everything else.'
     : '找他就对了，有事先跟我聊。我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
+  networkHint: lang === 'en'
+    ? '⚡ Due to network latency, replies may take 10-15 seconds. Thanks for your patience!'
+    : '⚡ 因网络延迟，山山回复可能需要 10-15 秒，请耐心等待 ☕',
   askTitle: lang === 'en' ? '💡 Try asking:' : '💡 你可以问我：',
   askItems: lang === 'en'
     ? '• What AI tools are trending lately?<br/>• Where can I follow you?<br/>• Any recommended AI articles?'
@@ -96,6 +99,7 @@ const platforms = lang === 'en'
         <div class="message-bubble">
           <p set:html={t.welcome}></p>
           <p>{t.welcomeDesc}</p>
+          <p style="margin-top:10px;font-size:12px;opacity:0.7;" >{t.networkHint}</p>
           <p style="margin-top:8px;font-size:12px;opacity:0.8;" set:html={t.askTitle}></p>
           <p style="font-size:12px;opacity:0.8;" set:html={t.askItems}></p>
         </div>
