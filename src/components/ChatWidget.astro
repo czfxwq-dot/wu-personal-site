@@ -135,6 +135,19 @@ const platforms = lang === 'en'
 
   const isEn = lang === 'en';
 
+  // 轻量 Markdown 渲染：粗体/换行 → HTML（流式安全）
+  function renderMarkdown(text) {
+    if (!text) return '';
+    let html = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br>');
+    return '<p>' + html + '</p>';
+  }
+
   const texts = {
     platforms: isEn
       ? [
@@ -251,7 +264,7 @@ const platforms = lang === 'en'
               const delta = json.choices?.[0]?.delta?.content;
               if (delta) {
                 botMessage += delta;
-                bubble.textContent = botMessage;
+                bubble.innerHTML = renderMarkdown(botMessage);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
               }
             } catch {}
@@ -301,12 +314,8 @@ const platforms = lang === 'en'
 
     if (isHTML) {
       bubble.innerHTML = content;
-    } else if (role === 'bot' && content.includes('\n')) {
-      content.split('\n').filter(Boolean).forEach(line => {
-        const p = document.createElement('p');
-        p.textContent = line;
-        bubble.appendChild(p);
-      });
+    } else if (role === 'bot') {
+      bubble.innerHTML = renderMarkdown(content);
     } else {
       bubble.textContent = content;
     }
@@ -407,7 +416,7 @@ const platforms = lang === 'en'
               const delta = json.choices?.[0]?.delta?.content;
               if (delta) {
                 botMessage += delta;
-                bubble.textContent = botMessage;
+                bubble.innerHTML = renderMarkdown(botMessage);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
               }
             } catch {}
