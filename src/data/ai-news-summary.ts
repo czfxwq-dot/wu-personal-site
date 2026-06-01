@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-02',
+    title: 'AI新闻 | 美团AI Agent小美与腾讯元宝深度合作智能体打通本地服务 + 智谱建议科创板上市A股大模型军团再添一员 + 英伟达开源全模态物理AI大模型Cosmos3将物理AI训练从月缩短到天 + Claude Code动态工作流一个周末完成Bun从Zig到Rust移植 + OpenRouter获1.13亿美元B轮融资AI路由层成资本新宠',
+    summary: '今日AI行业五大看点：美团CEO王兴在财报电话会上宣布AI Agent小美与腾讯元宝即将深度合作用户在元宝提交本地服务需求将无缝连接美团外卖点餐配送等本地服务实现一站式交易体验；智谱公告建议向中国监管机构申请发行A股并在科创板上市发行数量占总股本2%至8%；英伟达推出全球首个完全开放的全模态物理AI大模型Cosmos3结合视觉推理世界生成和动作预测将训练评估周期从数月缩短到数天并组建Cosmos联盟；Anthropic发布Claude Code动态工作流功能AI可端到端处理大规模任务Jarred Sumner案例中一个周末完成75万行Bun从Zig到Rust的移植；OpenRouter完成1.13亿美元B轮融资由CapitalG领投NVIDIA参投标志AI路由层正成为基础设施层新热点。',
+    newsItems: [
+      {
+        title: '美团AI Agent小美与腾讯元宝即将深度合作',
+        summary: '美团发布2026年Q1财报营业总收入910.39亿元同比增长5.61%。在电话会上CEO王兴透露美团AI Agent小美与腾讯元宝即将深度合作当用户在腾讯元宝中提交本地服务需求时系统将无缝连接至美团的本地服务生态包括外卖点餐配送等实现流畅的一站式本地服务交易体验王兴强调面向智能体的本地服务将是美团未来的重要增长方向。',
+        source: 'IT之家',
+        category: '应用',
+        url: 'https://www.ithome.com/0/958/410.htm'
+      },
+      {
+        title: '智谱建议A股发行并在科创板上市',
+        summary: '智谱在港交所公告董事会建议向中国相关监管机构申请配发及发行A股并向上海证券交易所申请在科创板上市及准予交易建议A股发行数量占发行完成后总股本的2%至8%之间即不少于9098838股且不多于38768964股新A股预计全部为新股发行原股东不公开发售股份。继月之暗面MiniMax之后又一大模型公司启动A股上市进程。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/958/444.htm'
+      },
+      {
+        title: '英伟达开源全模态物理AI大模型Cosmos3',
+        summary: '英伟达正式推出Cosmos3基于突破性Transformer混合架构的物理AI开放世界基础模型将视觉推理世界生成和动作预测结合在一个系统中。这是世界上第一个完全开放的全能模型能够以领先的物理精度原生理解和生成文本图像视频环境声音和动作将物理AI的训练和评估周期从数月缩短到数天。同时推出NVIDIA Cosmos联盟包括Agile RobotsBlack Forest LabsRunway等全球合作伙伴。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/450423'
+      },
+      {
+        title: 'Claude Code动态工作流一个周末完成Bun从Zig到Rust移植',
+        summary: 'Anthropic发布Claude Code动态工作流功能让AI能够端到端处理最具挑战性的任务核心是让Claude动态编写编排脚本在一个会话中运行数十到数百个并行子agent并在内容到达用户之前检查工作。Bun创始人Jarred Sumner案例中一个周末完成75万行代码从Zig到Rust的移植以往需要按季度规划的工作现在几天内就能完成覆盖代码库bug搜寻性能优化审计安全审计等大规模任务。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/450354/dynamic-workflows-in-claude-code'
+      },
+      {
+        title: 'OpenRouter获1.13亿美元B轮融资AI路由层成资本新宠',
+        summary: 'AI路由平台OpenRouter宣布完成1.13亿美元B轮融资由Alphabet旗下CapitalG领投NVIDIA风险投资部门NVenturesServiceNow VenturesMongoDB VenturesSnowflake VenturesDatabricks Ventures以及AMP PBC和Pace Capital参投现有投资者Andreessen Horowitz和Menlo Ventures跟投。企业AI落地需求正从单模型试点走向多模型生产系统AI路由层作为连接多个模型的基础设施正成为投资热点。',
+        source: '开源中国',
+        category: '投资',
+        url: 'https://www.oschina.net/news/450403'
+      }
+    ],
+    comment: '今日五条新闻覆盖了AI从应用落地资本市场底层基础设施到开发工具的完整产业链。美团小美与腾讯元宝的合作标志着AI智能体正在从概念走向真实商业场景用户在聊天中就能完成外卖下单智能体不再是玩具而是生产力工具。智谱科创板上市是第三家启动A股的大模型企业加上月之暗面和MiniMax中国大模型军团正在集体登陆资本市场说明这个赛道已经从技术验证迈入商业变现阶段。英伟达Cosmos3开源将物理AI训练从数月缩短到数天这对机器人自动驾驶数字孪生等物理世界AI应用是加速器。Claude Code动态工作流则展示了AI开发工具的惊人进化75万行代码移植一个周末搞定程序员的角色正在被重新定义。OpenRouter融资说明AI多模型路由已成为刚需单一模型不再够用企业需要灵活切换的AI基础设施。',
+  },
+  {
     date: '2026-06-01',
     title: 'AI新闻 | MiniMax正式启动科创板上市大模型第二家将登陆A股 + 软银750亿欧元投资法国AI算力将成欧洲最大数据中心工程 + 中国科学家开发无人机蜂群新算法通信中断仍可100%杀伤 + NVIDIA副总裁称未来20年全球或数百亿台机器人 + IBM联合红帽50亿美元确保开源软件安全',
     summary: '今日AI行业五大看点：MiniMax公告拟于科创板上市此前已聘请专业顾问就符合科创板上市条件提供咨询并签订辅导协议将成为继月之暗面后第二家登陆A股的大模型企业；软银承诺最高投入750亿欧元在法国打造大型AI计算集群网络这将是欧洲规模最大的数据中心工程也是软银在美国以外单笔最大AI投资计划到2031年建成3.1吉瓦算力；西北工业大学和西安电子科技大学联合开发无人机蜂群HG-STR算法在通信中断和视野受限条件下实现100%目标杀伤率相比传统规则算法任务完成率提升37.14%；NVIDIA机器人与边缘AI副总裁Deepu Talla在BEYOND Expo 2026上表示未来10到20年全球可能有数百亿台机器人；IBM联合红帽启动Project Lightwell投入50亿美元结合AI技术帮助企业确保开源软件安全覆盖从上游开发到生产环境的全环节。',
