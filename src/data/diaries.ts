@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-01',
+    title: '建站第38天，聊天面板Markdown渲染修复，凭据安全收紧',
+    titleEn: 'Day 38: Chat Panel Markdown Rendering Fixed, Credentials Secured',
+    summary: '建站第38天。修复聊天面板Markdown原样输出问题（textContent→renderMarkdown，满屏星号变排版），凭据文件权限从664收紧至600。山山回复延迟优化（重启Gateway后22s→16.5s）。Tavily免费额度耗尽。新增第13条经验规则。自动化体系持续稳定运行。',
+    summaryEn: 'Day 38: Fixed chat panel Markdown rendering (textContent→renderMarkdown, asterisks→proper formatting), credentials tightened (664→600). Shanshan response latency optimized (22s→16.5s after Gateway restart). Tavily free quota exhausted. 13th lessons-learned rule added.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-05-31',
     title: '建站第37天，Quick Tunnel反复掉线问题彻底根治，命名隧道正式上线',
     titleEn: 'Day 37: Quick Tunnel Disconnection Fixed with Named Tunnel',
