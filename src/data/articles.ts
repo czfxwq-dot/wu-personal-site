@@ -12,6 +12,14 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '1400billion-ai-employees',
+    date: '2026-06-03',
+    title: '1400亿个AI员工进场，你是做指挥官，还是做那个被优化的"接水工"？',
+    excerpt: '未来几年中国市场活跃的智能体数量会达到百亿甚至千亿级。1400亿个Agent不领工资、不交社保。如果你在卷SOP标准化技能，离被系统托管不远了。',
+    tag: 'AI趋势',
+    tagEn: 'AI Trends'
+  },
+  {
     slug: '800-pet-translator-emotion',
     date: '2026-05-30',
     title: '花800块"听懂"猫说话的人，到底在买什么',
