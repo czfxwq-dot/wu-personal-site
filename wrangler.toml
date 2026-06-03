@@ -2,4 +2,11 @@ name = "wu-personal-site"
 compatibility_date = "2025-01-01"
 pages_build_output_dir = "docs"
 
+# ⚠️ 生产分支铁律：必须与 Cloudflare Pages 生产环境绑定分支一致
+# Cloudflare Pages 生产绑定的是 master 分支，不是 main
+# wrangler pages deploy 不带 --branch 参数时默认推 Preview
+# 所有部署命令必须显式指定 --branch master
+[env.production]
+branch = "master"
+
 [vars]
