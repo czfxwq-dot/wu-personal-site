@@ -35,12 +35,12 @@ else
   echo "  ✅ Output directory exists ($FILE_COUNT files)"
 fi
 
-# 3. Check deploy command includes --branch main
-if ! grep -q "\-\-branch main" package.json; then
-  echo "  ❌ Deploy command missing '--branch main' (would deploy to Preview, not Production)"
+# 3. Check deploy command includes --branch master
+if ! grep -q "\-\-branch master" package.json; then
+  echo "  ❌ Deploy command missing '--branch master' (would deploy to Preview, not Production)"
   ERRORS=$((ERRORS + 1))
 else
-  echo "  ✅ Deploy targets Production branch (main)"
+  echo "  ✅ Deploy targets Production branch (master)"
 fi
 
 # 4. Check GitHub Actions workflow matches
