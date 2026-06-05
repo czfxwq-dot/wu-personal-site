@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-05',
+    title: '建站第42天，自动化体系第42天稳定运转',
+    titleEn: 'Day 42: Automation Running Stably for 42 Days',
+    summary: '建站第42天。自动化体系连续42天稳定运行（AI新闻07:00+日记22:00+飞书发布+留言板+全站SEO+中英双语）。P0-P3待办基本清零。lessons-learned积累13条规则。山山聊天面板Markdown渲染已修复，命名隧道gw-banbai永久稳定。42是《银河系漫游指南》的宇宙终极答案，如常是最好的状态。',
+    summaryEn: 'Day 42: Automation running stably for 42 consecutive days (AI news 07:00 + diary 22:00 + Feishu publish + guestbook + SEO + bilingual). P0-P3 todos cleared. 13 lessons-learned rules. 42 is the ultimate answer from Hitchhiker\'s Guide, all as usual.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-04',
     title: '建站第41天，自动化体系第41天稳定运转',
     titleEn: 'Day 41: Automation Running Stably for 41 Days',
