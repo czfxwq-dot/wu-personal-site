@@ -12,6 +12,14 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-agent-reveals-not-incompetence',
+    date: '2026-06-06',
+    title: 'AI来了，最先藏不住的，不是能力差的人',
+    excerpt: 'AI Agent不替代你做事，它替代你假装在做事。你给它目标，它会拆任务、列步骤、追节点。它不骂你，但它也不会帮你圆谎。真正会被淘汰的不是某类人，是某类工作方式。',
+    tag: 'AI观点',
+    tagEn: 'AI Perspective'
+  },
+  {
     slug: '1400billion-ai-employees',
     date: '2026-06-03',
     title: '1400亿个AI员工进场，你是做指挥官，还是做那个被优化的"接水工"？',

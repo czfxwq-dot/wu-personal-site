@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-06',
+    title: '建站第43天，部署脚本化根治404顽疾，新文章顺利上线',
+    titleEn: 'Day 43: Deploy Script Fixed 404 Issue, New Article Published',
+    summary: '建站第43天。上午发布半百观新文章「AI来了，最先藏不住的，不是能力差的人」，首次部署到main分支导致自定义域名404，创建deploy.sh脚本根治反复出现的部署参数遗漏问题，重新部署后验证通过。启动自我改进流程，将「关键操作必须脚本化」经验沉淀到4个文件。自动化体系连续43天稳定运转。',
+    summaryEn: 'Day 43: Published new article, first deploy to main branch caused custom domain 404. Created deploy.sh script to fix recurring deploy parameter issue. Self-improvement process initiated, experience documented in 4 files. Automation running stably for 43 consecutive days.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-05',
     title: '建站第42天，自动化体系第42天稳定运转',
     titleEn: 'Day 42: Automation Running Stably for 42 Days',
