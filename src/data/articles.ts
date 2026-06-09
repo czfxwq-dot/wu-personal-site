@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'agent-harness-smart-warehouse',
+    date: '2026-06-09',
+    title: '从Agent Harness到智能仓储：企业级AI智能体怎么落地？',
+    excerpt: 'DeepSeek招Harness工程师，跟做智能货架有什么关系？技术的工程化封装，让复杂能力变成开箱即用的工具。企业落地AI智能体的三步路径。',
+    tag: 'AI落地',
+  },
+  {
     slug: 'ai-agent-reveals-not-incompetence',
     date: '2026-06-06',
     title: 'AI来了，最先藏不住的，不是能力差的人',

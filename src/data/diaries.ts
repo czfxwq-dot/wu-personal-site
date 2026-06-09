@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-09',
+    title: '建站第46天，周二，新文章《从Agent Harness到智能仓储》发布上线',
+    titleEn: 'Day 46: Tuesday, New Article Published',
+    summary: '建站第46天，周二。新文章《从Agent Harness到智能仓储》发布上线。三次心跳检查均正常（Gateway/内存/磁盘/负载），自动化体系连续46天稳定运转。deploy.sh脚本化部署持续发挥作用，生产域名验证通过。搜索引擎站长提交为唯一遗留待办。',
+    summaryEn: 'Day 46, Tuesday: New article "From Agent Harness to Smart Warehouse" published. Three health checks all passed. Automation running stably for 46 consecutive days. deploy.sh script continues working, production domain verified. Only pending: search engine webmaster submission.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-08',
     title: '建站第45天，周一，自动化体系稳定运转',
     titleEn: 'Day 45: Monday, Automation Running Stably',
