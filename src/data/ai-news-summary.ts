@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-10',
+    title: 'AI新闻 | 赛力斯联手字节跳动发布AI汽车品牌AIVA + 中科闻歌通过港交所聆讯聚焦大模型决策智能 + Transformer架构深度解析自注意力机制与大算力时代 + 特朗普签署AI行政令推动创新与安全平衡 + 苹果公布全新AI架构基于Gemini构建Foundation Models',
+    summary: '今日AI行业五大看点：赛力斯集团联合字节跳动重庆国资委宁德时代等发布AI汽车品牌AIVA售价20万级以AI原生汽车为核心卖点搭载豆包大模型智能座舱标志着AI大模型正式进入汽车制造核心环节；中科闻歌通过港交所聆讯专注于企业级大模型驱动的决策智能操作系统由中国科学院自动化研究所科学家团队创立；虎嗅深度解析Transformer架构回顾2017年Attention Is All You Need论文如何开启自注意力机制与大算力时代；特朗普签署推动先进人工智能创新与安全行政令聚焦创新提速与安全管控的平衡问题；苹果在WWDC 2026公布全新AI架构基于Google Gemini构建Apple Foundation Models同时发布Core AI设备端AI推理框架整合CPU GPU与神经网络引擎。',
+    newsItems: [
+      {
+        title: '赛力斯联手字节跳动发布AI汽车品牌AIVA售价20万级',
+        summary: '由重庆国资委赛力斯集团字节跳动宁德时代等联合控股的赛豆科技在北京发布AI汽车品牌AIVA取自Artificial Intelligence Voyage Ahead寓意AI伴你一路前行新品牌以AI原生汽车为核心卖点强调先有AI再有汽车搭载豆包大模型智能座舱等AI能力。赛力斯此前深度绑定华为鸿蒙智行此次转向表明AI大模型正在成为汽车行业的核心竞争力。',
+        source: '虎嗅',
+        category: '应用',
+        url: 'https://www.huxiu.com/article/4865880.html'
+      },
+      {
+        title: '中科闻歌通过港交所聆讯专注大模型决策智能',
+        summary: '北京中科闻歌科技股份有限公司正式通过港交所上市聆讯。公司成立于2017年由中国科学院自动化研究所科学家团队创立专注于研发企业级大模型驱动的决策智能操作系统及服务。中科闻歌是继多家大模型企业之后又一家冲刺资本市场的人工智能公司反映AI产业化进程加速。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3845866491726337'
+      },
+      {
+        title: 'Transformer架构深度解析自注意力机制与大算力时代的开端',
+        summary: '虎嗅刊发深度技术文章回顾2017年Attention Is All You Need论文的发表历程详解Transformer架构中的自注意力机制及其对AI行业的深远影响。从无人注意到改变整个AI产业Transformer已成为大语言模型的基础架构推动了GPU算力需求的爆炸式增长和大模型时代的到来。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4865899.html'
+      },
+      {
+        title: '深度解析特朗普AI行政令创新与安全如何平衡',
+        summary: '2026年6月2日美国总统特朗普签署推动先进人工智能创新与安全行政令。文章深度解析该行政令的政策背景核心内容及潜在影响分析美国在AI领域的战略转向。面对AI技术高速迭代创新提速与安全管控如何平衡成为全球各国的核心难题该行政令的出台将影响全球AI产业格局。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4865887.html'
+      },
+      {
+        title: '苹果公布全新AI架构基于Google Gemini构建Foundation Models',
+        summary: '苹果在WWDC 2026期间公布Apple Intelligence平台重大架构升级核心是基于Google Gemini系列模型技术深度合作开发的Apple Foundation Models。新模型可同时运行于设备端和云端在理解能力推理能力及多模态支持上达到前沿水平。苹果同时发布Core AI设备端AI推理框架整合CPU GPU与神经网络引擎实现异构计算协同。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/454679'
+      }
+    ],
+    comment: '今日新闻呈现三条主线。第一条是AI原生汽车落地赛力斯联手字节跳动发布AIVA品牌20万级售价面向大众市场说明AI大模型正在从座舱娱乐功能升级为汽车的核心竞争力这比单纯的车机语音助手走得更远AI原生意味着从底层架构重新设计。第二条是资本市场AI热度持续中科闻歌过会是AI决策智能赛道登陆港股的标志中科院背景加持说明产学研一体化正在加速。第三条是全球AI格局多线推进特朗普行政令代表美国政策层面重新定义AI治理方向Transformer回顾文章提醒我们当前AI繁荣的根基依然建立在2017年那篇论文之上苹果与Google在Gemini上的深度合作则说明即使科技巨头之间也在AI基础设施层面寻求协作而非纯粹竞争AI时代的竞合关系正在重塑整个行业格局。',
+  },
+  {
     date: '2026-06-09',
     title: 'AI新闻 | 苹果WWDC26发布iOS 27与全新Siri AI + OpenAI宣布进入第三发展阶段 + 同程旅行携程首批接入微信AI智能体生态 + 昆仑元AI获5000万战略融资 + 黄仁勋称SK海力士晶圆产能翻倍计划仍不够',
     summary: '今日AI行业五大看点：苹果WWDC26全球开发者大会正式发布iOS 27等全系操作系统全新Siri AI拥有独立App对话入口支持开放式问题自定义声音今年秋季推出国行无缘首发；OpenAI CEO奥尔特曼宣布公司进入第三发展阶段从技术研发到全球产品推广再到让AI普及易用且安全围绕AI重塑经济格局；同程旅行和携程作为首批内测团队接入微信AI智能体生态用户可通过语音或文字指令完成机票酒店预订等服务；昆仑元AI完成5000万元战略融资由景嘉微电子全资子公司领投将依托国产GPU算力构建全栈AI基础设施方案；英伟达CEO黄仁勋表示SK海力士到2030年晶圆产能翻倍计划仍不足以满足AI芯片需求。',
