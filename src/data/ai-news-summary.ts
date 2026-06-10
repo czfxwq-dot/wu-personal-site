@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-11',
+    title: 'AI新闻 | OpenAI洽谈租赁10GW数据中心英伟达或提供资金支持 + Anthropic发布Claude Fable 5 Mythos级模型首次向公众开放 + 工信部聚焦AI+通信打造智算网络体系 + Meta用Rust重写React核心编译器PR已合并 + 宇树机器人被美研究机构称为下一个比亚迪',
+    summary: '今日AI行业五大看点：OpenAI正深入谈判计划租赁俄亥俄州10GW数据中心园区总成本至少5000亿美元英伟达或提供资金支持项目一期预计2028年投产标志着AI算力基础设施投资进入史无前例的超大规模阶段；Anthropic正式发布Claude Fable 5定位为Mythos级安全可用模型首次将最高能力等级模型向公众开放同时保留给政府合作方不受限制版本；工信部印发AI+信息通信创新发展实施意见目标到2028年城域算力1毫秒时延圈覆盖率不低于75%推动AI与通信网络深度融合；Meta工程师用Rust重写React核心编译器的PR已被合并由AI主导编码人类紧密指导标志着前端工具链进入Rust化新阶段；虎嗅深度拆解宇树机器人美国研究机构将其比作机器人领域的比亚迪通过极致成本控制推动人形机器人从实验室走向大众市场。',
+    newsItems: [
+      {
+        title: 'OpenAI洽谈租赁俄亥俄州10GW数据中心英伟达或提供资金支持',
+        summary: '据The Information报道OpenAI正深入谈判计划租赁俄亥俄州南部一个10GW数据中心园区总成本至少5000亿美元英伟达可能提供资金支持。根据长期租赁协议OpenAI将控制设施内所有设备项目一期预计2028年投产。这一规模的数据中心将是全球最大的AI算力基础设施之一反映AI训练和推理对算力的需求正呈指数级增长。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/962/659.htm'
+      },
+      {
+        title: 'Anthropic发布Claude Fable 5 Mythos级模型首次向公众开放',
+        summary: 'Anthropic正式发布Claude Fable 5定位为Mythos级安全可用模型。这是Anthropic首次将最高能力等级模型降级后向公众开放同时保留给政府合作方一个不受限制的版本Mythos。Wharton商学院教授Ethan Mollick获得早期访问权限后评价其能力超过此前所有向公众开放的模型标志着AI能力边界再次拓展。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/455243'
+      },
+      {
+        title: '工信部印发AI+信息通信创新发展实施意见打造智算网络体系',
+        summary: '工信部印发《人工智能+信息通信创新发展实施意见（2026-2028年）》核心目标是到2028年初步实现信息通信网络高等级自智城域算力1毫秒时延圈覆盖率不低于75%。到2030年AI与信息通信网络融合关键核心技术取得显著突破。AI大模型训练和智算集群互联对网络带宽时延功耗提出极致要求传统电互连架构已遭遇带宽墙和功耗墙瓶颈。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/455560'
+      },
+      {
+        title: 'Meta工程师用Rust重写React核心编译器PR已被合并',
+        summary: 'React团队在GitHub上合并了备受关注的Pull Request将React Compiler移植到Rust。该项目由React核心团队成员开发是一次由AI主导编码人类紧密指导的尝试。这标志着前端核心工具链正在进入Rust化新阶段Rust的性能优势和内存安全特性正在被越来越多的基础设施项目采用。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/455594'
+      },
+      {
+        title: '宇树机器人被美研究机构称为下一个比亚迪',
+        summary: '虎嗅深度文章拆解宇树机器人产品分析其商业模式和技术路线。美国研究机构将宇树比作机器人领域的比亚迪和大疆通过极致的成本控制把原本属于实验室的技术推向大众市场。支持者认为宇树通过低价策略打开消费级市场质疑者则认为低价来自性能妥协。宇树全国首家直营店已在北京王府井开业人形机器人商业化进程正在加速。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4866215.html'
+      }
+    ],
+    comment: '今日五条新闻呈现AI从算力基建到模型能力到通信网络到开发工具到硬件落地的完整产业链。OpenAI 10GW数据中心5000亿美元的天价投入说明AI算力军备竞赛已进入前所未有的超大规模阶段算力正在成为AI时代的核心战略资源。Anthropic首次向公众开放Mythos级模型是一个里程碑事件说明最强AI能力的获取门槛正在降低但政府专用版本的存在也暗示AI能力分化正在成为新的地缘政治议题。工信部的AI+通信政策是中国国家级AI基础设施规划的缩影算力网络正在从概念走向标准化部署。Meta用Rust重写React编译器是开发者生态的重要信号AI辅助编码正在改变核心基础设施的开发方式。宇树被比作机器人领域的比亚迪说明中国机器人企业正在复制新能源汽车的路径通过成本优势打开大众市场。',
+  },
+  {
     date: '2026-06-10',
     title: 'AI新闻 | 赛力斯联手字节跳动发布AI汽车品牌AIVA + 中科闻歌通过港交所聆讯聚焦大模型决策智能 + Transformer架构深度解析自注意力机制与大算力时代 + 特朗普签署AI行政令推动创新与安全平衡 + 苹果公布全新AI架构基于Gemini构建Foundation Models',
     summary: '今日AI行业五大看点：赛力斯集团联合字节跳动重庆国资委宁德时代等发布AI汽车品牌AIVA售价20万级以AI原生汽车为核心卖点搭载豆包大模型智能座舱标志着AI大模型正式进入汽车制造核心环节；中科闻歌通过港交所聆讯专注于企业级大模型驱动的决策智能操作系统由中国科学院自动化研究所科学家团队创立；虎嗅深度解析Transformer架构回顾2017年Attention Is All You Need论文如何开启自注意力机制与大算力时代；特朗普签署推动先进人工智能创新与安全行政令聚焦创新提速与安全管控的平衡问题；苹果在WWDC 2026公布全新AI架构基于Google Gemini构建Apple Foundation Models同时发布Core AI设备端AI推理框架整合CPU GPU与神经网络引擎。',
