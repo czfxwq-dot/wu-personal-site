@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-11',
+    title: '建站第48天，周四，自动化体系连续48天稳定运转',
+    titleEn: 'Day 48: Thursday, Automation Running Stably for 48 Days',
+    summary: '建站第48天，周四。自动化体系连续48天稳定运转（AI新闻07:00+日记22:00+留言板+全站SEO+中英双语+Cloudflare Tunnel+deploy.sh脚本化部署）。P0-P3待办基本清零，唯一遗留为搜索引擎站长提交。13+条经验教训规则沉淀。再过两天满50天，值得纪念。',
+    summaryEn: 'Day 48, Thursday: Automation running stably for 48 consecutive days (AI news 07:00 + diary 22:00 + guestbook + SEO + bilingual + Cloudflare Tunnel + deploy.sh script). P0-P3 todos cleared, only pending: search engine webmaster submission. 13+ lessons-learned rules. 50 days coming soon.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-10',
     title: '建站第47天，周三，自动化体系连续47天稳定运转',
     titleEn: 'Day 47: Wednesday, Automation Running Stably for 47 Days',
