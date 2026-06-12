@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-12',
+    title: '建站第49天，周五，两篇文章上线+思辨写作框架确立',
+    titleEn: 'Day 49: Friday, Two Articles Published + Dialectical Writing Framework Established',
+    summary: '建站第49天，周五。发布《文科生上场》和《AI预测世界杯冠军》两篇文章。世界杯文章获评优秀（9/10），提炼出思辨类文章写作框架（正反合变体）。新增两条经验教训：多文件关联操作检查清单、发布前数据核实。自动化体系连续49天稳定运转。',
+    summaryEn: 'Day 49, Friday: Published two articles. World Cup article rated excellent (9/10), dialectical writing framework (thesis-antithesis-synthesis variant) established. Two new lessons: multi-file checklist and pre-publish data verification. Automation running stably for 49 days.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-11',
     title: '建站第48天，周四，自动化体系连续48天稳定运转',
     titleEn: 'Day 48: Thursday, Automation Running Stably for 48 Days',

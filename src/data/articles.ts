@@ -12,6 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-predict-world-cup-2026',
+    date: '2026-06-12',
+    title: 'AI预测世界杯冠军：人类直觉 vs 算法概率',
+    excerpt: 'Opta超算说西班牙16%夺冠，ChatGPT说法国，210个AI模型说阿根廷。六款AI一致看好西班牙，但人类球迷说"大热必死"。当算法开始预测足球，该信概率还是信直觉？',
+    tag: 'AI思考',
+  },
+  {
+    slug: 'liberal-arts-ai-era',
+    date: '2026-06-12',
+    title: '"文科生上场"：AI越狂，人文越值钱',
+    excerpt: '78%的企业在用AI，但80%的AI项目在失败。中间差的不是技术能力，而是业务理解和沟通判断——恰恰是文科生最擅长的领域。AI时代最稀缺的不是会操作工具的人，而是知道该让工具解决什么问题的人。',
+    tag: 'AI思考',
+  },
+  {
     slug: 'agent-harness-smart-warehouse',
     date: '2026-06-09',
     title: '从Agent Harness到智能仓储：企业级AI智能体怎么落地？',
