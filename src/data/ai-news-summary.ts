@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-14',
+    title: 'AI新闻 | 智谱GLM-5.2全量开放并下周MIT开源 + 月之暗面Kimi K2.7 Code发布开源 + 美国政府命令Anthropic切断外国人访问Claude Fable/Mythos5 + 科大讯飞发布星火多模态大模型X2-VL赋能具身智能 + 英特尔砍掉AI加速开源项目BigDL',
+    summary: '今日AI行业五大看点：智谱宣布GLM-5.2面向Coding Plan全量用户开放覆盖Lite到团队版全版本API下周上线并遵循MIT协议正式开源；月之暗面发布并开源Kimi K2.7 Code编程模型长上下文能力显著提升标准输入输出价格维持6.5元和27元每百万token；美国政府商务部长向Anthropic发出出口管制命令要求立即切断所有外国人访问Claude Fable/Mythos5权限包括公司内部外籍员工引发AI监管困境；科大讯飞在长三角机器人展会上发布星火多模态大模型X2-VL为具身智能产业提供AI大脑；英特尔持续收缩开源版图AI加速项目BigDL被列入终止清单本月底归档。',
+    newsItems: [
+      {
+        title: '智谱GLM-5.2全量开放并宣布下周MIT协议开源',
+        summary: '智谱宣布GLM-5.2面向GLM Coding Plan全量用户开放覆盖Lite/Pro/Max/团队版全部版本。API将于下周上线，模型正式开源遵循MIT协议。这是国产大模型在开源领域的又一重要动作，MIT协议意味着商业使用零限制。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3851264775804160'
+      },
+      {
+        title: '月之暗面Kimi K2.7 Code发布并开源：长上下文编程能力显著提升',
+        summary: '月之暗面宣布发布并开源Kimi K2.7 Code编程模型。1M token标准输入和输出价格与K2.6一致分别为6.5元和27元，命中缓存输入价格调整为1.3元。基准评估显示K2.7 Code相比K2.6显著提升长上下文编程能力，6倍速高速版下周一上线。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/457565'
+      },
+      {
+        title: '美国政府命令Anthropic切断外国人访问Claude Fable/Mythos5引发AI监管困境',
+        summary: '美国商务部长卢特尼克向Anthropic发出出口管制命令，要求立即切断所有外国人访问Claude Fable/Mythos 5的权限，包括公司内部外籍员工。理由是出现了一种越境访问风险。美国政府与Anthropic陷入监管困境，这一事件凸显AI出口管制在技术层面的执行难度。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4867115.html'
+      },
+      {
+        title: '科大讯飞发布星火多模态大模型X2-VL赋能具身智能机器人',
+        summary: '在2026长三角机器人及自动化展览会暨无锡具身智能机器人产业链伙伴大会上，科大讯飞发布星火多模态大模型X2-VL。这款国产多模态大模型将为无锡具身智能产业搭载硬核AI大脑，推动机器视觉与语言能力的融合应用。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3851320295166976'
+      },
+      {
+        title: '英特尔开源AI加速项目BigDL被砍本月底正式归档',
+        summary: '英特尔持续收缩开源版图，AI加速开源项目BigDL被列入终止清单。BigDL是专注于在英特尔全系XPU上低延迟运行AI大语言模型的开源框架，本周仓库已挂出不再由英特尔维护的标识。这是英特尔继多个开源项目后的又一次收缩。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/963/984.htm'
+      }
+    ],
+    comment: '今日新闻核心主题是国产大模型开源潮加速与AI地缘政治博弈升级。智谱GLM-5.2选择MIT协议开源、月之暗面Kimi K2.7 Code开源，两家在同一天释放重磅开源信号，说明国产大模型竞争已从闭源转向开源生态争夺战。与此同时美国政府直接命令Anthropic切断外国人访问Claude Fable/Mythos5，这是AI出口管制从芯片延伸到模型服务的标志性事件，执行难度极大但信号明确。科大讯飞X2-VL聚焦具身智能说明多模态大模型正加速向物理世界落地。英特尔砍掉BigDL则反映传统芯片巨头在AI开源领域的战略收缩，不再为竞争对手提供便利。',
+  },
+  {
     date: '2026-06-13',
     title: 'AI新闻 | Claude Fable 5上线24小时安全过度过滤引争议 + 小米MiMo Code开源2周获5.1k星 + 英伟达发布RTX Spark超级芯片进军PC处理器市场 + 中国四大厂押注具身智能机器人 + Anthropic推用量积分制AI订阅制或走向终结',
     summary: '今日AI行业五大看点：Anthropic发布Claude Fable 5仅24小时即因安全过度过滤引发争议高等数学概念被误判为网络安全风险免疫学家和开发者纷纷批评其封锁尺度；小米MiMo团队开源终端编程Agent产品MiMo Code基于OpenCode构建仅5人团队2周获5.1k GitHub星但开发者反映bug不断；英伟达在GTC Taipei 2026发布面向Windows PC的全新超级芯片RTX Spark正式进军个人电脑处理器市场微软站台获七大PC厂商支持；自变量机器人累计融资近30亿元获字节美团阿里小米四大厂投资但家庭机器人叠枕巾等基础操作仍未攻克暴露具身智能理想与现实的差距；Anthropic宣布Fable 5在6月22日后将从订阅计划中移除需单独购买用量积分引发行业对AI服务订阅制可持续性的深度讨论。',
