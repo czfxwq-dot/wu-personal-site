@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-token-maxxing-kpi',
+    date: '2026-06-13',
+    title: 'AI时代最荒谬的事：员工让AI干废活，就为了冲KPI',
+    excerpt: '亚马逊员工让AI刷无意义任务冲排行榜，Meta全员30天烧掉60万亿Token。考核什么就刷什么，这是人性。AI再强也改变不了人性，但好的考核方式可以让人性往好的方向走。',
+    tag: 'AI观点',
+  },
+  {
     slug: 'ai-predict-world-cup-2026',
     date: '2026-06-12',
     title: 'AI预测世界杯冠军：人类直觉 vs 算法概率',

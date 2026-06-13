@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-13',
+    title: '建站第50天，周六，短视频内容手册v1.0+IP画像确立+50天里程碑',
+    titleEn: 'Day 50: Saturday, Short Video Content Manual v1.0 + IP Profile Established + 50-Day Milestone',
+    summary: '建站第50天，周六。50天里程碑！从技术基建全面转入内容运营：创建《半百观AI·短视频内容手册》v1.0（10章节），确立IP画像（50岁AIoT创始人实战派），跑通短视频文稿创作流程（种子→深挖→共创），产出2篇短视频文稿+1篇公众号文章。吴总内容方法论：选题50%+标题20%+开头20%+正文10%。自动化体系连续50天稳定运转。',
+    summaryEn: 'Day 50, Saturday: 50-day milestone! Created Short Video Content Manual v1.0 (10 chapters), established IP profile (50yo AIoT founder), validated content creation workflow (seed→deep-dive→co-create), produced 2 short video scripts + 1 WeChat article. Content methodology: topic 50% + title 20% + opening 20% + body 10%. Automation stable for 50 days.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-12',
     title: '建站第49天，周五，两篇文章上线+思辨写作框架确立',
     titleEn: 'Day 49: Friday, Two Articles Published + Dialectical Writing Framework Established',
