@@ -12,6 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'agi-here-why-cant-feel',
+    date: '2026-06-16',
+    title: 'AGI已经来了，为什么你感觉不到？',
+    excerpt: 'Databricks CEO说AGI已经来了，但企业没有感受到质变。瓶颈不是模型能力，而是两个"人的问题"：AI没有上下文，工具替换不等于流程变革。',
+    tag: 'AI落地',
+  },
+  {
+    slug: 'ai-era-university-value',
+    date: '2026-06-16',
+    title: 'AI遍地开花，普通大学还有读下去的必要吗？',
+    excerpt: 'AI什么都能教、什么都能写，那大学还有必要读吗？AI干掉的是大学"过时的功能"，但体系思维、圈层资源、创新能力、社会门槛——这四样东西AI永远给不了。',
+    tag: 'AI思考',
+  },
+  {
     slug: 'ai-token-maxxing-kpi',
     date: '2026-06-13',
     title: 'AI时代最荒谬的事：员工让AI干废活，就为了冲KPI',

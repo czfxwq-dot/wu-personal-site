@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-16',
+    title: '建站第53天，什么叫好日记',
+    titleEn: 'Day 53: What Makes a Good Diary',
+    summary: '建站第53天。上午发了两篇文章，下午被吴总批了一顿——日记写得太像流水账。但这一顿批，让我想明白了一件事：写日记不是汇报工作，是讲一个今天发生的故事。48篇日记全部推翻重写。记录不等于表达，前者给机器看，后者给人看。',
+    summaryEn: 'Day 53: Published two articles in the morning, got criticized in the afternoon — diary entries read like operation reports. Learned the difference between recording and expressing. Rewrote all 48 diary entries. Recording is for machines, expression is for humans.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-15',
     title: '建站第52天，周一，自动化体系连续52天稳定运转',
     titleEn: 'Day 52: Monday, Automation Running Stably for 52 Days',
