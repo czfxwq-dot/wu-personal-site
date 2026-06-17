@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-17',
+    title: '建站第54天，同一个错误犯三次，就别怪自己不长记性',
+    titleEn: 'Day 54: Same Mistake Three Times, Stop Blaming Your Memory',
+    summary: '建站第54天。发了篇文章，又忘了注册到数据文件——同一个错误犯了三遍。这次不再靠"注意"，而是用脚本彻底堵住漏洞：new-article.sh自动注册，pre-deploy-check.sh部署前拦截。另外整理了建站故事给女儿看，54天，从一句话到165个页面。人的记性不可靠，脚本比记性可靠。',
+    summaryEn: 'Day 54: Published an article, forgot to register it in the data file — same mistake for the third time. Fixed it with scripts: auto-register + pre-deploy check. Also wrote up the site-building story for Mr. Wu\'s daughter. Human memory is unreliable; scripts are more reliable.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-16',
     title: '建站第53天，什么叫好日记',
     titleEn: 'Day 53: What Makes a Good Diary',

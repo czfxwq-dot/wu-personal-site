@@ -7,6 +7,10 @@ set -e
 
 cd "$(dirname "$0")"
 
+# 部署前校验：检查是否有未注册的文章
+echo "🔍 运行部署前校验..."
+./scripts/pre-deploy-check.sh
+
 echo "🔨 构建中..."
 npm run build
 

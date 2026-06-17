@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'college-major-money-vs-passion',
+    date: '2026-06-17',
+    title: '高考填志愿只剩「搞钱」，家长张口就问薪资，没人在乎孩子热爱吗？',
+    excerpt: '填报志愿，到底该优先"能赚钱"，还是"我喜欢"？赚钱谋生和个人热爱从来不是割裂对立的，但纯粹的热爱本身，是需要物质底气托底的人生奢侈品。',
+    tag: 'AI思考',
+  },
+  {
     slug: 'agi-here-why-cant-feel',
     date: '2026-06-16',
     title: 'AGI已经来了，为什么你感觉不到？',
