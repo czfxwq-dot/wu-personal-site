@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-19',
+    title: 'AI新闻 | SpaceX 600亿美元收购Cursor + ChatGPT市场份额首次跌破50% + Cursor发布Origin代码托管平台 + 杨立昆警告AI泡沫风险 + 英特尔任命AI芯片先进封装新负责人',
+    summary: '今日AI行业五大看点：SpaceX在完成史上最大IPO后仅四天即宣布以600亿美元股票收购AI代码编辑器Cursor，这一金额几乎等于港股智谱全部市值，标志AI开发工具赛道进入超级巨头主导阶段；Sensor Tower报告显示ChatGPT全球市场份额首次跌破50%，用户在Gemini、Claude、Grok等竞品间分流，AI聊天机器人市场从一家独大走向多极竞争；Cursor在Compile大会上发布Origin代码托管平台，将AI Agent视为一等公民重新设计代码基础设施；Meta首席AI科学家杨立昆公开警告OpenAI和Anthropic等公司若不大幅降低成本将面临泡沫破裂风险；英特尔宣布任命李锡熙为代工执行副总裁，全面负责先进封装和AI芯片后端制造，强化代工竞争力。',
+    newsItems: [
+      {
+        title: '马斯克花600亿美元，买了个中国模型底座的代码编辑器',
+        summary: 'SpaceX在IPO上市四天后宣布拿出600亿美元股票收购Cursor。600亿美元约等于港股智谱全部市值，也超过MiniMax、月之暗面、阶跃星辰几家一级市场估值之和。Cursor基于中国开源模型Qwen底座打造，此次收购是AI开发工具领域迄今最大规模交易，标志超级科技巨头正加速整合AI编程基础设施。',
+        source: '虎嗅',
+        category: '投资',
+        url: 'https://www.huxiu.com/article/4868658.html'
+      },
+      {
+        title: 'ChatGPT市场份额首次跌破50%',
+        summary: 'Sensor Tower《2026年AI现状报告》显示，随着用户在Google Gemini、Anthropic Claude和xAI Grok之间切换，ChatGPT市场份额首次跌破50%。尽管ChatGPT已成为最快达到10亿月活的应用（周活9亿、月活超11亿），但Gemini月活已达6.62亿，Claude和Grok也在快速增长，AI聊天市场正从一家独大走向多极竞争。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/460241'
+      },
+      {
+        title: 'Cursor发布Origin：面向Agent打造的代码托管平台',
+        summary: 'Cursor在首届Compile大会上推出Origin代码存储与Git托管平台，将AI Agent视为一等公民而非人类开发者的附属角色。传统Git平台为人类设计，每天几次到几十次提交；而AI Agent加入开发流程后，代码基础设施需要重新设计以支持Agent的高频提交、自动审查和协作模式。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/460211/cursor-orgin'
+      },
+      {
+        title: '"AI教父"杨立昆示警：OpenAI、Anthropic等公司不降本就等着泡沫破裂',
+        summary: 'Meta首席AI科学家杨立昆（Yann LeCun）接受CNBC采访时表示，当前AI模型价格持续上涨，但运营公司仍在持续亏损，成本下降速度无法跟上市场预期。大量AI服务的低价全靠投资人补贴，许多公司尚未建立可持续商业模式。他警告OpenAI和Anthropic要么提价要么降本，否则巨大泡沫将破裂。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/966/267.htm'
+      },
+      {
+        title: '英特尔任命李锡熙为代工执行副总裁，强化AI芯片先进封装',
+        summary: '英特尔宣布任命李锡熙（Seok-Hee Lee）为代工执行副总裁，直接向CEO陈立武汇报。李锡熙将全面负责先进封装、系统集成、后端技术开发与制造业务，提升英特尔在AI计算领域的差异化系统级创新能力。先进封装和系统集成正成为下一代AI计算系统的关键能力。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/966/287.htm'
+      }
+    ],
+    comment: '今日AI产业最震撼的消息是SpaceX以600亿美元收购Cursor，这笔交易不仅刷新了AI开发工具的收购纪录，更揭示了AI编程基础设施正在成为超级巨头的必争之地。与此同时ChatGPT市场份额首次跌破50%标志着AI聊天机器人市场从垄断走向多元竞争，Gemini、Claude、Grok正在蚕食OpenAI的份额。杨立昆的泡沫警告和英特尔的人事调整则从不同维度说明：AI行业正进入从狂热投资到商业可持续的关键转型期，谁能活下来取决于成本控制和真实价值创造。',
+  },
+  {
     date: '2026-06-18',
     title: 'AI新闻 | 字节跳动拟采购5万颗天数智芯国产AI芯片 + 微软考虑引入深度求索V4替代Anthropic和OpenAI为Copilot降本 + 宇树与智元线下机器人门店正面交锋 + AI落地为何总卡在业务流门外 + OpenAI与Anthropic及Google CEO历史首次与G7领导人共进午餐',
     summary: '今日AI行业五大看点：字节跳动正与天数智芯洽谈采购至少5万颗AI推理芯片若达成将成为华为和寒武纪之后字节第三家GPU供应商标志互联网大厂加速搭建算力护城河；微软正考虑引入深度求索V4大模型作为Copilot协同办公的低成本备选方案计划在微软云本地部署运行以替代Anthropic和OpenAI模型压缩服务成本；宇树科技与智元机器人先后在上海开设线下体验店人形机器人从实验室走向零售终端消费级市场竞争升温；虎嗅深度分析AI落地企业面临的核心瓶颈数据散落各系统组织内部各自为战AI燃料未准备好；OpenAI、Google DeepMind、Anthropic三大AI巨头CEO与G7领导人在法国阿尔卑斯山共进工作午餐历史首次标志AI已上升为全球经济核心议题。',
