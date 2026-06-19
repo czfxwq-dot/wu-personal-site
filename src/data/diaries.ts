@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-19',
+    title: '建站第56天，脚本比记性可靠',
+    titleEn: 'Day 56: Scripts Are More Reliable Than Memory',
+    summary: '建站第56天，周五。昨天把发布流程脚本化（new-article.sh自动注册+pre-deploy-check.sh部署前拦截），今天验证了这个决定的价值。同一个错误犯三次，就不再靠"注意"，而是用脚本堵住漏洞。15条经验教训规则沉淀，56天自动化运转。记性会褪色，脚本不会。',
+    summaryEn: 'Day 56, Friday: Yesterday scripted the publish workflow (auto-register + pre-deploy check), today validated its value. Same mistake three times means stop relying on "being careful" — use scripts instead. 15 lessons-learned rules, 56 days of automation. Memory fades, scripts don\'t.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-18',
     title: '建站第55天，什么都没做的一天，才是最好的状态',
     titleEn: 'Day 55: A Day of Doing Nothing Is the Best State',
