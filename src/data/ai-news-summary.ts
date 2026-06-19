@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-20',
+    title: 'AI新闻 | Anthropic因AI安全隐患承诺加强美国政府沟通 + 英伟达Vera CPU发布1700亿美元市场重塑 + Meta签约Crusoe获1.6GW AI算力 + Waymo召回3800辆自动驾驶出租车 + 中国Token工厂半年20余倍增长揭示商业模式成熟',
+    summary: '今日AI行业五大看点：Anthropic因高性能AI模型Mythos与Fable存在安全隐患遭美国监管整治，高管向商务部长提交方案承诺加强白宫合作并更快处置安全风险；英伟达首次推出独立CPU产品线Vera，新一代AI超算平台Vera Rubin首批客户包括OpenAI和Anthropic，1700亿美元的CPU市场迎来重新洗牌；Meta与数据中心公司Crusoe签署AI算力合作协议预计获得约1.6吉瓦算力，科技巨头算力军备赛持续升温；Waymo因自动驾驶出租车存在驶入高速公路施工路段风险召回3800余辆车，暴露L4自动驾驶在复杂施工场景的短板；虎嗅深度报道中国Token工厂半年20余倍增长揭示AI推理商业模式逐渐成熟，Token生产成本下降但售价上涨反映市场供需关系变化。',
+    newsItems: [
+      {
+        title: '因AI安全隐患遭监管，Anthropic承诺加强与美政府沟通',
+        summary: 'Anthropic高管向商务部长霍华德·卢特尼克提交方案，承诺与白宫展开更深度合作，力求尽快消除安全隐患。正是相关安全问题使得该公司高性能AI模型"Mythos"与"Fable"遭到监管整治。Anthropic在会谈中承诺将加强与特朗普政府的沟通，未来更快处置各类安全风险。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3859408242004996'
+      },
+      {
+        title: 'CPU杀回牌桌，一场1700亿美元的"上位"大戏开启',
+        summary: '英伟达在GTC Taipei 2026大会上发布Vera CPU，同期发布新一代AI超算平台Vera Rubin，首批客户包括OpenAI和Anthropic。这是英伟达第一次推出独立CPU产品线，过去20年增长几乎完全建立在GPU之上。CPU市场格局正被AI算力需求重新定义，1700亿美元市场迎来上位大戏。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4868790.html'
+      },
+      {
+        title: 'Meta或同数据中心公司Crusoe签署AI算力协议',
+        summary: '据报道，Meta与数据中心公司Crusoe签署AI算力合作协议，预计将获得约1.6吉瓦算力。这是Meta在AI基础设施领域的又一重大布局，科技巨头对AI算力的争夺持续升温，1.6GW的算力规模相当于大型数据中心集群，反映AI训练和推理对算力的需求仍在指数级增长。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3859409018770438'
+      },
+      {
+        title: 'Waymo因存在驶入施工路段风险，召回3800余辆自动驾驶出租车',
+        summary: 'Waymo宣布召回数千辆自动驾驶出租车，隐患为车辆可能高速闯入高速公路施工路段。这家隶属于字母表集团的自动驾驶公司针对旗下部分搭载第五代自动驾驶系统的车辆发起召回。此前已发生多起安全事件：车辆未能识别匝道封闭标识，径直驶入规划中的高速公路施工区域。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3859411565532422'
+      },
+      {
+        title: '半年20余倍增长，一个中国Token工厂的生意飞轮',
+        summary: '过去两年Token的生产成本一直在下降，但售价却一直涨。看起来前后矛盾的事，背后是一笔基于Token商业模式逐渐成熟而成立的生意。硬件和模型不断优化迭代，几乎都指向同一方向：更便宜的推理、更低廉的算力。但另一面是逐渐成熟的智能体以及已经闭环的业务，真正靠AI赚到钱的人根本不会被价格劝退。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4867715.html'
+      }
+    ],
+    comment: '今日新闻核心主题是AI产业从算力争夺到安全监管的全面博弈。Anthropic因安全问题被监管整治并承诺加强政府沟通，说明AI能力越强监管压力越大，安全合规正在成为AI公司的核心竞争力。英伟达Vera CPU发布是硬件层面的重大变革，GPU巨头首次推出独立CPU产品线意味着AI计算架构正从GPU独大走向CPU+GPU协同，1700亿美元CPU市场将被AI需求重新定义。Meta签约1.6GW算力、中国Token工厂20倍增长则从不同维度说明AI算力需求仍在指数级扩张。Waymo召回3800辆车则提醒我们即使在自动驾驶最前沿的领域，复杂场景的工程化挑战依然严峻。',
+  },
+  {
     date: '2026-06-19',
     title: 'AI新闻 | SpaceX 600亿美元收购Cursor + ChatGPT市场份额首次跌破50% + Cursor发布Origin代码托管平台 + 杨立昆警告AI泡沫风险 + 英特尔任命AI芯片先进封装新负责人',
     summary: '今日AI行业五大看点：SpaceX在完成史上最大IPO后仅四天即宣布以600亿美元股票收购AI代码编辑器Cursor，这一金额几乎等于港股智谱全部市值，标志AI开发工具赛道进入超级巨头主导阶段；Sensor Tower报告显示ChatGPT全球市场份额首次跌破50%，用户在Gemini、Claude、Grok等竞品间分流，AI聊天机器人市场从一家独大走向多极竞争；Cursor在Compile大会上发布Origin代码托管平台，将AI Agent视为一等公民重新设计代码基础设施；Meta首席AI科学家杨立昆公开警告OpenAI和Anthropic等公司若不大幅降低成本将面临泡沫破裂风险；英特尔宣布任命李锡熙为代工执行副总裁，全面负责先进封装和AI芯片后端制造，强化代工竞争力。',
