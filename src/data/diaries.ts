@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-20',
+    title: '建站第57天，系统跑得越稳，越要警惕',
+    titleEn: 'Day 57: The More Stable the System, the More Vigilant You Must Be',
+    summary: '建站第57天，周六。没有新指令，系统照常运转。但57天的稳定让人想到：系统越稳定，人越容易放松警惕，而放松警惕是出事的前兆。16条经验教训规则沉淀，57天自动化运转。稳定不是终点，是每天都要重新赢得的状态。如常，是最好的状态，但如常不是天上掉下来的，是每一天守出来的。',
+    summaryEn: 'Day 57, Saturday: No new commands, system running as usual. But 57 days of stability raises a question: the more stable the system, the more people relax their vigilance — and that\'s when things go wrong. 16 lessons-learned rules, 57 days of automation. Stability is not a destination; it\'s a state you must earn every day.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-19',
     title: '建站第56天，脚本比记性可靠',
     titleEn: 'Day 56: Scripts Are More Reliable Than Memory',
