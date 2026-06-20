@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-21',
+    title: 'AI新闻 | 谷歌Gemini联席负责人沙泽尔转投OpenAI + 菜鸟欧洲部署100台攀爬机器人 + 高通CEO称智能眼镜市场有望比肩手机 + SK海力士大规模招聘芯片设计师 + Anthropic Fable 5与Manus的AI成人礼',
+    summary: '今日AI行业五大看点：谷歌工程副总裁、Gemini技术联席负责人诺姆·沙泽尔宣布离职加入OpenAI，奥尔特曼亲自发文欢迎，这是AI大模型人才争夺战的又一标志性事件；菜鸟在荷兰启用欧洲供应链履约中心投入超100台自主研发ZeeBot攀爬机器人，机器人革命正在物流领域率先落地；高通CEO安蒙认为AI智能体将改变人们使用设备的方式，内置摄像头和显示屏的智能眼镜有望成为新入口，市场体量可比肩手机；SK海力士罕见启动数百人规模芯片设计工程师招聘，引发韩国中小芯片企业人才流失担忧，AI算力需求重塑半导体人才格局；虎嗅深度分析Anthropic发布Fable 5与Manus的AI成人礼，探讨AI能力释放后的安全管控挑战。',
+    newsItems: [
+      {
+        title: '谷歌Gemini联席负责人沙泽尔转投OpenAI，奥尔特曼亲自发文欢迎',
+        summary: '谷歌前工程副总裁、Gemini技术联席负责人诺姆·沙泽尔宣布离职加入OpenAI。沙泽尔表示离开谷歌是艰难决定，为团队取得的成果感到自豪。OpenAI CEO奥尔特曼随后发文欢迎，称从OpenAI创立之初沙泽尔就是他最希望合作的人之一。这是AI大模型领域又一次重磅人才流动。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/966/551.htm'
+      },
+      {
+        title: '一场机器人革命正在酝酿：菜鸟欧洲部署100台ZeeBot攀爬机器人',
+        summary: '菜鸟在荷兰启用全新欧洲供应链履约中心，投入超100台自主研发的ZeeBot攀爬机器人，同时服务B端和C端履约。该中心签下10年租约，场地总面积2.6万平方米，辐射整个欧洲市场。这标志着机器人革命正在物流领域率先从概念走向规模化落地。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4860037.html'
+      },
+      {
+        title: '高通CEO安蒙：AI智能体将改变应用生态，智能眼镜市场有望比肩手机',
+        summary: '高通CEO安蒙认为AI智能体将改变人们使用应用和电子设备的方式。他设想的未来入口是内置摄像头和显示屏的智能眼镜，用户无需掏出手机即可完成预订、支付等操作。安蒙认为应用不会消失但会发生变化，智能体将成为新的应用入口，智能眼镜市场体量有望比肩手机。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/966/548.htm'
+      },
+      {
+        title: 'SK海力士大规模招聘引发行业巨震，中小芯片企业深感不安',
+        summary: 'SK海力士罕见启动数百人规模芯片设计工程师招聘，申请将于6月23日截止。业内担心大型企业可能吸走刚进入行业一两年的年轻工程师，半导体设计人才本就稀缺。多家中小芯片设计公司CEO表示不安，AI算力需求正在重塑韩国半导体人才格局。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/966/575.htm'
+      },
+      {
+        title: 'Fable5与Manus，AI的成人礼：管控你释放出去的能量',
+        summary: '2026年6月9日Anthropic发布Claude Fable 5和Mythos 5。Fable 5是其迄今公开提供过的最强模型，在软件工程、知识工作、视觉和长任务上大幅领先。同时Mythos 5只面向少数可信伙伴开放，体现AI能力越强安全管控责任越大的行业共识。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4868900.html'
+      }
+    ],
+    comment: '今日新闻核心主题是AI人才争夺战加速与机器人规模化落地并行。谷歌Gemini负责人转投OpenAI说明大模型竞争已进入人才白刃战阶段，顶级技术人才成为最稀缺资源。菜鸟在欧洲部署100台攀爬机器人是具身智能从demo走向商业化的标志性事件，物流场景的标准化环境最适合机器人率先规模化。高通押注智能眼镜和SK海力士大规模招聘则从需求侧和供给侧说明AI算力生态仍在快速扩张。Anthropic Fable 5与Mythos 5的分层开放策略则揭示行业共识：AI能力越强，安全管控责任越大。',
+  },
+  {
     date: '2026-06-20',
     title: 'AI新闻 | Anthropic因AI安全隐患承诺加强美国政府沟通 + 英伟达Vera CPU发布1700亿美元市场重塑 + Meta签约Crusoe获1.6GW AI算力 + Waymo召回3800辆自动驾驶出租车 + 中国Token工厂半年20余倍增长揭示商业模式成熟',
     summary: '今日AI行业五大看点：Anthropic因高性能AI模型Mythos与Fable存在安全隐患遭美国监管整治，高管向商务部长提交方案承诺加强白宫合作并更快处置安全风险；英伟达首次推出独立CPU产品线Vera，新一代AI超算平台Vera Rubin首批客户包括OpenAI和Anthropic，1700亿美元的CPU市场迎来重新洗牌；Meta与数据中心公司Crusoe签署AI算力合作协议预计获得约1.6吉瓦算力，科技巨头算力军备赛持续升温；Waymo因自动驾驶出租车存在驶入高速公路施工路段风险召回3800余辆车，暴露L4自动驾驶在复杂施工场景的短板；虎嗅深度报道中国Token工厂半年20余倍增长揭示AI推理商业模式逐渐成熟，Token生产成本下降但售价上涨反映市场供需关系变化。',
