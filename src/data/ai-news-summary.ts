@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-22',
+    title: 'AI新闻 | Sutton联手Carmack让机器人打游戏 + 诺奖得主John Jumper加入Anthropic + 国产芯片加速抢夺英伟达蛋糕 + ChatGPT市场份额首次跌破50% + 智谱GLM-5.2上线开源登顶Code Arena',
+    summary: '今日AI行业五大看点：强化学习之父Sutton与毁灭战士之父Carmack联手，探索让机器人在真实世界中打游戏，试图解决AI从模拟器到现实世界的迁移难题；AlphaFold核心领导者、诺贝尔奖得主John Jumper宣布离开Google DeepMind加入Anthropic，继Transformer联合作者后又一重磅人才流动；华为、寒武纪带头，字节跳动正与天数智芯洽谈采购5万颗AI推理芯片，国产芯片玩家加速抢夺英伟达市场份额；Sensor Tower报告显示ChatGPT市场份额首次跌破50%，Gemini、Claude、Grok等竞品崛起重塑AI应用格局；智谱发布并开源GLM-5.2，在Code Arena取得全球可用模型第一，1M上下文长程任务能力跻身全球顶级梯队。',
+    newsItems: [
+      {
+        title: '强化学习之父Sutton联手毁灭战士之父Carmack：让机器人进入真实世界打游戏',
+        summary: '强化学习先驱Richard Sutton与传奇游戏程序员John Carmack达成合作，目标是让机器人在真实世界中玩游戏。这一跨界合作直击当前具身智能的核心痛点：AI在模拟器中学到的能力难以迁移到不可预测的真实世界。此前人形机器人伤人事件频发，傅盛称以当前大模型能力两三年内难以解决安全问题，Sutton和Carmack的联手或为这一困局提供新思路。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/p/3862459989988610'
+      },
+      {
+        title: '诺贝尔奖得主John Jumper加入Anthropic，Google DeepMind核心人才持续外流',
+        summary: 'AlphaFold核心领导者、诺贝尔奖得主John Jumper宣布离开工作近9年的Google DeepMind加入Anthropic。Hassabis回应称感谢John过去9年的非凡伙伴关系。这是继Transformer论文联合作者之后，DeepMind又一位顶级人才流向Anthropic。AI大模型领域的人才争夺战已进入白热化阶段，顶级研究者成为最稀缺资源。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/p/3860814933660674'
+      },
+      {
+        title: '华为、寒武纪带头，国产芯片玩家加速抢夺英伟达的蛋糕',
+        summary: '字节跳动正与天数智芯洽谈采购至少5万颗AI推理芯片，主要用于推理任务。字节2026年计划将资本开支上调超2000亿元，是国内AI算力头号买家。如果这笔交易落地，天数智芯将成为继华为和寒武纪之后字节第三大芯片供应商。国产GPU头部牌桌正在悄悄加人，AI算力国产替代进程显著加速。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/p/3858548611709828'
+      },
+      {
+        title: 'ChatGPT市场份额首次跌破50%，AI应用竞争格局巨变',
+        summary: 'Sensor Tower发布《2026年AI现状报告》显示，ChatGPT市场份额首次跌破50%。随着用户在谷歌Gemini、Anthropic Claude以及xAI Grok等工具之间切换，OpenAI的绝对统治地位正被瓦解。尽管ChatGPT已成为史上最快达到10亿月活的应用，但竞品崛起正在重塑AI应用市场格局，多极化竞争时代来临。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/460241'
+      },
+      {
+        title: '智谱GLM-5.2上线并开源，Code Arena全球可用模型第一',
+        summary: '智谱发布并开源GLM-5.2，专为长程任务能力打造。该模型在Code Arena评估系统上取得全球可用模型第一，1M上下文稳定支撑长程任务。在FrontierSWE测试集上仅比Claude Opus 4.8低1%，超过GPT-5.5和Opus 4.7。GLM-5.2是排名最高的开源模型，标志着国产大模型在代码工程能力上跻身全球顶级梯队。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/460037'
+      }
+    ],
+    comment: '今日新闻核心主题是AI人才争夺白热化与国产算力生态加速成型。Sutton与Carmack的跨界联手直击具身智能从demo到现实的鸿沟，说明行业正在认真啃硬骨头。John Jumper从DeepMind转投Anthropic是AI顶级人才流动的又一标志，诺奖级研究者成为各大模型公司争抢的核心资产。字节跳动与天数智芯的5万颗芯片采购如果落地将是国产AI芯片替代的重要里程碑，华为寒武纪之外的第三极正在崛起。ChatGPT份额跌破50%说明AI应用市场从一家独大走向多极竞争，而GLM-5.2在Code Arena登顶则证明国产开源模型已具备全球顶级竞争力。',
+  },
+  {
     date: '2026-06-21',
     title: 'AI新闻 | 谷歌Gemini联席负责人沙泽尔转投OpenAI + 菜鸟欧洲部署100台攀爬机器人 + 高通CEO称智能眼镜市场有望比肩手机 + SK海力士大规模招聘芯片设计师 + Anthropic Fable 5与Manus的AI成人礼',
     summary: '今日AI行业五大看点：谷歌工程副总裁、Gemini技术联席负责人诺姆·沙泽尔宣布离职加入OpenAI，奥尔特曼亲自发文欢迎，这是AI大模型人才争夺战的又一标志性事件；菜鸟在荷兰启用欧洲供应链履约中心投入超100台自主研发ZeeBot攀爬机器人，机器人革命正在物流领域率先落地；高通CEO安蒙认为AI智能体将改变人们使用设备的方式，内置摄像头和显示屏的智能眼镜有望成为新入口，市场体量可比肩手机；SK海力士罕见启动数百人规模芯片设计工程师招聘，引发韩国中小芯片企业人才流失担忧，AI算力需求重塑半导体人才格局；虎嗅深度分析Anthropic发布Fable 5与Manus的AI成人礼，探讨AI能力释放后的安全管控挑战。',
