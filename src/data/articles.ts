@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'fathers-day-luoyang',
+    date: '2026-06-21',
+    title: '父亲节，洛阳听雨',
+    excerpt: '父亲节在洛阳，女儿提前在学校挑了一件T恤带过来。父母的爱，是以分离为目的的爱。',
+    tag: '随笔',
+  },
+  {
     slug: 'college-major-money-vs-passion',
     date: '2026-06-17',
     title: '高考填志愿只剩「搞钱」，家长张口就问薪资，没人在乎孩子热爱吗？',
