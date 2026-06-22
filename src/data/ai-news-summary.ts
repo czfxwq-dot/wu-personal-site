@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-23',
+    title: 'AI新闻 | SpaceX与开源AI公司Reflection签63亿美元算力协议 + 美光与Anthropic达成战略合作 + 英伟达发布首个全栈机器人安全系统Halos + 欧洲启动35台AI超算史上最大规模建设 + 智谱市值突破万亿港元',
+    summary: '今日AI行业五大看点：SpaceX与开源AI初创企业Reflection签署最高63亿美元算力合作协议，Reflection将立即获得英伟达GB300算力，标志AI算力交易进入超级巨头主导阶段；美光科技与Anthropic达成战略合作涵盖AI存储供应、技术研发及股权投资，存储芯片巨头与大模型公司深度绑定；英伟达发布Halos for Robotics，业界首个将AI算力与安全能力整合的全栈机器人安全系统，面向物理AI开发验证；欧洲启动史上最大规模AI超算建设，35台英伟达AI HPC超级计算机将惠及超300万研究人员；智谱盘中市值突破万亿港元，成为港股万亿俱乐部最年轻成员，大模型公司首次在资本市场获得如此量级认可。',
+    newsItems: [
+      {
+        title: 'SpaceX与开源AI初创企业Reflection签署最高63亿美元算力合作协议',
+        summary: 'SpaceX已与开源AI初创企业Reflection AI签署算力合作协议，最高价值可达63亿美元。根据协议，Reflection将立即获得英伟达GB300算力。这是AI算力交易领域迄今最大规模的合作之一，标志超级科技巨头正加速布局AI算力基础设施，开源AI公司也开始获得前所未有的算力资源支持。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/967/236.htm'
+      },
+      {
+        title: '美光与Anthropic达成战略合作，涵盖AI存储供应、技术研发及股权投资',
+        summary: '美光科技宣布与Anthropic达成战略合作协议，共同扩展下一代AI基础设施。合作涵盖AI存储供应、技术研发及股权投资三大维度。这是存储芯片巨头与AI大模型公司的首次深度绑定，反映AI算力需求正从GPU扩展到存储全链路，产业链上下游加速整合。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/967/223.htm'
+      },
+      {
+        title: '英伟达发布Halos for Robotics：业界首个全栈物理AI安全系统',
+        summary: '英伟达发布NVIDIA Halos for Robotics，这是业内首套将AI算力和安全能力整合在一起的全栈机器人安全系统，面向机器人和物理AI的开发、验证和部署。该系统为机器人安全提供从开发到验证的完整工具链，标志具身智能领域从追求能力转向重视安全，为行业提供标准化安全基础设施。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/967/212.htm'
+      },
+      {
+        title: '欧洲启动史上最大规模AI超算建设：35台英伟达AI HPC惠及300万研究人员',
+        summary: '英伟达宣布欧洲创纪录的35台AI HPC超级计算机正式启动建设，建成后超过300万名研究人员将获得下一代算力基础设施，用于推动全欧洲AI发展和科学研究。这是欧洲在AI算力领域最大规模的一次性投入，旨在缩小与美国在AI计算能力上的差距，加速欧洲AI科研生态建设。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/967/213.htm'
+      },
+      {
+        title: '智谱市值突破万亿港元，成港股万亿俱乐部最年轻成员',
+        summary: '智谱盘中市值突破万亿港元，跻身港股万亿市值俱乐部。此前这里的常客包括腾讯、阿里、汇丰等巨头，智谱成为其中最年轻、大众接触最少的成员。从上市到万亿仅用166天，GLM-5.2的跑分表现和国资背景是核心驱动力，但市场对其估值泡沫的争议也从未停歇。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4869367.html'
+      }
+    ],
+    comment: '今日新闻核心主题是AI算力军备赛全面升级与大模型公司获资本市场历史性认可。SpaceX 63亿美元算力协议和美光与Anthropic合作说明AI产业链正从芯片到存储到算力全链路深度整合，单一环节的优势已不够，系统性基础设施能力成为竞争关键。英伟达Halos for Robotics和欧洲35台超算则从安全基础设施和算力基础设施两个维度说明AI正在从模型能力竞赛转向工程化和安全化阶段。智谱万亿市值是国产大模型在资本市场的里程碑事件，但万亿估值背后泡沫争议也提醒我们：资本市场的热情与技术商业化之间往往存在时间差。',
+  },
+  {
     date: '2026-06-22',
     title: 'AI新闻 | Sutton联手Carmack让机器人打游戏 + 诺奖得主John Jumper加入Anthropic + 国产芯片加速抢夺英伟达蛋糕 + ChatGPT市场份额首次跌破50% + 智谱GLM-5.2上线开源登顶Code Arena',
     summary: '今日AI行业五大看点：强化学习之父Sutton与毁灭战士之父Carmack联手，探索让机器人在真实世界中打游戏，试图解决AI从模拟器到现实世界的迁移难题；AlphaFold核心领导者、诺贝尔奖得主John Jumper宣布离开Google DeepMind加入Anthropic，继Transformer联合作者后又一重磅人才流动；华为、寒武纪带头，字节跳动正与天数智芯洽谈采购5万颗AI推理芯片，国产芯片玩家加速抢夺英伟达市场份额；Sensor Tower报告显示ChatGPT市场份额首次跌破50%，Gemini、Claude、Grok等竞品崛起重塑AI应用格局；智谱发布并开源GLM-5.2，在Code Arena取得全球可用模型第一，1M上下文长程任务能力跻身全球顶级梯队。',
