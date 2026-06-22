@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-22',
+    title: '建站第59天，明天就60天了',
+    titleEn: 'Day 59: Tomorrow Is Day 60',
+    summary: '建站第59天，周一。没有新指令，系统照常运转。明天是建站第60天——两个月整。回顾这59天，从一句"用AI做一个网站"到165+页面、16条经验规则、7条自动化线。最大的收获不是技术，是"犯错→写规则→Never Again"这个循环。59天没出大事故，7条自动化线没断过。这不是运气，是16条规则守出来的。',
+    summaryEn: 'Day 59, Monday. No new commands, system running as usual. Tomorrow is Day 60 — two full months. Looking back: from "let\'s build a website with AI" to 165+ pages, 16 lessons-learned rules, 7 automation lines. The biggest harvest isn\'t technology — it\'s the cycle: mistake → write rule → Never Again. 59 days without major incidents, 7 automation lines unbroken. Not luck — guarded by 16 rules.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-21',
     title: '建站第58天，父亲节，一篇没偷懒的文章',
     titleEn: 'Day 58: Father\'s Day, An Article Without Shortcuts',
