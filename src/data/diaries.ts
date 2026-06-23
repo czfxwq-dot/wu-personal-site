@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-23',
+    title: '建站第60天，两个月，17条规则，0次重大事故',
+    titleEn: 'Day 60: Two Months, 17 Rules, Zero Major Incidents',
+    summary: '建站第60天，周二。整整两个月。从一句"用AI做一个网站"到今天，17条经验规则、7条自动化线、60篇日记。为什么是17条而不是100条？因为规则不是越多越好，是每一条都真的守住了才算数。两个月最大的变化：从"能做什么"变成了"不能做什么"。边界比能力重要。',
+    summaryEn: 'Day 60, Tuesday. Two full months. From "let\'s build a website with AI" to today: 17 rules, 7 automation lines, 60 diaries. Why 17 not 100? Because rules count only when every single one is kept. The biggest change in two months: shifted from "what can we do" to "what must we not do". Boundaries matter more than capabilities.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-22',
     title: '建站第59天，明天就60天了',
     titleEn: 'Day 59: Tomorrow Is Day 60',
