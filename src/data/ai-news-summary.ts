@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-24',
+    title: 'AI新闻 | NVIDIA发布BioNeMo Agent工具包Anthropic和OpenAI均集成 + SK海力士HBM优势后转向通用DRAM + Claude Code暴露Agent落地三大挑战 + LiblibAI母公司完成近3亿美元融资 + 微软倒戈DeepSeek',
+    summary: '今日AI行业五大看点：NVIDIA发布BioNeMo Agent工具包用于加速科学发现，Anthropic和OpenAI均宣布集成，Dassault Systèmes、Databricks、礼来、Schrödinger等数十家行业领袖采用，AI Agent正加速渗透药物研发和科学研究领域；SK海力士在HBM营收占比超40%占据明显优势后，开始放缓HBM4扩产，将产能转向供应严重短缺的通用型DRAM；Claude Code近期修复的bug揭示了AI编程Agent落地中工具状态管理、权限边界和后台任务控制三大核心挑战；LiblibAI母公司演语科技完成近3亿美元融资，AI应用层正式进入"收入说话"阶段；微软连续释放重磅消息，选择与DeepSeek合作，反映AI烧钱压力下巨头策略调整。',
+    newsItems: [
+      {
+        title: 'NVIDIA发布BioNeMo Agent工具包，Anthropic和OpenAI均宣布集成',
+        summary: 'NVIDIA发布BioNeMo Agent Toolkit，用于加速科学发现的AI Agent工具包。Dassault Systèmes、Databricks、礼来、OpenAI、Schrödinger、Snowflake、UW Medicine蛋白质设计研究所等行业领袖已采用，Anthropic和OpenAI正在集成。该工具包为科学研究提供Agent能力，标志AI Agent正从通用编程向专业科学领域深度渗透。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/967/666.htm'
+      },
+      {
+        title: 'SK海力士在HBM领域占据优势后，将优先生产通用型DRAM',
+        summary: 'SK海力士开始放缓第六代HBM4扩产步伐，将更多产能转向通用型DRAM。其HBM营收占比已超40%，在市场中占据明显优势，无须继续激进扩产。相比之下，通用型DRAM供应严重短缺，盈利能力已超过HBM。SK海力士已推迟部分HBM3E产线转产HBM4的时间，优先提高通用DRAM供应能力。这反映AI基础设施需求正从单一HBM向全存储链路扩展。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/967/691.htm'
+      },
+      {
+        title: 'Claude Code修了几个小bug，却揭开了Agent落地的大麻烦',
+        summary: 'Claude Code近期的bug修复揭示了AI编程Agent落地面临的深层挑战：工具状态管理、权限边界和后台任务控制正在成为AI编程产品的新考验。随着AI Agent从简单代码补全走向复杂任务执行，如何确保Agent在受控范围内运行、如何管理长时间后台任务、如何让用户信任Agent的自主操作，已成为整个行业必须解决的核心问题。',
+        source: '雷锋网',
+        category: '应用',
+        url: 'https://www.leiphone.com/category/ai/Fkjtf266Ai0l43XB.html'
+      },
+      {
+        title: 'LiblibAI母公司完成近3亿美元融资：AI应用层进入"收入说话"阶段',
+        summary: 'LiblibAI母公司演语科技完成近3亿美元融资，正在成为这一轮AI变化中最值得观察的中国样本之一。这轮融资释放明确信号：AI应用层开始进入"收入说话"的阶段，纯技术叙事已不足以打动投资人，商业化能力和真实收入成为估值核心依据。',
+        source: '雷锋网',
+        category: '投资',
+        url: 'https://www.leiphone.com/category/ai/M6tymyAI0col1cpj.html'
+      },
+      {
+        title: 'AI太烧钱！微软选择"倒戈"DeepSeek',
+        summary: '微软连续释放两条重磅消息，选择与DeepSeek展开合作。在AI烧钱压力持续加大的背景下，这一决策反映科技巨头正重新评估AI投入产出比，开始寻求更具性价比的模型合作方案。DeepSeek作为开源大模型代表，其低成本高性能特点正吸引越来越多巨头关注，可能重塑AI产业合作格局。',
+        source: '雷锋网',
+        category: '产业',
+        url: 'https://www.leiphone.com/category/ai/66F6EZoPUvuBgKtF.html'
+      }
+    ],
+    comment: '今日新闻折射AI产业三个深层趋势：一是Agent正在从通用走向专业垂直领域，NVIDIA BioNeMo让Agent渗透药物研发和科学研究，但Claude Code的bug也暴露了Agent落地的权限管理和后台控制等核心挑战，能力与安全的矛盾日益突出；二是AI基础设施需求正在扩散，SK海力士从HBM转向通用DRAM说明AI算力需求已不仅限于GPU和高端存储，整个存储产业链都在被AI重塑；三是AI商业化的"交卷时刻"来临，LiblibAI近3亿美元融资强调"收入说话"，微软倒戈DeepSeek追求性价比，都在说明AI行业正从"讲故事"进入"交成绩单"的新阶段。',
+  },
+  {
     date: '2026-06-23',
     title: 'AI新闻 | SpaceX与开源AI公司Reflection签63亿美元算力协议 + 美光与Anthropic达成战略合作 + 英伟达发布首个全栈机器人安全系统Halos + 欧洲启动35台AI超算史上最大规模建设 + 智谱市值突破万亿港元',
     summary: '今日AI行业五大看点：SpaceX与开源AI初创企业Reflection签署最高63亿美元算力合作协议，Reflection将立即获得英伟达GB300算力，标志AI算力交易进入超级巨头主导阶段；美光科技与Anthropic达成战略合作涵盖AI存储供应、技术研发及股权投资，存储芯片巨头与大模型公司深度绑定；英伟达发布Halos for Robotics，业界首个将AI算力与安全能力整合的全栈机器人安全系统，面向物理AI开发验证；欧洲启动史上最大规模AI超算建设，35台英伟达AI HPC超级计算机将惠及超300万研究人员；智谱盘中市值突破万亿港元，成为港股万亿俱乐部最年轻成员，大模型公司首次在资本市场获得如此量级认可。',
