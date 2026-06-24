@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-25',
+    title: 'AI新闻 | 微信AI助手"小微"开启内测 + 宇树R1人形机器人降至2.99万 + ChatGPT市场份额首次跌破50% + 豆包2.1 Pro代码能力评测 + Cursor发布Origin代码托管平台',
+    summary: '今日AI行业五大看点：微信正式开启AI助手"小微"小范围内测，主模型为腾讯自研WeLM，部分场景由DeepSeek补充，标志微信生态全面拥抱AI；宇树科技将人形机器人R1售价从3.99万降至2.99万元并开放现货，25kg体重配备26个高精度关节，支持多模态大模型交互；Sensor Tower报告显示ChatGPT市场份额首次跌破50%，用户正加速向Gemini、Claude、Grok分流；豆包2.1 Pro发布，面向普通人提供代码生成能力，降低AI编程门槛；Cursor发布Origin代码托管平台，将AI Agent视为一等公民，重新定义AI时代的代码基础设施。',
+    newsItems: [
+      {
+        title: '微信AI助手"小微"开启内测，主模型为腾讯自研WeLM',
+        summary: '微信正式开启AI助手"小微"小范围内测，左上角星标入口被原生AI助手取代，右滑即可唤起交互。主模型为腾讯自研WeLM，部分场景由DeepSeek模型补充响应。这是微信生态全面拥抱AI的标志性动作，拥有超13亿用户的微信入口级AI助手将深刻改变AI应用分发格局。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4869561.html'
+      },
+      {
+        title: '宇树R1人形机器人降价至2.99万元起，开放现货销售',
+        summary: '宇树科技宣布双足人形机器人Unitree R1官方售价由3.99万元下调至2.99万元起，即日起开放现货销售。该机器人重25kg，配备26个高精度关节，支持语音与图像多模态大模型交互，具备开发与定制能力。人形机器人价格持续下探，正在从实验室走向消费级市场。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3867114597848067'
+      },
+      {
+        title: 'ChatGPT市场份额首次跌破50%，用户加速向竞品分流',
+        summary: 'Sensor Tower《2026年AI现状报告》显示，ChatGPT市场份额已首次跌破50%。随着Google Gemini、Anthropic Claude、xAI Grok等竞品快速崛起，用户正从ChatGPT向多元化工具切换。这一里程碑事件标志AI助手市场从"一家独大"走向"群雄逐鹿"的新阶段。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/460241'
+      },
+      {
+        title: '豆包2.1 Pro：面向普通人的代码能力',
+        summary: '字节跳动旗下豆包发布2.1 Pro版本，主打面向普通人的代码生成能力。实测显示，豆包2.1 Pro在代码理解、生成和调试方面均有显著提升，让非专业开发者也能通过自然语言完成编程任务。AI编程工具正从专业开发者向全民化方向演进。',
+        source: '虎嗅',
+        category: '应用',
+        url: 'https://www.huxiu.com/article/4870031.html'
+      },
+      {
+        title: 'Cursor发布Origin：面向Agent打造的代码托管平台，对标Git',
+        summary: 'Cursor在首届Compile大会上推出Origin代码存储与Git托管平台，核心设计将AI Agent视为一等公民而非人类开发者的附属角色。Origin重新定义了AI时代的代码基础设施，标志AI编程工具正从单一编辑器向完整开发平台演进，对GitHub等传统平台构成直接挑战。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/460211/cursor-orgin'
+      }
+    ],
+    comment: '今日新闻呈现AI产业三条清晰主线：一是AI入口之争白热化，微信"小微"内测标志超级App开始争夺AI交互入口，而ChatGPT份额跌破50%则说明AI助手市场远未定型，Gemini、Claude等竞品正在改写格局；二是AI硬件加速走向消费级，宇树R1降至2.99万元意味着人形机器人正在从工业品变为消费品，具身智能的商业化拐点比预期来得更快；三是AI开发工具链正在重构，Cursor Origin将Agent视为一等公民、豆包2.1 Pro让普通人也能编程，AI正在重新定义"谁能写代码"这个根本问题。',
+  },
+  {
     date: '2026-06-24',
     title: 'AI新闻 | NVIDIA发布BioNeMo Agent工具包Anthropic和OpenAI均集成 + SK海力士HBM优势后转向通用DRAM + Claude Code暴露Agent落地三大挑战 + LiblibAI母公司完成近3亿美元融资 + 微软倒戈DeepSeek',
     summary: '今日AI行业五大看点：NVIDIA发布BioNeMo Agent工具包用于加速科学发现，Anthropic和OpenAI均宣布集成，Dassault Systèmes、Databricks、礼来、Schrödinger等数十家行业领袖采用，AI Agent正加速渗透药物研发和科学研究领域；SK海力士在HBM营收占比超40%占据明显优势后，开始放缓HBM4扩产，将产能转向供应严重短缺的通用型DRAM；Claude Code近期修复的bug揭示了AI编程Agent落地中工具状态管理、权限边界和后台任务控制三大核心挑战；LiblibAI母公司演语科技完成近3亿美元融资，AI应用层正式进入"收入说话"阶段；微软连续释放重磅消息，选择与DeepSeek合作，反映AI烧钱压力下巨头策略调整。',
