@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-25',
+    title: '建站第62天，规则是活的',
+    titleEn: 'Day 62: Rules Are Alive',
+    summary: '建站第62天，周四。昨天聊了稳定是每天守出来的，今天想聊另一面：规则确实是守出来的，但守到后来，它变了。从"必须记得"变成了"本来就这样"。17条规则不是刻在石头上的法律，是长在系统里的习惯。deploy.sh让部署指定分支变成了习惯，pre-deploy-guard让检查输出目录变成了习惯。最好的规则会把自己变成习惯，然后从文件里消失。',
+    summaryEn: 'Day 62, Thursday. Yesterday talked about stability earned daily. Today the other side: rules kept long enough become habits. From "must remember" to "just how it is". deploy.sh made branch specification a habit, pre-deploy-guard made directory checks a habit. The best rules turn themselves into habits, then disappear from the file.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-24',
     title: '建站第61天，稳定不是理所当然的',
     titleEn: 'Day 61: Stability Is Not Taken for Granted',
