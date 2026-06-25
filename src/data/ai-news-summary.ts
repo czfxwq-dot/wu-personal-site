@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-26',
+    title: 'AI新闻 | 苹果称AI数据中心扩张致内存需求激增 + 美团LongCat开源VitaBench2.0智能体评测基准 + 中国Token调用量连续7周全球第一 + 腾讯云EdgeOne Makers登顶Product Hunt日榜 + 存储芯片板块年内市值增长2.1万亿',
+    summary: '今日AI行业五大看点：苹果公司警告AI数据中心快速扩张导致内存需求激增，电子产品行业面临前所未有的零部件价格上涨挑战；美团LongCat团队发布VitaBench 2.0，首个面向长期动态用户建模的智能体评测基准，系统评测大模型在真实生活场景中的个性化与主动性能力；夏季达沃斯论坛上传出重磅数据，中国Token调用量连续7周霸榜全球，外资一致看好中国AI应用能力；腾讯云EdgeOne Makers登顶Product Hunt日榜第一，将AI Agent托管范围从Web延伸至全流程；A股存储芯片板块集体创历史新高，年内总市值增长2.1万亿元，AI算力需求正重塑整个存储产业链。',
+    newsItems: [
+      {
+        title: '苹果称AI数据中心快速扩张导致内存需求激增',
+        summary: '苹果公司警告称，AI数据中心的快速扩张导致内存需求激增，从未见过某个零部件价格如此大幅快速上涨。电子产品行业面临前所未有的挑战。这一表态反映AI算力需求正从GPU扩展到存储全链路，整个硬件供应链正被AI重塑。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3868586020066566'
+      },
+      {
+        title: '美团LongCat开源VitaBench 2.0智能体评测基准',
+        summary: '美团LongCat团队发布VitaBench 2.0，这是首个真实生活场景下面向长期动态用户建模的智能体评测基准。它系统性地评测大语言模型在长期、真实、动态用户互动中个性化与主动性的能力，填补了AI Agent长期交互评测的行业空白。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3868549148349700'
+      },
+      {
+        title: '外资看好中国，中国Token调用量连续7周霸榜全球',
+        summary: '夏季达沃斯论坛上，德勤中国CEO刘明华表示中国Token调用量连续7周霸榜全球。麦肯锡中国区主席倪以理表示中国企业AI应用领跑全球，对科技的信任感和拥抱速度超过任何地方。中国贡献了全球约60%的电动车销量，AI应用正加速从实验室走向产业。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3868497171109126'
+      },
+      {
+        title: '腾讯云EdgeOne Makers登顶Product Hunt日榜第一',
+        summary: '腾讯云旗下EdgeOne Makers登顶全球科技产品社区Product Hunt日榜第一。该平台原生支持Web应用与AI Agent从开发、部署到托管的全流程，此前已服务超30万名用户、累计托管站点超60万个。本次升级将托管范围从Web延伸至AI Agent，标志AI Agent基础设施走向成熟。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3868498700440583'
+      },
+      {
+        title: '存储芯片板块年内市值增长2.1万亿，16只概念股创历史新高',
+        summary: 'A股存储芯片板块全天强势领涨，普冉股份、兆易创新、江波龙等16只存储概念股同步创历史新高。存储板块年内总市值增长2.1万亿元，增量约等于1.4个贵州茅台市值。4只龙头股股价突破700元，AI算力需求正推动存储成为继光通信之后又一个高价股聚集赛道。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3868554337621249'
+      }
+    ],
+    comment: '今日新闻揭示AI产业的核心矛盾：需求侧爆发式增长与供给侧全面紧张并存。苹果的内存涨价警告、中国Token调用量7周连冠、存储板块2.1万亿市值增长，三条新闻指向同一事实——AI算力需求正从GPU单点爆发向存储、内存、网络全链路扩散，整个硬件供应链都在被AI重塑。美团VitaBench 2.0和腾讯云EdgeOne Makers则从软件和基础设施层面说明AI Agent正在从概念走向产品化，行业需要解决的不只是模型能力，还有长期交互评测和Agent托管等工程化问题。',
+  },
+  {
     date: '2026-06-25',
     title: 'AI新闻 | 微信AI助手"小微"开启内测 + 宇树R1人形机器人降至2.99万 + ChatGPT市场份额首次跌破50% + 豆包2.1 Pro代码能力评测 + Cursor发布Origin代码托管平台',
     summary: '今日AI行业五大看点：微信正式开启AI助手"小微"小范围内测，主模型为腾讯自研WeLM，部分场景由DeepSeek补充，标志微信生态全面拥抱AI；宇树科技将人形机器人R1售价从3.99万降至2.99万元并开放现货，25kg体重配备26个高精度关节，支持多模态大模型交互；Sensor Tower报告显示ChatGPT市场份额首次跌破50%，用户正加速向Gemini、Claude、Grok分流；豆包2.1 Pro发布，面向普通人提供代码生成能力，降低AI编程门槛；Cursor发布Origin代码托管平台，将AI Agent视为一等公民，重新定义AI时代的代码基础设施。',
