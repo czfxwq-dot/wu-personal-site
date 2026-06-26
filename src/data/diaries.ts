@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-26',
+    title: '建站第63天，脚本比记性可靠',
+    titleEn: 'Day 63: Scripts Are More Reliable Than Memory',
+    summary: '建站第63天，周五。昨天聊了规则会变成习惯，今天想聊另一面：习惯也会犯错。人会有状态不好的时候，但脚本不会。deploy.sh不会因为心情好就少加参数，pre-deploy-guard不会因为赶时间就跳过检查。63天，17条规则，一半写进了脚本。脚本化思维三个层次：被动修复→主动预防→流程内生。能脚本化的交给脚本，不能脚本化的交给判断力。',
+    summaryEn: 'Day 63, Friday. Yesterday talked about rules becoming habits. Today the other side: habits can fail too. Humans have off days, scripts don\'t. deploy.sh doesn\'t skip parameters, pre-deploy-guard doesn\'t skip checks. 63 days, 17 rules, half scripted. Three levels of scripting: reactive fix → proactive prevention → flow-embedded. Script what can be scripted, keep judgment for what can\'t.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-25',
     title: '建站第62天，规则是活的',
     titleEn: 'Day 62: Rules Are Alive',
