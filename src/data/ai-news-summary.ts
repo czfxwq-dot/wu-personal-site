@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-06-30',
+    title: 'AI新闻 | DeepSeek V4正式版引入峰谷定价 + 加州全州政务普及Claude大模型 + 微软收回Claude Code许可暴露Token成本困境 + 比亚迪自研4nm智驾芯片算力超700TOPS + MLCC因AI需求全球缺货',
+    summary: '今日AI行业五大看点：DeepSeek向开发者发送调价邮件，V4正式版将于7月中旬上线并引入峰谷定价机制，高峰期API价格翻倍，大模型商业化进入精细化定价阶段；美国加州州长与Anthropic签约，在全州各级政府推广Claude大模型，政务AI应用加速落地；微软内部收回Claude Code许可，开放6个月即因Token消耗暴涨而踩刹车，暴露企业级AI应用的成本困境；比亚迪发布自研4nm智驾芯片璇玑A3，单颗算力超700 TOPS，三颗协同超2100 TOPS，预计2027年首搭量产车型；AI算力需求激增推动MLCC（多层片式陶瓷电容器）全球缺货，产能逼近物理极限，高盛将其与GPU并列为下一个涨价焦点。',
+    newsItems: [
+      {
+        title: 'DeepSeek V4正式版将引入峰谷定价，高峰期API价格翻倍',
+        summary: '多位DeepSeek API用户确认收到调价邮件，V4正式版计划于7月中旬上线，同步引入峰谷定价机制。V4Pro和V4Flash模型平时价格不变，但高峰时段API价格将翻倍。这是国产大模型首次采用峰谷定价策略，标志大模型商业化从统一价格走向精细化运营，也反映出算力资源在高峰时段的紧张态势。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3874257198880005'
+      },
+      {
+        title: '美国加州州长与Anthropic签约，全州政务半价普及Claude大模型',
+        summary: '加州州长纽森与Anthropic达成合作，以优惠采购价在加州各级政府全面推广Claude系列大模型。Claude将成为首个面向加州全部州属部门、市县地方政府开放的AI工具。此前Anthropic与特朗普联邦政府持续博弈，此次签约标志AI大模型在政务领域加速落地，也显示地方政府对AI工具的需求已超越联邦层面的政策阻力。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3874214392386564'
+      },
+      {
+        title: 'Token不经济：微软收回Claude Code许可，AI编程成本困境浮现',
+        summary: '微软在内部收回Claude Code许可，该工具在开放仅6个月后成为最受欢迎的辅助开发软件之一，但随之而来的是Token消耗剧增、成本暴涨，产出质量却不尽如人意。微软踩下刹车将员工导向自家Copilot。这一事件暴露了企业级AI应用的核心矛盾：工具好用但成本不可持续，Token经济模型仍待验证。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4871362.html'
+      },
+      {
+        title: '比亚迪自研4nm智驾芯片璇玑A3，单颗算力超700 TOPS',
+        summary: '比亚迪计划2027年在腾势品牌量产新车上首搭自研智驾芯片璇玑A3。这颗4nm芯片单颗算力超700 TOPS，三颗协同总算力超2100 TOPS，支持L3、L4自动驾驶，已开始量产。比亚迪称单位算力功耗较同类产品更优，标志中国车企在智驾芯片领域加速自主可控，打破对英伟达等海外芯片供应商的依赖。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3874197541344262'
+      },
+      {
+        title: 'AI需求驱动MLCC全球缺货，产能逼近物理极限',
+        summary: '日本厂商太阳诱电发出警告：MLCC（多层片式陶瓷电容器）需求已达"恐怖级别"，产能逼近物理极限。MLCC是手机、电脑、汽车等几乎所有科技产品的基础元器件，AI算力集群的扩张大幅推高了需求量。高盛近期分析将MLCC与GPU并列为下一个涨价焦点，芯片和内存之后，AI供应链的涨价压力正向更上游传导。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4871373.html'
+      }
+    ],
+    comment: '今日新闻呈现AI产业两条主线：一是成本压力从下游向上游传导——DeepSeek峰谷定价说明算力资源紧张已传导至模型层，微软收回Claude Code说明Token成本已超出企业承受力，MLCC缺货则表明AI需求正推高最基础的电子元器件价格；二是AI落地加速——加州政务全面拥抱Claude、比亚迪自研智驾芯片量产，AI正从技术竞赛走向真实世界的大规模部署。',
+  },
+  {
     date: '2026-06-29',
     title: 'AI新闻 | 智元机器人第15000台下线具身智能量产里程碑 + 字节豆包正式收费终结免费AI时代 + ChatGPT市场份额首次跌破50% + GLM-5.2上线开源登顶Code Arena + 京东发布国内首个智能体自主支付协议A2P2',
     summary: '今日AI行业五大看点：智元机器人第15000台通用具身机器人正式量产下线，从2023年6台原型机到2026年1.5万台仅用三年，具身智能跨过量产关；字节跳动旗下豆包正式推出专业版订阅服务，68元至500元三档套餐标志国民级AI产品告别免费时代；Sensor Tower报告显示ChatGPT市场份额首次跌破50%，用户在Gemini、Claude、Grok间分流，AI聊天市场进入多极竞争；智谱发布并开源GLM-5.2，在Code Arena取得全球可用模型第一，1M上下文长程任务能力跻身全球顶级梯队；京东发布国内首个智能体自主支付协议A2P2，让AI智能体在规则约束下自主完成支付，Agent商业化基础设施加速完善。',
