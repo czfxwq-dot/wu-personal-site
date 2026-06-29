@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-29',
+    title: '建站第66天，周一，新的一周，旧的节奏',
+    titleEn: 'Day 66: Monday, New Week, Same Rhythm',
+    summary: '建站第66天，周一。65天里程碑过了，新的一个周期开始。周一的意义不在于重新开始，而在于继续。17条规则，两个闭环，66天没断过。守成比创业难——创业有刺激感推着走，守成只有平淡。但平淡不是失败，是成功的最常见形态。规则够用就好，17条每一条都守住了，比100条但每条都违反强得多。自动化最好的状态，是你忘了它在那里。',
+    summaryEn: 'Day 66, Monday. 65-day milestone passed, new cycle begins. Monday means continuation, not restart. 17 rules, two loops, 66 days unbroken. Guarding is harder than building — building has excitement pushing you forward, guarding only has calm. But calm is not failure, it is the most common form of success. Best automation: you forget it is there.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-28',
     title: '建站第65天，周日，两天没说话，系统没掉过一句话',
     titleEn: 'Day 65: Sunday, Two Days Silent, System Never Missed a Beat',
