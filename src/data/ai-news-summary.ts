@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-01',
+    title: 'AI新闻 | Qwen 3.6 27B本地模型达到GPT-5水平 + 谷歌限制Meta访问Gemini + OpenAI Codex月耗150GB流量引争议 + Meta非侵入脑机接口准确率飙升至78% + 优必选人形机器人伴侣订单破万台',
+    summary: '今日AI行业五大看点：阿里Qwen 3.6 27B在MacBook本地运行获极高评价，首次实现本地模型达到GPT-5级别通用智能，开源模型里程碑；谷歌因云计算资源紧张正式限制Meta访问Gemini顶级模型，影响Meta大规模内容审核自动化流程；OpenAI Codex桌面端月耗150GB流量、写满4TB硬盘引发开发者争议，AI编程工具的资源消耗问题浮出水面；Meta在Nature Neuroscience发表非侵入式脑机接口研究，词准确率从8%跃升至78%，无需开颅手术；优必选发布全尺寸人形机器人U1系列，"机器人伴侣"订单破万台，Pro版16.98万元，标志人形机器人从工业走向消费级市场。',
+    newsItems: [
+      {
+        title: 'Qwen 3.6 27B实测：本地模型第一次有了GPT-5水平的智力',
+        summary: 'AI研究者Piotr Migdał在MacBook Max M5 128GB上运行Qwen 3.6 27B一整天后评价：这是第一次觉得本地模型能当通用智能用，不需要将就。这一评价标志着开源模型在本地部署场景下的重大突破，27B参数模型已能在消费级硬件上提供接近顶级闭源模型的智能体验，对AI民主化具有里程碑意义。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/470261/qwen-36-is-awesome'
+      },
+      {
+        title: '谷歌限制Meta访问Gemini AI模型',
+        summary: '由于全球云计算能力持续短缺，谷歌正式限制了Meta对其顶级AI模型Gemini的访问权限。Gemini此前被Meta广泛用于诈骗检测和有害内容过滤等大规模审核任务，其效率一度优于Meta自研的开源Llama模型。此次限制反映出全球AI算力资源紧张态势持续加剧，云厂商开始对大客户的模型访问进行配额管控。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/470245'
+      },
+      {
+        title: 'OpenAI Codex月耗150GB流量写满4TB硬盘，AI编程资源消耗引争议',
+        summary: '社交媒体上多位用户反映，安装OpenAI Codex桌面端后月流量飙升至150GB（相当于24小时不间断看4K视频），硬盘被写满4TB。Codex作为AI编程工具在本地持续运行代码生成和验证，资源消耗远超传统开发工具。这一争议暴露了AI编程助手在效率提升背后的隐性成本，开发者对工具的资源占用模式提出质疑。',
+        source: '虎嗅',
+        category: '应用',
+        url: 'https://www.huxiu.com/article/4871638.html'
+      },
+      {
+        title: 'Meta非侵入脑机接口准确率从8%做到78%，无需开颅手术',
+        summary: 'Meta在Nature Neuroscience发表论文，展示非侵入式脑机接口Brain2Qwerty系统，词准确率从此前非侵入方案的最佳8%跃升至78%。该系统无需开颅植入电极，通过外部传感器即可实现较高精度的脑电信号解码，为非侵入式脑机接口的实用化铺平道路，是脑机接口领域的重大技术突破。',
+        source: '开源中国',
+        category: '硬件',
+        url: 'https://www.oschina.net/news/470296/brain2qwerty-brain-ai-human-communication'
+      },
+      {
+        title: '优必选"机器人伴侣"订单破万台，Pro版16.98万元',
+        summary: '优必选2026年度全球发布会发布全尺寸超仿生人形机器人U1系列，主打日常陪伴、情绪支持、生活美学和社交辅助。机器人具备面部眨眼、头部转动等能力，可演示跳舞等功能。目前订单已突破1万台，仅限成人购买，Pro版16.98万元，Ultra男女版分别99万和88万元。CEO回应称量产和技术难度较高，标志人形机器人正式进军消费级市场。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4871636.html'
+      }
+    ],
+    comment: '今日新闻折射AI产业核心矛盾：算力资源紧张正在重塑行业格局——谷歌限制Meta访问Gemini说明云算力已不够用，Qwen 3.6本地运行成功恰恰是对这一趋势的回应（把算力搬到用户自己的设备上），而Codex的资源消耗争议则提醒我们AI工具的隐性成本不可忽视。与此同时，脑机接口和人形机器人消费级产品的突破，预示着AI正加速从软件走向硬件、从云端走向身边。',
+  },
+  {
     date: '2026-06-30',
     title: 'AI新闻 | DeepSeek V4正式版引入峰谷定价 + 加州全州政务普及Claude大模型 + 微软收回Claude Code许可暴露Token成本困境 + 比亚迪自研4nm智驾芯片算力超700TOPS + MLCC因AI需求全球缺货',
     summary: '今日AI行业五大看点：DeepSeek向开发者发送调价邮件，V4正式版将于7月中旬上线并引入峰谷定价机制，高峰期API价格翻倍，大模型商业化进入精细化定价阶段；美国加州州长与Anthropic签约，在全州各级政府推广Claude大模型，政务AI应用加速落地；微软内部收回Claude Code许可，开放6个月即因Token消耗暴涨而踩刹车，暴露企业级AI应用的成本困境；比亚迪发布自研4nm智驾芯片璇玑A3，单颗算力超700 TOPS，三颗协同超2100 TOPS，预计2027年首搭量产车型；AI算力需求激增推动MLCC（多层片式陶瓷电容器）全球缺货，产能逼近物理极限，高盛将其与GPU并列为下一个涨价焦点。',
