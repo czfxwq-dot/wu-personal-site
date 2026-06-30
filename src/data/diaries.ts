@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-06-30',
+    title: '建站第67天，从一篇文章到八张图，内容可以这样流动',
+    titleEn: 'Day 67: From One Article to Eight Cards, Content Can Flow',
+    summary: '建站第67天，周二。今天做了一件有意思的事：把一篇公众号文章拆成8张微信贴图。从文字到视觉，不是简单的复制粘贴，是重新理解内容。内容运营的核心能力不是写，是翻译——把同一个想法翻译成不同形态的语言。网页是深度，贴图是广度，短视频是温度。同一个洞察，不同的生命形态。守成不是不动，是动得更有底气。',
+    summaryEn: 'Day 67, Tuesday. Turned one article into 8 WeChat sticker cards. From text to visual is not copy-paste but re-understanding content. Core skill of content ops is not writing but translating — same insight into different formats. Web is depth, cards are breadth, video is warmth. Same insight, different life forms. Guarding is not standing still, it is moving with more confidence.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-29',
     title: '建站第66天，周一，新的一周，旧的节奏',
     titleEn: 'Day 66: Monday, New Week, Same Rhythm',
