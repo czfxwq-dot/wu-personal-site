@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-02',
+    title: 'AI新闻 | Meta拟出售闲置AI算力创收 + OpenAI推出GeneBench-Pro生物基准测试 + 行云科技签55亿元算力大单 + 百度引入大模型专家孙天祥 + Anthropic被质疑对中国用户"赛博二等公民"待遇',
+    summary: '今日AI行业五大看点：Meta正筹划构建云基础设施业务，计划出售闲置AI算力和模型使用权创收，标志算力从成本中心转向收入来源；OpenAI推出GeneBench-Pro基准测试，专门评估AI模型在生物学计算任务中的真实研究能力，AI for Science持续深化；行云科技控股子公司签署55.08亿元算力服务合同，为期5年，反映算力需求持续旺盛；百度引入大模型技术专家孙天祥就任基础模型研发部负责人，持续加码AI基础模型投入；虎嗅发文质疑Anthropic对中国用户的限制性政策，引发"AI工具地域歧视"讨论。',
+    newsItems: [
+      {
+        title: 'Meta考虑出售闲置AI算力使用权以创收',
+        summary: '据报道，Meta Platforms正筹划构建一项云基础设施业务，计划出售闲置AI算力和模型的使用权来创收。这一动向表明Meta正将其大规模AI投资从纯成本中心转化为潜在收入来源，同时也反映出全球AI算力资源仍然紧张，有算力的公司开始对外出租获利。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3877069027913989'
+      },
+      {
+        title: 'OpenAI推出GeneBench-Pro基准测试，评估AI生物学计算能力',
+        summary: 'OpenAI宣布推出GeneBench-Pro基准测试，主要用于评估AI模型在生物学计算任务中的真实研究能力，重点衡量模型在基因序列分析、蛋白质结构预测等科学任务上的表现。这是AI for Science领域的又一重要推进，表明大模型正从通用对话向专业科学研究领域深化。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/971/383.htm'
+      },
+      {
+        title: '行云科技：控股子公司签订55.08亿元算力服务合同',
+        summary: '行云科技公告，公司控股子公司海南行云与VC客户签署计算平台服务协议，提供为期5年的算力服务，合同含税总金额55.08亿元。这是近期国内算力服务领域最大的单笔合同之一，反映出AI训练和推理对算力的持续旺盛需求，算力基础设施投资热度不减。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3877046632460553'
+      },
+      {
+        title: '百度持续加码AI技术投入，引入大模型专家孙天祥',
+        summary: '近日，大模型领域技术专家孙天祥正式加入百度，就任基础模型研发部（BMU）负责人。孙天祥同时进入百度模型委员会（BMC），从研发MOSS到提出MaaS再到其后续创业方向，学术与产业路径与百度基础模型战略投入方向高度契合，体现百度在基础大模型领域持续招兵买马的决心。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3877032431726598'
+      },
+      {
+        title: '为什么说Anthropic是邪恶的？AI工具地域歧视引争议',
+        summary: '虎嗅发文质疑Anthropic对中国用户的限制性政策：中国用户需要使用海外节点、海外信用卡注册，且随时面临账号被封的风险。文章指出这种"赛博二等公民"待遇长期存在，Anthropic近期的封号行动进一步加剧了这一问题。这引发了关于AI工具是否应该存在地域歧视的广泛讨论。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4871870.html'
+      }
+    ],
+    comment: '今日新闻的核心主题是"算力"：Meta要把闲置算力变成收入、行云科技签下55亿大单、百度持续招兵买马——算力正在成为AI时代的硬通货。与此同时，OpenAI用GeneBench-Pro推动AI进入科学研究、Anthropic的地域歧视争议则提醒我们：AI工具的开放性与公平性仍是未解难题。',
+  },
+  {
     date: '2026-07-01',
     title: 'AI新闻 | Qwen 3.6 27B本地模型达到GPT-5水平 + 谷歌限制Meta访问Gemini + OpenAI Codex月耗150GB流量引争议 + Meta非侵入脑机接口准确率飙升至78% + 优必选人形机器人伴侣订单破万台',
     summary: '今日AI行业五大看点：阿里Qwen 3.6 27B在MacBook本地运行获极高评价，首次实现本地模型达到GPT-5级别通用智能，开源模型里程碑；谷歌因云计算资源紧张正式限制Meta访问Gemini顶级模型，影响Meta大规模内容审核自动化流程；OpenAI Codex桌面端月耗150GB流量、写满4TB硬盘引发开发者争议，AI编程工具的资源消耗问题浮出水面；Meta在Nature Neuroscience发表非侵入式脑机接口研究，词准确率从8%跃升至78%，无需开颅手术；优必选发布全尺寸人形机器人U1系列，"机器人伴侣"订单破万台，Pro版16.98万元，标志人形机器人从工业走向消费级市场。',
