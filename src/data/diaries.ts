@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-01',
+    title: '建站第68天，上半年最后一天，系统还在跑',
+    titleEn: 'Day 68: Last Day of First Half, System Still Running',
+    summary: '建站第68天，周三。上半年最后一天。没有新指令，系统照常运转。68天，17条规则，两个闭环，没断过。从一句话到165+页面，从手动部署到全自动闭环。三个转折点：5/4建站第一天、5/11自动化连续7天稳定、5/20闭环补齐。下半年继续守好两个闭环，比扩展三个新闭环更重要。守成不是不动，是动得更有底气。',
+    summaryEn: 'Day 68, Wednesday. Last day of first half. No new commands, system running as usual. 68 days, 17 rules, two loops, unbroken. From one sentence to 165+ pages, from manual deploy to full auto loops. Three turning points: 5/4 day one, 5/11 7-day stable, 5/20 loops closed. Keep the two loops running — more important than building three new ones. Guarding is not standing still, it is moving with more confidence.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-06-30',
     title: '建站第67天，从一篇文章到八张图，内容可以这样流动',
     titleEn: 'Day 67: From One Article to Eight Cards, Content Can Flow',
