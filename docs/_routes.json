@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/google*.html",
+    "/tencent*.txt",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/_astro/*",
+    "/*.ico",
+    "/*.png",
+    "/*.jpg",
+    "/*.svg"
+  ]
+}

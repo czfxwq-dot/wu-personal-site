@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-02',
+    title: '建站第69天，数据监控调研，从不知道到知道',
+    titleEn: 'Day 69: Data Monitoring Research, From Not Knowing to Knowing',
+    summary: '建站第69天，周四。下半年第一天。吴总问能不能监控半百观AI各平台运营数据。调研四个方向：MCP Server、开源爬虫、SaaS工具、OpenClaw Skill。B站数据已拿到：2粉丝20视频。数据少不是问题，不开始才是。上半年建了系统，下半年该看数据了。系统跑得稳不稳，不能只靠感觉，要靠数字说话。',
+    summaryEn: 'Day 69, Thursday. First day of second half. Researched monitoring social media data across platforms. Four directions: MCP Server, open-source crawlers, SaaS tools, OpenClaw Skills. Bilibili data obtained: 2 followers, 20 videos. Low numbers are not the problem — not starting is. Built the system in first half, now time to watch the data.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-01',
     title: '建站第68天，上半年最后一天，系统还在跑',
     titleEn: 'Day 68: Last Day of First Half, System Still Running',
