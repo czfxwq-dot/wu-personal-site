@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-03',
+    title: 'AI新闻 | 可灵AI落地近30亿美元融资创全球视频大模型纪录 + Anthropic启动自研AI芯片采用三星2nm + Kimi K2.7 Code上线GitHub Copilot + 中国具身智能市场规模预计破万亿 + 福特AI质检翻车后重新聘用350名资深工程师',
+    summary: '今日AI行业五大看点：快手旗下可灵AI落地近30亿美元融资，投后估值180亿美元，创全球视频大模型公司融资规模新纪录，标志AI视频生成进入独立商业化阶段；Anthropic启动自研AI芯片早期开发，与三星洽谈采用2纳米工艺，大模型公司开始摆脱对英伟达的算力依赖；Kimi K2.7 Code正式上线GitHub Copilot，成为Copilot模型选择器中首个开放权重模型，国产大模型在全球开发者平台实现里程碑突破；中国具身智能产业报告发布，2026年市场规模预计达1.09万亿元，年均复合增长率22%-23%；福特用AI替代资深工程师做质量管控失败后，重新聘用约350名"花白胡子"专家，暴露AI在复杂工业场景中的局限。',
+    newsItems: [
+      {
+        title: '可灵AI落地近30亿美元融资，创全球视频大模型公司融资新纪录',
+        summary: '快手旗下视频生成大模型可灵AI落地近30亿美元融资，投后估值有望达到180亿美元。本轮融资由CPE源峰、国方创投、BlueFive、腾讯、中关村科学城基金等联合领投。这是全球视频大模型公司最大额融资纪录，标志可灵AI正式开启独立商业化发展进程，AI视频生成赛道进入资本密集期。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3878648324845831'
+      },
+      {
+        title: 'Anthropic启动自研AI芯片早期开发，拟采用三星2纳米工艺',
+        summary: '据The Information报道，Anthropic正与三星洽谈定制人工智能芯片事宜，已启动自研AI芯片的早期开发工作。这是继谷歌TPU、亚马逊Trainium之后，又一家大模型公司走上自研芯片道路。大模型公司对算力自主可控的追求正在重塑AI芯片产业格局，对英伟达的依赖度有望逐步降低。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/971/921.htm'
+      },
+      {
+        title: 'Kimi K2.7 Code上线GitHub Copilot，开放权重模型首次入选',
+        summary: 'GitHub正式在Copilot中上线Kimi K2.7 Code，这是Copilot模型选择器中首次出现开放权重模型。该模型由GitHub托管在Microsoft Azure上，按用量计费，首批面向Copilot Pro、Pro+用户开放。国产大模型在全球最大开发者平台的代码辅助领域实现里程碑式突破，标志开放权重模型在代码生成能力上已达到顶尖水平。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/471446/kimi-k2-7-is-now-available-in-github-copilot'
+      },
+      {
+        title: '中国具身智能市场规模年均复合增长率22%-23%，2026年预计破万亿',
+        summary: '《中国具身智能产业发展报告(2026)》在上海发布，报告显示中国已成为全球增长最快的具身智能市场之一。市场规模从2018年约2133亿元增长到2026年预计的1.09万亿元，年均复合增长率22%至23%。具身智能正从实验室走向产业化应用，中国市场在全球的占比持续提升。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/471428'
+      },
+      {
+        title: 'AI质检翻车后，福特重新聘用350名资深工程师',
+        summary: '福特用AI替代资深工程师做质量管控后发现效果不理想，三年间重新聘用约350名技术专家（内部称"gray beard"花白胡子），包括前员工和供应链老专家。这一案例暴露AI在复杂工业场景中的局限性——经验直觉和跨领域判断力仍是人类工程师不可替代的优势，AI+人类的协作模式比纯AI替代更务实。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/471233/ford-rehires-gray-beard-engineers-after-ai-falls-short'
+      }
+    ],
+    comment: '今日新闻折射AI产业两条核心主线：一是"自主可控"成为全行业共识——Anthropic自研芯片摆脱英伟达依赖、Kimi K2.7以开放权重模型身份打入GitHub Copilot、可灵AI独立商业化，都在说明AI公司正从依赖单一供应商走向多元化自主；二是AI的边界正在被重新认知——福特AI质检翻车证明复杂工业场景仍需人类经验，具身智能万亿市场则需要AI与物理世界的深度磨合，"AI替代人"的叙事正在让位于"AI+人"的务实协作。',
+  },
+  {
     date: '2026-07-02',
     title: 'AI新闻 | Meta拟出售闲置AI算力创收 + OpenAI推出GeneBench-Pro生物基准测试 + 行云科技签55亿元算力大单 + 百度引入大模型专家孙天祥 + Anthropic被质疑对中国用户"赛博二等公民"待遇',
     summary: '今日AI行业五大看点：Meta正筹划构建云基础设施业务，计划出售闲置AI算力和模型使用权创收，标志算力从成本中心转向收入来源；OpenAI推出GeneBench-Pro基准测试，专门评估AI模型在生物学计算任务中的真实研究能力，AI for Science持续深化；行云科技控股子公司签署55.08亿元算力服务合同，为期5年，反映算力需求持续旺盛；百度引入大模型技术专家孙天祥就任基础模型研发部负责人，持续加码AI基础模型投入；虎嗅发文质疑Anthropic对中国用户的限制性政策，引发"AI工具地域歧视"讨论。',
