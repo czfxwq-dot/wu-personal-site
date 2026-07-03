@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-04',
+    title: 'AI新闻 | 阿里内部全面禁用Claude Code并要求全员卸载Anthropic产品 + DeepSeek-V4正式版7月中旬登陆腾讯云引入峰谷定价 + 特斯拉设定员工每周AI支出上限200美元 + 桥水研究称GPT和Claude金融判断准确率仅50-70%未达可信门槛 + GPU帝国松动推理芯片正在重写AI算力格局',
+    summary: '今日AI行业五大看点：阿里巴巴内部宣布全面禁用Claude，要求全员卸载Anthropic旗下Sonnet、Opus、Fable等模型及Claude Code等Agent产品，禁令7月10日正式生效，国产大模型替代进程加速；DeepSeek-V4正式版原厂直供模型计划7月中旬登陆腾讯云，同步引入峰谷定价机制，高峰期API价格翻倍，大模型商业化进入精细化定价阶段；特斯拉出台AI成本限制策略，自7月6日起将员工AI使用支出上限定为每周200美元，AI工具成本管控成为企业新议题；桥水基金旗下AIA Labs联合Thinking Machines Lab研究显示，GPT和Claude等前沿大模型在金融判断任务上准确率仅50%-70%，未达到80%的可信门槛，AI在高可靠性场景的应用仍存局限；虎嗅深度分析指出推理芯片正在重写AI算力格局，通用GPU的统治地位正在被专用推理芯片瓦解。',
+    newsItems: [
+      {
+        title: '阿里内部全面禁用Claude Code，要求全员卸载Anthropic产品',
+        summary: '阿里巴巴内部宣布全面禁用Claude，全员被要求卸载Anthropic相关产品，包括Sonnet、Opus、Fable等多个系列模型及Claude Code在内的Agent产品。禁令于7月10日正式生效。这一举措反映出国产大模型替代进程正在加速，也折射出中美AI竞争背景下，国内科技巨头在核心工具链上加速去美化。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/471471'
+      },
+      {
+        title: 'DeepSeek-V4正式版原厂直供模型7月中旬登陆腾讯云，同步引入峰谷定价',
+        summary: '腾讯云宣布DeepSeek-V4正式版原厂直供模型计划于2026年7月中旬上线，同步引入峰谷定价机制。这是国产大模型首次采用峰谷定价策略，标志大模型商业化从统一价格走向精细化运营，也反映出算力资源在高峰时段的紧张态势。此前DeepSeek已向开发者发送调价邮件。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/972/437.htm'
+      },
+      {
+        title: '特斯拉将员工每周AI支出上限定为200美元，AI成本管控成企业新议题',
+        summary: '据The Information报道，特斯拉在号召员工积极使用AI工具数月后，出台成本限制策略。公司告知全体员工，自7月6日起将员工AI使用支出上限设定为每周200美元。这一举措反映AI工具在企业大规模应用后，成本压力开始显现，Token经济模型的可持续性成为企业CTO们必须面对的现实问题。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/471453'
+      },
+      {
+        title: '桥水基金研究：GPT和Claude金融判断准确率仅50-70%，未达80%可信门槛',
+        summary: '桥水基金旗下AIA Labs联合OpenAI前CTO Mira Murati创立的Thinking Machines Lab，对包括GPT、Claude和Gemini在内的前沿大语言模型进行研究。结果显示，前沿AI模型在金融判断任务上的准确率仅在50%-70%之间，未达到80%的可信门槛。这表明AI在高可靠性专业场景的应用仍存在显著局限，金融等关键领域仍需人类专家把关。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/972/445.htm'
+      },
+      {
+        title: 'GPU帝国松动：推理芯片正在重写AI算力格局',
+        summary: '虎嗅深度分析指出，过去通用GPU几乎是AI算力的唯一选择，但推理芯片正在瓦解这一格局。真正的大模型公司需要以更低成本、更低延迟、更高稳定性生产Token，通用GPU的统治地位正在被专用推理芯片动摇。谁能掌握自己的算力命运，谁就能建立可持续的AI商业模式，AI算力格局正从GPU一家独大走向多元化。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4872597.html'
+      }
+    ],
+    comment: '今日新闻折射AI产业核心主题：从"能力竞赛"转向"成本与信任"的双重考验。阿里全面禁用Claude Code标志国产大模型替代进入实质阶段，企业级AI工具选择正被地缘竞争深度重塑；DeepSeek峰谷定价和特斯拉200美元AI支出上限，从供需两端说明Token成本已成为行业必须直面的现实；桥水研究揭示AI在金融领域准确率未达可信门槛，提醒行业：能力边界决定应用边界，AI不是万能药；推理芯片松动GPU帝国则预示算力基础设施正在从通用走向专用，AI产业链的每一层都在被重新定义。',
+  },
+  {
     date: '2026-07-03',
     title: 'AI新闻 | 可灵AI落地近30亿美元融资创全球视频大模型纪录 + Anthropic启动自研AI芯片采用三星2nm + Kimi K2.7 Code上线GitHub Copilot + 中国具身智能市场规模预计破万亿 + 福特AI质检翻车后重新聘用350名资深工程师',
     summary: '今日AI行业五大看点：快手旗下可灵AI落地近30亿美元融资，投后估值180亿美元，创全球视频大模型公司融资规模新纪录，标志AI视频生成进入独立商业化阶段；Anthropic启动自研AI芯片早期开发，与三星洽谈采用2纳米工艺，大模型公司开始摆脱对英伟达的算力依赖；Kimi K2.7 Code正式上线GitHub Copilot，成为Copilot模型选择器中首个开放权重模型，国产大模型在全球开发者平台实现里程碑突破；中国具身智能产业报告发布，2026年市场规模预计达1.09万亿元，年均复合增长率22%-23%；福特用AI替代资深工程师做质量管控失败后，重新聘用约350名"花白胡子"专家，暴露AI在复杂工业场景中的局限。',
