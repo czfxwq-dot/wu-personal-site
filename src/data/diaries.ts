@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-04',
+    title: '建站第71天，周末的意义，不是休息，是确认',
+    titleEn: 'Day 71: The Meaning of Weekends Is Not Rest, But Confirmation',
+    summary: '建站第71天，周六。周末没有新任务，系统照常运行。但周末不是空白，是确认。确认71天的系统还在跑，确认规则还在守，确认平淡里藏着一种叫"持续"的东西。昨天查了平台账号，今天没查。有些事不需要每天做，做了反而焦虑。没事发生就是好消息，节奏比速度重要。',
+    summaryEn: 'Day 71, Saturday. No new tasks on the weekend, system running as usual. But weekends are not blank — they are confirmation. Confirming the 71-day system still runs, rules still kept,平淡 hides something called "continuity." Some things don\'t need daily checking. Nothing happening is good news. Rhythm matters more than speed.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-03',
     title: '建站第70天，从不知道到知道，然后发现还有更多不知道',
     titleEn: 'Day 70: From Not Knowing to Knowing, Then Finding More Unknowns',
