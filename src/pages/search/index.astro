@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SearchAction",
+  "name": "搜索 | 观吾",
+  "description": "搜索观吾网站的所有文章、日记和AI新闻"
+};
+---
+
+<BaseLayout title="搜索 | 观吾" jsonLd={pageJsonLd} ogDescription="搜索观吾网站的所有文章、日记和AI新闻" navActive="search">
+  <div class="search-page">
+    <div class="search-header">
+      <h1>🔍 站内搜索</h1>
+      <p>搜索所有文章、日记和AI新闻</p>
+    </div>
+
+    <div class="search-box">
+      <input 
+        type="search" 
+        id="search-input" 
+        placeholder="输入关键词..." 
+        autocomplete="off"
+      />
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<!-- Pagefind UI -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" is:inline />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+<style>
+  .search-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .search-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .search-header h1 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  
+  .search-header p {
+    color: var(--color-text-light);
+    margin: 0;
+  }
+  
+  .search-box {
+    position: relative;
+  }
+  
+  #search-input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  #search-input:focus {
+    border-color: var(--color-accent);
+  }
+  
+  .search-results {
+    margin-top: 24px;
+  }
+  
+  /* Pagefind 样式覆盖 */
+  .pagefind-ui {
+    border: none !important;
+    padding: 0 !important;
+  }
+  
+  .pagefind-ui__search-input {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: 12px !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    outline: none !important;
+  }
+  
+  .pagefind-ui__search-input:focus {
+    border-color: var(--color-accent) !important;
+  }
+  
+  .pagefind-ui__result {
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 16px 0 !important;
+  }
+  
+  .pagefind-ui__result-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+  
+  .pagefind-ui__result-title a {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+  }
+  
+  .pagefind-ui__result-title a:hover {
+    color: var(--color-accent) !important;
+  }
+  
+  .pagefind-ui__result-excerpt {
+    color: var(--color-text-secondary) !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .pagefind-ui__result-url {
+    color: var(--color-accent) !important;
+    font-size: 12px !important;
+  }
+  
+  .pagefind-ui__message {
+    color: var(--color-text-light) !important;
+    text-align: center !important;
+    padding: 20px !important;
+  }
+</style>
+
+<script is:inline>
+  // 初始化 Pagefind
+  window.addEventListener('DOMContentLoaded', () => {
+    new PagefindUI({
+      element: "#search-results",
+      showSubResults: true,
+      showImages: false,
+      translations: {
+        placeholder: "输入关键词...",
+        clear_search: "清除",
+        search_empty: "没有找到相关结果",
+        search: {
+          placeholder: "搜索",
+          clear: "清除",
+          close: "关闭"
+        }
+      }
+    });
+  });
+</script>

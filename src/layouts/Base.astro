@@ -1,18 +1,28 @@
 ---
 import '../styles/global.css';
 import ChatWidget from '../components/ChatWidget.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
 import { t } from '../i18n/utils';
+import { articles } from '../data/articles';
 
 interface Props {
   title?: string;
   jsonLd?: object | object[];
   ogImage?: string;
   ogDescription?: string;
-  navActive?: 'home' | 'diary' | 'ai-news' | 'banbaiguan' | 'guestbook' | 'about';
+  navActive?: 'home' | 'diary' | 'ai-news' | 'banbaiguan' | 'guestbook' | 'about' | 'search';
   lang?: 'zh' | 'en';
+  showShare?: boolean;
 }
 
-const { title, jsonLd = [], ogImage, ogDescription, navActive, lang = 'zh' } = Astro.props as Props;
+const { title, jsonLd = [], ogImage, ogDescription, navActive, lang = 'zh', showShare = false } = Astro.props as Props;
+
+// 自动判断是否显示分享按钮（文章页和日记页）
+const pathname = Astro.url?.pathname || '/';
+const autoShowShare = !showShare && (pathname.startsWith('/banbaiguan/') || pathname.startsWith('/diary/') || pathname.startsWith('/en/banbaiguan/') || pathname.startsWith('/en/diary/'));
+const shouldShowShare = showShare || autoShowShare;
 const pageTitle = title || (lang === 'en' ? 'Guanwu | 50-Year-Old Using AI to Get Things Done' : '观吾 | 50岁用AI做实事');
 const siteName = t('siteName', lang);
 const siteDescription = lang === 'en'
@@ -34,7 +44,6 @@ const footerCredit = t('footerCredit', lang);
 const langCode = lang === 'en' ? 'en' : 'zh-CN';
 const ogLocale = lang === 'en' ? 'en_US' : 'zh_CN';
 const baseUrl = 'https://www.ban-bai.com';
-const pathname = Astro.url?.pathname || '/';
 const canonicalUrl = `${baseUrl}${pathname}`;
 const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace('/en', '/')}` : `${baseUrl}/en${pathname === '/' ? '' : pathname}`;
 
@@ -173,6 +182,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
           <a href={lang === 'en' ? '/en/ai-news/' : '/ai-news/'} class:list={[navActive === 'ai-news' && 'active']}>{t('navAiNews', lang)}</a>
           <a href={lang === 'en' ? '/en/banbaiguan/' : '/banbaiguan/'} class:list={[navActive === 'banbaiguan' && 'active']}>{t('navBanbaiguan', lang)}</a>
           <a href={lang === 'en' ? '/en/guestbook/' : '/guestbook/'} class:list={[navActive === 'guestbook' && 'active']}>{t('navGuestbook', lang)}</a>
+          <a href={lang === 'en' ? '/en/search/' : '/search/'} class:list={[navActive === 'search' && 'active']} title="站内搜索">🔍</a>
           <a href={lang === 'en' ? '/en/about/' : '/about/'} class:list={[navActive === 'about' && 'active']}>{t('navAbout', lang)}</a>
           <button class="theme-toggle" aria-label="Toggle dark mode" title="切换主题">
             <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -184,8 +194,24 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
       </div>
     </header>
     <main class="container">
+      {pathname.startsWith('/banbaiguan/') && <TableOfContents />}
       <slot />
+      {pathname.startsWith('/banbaiguan/') && (() => {
+        const slug = pathname.replace('/banbaiguan/', '').replace('/', '');
+        const currentArticle = articles.find(a => a.slug === slug);
+        const tag = currentArticle?.tag || '';
+        return (
+          <div class="container" style="max-width: 680px; margin: 0 auto; padding: 0 20px;">
+            <RelatedArticles currentSlug={slug} currentTag={tag} />
+          </div>
+        );
+      })()}
     </main>
+    {shouldShowShare && (
+      <div class="container" style="max-width: 680px; margin: 0 auto; padding: 0 20px;">
+        <ShareButtons title={pageTitle} summary={ogDescription} />
+      </div>
+    )}
     <footer class="site-footer">
       <div class="container">
         <div class="footer-content">

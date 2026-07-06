@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-saved-time-fed-to-who',
+    date: '2026-07-06',
+    title: 'AI帮你省下的时间，最后都喂给了谁？',
+    excerpt: '2026年全球科技行业裁了11.6万人，40%岗位被AI重塑。但留下来的人反而更忙了。AI只是加速器，真正的问题是你的时间从来不是你自己的。',
+    tag: 'AI观点',
+  },
+  {
     slug: 'fathers-day-luoyang',
     date: '2026-06-21',
     title: '父亲节，洛阳听雨',
