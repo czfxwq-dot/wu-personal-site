@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-07',
+    title: 'AI新闻 | xAI正式更名SpaceXAI标志马斯克AI航天一体化 + 腾讯混元Hy3开源发布比肩更大旗舰模型 + Anthropic每人年均算力支出200万美元揭示AI成本真相 + 扎克伯格承认AI Agent进展不及预期 + Karpathy实验揭示Agent最大误区',
+    summary: '今日AI行业五大看点：马斯克旗下xAI正式更名为SpaceXAI，Grok和X平台纳入SpaceX体系，AI与航天的深度融合标志科技巨头超级整合时代到来；腾讯混元Hy3正式开源发布，在推理、智能体、长上下文等任务上比肩2-5倍参数规模的旗舰模型，国产大模型开源阵营再添强将；投资人分析显示Anthropic每名员工年均算力支出200万美元，是人力成本的2.3倍，AI行业成本结构颠覆传统认知；扎克伯格在Meta全员大会上承认AI Agent发展不及预期，1450亿美元AI预算下反思激进重组策略；Karpathy通过700次Loop实验揭示Agent最大误区——业界过于追求让Agent快速干活，忽视了对底层模型和系统机制的深度理解。',
+    newsItems: [
+      {
+        title: '马斯克xAI正式更名SpaceXAI，AI与航天超级整合',
+        summary: '马斯克创立的AI公司xAI正式更名为SpaceXAI，同步更换标识和X平台用户名。xAI今年2月被SpaceX收购，旗舰聊天机器人Grok和社交平台X纳入SpaceX体系。此次品牌调整发生在SpaceX完成IPO融资750亿美元后，标志马斯克的AI、航天、社交三大版图正式合为一体，科技超级公司的整合模式引发行业关注。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/973/318.htm'
+      },
+      {
+        title: '腾讯混元Hy3正式开源发布，比肩2-5倍参数规模旗舰模型',
+        summary: '腾讯混元Hy3正式开源发布，基于preview版本进一步提升后训练数据质量和多样性，扩大RL算力规模。Hy3在推理、智能体、长上下文等任务上显著进步，取得比肩国内外更大尺寸旗舰模型（参数规模为Hy3的2-5倍）的效果。在内部270位专家盲测中，Hy3表现优于GLM5.1，在软件开发、办公生产、金融建模等生产力任务上进步尤为显著。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/471516'
+      },
+      {
+        title: 'Anthropic每招一人算力多花200万美元，AI行业成本结构颠覆认知',
+        summary: '硅谷投资人Tomasz Tunguz分析显示，Anthropic约5000名员工，2026年在模型推理和训练上支出约100亿美元，平均每位员工年均算力账单200万美元，是人均年薪50万美元的2.3倍。对比软件行业前1%公司每位工程师年AI支出8.9万美元，Anthropic的成本结构远超常规。分析预计AI行业收支平衡需等到2029年，揭示AI行业"烧钱"的真实规模。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/471517/ai-spend-breakeven-2029'
+      },
+      {
+        title: '扎克伯格承认AI Agent进展不及预期，Meta 1450亿预算下面临反思',
+        summary: 'Meta CEO扎克伯格在全员大会上公开承认："至少过去四个月里，AI Agent的发展轨迹没有按预期加速。"2026年Meta AI基础设施预算高达1450亿美元，公司裁减约8000人同时将7000人转岗AI团队，进行以AI为轴心的公司级重组。扎克伯格坦言重组执行"不够干净利落"，这是科技巨头在AI Agent热潮中罕见的公开反思。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/471501'
+      },
+      {
+        title: 'Karpathy 700次Loop实验揭示Agent最大误区：76%性能提升与模型无关',
+        summary: '前OpenAI联合创始人、现Anthropic预训练研究员Andrej Karpathy通过700次Loop实验发现：业界最大误区是逼Agent尽快干活，却未先把底层模型和系统机制理解吃透。实验显示通过优化系统框架可实现76%的性能提升，且该提升与具体模型无关。这一发现警示业界：Agent开发的关键瓶颈不在模型能力，而在系统工程和架构设计。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4873086.html'
+      }
+    ],
+    comment: '今日新闻揭示AI产业从"能力竞赛"进入"成本真相+系统反思"阶段。xAI更名SpaceXAI标志马斯克的超级整合——AI不再是独立赛道而是融入所有业务的基础设施；Anthropic人均200万美元算力支出和扎克伯格承认Agent不及预期，从成本和效果两端戳破AI Agent的泡沫叙事；腾讯混元Hy3开源和Karpathy的实验则指向正确方向——与其追求让Agent更快干活，不如先把底层系统和模型机制吃透，这才是工程化的正道。',
+  },
+  {
     date: '2026-07-06',
     title: 'AI新闻 | 壁仞科技配售募资70亿港元加速GPU商业化 + 鸿海6月销售额同比增52%AI机架持续强劲 + 港股AGI第一股云知声暴跌90%引泡沫讨论 + 谷歌AI基础设施扩张致用电量激增37% + AI写代码时代工程师价值重构',
     summary: '今日AI行业五大看点：壁仞科技上市半年后开启配售，拟募资70.69亿港元用于加快下一代GPGPU产品商业化，国产GPU算力芯片赛道持续吸金；鸿海6月销售额8218亿台币同比增长52.1%，AI机架需求推动业绩远超预期，AI硬件供应链持续景气；港股"AGI第一股"云知声股价较高点暴跌90%至70港元，尽管2025年收入增长29%仍难挡估值崩塌，AI泡沫讨论再起；谷歌环境报告显示2025年因AI基础设施快速扩张用电量激增37%，但通过能效提升和可再生能源实现碳排放下降2%；虎嗅深度分析vibe coding时代软件工程师的核心价值，AI编程工具正重新定义工程师角色。',

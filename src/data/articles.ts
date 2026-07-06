@@ -19,6 +19,13 @@ export const articles: ArticleEntry[] = [
     tag: 'AI观点',
   },
   {
+    slug: 'weekly-report-2026-07-05',
+    date: '2026-07-05',
+    title: 'AI/科技行业周报 | 2026年7月5日',
+    excerpt: '覆盖2026年6月29日-7月5日AI行业重大事件：GPT-5 Turbo发布、Gemini Flash增强、Claude更新、OpenAI与Anthropic双双IPO、联合国AI治理报告等。附Word版下载。',
+    tag: 'AI周报',
+  },
+  {
     slug: 'fathers-day-luoyang',
     date: '2026-06-21',
     title: '父亲节，洛阳听雨',
