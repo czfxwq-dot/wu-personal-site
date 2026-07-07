@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-08',
+    title: 'AI新闻 | 微软自研MAI模型开始替代OpenAI和Anthropic + 亚马逊发债250亿美元为AI基建输血 + SpaceX Colossus数据中心遭关停令涉450亿美元Anthropic合同 + 浪潮信息半年利润暴增226%~288% + 智能眼镜Even Realities融资1.5亿美元跻身独角兽',
+    summary: '今日AI行业五大看点：微软开始在Excel和Outlook中使用内部自研MAI模型替代OpenAI和Anthropic，以降低AI成本，标志科技巨头"去外部依赖"趋势加速；亚马逊计划发行美元债券募资至少250亿美元为AI基础设施输血，科技企业纷纷涌入债券市场为算力投资筹资；SpaceX旗下Colossus 2数据中心因燃气轮机许可问题遭法院关停令，危及与Anthropic签订的450亿美元合同；浪潮信息发布半年度业绩预告，归母净利润26亿至31亿元同比增长226%~288%，AI服务器需求持续爆发；中国智能眼镜厂商Even Realities完成1.5亿美元Pre-B轮融资，跻身独角兽行列，AI可穿戴设备赛道持续升温。',
+    newsItems: [
+      {
+        title: '微软自研AI模型MAI开始接手Office应用，逐步替代OpenAI和Anthropic',
+        summary: '据彭博社报道，微软已开始在Excel和Outlook等软件产品中使用内部自研的MAI模型来替代OpenAI和Anthropic的模型，以降低AI成本。此举标志微软在AI领域从依赖外部合作伙伴转向自主研发，减少对OpenAI和Anthropic的依赖，科技巨头的AI自主化趋势日益明显。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/973/815.htm'
+      },
+      {
+        title: '亚马逊拟发债募资至少250亿美元，为AI基建"输血"',
+        summary: '据彭博社报道，亚马逊计划通过发行美元债券募资至少250亿美元（约合1700亿元人民币），这是该公司为大规模人工智能投资筹措资金的最新举措。各家科技企业纷纷进军债券市场、启动股权发售，为成本高昂的人工智能基础设施建设筹集资金，AI基建投资规模持续扩大。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/973/783.htm'
+      },
+      {
+        title: 'SpaceX旗下Colossus数据中心遭关停令，450亿美元Anthropic合同面临风险',
+        summary: '一项诉讼请求法院下令SpaceX关闭为其Colossus 2数据中心供电的燃气轮机，理由是其在未取得所需许可的情况下运营。该诉讼可能危及SpaceX与Anthropic签订的450亿美元合同中的部分内容。下级法院很可能会下令在获得许可期间关停涡轮机，AI算力基础设施扩张面临监管挑战。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3885567094583304'
+      },
+      {
+        title: '浪潮信息2026半年度归母净利润26亿～31亿元，同比增长226%~288%',
+        summary: '浪潮信息发布2026年半年度业绩预告：归母净利润26亿元至31亿元，同比增长226%至288%；扣非净利润20.55亿元至25.55亿元，同比增长206%至280%。业绩大幅增长主要受益于AI服务器需求持续旺盛，国产AI算力基础设施建设加速推进。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/973/772.htm'
+      },
+      {
+        title: '智能眼镜初创公司Even Realities完成1.5亿美元融资，跻身独角兽行列',
+        summary: '总部位于中国的智能眼镜厂商Even Realities在Pre-B轮融资中获得1.5亿美元（约合10.2亿元人民币），正式跻身独角兽行列。本轮融资由多家知名机构参与，AI可穿戴设备赛道持续升温，智能眼镜被视为AI落地的重要硬件载体。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/973/775.htm'
+      }
+    ],
+    comment: '今日新闻核心主题是"AI自主化与成本博弈"。微软自研MAI替代OpenAI/Anthropic，标志巨头从"买AI"转向"造AI"；亚马逊250亿美元发债和浪潮信息利润暴增226%，反映AI基建投入仍在加速；但SpaceX数据中心遭关停令则提醒：算力扩张不是有钱就行，监管合规同样是硬约束；Even Realities融资说明AI正在从云端走向穿戴，硬件入口争夺战已经打响。',
+  },
+  {
     date: '2026-07-07',
     title: 'AI新闻 | xAI正式更名SpaceXAI标志马斯克AI航天一体化 + 腾讯混元Hy3开源发布比肩更大旗舰模型 + Anthropic每人年均算力支出200万美元揭示AI成本真相 + 扎克伯格承认AI Agent进展不及预期 + Karpathy实验揭示Agent最大误区',
     summary: '今日AI行业五大看点：马斯克旗下xAI正式更名为SpaceXAI，Grok和X平台纳入SpaceX体系，AI与航天的深度融合标志科技巨头超级整合时代到来；腾讯混元Hy3正式开源发布，在推理、智能体、长上下文等任务上比肩2-5倍参数规模的旗舰模型，国产大模型开源阵营再添强将；投资人分析显示Anthropic每名员工年均算力支出200万美元，是人力成本的2.3倍，AI行业成本结构颠覆传统认知；扎克伯格在Meta全员大会上承认AI Agent发展不及预期，1450亿美元AI预算下反思激进重组策略；Karpathy通过700次Loop实验揭示Agent最大误区——业界过于追求让Agent快速干活，忽视了对底层模型和系统机制的深度理解。',
