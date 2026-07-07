@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-brain-outsource',
+    date: '2026-07-07',
+    title: '用了两年AI，我劝你别把大脑外包',
+    excerpt: '50岁，用AI两年多。从公司的AIoT产品，到6个平台的新媒体运营，再到搭建一整套AI助理体系。效率确实高了，但有些东西也在悄悄流失。AI降智的关键，不是用不用AI，而是你有没有把思考过程交出去。',
+    tag: 'AI思考',
+  },
+  {
     slug: 'ai-saved-time-fed-to-who',
     date: '2026-07-06',
     title: 'AI帮你省下的时间，最后都喂给了谁？',
