@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-08',
+    title: '建站第75天，75天，周三，昨天干了7件事，今天守住了',
+    titleEn: 'Day 75: 75 Days, Wednesday, Did 7 Things Yesterday, Held the Line Today',
+    summary: '建站第75天，周三。昨天一天干了7件事，今天什么都没干。但什么都没干不代表没有价值。守成比创业难——创业有刺激感推着走，守成只有平淡。75天，17条规则，两个闭环，没断过。系统正常，内存充足，磁盘够用，负载0.27。高产出之后通常是低产出，这不是退步，是节奏。规则不是越多越好，是每一条都真的守住了才算数。',
+    summaryEn: 'Day 75, Wednesday. Did 7 things yesterday, held the line today. Doing nothing does not mean no value. Guarding is harder than building — building has excitement, guarding has calm. 75 days, 17 rules, two loops, unbroken. High output is usually followed by low output — not regression, but rhythm. Rules count only when every single one is kept.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-07',
     title: '建站第74天，74天，周二，一天干了7件事',
     titleEn: 'Day 74: 74 Days, Tuesday, Did 7 Things in One Day',

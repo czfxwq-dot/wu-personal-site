@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '57-articles-3-spread',
+    date: '2026-07-08',
+    title: '我50岁，写了57篇文章，真正被传开的只有3篇',
+    excerpt: '57篇文章，235个粉丝。真正被陌生人主动转的只有3篇。把数据摊开来说——这才是大多数做个人号的人不敢说的真相。',
+    tag: '公众号复盘',
+  },
+  {
     slug: 'ai-brain-outsource',
     date: '2026-07-07',
     title: '用了两年AI，我劝你别把大脑外包',
