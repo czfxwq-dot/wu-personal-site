@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-09',
+    title: 'AI新闻 | Anthropic利润超10亿美元冲刺IPO + 腾讯混元Hy3正式版发布 + Cloudflare与OpenAI合作优化AI搜索 + 可灵AI独立融资估值180亿美元 + Momenta登陆港交所成物理AI第一股',
+    summary: '今日AI行业五大看点：Anthropic第三季度利润预计超10亿美元，ARR剑指千亿，抢先OpenAI冲击IPO，AI大模型商业化进入收获期；腾讯混元Hy3正式版发布，姚顺雨主导架构重建后首款旗舰模型落地，国产大模型竞争加剧；Cloudflare与OpenAI启动试点项目，利用全球网络数据优化AI搜索引擎的内容发现与索引；快手可灵AI完成独立分拆融资，投后估值180亿美元，腾讯阿里百度罕见同台入局，创全球视频大模型单笔融资纪录；自动驾驶公司Momenta正式登陆港交所，发行价295.6港元募资约58.9亿港元，被冠以"物理AI第一股"。',
+    newsItems: [
+      {
+        title: '利润超10亿美元、ARR剑指千亿，Anthropic抢先OpenAI冲击IPO',
+        summary: 'SemiAnalysis最新报告显示，Anthropic今年第三季度利润预计将超过10亿美元（约合68亿元人民币），公司已于今年6月启动IPO准备。Anthropic成为继OpenAI之后第二家接近上市的大模型巨头，AI大模型商业化正式进入收获期。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/974/275.htm'
+      },
+      {
+        title: '腾讯混元Hy3正式版发布，姚顺雨治下首款旗舰大模型落地',
+        summary: '腾讯混元Hy3正式版发布，距离姚顺雨以首席AI科学家身份空降腾讯主导架构重建仅201天。Hy3在推理、智能体、长上下文等任务上比肩2-5倍参数规模的旗舰模型，标志腾讯在大模型赛道正式上桌竞争。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4873333.html'
+      },
+      {
+        title: 'Cloudflare与OpenAI启动试点项目，利用全球网络数据优化AI搜索',
+        summary: 'Cloudflare与OpenAI宣布启动研究试点项目，探索如何利用Cloudflare全球网络的网站洞察数据，帮助AI搜索引擎更高效地发现并索引开放网络内容，提升AI回答的准确性与时效性。这是AI搜索生态中基础设施厂商与模型厂商深度合作的最新案例。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3886946347694593'
+      },
+      {
+        title: '可灵AI独立融资估值180亿美元，腾讯阿里百度罕见同台入局',
+        summary: '快手正式公告可灵AI完成独立分拆融资，投后估值180亿美元，融资上限30亿美元，腾讯、阿里、百度罕见同台入局，创下全球视频大模型单笔融资纪录。可灵AI从快手内部项目升级为独立公司，AI视频生成赛道资本热度持续升温。',
+        source: '虎嗅',
+        category: '投资',
+        url: 'https://www.huxiu.com/article/4873727.html'
+      },
+      {
+        title: 'Momenta登陆港交所，被冠以"物理AI第一股"',
+        summary: '自动驾驶公司Momenta正式登陆港交所，发行定价295.6港元，募资约58.9亿港元，14家基石投资者锁仓约30亿港元。Momenta被冠以"物理AI第一股"称号，标志自动驾驶从技术研发走向资本市场验证。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4873707.html'
+      }
+    ],
+    comment: '今日关键词"商业化落地"。Anthropic利润超10亿美元冲刺IPO，证明大模型不再是烧钱无底洞；腾讯Hy3正式发布说明国产大模型竞争进入"交卷期"；Cloudflare+OpenAI合作预示AI搜索将重塑内容分发格局；可灵AI 180亿美元估值和Momenta上市则表明资本正在从"投模型"转向"投应用"，AI产业的物理落地和商业化变现成为下半场主旋律。',
+  },
+  {
     date: '2026-07-08',
     title: 'AI新闻 | 微软自研MAI模型开始替代OpenAI和Anthropic + 亚马逊发债250亿美元为AI基建输血 + SpaceX Colossus数据中心遭关停令涉450亿美元Anthropic合同 + 浪潮信息半年利润暴增226%~288% + 智能眼镜Even Realities融资1.5亿美元跻身独角兽',
     summary: '今日AI行业五大看点：微软开始在Excel和Outlook中使用内部自研MAI模型替代OpenAI和Anthropic，以降低AI成本，标志科技巨头"去外部依赖"趋势加速；亚马逊计划发行美元债券募资至少250亿美元为AI基础设施输血，科技企业纷纷涌入债券市场为算力投资筹资；SpaceX旗下Colossus 2数据中心因燃气轮机许可问题遭法院关停令，危及与Anthropic签订的450亿美元合同；浪潮信息发布半年度业绩预告，归母净利润26亿至31亿元同比增长226%~288%，AI服务器需求持续爆发；中国智能眼镜厂商Even Realities完成1.5亿美元Pre-B轮融资，跻身独角兽行列，AI可穿戴设备赛道持续升温。',
