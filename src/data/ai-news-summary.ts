@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-10',
+    title: 'AI新闻 | Meta计划9月自产AI芯片 + 法国对英伟达反垄断调查收尾 + AMD确认7月发布Zen 6 + Grok 4.5与Claude 4.8正面交锋 + 腾讯云发布Agent Bucket',
+    summary: '今日AI行业五大看点：Meta宣布计划于9月开始自产"Iris"AI芯片，并拟将计算能力翻倍至14吉瓦，科技巨头自研芯片趋势加速；法国竞争管理局对英伟达的反垄断调查接近收尾，最高或面临全球年营收10%罚款；AMD官方确认将于7月22-23日Advancing AI大会发布Zen 6处理器；马斯克发布Grok 4.5宣称性能逼近Claude Opus 4.8，大模型竞争进入正面对决阶段；腾讯云正式发布Agent Bucket，为亿级Agent提供独立云存储空间。',
+    newsItems: [
+      {
+        title: 'Meta计划9月开始生产AI芯片，计算能力将翻倍至14吉瓦',
+        summary: '据备忘录显示，Meta计划于9月开始生产"Iris"AI芯片，并计划明年将计算能力翻倍至14吉瓦。Meta已达成长期供应协议，包括与三星电子的内存芯片协议，科技巨头自研芯片、降低对英伟达依赖的趋势持续加速。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3888342478748160'
+      },
+      {
+        title: '法国对英伟达反垄断调查接近尾声，最高或面临全球年营收10%罚款',
+        summary: '法国竞争管理局官员确认，针对英伟达的反垄断调查已临近收尾，监管机构大概率很快出具正式异议声明，指控其存在多项限制市场竞争行为。调查始于2023年，核心围绕英伟达在全球GPU市场的主导地位，最高罚款可达全球年营收的10%。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3888377221364232'
+      },
+      {
+        title: 'AMD确认7月22-23日Advancing AI大会推出Zen 6处理器',
+        summary: 'AMD执行副总裁及首席技术官Mark Papermaster在巴黎AI峰会上确认，AMD将在7月22-23日的Advancing AI 2026大会上正式推出Zen 6处理器。这是AMD下一代CPU架构，将与英特尔展开新一轮架构对决。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/974/769.htm'
+      },
+      {
+        title: 'Grok 4.5与Claude 4.8正面交锋，大模型竞争进入新阶段',
+        summary: '马斯克发布Grok 4.5，宣称性能已逼近Claude Opus 4.8，同时速度更快、价格更低。媒体设计了5道前端开发、游戏、PPT制作等实测题进行对比，大模型公司的竞争已从参数跑分打到价格和智能体能力的全面对决。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4874102.html'
+      },
+      {
+        title: '腾讯云正式发布Agent Bucket，为亿级Agent提供独立云空间',
+        summary: '腾讯云宣布正式发布Agent Bucket（智能体桶），可为亿级Agent提供独立云空间，统一存放用户上传的资料及Agent生成的报告、图片、代码等工作产物。开发者仅需兼容标准S3接口即可接入。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/471614'
+      }
+    ],
+    comment: '今日关键词"自主可控"。Meta自研芯片、AMD Zen 6发布、英伟达遭反垄断调查，三条新闻共同指向一个趋势：AI算力格局正在从英伟达一家独大走向多元竞争；Grok 4.5对标Claude 4.8说明大模型竞争已进入贴身肉搏阶段；腾讯云Agent Bucket则预示Agent基础设施正在成为新的云服务商战场。',
+  },
+  {
     date: '2026-07-09',
     title: 'AI新闻 | Anthropic利润超10亿美元冲刺IPO + 腾讯混元Hy3正式版发布 + Cloudflare与OpenAI合作优化AI搜索 + 可灵AI独立融资估值180亿美元 + Momenta登陆港交所成物理AI第一股',
     summary: '今日AI行业五大看点：Anthropic第三季度利润预计超10亿美元，ARR剑指千亿，抢先OpenAI冲击IPO，AI大模型商业化进入收获期；腾讯混元Hy3正式版发布，姚顺雨主导架构重建后首款旗舰模型落地，国产大模型竞争加剧；Cloudflare与OpenAI启动试点项目，利用全球网络数据优化AI搜索引擎的内容发现与索引；快手可灵AI完成独立分拆融资，投后估值180亿美元，腾讯阿里百度罕见同台入局，创全球视频大模型单笔融资纪录；自动驾驶公司Momenta正式登陆港交所，发行价295.6港元募资约58.9亿港元，被冠以"物理AI第一股"。',
