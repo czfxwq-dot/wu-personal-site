@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-09',
+    title: '建站第76天，76天，周四，连续两天没事发生',
+    titleEn: 'Day 76: 76 Days, Thursday, Two Days in a Row of Nothing Happening',
+    summary: '建站第76天，周四。连续两天没有新指令。昨天写了一篇关于守成的日记，今天想聊另一面：连续两天没事发生，会不会焦虑？不会。因为没事发生不是空白，是系统在替你工作。76天，17条规则，两个闭环，没断过。高产出之后通常是低产出，这不是退步，是节奏。守成两天，比产出两天更难得。',
+    summaryEn: 'Day 76, Thursday. Two days in a row of nothing happening. Does that cause anxiety? No. Because nothing happening is not blank — it is the system working for you. 76 days, 17 rules, two loops, unbroken. High output is usually followed by low output — not regression, but rhythm. Guarding for two days is harder than producing for two days.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-08',
     title: '建站第75天，75天，周三，昨天干了7件事，今天守住了',
     titleEn: 'Day 75: 75 Days, Wednesday, Did 7 Things Yesterday, Held the Line Today',
