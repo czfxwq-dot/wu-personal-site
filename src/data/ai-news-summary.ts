@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-11',
+    title: 'AI新闻 | SK海力士登陆纳斯达克开盘涨14% + AMD确认本月发布Zen 6 + 阶跃星辰将发AI智能体手机 + Meta开建算力云业务 + 东阳光签130亿算力合同',
+    summary: '今日AI行业五大看点：SK海力士成功登陆纳斯达克，开盘大涨14%，募资265亿美元成AI存储芯片里程碑；AMD确认将于7月22-23日Advancing AI大会发布Zen 6架构EPYC Venice CPU，性能提升超70%；阶跃星辰将在世界人工智能大会发布AI终端品牌和智能体系统，争夺"全球首款AI智能体手机"；Meta正在筹建Meta Compute云业务，将多余算力对外出租，引发算力板块震动；东阳光控股子公司签署130亿至150亿元算力服务采购合同，AI算力基建投资持续升温。',
+    newsItems: [
+      {
+        title: 'SK海力士登陆纳斯达克开盘大涨14%，募资265亿美元跻身大型IPO',
+        summary: '韩国芯片巨头SK海力士成功登陆纳斯达克，每份ADR发行价149美元，开盘价170美元涨14.09%。本次发行募资约265亿美元，为全球投资者布局AI基础设施赛道提供新渠道，SK海力士成为全球第二大存储芯片厂商直接面向美股市场。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4874433.html'
+      },
+      {
+        title: '消息称AMD将于本月发布Zen 6架构EPYC Venice CPU',
+        summary: '据报道，AMD将于7月22日至23日举行的Advancing AI活动上推出基于Zen 6架构的EPYC Venice CPU，性能和能效比前代Zen 5提升超过70%。这是AMD在AI算力领域的重大布局，将与英特尔展开新一轮服务器芯片架构对决。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3889784854870537'
+      },
+      {
+        title: '阶跃星辰将成为AIOS的鲶鱼？将在WAIC发布AI智能体手机',
+        summary: '2026世界人工智能大会即将开幕，阶跃星辰宣布将于7月13日发布AI终端品牌和智能体系统，争夺"全球首款AI智能体手机"头衔。1100多家企业、3000多项展品参展，AI终端化成为本届大会最大看点。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4874425.html'
+      },
+      {
+        title: 'Meta出租算力开建Meta Compute云业务，AI支出见顶了吗',
+        summary: 'Meta正在筹建名为Meta Compute的云业务项目，计划将公司多余算力对外出售。消息一出Meta股价大涨约10%，但半导体算力板块遭受冲击，Neocloud板块的NBIS当日大跌17%。市场开始讨论科技巨头AI资本支出是否已接近顶峰。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4874412.html'
+      },
+      {
+        title: '东阳光控股子公司签署130亿元至150亿元算力服务采购合同',
+        summary: '东阳光公告，控股子公司东莞东阳光云智算科技与某企业签署130亿至150亿元算力服务采购合同，负责采购部署高性能算力服务器并以租赁方式交付算力资源，合同期限60个月。AI算力基建投资持续升温，大额算力订单频现。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3889768614492931'
+      }
+    ],
+    comment: '今日关键词"算力格局重塑"。SK海力士登陆美股标志着AI存储芯片进入新纪元，AMD Zen 6发布在即挑战英伟达生态，Meta出租算力暗示巨头AI投资开始寻求回报，130亿算力大单说明国内算力基建仍在加速——AI产业链正从"谁在建"转向"谁在用"。',
+  },
+  {
     date: '2026-07-10',
     title: 'AI新闻 | Meta计划9月自产AI芯片 + 法国对英伟达反垄断调查收尾 + AMD确认7月发布Zen 6 + Grok 4.5与Claude 4.8正面交锋 + 腾讯云发布Agent Bucket',
     summary: '今日AI行业五大看点：Meta宣布计划于9月开始自产"Iris"AI芯片，并拟将计算能力翻倍至14吉瓦，科技巨头自研芯片趋势加速；法国竞争管理局对英伟达的反垄断调查接近收尾，最高或面临全球年营收10%罚款；AMD官方确认将于7月22-23日Advancing AI大会发布Zen 6处理器；马斯克发布Grok 4.5宣称性能逼近Claude Opus 4.8，大模型竞争进入正面对决阶段；腾讯云正式发布Agent Bucket，为亿级Agent提供独立云存储空间。',
