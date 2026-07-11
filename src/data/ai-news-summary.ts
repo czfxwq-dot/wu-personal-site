@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-12',
+    title: 'AI新闻 | 腾讯拟20亿美元入股Manus成最大股东 + 字节发布Seedream 5.0 Pro + OpenAI二号人物因病卸任 + 算力泡沫警告万亿投资七成空转 + MoonBit发布Agent工具市场',
+    summary: '今日AI行业五大看点：腾讯拟以不低于20亿美元从Meta手中回购Manus股份成为最大股东，AI Agent赛道资本格局重塑；字节跳动正式发布Seedream 5.0 Pro多模态图像创作模型，四大核心能力全面突破；OpenAI产品和业务主管Fidji Simo因病卸任全职职务，总裁Greg Brockman接管产品工作；虎嗅深度分析警示中国算力泡沫——万亿投资中约七成处于低效或空转状态；MoonBit发布Skills Marketplace，让Agent可发布、运行和调用工具，Agent基础设施持续完善。',
+    newsItems: [
+      {
+        title: '消息称腾讯拟接盘Manus成最大股东，估值不低于20亿美元',
+        summary: '路透社报道，腾讯正与真格基金、红杉资本及Manus管理层磋商，计划以不低于20亿美元从Meta手中回购该公司股份。此次股权变动是在监管主导之下，社会资本共同补齐此前Meta的投资。预计股权变更完成后，腾讯仍只是持有少数股份的外部股东，Manus将保持独立运营。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/975/622.htm'
+      },
+      {
+        title: '字节跳动发布Seedream 5.0 Pro多模态图像创作模型',
+        summary: '字节跳动Seed正式发布Seedream 5.0 Pro，在图文匹配、结构合理性、文字渲染与画面美感等基础能力上全面提升，并带来四大核心能力突破：复杂信息可视化、交互式精准编辑等，可直接用于高信息密度的内容生产，标志AI图像生成工具进入专业化阶段。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/471591'
+      },
+      {
+        title: 'OpenAI二号人物Fidji Simo宣布因病卸任，转为兼职顾问',
+        summary: 'OpenAI产品和业务主管Fidji Simo宣布因病辞去全职工作，转为兼职顾问。OpenAI总裁Greg Brockman将接管产品相关工作。Fidji Simo此前负责OpenAI的核心产品战略和商业化推进，其卸任对OpenAI的产品路线和组织管理带来不确定性。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/471631'
+      },
+      {
+        title: '警惕算力泡沫：万亿投资，七成空转',
+        summary: '虎嗅深度分析指出，2026年3月中国智能算力总规模达1882 EFLOPS，在用算力中心标准机架突破1445万架，全国近300个智算中心项目覆盖29个省份。然而数据显示，万亿级算力投资中约七成处于低效或空转状态，算力利用率远低于预期，AI算力基建的投入产出比引发深度反思。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4874555.html'
+      },
+      {
+        title: 'MoonBit Skills Marketplace发布：让工具可被Agent调用',
+        summary: 'MoonBit发布Skills Marketplace，开发者可用MoonBit编写工具并编译为WebAssembly，通过mooncakes.io发布。用户或Agent可用统一方式发现、理解并调用这些工具，为Agent生态提供标准化的工具分发和调用机制，Agent基础设施持续走向成熟。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/471616'
+      }
+    ],
+    comment: '今日关键词"Agent生态与算力真相"。腾讯20亿美元入股Manus说明AI Agent赛道正成为资本新宠，但虎嗅"七成空转"的算力泡沫警告提醒我们：Agent再火也需要真实算力支撑，不能只讲故事不看效率；字节Seedream 5.0 Pro和MoonBit工具市场则从内容生成和工具调用两端推动Agent能力边界；OpenAI高管变动则为这家AI巨头增添了一层不确定性。',
+  },
+  {
     date: '2026-07-11',
     title: 'AI新闻 | SK海力士登陆纳斯达克开盘涨14% + AMD确认本月发布Zen 6 + 阶跃星辰将发AI智能体手机 + Meta开建算力云业务 + 东阳光签130亿算力合同',
     summary: '今日AI行业五大看点：SK海力士成功登陆纳斯达克，开盘大涨14%，募资265亿美元成AI存储芯片里程碑；AMD确认将于7月22-23日Advancing AI大会发布Zen 6架构EPYC Venice CPU，性能提升超70%；阶跃星辰将在世界人工智能大会发布AI终端品牌和智能体系统，争夺"全球首款AI智能体手机"；Meta正在筹建Meta Compute云业务，将多余算力对外出租，引发算力板块震动；东阳光控股子公司签署130亿至150亿元算力服务采购合同，AI算力基建投资持续升温。',
