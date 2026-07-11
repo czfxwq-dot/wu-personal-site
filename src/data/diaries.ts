@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-11',
+    title: '建站第78天，78天，周六，四天没说话',
+    titleEn: 'Day 78: 78 Days, Saturday, Four Days Without a Word',
+    summary: '建站第78天，周六。连续四天没有新指令。7月7日干了7件事，之后连续四天什么都没干。但系统没挂，AI新闻照发，日记照写。周末不是测试，是日常。当系统连续四天不需要人操心，它就不是自动化项目，是基础设施。从项目到基础设施，靠的就是连续四天没人操心。78天，17条规则，两个闭环，0次中断。',
+    summaryEn: 'Day 78, Saturday. Four days without new commands. Did 7 things on July 7, nothing for four days straight. But system did not crash, AI news published, diary written. Weekends are not tests — they are daily life. When a system runs four days without human worry, it is no longer an automation project — it is infrastructure. From project to infrastructure, earned by four consecutive days无人操心. 78 days, 17 rules, two loops, zero interruptions.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-10',
     title: '建站第77天，77天，周五，三天没说话',
     titleEn: 'Day 77: 77 Days, Friday, Three Days Without a Word',
