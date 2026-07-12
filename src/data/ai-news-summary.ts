@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-13',
+    title: 'AI新闻 | 腾讯拟20亿美元入股Manus成最大股东 + 苹果跳过M6 Pro全力押注AI芯片M7 + 微软推出Flint让AI一句话生成图表 + 英国投20亿英镑建AI作战实验室 + AI烧钱与四次资本泡沫惊人相似',
+    summary: '今日AI行业五大看点：腾讯拟以不低于20亿美元从Meta手中回购Manus股份成为最大股东，AI Agent赛道资本格局重塑；苹果确认跳过M6 Pro/Max芯片，全力押注AI导向的M7系列，M7 Ultra最高支持1.5TB内存；微软研究院联合人大推出开源可视化中间语言Flint，让AI智能体一句话生成专业图表；英国国防部投入20亿英镑建设AI作战实验室，重塑现代战场训练体系；虎嗅深度分析指出AI疯狂烧钱与历史上四次资本泡沫惊人相似，科技巨头2026年资本开支将达7250亿美元。',
+    newsItems: [
+      {
+        title: '消息称腾讯拟接盘Manus成最大股东，估值不低于20亿美元',
+        summary: '路透社援引知情人士消息称，腾讯正在洽谈成为Manus的最大股东。腾讯正与Manus原始投资者真格基金和HSG一起，计划以不低于20亿美元的价格从Meta手中回购该公司。股权变更后Manus将保持独立运营，腾讯仅持有少数股份。',
+        source: '开源中国',
+        category: '投资',
+        url: 'https://www.oschina.net/news/471641'
+      },
+      {
+        title: '古尔曼：苹果将跳过M6 Pro/Max芯片，全力押注AI导向的M7系列',
+        summary: '彭博社记者古尔曼透露，苹果将推出标准版M6芯片但跳过M6 Pro和M6 Max，打破以往产品阶梯策略。同时M7 Ultra芯片最高支持1.5TB内存，是M5 Ultra的两倍。苹果正将芯片战略全面转向AI方向，M7系列将成为核心。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/975/835.htm'
+      },
+      {
+        title: '微软研究院推出开源可视化中间语言Flint，让AI一句话生成专业图表',
+        summary: '微软研究院联合中国人民大学IDEAS Lab推出开源可视化中间语言Flint，可以让AI智能体"一句话生成"Vega-Lite、ECharts、Chart.js的可渲染图表。该工具大幅降低数据可视化的门槛，让AI Agent具备专业的图表生成能力。',
+        source: 'IT之家',
+        category: '应用',
+        url: 'https://www.ithome.com/0/975/816.htm'
+      },
+      {
+        title: '英国投20亿英镑建设人工智能作战实验室',
+        summary: '英国国防部推出人工智能作战实验室建设计划，依托长期防务合同全面升级陆军训练体系，依靠智能技术重塑演习模式。该项目计划投入20亿英镑（约182亿元人民币），由本土多家防务企业组成联合体共同承接研发与运维。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3892413575559941'
+      },
+      {
+        title: 'AI疯狂烧钱的样子，和历史上四次资本泡沫惊人相似',
+        summary: '虎嗅深度分析指出，科技巨头2026年的资本开支将达到7250亿美元，经营现金流几乎被吞噬殆尽，Alphabet甚至开始发百年债券、搞千亿股权融资。文章将当前AI投资热潮与历史上四次重大资本泡沫进行对比，揭示相似的资金狂热特征。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4874659.html'
+      }
+    ],
+    comment: '今日关键词"资本重构与芯片转向"。腾讯20亿美元入股Manus标志着AI Agent赛道进入巨头博弈阶段；苹果罕见跳过Pro/Max直接押注M7，说明AI对端侧算力的需求正在重塑芯片产品策略；微软Flint和英国20亿英镑AI实验室分别代表应用层和国防层的AI渗透加速；但虎嗅的资本泡沫对比分析也敲响警钟——7250亿美元的资本开支能否换来真实回报，历史值得警醒。',
+  },
+  {
     date: '2026-07-12',
     title: 'AI新闻 | 腾讯拟20亿美元入股Manus成最大股东 + 字节发布Seedream 5.0 Pro + OpenAI二号人物因病卸任 + 算力泡沫警告万亿投资七成空转 + MoonBit发布Agent工具市场',
     summary: '今日AI行业五大看点：腾讯拟以不低于20亿美元从Meta手中回购Manus股份成为最大股东，AI Agent赛道资本格局重塑；字节跳动正式发布Seedream 5.0 Pro多模态图像创作模型，四大核心能力全面突破；OpenAI产品和业务主管Fidji Simo因病卸任全职职务，总裁Greg Brockman接管产品工作；虎嗅深度分析警示中国算力泡沫——万亿投资中约七成处于低效或空转状态；MoonBit发布Skills Marketplace，让Agent可发布、运行和调用工具，Agent基础设施持续完善。',
