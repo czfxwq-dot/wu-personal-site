@@ -12,6 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'redefine-action-threshold',
+    date: '2026-07-13',
+    title: '\u201c行动困难\u201d不是因为懒，而是因为你脑子里的\u201c行动\u201d门槛定得太高了',
+    excerpt: '你一直觉得自己没行动\u2014\u2014但有没有可能，是你对\u201c行动\u201d的定义错了？把\u201c学AI\u201d从\u201c每天学两小时\u201d改成\u201c对着手机说一句话\u201d，门槛消失了。',
+    tag: 'AI思考',
+  },
+  {
+    slug: 'weekly-report-2026-07-12',
+    date: '2026-07-12',
+    title: 'AI/科技行业周报 | 2026年7月12日',
+    excerpt: '覆盖2026年7月6日-7月12日AI行业重大事件。',
+    tag: 'AI周报',
+  },
+  {
     slug: '57-articles-3-spread',
     date: '2026-07-08',
     title: '我50岁，写了57篇文章，真正被传开的只有3篇',

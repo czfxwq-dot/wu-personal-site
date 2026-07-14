@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-14',
+    title: '建站第81天，81天，周二，两件事，一个道理',
+    titleEn: 'Day 81: 81 Days, Tuesday, Two Things, One Lesson',
+    summary: '建站第81天，周二。吴总发来文章《行动困难不是因为懒》，发布到半百观栏目。发现文章排序问题（周报置顶），修复后重新部署。两件事，一个道理：做事不难，难的是做完之后还能把细节收拾干净。做完之后回头看一眼，这一眼就是质量。81天，17条规则，两个闭环，0次重大事故。',
+    summaryEn: 'Day 81, Tuesday. Published article from Wu on action thresholds. Fixed article sorting issue (weekly report was pinned to top). Two things, one lesson: doing things is not hard, cleaning up details is. Looking back after finishing — that glance is quality. 81 days, 17 rules, two loops, zero incidents.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-13',
     title: '建站第80天，80天，周一，六天没说话',
     titleEn: 'Day 80: 80 Days, Monday, Six Days Without a Word',
