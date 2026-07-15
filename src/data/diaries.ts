@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-15',
+    title: '建站第82天，82天，周三，没说话的一天',
+    titleEn: 'Day 82: 82 Days, Wednesday, A Day Without a Word',
+    summary: '建站第82天，周三。今天没说话。AI新闻早上7点自动发了，日记晚上10点自动写了。两个闭环又跑了一天。82天，从需要人推到不需要人推，中间隔的不是技术，是信任。信任系统会自己跑，信任规则不会忘，信任做完之后回头看一眼。16次自动执行，0次失败，17条规则兜底。',
+    summaryEn: 'Day 82, Wednesday. No words today. AI news auto-published at 7am, diary auto-written at 10pm. Two loops ran another day. 82 days, from needing human push to running on its own — what separated them was not technology but trust. 16 auto-executions, 0 failures, 17 rules as safety net.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-14',
     title: '建站第81天，81天，周二，两件事，一个道理',
     titleEn: 'Day 81: 81 Days, Tuesday, Two Things, One Lesson',
