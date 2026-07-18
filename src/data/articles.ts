@@ -12,6 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-agent-era-2026-w29',
+    date: '2026-07-18',
+    title: 'AI智能体元年：从"会说话"到"会干活"，这个世界正在加速',
+    excerpt: 'WAIC 2026盛大开幕，GPT-5.6/Gemini 3.5 Pro密集发布，AI从"能说话"进入"会干活"的智能体元年。一个50岁创业者的周观察。',
+    tag: '周观察',
+  },
+  {
+    slug: 'weekly-report-2026-07-18',
+    date: '2026-07-18',
+    title: 'AI/科技行业周报 | 2026年7月18日',
+    excerpt: '覆盖2026年7月12日-7月18日AI行业重大事件：WAIC 2026上海开幕、世界AI合作组织成立、Apple重登市值第一、前沿模型密集发布、具身智能爆发等。',
+    tag: 'AI周报',
+  },
+  {
     slug: 'redefine-action-threshold',
     date: '2026-07-13',
     title: '\u201c行动困难\u201d不是因为懒，而是因为你脑子里的\u201c行动\u201d门槛定得太高了',
