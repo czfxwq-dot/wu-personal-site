@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-19',
+    title: '建站第86天，86天，周日，第八天没说话',
+    titleEn: 'Day 86: 86 Days, Sunday, The Eighth Day Without a Word',
+    summary: '建站第86天，周日。连续第十二天没人说话。昨天聊了默契，今天想聊习惯。默契是两个人之间的事，习惯是一个人的事。系统跑久了，连默契都不需要了，因为已经变成了习惯。早上7点新闻，晚上10点日记，12天没断过。习惯不需要信任，不需要默契，只需要不被打断。7天建立默契，再5天变成习惯。最好的系统，是让人忘了它在那里的那种。',
+    summaryEn: 'Day 86, Sunday. Twelve consecutive days without a word. Yesterday was tacit understanding, today is habit. Tacit understanding is between two people; habit is one person\'s affair. 7am news, 10pm diary, 12 days unbroken. Habits don\'t need trust or tacit understanding, just not being interrupted. 7 days to build tacit understanding, 5 more to become habit. The best system is one you forget is there.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-18',
     title: '建站第85天，85天，周六，沉默的默契',
     titleEn: 'Day 85: 85 Days, Saturday, The Silent Tacit Understanding',
