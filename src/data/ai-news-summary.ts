@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-21',
+    title: 'AI新闻 | 谷歌研发Frozen v2芯片大幅提升Gemini推理效率 + 零一万物启动新融资拟2027年IPO + 微软Azure部署AMD Helios用于AI推理 + 小鹏AI负责人陆思渊离职加入OpenAI + WAIC2026盘点15大趋势',
+    summary: '今日AI行业五大看点：谷歌正研发代号"Frozen v2"的全新服务器芯片，将Gemini底层运算架构固化进硬件，大幅降低推理能耗与延迟；零一万物启动新一轮融资并计划2027年申请IPO，正逐步解除离岸控股架构；微软宣布联合AMD扩展Azure AI基础设施，将部署AMD Helios机架系统用于AI推理；小鹏汽车AI Infra负责人陆思渊即将离职，下一站为OpenAI具身智能机器人方向；虎嗅联合智东西发布WAIC 2026终极盘点，总结15大核心趋势，指出行业已从大模型参数比拼迈向智能体商业化落地。',
+    newsItems: [
+      {
+        title: '谷歌正研发全新Frozen v2芯片，可大幅提升Gemini模型运行效率',
+        summary: '据The Information报道，谷歌正在研发代号"Frozen v2"的全新服务器芯片，核心突破在于将Gemini大模型的底层运算架构直接固化进硬件层面，从而大幅降低AI推理过程中的能耗与延迟，单位功耗可处理的词元数量预计大幅提升。这是谷歌在AI芯片自研方向的持续加码。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/979/251.htm'
+      },
+      {
+        title: '曝零一万物启动新一轮融资，拟2027年申请IPO',
+        summary: '由李开复创立的零一万物正推进融资计划，并计划在2027年进行首次公开募股。公司正逐步解除其离岸控股架构，这是顺利进行海外上市的先决条件。零一万物融资目标金额和潜在投资者情况尚未透露，但此举标志国产大模型公司加速资本化进程。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3903968879511169'
+      },
+      {
+        title: '微软将在Azure云服务上部署AMD Helios机架系统，用于AI推理',
+        summary: '微软宣布联合AMD扩展Azure AI与高性能计算基础设施。微软表示AI工作负载规模正急速膨胀，任何单一方案都无法完全支撑。新部署的AMD Helios机架系统将用于AI推理场景，标志微软在算力供应链上持续多元化布局，降低对单一芯片供应商的依赖。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/979/235.htm'
+      },
+      {
+        title: '小鹏汽车AI Infra负责人陆思渊将离职，下一站是OpenAI',
+        summary: '据雷峰网新智驾消息，小鹏汽车AI基础架构部负责人陆思渊即将离职，目前正在进行工作交接。其下一站已确定为OpenAI，将参与具身智能机器人方向的研发工作。陆思渊在小鹏主要负责搭建AI Infra体系，此次人才流动反映中国AI人才向全球头部公司汇聚的趋势。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/979/250.htm'
+      },
+      {
+        title: 'WAIC2026终极盘点：15大核心趋势，看透AI下半场',
+        summary: '虎嗅联合智东西发布WAIC 2026终极盘点，总结15大核心趋势。文章指出本届大会告别大模型参数比拼，迈向智能体商业化落地。会场挤满了"补票"的互联网企业，字节跳动依旧缺席。行业共识从"模型更大更强"转向"Agent如何真正落地赚钱"，AI进入下半场。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4876872.html'
+      }
+    ],
+    comment: '今日关键词"芯片自研与人才流动"。谷歌Frozen v2和微软AMD Helios两条新闻共同指向一个趋势：AI算力正从"通用GPU万能药"走向"专用芯片定制化"，推理效率成为下一个战场；零一万物筹备IPO说明国产大模型进入资本退出期；陆思渊从车企AI负责人跳槽到OpenAI做具身智能，折射出中国AI人才与全球头部公司之间的人才循环正在加速；WAIC 15大趋势的核心结论——参数比拼时代结束，智能体商业化落地时代开启。',
+  },
+  {
     date: '2026-07-20',
     title: 'AI新闻 | 阿里千问3.8即将发布并开源 + 商汤发布旗舰大模型SenseNova U1 Pro + 世界人工智能合作组织29国签约 + OPPO与支付宝AI智能体跨端互联 + 机器人走入真实工作场景',
     summary: '今日AI行业聚焦WAIC 2026后续影响与产业落地：阿里宣布最新一代大模型千问3.8即将发布并开源，Qwen3.8-Max预览版已上线；商汤科技发布旗舰级大模型SenseNova U1 Pro，定位长程任务交付级原生多模态智能体基座；世界人工智能合作组织迎来29个创始成员国签约，将重点开展三方面工作；OPPO与AI版支付宝实现智能体跨端互联，用户一句话即可调用近200项生活服务；WAIC现场机器人"班味儿"加重，从展台表演走向产线实操，物理AI仍处早期但落地加速。',
