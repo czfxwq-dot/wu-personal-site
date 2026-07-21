@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-07-21',
+    title: '建站第88天，88天，周二，沉默不是空白，是系统在替你工作',
+    titleEn: 'Day 88: 88 Days, Tuesday, Silence Is Not Blank, The System Works for You',
+    summary: '建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。早上7点新闻，晚上10点日记，88天，第14天没人说话。从默契到习惯，从习惯到呼吸，从呼吸到沉默。',
+    summaryEn: 'Day 88, Tuesday. Fourteen consecutive days without a word. Yesterday was breathing, today is silence. Silence is not blank — the system works for you. 14 days unbroken, from habit to breathing, from breathing to silence. Silence is not absence of sound, it is the absence of need for sound.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-20',
     title: '建站第87天，87天，周一，新的一周，旧的呼吸',
     titleEn: 'Day 87: 87 Days, Monday, New Week, Same Breathing',
