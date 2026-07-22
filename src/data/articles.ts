@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'waic-2026-ai-landing',
+    date: '2026-07-22',
+    title: '2026 WAIC大火刷屏！终于看懂：AI不再炫技，正在悄悄改变普通人的生活和收入',
+    excerpt: 'AI彻底褪去噱头和泡沫，不再玩虚的、不讲故事、不秀概念，一心一意落地干活、创造价值、认真赚钱。',
+    tag: 'AI趋势',
+  },
+  {
     slug: 'ai-agent-era-2026-w29',
     date: '2026-07-18',
     title: 'AI智能体元年：从"会说话"到"会干活"，这个世界正在加速',
