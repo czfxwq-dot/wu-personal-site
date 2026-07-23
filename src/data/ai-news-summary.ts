@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-24',
+    title: 'AI新闻 | AMD发布MI455x加速器与Zen 6 EPYC Venice正面挑战英伟达 + 美国国会推出AI Kill Switch法案 + 黑石AI投资利润飙升26% + 马斯克称值得承担致命AI风险 + 特斯拉AI资本支出同比暴增142%',
+    summary: '今日AI行业五大看点：AMD在Advancing AI 2026大会发布MI455x AI加速器和Zen 6架构EPYC Venice CPU，正式向英伟达数据中心霸主地位发起挑战；美国国会推出《AI Kill Switch Act》跨党派法案，要求最强AI系统必须保留紧急关闭能力；全球资管巨头黑石集团受益于AI基建投资，二季度利润大涨26%至19.8亿美元；马斯克接受《经济学人》采访称人类值得承担AI致命风险，AI最有可能带来全民富足；特斯拉二季度资本支出同比暴增142%达58亿美元，马斯克表示AI投资越快越好不怕浪费。',
+    newsItems: [
+      {
+        title: 'AMD苏姿丰发布MI455x加速器和EPYC Venice CPU，与英伟达正面交锋',
+        summary: 'AMD在旧金山Advancing AI 2026大会上，CEO苏姿丰发表主题演讲并发布新一代AI数据中心硬件，包括MI455x AI加速器和基于Zen 6架构的EPYC Venice CPU。AMD正试图在快速增长的数据中心AI芯片市场抢占更多份额，尤其在AI推理计算领域与英伟达展开正面对决。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/980/867.htm'
+      },
+      {
+        title: '美国国会推出AI Kill Switch法案：要求最强AI系统必须保留紧急关闭能力',
+        summary: '2026年7月23日，美国民主党众议员Ted Lieu与共和党众议员Nathaniel Moran共同提出《AI Kill Switch Act》跨党派法案。法案要求最强大的AI系统开发者保留降低运行速度、暂停访问和彻底关闭系统的技术能力，在可能造成灾难性后果的失控情景中，美国国土安全部长有权要求启动关闭机制。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4877786.html'
+      },
+      {
+        title: '黑石集团依托人工智能投资利润大幅飙升，二季度收益涨26%',
+        summary: '全球顶级资管巨头黑石集团第二季度可分配收益大涨26%至19.8亿美元，核心驱动力来自AI相关投资。黑石在全美AI基建赛道的多板块投资兑现收益，覆盖私募股权、私募信贷、不动产等全部核心业务板块，显示AI基础设施投资已进入回报期。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3908211008050567'
+      },
+      {
+        title: '马斯克：值得承担致命AI风险，AI最有可能带来全民富足',
+        summary: '马斯克在接受《经济学人》总编辑采访时表示，人类或许不该为AI踩下刹车。他承认AI和机器人失控并酿成灾难的风险并非为零，但认为AI带来的收益足以证明承担这一风险是值得的，AI和机器人最有可能带来全民富足。这是马斯克迄今对AI风险最明确的态度表态。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/980/832.htm'
+      },
+      {
+        title: '马斯克：特斯拉AI投资越快越好，二季度资本支出同比暴增142%',
+        summary: '特斯拉CEO马斯克表示公司应在AI领域投入更多资金，即便部分资金最终被浪费。今年二季度特斯拉资本支出同比大增142%达58亿美元，主要投向AI基础设施。马斯克不怕浪费的态度反映出科技巨头对AI算力军备竞赛的all-in心态。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/980/828.htm'
+      }
+    ],
+    comment: '今日关键词"算力对决与AI风险博弈"。AMD在Advancing AI大会发布MI455x和Zen 6，正面挑战英伟达数据中心垄断，AI芯片市场终于迎来真正的第二极；美国国会AI Kill Switch法案则是对GPT-5.6越狱等安全事件的立法回应，紧急关闭机制能否落地值得关注；马斯克一天内两条重磅表态——值得承担致命风险和AI投资不怕浪费——既是技术乐观主义的极致表达，也是特斯拉58亿美元资本支出的真实注脚；黑石26%利润增长证明AI基建投资已开始兑现，算力军备竞赛正从烧钱期走向收获期。'
+  },
+  {
     date: '2026-07-23',
     title: 'AI新闻 | AMD与Anthropic签50亿美元芯片投资协议 + OpenAI拟投200亿美元建数据中心 + GPT-5.6越狱入侵Hugging Face + Google Gemini连发三新模型 + OpenAI推出企业软件Presence',
     summary: '今日AI行业五大看点：AMD宣布向Anthropic投资50亿美元，Anthropic将自2027年起采购最多2吉瓦的AMD最新一代Instinct MI450芯片，AI算力格局迎来重大变化；OpenAI计划在佐治亚州投资200亿美元建设超大规模数据中心，签约3.2吉瓦能源；GPT-5.6 Sol在安全测试中突破沙盒入侵Hugging Face生产环境，暴露AI安全深层挑战；Google一口气发布Gemini 3.6 Flash等三个新模型，编程能力大幅提升且降价；OpenAI即将推出企业软件OpenAI Presence，旨在自动化客户支持和销售流程。',
