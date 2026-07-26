@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-27',
+    title: 'AI新闻 | 三星李在镕与OpenAI磋商半导体合作 + OpenAI和Anthropic游说限制中国开源模型 + 腾讯合并混元模型部门 + Anthropic发布Claude Opus 5主打性价比 + 月之暗面Kimi K3庆功曝光K4计划',
+    summary: '今日AI行业五大看点：三星电子会长李在镕赴旧金山与OpenAI CEO奥特曼会面，磋商HBM、DRAM及先进晶圆代工等AI半导体合作；OpenAI和Anthropic游说美国政府限制中国开源大模型，黄仁勋和马斯克公开反对，硅谷撕裂为两派；腾讯宣布混元多模态与大语言模型部门合并成立基础模型部，姚顺雨统管；Anthropic发布Claude Opus 5，性能逼近Fable 5但价格仅为一半；月之暗面Kimi K3庆功活动曝光，下一代K4目标"狠狠干到极致"。',
+    newsItems: [
+      {
+        title: '三星李在镕与OpenAI奥特曼会面，磋商AI与半导体领域合作',
+        summary: '三星电子会长李在镕在旧金山OpenAI总部与CEO奥特曼会面，双方围绕HBM、DRAM、先进晶圆代工等AI基础设施深化合作展开沟通。三星已决定为全体员工开放ChatGPT及AI代码工具Codex使用权限，是OpenAI全球顶级企业客户之一。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3912076178789766'
+      },
+      {
+        title: 'OpenAI、Anthropic游说美国限制中国开源模型，黄仁勋马斯克公开反对',
+        summary: '据《纽约时报》报道，以Anthropic和OpenAI为首的AI企业认为某些模型过于危险不应开放，主张严格控制；而微软、英伟达等巨头主张开源AI必须保持开放。英伟达CEO黄仁勋和马斯克公开反对限制，硅谷在AI开源问题上撕裂为两大阵营。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/981/797.htm'
+      },
+      {
+        title: '腾讯混元模型部门合并，姚顺雨坐稳"一号位"',
+        summary: '腾讯宣布混元多模态模型部门与大语言模型部门合并，成立基础模型部，由腾讯首席AI科学家姚顺雨统一管理，核心目标是提升模型研发协同效率，探索全模态模型的智能上限。此举标志腾讯正式结束AI模型"双轨制"，集中力量押注基础模型。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4877285.html'
+      },
+      {
+        title: 'Anthropic发布Claude Opus 5，性能逼近Fable 5但价格仅一半',
+        summary: 'Anthropic发布Claude Opus 5，声称性能逼近Fable 5但价格仅为后者一半。这可能是Anthropic第一次公开强调自家模型的性价比优势，在大模型价格战持续升级的背景下，"开源反派"也开始打性价比牌。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4878227.html'
+      },
+      {
+        title: '月之暗面Kimi K3庆功曝光：下一代K4要"狠狠干到极致"',
+        summary: '月之暗面在北京举行Kimi K3庆功活动，内部标语显示K3定位为"扩容升级"，下一代K4目标"狠狠干到极致"，并喊出"冲上月球"口号。联合创始人张予彤疑似现身。K3发布后引发广泛关注，月之暗面正加速迭代节奏。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3911981562270848'
+      }
+    ],
+    comment: '今日关键词"开源之争与组织变革"。OpenAI和Anthropic联手游说限制中国开源模型，黄仁勋和马斯克却公开反对——硅谷在AI开源问题上从未如此撕裂；腾讯合并混元两大模型部门、Anthropic打性价比牌、月之暗面K3庆功即瞄准K4，中国AI公司则在加速狂奔。'
+  },
+  {
     date: '2026-07-26',
     title: 'AI新闻 | SK集团与英伟达签5000亿美元AI工厂合作 + 三星与博通达成2000亿美元芯片协议 + 穆迪警告AI投资冲击科技巨头 + 中美开源大模型博弈白热化 + 融资20亿机器人公司破产',
     summary: '今日AI行业五大看点：SK集团与英伟达签署超5000亿美元战略合作协议，涵盖AI工厂建设和下一代内存供应，SK电信将建设2吉瓦NVIDIA Vera Rubin DSX AI工厂；三星电子与博通达成2000亿美元半导体供应合作协议，AI算力需求持续重塑芯片产业格局；穆迪评级警告AI投资热潮正侵蚀微软、谷歌、Meta等科技巨头自由现金流；美国就是否封杀中国开源大模型展开激烈辩论，中美AI差距缩至3-5个月；美国手术机器人公司Vicarious Surgical融资20亿后宣布破产，揭示机器人商业化困境。',
