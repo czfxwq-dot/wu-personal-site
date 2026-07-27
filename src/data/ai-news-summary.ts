@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-28',
+    title: 'AI新闻 | 小米MiMo-V2.5登顶OpenRouter全球双榜 + 英伟达投资苏茨克维AI实验室 + Lilian Weng官宣离职 + 苹果市值再超英伟达 + 微软算力分配面临关键抉择',
+    summary: '今日AI行业五大看点：小米MiMo-V2.5在OpenRouter全球大模型调用量周榜、月榜双双登顶，成为当周全球调用量唯一突破10T的模型，两个月增长约616%；英伟达对OpenAI联合创始人苏茨克维旗下AI实验室SSI进行"实质性"投资，进一步拓展算力版图；北大校友、前OpenAI安全负责人Lilian Weng官宣离开Thinking Machines Lab；苹果股价创历史新高，总市值超4.95万亿美元再超英伟达重返全球第一；微软股价持续承压，面临Copilot、Azure算力分配的关键抉择。',
+    newsItems: [
+      {
+        title: '小米MiMo-V2.5登顶OpenRouter全球周榜、月榜双第一',
+        summary: 'OpenRouter最新数据显示，小米MiMo-V2.5登上全球大模型调用量周榜、月榜双第一，成为当周全球调用量唯一突破10T的模型。5月以来，MiMo-V2.5全球调用量持续攀升，单周token量从1.46T升至10.46T，两个月增长约616%，国产大模型在全球开发者中的影响力持续扩大。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3913798998201732'
+      },
+      {
+        title: '英伟达投资OpenAI联合创始人苏茨克维AI实验室SSI',
+        summary: '据华尔街日报报道，英伟达正在投资OpenAI联合创始人、前首席科学家伊利亚·苏茨克维旗下保密级别极高的AI实验室SSI。英伟达在难得一窥该初创公司的研究进展后，对其进行了"实质性"投资。此举标志英伟达在算力版图之外，加速布局前沿AI研究生态。',
+        source: 'IT之家',
+        category: '投资',
+        url: 'https://www.ithome.com/0/982/251.htm'
+      },
+      {
+        title: '北大校友Lilian Weng官宣离职，AI时代最好的"对齐"是照顾好自己',
+        summary: '北大校友翁荔（Lilian Weng）在社交媒体上发布离职信，宣布明天将是她在Thinking Machines Lab的最后一天。距离她与OpenAI前CTO Mira Murati共同创立公司，过去了整整20个月。几天前Thinking Machines刚发布首个开源大模型，此时离职引发业界广泛关注。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4878600.html'
+      },
+      {
+        title: '苹果市值达4.95万亿美元再超英伟达，重回全球榜首',
+        summary: '苹果股价上涨1.17%创历史新高，总市值超4.95万亿美元，再次超越英伟达重返全球市值第一宝座，距5万亿大关仅一步之遥。与此同时英伟达跌近5%，市场风格出现微妙切换，苹果被视为AI时代的"科技避风港"。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/982/274.htm'
+      },
+      {
+        title: '股价持续承压，微软面临算力分配关键抉择',
+        summary: '过去12个月微软股价持续走低，今年6月单月下跌19%，创互联网泡沫破裂以来最大单月跌幅。Microsoft 365、Copilot和Xbox等核心业务面临严峻挑战，AI算力投入与回报之间的矛盾日益突出，公司正面临算力分配的关键战略抉择。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/982/250.htm'
+      }
+    ],
+    comment: '今日关键词"格局重塑"。小米MiMo-V2.5两个月调用量暴增616%登顶全球，国产大模型正从"追赶者"变为"引领者"；英伟达投资苏茨克维实验室说明算力巨头也在抢滩前沿研究；Lilian Weng离职、苹果反超英伟达、微软承压——当AI投资进入回报验证期，市场格局正在悄然重塑。'
+  },
+  {
     date: '2026-07-27',
     title: 'AI新闻 | 三星李在镕与OpenAI磋商半导体合作 + OpenAI和Anthropic游说限制中国开源模型 + 腾讯合并混元模型部门 + Anthropic发布Claude Opus 5主打性价比 + 月之暗面Kimi K3庆功曝光K4计划',
     summary: '今日AI行业五大看点：三星电子会长李在镕赴旧金山与OpenAI CEO奥特曼会面，磋商HBM、DRAM及先进晶圆代工等AI半导体合作；OpenAI和Anthropic游说美国政府限制中国开源大模型，黄仁勋和马斯克公开反对，硅谷撕裂为两派；腾讯宣布混元多模态与大语言模型部门合并成立基础模型部，姚顺雨统管；Anthropic发布Claude Opus 5，性能逼近Fable 5但价格仅为一半；月之暗面Kimi K3庆功活动曝光，下一代K4目标"狠狠干到极致"。',
