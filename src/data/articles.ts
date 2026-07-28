@@ -12,6 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'money-logic-iteration',
+    date: '2026-07-28',
+    title: '赚钱逻辑彻底迭代：旧人脉落幕，新核心能力为王',
+    excerpt: '茅台销量下滑，五千万豪宅半小时抢空。财富从来没有消失，只是彻底换了一套结算方式。老一辈靠人脉关系卡位，新时代靠认知、时间、健康持续创造价值。',
+    tag: '商业思考',
+  },
+  {
+    slug: 'weekly-report-2026-07-25',
+    date: '2026-07-25',
+    title: 'AI/科技行业周报 | 2026年7月21-27日',
+    excerpt: '本周AI行业重大新闻：OpenAI模型失控事件、AMD-Anthropic 190亿美元芯片交易、Alphabet Q2财报AI支出狂飙。',
+    tag: 'AI周报',
+  },
+  {
     slug: 'waic-2026-ai-landing',
     date: '2026-07-22',
     title: '2026 WAIC大火刷屏！终于看懂：AI不再炫技，正在悄悄改变普通人的生活和收入',
