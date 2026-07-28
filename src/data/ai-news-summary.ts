@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-29',
+    title: 'AI新闻 | 英伟达500亿美元租数据中心 + Anthropic/OpenAI 1100名研究员发出安全警告 + SK海力士利润暴增1240% + AMD锁定2.5GW AI算力 + AWS签4.1亿美元AI合作',
+    summary: '今日AI行业五大看点：英伟达签署最高500亿美元得州巨型数据中心租赁协议，加速布局AI基础设施；来自Anthropic、OpenAI等公司的超1100名研究员发布联合声明，向全人类发出AI安全警告；SK海力士Q2净利润同比暴增1240.8%，AI驱动的存储芯片需求持续爆发；AMD与Core Scientific达成合作锁定最高2.5GW数据中心容量；AWS与AI公司Recursive签署4.1亿美元多年期合作协议。',
+    newsItems: [
+      {
+        title: '英伟达出资500亿美元租赁得州数据中心，加速AI基础设施布局',
+        summary: '英伟达签署最高价值500亿美元的巨型得州数据中心租赁协议，将整租数据中心开发商Hut 8在建的设施。该中心将全面采用英伟达芯片，标志这家市值接近5万亿美元的企业正不断深入参与AI基础设施融资环节，从芯片供应商向算力运营商拓展。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3915247046405507'
+      },
+      {
+        title: 'Anthropic和OpenAI的1100名研究员联合向全人类发出AI安全警告',
+        summary: '一份名为"Pacing the Frontier"的公开声明发布，超过1100名来自OpenAI、Anthropic、Google、Meta、Microsoft、Mistral等公司的研究员联合签名。声明呼吁全球重视AI发展速度与安全对齐之间的失衡问题，强调前沿模型能力正在指数级增长而安全研究严重滞后。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4878898.html'
+      },
+      {
+        title: 'SK海力士Q2净利润同比暴增1240.8%，AI存储芯片需求爆发',
+        summary: 'SK海力士发布2026财年第二财季业绩快报，归母净利润达93.82万亿韩元（约合人民币4800亿元），同比增长1240.8%。AI驱动的HBM（高带宽内存）和服务器DRAM需求持续旺盛，存储芯片行业进入超级景气周期。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/982/797.htm'
+      },
+      {
+        title: 'AMD与Core Scientific达成合作，锁定最高2.5GW AI数据中心算力',
+        summary: 'AMD宣布与Core Scientific达成合作协议，将获得最高2.5吉瓦的数据中心容量以满足AI算力需求。此举标志AMD在AI基础设施领域加速追赶英伟达，不仅提供芯片，还直接参与算力资源锁定和分配。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/982/773.htm'
+      },
+      {
+        title: '亚马逊云与AI公司Recursive签署4.1亿美元多年期合作协议',
+        summary: 'AWS宣布与AI公司Recursive达成价值4.1亿美元的多年期协议。Recursive将指定AWS作为其云服务提供商，并在AWS平台上运行其自动化AI研究系统。此举显示云计算巨头正通过大额合同锁定AI研究 workload。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3915264169275015'
+      }
+    ],
+    comment: '今日关键词"军备竞赛"。英伟达500亿美元租数据中心、AMD锁定2.5GW算力、AWS签4.1亿美元合同——AI基础设施投资规模已超出传统科技行业想象；而1100名研究员的安全警告则提醒我们：当算力以指数级扩张时，安全对齐研究却远远落后，这或许是整个行业最需要警惕的失衡。'
+  },
+  {
     date: '2026-07-28',
     title: 'AI新闻 | 小米MiMo-V2.5登顶OpenRouter全球双榜 + 英伟达投资苏茨克维AI实验室 + Lilian Weng官宣离职 + 苹果市值再超英伟达 + 微软算力分配面临关键抉择',
     summary: '今日AI行业五大看点：小米MiMo-V2.5在OpenRouter全球大模型调用量周榜、月榜双双登顶，成为当周全球调用量唯一突破10T的模型，两个月增长约616%；英伟达对OpenAI联合创始人苏茨克维旗下AI实验室SSI进行"实质性"投资，进一步拓展算力版图；北大校友、前OpenAI安全负责人Lilian Weng官宣离开Thinking Machines Lab；苹果股价创历史新高，总市值超4.95万亿美元再超英伟达重返全球第一；微软股价持续承压，面临Copilot、Azure算力分配的关键抉择。',
