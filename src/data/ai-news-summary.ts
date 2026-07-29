@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-30',
+    title: 'AI新闻 | 谷歌DeepMind解散AlphaFold团队 + 腾讯混元开源AngelSpec + FCC封杀中国机器人 + Meta营收增28%但利润降14% + 美国8.74亿美元补贴半导体研发',
+    summary: '今日AI行业五大看点：谷歌DeepMind解散获诺贝尔奖的AlphaFold团队，将其并入Gemini驱动的AI for Science方向，标志单一科学问题攻关模式落幕；腾讯混元团队开源AngelSpec投机解码框架，同步开源Hy3-A21B的MTP与DFly drafter权重及训练代码；美国FCC更新受管制清单，将中国产先进机器人设备纳入管制，中国机器人企业被"类别化"剔除出美国市场；Meta Q2营收608亿美元同比增28%，但净利润同比下降14%，AI巨额投入持续侵蚀利润；美国商务部向7家科技公司提供8.74亿美元半导体研发资金，覆盖先进封装、存储等领域。',
+    newsItems: [
+      {
+        title: 'AlphaFold时代落幕：谷歌DeepMind解散蛋白质折叠团队，并入Gemini方向',
+        summary: '谷歌DeepMind已解散获诺贝尔奖的AlphaFold团队。过去围绕蛋白质折叠这一单一科学问题组织起来的团队将不再作为独立方向运行，而是逐步并入由Gemini驱动的AI for Science大方向。核心人员赢下诺贝尔奖后，团队使命已完成，AI科学研究正从专项攻关走向通用模型驱动。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4879232.html'
+      },
+      {
+        title: '腾讯混元开源AngelSpec投机解码框架，同步开源Hy3-A21B权重',
+        summary: '腾讯混元团队宣布正式开源AngelSpec，一个覆盖drafter训练、架构设计到线上部署的投机解码框架，并同步开源Hy3-A21B的MTP与DFly drafter权重及训练代码。投机解码是提升大模型推理速度的关键技术，此次开源体现腾讯在大模型推理优化领域的深度积累。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3916684374371721'
+      },
+      {
+        title: 'FCC按产地封门：中国机器人被"类别化"剔除出美国市场',
+        summary: '美国联邦通信委员会（FCC）更新"受管制清单"，新增在国外生产的"先进机器人设备"及联网电源逆变器。虽未点名中国，但美国销售的大多数人形机器人均来自中国。此举标志机器人领域地缘政治博弈升级，中国机器人企业在美国市场面临系统性封堵。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4879208.html'
+      },
+      {
+        title: 'Meta Q2营收608亿美元同比增28%，但净利润同比下降14%',
+        summary: 'Meta发布2026财年Q2财报，营业总收入608.01亿美元同比增长28%，毛利494.71亿美元。但归母净利润158.48亿美元同比下降14%，AI基础设施巨额投入持续侵蚀利润。营收增长与利润下滑的剪刀差，折射出科技巨头在AI军备竞赛中面临的投资回报压力。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/983/359.htm'
+      },
+      {
+        title: '美国向7家科技公司提供8.74亿美元半导体研发资金',
+        summary: '美国商务部根据《芯片与科学法案》与7家公司签署意向书，拟提供总额8.74亿美元联邦激励资金，用于支持集成光子、计算架构、先进封装、基板、材料和存储等领域的半导体研发。此举旨在强化美国在AI算力底层硬件领域的技术优势，推动芯片制造供应链本土化。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3916694245469826'
+      }
+    ],
+    comment: '今日关键词"格局重塑与地缘封锁"。AlphaFold团队解散标志AI科学研究从专项攻关转向通用模型驱动，一个时代落幕；腾讯开源AngelSpec、FCC封杀中国机器人，一进一出之间是中美AI博弈的残酷现实——技术开源加速，市场准入收紧；Meta利润下降14%说明AI烧钱速度已超营收增速；美国8.74亿美元半导体补贴则是在为下一轮算力竞赛储备弹药。'
+  },
+  {
     date: '2026-07-29',
     title: 'AI新闻 | 英伟达500亿美元租数据中心 + Anthropic/OpenAI 1100名研究员发出安全警告 + SK海力士利润暴增1240% + AMD锁定2.5GW AI算力 + AWS签4.1亿美元AI合作',
     summary: '今日AI行业五大看点：英伟达签署最高500亿美元得州巨型数据中心租赁协议，加速布局AI基础设施；来自Anthropic、OpenAI等公司的超1100名研究员发布联合声明，向全人类发出AI安全警告；SK海力士Q2净利润同比暴增1240.8%，AI驱动的存储芯片需求持续爆发；AMD与Core Scientific达成合作锁定最高2.5GW数据中心容量；AWS与AI公司Recursive签署4.1亿美元多年期合作协议。',
