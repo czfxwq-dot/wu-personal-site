@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-07-31',
+    title: 'AI新闻 | Google升级Gemini Robotics ER 2具身推理模型 + 字节组建豆包办公部门 + 甲骨文与谷歌扩大Gemini企业合作 + 科技巨头面临AI算力分配难题 + 宇树科技启动科创板IPO',
+    summary: '今日AI行业五大看点：Google正式开放新一代具身推理模型Gemini Robotics ER 2预览版，让机器人具备"知道自己干到哪一步"的能力；字节跳动组建豆包办公部门，推动AI深度融入办公协作流程；甲骨文与谷歌扩大合作，将Gemini模型引入企业应用；科技巨头面临AI算力自用还是出售的战略抉择；宇树科技启动科创板IPO初步询价，人形机器人龙头即将登陆资本市场。',
+    newsItems: [
+      {
+        title: 'Google升级机器人"大脑"2.0，Gemini Robotics ER 2正式开放',
+        summary: '7月30日，Google更新Gemini Robotics开发者文档，正式开放新一代具身推理模型Gemini Robotics ER 2预览版。ER 2悄然出现在Google AI Studio及Gemini API中，开发者可直接调用。此次升级让机器人具备更强的自主感知和任务执行能力，实现"知道自己干到哪一步"的具身推理。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4879551.html'
+      },
+      {
+        title: '字节跳动已组建豆包办公部门，推动AI融入真实办公流程',
+        summary: '字节跳动内部组建豆包办公部门，旨在推动豆包深度融入真实办公及协作流程，持续提升办公生产力。当前招聘平台已出现标注"豆包办公"的岗位，主招AI策略产品经理，负责豆包在智能办公和企业场景中的产品功能及跨产品能力集成落地。同日飞书产品团队并入豆包体系。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3918083632459392'
+      },
+      {
+        title: '甲骨文与谷歌扩大合作伙伴关系，将推出Gemini模型企业应用',
+        summary: '甲骨文与谷歌宣布扩大合作伙伴关系，甲骨文将在其企业产品线中推出谷歌的Gemini模型应用。此举标志谷歌大模型在企业级市场的渗透进一步加速，甲骨文作为全球最大企业软件商之一，其AI战略转向对行业格局影响深远。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3918140120100231'
+      },
+      {
+        title: '自用还是出售赚钱？科技巨头面临AI算力分配难题',
+        summary: '随着科技巨头大举建设算力基础设施，一些企业正面临棘手问题：究竟应该把算力留给自己使用，还是拿出来出售赚钱。Meta CEO扎克伯格表示"大部分"算力将用于训练AI模型和驱动智能体，但也预计将发展一项规模可观的算力出售业务。算力分配已成为AI时代的战略抉择。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/983/906.htm'
+      },
+      {
+        title: '宇树科技启动科创板IPO：初步询价日8月5日，人形机器人龙头即将登陆资本市场',
+        summary: '宇树科技公告首次公开发行股票并在科创板上市，拟公开发行4044.64万股，占发行后总股本10%。初步询价日为2026年8月5日，网上网下申购日为8月10日。实际控制人王兴兴在表决权差异安排下合计控制公司68.78%的表决权。作为全球领先的人形机器人公司，宇树科技上市将是具身智能赛道的里程碑事件。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3918161688505730'
+      }
+    ],
+    comment: '今日关键词"具身智能与企业AI落地"。Google Gemini Robotics ER 2让机器人从"表演"走向"自主执行"，宇树科技IPO则标志具身智能进入资本收获期；字节组建豆包办公部门、甲骨文引入Gemini，两条新闻共同指向AI从"聊天工具"向"企业生产力"的实质性转型；算力分配难题则揭示了一个深层矛盾——当AI基建投入达到天量规模，自用与外售的抉择将决定下一轮竞争格局。'
+  },
+  {
     date: '2026-07-30',
     title: 'AI新闻 | 谷歌DeepMind解散AlphaFold团队 + 腾讯混元开源AngelSpec + FCC封杀中国机器人 + Meta营收增28%但利润降14% + 美国8.74亿美元补贴半导体研发',
     summary: '今日AI行业五大看点：谷歌DeepMind解散获诺贝尔奖的AlphaFold团队，将其并入Gemini驱动的AI for Science方向，标志单一科学问题攻关模式落幕；腾讯混元团队开源AngelSpec投机解码框架，同步开源Hy3-A21B的MTP与DFly drafter权重及训练代码；美国FCC更新受管制清单，将中国产先进机器人设备纳入管制，中国机器人企业被"类别化"剔除出美国市场；Meta Q2营收608亿美元同比增28%，但净利润同比下降14%，AI巨额投入持续侵蚀利润；美国商务部向7家科技公司提供8.74亿美元半导体研发资金，覆盖先进封装、存储等领域。',
