@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-01',
+    title: 'AI新闻 | OpenAI GPT-5.6 Luna降价80% + DeepSeek-V4-Flash API上线 + 国资委深化央企AI专项行动 + 字节飞书豆包整合Agent三国杀 + MiniMax H3全模态开源',
+    summary: '今日AI行业五大看点：OpenAI宣布GPT-5.6 Luna价格下降80%，输入从1美元/百万token降至0.2美元，大幅降低企业使用门槛；DeepSeek-V4-Flash官方API正式公测，Agent能力大幅提升，MoE 284B参数、100万token上下文；国务院国资委深化央企"人工智能+"专项行动，推动AI在国企全面落地；字节跳动飞书与豆包团队整合，办公级Agent三国杀格局形成；MiniMax H3全模态生成模型上线，支持文本/图像/视频/声音任意组合输入，承诺数日内开源权重。',
+    newsItems: [
+      {
+        title: 'OpenAI宣布GPT-5.6 Luna价格下降80%',
+        summary: 'OpenAI宣布GPT-5.6 Luna价格大幅下降80%。输入价格从每百万token 1美元降至0.2美元，输出从6美元降至1.2美元。同期GPT-5.6 Terra也降价20%。旗舰模型的大幅降价将显著降低企业和开发者的AI使用成本，加速大模型在更多场景中的规模化应用。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/484069'
+      },
+      {
+        title: 'DeepSeek-V4-Flash官方API正式上线公测',
+        summary: 'DeepSeek V4 Flash正式版上线。模型结构不变，仍为MoE 284B参数、激活13B、100万token上下文，重点进行了后训练优化。升级后Agent能力大幅提升，为开发者提供高性价比的Agent开发基座模型，标志着国产大模型在Agent方向的持续发力。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/483929'
+      },
+      {
+        title: '国务院国资委：深化央企"人工智能+"专项行动，因企制宜培育新兴产业',
+        summary: '国务院国资委党委召开扩大会议，强调要指导中央企业主动对接国家AI政策，充分发挥引领带动作用，深化"人工智能+"专项行动，因企制宜培育新兴产业和未来产业，更好助推经济持续向新向优向好发展。这标志着AI在央企体系的落地进入加速阶段。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3919556554305154'
+      },
+      {
+        title: '办公级Agent三国杀一触即发：字节飞书与豆包整合',
+        summary: '字节跳动启动面向AI业务的架构调整：飞书产品团队与豆包产品团队整合，成立新的豆包产品团队；飞书GTM团队与火山引擎团队整合。互联网大厂新一轮竞争转向办公桌面，Agent能力成为办公产品的核心战场，字节、微软、Google三方角力正式展开。',
+        source: '虎嗅',
+        category: '应用',
+        url: 'https://www.huxiu.com/article/4879841.html'
+      },
+      {
+        title: 'MiniMax H3正式上线，视频模型也开始玩全模态了',
+        summary: 'MiniMax推出H3全模态生成模型，接受文本、图像、视频、声音任意组合作为输入，承诺数日内开源权重。此前MiniMax M3已在文本模型上表现亮眼，H3进一步将能力边界拓展至全模态生成，标志着国产开源大模型在多模态方向的持续突破。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/483640'
+      }
+    ],
+    comment: '今日关键词"降价与开放"。OpenAI GPT-5.6 Luna降价80%、DeepSeek-V4-Flash API公测、MiniMax H3承诺开源——三条新闻共同指向一个趋势：大模型正从"能力竞赛"转向"成本与开放竞赛"。当模型能力差距缩小，价格和生态成为新的胜负手。国资委推动央企AI落地、字节整合办公Agent，则说明AI的战场正从实验室快速转移到企业生产力的核心地带。'
+  },
+  {
     date: '2026-07-31',
     title: 'AI新闻 | Google升级Gemini Robotics ER 2具身推理模型 + 字节组建豆包办公部门 + 甲骨文与谷歌扩大Gemini企业合作 + 科技巨头面临AI算力分配难题 + 宇树科技启动科创板IPO',
     summary: '今日AI行业五大看点：Google正式开放新一代具身推理模型Gemini Robotics ER 2预览版，让机器人具备"知道自己干到哪一步"的能力；字节跳动组建豆包办公部门，推动AI深度融入办公协作流程；甲骨文与谷歌扩大合作，将Gemini模型引入企业应用；科技巨头面临AI算力自用还是出售的战略抉择；宇树科技启动科创板IPO初步询价，人形机器人龙头即将登陆资本市场。',
