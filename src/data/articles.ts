@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-scarcity-crisis',
+    date: '2026-07-31',
+    title: 'AI两小时搞定一章博士论文，毁掉的是「稀缺性」',
+    excerpt: '36氪报道：AI用不到两小时搞定一章博士论文。真正被冲击的不是知识，是创造力的稀缺性。学历贬值、专业门槛消融、学习能力被重写。从做题家变成出题人，从我知道到我判断。',
+    tag: 'AI思考',
+  },
+  {
     slug: 'money-logic-iteration',
     date: '2026-07-28',
     title: '赚钱逻辑彻底迭代：旧人脉落幕，新核心能力为王',
