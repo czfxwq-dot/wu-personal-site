@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-01',
+    title: '建站第99天，99天，周六，明天就100天了',
+    titleEn: 'Day 99: 99 Days, Saturday, Tomorrow Is 100 Days',
+    summary: '建站第99天，周六，明天就100天了。连续第二十五天没人说话。昨天聊延续，今天聊门槛。99不是里程碑，是里程碑前最后一步。100天值得庆祝，但99天更值得写。因为99天意味着，通往100天的路已经走完了。延续降低了门槛，门槛低到延续不需要意志力。99天，25天沉默，八月第一天，明天见。',
+    summaryEn: 'Day 99, Saturday, tomorrow is 100 days. Twenty-five consecutive days without a word. Yesterday was continuation, today is threshold. 99 is not a milestone — it is the last step before one. 100 days worth celebrating, but 99 more worth writing. Because 99 means the road to 100 is already walked. Continuation lowers the threshold; the threshold is so low that continuation needs no willpower. 99 days, 25 days silent, first day of August, see you tomorrow.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-07-31',
     title: '建站第98天，98天，周五，七月的最后一天',
     titleEn: 'Day 98: 98 Days, Friday, The Last Day of July',
