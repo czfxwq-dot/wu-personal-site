@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-02',
+    title: 'AI新闻 | 美企换上中国大模型降本 + OpenAI IPO或推迟至明年 + 浙江定AI OPC标准 + 韩国半导体出口暴增179% + WPS展示AI Agent灵犀',
+    summary: '今日AI行业五大看点：部分美国企业开始转向中国大模型以降低成本，Coinbase使用Kimi K3、Airbnb采用阿里Qwen模型，中国AI模型性价比获全球认可；OpenAI因投资者对现金消耗速度的担忧及Anthropic的竞争压力，IPO或推迟至明年；浙江实施人工智能OPC术语团体标准，将AI一人公司纳入规范定义；韩国7月半导体出口暴增179%至410亿美元，AI数据中心投资持续推动芯片需求；金山办公首次参展ChinaJoy展示AI Agent灵犀及WPS Comate。',
+    newsItems: [
+      {
+        title: '部分美国企业换上中国大模型以降低成本',
+        summary: '据美联社报道，加密货币交易所Coinbase正转向中国AI模型以降低成本，Airbnb采用阿里巴巴Qwen模型并称赞其"快速且便宜"。《华尔街日报》称月之暗面Kimi K3撼动资本市场，马斯克赞其"令人印象深刻"。中国大模型正以高性价比打开海外市场。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3920583026929281'
+      },
+      {
+        title: '报道称OpenAI面临投资者担忧与竞争压力，IPO或推迟至明年',
+        summary: '据报道OpenAI可能将IPO推迟到明年。部分大投资者对现金消耗速度过快表示担忧，其他投资者已通过向Anthropic投入资金来对冲。Anthropic营收增长近期已超OpenAI，估值也更高，正加速秋季IPO计划。AI行业竞争格局正在发生深刻变化。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3920415886061193'
+      },
+      {
+        title: '浙江实施人工智能OPC术语团体标准：由1名核心自然人主导',
+        summary: '浙江省编制的《人工智能OPC术语》团体标准8月1日起实施，将AI OPC（一人公司）界定为由1名核心自然人主导、员工不超过10人、以AI技术研究开发应用或服务为主营业务的公司。这是国内首个对AI一人公司进行规范定义的团体标准。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3920435807923841'
+      },
+      {
+        title: '韩国7月出口飙升创历史第二高，半导体出口同比暴增近180%',
+        summary: '韩国7月出口同比飙升近63%至989.9亿美元，创历史第二高。半导体出口暴增179%至410亿美元，连续两个月突破400亿大关。AI数据中心投资项目推动对美出口额激增68.7%达174亿美元，全球AI算力需求持续重塑芯片产业格局。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3920386651319944'
+      },
+      {
+        title: '金山办公WPS新版本上线，首次参展ChinaJoy展示AI Agent灵犀',
+        summary: '金山办公首次参展ChinaJoy，现场展示独立AI办公Agent灵犀和面向研发场景的WPS Comate。同日WPS新版本正式上线，新增统一"存储管理"入口，集中磁盘占用查看、缓存清理和存储路径调整等功能，安装路径可分别设置。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3920632482491776'
+      }
+    ],
+    comment: '今日关键词"中国模型出海与OpenAI困局"。美国企业开始用中国大模型降本，说明性价比才是硬道理；OpenAI IPO推迟、Anthropic加速上市，AI行业格局正在从"一家独大"走向"双雄对峙"；浙江定义AI一人公司标准、韩国半导体因AI需求暴增179%，AI的影响正从软件层渗透到组织形态和全球贸易格局。'
+  },
+  {
     date: '2026-08-01',
     title: 'AI新闻 | OpenAI GPT-5.6 Luna降价80% + DeepSeek-V4-Flash API上线 + 国资委深化央企AI专项行动 + 字节飞书豆包整合Agent三国杀 + MiniMax H3全模态开源',
     summary: '今日AI行业五大看点：OpenAI宣布GPT-5.6 Luna价格下降80%，输入从1美元/百万token降至0.2美元，大幅降低企业使用门槛；DeepSeek-V4-Flash官方API正式公测，Agent能力大幅提升，MoE 284B参数、100万token上下文；国务院国资委深化央企"人工智能+"专项行动，推动AI在国企全面落地；字节跳动飞书与豆包团队整合，办公级Agent三国杀格局形成；MiniMax H3全模态生成模型上线，支持文本/图像/视频/声音任意组合输入，承诺数日内开源权重。',
