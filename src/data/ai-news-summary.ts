@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-06',
+    title: 'AI新闻 | 谷歌AI巨震Jeff Dean离职创业 + Anthropic为Claude组建内部芯片团队 + 谷歌洽谈15亿美元收购AI编码Agent公司Mechanize + 阶跃星辰确立大模型与智能体终端双线战略 + Cloudflare开源AI智能体平台Cloudflare OS',
+    summary: '今日AI行业五大看点：谷歌AI遭遇人事巨震，首席科学家Jeff Dean宣布离职，与Sanjay Ghemawat、Oriol Vinyals等三位大牛出走创业，Gemini负责人Demis Hassabis转任主席；Anthropic确认正在为Claude组建内部芯片团队，加速自研算力布局；谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易；阶跃星辰内部确立大模型与智能体终端两条战略线，手机业务独立运营并将进入海外市场；Cloudflare宣布开源面向AI智能体和企业工作流程的平台Cloudflare OS。',
+    newsItems: [
+      {
+        title: '谷歌AI一夜巨震：Gemini换帅，首席科学家Jeff Dean带三个大牛出走创业',
+        summary: 'Google DeepMind负责人Demis Hassabis宣布卸下日常管理职责，转任DeepMind主席兼Alphabet首席科学家。几乎同一时间，谷歌灵魂人物、首席科学家Jeff Dean宣布离职，将与Sanjay Ghemawat、Oriol Vinyals等三位AI大牛共同创业。这是谷歌AI团队近年来最大规模的人事震荡。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4880992.html'
+      },
+      {
+        title: 'Anthropic确认正在为Claude组建一支内部芯片团队',
+        summary: '据报道，Anthropic确认正在为Claude组建内部芯片团队，加速自研AI芯片布局。此举标志头部AI公司正从依赖英伟达GPU转向自研算力方案，以降低对外部供应链的依赖并优化推理成本。继谷歌TPU、亚马逊Trainium之后，Anthropic也加入芯片自研阵营。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3926632308553861'
+      },
+      {
+        title: '谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易',
+        summary: '据报道，谷歌正与人工智能编码代理初创公司Mechanize洽谈一项价值超过15亿美元的收购交易。Mechanize专注于AI编码代理技术，此举反映谷歌在AI开发工具领域的加速布局，也显示AI编码Agent赛道估值持续攀升。',
+        source: '36氪',
+        category: '投资',
+        url: 'https://www.36kr.com/newsflashes/3926597105367424'
+      },
+      {
+        title: '阶跃星辰确立大模型与智能体终端双线战略，手机业务独立运营',
+        summary: '阶跃星辰内部正按两条战略线推进：一条以大模型为核心，另一条以智能体终端为核心。手机业务已放入新公司独立运营，正在搭建海外商业化团队，计划向海外销售大模型API并以语音模型为主。大模型和手机都将进入海外市场，两条业务线相互促进。',
+        source: 'IT之家',
+        category: '大模型',
+        url: 'https://www.ithome.com/0/986/233.htm'
+      },
+      {
+        title: 'Cloudflare宣布开源Cloudflare OS：面向AI智能体和企业工作的开放平台',
+        summary: 'Cloudflare宣布开源名为"Cloudflare OS"的AI平台项目，定位为面向智能体、应用程序及企业工作流程的开放平台。该平台并非传统操作系统，而是一套用于组织内部AI协作和任务执行的基础平台，用户可为工作空间设定目标，平台能调用组织已有的知识和技能自动执行任务。',
+        source: 'IT之家',
+        category: '应用',
+        url: 'https://www.ithome.com/0/986/252.htm'
+      }
+    ],
+    comment: '今日关键词"人事震荡与Agent崛起"。谷歌AI遭遇Jeff Dean离职等巨震，一个时代落幕；Anthropic自研芯片、谷歌15亿美元收购Mechanize，说明AI公司正从"模型竞赛"转向"全栈能力竞赛"——芯片、Agent工具、平台生态缺一不可；阶跃星辰把手机作为大模型触达用户的载体，Cloudflare开源AI Agent平台，则预示AI正从云端走向终端、从工具走向协作平台。'
+  },
+  {
     date: '2026-08-05',
     title: 'AI新闻 | Anthropic签100亿美元算力协议 + 韩国2.5万亿韩元建AI算力中心 + 台积电CoWoS封装产能告急 + OpenAI内部模型Astra破解数学难题 + 灵光App闪应用创作者超400万',
     summary: '今日AI行业五大看点：Anthropic与一家AI云初创公司签署价值100亿美元的算力协议，AI算力军备竞赛持续升温；由三星SDS牵头的韩国国家人工智能算力中心正式开工，总投资2.5万亿韩元，预计2028年竣工；英伟达GPU订单挤爆台积电CoWoS封装产线，台积电被迫将核心封装产能进一步外包给日月光等厂商；OpenAI内部模型Astra在数学及理论计算机科学领域解出10个悬疑多年的开放难题；灵光App宣布"闪应用"创作者超400万人，绝大多数为无编程背景的普通用户，AI应用生态持续扩展。',
