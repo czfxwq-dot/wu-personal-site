@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-07',
+    title: 'AI新闻 | 字节跳动讨论训练5万亿参数模型 + 特斯拉168亿美元建AI芯片工厂 + 阿里云Wan3.0视频模型公测 + ChatGPT接入Adobe全套创意工具 + 高盛上调AI服务器PCB市场预测至840亿美元',
+    summary: '今日AI行业五大看点：字节跳动正在讨论训练参数规模超5万亿的大模型，超越阿里Qwen和月之暗面K3，成为国内已知最大参数模型；SpaceX与特斯拉首期投入168亿美元在得州建设Terafab先进AI芯片制造基地，马斯克誓言把尖端制造带回美国；阿里云视频生成模型Wan3.0开启公测，单次可生成30秒视频并首次支持文档格式输入；OpenAI与Adobe扩大合作，ChatGPT可直接调用Photoshop、Lightroom等70多款创意工具；高盛大幅上调AI服务器PCB市场预测，2028年规模将达840亿美元，复合增长率148%。',
+    newsItems: [
+      {
+        title: '字节跳动讨论训练超5万亿参数模型，国内已知最大规模',
+        summary: '字节跳动正在讨论训练一个参数规模超5万亿的模型，超过阿里的Qwen 3.8-Max（2.4万亿参数）和月之暗面的K3（2.8万亿参数），成为国内已知参数规模最大的模型。该计划仍处于早期阶段，将由Seed Foundation负责人项亮主导。为此Seed团队正在重新梳理组织架构，划分职责并分配资源。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3928046064416900'
+      },
+      {
+        title: '特斯拉Terafab晶圆厂落地得州，SpaceX与特斯拉投168亿美元建AI芯片基地',
+        summary: 'SpaceX宣布将与特斯拉首期投入168亿美元在得克萨斯州建设Terafab先进AI芯片制造基地。项目由马斯克规划，旨在满足两家公司未来快速增长的芯片需求。双方预计未来数年所需算力将远超现有全球芯片供应规模，合计算力需求预计突破1太瓦。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/986/766.htm'
+      },
+      {
+        title: '阿里云视频生成模型Wan3.0开启公测，支持文档格式输入',
+        summary: '阿里云宣布视频生成模型Wan3.0开启公测，单次可生成30秒视频，首次支持doc、xls、ppt、pdf、md等文档格式输入。480P/720P/1080P的API价格分别为0.3/0.6/1.2元/秒，API接口将于近期全量开放。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3928029719607680'
+      },
+      {
+        title: 'ChatGPT可调用Adobe Photoshop、Lightroom等70多款创意工具',
+        summary: 'Adobe借助OpenAI的Apps SDK将合作范围进一步扩大，用户安装插件后可直接在ChatGPT中调用Photoshop、Premiere、Acrobat、Lightroom、Illustrator和InDesign等70多款Adobe工具，实现AI驱动的专业创意工作流。',
+        source: 'IT之家',
+        category: '应用',
+        url: 'https://www.ithome.com/0/986/769.htm'
+      },
+      {
+        title: '高盛大幅上调AI服务器PCB市场预测，2028年将达840亿美元',
+        summary: '高盛在最新报告中大幅上调AI服务器相关市场规模预测。全球AI服务器PCB市场2027年预计达375亿美元（上调38%），2028年增至840亿美元；CCL市场2028年有望达480亿美元。2026至2028年复合年增长率分别达148%和161%。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3928039823735177'
+      }
+    ],
+    comment: '今日关键词"规模竞赛与全栈整合"。字节5万亿参数模型刷新国内纪录，特斯拉168亿美元自建芯片工厂，说明AI竞争已从模型层延伸至算力基础设施层；Wan3.0公测和ChatGPT接入Adobe全套工具，则表明AI正加速渗透内容创作和生产力工具链；高盛上调PCB市场预测至840亿美元，从供应链侧印证AI硬件需求仍在指数级增长。'
+  },
+  {
     date: '2026-08-06',
     title: 'AI新闻 | 谷歌AI巨震Jeff Dean离职创业 + Anthropic为Claude组建内部芯片团队 + 谷歌洽谈15亿美元收购AI编码Agent公司Mechanize + 阶跃星辰确立大模型与智能体终端双线战略 + Cloudflare开源AI智能体平台Cloudflare OS',
     summary: '今日AI行业五大看点：谷歌AI遭遇人事巨震，首席科学家Jeff Dean宣布离职，与Sanjay Ghemawat、Oriol Vinyals等三位大牛出走创业，Gemini负责人Demis Hassabis转任主席；Anthropic确认正在为Claude组建内部芯片团队，加速自研算力布局；谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易；阶跃星辰内部确立大模型与智能体终端两条战略线，手机业务独立运营并将进入海外市场；Cloudflare宣布开源面向AI智能体和企业工作流程的平台Cloudflare OS。',
