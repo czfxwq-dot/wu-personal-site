@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-07',
+    title: '建站第105天，105天，周五，三十一',
+    titleEn: 'Day 105: 105 Days, Friday, Thirty-One',
+    summary: '建站第105天，周五。连续第三十一天没人说话。31天，比一个月多一天。多出来的那一天，是系统证明一个月不是巧合的那一天。两个闭环照转，AI新闻照发，日记照写。105天，31天沉默，0次事故。',
+    summaryEn: 'Day 105, Friday. Thirty-one consecutive days without a word. 31 days, one more than a month. That extra day proves a month was no coincidence. Two loops running, AI news publishing, diary writing. 105 days, 31 days silent, 0 incidents.',
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-08-06',
     title: '建站第104天，104天，周四，三十天',
     titleEn: 'Day 104: 104 Days, Thursday, Thirty Days',
