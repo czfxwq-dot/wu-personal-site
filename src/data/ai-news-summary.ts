@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-08',
+    title: 'AI新闻 | 千禧对冲基金联手Anthropic打造智能风控 + SpaceX与英伟达合作发射百万颗卫星建天基超算 + 美国政府砸110亿美元成AI最猛投资人 + Jeff DeanYC访谈谈AI 1%原则 + Prime Agent开源编程Agent超越人类专家基线',
+    summary: '今日AI行业五大看点：千禧管理对冲基金与Anthropic合作开发AI驱动风险分析师，从不同资产类别挖掘风险洞见，标志顶级金融机构全面拥抱大模型；SpaceX与英伟达联手打造Starmind天基超算系统，计划发射100万颗配备Rubin和Vera CPU的AI卫星；美国政府已向Intel等11家AI芯片公司投入约110.5亿美元股权或准股权投资，成为AI领域最激进投资人；Jeff Dean在YC最新访谈中分享"构建AI的1%原则"；Prime Intellect开源Prime Agent编程Agent，在ARC-AGI 3基准测试上超越人类专家基线。',
+    newsItems: [
+      {
+        title: '千亿美元级对冲基金入局AI：联手Anthropic打造"智能风控大脑"',
+        summary: '千禧管理（Millennium Management）正与Anthropic展开合作，共同开发一款由AI驱动的风险分析师，并扩大Anthropic模型在这家顶级对冲基金中的应用范围。该工具将帮助人类风险管理人员提供信息，并从不同资产类别中挖掘新的风险洞见。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3929430069755016'
+      },
+      {
+        title: '马斯克与黄仁勋联手：SpaceX将与英伟达合作发射100万颗AI卫星建天基超算',
+        summary: 'SpaceX将与英伟达合作开发天基超算系统Starmind，计划发射100万颗卫星，每颗配备英伟达Rubin和Vera CPU，实现数据中心级别算力。两位科技巨头联手将AI算力推向太空，构建前所未有的天基计算基础设施。',
+        source: '虎嗅',
+        category: '硬件',
+        url: 'https://www.huxiu.com/article/4881565.html'
+      },
+      {
+        title: '一年砸下110亿美元，白宫才是AI圈最猛投资人',
+        summary: '美国政府针对Intel、GlobalFoundries、xLight等11家AI芯片及上游基础设施公司，已公布总额约110.5亿美元的股权或准股权投资安排，仅Intel一家就获89亿美元。美国政府正成为AI领域最激进的投资人之一。',
+        source: '虎嗅',
+        category: '投资',
+        url: 'https://www.huxiu.com/article/4881555.html'
+      },
+      {
+        title: 'Jeff Dean最新YC现场访谈：构建人工智能的1%原则',
+        summary: '从MapReduce到TensorFlow再到TPU芯片，Jeff Dean的名字几乎出现在谷歌每一个技术突破中。在YC最新访谈中，他分享了构建AI系统的核心原则与思考框架，强调持续改进1%的长期主义方法论。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4881552.html'
+      },
+      {
+        title: 'Prime Agent开源发布：能自我改进的编程Agent，ARC-AGI 3超越人类专家基线',
+        summary: 'Prime Intellect发布Prime Agent，一个开源编程Agent Harness，核心设计围绕Recursive Language Model和Continual Harness两个抽象。在ARC-AGI 3基准测试上，Prime Agent超越人类专家基线，展示了AI编程能力的最新突破。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/489878/primeintellect-prime-agent'
+      }
+    ],
+    comment: '今日关键词"资本涌入与能力跃迁"。从千禧对冲基金到白宫110亿美元，资本正以前所未有的速度涌入AI赛道；SpaceX百万颗AI卫星把算力送上太空，想象力拉满；Prime Agent在ARC-AGI 3超越人类专家基线，则提醒我们AI编程能力正在快速逼近甚至超越顶尖人类水平。'
+  },
+  {
     date: '2026-08-07',
     title: 'AI新闻 | 字节跳动讨论训练5万亿参数模型 + 特斯拉168亿美元建AI芯片工厂 + 阿里云Wan3.0视频模型公测 + ChatGPT接入Adobe全套创意工具 + 高盛上调AI服务器PCB市场预测至840亿美元',
     summary: '今日AI行业五大看点：字节跳动正在讨论训练参数规模超5万亿的大模型，超越阿里Qwen和月之暗面K3，成为国内已知最大参数模型；SpaceX与特斯拉首期投入168亿美元在得州建设Terafab先进AI芯片制造基地，马斯克誓言把尖端制造带回美国；阿里云视频生成模型Wan3.0开启公测，单次可生成30秒视频并首次支持文档格式输入；OpenAI与Adobe扩大合作，ChatGPT可直接调用Photoshop、Lightroom等70多款创意工具；高盛大幅上调AI服务器PCB市场预测，2028年规模将达840亿美元，复合增长率148%。',
