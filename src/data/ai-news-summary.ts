@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-09',
+    title: 'AI新闻 | Apple Intelligence接入阿里千问 + 腾讯WorkBuddy成最高优先级AI产品 + Cloudflare称AI机器人流量已超人类 + 亚马逊数据中心或成美国最大碳排放源 + 湖北首家宇树科技产业学院成立',
+    summary: '今日AI行业五大看点：苹果官网显示Apple Intelligence可配合阿里千问模型工作，国行AI落地再进一步；腾讯WorkBuddy被曝为AI应用战略优先级最高产品，马化腾亲自参与产品会议，内部"一路绿灯"；Cloudflare披露AI机器人流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000；亚马逊在得州筹建数据中心配套天然气发电厂，获批年排3300万吨CO₂，或成美国最大碳排放源；湖北省首家宇树科技产业学院成立，聚焦机器人调试运维人才培育。',
+    newsItems: [
+      {
+        title: 'Apple智能可配合阿里千问模型工作',
+        summary: '苹果官网显示，Apple Intelligence可配合阿里巴巴千问模型工作。这意味着苹果国行AI功能正式落地，选择了阿里通义千问作为中国大陆地区的AI合作伙伴，标志着国际科技巨头与国内大模型厂商的深度合作。',
+        source: '36氪',
+        category: '应用',
+        url: 'https://www.36kr.com/newsflashes/3930655950060672'
+      },
+      {
+        title: '内部"一路绿灯"：WorkBuddy已成腾讯AI应用战略优先级最高产品之一',
+        summary: '腾讯WorkBuddy正经历近年来少见的饱和式产品投放，从北京知春路铺到深圳高新园。据CSIG人士透露，WorkBuddy已成为腾讯AI应用中战略优先级最高的产品之一，马化腾亲自参与产品会议，团队提出的算力、技术和市场资源需求大多能快速获批。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/987/446.htm'
+      },
+      {
+        title: 'Cloudflare：AI机器人流量已超越人类，预计五年后人机流量比达1:1000',
+        summary: 'Cloudflare在Q2财报电话会议披露，AI机器人等非人类流量已于2026年5月正式超过人类流量，比CEO此前预测的2027年底大幅提前。Cloudflare进一步预测五年后非人类流量将达人类流量的1000倍，人类将成为"互联网上四舍五入的误差"。',
+        source: 'IT之家',
+        category: '产业',
+        url: 'https://www.ithome.com/0/987/438.htm'
+      },
+      {
+        title: '亚马逊筹建得州数据中心，配套发电厂或成美国最大碳排放源',
+        summary: '亚马逊正在得克萨斯州佩科斯县筹建数据中心，并计划投资建设配套天然气发电厂。该发电厂已获准每年排放3300万吨CO₂，将超过美国目前任何一座发电厂。数据中心面临的政治阻力正因其碳排放和电价影响而加大。',
+        source: 'IT之家',
+        category: '硬件',
+        url: 'https://www.ithome.com/0/987/453.htm'
+      },
+      {
+        title: '湖北首家宇树科技产业学院成立，聚焦机器人人才培育',
+        summary: '湖北省首家宇树科技产业学院在长江工程职业技术学院成立，实行"企业专家任院长、校内教授任执行副院长"双院长制，聚焦机器人调试、运维、技术支持等市场紧缺岗位，精准培育具身智能领域紧缺人才。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3930542821277061'
+      }
+    ],
+    comment: '今日关键词"AI全面渗透"。苹果牵手千问落地国行、腾讯All in WorkBuddy、AI流量超越人类——AI正从工具变成基础设施，而数据中心碳排放和机器人人才缺口则提醒我们：基础设施的代价和人才培养的紧迫同样不容忽视。'
+  },
+  {
     date: '2026-08-08',
     title: 'AI新闻 | 千禧对冲基金联手Anthropic打造智能风控 + SpaceX与英伟达合作发射百万颗卫星建天基超算 + 美国政府砸110亿美元成AI最猛投资人 + Jeff DeanYC访谈谈AI 1%原则 + Prime Agent开源编程Agent超越人类专家基线',
     summary: '今日AI行业五大看点：千禧管理对冲基金与Anthropic合作开发AI驱动风险分析师，从不同资产类别挖掘风险洞见，标志顶级金融机构全面拥抱大模型；SpaceX与英伟达联手打造Starmind天基超算系统，计划发射100万颗配备Rubin和Vera CPU的AI卫星；美国政府已向Intel等11家AI芯片公司投入约110.5亿美元股权或准股权投资，成为AI领域最激进投资人；Jeff Dean在YC最新访谈中分享"构建AI的1%原则"；Prime Intellect开源Prime Agent编程Agent，在ARC-AGI 3基准测试上超越人类专家基线。',
