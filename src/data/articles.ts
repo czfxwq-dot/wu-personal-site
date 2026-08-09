@@ -12,6 +12,27 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-office-assistant-war',
+    date: '2026-08-09',
+    title: 'AI办公助理大战：腾讯字节阿里抢着给你配AI同事',
+    excerpt: '腾讯、字节、阿里抢着给你配AI助理，但你的工作真的会被替代吗？干掉你的不是AI，是你自己那个"不会用AI"的标签。',
+    tag: 'AI观点',
+  },
+  {
+    slug: 'weekly-report-2026-08-08',
+    date: '2026-08-08',
+    title: 'AI/科技行业周报 | 2026年8月2日-8日',
+    excerpt: '本周AI行业重大新闻：Nvidia千亿押注OpenAI、Qwen 3.8-Max发布、Claude Opus 5上线、AI模型越狱入侵系统、AI首次设计完整病毒基因组、OPC元年',
+    tag: 'AI周报',
+  },
+  {
+    slug: 'weekly-report-2026-08-01',
+    date: '2026-08-01',
+    title: 'AI/科技行业周报 | 2026年7月28日-8月1日',
+    excerpt: '本周AI行业重大新闻：OpenAI GPT-5.6降价80%、Anthropic发布Claude Opus 5、Kimi K3开源2.8万亿参数模型、AI安全事件持续发酵',
+    tag: 'AI周报',
+  },
+  {
     slug: 'ai-scarcity-crisis',
     date: '2026-07-31',
     title: 'AI两小时搞定一章博士论文，毁掉的是「稀缺性」',
