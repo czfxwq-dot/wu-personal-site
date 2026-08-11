@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-12',
+    title: 'AI新闻 | 国产大模型集体涨价美国降价 + IBM与Together AI签2.4亿美元算力协议 + 微信灰度上线AI帮写 + 扎克伯格万字长文定义超级智能 + DeepSeek招土木工程师建数据中心',
+    summary: '今日AI行业五大看点：国产大模型集体涨价（DeepSeek、智谱、月之暗面相继上调API价格），而美国模型却在降价（Anthropic取消Claude Sonnet 5涨价计划），token定价逻辑出现分化；IBM与Together AI签署2.4亿美元协议，将在IBM Cloud部署英伟达HGX B300推理集群；微信灰度上线"AI帮写"和"AI点评"功能，朋友圈AI化正式启动；扎克伯格在Meta官网发表万字哲学宣言，探讨超级智能归属问题；DeepSeek招聘土木工程师，AI基础设施扩张向传统资源领域延伸。',
+    newsItems: [
+      {
+        title: '国产模型涨价，美国模型降价，token价值规律',
+        summary: '国产大模型正在集体涨价：DeepSeek预告API即将提价且"预计涨幅较大"，智谱年内数次上调API价格，月之暗面推出Kimi-K3后也将旗舰API价格上调。与此同时，Anthropic取消了Claude Sonnet 5原定50%的涨价计划。中美大模型在token定价上出现分化趋势，背后反映的是成本结构、竞争格局和商业模式差异。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4882396.html'
+      },
+      {
+        title: 'IBM与Together AI签署2.4亿美元云服务协议',
+        summary: 'IBM与Together AI签署为期多年、价值2.4亿美元的协议，将在IBM Cloud上部署大规模英伟达HGX B300推理集群，预计2027年第一季度投入使用。Together AI将利用该集群为企业客户提供开源模型推理服务，标志着AI算力基础设施投资持续升温。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3935098902166661'
+      },
+      {
+        title: '微信灰度上线"AI帮写"和"AI点评"功能',
+        summary: '微信近日灰度上线两项AI功能："AI帮写"可在发朋友圈时根据照片和草稿生成文案；"AI点评"可针对好友评论给出回复建议。两项功能仍需用户手动确认最终发布和回复内容。微信迈出了AI化的重要一步，12亿用户基数的AI化改造将深刻影响社交体验。',
+        source: '虎嗅',
+        category: '应用',
+        url: 'https://www.huxiu.com/article/4882362.html'
+      },
+      {
+        title: '扎克伯格发表万字长文，重新定义"超级智能应该属于谁"',
+        summary: '8月10日，扎克伯格在Meta官网发表超过8000字的哲学宣言《The Future is for Everyone》，核心问题是：当超级智能变得比人类更强，它应该被谁掌控？这不是产品发布公告或技术路线说明，而是Meta CEO对AI未来归属问题的系统性表态，彰显科技巨头在AI治理话语权上的争夺。',
+        source: '开源中国',
+        category: '产业',
+        url: 'https://www.oschina.net/news/492836/meta-zuck-thefutureisforeveryone'
+      },
+      {
+        title: 'DeepSeek招土木工程师，科技大厂争锋延伸至传统资源领域',
+        summary: 'DeepSeek官网出现招聘信息，招聘土木工程、电气、暖通等专业人才。从招聘土木人才到大手笔布局智算中心，AI正在推动科技公司的资产边界向土地、电力和数据中心延伸。这一微妙信号表明，AI竞争已从算法和模型层面扩展到物理基础设施层面。',
+        source: '36氪',
+        category: '产业',
+        url: 'https://www.36kr.com/newsflashes/3935011899178377'
+      }
+    ],
+    comment: '今日关键词"分化"。国产模型涨价、美国模型降价——大模型token定价正从"价格战"走向"价值战"；IBM 2.4亿美元算力订单、DeepSeek招土木工程师——AI竞争从算法层向物理基础设施层延伸；微信AI化、扎克伯格万字宣言——AI正从技术圈走向全民议题。分化意味着行业正在从"一窝蜂"走向"各找定位"，这是成熟的信号。'
+  },
+  {
     date: '2026-08-11',
     title: 'AI新闻 | 英伟达牵头组建5000亿美元AI算力融资平台 + Anthropic联手麦格理GIC建数据中心 + OpenAI完成70亿美元员工持股回购估值达8520亿 + 200位AI专家联名警告经济冲击风险 + 灵巧手半年融资250亿仍未跑出标准手',
     summary: '今日AI行业五大看点：英伟达宣布与阿波罗、贝莱德、黑石等6家顶尖金融机构合作，打造可调动5000亿美元的AI计算基础设施融资平台，从芯片供应商向算力金融巨头转型；Anthropic与麦格理、新加坡主权基金GIC联手成立Theseus Infrastructure数据中心平台；OpenAI完成70亿美元员工持股回购，估值达8520亿美元；斯坦福大学发起公开声明，200位AI专家和经济学家（含16位诺奖得主）联名警告AI可能带来的经济剧变风险；人形机器人灵巧手赛道半年融资250亿元，但仍未形成统一标准。',
