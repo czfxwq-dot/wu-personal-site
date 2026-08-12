@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-13',
+    title: 'AI新闻 | 鸿海Q4出货英伟达Vera Rubin平台 + 腾讯AI开始算回报 + Agent拼生产系统 + 攻击性蒸馏暴露思维链漏洞 + 荣耀发布首款机器人手机',
+    summary: '今日AI行业五大看点：鸿海宣布第四季度开始出货英伟达新一代Vera Rubin AI平台，大规模AI Agent工作负载下可实现最高10倍吞吐量提升；腾讯Q2财报显示AI算力投入开始看到回报，刘炽平称多款新应用表现良好；虎嗅深度分析指出Agent竞争正从Skill转向生产系统整合；美国前沿模型厂商暴露攻击性蒸馏漏洞，思维链可被低成本提取；荣耀发布首款机器人手机Robot Phone，9999元起售。',
+    newsItems: [
+      {
+        title: '鸿海第四季度将开始出货英伟达Vera Rubin AI平台',
+        summary: '鸿海宣布将于今年第四季度开始出货英伟达新一代Vera Rubin AI平台。英伟达此前宣布Vera Rubin已进入全面量产阶段，相较上一代Grace Blackwell，Vera Rubin在大规模AI Agent工作负载下可实现最高10倍吞吐量提升。这标志着英伟达AI芯片迭代速度持续加快。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3936498690604417'
+      },
+      {
+        title: '腾讯AI开始算回报：从增强旧业务，到寻找下一门新生意',
+        summary: '腾讯Q2最反常的一组数字来自现金流。本土游戏收入同比增长17%，营销服务增长22%，总收入达2047.85亿元同比增长11%。腾讯总裁刘炽平在业绩电话会上表示，公司正在算力上进行大规模投入，已看到明显的回报上行空间，多款新应用表现良好，算力云上租赁业务也有望带来可观收入增长。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4882704.html'
+      },
+      {
+        title: 'Skill不够了，Agent需要拼"生产系统"',
+        summary: '近期常能听到一种说法：Skill要被Harness替代了。但Skill解决的问题依然存在且越来越重要：怎样把团队做事的方法、行业经验、岗位流程交给Agent。真正被证明行不通的，是把正确步骤写进一份Markdown就想让Agent完美执行的做法。Agent竞争正从单点Skill转向生产系统的整体整合能力。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4882713.html'
+      },
+      {
+        title: '攻击性蒸馏，只是"思维链漏洞"的表层故事',
+        summary: '美国前沿模型厂商暴露出一个重要安全漏洞。"攻击者"只需几步操作，就可能把模型刻意藏起来的思维链"扒"出来，其中不仅有模型能力的秘密，还可能夹带用户隐私甚至危险信息。比较直觉的解读是这为攻击性蒸馏提供了更低成本的路径，但真正值得警惕的可能是思维链本身的安全边界问题。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4882699.html'
+      },
+      {
+        title: '首款机器人手机荣耀Robot Phone正式发布，9999元起售',
+        summary: '荣耀正式发布首款机器人手机Robot Phone，价格9999元起，最高12999元。这是手机行业首次以"机器人"命名的产品形态，将AI能力与手机硬件深度融合，标志着AI终端设备从软件层向硬件形态层延伸。',
+        source: '36氪',
+        category: '硬件',
+        url: 'https://www.36kr.com/newsflashes/3936535940021638'
+      }
+    ],
+    comment: '今日关键词"回报与系统"。鸿海Q4出货Vera Rubin平台说明英伟达芯片迭代不停；腾讯首次为AI支付影响资本配置的现金账单并开始算回报；Agent竞争从Skill转向生产系统整合；攻击性蒸馏漏洞提醒我们模型安全仍有盲区。AI行业正从"投入期"走向"算账期"，能算清回报的公司才能走下一程。'
+  },
+  {
     date: '2026-08-12',
     title: 'AI新闻 | 国产大模型集体涨价美国降价 + IBM与Together AI签2.4亿美元算力协议 + 微信灰度上线AI帮写 + 扎克伯格万字长文定义超级智能 + DeepSeek招土木工程师建数据中心',
     summary: '今日AI行业五大看点：国产大模型集体涨价（DeepSeek、智谱、月之暗面相继上调API价格），而美国模型却在降价（Anthropic取消Claude Sonnet 5涨价计划），token定价逻辑出现分化；IBM与Together AI签署2.4亿美元协议，将在IBM Cloud部署英伟达HGX B300推理集群；微信灰度上线"AI帮写"和"AI点评"功能，朋友圈AI化正式启动；扎克伯格在Meta官网发表万字哲学宣言，探讨超级智能归属问题；DeepSeek招聘土木工程师，AI基础设施扩张向传统资源领域延伸。',
