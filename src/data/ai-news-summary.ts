@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
   {
+    date: '2026-08-14',
+    title: 'AI新闻 | 腾讯AI年资本开支直奔2000亿 + 谷歌联合创始人督战Gemini研发 + 中美开源模型大会师五模横评 + DeepSeek-V4-Pro正式版上线 + Zed发布多人协作AI编程环境Delta',
+    summary: '今日AI行业五大看点：腾讯Q2财报显示AI投入从保守转向激进，单季资本开支528亿元，自由现金流首次转负至-138亿元，马化腾提出构建AI生态新战略，年化AI资本开支直奔2000亿；谷歌因算力受限导致大模型迭代缓慢，联合创始人谢尔盖·布林亲自督战Gemini研发，推动资源向递归自我改进方向倾斜；中美开源模型密集发布，Kimi K3、Qwen3.8-Max、DeepSeek V4 Pro、Meta Muse Glimmer、英伟达Nemotron 3.5 Lightning五大模型同台竞技；DeepSeek-V4-Pro正式版上线，Agent能力大幅提升；Zed编辑器发布Delta多人协作AI编程环境，标志着AI编程从单人工具走向团队协作。',
+    newsItems: [
+      {
+        title: '腾讯换"快船"，AI年资本开支直奔2000亿',
+        summary: '腾讯发布2026年Q2财报，AI投入态度从一贯保守彻底转向激进。单季资本开支高达528亿元，直接将季度自由现金流干到-138亿元，这是腾讯历史上首次出现负自由现金流。马化腾首次提出要构建AI生态新战略，年化AI资本开支直奔2000亿元，打破以往谨慎叙事，远超市场预期。',
+        source: '虎嗅',
+        category: '产业',
+        url: 'https://www.huxiu.com/article/4883007.html'
+      },
+      {
+        title: '算力受限累谷歌大模型迭代，谷歌联合创始人督战Gemini大模型研发',
+        summary: '谷歌大模型因算力受限与内部分歧等因素迭代缓慢。谷歌联合创始人谢尔盖·布林敦促核心AI员工全力投入Gemini大模型研发，不断向AI核心员工强调必须追上行业前沿水平。知情人士表示布林推动资源向递归自我改进（RSI）方向倾斜，该技术目标是实现AI无需人为干预即可自我迭代升级。',
+        source: '36氪',
+        category: '大模型',
+        url: 'https://www.36kr.com/newsflashes/3937901669547140'
+      },
+      {
+        title: '中美开源模型大会师：Kimi、Qwen、DeepSeek、Meta和英伟达五模大横评',
+        summary: '开源模型最近密集发布，七月底到八月中，Kimi K3、Qwen3.8-Max先后放出权重，DeepSeek V4 Pro正式版上线。与此同时美国开源也回归，Meta拿出Muse Glimmer，英伟达跟上Nemotron 3.5 Lightning。五大模型同台竞技，开源生态迎来前所未有的繁荣局面。',
+        source: '虎嗅',
+        category: '大模型',
+        url: 'https://www.huxiu.com/article/4882974.html'
+      },
+      {
+        title: 'DeepSeek-V4-Pro正式版上线，Agent能力大幅提升',
+        summary: 'DeepSeek V4 Pro正式版已发布，同步在APP、网页端和API更新上线。用户可以通过APP或网页端选择"专家模式"使用全新的V4 Pro正式版模型。此次升级重点提升了Agent能力，为开发者和用户提供更强的智能体任务执行能力。',
+        source: '开源中国',
+        category: '大模型',
+        url: 'https://www.oschina.net/news/501923'
+      },
+      {
+        title: 'Zed推出多人协作AI编程环境"Delta"',
+        summary: 'Zed编辑器团队正式发布Delta，一个面向AI Agent编程的多人协作环境。这标志着Zed从"最好的代码编写工具"进入"最好的代码讨论工具"的第二阶段战略。Delta的核心理念是将代码和对话保持连接，允许开发者在工作树的任意一行进行协作。',
+        source: '开源中国',
+        category: '应用',
+        url: 'https://www.oschina.net/news/501922'
+      }
+    ],
+    comment: '今日关键词"豪赌与开源"。腾讯单季资本开支528亿、自由现金流首次转负，是All in AI最激进的表态；谷歌联合创始人亲自督战Gemini研发，说明大厂在AI竞赛中已容不得半点松懈；中美五大开源模型同台竞技，开源生态迎来最繁荣时刻；Zed Delta的发布则预示AI编程正从单人工具走向团队协作新范式。"
+  },
+  {
     date: '2026-08-13',
     title: 'AI新闻 | 鸿海Q4出货英伟达Vera Rubin平台 + 腾讯AI开始算回报 + Agent拼生产系统 + 攻击性蒸馏暴露思维链漏洞 + 荣耀发布首款机器人手机',
     summary: '今日AI行业五大看点：鸿海宣布第四季度开始出货英伟达新一代Vera Rubin AI平台，大规模AI Agent工作负载下可实现最高10倍吞吐量提升；腾讯Q2财报显示AI算力投入开始看到回报，刘炽平称多款新应用表现良好；虎嗅深度分析指出Agent竞争正从Skill转向生产系统整合；美国前沿模型厂商暴露攻击性蒸馏漏洞，思维链可被低成本提取；荣耀发布首款机器人手机Robot Phone，9999元起售。',
