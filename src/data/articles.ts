@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-prompt-reverse-questioning',
+    date: '2026-08-14',
+    title: '别再盲目加长提示词！真正高效使用 AI 的逻辑，90% 的人搞反了',
+    excerpt: '直接把想好的需求一股脑丢给 AI 提问，其实是最低效的用法。真正的高手不是提示词写得更长，而是让 AI 先来问你。',
+    tag: 'AI观点',
+  },
+  {
     slug: 'ai-office-assistant-war',
     date: '2026-08-09',
     title: 'AI办公助理大战：腾讯字节阿里抢着给你配AI同事',
