@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-16",
+  "title": "AI新闻 | SpaceX 600亿美元收购Cursor + Anthropic 2万亿估值冲刺史上最大IPO + 宇树科技中签率0.018% + 千问办公上线GLM-5.3和DeepSeek V4 Pro + 黄仁勋推AI算力残值担保",
+  "summary": "今日AI行业五大看点：SpaceX正式完成对Cursor母公司Anysphere的收购，成交价600亿美元，马斯克拿下AI编程赛道最重要棋子；Anthropic最快10月上市，投资者给出2万亿美元估值，将超越SpaceX成史上最大IPO；宇树科技科创板IPO中签率0.0181%创历史新低，场外暗盘部分中介出价520元/股；阿里千问办公首发上线GLM-5.3和DeepSeek V4 Pro两大模型；黄仁勋联手华尔街六大资管巨头推AI算力残值担保机制，将AI算力打造为独立资产类别。",
+  "newsItems": [
+    {
+      "title": "SpaceX正式完成收购Cursor母公司Anysphere，成交价600亿美元",
+      "summary": "8月14日，SpaceX正式完成对AI编程公司Anysphere（Cursor母公司）的收购，成交金额600亿美元。这家成立仅四年的AI Coding公司成为SpaceX全资子公司，也是马斯克迄今最大的一笔AI收购，标志着AI编程工具赛道格局巨变。",
+      "source": "虎嗅",
+      "category": "AI编程",
+      "url": "https://www.huxiu.com/article/4883385.html"
+    },
+    {
+      "title": "Anthropic最快10月上市，估值2万亿美元或成史上最大IPO",
+      "summary": "据英国金融时报报道，全球头部AI企业Anthropic最快将于今年10月正式上市，投资者给出的上市估值已达2万亿美元，将超越马斯克的SpaceX（上市前估值1.77万亿美元），刷新史上最大IPO纪录。",
+      "source": "虎嗅",
+      "category": "产业",
+      "url": "https://www.huxiu.com/article/4883363.html"
+    },
+    {
+      "title": "宇树科技IPO中签率0.0181%创科创板新低，场外暗盘火爆",
+      "summary": "宇树科技科创板IPO发行结果：978.46万户投资者参与申购，中签率仅0.0181%创科创板历史新低，弃购率低至万分之九。场外暗盘交易悄然兴起，部分中介出价520元/股（发行价150.8元/股），溢价超2.4倍。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3940284903701895"
+    },
+    {
+      "title": "千问办公首发上线GLM-5.3和DeepSeek V4 Pro两款前沿模型",
+      "summary": "阿里旗下Agent产品千问办公首发上线GLM-5.3和DeepSeek V4 Pro两款模型，加上此前上线的Qwen3.8-Max，千问办公已支持三大前沿模型。用户可在产品首页直接选用，AI办公Agent竞争加剧。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3940346809810055"
+    },
+    {
+      "title": "黄仁勋联手华尔街巨头推AI算力残值担保，打造独立资产类别",
+      "summary": "黄仁勋携手六位华尔街资管巨头为将AI算力打造为独立资产类别背书，英伟达可能为单个投资项目提供最高25%的残值支持机制。分析认为这是黄仁勋践行词元经济学，标志着AI热潮从技术竞赛延伸至资本竞赛，但也引发投资者对循环融资的担忧。",
+      "source": "36氪",
+      "category": "AI算力",
+      "url": "https://www.36kr.com/newsflashes/3940579113713025"
+    }
+  ],
+  "comment": "Cursor被马斯克收入囊中、Anthropic冲刺2万亿估值、宇树万人抢签——AI行业正从技术比拼全面转入资本博弈，谁掌握工具、模型和硬件入口，谁就掌握下一个十年的定价权。"
+},
+{
   "date": "2026-08-15",
   "title": "AI新闻 | 中国医生用GPT-5.6破解22年数学猜想 + 具身智能半年融资935亿 + 华强北AI眼镜销量翻倍 + DeepSeek Harness架构革新 + 谷歌AI人才大地震",
   "summary": "今日AI行业五大看点：北京协和医院金山木医生用GPT-5.6仅16小时证明了困扰数学界22年的Crouzeix猜想，开创AI辅助数学证明先河；具身智能赛道持续火爆，2026上半年国内融资总额突破935亿元同比增长5倍；华强北AI眼镜销量激增100%，AI产品全品类销售额增长55%；DeepSeek Harness发布引发架构讨论，探索AI自我修改能力；谷歌首席科学家Jeff Dean离职，DeepMind重组，前沿AI研发面临动荡。",
