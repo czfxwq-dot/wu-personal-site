@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-17",
+  "title": "AI新闻 | DeepSeek V4调价标志定价成熟 + Anthropic CEO发长文回应质疑 + OpenAI解散风险防范团队 + 人形机器人运动会参赛翻倍 + 百度库库AI月活2500万",
+  "summary": "今日AI行业五大看点：DeepSeek V4全系列凌晨调价，中国AI定价策略走向成熟，正把\"智能\"变成工业品；Anthropic CEO在2万亿估值IPO前罕见发长文回应质疑，预告AI将在5-10年内治愈多数疾病；OpenAI筹备IPO之际解散风险防范团队，安全架构持续调整；第二届世界人形机器人运动会即将开幕，参赛规模较首届翻倍；百度AI办公智能体官宣中文名\"库库AI\"，月活已超2500万。",
+  "newsItems": [
+    {
+      "title": "DeepSeek V4全系列凌晨调价，中国AI定价走向成熟",
+      "summary": "8月17日零点，DeepSeek V4全系列新的峰谷价格正式生效。过去一年多中国模型不断压低前沿智能价格，在OpenRouter样本中中国模型Token份额已超过美国。分析认为DeepSeek涨价标志着中国正把\"智能\"变成一种工业品，AI定价策略走向成熟。",
+      "source": "虎嗅",
+      "category": "大模型",
+      "url": "https://www.huxiu.com/article/4883517.html"
+    },
+    {
+      "title": "Anthropic CEO罕见发长文回应质疑，预告5-10年AI将治愈多数疾病",
+      "summary": "Anthropic CEO达里奥·阿莫迪在IPO估值被推到2万亿美元的节骨眼上，罕见发布长文正面回应硅谷质疑。他预告未来5-10年AI将治愈多数疾病，并回应了关于Anthropic安全理念的争议。这是该公司史上最大规模IPO前的重要信号。",
+      "source": "IT之家",
+      "category": "产业",
+      "url": "https://www.ithome.com/0/990/373.htm"
+    },
+    {
+      "title": "OpenAI筹备IPO之际解散风险防范团队",
+      "summary": "据金融时报报道，OpenAI已于上月末解散旗下风险防范团队。该团队核心工作是评估模型是否存在重大风险并制定缓解措施。相关职责已按生物安全、网络安全等细分领域拆分并入现有业务团队。此前OpenAI已先后解散AGI筹备团队与超级对齐团队。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "url": "https://www.ithome.com/0/990/406.htm"
+    },
+    {
+      "title": "第二届世界人形机器人运动会即将开幕，参赛规模翻倍",
+      "summary": "第二届世界人形机器人运动会将于8月22日在北京国家速滑馆开幕，共51个项目1301场比赛。来自六大洲16个国家的666支队伍、2056台机器人参赛，队伍数量较首届增长138%，机器人数量翻了两番。各队伍已进入冲刺训练阶段。",
+      "source": "IT之家",
+      "category": "机器人",
+      "url": "https://www.ithome.com/0/990/389.htm"
+    },
+    {
+      "title": "百度AI办公智能体GenFlow官宣中文名\"库库AI\"，月活超2500万",
+      "summary": "百度AI Day开放日上，百度文库网盘旗下通用智能体GenFlow正式官宣中文名\"库库AI\"，同步公布AI办公月活用户超2500万。分析认为库库AI是百度把十几年的内容家底和存储家底用AI外壳重新打包，标志着AI办公赛道竞争加剧。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4883487.html"
+    }
+  ],
+  "comment": "DeepSeek调价、Anthropic冲刺2万亿、OpenAI拆安全团队——AI行业正同时经历商业化加速和治理体系重构，\"便宜好用\"和\"安全可控\"的天平如何平衡，将决定下一阶段的行业走向。"
+},
+{
   "date": "2026-08-16",
   "title": "AI新闻 | SpaceX 600亿美元收购Cursor + Anthropic 2万亿估值冲刺史上最大IPO + 宇树科技中签率0.018% + 千问办公上线GLM-5.3和DeepSeek V4 Pro + 黄仁勋推AI算力残值担保",
   "summary": "今日AI行业五大看点：SpaceX正式完成对Cursor母公司Anysphere的收购，成交价600亿美元，马斯克拿下AI编程赛道最重要棋子；Anthropic最快10月上市，投资者给出2万亿美元估值，将超越SpaceX成史上最大IPO；宇树科技科创板IPO中签率0.0181%创历史新低，场外暗盘部分中介出价520元/股；阿里千问办公首发上线GLM-5.3和DeepSeek V4 Pro两大模型；黄仁勋联手华尔街六大资管巨头推AI算力残值担保机制，将AI算力打造为独立资产类别。",
