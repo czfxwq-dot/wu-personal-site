@@ -25,6 +25,49 @@ export interface DailyNewsSummary {
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-18",
+  "title": "AI新闻 | OpenAI联手英伟达6000亿美元算力基建 + deeptide开源DeepSeek编码Agent + AI+工业软件赛道加速 + 软银2亿美元押注建筑机器人 + SmartCall智能客服系统更新",
+  "summary": "今日AI行业五大看点：OpenAI与英伟达扩大合作，在俄亥俄州PORTS-Pike建设世界级AI工厂，到2030年计算规模或达6000亿美元；Mac原生终端编码Agent deeptide开源，专为DeepSeek打造；上海开源软件创新大赛设AI+工业软件赛道，推动AI落地产线；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；SmartCall v1.0.3发布，基于AI大模型的智能客服呼叫中心系统持续迭代。",
+  "newsItems": [
+    {
+      "title": "OpenAI与英伟达扩大合作，2030年计算规模或达6000亿美元",
+      "summary": "OpenAI将在俄亥俄州PORTS-Pike建设世界级AI工厂，采用英伟达全栈DSX AI工厂平台。初步部署预计提供4.25吉瓦产能，每代系统约150万块GPU，价值1500亿至2000亿美元。英伟达同时向SB Energy投资15亿美元支持该项目。",
+      "source": "36氪",
+      "category": "算力基建",
+      "url": "https://www.36kr.com/newsflashes/3943618684255368"
+    },
+    {
+      "title": "deeptide开源：专为DeepSeek打造的Mac原生终端编码Agent",
+      "summary": "deeptide是一个Mac原生终端编码Agent，由Paean AI团队用Swift编写，MIT协议开源。与Claude Code等通用Agent不同，deeptide专为DeepSeek优化，编译为原生二进制并签名公证，安装到~/.local/bin/tide。",
+      "source": "开源中国",
+      "category": "AI编程",
+      "url": "https://www.oschina.net/news/501966"
+    },
+    {
+      "title": "AI+工业软件赛道加速：上海开源软件创新大赛启动",
+      "summary": "2026上海开源软件应用创新大赛启动报名，设AI+工业软件、智算云、开源AI工具三大赛道。AI+工业软件赛道聚焦AI稳定跑在产线上，2025年上海制造业AI应用已有显著进展，赛道要的是能直接进工厂的AI应用。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net/news/501963"
+    },
+    {
+      "title": "软银向建筑机器人公司Gravis Robotics投资2亿美元",
+      "summary": "Gravis Robotics完成2亿美元A轮融资，由软银投资，为建筑机器人领域最大A轮。资金用于推进重型工程机械自动化和全球部署。公司成立于2022年，由苏黎世联邦理工学院孵化，主攻挖掘机等重型机械AI系统。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3944217400393088"
+    },
+    {
+      "title": "SmartCall v1.0.3发布：AI大模型驱动的智能客服呼叫中心系统",
+      "summary": "SmartCall是基于AI大模型+Asterisk通信引擎的智能客服系统，融合AI语音机器人、智能IVR编排、实时ASR、TTS、大模型意图识别等能力，提供从呼入应答到智能外呼的全链路AI客服方案，适用于电商售后、金融催收、教育招生等场景。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net/news/501944"
+    }
+  ],
+  "comment": "OpenAI砸6000亿美元建算力工厂、DeepSeek有了专属编码Agent、建筑机器人拿到2亿美元——AI正从\"聊天\"走向\"干活\"，谁能率先在工业场景跑通闭环，谁就拿到下一个十年的入场券。"
+},
+{
+  "date": "2026-08-18",
   "title": "AI新闻 | GLM-5.3发布称最强开源编程模型 + Stripe 70亿美元收购OpenRouter + OpenAI发8400万美元Codex额度 + 软银2亿美元投建筑机器人 + DeepSeek峰谷定价生效",
   "summary": "今日AI行业五大看点：智谱发布GLM-5.3，通过极致后训练Scaling大幅提升编程能力，号称编程能力最强开源模型；支付巨头Stripe以超70亿美元收购AI模型路由平台OpenRouter，三个月估值暴涨50倍；OpenAI宣布通过ChatGPT提供8400万美元Codex额度，加速AI编程落地；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍。",
   "newsItems": [
