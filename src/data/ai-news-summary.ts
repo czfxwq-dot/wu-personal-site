@@ -25,46 +25,46 @@ export interface DailyNewsSummary {
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-18",
-  "title": "AI新闻 | OpenAI联手英伟达建6000亿美元AI工厂 + 宇树科技明日科创板上市 + DeepSeek V4峰谷定价生效 + AI编程Agent百花齐放 + 苹果Siri诉讼2.5亿美元和解",
-  "summary": "今日AI行业五大看点：OpenAI与英伟达扩大合作，在俄亥俄州建设世界级AI工厂，英伟达投资15亿美元，到2030年计算规模或达6000亿美元；宇树科技明日登陆科创板，成A股人形机器人第一股，发行价150.80元；DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍，标志中国AI定价走向成熟；开源社区AI编程Agent持续涌现，deeptide为DeepSeek打造Mac原生终端编码Agent，Notion工程师提出理解才是新瓶颈；苹果Siri AI延迟功能集体诉讼达成2.5亿美元和解，明年2月最终批准。",
+  "title": "AI新闻 | GLM-5.3发布称最强开源编程模型 + Stripe 70亿美元收购OpenRouter + OpenAI发8400万美元Codex额度 + 软银2亿美元投建筑机器人 + DeepSeek峰谷定价生效",
+  "summary": "今日AI行业五大看点：智谱发布GLM-5.3，通过极致后训练Scaling大幅提升编程能力，号称编程能力最强开源模型；支付巨头Stripe以超70亿美元收购AI模型路由平台OpenRouter，三个月估值暴涨50倍；OpenAI宣布通过ChatGPT提供8400万美元Codex额度，加速AI编程落地；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍。",
   "newsItems": [
     {
-      "title": "OpenAI联手英伟达建设世界级AI工厂，2030年计算规模或达6000亿美元",
-      "summary": "OpenAI宣布与SB Energy、英伟达及美国能源部合作，在俄亥俄州派克县PORTS-Pike技术园区建设世界级AI工厂。英伟达向SB Energy投资15亿美元，AI工厂采用英伟达全栈DSX平台，初步部署提供4.25吉瓦产能。项目预计创造35000个建筑岗位和2500个长期运营岗位，到2030年计算规模或达6000亿美元。",
-      "source": "36氪",
-      "category": "算力基础设施",
-      "url": "https://www.36kr.com/newsflashes/3943618684255368"
+      "title": "智谱发布GLM-5.3：号称编程能力最强开源模型",
+      "summary": "智谱正式发布GLM-5.3，基座模型未变但通过极致后训练Scaling大幅提升智能上界。采用数十倍长程任务环境、更丰富的环境类型和超长后训练时间，编程能力号称开源最强。GLM Coding Plan全员额度今日13:00重置。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net/news/501931"
     },
     {
-      "title": "宇树科技明日科创板上市，A股迎来人形机器人第一股",
-      "summary": "宇树科技公告将于2026年8月19日在上海证券交易所科创板上市，发行价150.80元/股，对应市值约600亿元。此前申购中签率极低，A股即将迎来人形机器人第一股。宇树科技在第二届世界人形机器人运动会即将开幕之际登陆资本市场，人形机器人赛道持续升温。",
-      "source": "IT之家",
+      "title": "Stripe以超70亿美元收购AI模型路由平台OpenRouter",
+      "summary": "支付巨头Stripe敲定协议以超70亿美元收购AI网关公司OpenRouter。仅三个月前OpenRouter估值仅1.3亿美元，估值暴涨超50倍。OpenRouter是AI模型路由和网关领域的头部平台，此次收购标志支付基础设施与AI算力调度的深度融合。",
+      "source": "开源中国",
+      "category": "AI投融资",
+      "url": "https://www.oschina.net/news/501951/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion"
+    },
+    {
+      "title": "OpenAI将通过ChatGPT提供8400万美元Codex额度",
+      "summary": "OpenAI宣布通过ChatGPT向用户提供总计8400万美元的Codex编程额度。此举旨在加速AI编程工具在开发者群体中的普及，进一步巩固OpenAI在AI编程赛道的市场地位。",
+      "source": "36氪",
+      "category": "AI编程",
+      "url": "https://www.36kr.com/newsflashes/3943615318506627"
+    },
+    {
+      "title": "软银向建筑机器人公司Gravis Robotics投资2亿美元",
+      "summary": "建筑机器人公司Gravis Robotics完成2亿美元A轮融资，由软银投资，为建筑机器人领域规模最大的A轮融资。资金将用于推进重型工程机械自动化，并在全球建筑工地扩大部署。Gravis成立于2022年，由苏黎世联邦理工学院孵化。",
+      "source": "36氪",
       "category": "机器人",
-      "url": "https://www.ithome.com/0/990/812.htm"
+      "url": "https://www.36kr.com/newsflashes/3944217400393088"
     },
     {
       "title": "DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍",
-      "summary": "北京时间8月17日零时起，DeepSeek V4全系列正式切换到峰谷定价模式。高峰时段价格翻倍，空闲时段价格为高峰时段的一半。新定价覆盖DeepSeek-V4-Flash和V4-Max两个主力模型。这是DeepSeek V4系列发布后最大的价格动作，标志着中国AI定价策略走向成熟。",
+      "summary": "北京时间8月17日零时起，DeepSeek V4全系列正式切换到峰谷定价模式。高峰时段价格翻倍，空闲时段价格为高峰时段的一半。这是DeepSeek V4系列发布后最大的价格动作，标志着中国AI定价策略走向成熟。",
       "source": "开源中国",
       "category": "大模型",
       "url": "https://www.oschina.net/news/501961"
-    },
-    {
-      "title": "AI编程Agent百花齐放：deeptide开源 + Notion工程师称理解才是新瓶颈",
-      "summary": "开源社区AI编程工具持续涌现：deeptide作为专为DeepSeek打造的Mac原生终端编码Agent正式发布，用Swift编写，MIT协议开源。与此同时，Notion设计工程师Geoffrey Litt在AI Engineer大会上指出，AI写代码的速度已远超人类吸收代码的速度，理解而非编写正在成为新的瓶颈。",
-      "source": "开源中国",
-      "category": "AI编程",
-      "url": "https://www.oschina.net/news/501966"
-    },
-    {
-      "title": "苹果Siri AI集体诉讼达成2.5亿美元和解，明年2月最终批准",
-      "summary": "苹果Siri AI功能延迟推出引发的集体诉讼案取得进展，苹果同意支付2.5亿美元（约合16.87亿元人民币）和解。最终批准听证会定于明年2月举行，符合条件的美国iPhone用户最高可获得赔偿金。此案源于苹果Siri AI功能长期未能兑现承诺，用户权益受损。",
-      "source": "IT之家",
-      "category": "AI安全与治理",
-      "url": "https://www.ithome.com/0/990/869.htm"
     }
   ],
-  "comment": "OpenAI砸重金建算力工厂、DeepSeek调价走峰谷模式、宇树科技明日上市——AI行业正从拼模型进入拼基建+拼商业化的新阶段，谁能把智能变成稳定供应的工业品，谁就赢得下一个十年。"
+  "comment": "GLM-5.3卷编程、Stripe天价买路由、OpenAI撒钱推Codex——AI竞争正从模型本身扩散到工具链和基础设施，谁能把模型能力变成开发者触手可及的生产力，谁就掌握下一轮增长引擎。"
 },
 {
   "date": "2026-08-17",
