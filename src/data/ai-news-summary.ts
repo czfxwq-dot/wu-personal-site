@@ -25,6 +25,49 @@ export interface DailyNewsSummary {
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-18",
+  "title": "AI新闻 | OpenAI大举扩张基础设施，Cursor挑战GitHub，宇树科技即将上市",
+  "summary": "OpenAI与英伟达合作在俄亥俄州建设超大规模AI数据中心，投资规模达千亿美元级别；Cursor趁GitHub宕机推出内置代码托管平台Origin；宇树科技8月19日登陆科创板成A股人形机器人第一股；软银2亿美元投资建筑机器人公司；OpenAI总裁回应高管离职潮称并不反常。",
+  "newsItems": [
+    {
+      "title": "OpenAI与英伟达扩大合作，到2030年计算规模或达6000亿美元",
+      "summary": "OpenAI将在俄亥俄州PORTS-Pike项目建设世界级AI工厂，采用英伟达全栈DSX AI工厂平台，初步部署提供4.25吉瓦AI工厂产能。英伟达向SB Energy投资15亿美元支持该项目。",
+      "source": "36氪",
+      "category": "基础设施",
+      "url": "https://www.36kr.com/newsflashes/3943618684255368"
+    },
+    {
+      "title": "GitHub宕机当天，Cursor推出内置代码托管平台Origin",
+      "summary": "GitHub经历严重服务中断之际，AI编程工具Cursor宣布推出Origin——直接集成在编辑器内的代码托管平台，向GitHub发起挑战。",
+      "source": "IT之家",
+      "category": "开发者工具",
+      "url": "https://www.ithome.com/0/990/874.htm"
+    },
+    {
+      "title": "A股迎来人形机器人第一股，宇树科技8月19日科创板上市",
+      "summary": "宇树科技公告将于2026年8月19日在上交所科创板上市，成为A股首个人形机器人概念股，此前IPO申购已于8月10日启动。",
+      "source": "IT之家",
+      "category": "机器人",
+      "url": "https://www.ithome.com/0/990/812.htm"
+    },
+    {
+      "title": "软银向建筑机器人公司Gravis Robotics投资2亿美元",
+      "summary": "Gravis Robotics完成2亿美元A轮融资由软银投资，为建筑机器人领域最大A轮，将用于推进重型工程机械自动化并在全球建筑工地扩大部署。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3944217400393088"
+    },
+    {
+      "title": "OpenAI总裁回应高管流失潮：并非十分反常",
+      "summary": "OpenAI总裁格雷格·布罗克曼淡化市场对高管接连离职的担忧，称人事变动并不反常，OpenAI处于极高聚光灯下所以每次离职都受关注。",
+      "source": "36氪",
+      "category": "行业动态",
+      "url": "https://www.36kr.com/newsflashes/3944221563763845"
+    }
+  ],
+  "comment": "AI基础设施军备竞赛加速，OpenAI千亿美元级数据中心布局显示算力仍是核心战场；Cursor趁势切入代码托管，开发者工具格局生变。"
+},
+{
+  "date": "2026-08-18",
   "title": "AI新闻 | OpenAI联手英伟达6000亿美元算力基建 + deeptide开源DeepSeek编码Agent + AI+工业软件赛道加速 + 软银2亿美元押注建筑机器人 + SmartCall智能客服系统更新",
   "summary": "今日AI行业五大看点：OpenAI与英伟达扩大合作，在俄亥俄州PORTS-Pike建设世界级AI工厂，到2030年计算规模或达6000亿美元；Mac原生终端编码Agent deeptide开源，专为DeepSeek打造；上海开源软件创新大赛设AI+工业软件赛道，推动AI落地产线；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；SmartCall v1.0.3发布，基于AI大模型的智能客服呼叫中心系统持续迭代。",
   "newsItems": [

@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '100-wan-ai-zero-return',
+    date: '2026-08-18',
+    title: '花了100万搞AI，回报是零，问题出在哪？',
+    excerpt: 'MIT调研300余家企业，95%的AI项目没有产出可衡量的业务回报。不是模型不行，是你用模型的方式不行。',
+    tag: 'AI观点',
+  },
+  {
     slug: 'ai-prompt-reverse-questioning',
     date: '2026-08-14',
     title: '别再盲目加长提示词！真正高效使用 AI 的逻辑，90% 的人搞反了',

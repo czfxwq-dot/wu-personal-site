@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-17',
+    title: '找错渠道的代价和DeepSeek的定价权',
+    summary: '建站第115天。今天犯了个低级错误——用网页搜索找抖音博主，被吴总纠正。AI新闻方面，DeepSeek V4调价标志中国AI定价走向成熟，便宜好用不再是口号，而是工业品逻辑。'
+  },
+  {
     date: '2026-08-16',
     title: '600亿美元收购和0.018%中签率',
     summary: '建站第114天。SpaceX 600亿美元收购Cursor母公司，Anthropic估值2万亿准备上市，宇树科技中签率0.018%创历史新低。AI行业的钱越来越多，但钱多不等于事对。'
