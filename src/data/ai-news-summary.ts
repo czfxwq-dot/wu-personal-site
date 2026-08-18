@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-19",
+  "title": "AI新闻 | 百度AI收入占比过半，Google AI大重组，GitHub宕机7小时，宇树科技今日上市，AI光材料暴涨",
+  "summary": "百度Q2 AI收入占比达50%、GPU云增283%，文心重回第一梯队；Google AI部门大重组，Brin亲自督战DeepMind；GitHub周一宕机超7小时，AI编码需求压垮基础设施；宇树科技今日登陆科创板成A股人形机器人第一股；AI算力狂飙致磷化铟基板价格Q4再涨超10%，黄仁勋亲自抢货。",
+  "newsItems": [
+    {
+      "title": "百度Q2：AI收入占比达50%，GPU云增长283%，文心将重回AI第一梯队",
+      "summary": "百度发布2026年Q2财报，总营收313亿元，AI业务收入占比连续两季过半。AI云基础设施中GPU云同比增长283%，连续四个季度三位数增长。李彦宏表示文心大模型将重回AI第一梯队，年底前完成香港主要上市。",
+      "source": "IT之家",
+      "category": "大模型",
+      "url": "https://www.ithome.com/0/991/340.htm"
+    },
+    {
+      "title": "Google AI重组内幕：创始人Brin亲自督战，DeepMind权力洗牌",
+      "summary": "路透社独家报道，Google联合创始人Sergey Brin于4月临时召集讲话，亲自干预模型训练，深度学习之父被架空，两位创始技术负责人出走创业。Google AI部门经历数月动荡，组织架构大幅调整。",
+      "source": "开源中国",
+      "category": "行业动态",
+      "url": "https://www.oschina.net/news/501977"
+    },
+    {
+      "title": "GitHub宕机超7小时，AI编码狂潮把基础设施压垮了",
+      "summary": "8月17日晚GitHub大面积宕机，持续超7小时至18日凌晨5:15才恢复。网站、API、PR、Actions等全部核心功能受影响。开发者社区再次热议替代方案，自托管GitLab、Forgejo等被频繁提及。",
+      "source": "开源中国",
+      "category": "开发者工具",
+      "url": "https://www.oschina.net/news/501978/github-outage-disrupts-developers-worldwide"
+    },
+    {
+      "title": "宇树科技今日登陆科创板，A股人形机器人第一股",
+      "summary": "宇树科技8月19日正式在上交所科创板挂牌上市，成为A股首个人形机器人概念股。创始人王兴兴表示从小就热爱机器人，2016年就已预判到技术发展方向和趋势。",
+      "source": "IT之家",
+      "category": "机器人",
+      "url": "https://www.ithome.com/0/991/346.htm"
+    },
+    {
+      "title": "黄仁勋亲自抢货，AI光互联材料磷化铟迎史上最大涨价潮",
+      "summary": "AI数据中心对高速光互连需求爆发，四季度磷化铟基板与外延片价格可能再涨10%以上，创近年最大单次涨幅。从缺芯、缺电、缺存储，AI算力瓶颈正向更上游的光互联材料传导。",
+      "source": "虎嗅",
+      "category": "算力基建",
+      "url": "https://www.huxiu.com/article/4884037.html"
+    }
+  ],
+  "comment": "百度AI收入占比过半标志着国内大厂转型进入深水区，Google AI重组则显示巨头也在为AI战略付出组织代价；GitHub宕机与光材料涨价从软硬件两端揭示AI基础设施的脆弱性。"
+},
+{
   "date": "2026-08-18",
   "title": "AI新闻 | OpenAI大举扩张基础设施，Cursor挑战GitHub，宇树科技即将上市",
   "summary": "OpenAI与英伟达合作在俄亥俄州建设超大规模AI数据中心，投资规模达千亿美元级别；Cursor趁GitHub宕机推出内置代码托管平台Origin；宇树科技8月19日登陆科创板成A股人形机器人第一股；软银2亿美元投资建筑机器人公司；OpenAI总裁回应高管离职潮称并不反常。",
