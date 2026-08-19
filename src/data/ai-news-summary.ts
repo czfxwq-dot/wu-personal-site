@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-20",
+  "title": "AI新闻 | 谷歌Marvell定制AI芯片，京东百亿押注机器人，昆仑万维AI收入暴增，可灵AI独立融资，Nebius发45亿美元算力债",
+  "summary": "Marvell与谷歌达成定制AI芯片商业协议，涵盖TPU推理加速器等；京东发布机器人战略，百亿投入建全球售后网络；昆仑万维上半年营收增43%，天工AI成核心增长引擎；快手可灵AI完成独立融资，优化算力配置；AI算力租赁商Nebius拟发行45亿美元可转债扩产。",
+  "newsItems": [
+    {
+      "title": "Marvell与谷歌就定制AI芯片达成商业协议，涵盖TPU推理加速器",
+      "summary": "Marvell Technology宣布与谷歌就开发定制半导体产品达成商业协议，涵盖AI推理加速器、存储控制器、网络接口控制器等TPU生态项目。Marvell向谷歌发行认股权证，允许以206.58美元行权价购买至多5897万股。",
+      "source": "36氪",
+      "category": "AI芯片",
+      "url": "https://www.36kr.com/newsflashes/3946434931326089"
+    },
+    {
+      "title": "京东发布机器人战略：百亿投入，建80个RoboBase基地",
+      "summary": "2026世界机器人大会上，京东发布机器人战略布局。截至2028年将投入百亿资源，助力100个品牌销售额破10亿；未来5年建覆盖全球超100国的售后服务能力，建80个RoboBase机器人基地；JoyInside预计年内实现超千万终端设备接入。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3946397274242436"
+    },
+    {
+      "title": "昆仑万维上半年营收53.59亿元增43%，天工AI成核心增长引擎",
+      "summary": "昆仑万维发布2026半年报，营收53.59亿元同比增长43.55%，海外收入52.03亿元增51%。天工AI业务收入规模逐季抬升，成为重要增长动能。公司升级4+3战略，以视频、音乐、游戏、基座四大SOTA模型支撑AI短剧、AI音乐、AI游戏三大平台。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3946412741197186"
+    },
+    {
+      "title": "快手可灵AI完成独立融资，将用租赁方式优化算力配置",
+      "summary": "快手CFO金秉在Q2业绩会上表示，可灵AI已完成独立融资，将在算力支出上采用更灵活形式，包括通过租赁等方式解决更多算力需求，优化资金配置。公司二季度自由现金流为正，目标下半年继续保持。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/3946405515410819"
+    },
+    {
+      "title": "AI算力租赁商Nebius拟发行45亿美元可转换优先票据",
+      "summary": "AI算力租赁商Nebius计划发行45亿美元可转换优先票据，用于扩大AI算力基础设施。此举反映全球AI算力需求持续高涨，专业算力服务商加速资本运作以抢占市场。",
+      "source": "36氪",
+      "category": "AI算力",
+      "url": "https://www.36kr.com/newsflashes/3946373886000259"
+    }
+  ],
+  "comment": "从芯片定制到机器人落地，从大模型商业化到算力资本化，AI产业链各环节正在同步加速。"
+},
+{
   "date": "2026-08-19",
   "title": "AI新闻 | 百度AI收入占比过半，Google AI大重组，GitHub宕机7小时，宇树科技今日上市，AI光材料暴涨",
   "summary": "百度Q2 AI收入占比达50%、GPU云增283%，文心重回第一梯队；Google AI部门大重组，Brin亲自督战DeepMind；GitHub周一宕机超7小时，AI编码需求压垮基础设施；宇树科技今日登陆科创板成A股人形机器人第一股；AI算力狂飙致磷化铟基板价格Q4再涨超10%，黄仁勋亲自抢货。",
