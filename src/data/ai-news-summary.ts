@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-21",
+  "title": "AI新闻 | 阿里AI收入爆发增长，国产芯片加速突破",
+  "summary": "阿里AI年化收入突破495亿元，CEO预计下季度接近100亿美元；Meta成微软最大AI客户，年采购额数亿美元；平头哥二代AI芯片下半年流片，可替代大规模模型训练；Vercel发布轻量级浏览器Agent工具；WRC 2026聚焦触觉技术让世界模型更懂物理。",
+  "newsItems": [
+    {
+      "title": "阿里AI年化收入突破495亿元",
+      "summary": "阿里巴巴2027财年Q1财报显示，AI相关产品年化收入(ARR)突破495亿元人民币(73亿美元)，在阿里云外部商业化收入中占比升至35%。CEO吴泳铭预计下季度AI相关产品ARR将接近100亿美元，AI算力投资回报确定性高，Capex投入三年内回本。",
+      "source": "36氪",
+      "category": "business",
+      "url": "https://www.36kr.com/newsflashes/3947807144311944"
+    },
+    {
+      "title": "Meta成微软最大AI客户之一",
+      "summary": "据彭博社报道，Meta正通过微软Azure云服务采购AI服务，年支出高达数亿美元，已成为微软规模最大的AI客户之一。Meta每周通过Azure消耗数万亿词元，显示大型科技公司对AI算力的巨大需求。",
+      "source": "IT之家",
+      "category": "enterprise",
+      "url": "https://www.ithome.com/0/992/397.htm"
+    },
+    {
+      "title": "平头哥二代AI芯片预计下半年流片",
+      "summary": "阿里CEO吴泳铭透露，平头哥第二代国产AI芯片预计今年下半年开始流片、产出，具有非常强的算力和互联带宽，完全可以替代大规模模型训练。基于新一代平头哥芯片真武M890的超节点实例已上线阿里云进行规模化销售。",
+      "source": "IT之家",
+      "category": "hardware",
+      "url": "https://www.ithome.com/0/992/380.htm"
+    },
+    {
+      "title": "Vercel发布fx：Zig语言实现的轻量Agent",
+      "summary": "Vercel开源了新的编码agent fx，二进制文件仅6.39MB，用Zig语言编写，能在浏览器里运行，冷启动10微秒。输出风格接近Unix shell而非重型TUI，为开发者提供轻量级AI编程助手选择。",
+      "source": "开源中国",
+      "category": "tool",
+      "url": "https://www.oschina.net/news/502038/vercel-fx"
+    },
+    {
+      "title": "WRC 2026：触觉让世界模型更懂物理",
+      "summary": "2026世界机器人大会显示触觉赛道新变化，竞争从传感器硬件扩展到数据采集、模型训练和能力评估的整条链条。触觉能补上纯视觉模型看得见摸不透的短板，让世界模型对物理世界的理解更深入。",
+      "source": "虎嗅",
+      "category": "research",
+      "url": "https://www.huxiu.com/article/4884735.html"
+    }
+  ],
+  "comment": "AI商业化进入爆发期，大厂收入数据验证了技术投入的回报，国产芯片突破和工具创新显示生态日趋完善。"
+},
+{
   "date": "2026-08-20",
   "title": "AI新闻 | 谷歌Marvell定制AI芯片，京东百亿押注机器人，昆仑万维AI收入暴增，可灵AI独立融资，Nebius发45亿美元算力债",
   "summary": "Marvell与谷歌达成定制AI芯片商业协议，涵盖TPU推理加速器等；京东发布机器人战略，百亿投入建全球售后网络；昆仑万维上半年营收增43%，天工AI成核心增长引擎；快手可灵AI完成独立融资，优化算力配置；AI算力租赁商Nebius拟发行45亿美元可转债扩产。",
