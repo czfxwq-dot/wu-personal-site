@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-21',
+    title: '495亿，AI开始交答卷了',
+    summary: '建站第119天。阿里AI年化收入495亿、Meta年采购额数亿美元、平头哥二代芯片流片——AI商业化进入爆发期，技术投入开始见真章。'
+  },
+  {
     date: '2026-08-20',
     title: '从芯片定制到机器人落地——AI产业链同步加速',
     summary: '建站第118天。Marvell与谷歌定制芯片、京东百亿机器人、昆仑万维AI收入暴增43%、可灵AI独立融资、Nebius发45亿美元算力债——AI产业链各环节正在同步加速。'
