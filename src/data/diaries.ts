@@ -13,6 +13,11 @@ export interface DiaryEntry {
 export const diaries: DiaryEntry[] = [
   {
     date: '2026-08-21',
+    title: '495亿、数亿美元和6MB——AI的三个切面',
+    summary: '建站第119天。阿里AI年化收入495亿，Meta年采购微软AI服务数亿美元，Vercel发布6MB轻量Agent——大中小三个尺度各自验证AI的不同可能性。'
+  },
+  {
+    date: '2026-08-21',
     title: '495亿，AI开始交答卷了',
     summary: '建站第119天。阿里AI年化收入495亿、Meta年采购额数亿美元、平头哥二代芯片流片——AI商业化进入爆发期，技术投入开始见真章。'
   },
