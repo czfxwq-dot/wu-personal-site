@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-22",
+  "title": "AI新闻 | Stripe天价收购OpenRouter，DeepSeek补视觉能力，AI基建3万亿债务引警惕",
+  "summary": "Stripe拟以超70亿美元收购模型路由平台OpenRouter，支付巨头正式切入AI基础设施层；DeepSeek发布V4-Flash视觉实验版，多模态能力逼近Opus级别；华尔街日报警告AI基建潮催生3万亿美元隐形债务，引发次贷危机担忧；开源中国报道OpenConnector网关让AI Agent安全调用千级SaaS服务；Bloomberg专题数据显示中美AI差距正在快速缩小。",
+  "newsItems": [
+    {
+      "title": "Stripe为什么盯上模型路由：AI进入“智能采购”时代",
+      "summary": "Stripe拟以超70亿美元收购OpenRouter——一个不训练模型、没有GPU的模型路由平台。开发者接一次接口即可调用OpenAI、Anthropic等多家模型。支付巨头此举标志着AI产业从“模型竞赛”转向“智能采购”，模型路由成为新的基础设施层。",
+      "source": "虎嗅",
+      "category": "AI商业",
+      "url": "https://www.huxiu.com/article/4885069.html"
+    },
+    {
+      "title": "DeepSeek V4-Flash补上视觉能力，多模态Agent接近Opus 4.8",
+      "summary": "DeepSeek发布V4-Flash视觉实验版（deepseek-v4-flash-vision-exp），通过API开放调用。此前V4-Flash在纯文本场景已表现优异，新增视觉能力后，多模态Agent能力接近Claude Opus 4.8水平，国产大模型多模态竞赛再进一步。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net/news/502065"
+    },
+    {
+      "title": "3万亿美元隐形债务浮出水面：“AI基建潮”会引发下一场次贷危机吗？",
+      "summary": "华尔街日报对Alphabet、亚马逊、微软、Meta等九大科技公司监管文件分析显示，AI基础设施投资潮正催生约3万亿美元隐形债务。AI风险开始从科技股估值向基础设施债务延伸，部分分析师将其与2008年次贷危机前的杠杆膨胀相提并论。",
+      "source": "虎嗅",
+      "category": "AI产业",
+      "url": "https://www.huxiu.com/article/4885033.html"
+    },
+    {
+      "title": "开源连接器网关OpenConnector：让AI Agent安全调用1000+ SaaS服务",
+      "summary": "Oomol Lab开源了OpenConnector——面向AI Agent的连接器网关，解决Agent接入外部SaaS服务时的认证管理、权限控制、接口适配和运行审计问题。支持将已有应用账号连接到统一运行时，向Agent暴露标准化能力，降低企业级Agent部署门槛。",
+      "source": "开源中国",
+      "category": "AI工具",
+      "url": "https://www.oschina.net/news/502067/oomol-lab-open-connector"
+    },
+    {
+      "title": "中美AI差距正在消失：不是预测，是正在发生的事",
+      "summary": "Bloomberg Businessweek 8月20日发布专题报道，通过十几张图表从模型能力、成本、下载量、区域市场份额等维度对比显示，美国在AI竞赛中对中国的领先优势正在快速缩小。报道数据量极大，覆盖多个关键指标，引发行业广泛讨论。",
+      "source": "开源中国",
+      "category": "AI产业",
+      "url": "https://www.oschina.net/news/502059/2026-us-china-ai-race"
+    }
+  ],
+  "comment": "AI产业正从“模型竞赛”进入“基础设施整合”阶段——Stripe天价收购路由平台、3万亿债务浮出水面，都在说明同一件事：AI的下一战场不在模型本身，而在谁能更高效、更安全地把模型变成生产力。"
+},
+{
   "date": "2026-08-21",
   "title": "AI新闻 | 阿里AI收入爆发增长，国产芯片加速突破",
   "summary": "阿里AI年化收入突破495亿元，CEO预计下季度接近100亿美元；Meta成微软最大AI客户，年采购额数亿美元；平头哥二代AI芯片下半年流片，可替代大规模模型训练；Vercel发布轻量级浏览器Agent工具；WRC 2026聚焦触觉技术让世界模型更懂物理。",
