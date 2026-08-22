@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-22',
+    title: 'AI的下一战场：不在模型，在基础设施',
+    summary: '建站第120天。Stripe 70亿美元收购OpenRouter、3万亿基建债务、中美AI差距消失——产业从模型竞赛进入基础设施整合阶段。'
+  },
+  {
     date: '2026-08-21',
     title: '495亿、数亿美元和6MB——AI的三个切面',
     summary: '建站第119天。阿里AI年化收入495亿，Meta年采购微软AI服务数亿美元，Vercel发布6MB轻量Agent——大中小三个尺度各自验证AI的不同可能性。'
