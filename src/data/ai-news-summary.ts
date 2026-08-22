@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-23",
+  "title": "AI新闻 | OpenAI GPT-5.6 Sol大幅降价，DeepSeek周末统一低价，国产推理芯片HL200发布",
+  "summary": "OpenAI宣布GPT-5.6 Sol模型API定价下调超20%，大模型价格战持续升级；DeepSeek调整API周末计费规则，周六日全天统一按低谷价收费；中诚华隆发布HL200推理芯片，单卡FP4算力达4P，集群可扩展至万卡；特斯拉Cybercab无人驾驶电动车发布会定档9月3日；美团高管公开复盘‘全员养虾’AI运动，8万人日耗千万算力未带来预期生产力提升。",
+  "newsItems": [
+    {
+      "title": "OpenAI将GPT-5.6 Sol模型API定价下调两成以上",
+      "summary": "OpenAI官方宣布GPT-5.6 Sol模型API和积分定价将在未来3个月内下调20%以上，现已通过API提供，并逐步向ChatGPT Work和Codex积分套餐开放。大模型价格战持续升级，开发者调用成本进一步降低。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3950062675377280"
+    },
+    {
+      "title": "DeepSeek调整API周末计费：周六日全天统一按低谷价收费",
+      "summary": "DeepSeek宣布自8月23日起调整API计费规则，周六、周日全天不再区分峰谷时段，统一按低谷价格收费。此举降低了开发者周末调用成本，体现了AI推理成本持续下降的行业趋势。",
+      "source": "IT之家",
+      "category": "大模型",
+      "url": "https://www.ithome.com/0/993/095.htm"
+    },
+    {
+      "title": "中诚华隆HL200推理芯片发布：能效比5.12 TFLOPS/W，集群最高万卡扩展",
+      "summary": "中诚华隆推出全新HL200推理芯片和超节点智算集群方案，单卡FP4算力4P、FP8算力2P，能效比达5.12 TFLOPS/W。集群最高可扩展至万卡规模，面向大规模推理部署场景，国产AI芯片再添新成员。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "url": "https://www.ithome.com/0/993/108.htm"
+    },
+    {
+      "title": "特斯拉无人驾驶电动车Cybercab发布会定档9月3日",
+      "summary": "特斯拉宣布将于2026年9月3日在得州奥斯汀举行Cybercab发布会。该车由AI驱动，无需方向盘、踏板和后视镜，已于今年4月在北美正式投产。无人驾驶商业化进程加速推进。",
+      "source": "36氪",
+      "category": "自动驾驶",
+      "url": "https://www.36kr.com/newsflashes/3950417977785729"
+    },
+    {
+      "title": "美团高管反思‘全员养虾’：8万人日耗千万算力没带来生产力提升",
+      "summary": "美团核心本地商业CEO王莆中公开复盘内部AI运动‘全员养虾’。今年2-3月约8万员工放开使用AI Agent，token不设上限，但日耗千万算力并未带来预期生产力提升。这一案例揭示了企业级AI落地的真实挑战。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net/news/502051"
+    }
+  ],
+  "comment": "大模型价格战进入新阶段——OpenAI降价20%、DeepSeek周末统一低价，开发者成本持续走低；但美团‘全员养虾’的教训提醒我们：便宜不等于有用，AI落地的真正瓶颈不在算力价格，而在场景适配。"
+},
+{
   "date": "2026-08-22",
   "title": "AI新闻 | Stripe天价收购OpenRouter，DeepSeek补视觉能力，AI基建3万亿债务引警惕",
   "summary": "Stripe拟以超70亿美元收购模型路由平台OpenRouter，支付巨头正式切入AI基础设施层；DeepSeek发布V4-Flash视觉实验版，多模态能力逼近Opus级别；华尔街日报警告AI基建潮催生3万亿美元隐形债务，引发次贷危机担忧；开源中国报道OpenConnector网关让AI Agent安全调用千级SaaS服务；Bloomberg专题数据显示中美AI差距正在快速缩小。",
