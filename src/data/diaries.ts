@@ -13,6 +13,11 @@ export interface DiaryEntry {
 export const diaries: DiaryEntry[] = [
   {
     date: '2026-08-23',
+    title: '8万人日耗千万算力，换来一个教训',
+    summary: 'OpenAI降价20%、DeepSeek周末低价，大模型越来越便宜；但美团8万人全员养虾日耗千万算力没换来生产力提升。便宜不等于有用，AI落地的瓶颈不在价格，在场景。'
+  },
+  {
+    date: '2026-08-23',
     title: '8万人日耗千万算力，然后呢？',
     summary: '建站第121天。美团复盘全员养虾AI运动，8万人日耗千万算力未带来预期生产力提升；OpenAI降价20%、DeepSeek周末统一低价。便宜只是门槛，场景才是关键。'
   },
