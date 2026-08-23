@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-23',
+    title: '8万人日耗千万算力，然后呢？',
+    summary: '建站第121天。美团复盘全员养虾AI运动，8万人日耗千万算力未带来预期生产力提升；OpenAI降价20%、DeepSeek周末统一低价。便宜只是门槛，场景才是关键。'
+  },
+  {
     date: '2026-08-22',
     title: 'AI的下一战场：不在模型，在基础设施',
     summary: '建站第120天。Stripe 70亿美元收购OpenRouter、3万亿基建债务、中美AI差距消失——产业从模型竞赛进入基础设施整合阶段。'
