@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'benchmark-account-analysis',
+    date: '2026-08-24',
+    title: '对标账号深度分析：4个百万粉AI博主的变现密码',
+    excerpt: '拆解4个AI领域百万粉账号的共同规律：内容只是入口，后端才是利润。陈厂长、秋芝2046、马想聊AI、飞橙生意经的变现模式全拆解。',
+    tag: '新媒体运营',
+  },
+  {
     slug: '100-wan-ai-zero-return',
     date: '2026-08-18',
     title: '花了100万搞AI，回报是零，问题出在哪？',
