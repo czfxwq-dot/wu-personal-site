@@ -7,8 +7,8 @@ const { lang = 'zh' } = Astro.props as Props;
 
 <div id="survey-app" data-lang={lang}></div>
 
-<style>
-  /* === 调查专用样式 === */
+<style is:global>
+  /* === 调查专用样式（全局，因为内容通过JS动态生成） === */
   .survey-wrapper {
     max-width: 680px;
     margin: 0 auto;
