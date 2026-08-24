@@ -262,7 +262,6 @@ function renderDecisions(start, end) {
   // Option clicks
   app.querySelectorAll('.scenario-option').forEach(el => {
     el.onclick = (e) => {
-      if (e.target.tagName === 'INPUT') return;
       const gi = el.dataset.gi, c = el.dataset.c;
       if (!state.decisions[gi]) state.decisions[gi] = { confidence: 4, happiness: 4 };
       state.decisions[gi].choice = c;
