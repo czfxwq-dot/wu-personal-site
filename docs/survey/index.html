@@ -116,10 +116,10 @@ const SCENARIOS = [
 ];
 
 const STEPS = ['intro','panas','dec1','dec2','dec3','final','thanks'];
-const TOTAL = 6; // intro不计入进度
+const TOTAL = 5; // 显示进度条的步骤数（panas~final，不含intro和thanks）
 
 // ===== 状态管理 =====
-const STORAGE_KEY = 'survey_state';
+const STORAGE_KEY = 'survey_state_v2';
 let state = loadState();
 const t = TEXT[lang];
 
