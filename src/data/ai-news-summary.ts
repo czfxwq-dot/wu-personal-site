@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-26",
+  "title": "AI新闻 | 苹果发布M6芯片首款2nm制程，人形机器人百米8.86秒刷新纪录",
+  "summary": "苹果正式发布M6芯片，首款采用2纳米制程，12核CPU单线程性能全球领先；同时推出M5 Ultra芯片，四芯片架构最高36核CPU/80核GPU；人形机器人百米竞速8.86秒再刷纪录；谷歌云推出面向法律行业的Gemini企业级解决方案；思科与英伟达合作扩展安全AI工厂。",
+  "newsItems": [
+    {
+      "title": "苹果发布M6芯片：首款2纳米制程，单线程性能全球领先",
+      "summary": "苹果在新款Mac mini中推出M6芯片，这是苹果首款采用2纳米制程的尖端芯片，12核CPU，全面升级所有计算单元，单线程性能全球领先。",
+      "source": "IT之家",
+      "category": "芯片",
+      "url": "https://www.ithome.com/0/994/219.htm"
+    },
+    {
+      "title": "苹果推出M5 Ultra芯片：四芯片架构，最高36核CPU/80核GPU",
+      "summary": "苹果在新款Mac Studio中推出M5 Ultra芯片，首次在M系列SoC中采用新一代UltraFusion技术构建四芯片架构，最高36核CPU/80核GPU，1.2TB/s统一内存带宽，面向专业及AI工作负载。",
+      "source": "IT之家",
+      "category": "芯片",
+      "url": "https://www.ithome.com/0/994/220.htm"
+    },
+    {
+      "title": "8.86秒！人形机器人百米竞速再次刷新纪录",
+      "summary": "第二届世界人形机器人运动会100米复赛，北京人形机器人创新中心的天工机器人跑出8.86秒最好成绩，继开幕式9.39秒后再次刷新纪录。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3954906236059012"
+    },
+    {
+      "title": "谷歌云推出面向法律行业的Gemini企业级解决方案",
+      "summary": "谷歌云正式发布面向法律行业的Gemini企业级AI解决方案，将大模型能力引入法律文档审查、合同分析等专业场景。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/3954926630599813"
+    },
+    {
+      "title": "思科与英伟达合作扩展安全AI工厂",
+      "summary": "思科与英伟达宣布合作扩展安全人工智能工厂，迎接机架规模时代，将在10月合作提供超微计算解决方案。",
+      "source": "36氪",
+      "category": "算力基础设施",
+      "url": "https://www.36kr.com/newsflashes/3954925351255428"
+    }
+  ],
+  "comment": "苹果2nm芯片量产、机器人百米跑进9秒内，AI硬件竞赛进入全新速度区间。"
+},
+{
   "date": "2026-08-25",
   "title": "AI新闻 | 小鹏何小鹏亲自挂帅机器人CEO，小米玄戒O3首发LPDDR6，零跑确认布局机器人",
   "summary": "何小鹏宣布亲自担任机器人业务CEO，调动全集团资源加速机器人量产和商业化；小米玄戒O3行业首发支持LPDDR6内存，长鑫存储成核心合作伙伴；零跑汽车确认布局机器人业务，将很快发布正式公告；虎嗅深度分析具身智能估值泡沫问题；苹果HomeHub智能家居中枢曝光支持面容识别自动切换账号。",

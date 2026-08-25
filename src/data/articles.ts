@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'weekly-report-2026-08-22',
+    date: '2026-08-25',
+    title: 'weekly-report-2026-08-22',
+    excerpt: '',
+    tag: 'AI产业'
+  },
+  {
     slug: 'benchmark-account-analysis',
     date: '2026-08-24',
     title: '对标账号深度分析：4个百万粉AI博主的变现密码',
