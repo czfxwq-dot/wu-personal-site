@@ -5,6 +5,7 @@ interface Props { lang: 'zh' | 'en'; }
 const { lang = 'zh' } = Astro.props as Props;
 ---
 
+<style is:global src="../../styles/survey.css" />
 <div id="survey-app" data-lang={lang}></div>
 <style is:global src="../../styles/survey.css" />
 
