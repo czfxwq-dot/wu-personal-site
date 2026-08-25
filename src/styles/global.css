@@ -1021,3 +1021,4 @@ article tbody tr:last-child td {
     gap: 12px;
   }
 }
+@import "survey.css";

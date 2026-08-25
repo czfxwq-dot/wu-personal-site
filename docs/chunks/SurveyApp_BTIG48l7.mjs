@@ -7,7 +7,7 @@ const $$SurveyApp = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$SurveyApp;
   const { lang = "zh" } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div id="survey-app"${addAttribute(lang, "data-lang")}></div>`;
+  return renderTemplate`${maybeRenderHead()}<div id="survey-app"${addAttribute(lang, "data-lang")}></div> `;
 }, "/home/18151201278_wy/openclaw/workspace-xs001/wu-personal-site/src/components/SurveyApp.astro", void 0);
 
 export { $$SurveyApp as $ };

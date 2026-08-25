@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate } from '../../chunks/astro/server_B9mEJJ6l.mjs';
 import 'kleur/colors';
 import { $ as $$Base } from '../../chunks/Base_DZlGkYtv.mjs';
-import { $ as $$SurveyApp } from '../../chunks/SurveyApp_CU_N4nRT.mjs';
+import { $ as $$SurveyApp } from '../../chunks/SurveyApp_BTIG48l7.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
