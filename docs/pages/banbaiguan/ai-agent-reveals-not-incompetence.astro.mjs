@@ -1,0 +1,42 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_B9mEJJ6l.mjs';
+import 'kleur/colors';
+import { $ as $$Base } from '../../chunks/Base_DZlGkYtv.mjs';
+/* empty css                                                                */
+export { renderers } from '../../renderers.mjs';
+
+const $$AiAgentRevealsNotIncompetence = createComponent(($$result, $$props, $$slots) => {
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI\u6765\u4E86\uFF0C\u6700\u5148\u85CF\u4E0D\u4F4F\u7684\uFF0C\u4E0D\u662F\u80FD\u529B\u5DEE\u7684\u4EBA",
+    "datePublished": "2026-06-06",
+    "dateModified": "2026-06-06",
+    "description": "AI Agent\u4E0A\u5C97\u4EE5\u540E\uFF0C\u5F88\u591A\u4EBA\u7B2C\u4E00\u53CD\u5E94\u662F\u673A\u5668\u8981\u6765\u62A2\u996D\u7897\u4E86\u3002\u5B83\u4E0D\u66FF\u4EE3\u4F60\u505A\u4E8B\uFF0C\u5B83\u66FF\u4EE3\u4F60\u5047\u88C5\u5728\u505A\u4E8B\u3002\u771F\u6B63\u4F1A\u88AB\u6DD8\u6C70\u7684\u4E0D\u662F\u67D0\u7C7B\u4EBA\uFF0C\u662F\u67D0\u7C7B\u5DE5\u4F5C\u65B9\u5F0F\u3002",
+    "author": {
+      "@type": "Person",
+      "name": "\u5434\u603B",
+      "url": "https://ban-bai.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "\u534A\u767E\u89C2AI",
+      "url": "https://ban-bai.com/banbaiguan/"
+    },
+    "keywords": ["AI Agent", "\u804C\u573A\u6548\u7387", "\u7B49\u5B89\u6392\u75C5", "\u4EFB\u52A1\u62C6\u89E3", "\u534A\u767E\u89C2AI", "\u5DE5\u4F5C\u65B9\u5F0F", "AI\u843D\u5730"]
+  };
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$Base, { "title": "AI\u6765\u4E86\uFF0C\u6700\u5148\u85CF\u4E0D\u4F4F\u7684\uFF0C\u4E0D\u662F\u80FD\u529B\u5DEE\u7684\u4EBA | \u534A\u767E\u89C2", "jsonLd": articleJsonLd, "ogDescription": "AI Agent\u4E0D\u66FF\u4EE3\u4F60\u505A\u4E8B\uFF0C\u5B83\u66FF\u4EE3\u4F60\u5047\u88C5\u5728\u505A\u4E8B\u3002\u771F\u6B63\u4F1A\u88AB\u6DD8\u6C70\u7684\u4E0D\u662F\u67D0\u7C7B\u4EBA\uFF0C\u662F\u67D0\u7C7B\u5DE5\u4F5C\u65B9\u5F0F\u3002", "navActive": "banbaiguan", "data-astro-cid-a6wmlfud": true }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<article class="article-page" data-astro-cid-a6wmlfud> <header class="article-header" data-astro-cid-a6wmlfud> <div class="article-meta" data-astro-cid-a6wmlfud> <time datetime="2026-06-06" data-astro-cid-a6wmlfud>2026年6月6日</time> <span class="article-tag" data-astro-cid-a6wmlfud>AI观点</span> </div> <h1 data-astro-cid-a6wmlfud>AI来了，最先藏不住的，不是能力差的人</h1> <p class="article-subtitle" data-astro-cid-a6wmlfud>文 / 半百观AI</p> </header> <div class="article-content" data-astro-cid-a6wmlfud> <p data-astro-cid-a6wmlfud>AI Agent上岗以后，很多人第一反应是：完了，机器要来抢饭碗了。</p> <p data-astro-cid-a6wmlfud>这反应不怪你。所有新工具刚出来的时候，打工人都以为自己要被替代。</p> <p data-astro-cid-a6wmlfud>打印机出来的时候，文员怕了。</p> <p data-astro-cid-a6wmlfud>Excel出来的时候，会计怕了。</p> <p data-astro-cid-a6wmlfud>ERP出来的时候，仓管怕了。</p> <p data-astro-cid-a6wmlfud>但AI Agent跟以前那些工具不一样。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>它不替代你做事，它替代你假装在做事。</strong></p> <p data-astro-cid-a6wmlfud>过去很多岗位靠什么活着？</p> <p data-astro-cid-a6wmlfud>靠开会，靠转发，靠"收到"，靠把问题从一个群搬到另一个群。</p> <p data-astro-cid-a6wmlfud>看起来忙得很，实际上像项目表里永远停在"处理中"的格子，颜色换了三遍，事情一步没动。</p> <p data-astro-cid-a6wmlfud>一句"正在推进"，能糊弄过去三个月。</p> <p data-astro-cid-a6wmlfud>AI Agent一来，最可怕的地方不是它有多聪明。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>是它不陪你演。</strong></p> <p data-astro-cid-a6wmlfud>你给它目标，它会拆任务、列步骤、找资料、写初稿、追节点。它不会在群里说"辛苦各位"，也不会把一句"我再跟一下"当成工作成果交差。</p> <p data-astro-cid-a6wmlfud>它像一个新来的同事。</p> <p data-astro-cid-a6wmlfud>不说话，不寒暄，不演戏，直接对着结果来。</p> <p data-astro-cid-a6wmlfud>这时候你才发现，原来公司里有一大半人，干的事根本不是做事，是演做事。</p> <hr data-astro-cid-a6wmlfud> <h2 data-astro-cid-a6wmlfud>▎等安排病，不是懒病，是看不见病</h2> <p data-astro-cid-a6wmlfud>我给这种毛病起了个名字，叫"等安排病"。</p> <p data-astro-cid-a6wmlfud>等老板分任务，等同事给材料，等客户说清楚，等流程自己变顺。</p> <p data-astro-cid-a6wmlfud>你让他用AI，他也只会说一句：帮我写个方案。</p> <p data-astro-cid-a6wmlfud>就像把一台数控机床买回来，最后拿来垫桌脚。</p> <p data-astro-cid-a6wmlfud>我在制造和贸易行业见过太多这种事。</p> <p data-astro-cid-a6wmlfud>一个订单卡住了。表面上看是客户催、供应商慢、物流乱。</p> <p data-astro-cid-a6wmlfud>往下一拆呢？</p> <p data-astro-cid-a6wmlfud>根本原因常常只有一个：没人把问题说清楚。</p> <p data-astro-cid-a6wmlfud>规格谁确认？交期谁盯？风险谁跟客户讲？下一步谁拍板？</p> <p data-astro-cid-a6wmlfud>没人拆。</p> <p data-astro-cid-a6wmlfud>大家就一起忙。忙就是安全，忙就是免责，忙就是"你看我已经很努力了"。</p> <p data-astro-cid-a6wmlfud>我以前带过一个团队，有个员工特别忙。</p> <p data-astro-cid-a6wmlfud>每天早上第一个到群里打卡，每条消息都回"收到"，每个会议都参加。</p> <p data-astro-cid-a6wmlfud>但三个月下来，他负责的那个项目，进度条几乎没动过。</p> <p data-astro-cid-a6wmlfud>后来我跟他对了一遍，发现他做的所有动作都是被动的：</p> <p data-astro-cid-a6wmlfud>客户问了才回，供应商催了才转，老板问了才汇报。</p> <p data-astro-cid-a6wmlfud>他像一台路由器，信号满格，但不产生任何内容。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>这就是"等安排病"的真相：</strong></p> <p data-astro-cid-a6wmlfud>不是这个人懒，是他根本看不见什么是"把一件事往前推"。</p> <p data-astro-cid-a6wmlfud>他以为回"收到"就是推进。以为转发就是跟进。以为开了会就是解决了。</p> <p data-astro-cid-a6wmlfud>他不是不想干。</p> <p data-astro-cid-a6wmlfud>是他不知道什么叫做干。</p> <hr data-astro-cid-a6wmlfud> <h2 data-astro-cid-a6wmlfud>▎AI Agent照出来的，是"把事推下去"的能力</h2> <p data-astro-cid-a6wmlfud>AI Agent上岗以后，它不抢谁的饭碗。</p> <p data-astro-cid-a6wmlfud>它只是把饭碗底下那块遮羞布掀开了。</p> <p data-astro-cid-a6wmlfud>以前你能藏起来的地方，现在全亮了。任务表上每个格子是谁的，卡在哪，下一步什么时候交，一清二楚。</p> <p data-astro-cid-a6wmlfud>AI Agent会追节点、会提醒、会把没完成的事标红。</p> <p data-astro-cid-a6wmlfud>它不骂你，但它也不会帮你圆谎。</p> <p data-astro-cid-a6wmlfud>我在做AIoT产品的时候，有一个很深的体会：</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>工具永远只是放大器。</strong></p> <p data-astro-cid-a6wmlfud>你本身有判断力，工具帮你加速。你本身没有，工具照得更清楚而已。</p> <p data-astro-cid-a6wmlfud>AI Agent也一样。</p> <p data-astro-cid-a6wmlfud>你给它一个模糊的目标，它给你一个模糊的结果。</p> <p data-astro-cid-a6wmlfud>你给它一个拆好的任务框架，它跑出比你快十倍的速度。</p> <p data-astro-cid-a6wmlfud>所以，真正会被淘汰的不是某类人，是某类工作方式。</p> <p data-astro-cid-a6wmlfud>那种披着工作外衣、只会转发和等待的方式，会被淘汰。</p> <hr data-astro-cid-a6wmlfud> <h2 data-astro-cid-a6wmlfud>▎公司会越来越喜欢三种人，跟AI无关</h2> <p data-astro-cid-a6wmlfud>AI Agent上岗以后，公司会越来越喜欢三种人。</p> <p data-astro-cid-a6wmlfud>这三种人以前也受欢迎，只是以前不容易分辨谁是真的、谁在装。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>第一种，能拆任务的人。</strong></p> <p data-astro-cid-a6wmlfud>拿到一个模糊的问题，能拆成清晰的步骤。</p> <p data-astro-cid-a6wmlfud>不是"去跟客户沟通"，而是"周三之前确认规格，周四把交期风险列出来，周五给客户一个替代方案"。</p> <p data-astro-cid-a6wmlfud>拆任务这件事，AI干得比你好。但前提是，你得先知道怎么拆。</p> <p data-astro-cid-a6wmlfud>AI不会替你理解客户为什么犹豫，不会替你判断供应商那句话是拖延还是真难。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>第二种，能判断结果的人。</strong></p> <p data-astro-cid-a6wmlfud>AI可以写十个方案，选哪一个，得靠你。</p> <p data-astro-cid-a6wmlfud>AI可以跑一堆数据，哪个数据说明问题，得靠你看。</p> <p data-astro-cid-a6wmlfud>工具出结果的速度越快，判断力的价值就越大。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>第三种，能对业务负责的人。</strong></p> <p data-astro-cid-a6wmlfud>不是对流程负责，不是对打卡负责，不是对汇报PPT负责。</p> <p data-astro-cid-a6wmlfud>是对业务结果负责。</p> <p data-astro-cid-a6wmlfud>订单能不能按时交付，客户下次还来不来，成本能不能控住。</p> <p data-astro-cid-a6wmlfud>这三种人，以前也有。</p> <p data-astro-cid-a6wmlfud>但现在AI Agent把他们的价值放大了十倍。</p> <p data-astro-cid-a6wmlfud>因为当执行成本越来越低的时候，能拆任务、能判断、能负责的人，就成了公司里最稀缺的资产。</p> <hr data-astro-cid-a6wmlfud> <h2 data-astro-cid-a6wmlfud>▎别急着学AI，先补拆任务这堂课</h2> <p data-astro-cid-a6wmlfud>如果你现在担心AI Agent会抢你的饭碗，我给你一个建议：</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>先别急着学怎么用AI，先学会把一件事从头到尾办成。</strong></p> <p data-astro-cid-a6wmlfud>没有老板一步一步喂你指令，没有同事把材料送到你手上，没有流程推着你往前走。</p> <p data-astro-cid-a6wmlfud>你还能不能把一件事拆清楚、推到底、交到结果？</p> <p data-astro-cid-a6wmlfud>能，AI Agent是你的加速器。</p> <p data-astro-cid-a6wmlfud>不能，AI Agent就是你的照妖镜。</p> <p data-astro-cid-a6wmlfud>说到底，AI Agent不会替你上班。</p> <p data-astro-cid-a6wmlfud>但它会替老板看清楚：谁在上班，谁在演上班。</p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>你怕的不是AI抢饭碗。</strong></p> <p data-astro-cid-a6wmlfud><strong data-astro-cid-a6wmlfud>你怕的是，AI一来，你终于藏不住了。</strong></p> </div> </article> ` })} `;
+}, "/home/18151201278_wy/openclaw/workspace-xs001/wu-personal-site/src/pages/banbaiguan/ai-agent-reveals-not-incompetence.astro", void 0);
+
+const $$file = "/home/18151201278_wy/openclaw/workspace-xs001/wu-personal-site/src/pages/banbaiguan/ai-agent-reveals-not-incompetence.astro";
+const $$url = "/banbaiguan/ai-agent-reveals-not-incompetence";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$AiAgentRevealsNotIncompetence,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
