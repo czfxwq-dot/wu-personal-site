@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-27",
+  "title": "AI新闻 | 阿里Qwen3.8-Flash开源超越Claude Opus4.6，黄仁勋宣布AI进入变现时代",
+  "summary": "阿里发布并开源千问Qwen3.8-Flash，千亿参数仅激活6B即超越Claude Opus4.6，创模型效率新基准；英伟达黄仁勋在财报会上宣布AI已迈过商业化拐点，全球产业进入变现时代，半年报净利润同比增长161%；DeepSeek前七个月营收约4.75亿元，第二轮融资估值5000亿；人形机器人百米8.64秒再破纪录；AI基础模型出现新分叉，开始直接学习物理世界。",
+  "newsItems": [
+    {
+      "title": "阿里发布并开源Qwen3.8-Flash：千亿参数激活6B，超越Claude Opus4.6",
+      "summary": "阿里发布并同步开源千问最新模型Qwen3.8-Flash，采用全新下一代架构，千亿总参数仅激活60亿即可获得超越Claude Opus4.6的前沿性能，创下模型效率全球新基准，训练成本较上代大幅降低。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3956345253084296"
+    },
+    {
+      "title": "黄仁勋：AI已迈过商业化拐点，全球产业进入AI变现时代",
+      "summary": "英伟达CEO黄仁勋在最新财报电话会议上明确指出，AI已正式迈过历史性拐点，正从小规模试验转向大规模商业化变现。英伟达2027财年半年报归母净利润1180.1亿美元，同比增长161.1%。",
+      "source": "IT之家",
+      "category": "AI产业",
+      "url": "https://www.ithome.com/0/994/795.htm"
+    },
+    {
+      "title": "DeepSeek前七个月营收约4.75亿元，第二轮融资估值5000亿",
+      "summary": "据南华早报和The Information报道，DeepSeek今年前七个月营收约4.75亿元，正接近完成新一轮约500亿元人民币融资，投前估值5000亿元（约740亿美元），成立不到三年估值飙升。",
+      "source": "开源中国",
+      "category": "AI产业",
+      "url": "https://www.oschina.net/news/502134"
+    },
+    {
+      "title": "8.64秒！人形机器人百米竞速再破纪录",
+      "summary": "第二届世界人形机器人运动会大型组100米决赛，天骄队跑出8.64秒，继开幕式9.39秒、复赛8.85秒后，再次刷新百米竞赛纪录，机器人运动能力持续突破。",
+      "source": "36氪",
+      "category": "机器人",
+      "url": "https://www.36kr.com/newsflashes/3956344328535427"
+    },
+    {
+      "title": "AI开始直接学习物理世界：一场新的基础模型分叉",
+      "summary": "路透社报道，Accelerated Understanding团队等正在探索AI直接学习物理世界的新路径，基础模型出现重要分叉：从纯语言模型走向理解物理规律的世界模型，贝索斯等巨头重金押注Project Prometheus。",
+      "source": "虎嗅",
+      "category": "AI前沿",
+      "url": "https://www.huxiu.com/article/4886285.html"
+    }
+  ],
+  "comment": "阿里用6B参数打败Claude Opus4.6，模型效率竞赛进入新阶段；黄仁勋喊出AI变现时代，英伟达半年赚1180亿美元——产业拐点已至。"
+},
+{
   "date": "2026-08-26",
   "title": "AI新闻 | 苹果发布M6芯片首款2nm制程，人形机器人百米8.86秒刷新纪录",
   "summary": "苹果正式发布M6芯片，首款采用2纳米制程，12核CPU单线程性能全球领先；同时推出M5 Ultra芯片，四芯片架构最高36核CPU/80核GPU；人形机器人百米竞速8.86秒再刷纪录；谷歌云推出面向法律行业的Gemini企业级解决方案；思科与英伟达合作扩展安全AI工厂。",
