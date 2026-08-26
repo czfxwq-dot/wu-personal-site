@@ -1,6 +1,6 @@
 ---
-// SurveyApp.astro — 家长决策调查容器
-// 通过 window.__SURVEY_LANG__ 传递语言配置给客户端脚本
+// SurveyApp.astro — 家长决策调查客户端应用
+// 接收 lang prop ('zh' | 'en')，管理全部6步流程
 interface Props { lang: 'zh' | 'en'; }
 const { lang = 'zh' } = Astro.props as Props;
 ---
@@ -10,8 +10,527 @@ const { lang = 'zh' } = Astro.props as Props;
 <div id="survey-app" data-lang={lang}></div>
 
 <script>
-  // 将语言配置注入全局，供 survey-app.ts 读取
-  (window as any).__SURVEY_LANG__ = document.getElementById('survey-app')?.dataset.lang || 'zh';
-</script>
+import { scenarios } from '../data/survey-questions';
+import { surveyText, panasItems, panasLabels, panasScale, demographics } from '../data/survey-text';
 
-<script src="./survey-app.ts"></script>
+// 从 DOM 读取语言配置
+const app = document.getElementById('survey-app');
+const lang = (app?.dataset.lang || 'zh') as 'zh' | 'en';
+
+const T = surveyText[lang];
+const TOTAL_STEPS = 6;
+const SCENARIOS_PER_PAGE = 7;
+
+// State
+const state = {
+  step: 1,
+  consent: false,
+  panas: {} as Record<number, number>,
+  decisions: {} as Record<number, { choice: string; confidence: number; happiness: number }>,
+  openText: '',
+  mathAnswer: '',
+  demographics: {} as Record<string, string>,
+  startTime: Date.now(),
+  sessionId: generateSessionId(),
+};
+
+function generateSessionId() {
+  return 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);
+}
+
+// Split scenarios into pages
+const scenarioPages: typeof scenarios[] = [];
+for (let i = 0; i < scenarios.length; i += SCENARIOS_PER_PAGE) {
+  scenarioPages.push(scenarios.slice(i, i + SCENARIOS_PER_PAGE));
+}
+
+// Init
+render();
+
+function render() {
+  if (!app) return;
+  app.innerHTML = '';
+  
+  const wrapper = document.createElement('div');
+  wrapper.className = 'survey-wrapper';
+  
+  if (state.step > 1 && state.step <= 6) {
+    wrapper.appendChild(createProgress());
+  }
+  
+  const stepEl = document.createElement('div');
+  stepEl.className = 'survey-step active';
+  
+  switch (state.step) {
+    case 1: renderWelcome(stepEl); break;
+    case 2: renderPanas(stepEl); break;
+    case 3: renderScenarios(stepEl, 0); break;
+    case 4: renderScenarios(stepEl, 1); break;
+    case 5: renderFollowUp(stepEl); break;
+    case 6: renderDemographics(stepEl); break;
+    case 7: renderThanks(stepEl); break;
+  }
+  
+  wrapper.appendChild(stepEl);
+  app.appendChild(wrapper);
+}
+
+function createProgress() {
+  const bar = document.createElement('div');
+  bar.className = 'survey-progress';
+  const displayStep = Math.min(state.step, 6);
+  const pct = ((displayStep - 1) / 5) * 100;
+  bar.innerHTML = `
+    <span>${T.progress.replace('{current}', String(displayStep)).replace('{total}', '6')}</span>
+    <div class="survey-progress-bar">
+      <div class="survey-progress-fill" style="width: ${pct}%"></div>
+    </div>
+  `;
+  return bar;
+}
+
+// === Step 1: Welcome ===
+function renderWelcome(container: HTMLElement) {
+  const card = document.createElement('div');
+  card.className = 'survey-card';
+  card.innerHTML = `
+    <h1 class="survey-h1">${T.title}</h1>
+    <p class="survey-p">${T.intro1}</p>
+    <p class="survey-p">${T.intro2}</p>
+    <p class="survey-p">${T.intro3}</p>
+    <label class="survey-checkbox" id="consent-label">
+      <input type="checkbox" id="consent-check" ${state.consent ? 'checked' : ''}>
+      <span>${T.agree}</span>
+    </label>
+  `;
+  container.appendChild(card);
+  
+  const nav = document.createElement('div');
+  nav.className = 'survey-nav';
+  nav.innerHTML = `<div></div><button class="survey-btn survey-btn-primary" id="btn-start" disabled>${T.start}</button>`;
+  container.appendChild(nav);
+  
+  requestAnimationFrame(() => {
+    const check = document.getElementById('consent-check') as HTMLInputElement;
+    const btn = document.getElementById('btn-start') as HTMLButtonElement;
+    if (check && btn) {
+      check.addEventListener('change', () => {
+        state.consent = check.checked;
+        btn.disabled = !check.checked;
+        const label = document.getElementById('consent-label');
+        if (label) label.classList.toggle('checked', check.checked);
+      });
+      if (state.consent) {
+        btn.disabled = false;
+        const label = document.getElementById('consent-label');
+        if (label) label.classList.add('checked');
+      }
+      btn.addEventListener('click', () => {
+        if (state.consent) {
+          state.startTime = Date.now();
+          goTo(2);
+        }
+      });
+    }
+  });
+}
+
+// === Step 2: PANAS ===
+function renderPanas(container: HTMLElement) {
+  const card = document.createElement('div');
+  card.className = 'survey-card';
+  
+  let html = `<p class="survey-p" style="margin-bottom:20px">${T.panasTitle}</p>`;
+  
+  panasItems.forEach((item: string, idx: number) => {
+    const label = (panasLabels as any)[item][lang];
+    const scale = (panasScale as any)[lang];
+    const currentVal = state.panas[idx] || 0;
+    
+    html += `<div class="panas-item">
+      <div class="panas-label">${label}</div>
+      <div class="panas-options">`;
+    
+    for (let i = 1; i <= 5; i++) {
+      const sel = currentVal === i ? 'selected' : '';
+      html += `<button class="panas-opt ${sel}" data-idx="${idx}" data-val="${i}">${scale[i-1]}</button>`;
+    }
+    
+    html += `</div></div>`;
+  });
+  
+  card.innerHTML = html;
+  container.appendChild(card);
+  
+  appendNav(container, 1, 3);
+  
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.panas-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt((btn as HTMLElement).dataset.idx!);
+        const val = parseInt((btn as HTMLElement).dataset.val!);
+        state.panas[idx] = val;
+        document.querySelectorAll(`.panas-opt[data-idx="${idx}"]`).forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+  });
+}
+
+// === Steps 3-4: Scenarios ===
+function renderScenarios(container: HTMLElement, pageIndex: number) {
+  const page = scenarioPages[pageIndex];
+  if (!page) return;
+  
+  const titleP = document.createElement('p');
+  titleP.className = 'survey-p';
+  titleP.style.marginBottom = '20px';
+  titleP.textContent = T.scenarioTitle;
+  container.appendChild(titleP);
+  
+  page.forEach(scenario => {
+    const card = document.createElement('div');
+    card.className = 'survey-card';
+    
+    const decision = state.decisions[scenario.no] || { choice: '', confidence: 4, happiness: 4 };
+    
+    let html = `<div class="scenario-situation">${scenario.situation[lang]}</div>`;
+    
+    const selA = decision.choice === 'A' ? 'selected' : '';
+    html += `<div class="scenario-option ${selA}" data-q="${scenario.no}" data-choice="A">
+      <input type="radio" name="q${scenario.no}" ${decision.choice === 'A' ? 'checked' : ''}>
+      <div class="scenario-option-text">
+        <div class="scenario-option-label">${scenario.optionA.label[lang]}</div>
+        <div class="scenario-pros">✓ ${scenario.optionA.pros[lang].join('；')}</div>
+        <div class="scenario-cons">✗ ${scenario.optionA.cons[lang].join('；')}</div>
+      </div>
+    </div>`;
+    
+    const selB = decision.choice === 'B' ? 'selected' : '';
+    html += `<div class="scenario-option ${selB}" data-q="${scenario.no}" data-choice="B">
+      <input type="radio" name="q${scenario.no}" ${decision.choice === 'B' ? 'checked' : ''}>
+      <div class="scenario-option-text">
+        <div class="scenario-option-label">${scenario.optionB.label[lang]}</div>
+        <div class="scenario-pros">✓ ${scenario.optionB.pros[lang].join('；')}</div>
+        <div class="scenario-cons">✗ ${scenario.optionB.cons[lang].join('；')}</div>
+      </div>
+    </div>`;
+    
+    if (decision.choice) {
+      html += createFollowUpHTML(scenario.no, decision);
+    }
+    
+    card.innerHTML = html;
+    container.appendChild(card);
+  });
+  
+  const prevStep = 2;
+  const nextStep = pageIndex === 0 ? 4 : 5;
+  appendNav(container, prevStep, nextStep);
+  
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.scenario-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const qNo = parseInt((opt as HTMLElement).dataset.q!);
+        const choice = (opt as HTMLElement).dataset.choice!;
+        
+        if (!state.decisions[qNo]) {
+          state.decisions[qNo] = { choice: '', confidence: 4, happiness: 4 };
+        }
+        state.decisions[qNo].choice = choice;
+        
+        render();
+      });
+    });
+    
+    document.querySelectorAll('.slider-row input[type=range]').forEach(slider => {
+      slider.addEventListener('input', () => {
+        const qNo = parseInt((slider as HTMLInputElement).dataset.q!);
+        const type = (slider as HTMLInputElement).dataset.type as 'confidence' | 'happiness';
+        const val = parseInt((slider as HTMLInputElement).value);
+        if (state.decisions[qNo]) {
+          state.decisions[qNo][type] = val;
+        }
+        const valSpan = (slider as HTMLElement).parentElement!.querySelector('.slider-val');
+        if (valSpan) valSpan.textContent = String(val);
+      });
+    });
+  });
+}
+
+function createFollowUpHTML(qNo: number, decision: { choice: string; confidence: number; happiness: number }) {
+  const confLabels = (T.scaleLabels as any).confidence;
+  const happLabels = (T.scaleLabels as any).happiness;
+  
+  return `<div class="followup-q">
+    <div class="followup-label">${T.confidence}</div>
+    <div class="slider-row">
+      <input type="range" min="1" max="7" value="${decision.confidence}" data-q="${qNo}" data-type="confidence">
+      <span class="slider-val">${decision.confidence}</span>
+    </div>
+    <div class="slider-anchors">
+      <span>${confLabels[0]}</span><span>${confLabels[3] || ''}</span><span>${confLabels[6]}</span>
+    </div>
+  </div>
+  <div class="followup-q">
+    <div class="followup-label">${T.happiness}</div>
+    <div class="slider-row">
+      <input type="range" min="1" max="7" value="${decision.happiness}" data-q="${qNo}" data-type="happiness">
+      <span class="slider-val">${decision.happiness}</span>
+    </div>
+    <div class="slider-anchors">
+      <span>${happLabels[0]}</span><span>${happLabels[3] || ''}</span><span>${happLabels[6]}</span>
+    </div>
+  </div>`;
+}
+
+// === Step 5: Open question + Math ===
+function renderFollowUp(container: HTMLElement) {
+  const card1 = document.createElement('div');
+  card1.className = 'survey-card';
+  card1.innerHTML = `
+    <p class="survey-p" style="font-weight:600;margin-bottom:12px">${T.openQuestion}</p>
+    <textarea class="survey-textarea" id="open-text" placeholder="${T.openPlaceholder}">${state.openText}</textarea>
+  `;
+  container.appendChild(card1);
+  
+  const card2 = document.createElement('div');
+  card2.className = 'survey-card';
+  card2.innerHTML = `
+    <p class="survey-p" style="font-weight:600;margin-bottom:12px">${T.mathQuestion}</p>
+    <input class="survey-input" type="number" id="math-input" placeholder="${T.mathPlaceholder}" value="${state.mathAnswer}">
+  `;
+  container.appendChild(card2);
+  
+  appendNav(container, 4, 6);
+  
+  requestAnimationFrame(() => {
+    const openEl = document.getElementById('open-text') as HTMLTextAreaElement;
+    const mathEl = document.getElementById('math-input') as HTMLInputElement;
+    if (openEl) openEl.addEventListener('input', () => { state.openText = openEl.value; });
+    if (mathEl) mathEl.addEventListener('input', () => { state.mathAnswer = mathEl.value; });
+  });
+}
+
+// === Step 6: Demographics ===
+function renderDemographics(container: HTMLElement) {
+  const card = document.createElement('div');
+  card.className = 'survey-card';
+  
+  let html = '';
+  html += createDemoGroup('gender', (demographics as any).gender);
+  html += createDemoGroup('age', (demographics as any).age);
+  html += createDemoGroup('education', (demographics as any).education);
+  html += createDemoGroup('hasChild', (demographics as any).hasChild);
+  
+  card.innerHTML = html;
+  container.appendChild(card);
+  
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'survey-error';
+  errorDiv.id = 'survey-error';
+  errorDiv.textContent = T.required;
+  container.appendChild(errorDiv);
+  
+  const nav = document.createElement('div');
+  nav.className = 'survey-nav';
+  nav.innerHTML = `
+    <button class="survey-btn survey-btn-ghost" id="btn-prev">${T.prev}</button>
+    <button class="survey-btn survey-btn-primary" id="btn-submit">${T.submit}</button>
+  `;
+  container.appendChild(nav);
+  
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.demo-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const key = (opt as HTMLElement).dataset.key!;
+        const val = (opt as HTMLElement).dataset.val!;
+        state.demographics[key] = val;
+        document.querySelectorAll(`.demo-opt[data-key="${key}"]`).forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+      });
+    });
+    
+    Object.keys(state.demographics).forEach(key => {
+      const sel = document.querySelector(`.demo-opt[data-key="${key}"][data-val="${state.demographics[key]}"]`);
+      if (sel) sel.classList.add('selected');
+    });
+    
+    document.getElementById('btn-prev')!.addEventListener('click', () => goTo(5));
+    document.getElementById('btn-submit')!.addEventListener('click', submitSurvey);
+  });
+}
+
+function createDemoGroup(key: string, def: any) {
+  const label = def[lang];
+  const options = def.options[lang];
+  let html = `<div class="demo-group">
+    <div class="demo-label">${label}</div>
+    <div class="demo-options">`;
+  
+  options.forEach((opt: string, idx: number) => {
+    const val = String(idx);
+    html += `<div class="demo-opt" data-key="${key}" data-val="${val}">${opt}</div>`;
+  });
+  
+  html += `</div></div>`;
+  return html;
+}
+
+// === Step 7: Thank you ===
+function renderThanks(container: HTMLElement) {
+  container.innerHTML = `
+    <div class="survey-card" style="padding:48px 24px">
+      <div class="thanks-icon">🎉</div>
+      <div class="thanks-title">${T.thanks}</div>
+      <div class="thanks-msg">${T.thanksMsg}</div>
+    </div>
+  `;
+}
+
+// === Navigation ===
+function appendNav(container: HTMLElement, prevStep: number, nextStep: number) {
+  const nav = document.createElement('div');
+  nav.className = 'survey-nav';
+  
+  let prevBtn = '<div></div>';
+  if (prevStep > 0) {
+    prevBtn = `<button class="survey-btn survey-btn-ghost" id="btn-prev">${T.prev}</button>`;
+  }
+  
+  nav.innerHTML = `
+    ${prevBtn}
+    <button class="survey-btn survey-btn-primary" id="btn-next">${T.next}</button>
+  `;
+  container.appendChild(nav);
+  
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'survey-error';
+  errorDiv.id = 'survey-error';
+  errorDiv.textContent = T.required;
+  container.appendChild(errorDiv);
+  
+  requestAnimationFrame(() => {
+    const prev = document.getElementById('btn-prev');
+    const next = document.getElementById('btn-next');
+    if (prev) prev.addEventListener('click', () => goTo(prevStep));
+    if (next) next.addEventListener('click', () => {
+      if (validateStep(state.step)) {
+        goTo(nextStep);
+      } else {
+        showError();
+      }
+    });
+  });
+}
+
+function goTo(step: number) {
+  state.step = step;
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showError() {
+  const el = document.getElementById('survey-error');
+  if (el) {
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 3000);
+  }
+}
+
+// === Validation ===
+function validateStep(step: number): boolean {
+  switch (step) {
+    case 1: return state.consent;
+    case 2:
+      return panasItems.every((_: string, idx: number) => state.panas[idx] > 0);
+    case 3:
+      return scenarioPages[0].every(s => state.decisions[s.no]?.choice);
+    case 4:
+      return scenarioPages[1].every(s => state.decisions[s.no]?.choice);
+    case 5:
+      return state.mathAnswer !== '' && !isNaN(Number(state.mathAnswer));
+    case 6:
+      return ['gender', 'age', 'education', 'hasChild'].every(k => state.demographics[k] !== undefined);
+    default: return true;
+  }
+}
+
+// === Submit ===
+async function submitSurvey() {
+  if (!validateStep(6)) {
+    showError();
+    return;
+  }
+  
+  const btn = document.getElementById('btn-submit') as HTMLButtonElement;
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = T.submitting;
+  }
+  
+  const durationSec = Math.round((Date.now() - state.startTime) / 1000);
+  
+  const panasPayload: Record<number, number> = {};
+  panasItems.forEach((_: string, idx: number) => {
+    panasPayload[idx] = state.panas[idx] || 1;
+  });
+  
+  const decisionsPayload: Record<number, { choice: string; confidence: number; happiness: number }> = {};
+  Object.keys(state.decisions).forEach(qNoStr => {
+    const qNo = Number(qNoStr);
+    const d = state.decisions[qNo];
+    if (d.choice) {
+      decisionsPayload[qNo] = {
+        choice: d.choice,
+        confidence: d.confidence || 4,
+        happiness: d.happiness || 4,
+      };
+    }
+  });
+  
+  const payload = {
+    session_id: state.sessionId,
+    lang: lang,
+    duration_sec: durationSec,
+    start_time: state.startTime,
+    panas: panasPayload,
+    decisions: decisionsPayload,
+    open_text: state.openText || '',
+    math_answer: parseInt(state.mathAnswer) || 0,
+    demographics: {
+      gender: state.demographics.gender || '',
+      age: state.demographics.age || '',
+      edu: state.demographics.education || '',
+      child: state.demographics.hasChild || '',
+    },
+  };
+  
+  try {
+    const resp = await fetch('/api/survey/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    
+    const data = await resp.json();
+    
+    if (data.success) {
+      goTo(7);
+    } else {
+      throw new Error(data.error || 'Submit failed');
+    }
+  } catch (err) {
+    console.error('Submit error:', err);
+    const errorEl = document.getElementById('survey-error');
+    if (errorEl) {
+      errorEl.textContent = T.error;
+      errorEl.classList.add('show');
+    }
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = T.submit;
+    }
+  }
+}
+</script>
