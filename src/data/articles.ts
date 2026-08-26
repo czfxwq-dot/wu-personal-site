@@ -12,10 +12,20 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'altman-ai-danger-monopoly',
+    date: '2026-08-26',
+    title: '造ChatGPT的人坦言AI很危险，最讽刺的是：他自己就是「危险」本身',
+    titleEn: 'The Man Who Built ChatGPT Says AI Is Dangerous — Ironically, He Is the Danger',
+    excerpt: 'Altman说AI最大的风险是权力集中在少数人手里，但他自己就是那个最大的垄断者。普通人如何破局？',
+    excerptEn: 'Altman says the biggest AI risk is power concentration in few hands — but he himself is the biggest monopolist.',
+    tag: 'AI观点',
+    tagEn: 'AI Insights'
+  },
+  {
     slug: 'weekly-report-2026-08-22',
-    date: '2026-08-25',
-    title: 'weekly-report-2026-08-22',
-    excerpt: '',
+    date: '2026-08-22',
+    title: 'AI周报 | Stripe天价收购OpenRouter，AI基建3万亿债务引警惕',
+    excerpt: '第34周AI行业周报：Stripe超70亿美元收购模型路由平台OpenRouter，AI基建3万亿隐形债务引发警惕，阿里AI收入突破495亿元，百度AI收入占比过半。',
     tag: 'AI产业'
   },
   {
