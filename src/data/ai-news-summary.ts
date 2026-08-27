@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-28",
+  "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，智谱GLM-5.3-Flash开源对标Opus 4.8",
+  "summary": "英伟达正与Hugging Face就收购进行谈判，估值超130亿美元，开源AI社区中立性面临考验；智谱开源GLM-5.3-Flash（320B-A18B），以1/40定价达到Opus 4.8水平；标普预测2027年AI基础设施投资将超1.3万亿美元；ChronoScale与微软合作部署50兆瓦AI算力；AWS收购DuckDB团队DuckLabs，开源数据库格局生变。",
+  "newsItems": [
+    {
+      "title": "英伟达130亿美元收购Hugging Face，开源AI中立社区或沦陷",
+      "summary": "据Business Insider独家报道，英伟达正与Hugging Face就收购进行谈判，估值超130亿美元，将是英伟达史上最大收购之一。值得注意的是，Hugging Face去年刚拒绝英伟达5亿美元投资（当时估值70亿），从拒绝投资到整体收购，开源AI社区的中立性面临重大考验。",
+      "source": "开源中国",
+      "category": "AI产业",
+      "url": "https://www.oschina.net/news/502149/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars"
+    },
+    {
+      "title": "智谱开源GLM-5.3-Flash：320B参数对标Opus 4.8，定价仅1/40",
+      "summary": "智谱正式上线并开源GLM-5.3-Flash（320B-A18B），320B总参数、18B激活参数，性能达到Claude Opus 4.8水平，定价仅为同类产品的1/40，挑战\"前沿智能=贵\"的行业认知。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net/news/502144"
+    },
+    {
+      "title": "标普：到2027年AI基础设施投资将超1.3万亿美元",
+      "summary": "标普全球最新预测，到2027年全球人工智能基础设施投资将超过1.3万亿美元，反映AI产业从试验阶段向大规模商业化转型的加速趋势。",
+      "source": "36氪",
+      "category": "AI产业",
+      "url": "https://www.36kr.com/newsflashes/3957724701179272"
+    },
+    {
+      "title": "ChronoScale与微软合作在北美部署50兆瓦AI算力",
+      "summary": "AI算力平台ChronoScale宣布与微软合作，计划在北美部署50兆瓦AI算力，采用英伟达GB300 NVL72系统及液冷基础设施，进一步扩大北美AI算力供给。",
+      "source": "36氪",
+      "category": "AI算力",
+      "url": "https://www.36kr.com/newsflashes/3957725185129602"
+    },
+    {
+      "title": "AWS收购DuckLabs：DuckDB开源数据库格局生变",
+      "summary": "AWS宣布收购DuckDB背后的DuckLabs团队。DuckLabs在宣布收购同一篇文章中详细解释\"什么不会变\"，DuckDB将继续保持开源。这是继Red Hat、GitHub之后，又一家重要开源团队被巨头收编。",
+      "source": "开源中国",
+      "category": "开源",
+      "url": "https://www.oschina.net/news/502150/ducklabs-to-join-aws"
+    }
+  ],
+  "comment": "英伟达130亿美元要买下Hugging Face，开源AI的中立阵地正在被逐一攻克；智谱用1/40的价格打到Opus水平——前沿智能的价格战已经打响。"
+},
+{
   "date": "2026-08-27",
   "title": "AI新闻 | 阿里Qwen3.8-Flash开源超越Claude Opus4.6，黄仁勋宣布AI进入变现时代",
   "summary": "阿里发布并开源千问Qwen3.8-Flash，千亿参数仅激活6B即超越Claude Opus4.6，创模型效率新基准；英伟达黄仁勋在财报会上宣布AI已迈过商业化拐点，全球产业进入变现时代，半年报净利润同比增长161%；DeepSeek前七个月营收约4.75亿元，第二轮融资估值5000亿；人形机器人百米8.64秒再破纪录；AI基础模型出现新分叉，开始直接学习物理世界。",
