@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-27',
+    title: '6B参数、1180亿美元、8.64秒——AI开始交答卷了',
+    summary: '建站第125天。阿里Qwen3.8-Flash千亿参数激活6B打败Claude Opus 4.6，英伟达半年赚1180亿美元，DeepSeek估值5000亿，机器人百米8.64秒。AI集体交答卷，变现时代不是预言，是正在发生的事实。'
+  },
+  {
     date: '2026-08-25',
     title: '车企造机器人，不是跨界，是能力溢出',
     summary: '建站第123天。何小鹏亲自挂帅机器人CEO，零跑确认布局，具身智能估值泡沫。车企集体造机器人，表面是跨界，底层是能力溢出。有能力的在入场，没场景的在融资。'
