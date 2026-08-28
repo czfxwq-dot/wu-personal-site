@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-29",
+  "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，国内大模型密集更新",
+  "summary": "今日AI圈重磅消息：英伟达拟130亿美元收购开源AI平台Hugging Face，将创下其史上最大收购纪录。国内大模型方面，腾讯混元Hy4、阿里Qwen3.8-Flash、智谱GLM-5.3-Flash同日发布，均主打高性价比和开源策略。AI硬件领域，优必选人形机器人收入暴增1445%，显示商业化加速。",
+  "newsItems": [
+    {
+      "title": "英伟达130亿美元收购Hugging Face，开源AI生态格局生变",
+      "summary": "英伟达正与Hugging Face就收购进行谈判，估值超过130亿美元，这将是英伟达有史以来最大的一笔收购。Hugging Face是开源AI生态的中央枢纽，托管了数百万个AI模型和数据集。去年Hugging Face曾拒绝英伟达5亿美元投资，当时估值仅70亿美元。",
+      "source": "开源中国",
+      "category": "AI行业",
+      "url": "https://www.oschina.net/news/502149/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars"
+    },
+    {
+      "title": "腾讯混元发布Hy4 preview：7.7B参数、1M上下文，开源并接入游戏引擎",
+      "summary": "腾讯混元发布Hy4 preview，总参数7.7B，激活参数4.9B，上下文长度1M。模型已在HuggingFace、GitHub等平台开源。最大亮点是接入Unreal 5引擎，可通过纯对话生成射击游戏Demo，展示\"模型即agent\"的落地场景。",
+      "source": "开源中国",
+      "category": "AI大模型",
+      "url": "https://www.oschina.net/news/502183"
+    },
+    {
+      "title": "阿里发布Qwen3.8-Flash：125B MoE架构，训练成本仅前代1/9",
+      "summary": "阿里通义千问团队发布Qwen3.8-Flash，125B总参数，每token只激活6B参数。原生支持262K上下文，可通过YaRN扩展到1M。相比Qwen3.7-Plus，训练开销仅为其1/9，编码和办公任务上能力更强。采用Gated DeltaNet和Qwen Sparse Attention混合架构。",
+      "source": "开源中国",
+      "category": "AI大模型",
+      "url": "https://www.oschina.net/news/502145/qwen3-8-flash-next"
+    },
+    {
+      "title": "智谱开源GLM-5.3-Flash：320B模型达到Opus 4.8水平，定价仅1/40",
+      "summary": "智谱开源GLM-5.3-Flash（320B-A18B），在Artificial Analysis综合智能指数中拿到57分，与Claude Opus 4.8持平。定价为GLM-5.3的1/10，限时折扣内为1/20，是Opus 4.8的1/40，挑战\"前沿智能=昂贵\"的假设。",
+      "source": "开源中国",
+      "category": "AI大模型",
+      "url": "https://www.oschina.net/news/502144"
+    },
+    {
+      "title": "优必选上半年营收12.7亿元，人形机器人收入同比增长1445%",
+      "summary": "优必选发布2026年中期业绩：营收12.7亿元，同比增长104.2%；人形机器人销量16123台，同比增长268.3%；全尺寸具身智能人形机器人收入5.9亿元，同比增长1445%。经调整EBITDA同比减亏45.9%，显示AI硬件商业化加速。",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://www.36kr.com/newsflashes/3959176160099714"
+    }
+  ],
+  "comment": "开源AI平台被巨头收编引发行业思考，国内大模型厂商则在性价比赛道上持续内卷。"
+},
+{
   "date": "2026-08-28",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，智谱GLM-5.3-Flash开源对标Opus 4.8",
   "summary": "英伟达正与Hugging Face就收购进行谈判，估值超130亿美元，开源AI社区中立性面临考验；智谱开源GLM-5.3-Flash（320B-A18B），以1/40定价达到Opus 4.8水平；标普预测2027年AI基础设施投资将超1.3万亿美元；ChronoScale与微软合作部署50兆瓦AI算力；AWS收购DuckDB团队DuckLabs，开源数据库格局生变。",
