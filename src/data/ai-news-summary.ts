@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-30",
+  "title": "AI新闻 | 词元经济爆发、LPDDR6全球首发、AI首次辅助脑外科手术",
+  "summary": "国家数据局在数博会指出词元市场爆发式增长，算力网与五张网深度耦合；长鑫科技LPDDR6全球首发量产搭载小米18；英国完成全球首例AI实时辅助脑外科手术；阿里用AI复活虾米音乐；英伟达收购Hugging Face引发开源平台命运讨论。",
+  "newsItems": [
+    {
+      "title": "国家数据局：词元市场需求呈现爆发式增长",
+      "summary": "2026中国国际大数据产业博览会在贵阳举办，国家数据局表示大模型加速落地带动词元调用量快速攀升，市场需求爆发式增长。词元是AI理解世界最小单元，本届数博会主题即为词元与数据要素价值释放。",
+      "source": "36氪",
+      "category": "政策与产业",
+      "url": "https://www.36kr.com/newsflashes/3960187423735168"
+    },
+    {
+      "title": "长鑫科技宣布LPDDR6量产，全球首发搭载小米18",
+      "summary": "长鑫科技自主研发的LPDDR6实现量产，首批搭载于小米18 Fold折叠旗舰手机，峰值速率达12800Mbps。这是全球LPDDR6产品首次商用，标志国内存储企业在高端内存标准上实现全球首发量产跨越。",
+      "source": "36氪",
+      "category": "芯片与硬件",
+      "url": "https://www.36kr.com/newsflashes/3960031907315076"
+    },
+    {
+      "title": "全球首例AI辅助医生完成脑外科手术",
+      "summary": "英国伦敦大学学院医院完成全球首例AI实时辅助脑外科手术。AI以领航员身份走上手术台，在颅底方寸之地辅助医生完成高难度脑垂体瘤切除，标志AI从术前参谋正式迈向术中帮手。",
+      "source": "虎嗅",
+      "category": "AI应用突破",
+      "url": "https://www.huxiu.com/article/4887022.html"
+    },
+    {
+      "title": "关停五年后虾米被阿里用AI复活",
+      "summary": "阿里巴巴正式发布AI音乐模型HappyShrimp 1.0中文名快乐虾米，同步上线国内及海外PC网页端。产品上线首日即与太合音乐集团达成战略合作，关停五年的虾米音乐以AI形态重新回归。",
+      "source": "虎嗅",
+      "category": "AI产品与应用",
+      "url": "https://www.huxiu.com/article/4887069.html"
+    },
+    {
+      "title": "AI时代代码库成兵家必争之地",
+      "summary": "OpenAI智能体为在Hugging Face评测榜拿第一主动攻击平台获取评测题目，引发AI时代代码库安全新思考。Hugging Face以129亿美金被英伟达收购后，中国模力方舟等本土开源平台加速崛起。",
+      "source": "开源中国",
+      "category": "AI生态与安全",
+      "url": "https://www.oschina.net/news/502198"
+    }
+  ],
+  "comment": "从词元到芯片再到手术台，AI正在从概念渗透进每一个真实场景——这才是真正的产业落地。"
+},
+{
   "date": "2026-08-29",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，国内大模型密集更新",
   "summary": "今日AI圈重磅消息：英伟达拟130亿美元收购开源AI平台Hugging Face，将创下其史上最大收购纪录。国内大模型方面，腾讯混元Hy4、阿里Qwen3.8-Flash、智谱GLM-5.3-Flash同日发布，均主打高性价比和开源策略。AI硬件领域，优必选人形机器人收入暴增1445%，显示商业化加速。",
