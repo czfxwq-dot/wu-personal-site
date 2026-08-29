@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-29',
+    title: '7.7B、1445%、1/9——AI走出聊天框',
+    summary: '建站第127天。腾讯混元Hy4接入虚幻引擎5，优必选人形机器人收入暴增1445%，阿里Qwen3.8-Flash训练成本降到前代1/9。AI不再只聊天，它开始找活干了。'
+  },
+  {
     date: '2026-08-28',
     title: '130亿美元买下开源，1/40价格打前沿——AI的围墙与利刃',
     summary: '建站第126天。英伟达130亿美元收购Hugging Face，AWS收编DuckDB团队，智谱用1/40价格打到Opus水平，标普预测2027年AI基建投资超1.3万亿。开源中立时代正在终结，价格战已经打响。'
