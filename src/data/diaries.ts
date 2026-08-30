@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-08-30',
+    title: '词元、129亿和手术台',
+    summary: '建站第128天。国家数据局说词元经济爆发，长鑫LPDDR6全球首发量产，英国完成首例AI辅助脑外科手术，阿里用AI复活虾米，英伟达129亿美元买下Hugging Face。AI不再只是概念，它正在变成基础设施。'
+  },
+  {
     date: '2026-08-29',
     title: '7.7B、1445%、1/9——AI走出聊天框',
     summary: '建站第127天。腾讯混元Hy4接入虚幻引擎5，优必选人形机器人收入暴增1445%，阿里Qwen3.8-Flash训练成本降到前代1/9。AI不再只聊天，它开始找活干了。'
