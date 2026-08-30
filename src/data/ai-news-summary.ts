@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-08-31",
+  "title": "AI新闻 | 微软紧缩AI预算、腾讯混元Hy4发布、Meta测试数据中心机器人",
+  "summary": "微软开始紧缩员工AI Token用量，有员工28天挥霍2.8万美元；腾讯混元发布Hy4 preview，总参数770B、支持1M上下文；Meta正测试数据中心运维机器人；全球液冷赛道加速升温，多家企业订单排到年底；魔宋科技探索有“活人感”的AI Agent。",
+  "newsItems": [
+    {
+      "title": "微软紧缩员工AI预算，有员工28天挥霍2.8万美元Token",
+      "summary": "微软已开始紧缩Token使用管理，官方设置Token用量监控，并将内部默认工作负载切换至GPT-5.6 Sol以降低AI成本。据报道，有员工28天内消耗了2.8万美元的Token费用，暴露出大企业AI工具管理的漏洞。",
+      "source": "IT之家",
+      "category": "AI行业动态",
+      "url": "https://www.ithome.com"
+    },
+    {
+      "title": "腾讯混元发布Hy4 preview：总参数770B、1M上下文，开源并接入游戏引擎和MCP",
+      "summary": "腾讯混元发布Hy4 preview，总参数770B，激活参数4.9B，上下文长度1M，在代码、办公、科学等生产力任务上达到开源模型第一梯队。模型已在HuggingFace、GitHub等平台开源，并接入游戏引擎和MCP协议。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net"
+    },
+    {
+      "title": "Meta正测试数据中心机器人，可完成插拔线缆、重启服务器等运维工作",
+      "summary": "据Wired报道，Meta正在测试能够在数据中心内插接线缆、重启服务器以及执行其他任务的机器人。这项工作未来可能让Meta以更少的人工干预运营大规模AI基础设施。",
+      "source": "IT之家",
+      "category": "AI硬件与基础设施",
+      "url": "https://www.ithome.com"
+    },
+    {
+      "title": "订单排到年底，全球液冷赛道加速升温",
+      "summary": "全球AI硬件功耗持续攀升，传统风冷散热瓶颈凸显。随着新建智算中心加速落地、传统机房风冷改液冷需求集中释放，液冷产业迎来爆发增长期，多家液冷企业订单排至年底。全浸没式液冷成为高功率算力芯片散热的关键解决方案。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com"
+    },
+    {
+      "title": "魔宋科技寻找有“活人感”的Agent作品，给AI以“情感”",
+      "summary": "大模型技术普及到今天，AI应用的交互形态反而显得缺少“人情味”。魔宋科技正在探索赋予AI“情感”能力，打造有形象、有表情、有肢体表达的Agent产品，应用于展厅讲解、情感陪伴、教育科普等场景。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net"
+    }
+  ],
+  "comment": "当AI的成本管控、硬件散热和情感交互都成为课题时，说明行业正从“能用”走向“好用”——这才是真正的成熟。"
+},
+{
   "date": "2026-08-30",
   "title": "AI新闻 | 词元经济爆发、LPDDR6全球首发、AI首次辅助脑外科手术",
   "summary": "国家数据局在数博会指出词元市场爆发式增长，算力网与五张网深度耦合；长鑫科技LPDDR6全球首发量产搭载小米18；英国完成全球首例AI实时辅助脑外科手术；阿里用AI复活虾米音乐；英伟达收购Hugging Face引发开源平台命运讨论。",
