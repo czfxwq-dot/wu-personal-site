@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-01",
+  "title": "AI新闻 | OpenAI广告收入破10亿、国家AI基金注资可灵14亿、长鑫试产HBM3E",
+  "summary": "OpenAI广告年化收入突破10亿美元，为IPO铺路；国家人工智能基金向快手可灵注入14亿元，国内AI投资持续火热；长鑫存储启动HBM3E试产，国产存储芯片迈出关键一步；英伟达与联发科深化合作并投资35亿美元；英伟达129亿美元收购Hugging Face引发开源生态大讨论。",
+  "newsItems": [
+    {
+      "title": "OpenAI：ChatGPT广告年化收入运行率已达10亿美元",
+      "summary": "OpenAI宣布其广告业务年化收入运行率已达10亿美元（约合67亿元人民币），将此视为多元化商业模式成效的证明，同时为预计规模庞大的IPO做准备。",
+      "source": "IT之家",
+      "category": "AI商业化",
+      "url": "https://www.ithome.com/0/996/653.htm"
+    },
+    {
+      "title": "国家人工智能基金向快手可灵注入14亿元",
+      "summary": "快手公告称北京可灵分别获得国家人工智能基金14亿元及正大机器人约1.31亿元注资，两者均获回购权。国家AI基金持续加码国内头部AI应用。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "url": "https://www.ithome.com/0/996/663.htm"
+    },
+    {
+      "title": "长鑫存储开始试产HBM3E内存，有望数周内大规模量产",
+      "summary": "据The Information报道，长鑫存储已启动HBM3E内存风险试产，计划年底DRAM月产能达35万片晶圆。这标志着国产HBM芯片取得关键突破。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "url": "https://www.ithome.com/0/996/670.htm"
+    },
+    {
+      "title": "联发科将基于英伟达NVLink Fusion开发定制XPU，英伟达投资35亿美元",
+      "summary": "英伟达与联发科宣布深化合作，联发科将采用NVLink Fusion平台开发定制XPU芯片，英伟达同时向联发科发行35亿美元可转换公司债。双方还将合作开发未来数代RTX Spark/DGX Spark芯片。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/0/996/645.htm"
+    },
+    {
+      "title": "英伟达129亿美元收购Hugging Face引发开源平台价值重估",
+      "summary": "英伟达拟以129亿美元收购全球最大AI开源社区Hugging Face，开源中国CEO徐勇与天际资本创始人张倩就此展开深度对谈，探讨开源平台的商业价值、独立运营路径及AI时代代码库的战略意义。",
+      "source": "开源中国",
+      "category": "AI开源生态",
+      "url": "https://www.oschina.net/news/502227"
+    }
+  ],
+  "comment": "AI商业化加速——从广告变现到国家级注资，从芯片国产化到开源平台被巨头收编，2026年的AI产业正在全面进入「资本+基础设施」双轮驱动时代。"
+},
+{
   "date": "2026-08-31",
   "title": "AI新闻 | 微软紧缩AI预算、腾讯混元Hy4发布、Meta测试数据中心机器人",
   "summary": "微软开始紧缩员工AI Token用量，有员工28天挥霍2.8万美元；腾讯混元发布Hy4 preview，总参数770B、支持1M上下文；Meta正测试数据中心运维机器人；全球液冷赛道加速升温，多家企业订单排到年底；魔宋科技探索有“活人感”的AI Agent。",
