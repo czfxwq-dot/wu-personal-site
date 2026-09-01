@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-02",
+  "title": "AI新闻 | 三星HBM5战略发布、SpaceX数据中心遇阻、戴尔利润暴增256%",
+  "summary": "三星公布HBM5下一代存储器战略，性能目标为HBM4E两倍，并锁定70%产能至2031年；SpaceX数据中心因工程和稳定性问题更换多名高管；戴尔半年报净利润同比增长256%，AI服务器需求强劲；软银支持的SB Energy提交IPO文件拟募资50-70亿美元；英伟达支持的OneRail推出AI物流平台，配送决策从20分钟缩至2.5分钟。",
+  "newsItems": [
+    {
+      "title": "三星公布下一代存储器战略：HBM5性能目标提升至HBM4E两倍",
+      "summary": "三星电子公布HBM5下一代存储器战略，目标相比HBM4E性能提升2倍、每瓦性能提升20%，热阻降低20%。面向更远的zHBM，三星计划性能提升8倍、每瓦性能提升3倍，热阻降低75%-90%，以满足AI芯片对高性能和低功耗的需求。",
+      "source": "36氪",
+      "category": "AI芯片",
+      "url": "https://www.36kr.com/newsflashes/3964764714949890"
+    },
+    {
+      "title": "消息称SpaceX数据中心出现工程问题，马斯克换掉多名建设团队高管",
+      "summary": "据The Information报道，SpaceXAI位于田纳西州和密西西比州的数据中心持续出现可靠性挑战。为快速推进建设，部分设施运行数月后仍未配备备用冷却和供电系统。马斯克已在最近数周内重新调整数据中心建设团队并替换多名高管。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/0/997/184.htm"
+    },
+    {
+      "title": "戴尔2027财年半年报归母净利润75.71亿美元，同比增长256%",
+      "summary": "戴尔发布2027财年半年报，营业总收入908.13亿美元同比增长71%，归母净利润75.71亿美元同比增长256%。AI服务器需求持续推动业绩大幅增长，毛利率达19.4%。",
+      "source": "IT之家",
+      "category": "AI服务器",
+      "url": "https://www.ithome.com/0/997/191.htm"
+    },
+    {
+      "title": "SB Energy递交IPO文件，获英伟达支持拟募资50-70亿美元",
+      "summary": "软银投资的AI基础设施平台SB Energy已向监管机构提交注册文件，计划于纳斯达克上市。本次IPO目标募资规模为50-70亿美元，发行股份数量与定价暂未确定。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/newsflashes/3964826551541254"
+    },
+    {
+      "title": "OneRail联合英伟达推出AI物流平台，配送决策从20分钟缩至2.5分钟",
+      "summary": "物流企业OneRail依托英伟达AI软件和专有数据推出OmniStar平台，帮助零售商大规模快速选定最高效配送方案。以往为包裹选定最优配送路线需20分钟，借助AI仅需2分30秒。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/3964763740593415"
+    }
+  ],
+  "comment": "AI基础设施竞赛进入深水区：三星押注HBM、软银砸钱建算力、SpaceX却因赶工翻车——速度与质量的平衡才是长期胜负手。"
+},
+{
   "date": "2026-09-01",
   "title": "AI新闻 | OpenAI广告收入破10亿、国家AI基金注资可灵14亿、长鑫试产HBM3E",
   "summary": "OpenAI广告年化收入突破10亿美元，为IPO铺路；国家人工智能基金向快手可灵注入14亿元，国内AI投资持续火热；长鑫存储启动HBM3E试产，国产存储芯片迈出关键一步；英伟达与联发科深化合作并投资35亿美元；英伟达129亿美元收购Hugging Face引发开源生态大讨论。",
