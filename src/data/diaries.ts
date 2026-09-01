@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-01',
+    title: '能自己赚钱的行业，才配叫产业',
+    summary: '建站第130天。OpenAI广告年入10亿、国家基金砸14亿给可灵、长鑫HBM3E试产、129亿美元收购Hugging Face——AI的钱开始自己转了。'
+  },
+  {
     date: '2026-08-30',
     title: '词元、129亿和手术台',
     summary: '建站第128天。国家数据局说词元经济爆发，长鑫LPDDR6全球首发量产，英国完成首例AI辅助脑外科手术，阿里用AI复活虾米，英伟达129亿美元买下Hugging Face。AI不再只是概念，它正在变成基础设施。'
