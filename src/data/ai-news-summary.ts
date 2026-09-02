@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-03",
+  "title": "AI新闻 | Kimi启动港股IPO、World Labs发布Atlas、CrowdStrike联手OpenAI",
+  "summary": "月之暗面Kimi正式启动港股IPO，以500亿美元估值推进最后一轮融资；李飞飞World Labs发布Atlas多模态空间智能模型，从照片重建3D世界；CrowdStrike与OpenAI扩大合作，将GPT-5.6引入安全平台；谷歌拆解退役服务器DDR4内存重新部署至AI服务器；本土AI芯片半年报亮眼，智能算力规模达2185EFLOPS。",
+  "newsItems": [
+    {
+      "title": "Kimi启动港股IPO，月之暗面以500亿美元估值推进最后融资",
+      "summary": "据晚点报道，月之暗面已以保密形式向港交所递交A1文件，正式启动港股IPO流程。同时以500亿美元投前估值推进新一轮融资，这很可能是Kimi上市前的最后一轮私募。",
+      "source": "虎嗅",
+      "category": "AI商业化",
+      "url": "https://www.huxiu.com/article/4888116.html"
+    },
+    {
+      "title": "李飞飞World Labs发布Atlas：从几张照片重建3D世界",
+      "summary": "World Labs发布Atlas多模态空间智能大模型，从零预训练。给它几张照片可生成任意角度视频，给手机视频可重建完整3D场景，让机器人在其中模拟导航。",
+      "source": "开源中国",
+      "category": "AI前沿技术",
+      "url": "https://www.oschina.net/news/502277/worldlabs-ai-atlas"
+    },
+    {
+      "title": "CrowdStrike与OpenAI扩大合作，将GPT-5.6 Cyber引入Falcon平台",
+      "summary": "CrowdStrike宣布与OpenAI扩大合作，将企业安全防护能力延伸至Codex智能体，并将OpenAI的GPT-5.6 Cyber引入Falcon平台，强化AI驱动的安全防护。",
+      "source": "36氪",
+      "category": "AI安全",
+      "url": "https://www.36kr.com/newsflashes/3966237774929160"
+    },
+    {
+      "title": "谷歌拆解退役服务器DDR4内存，重新部署至新型AI服务器",
+      "summary": "DRAM供应持续吃紧，谷歌创新性地拆解退役服务器的DDR4内存模组，重新部署至新型AI服务器，以应对AI算力扩张带来的内存资源紧缺。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/0/997/687.htm"
+    },
+    {
+      "title": "本土AI芯片半年报亮眼，中国智能算力规模达2185EFLOPS",
+      "summary": "算力紧缺环境下，本土AI芯片迎来最好增长期，多家厂商实现同比翻倍甚至数倍增长。据工信部数据，截至上半年中国智能算力规模达2185EFLOPS，对应本土算力建设飞速增长。",
+      "source": "虎嗅",
+      "category": "AI芯片",
+      "url": "https://www.huxiu.com/article/4888109.html"
+    }
+  ],
+  "comment": "AI产业两极分化加剧：头部公司冲刺IPO估值500亿美元，底层基础设施却在拆解旧服务器——技术前沿与资源约束并存，考验真正的创新力。"
+},
+{
   "date": "2026-09-02",
   "title": "AI新闻 | 三星HBM5战略发布、SpaceX数据中心遇阻、戴尔利润暴增256%",
   "summary": "三星公布HBM5下一代存储器战略，性能目标为HBM4E两倍，并锁定70%产能至2031年；SpaceX数据中心因工程和稳定性问题更换多名高管；戴尔半年报净利润同比增长256%，AI服务器需求强劲；软银支持的SB Energy提交IPO文件拟募资50-70亿美元；英伟达支持的OneRail推出AI物流平台，配送决策从20分钟缩至2.5分钟。",
