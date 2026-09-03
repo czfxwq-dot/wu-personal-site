@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-04",
+  "title": "AI新闻 | OpenAI投10亿美元AI网络安全、MiniMax为沙特开发阿语模型、阿里Agent平台上线",
+  "summary": "OpenAI宣布投入10亿美元扩大AI网络安全能力，优先覆盖供水、电力等关键基础设施；沙特HUMAIN发布前沿阿语模型humain-m3，由MiniMax受托开发；阿里上线企业级Agent平台“万有无界”；小红书清理AI虚假探店内容近12万条；Transformer架构瓶颈日益凸显，四大技术路线寻求突围。",
+  "newsItems": [
+    {
+      "title": "OpenAI宣布投入10亿美元扩大AI网络安全能力",
+      "summary": "OpenAI推出Daybreak for Frontline Defenders计划，承诺投入10亿美元，为资源有限的网络安全防御团队提供工具，优先覆盖供水、电力等关键基础设施。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "url": "https://www.ithome.com"
+    },
+    {
+      "title": "沙特HUMAIN发布前沿阿语模型humain-m3，MiniMax受托开发",
+      "summary": "沙特主权财富基金PIF旗下AI企业HUMAIN发布前沿阿拉伯语模型humain-m3，由国内大模型公司MiniMax受托开发，标志着中国AI技术出海进入新阶段。",
+      "source": "IT之家",
+      "category": "AI模型",
+      "url": "https://www.ithome.com"
+    },
+    {
+      "title": "阿里上线企业级Agent平台“万有无界”",
+      "summary": "阿里云上线企业级“人与Agent协作平台”万有无界，复杂任务可拆给多个Agent，人和Agent共同参与项目，过程和结果沉淀进企业账户。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com"
+    },
+    {
+      "title": "小红书清理AI虚假探店内容近12万条",
+      "summary": "小红书发布《关于AI制作医美、民宿等虚假内容治理公告》，今年6-8月清理AI制作发布虚假内容近12万条，将AI虚假内容治理纳入常态化运营。",
+      "source": "IT之家",
+      "category": "AI监管",
+      "url": "https://www.ithome.com"
+    },
+    {
+      "title": "Transformer架构瓶颈日益凸显，四大技术路线寻求突围",
+      "summary": "自2017年Transformer诞生以来，其架构瓶颈日益凸显，四大技术路线正在寻求突围，争夺下一轮AI风口。",
+      "source": "虎嗅",
+      "category": "AI前沿技术",
+      "url": "https://www.huxiu.com"
+    }
+  ],
+  "comment": "AI安全投入升级、中国AI出海加速、Agent平台竞赛白热化，行业正从“卷模型”走向“卷落地”。"
+},
+{
   "date": "2026-09-03",
   "title": "AI新闻 | Kimi启动港股IPO、World Labs发布Atlas、CrowdStrike联手OpenAI",
   "summary": "月之暗面Kimi正式启动港股IPO，以500亿美元估值推进最后一轮融资；李飞飞World Labs发布Atlas多模态空间智能模型，从照片重建3D世界；CrowdStrike与OpenAI扩大合作，将GPT-5.6引入安全平台；谷歌拆解退役服务器DDR4内存重新部署至AI服务器；本土AI芯片半年报亮眼，智能算力规模达2185EFLOPS。",
