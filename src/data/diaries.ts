@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-03',
+    title: '500亿美元、几张照片和拆旧服务器——AI的两极',
+    summary: '建站第132天。Kimi以500亿美元估值启动港股IPO，李飞飞World Labs发布Atlas从照片重建3D世界，CrowdStrike将GPT-5.6引入安全平台，谷歌却在拆解退役服务器的DDR4内存。AI的天花板在拉高，地板也在补洞。'
+  },
+  {
     date: '2026-09-01',
     title: '能自己赚钱的行业，才配叫产业',
     summary: '建站第130天。OpenAI广告年入10亿、国家基金砸14亿给可灵、长鑫HBM3E试产、129亿美元收购Hugging Face——AI的钱开始自己转了。'
