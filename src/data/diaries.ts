@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-04',
+    title: '10亿美元、12万条和9年前的架构——AI开始卷落地了',
+    summary: '建站第133天。OpenAI投10亿美元做AI网络安全，MiniMax为沙特开发阿语模型，阿里上线企业级Agent平台，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷模型走向卷落地。'
+  },
+  {
     date: '2026-09-03',
     title: '500亿美元、几张照片和拆旧服务器——AI的两极',
     summary: '建站第132天。Kimi以500亿美元估值启动港股IPO，李飞飞World Labs发布Atlas从照片重建3D世界，CrowdStrike将GPT-5.6引入安全平台，谷歌却在拆解退役服务器的DDR4内存。AI的天花板在拉高，地板也在补洞。'
