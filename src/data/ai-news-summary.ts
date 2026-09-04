@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-05",
+  "title": "AI新闻 | 月之暗面港股IPO募资50亿美元、沙特发布MiniMax开发阿语大模型、AI助推全球造富",
+  "summary": "月之暗面计划今年在港IPO，寻求募资至多50亿美元；沙特HUMAIN发布由MiniMax开发的前沿阿语大模型humain-m3；AI热潮助推2025年全球亿万富翁财富达15.1万亿美元；龙版传媒澄清AI视频业务营收占比不足0.01%；国务院国资委强调央企聚焦前沿技术攻关加快技术迭代。",
+  "newsItems": [
+    {
+      "title": "月之暗面据悉计划今年在香港进行IPO，寻求募资至多50亿美元",
+      "summary": "据财联社报道，月之暗面Kimi计划今年在香港进行IPO，寻求募资至多50亿美元，此前已以500亿美元投前估值推进融资。",
+      "source": "36氪",
+      "category": "AI商业化",
+      "url": "https://www.36kr.com/newsflashes/3969015988957448"
+    },
+    {
+      "title": "沙特人工智能公司推出由MiniMax开发的前沿阿拉伯语大模型",
+      "summary": "沙特胡迈因公司发布humain-m3大模型，基于MiniMax M3打造，拥有4280亿参数，使用超1万亿阿拉伯语原生词元预训练，在7项公开阿语基准测试中取得平均分最高。",
+      "source": "36氪",
+      "category": "AI模型",
+      "url": "https://www.36kr.com/newsflashes/3969048191480320"
+    },
+    {
+      "title": "AI热潮助推全球亿万富翁财富达15.1万亿美元创纪录",
+      "summary": "财富研究机构Alata报告称，AI热潮强力助推全球造富，2025年全球亿万富翁数量达3795人创历史新高，合计总财富大涨12.8%至15.1万亿美元。",
+      "source": "36氪",
+      "category": "AI产业",
+      "url": "https://www.36kr.com/newsflashes/3969070463906051"
+    },
+    {
+      "title": "龙版传媒澄清AI视频业务对业绩无显著影响",
+      "summary": "龙版传媒股票连续5日涨停后公告，AI视频业务6月营收约80元、7月约7.5万元，占营收不足0.01%，上半年归母净利润同比下降34.46%，可能存在非理性炒作。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/newsflashes/3969036678361347"
+    },
+    {
+      "title": "国务院国资委：央企聚焦前沿技术强化攻关，加快技术迭代",
+      "summary": "国务院国资委举办央企行业共性技术研究院座谈会，强调聚焦行业发展、市场需求、前沿技术强化应用基础研究攻关，依托行业应用场景加快技术迭代。",
+      "source": "36氪",
+      "category": "AI政策",
+      "url": "https://www.36kr.com/newsflashes/3969067939131655"
+    }
+  ],
+  "comment": "月之暗面IPO、中国AI出海中东、AI造富效应凸显——资本市场与产业落地双轮驱动，AI行业进入价值验证期。"
+},
+{
   "date": "2026-09-04",
   "title": "AI新闻 | OpenAI投10亿美元AI网络安全、MiniMax为沙特开发阿语模型、阿里Agent平台上线",
   "summary": "OpenAI宣布投入10亿美元扩大AI网络安全能力，优先覆盖供水、电力等关键基础设施；沙特HUMAIN发布前沿阿语模型humain-m3，由MiniMax受托开发；阿里上线企业级Agent平台“万有无界”；小红书清理AI虚假探店内容近12万条；Transformer架构瓶颈日益凸显，四大技术路线寻求突围。",
