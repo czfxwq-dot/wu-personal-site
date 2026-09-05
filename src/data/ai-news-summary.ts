@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-06",
+  "title": "AI新闻 | OpenAI对齐披露扩围、报纸起诉版权侵权、小米发布TabLDM、G42芯片博弈、大模型天猫开店",
+  "summary": "OpenAI宣布将扩大对齐失范事件披露范围并搭建框架；《西雅图时报》等起诉OpenAI和微软侵犯版权；小米发布通用表格数据基础大模型Xiaomi-TabLDM；阿布扎比G42考虑引入美国资本控股以保障AI芯片供应；Kimi、MiniMax等即将在天猫开设旗舰店开售Token套餐。",
+  "newsItems": [
+    {
+      "title": "OpenAI称需要扩大对齐失范事件的披露范围",
+      "summary": "OpenAI表示针对模型能力发展新阶段，需要扩大对齐失范事件的披露范围，正在搭建相关框架并将在未来数周对外公布，同时与全球数十家政府监管机构开展协作。",
+      "source": "36氪",
+      "category": "AI安全",
+      "url": "https://www.36kr.com/newsflashes/3970189273248260"
+    },
+    {
+      "title": "《西雅图时报》和《新闻日报》起诉OpenAI和微软侵犯版权",
+      "summary": "两家报纸指控OpenAI和微软未经许可擅自复制新闻报道内容用于训练AI系统，其AI产品能复制段落、概括文章并降低用户订阅需求，正寻求法院命令销毁副本及训练数据集。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/newsflashes/3970187296141832"
+    },
+    {
+      "title": "小米发布结构化数据大模型Xiaomi-TabLDM",
+      "summary": "小米正式发布Xiaomi-TabLDM通用表格数据基础大模型，以单一预训练模型统一适配不同表格数据集，无需针对每个任务重新训练调参，即可完成分类与回归预测。",
+      "source": "36氪",
+      "category": "AI模型",
+      "url": "https://www.36kr.com/newsflashes/3970039177359622"
+    },
+    {
+      "title": "阿布扎比G42考虑引入美国资本控股以保障AI芯片获取",
+      "summary": "阿布扎比AI企业G42高管正探讨向美国企业出售多数股权，以确保2027年后继续获得高端AI芯片供应，方案包括引入美国企业成为多数控股股东或在美国设立新运营实体。",
+      "source": "36氪",
+      "category": "AI产业",
+      "url": "https://www.36kr.com/newsflashes/3970040744227336"
+    },
+    {
+      "title": "Kimi、MiniMax即将在天猫开店",
+      "summary": "继智谱电商首店落地天猫后，Kimi、MiniMax、阶跃星辰等多家大模型厂商正与天猫接洽，未来将入驻开设官方旗舰店，开售Token订阅套餐产品。",
+      "source": "36氪",
+      "category": "AI商业化",
+      "url": "https://www.36kr.com/newsflashes/3970153928651273"
+    }
+  ],
+  "comment": "从对齐披露到版权诉讼，AI治理与产业博弈进入深水区；大模型厂商开始天猫开店卖Token，商业化落地加速。"
+},
+{
   "date": "2026-09-05",
   "title": "AI新闻 | 月之暗面港股IPO募资50亿美元、沙特发布MiniMax开发阿语大模型、AI助推全球造富",
   "summary": "月之暗面计划今年在港IPO，寻求募资至多50亿美元；沙特HUMAIN发布由MiniMax开发的前沿阿语大模型humain-m3；AI热潮助推2025年全球亿万富翁财富达15.1万亿美元；龙版传媒澄清AI视频业务营收占比不足0.01%；国务院国资委强调央企聚焦前沿技术攻关加快技术迭代。",
