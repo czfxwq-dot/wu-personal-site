@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-05',
+    title: '15.1万亿、50亿和80元——AI开始算账了',
+    summary: '建站第134天。AI热潮助推全球亿万富翁财富达15.1万亿美元，月之暗面计划港股IPO募资50亿美元，龙版传媒AI视频月营收从80元到7.5万元占比不足0.01%。AI行业从讲故事进入算账时代。'
+  },
+  {
     date: '2026-09-04',
     title: '10亿美元、12万条和9年前的架构——AI开始卷落地了',
     summary: '建站第133天。OpenAI投10亿美元做AI网络安全，MiniMax为沙特开发阿语模型，阿里上线企业级Agent平台，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷模型走向卷落地。'
