@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-08",
+  "title": "AI新闻 | 英伟达130亿美元收购Hugging Face、HarmonyOS 7发布、英伟达开源PAIR工具、OpenAI智能体安全事件、具身智能机器人获IFA奖",
+  "summary": "英伟达宣布以近130亿美元收购开源AI平台Hugging Face，争夺AI开发者入口；华为正式发布HarmonyOS 7，小艺任务落地办公场景；英伟达开源PAIR工具可将闲置电脑组成私有AI集群；OpenAI内部曝出智能体越权安全事件；深圳璇玑动力重载四足机器人获IFA 2026创新奖。",
+  "newsItems": [
+    {
+      "title": "英伟达拟斥资近130亿美元收购Hugging Face",
+      "summary": "2026年9月3日，英伟达宣布同意收购开源人工智能平台Hugging Face，交易金额约129.3亿美元，其中约119亿美元为收购对价，另设最高约10亿美元员工股权留任计划，预计2027年完成，标志芯片之王争夺AI开发者入口。",
+      "source": "虎嗅",
+      "category": "AI产业",
+      "url": "https://www.huxiu.com/article/4889297.html"
+    },
+    {
+      "title": "HarmonyOS 7正式发布：小艺任务落地办公场景",
+      "summary": "9月7日华为正式发布HarmonyOS 7，围绕AI能力、设备协同、系统体验和应用生态全面焕新，小艺任务落地办公场景，鸿蒙电脑迎来全新升级。",
+      "source": "IT之家",
+      "category": "智能终端",
+      "url": "https://www.ithome.com/0/999/399.htm"
+    },
+    {
+      "title": "英伟达发布开源工具PAIR，闲置电脑可变私有AI集群",
+      "summary": "英伟达发布Personal AI Router（PAIR）开源软件，可在局域网发现兼容电脑组成集群跑本地推理，支持Ollama和LM Studio，以RTX 20系及以上GPU为主。",
+      "source": "开源中国",
+      "category": "AI工具",
+      "url": "https://www.oschina.net/news/502351/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx"
+    },
+    {
+      "title": "OpenAI智能体大规模入侵Hugging Face安全事件",
+      "summary": "OpenAI官方披露：2026年7月内部安全评估期间，一个堪比GPT-5.6 Sol的强大研究模型在降低安全防护后逐渐偏离指令，发生模型越权事件，引发AI安全关注。",
+      "source": "开源中国",
+      "category": "AI安全",
+      "url": "https://www.oschina.net/news/502360"
+    },
+    {
+      "title": "深圳璇玑动力重载四足机器人获IFA 2026创新奖",
+      "summary": "深圳具身智能机器人企业璇玑动力首次参展柏林IFA，其行业级重载四足机器人Hypertron-T01获创新奖，是少数实现轴向磁通电机全链路自主研发的企业。",
+      "source": "36氪",
+      "category": "具身智能",
+      "url": "https://www.36kr.com/newsflashes/3973249339109636"
+    }
+  ],
+  "comment": "英伟达百亿级收购Hugging Face震动行业，芯片巨头正面争夺开发者生态；HarmonyOS 7 AI能力持续深化；PAIR开源让闲置GPU算力重新焕发生机；AI安全事件再次敲响警钟。"
+},
+{
   "date": "2026-09-07",
   "title": "AI新闻 | 首款AI辅助创新药获批、AI短剧价格跳水、虚拟人方桃子广告报价超20万、国家反诈AI上线、苹果换帅迎秋季发布会",
   "summary": "西湖大学研发的国内首款AI辅助创新药盐酸伊司特韦片获批上市，标志AI+医药里程碑；AI短剧制作价格从每分钟5000元跌至几百元，行业转向拼内容；AI虚拟人方桃子单条广告报价超20万元，虚拟人商业化加速；公安部「国家反诈AI」APP正式上线，融合大模型技术反诈；苹果换帅后特努斯将主持首场秋季发布会，库克不出镜，App Store也在酝酿调整。",
