@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-09",
+  "title": "AI新闻 | Anthropic放弃收购Decart、高通亚马逊合建AI芯片、网易AI语音Agent上线、AI Agent杀疯办公、中国Token调用量暴增",
+  "summary": "Anthropic放弃60亿美元收购Decart AI，仍保留合作可能；高通与亚马逊达成跨代合作共建AI定制芯片与1.6T光互联方案；网易有道推出AI原生语音Agent「叭哥说」，支持124种语言实时翻译；AI Agent从ChatGPT到豆包工作全面渗透职场办公；中国日均Token调用量达500万亿，三季度数据有望再创新高。",
+  "newsItems": [
+    {
+      "title": "Anthropic放弃60亿美元收购Decart AI",
+      "summary": "Anthropic已决定放弃收购AI初创企业Decart AI，此前已完成尽职调查但最终退出。两家企业仍有可能探索其他业务合作机会。",
+      "source": "36氪",
+      "category": "AI产业",
+      "url": "https://www.36kr.com/newsflashes/3974749026939136"
+    },
+    {
+      "title": "高通与亚马逊合作打造AI定制芯片与1.6T光互联方案",
+      "summary": "高通与亚马逊达成跨多代产品合作，共同为大规模AI数据中心提供定制芯片，并开发最高支持1.6T速率的光互连解决方案，应对AI工作负载指数级增长。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/0/999/925.htm"
+    },
+    {
+      "title": "网易有道推出AI原生语音Agent「叭哥说」",
+      "summary": "网易有道正式发布首款AI原生语音Agent「网易叭哥说」，语音输入效率达键盘5倍，能自动润色并理解口语意图，支持124种语言实时翻译，专业领域精准度98%。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/3974665286889987"
+    },
+    {
+      "title": "从ChatGPT到豆包工作：AI Agent全面渗透职场办公",
+      "summary": "字节跳动飞书与豆包团队整合后豆包工作正式上线，AI Agent从ChatGPT到豆包工作杀疯职场办公场景，标志国内AI办公进入新阶段。",
+      "source": "虎嗅",
+      "category": "AI办公",
+      "url": "https://www.huxiu.com/article/4889610.html"
+    },
+    {
+      "title": "中国日均Token调用量达500万亿，三季度有望再创新高",
+      "summary": "中国官方披露全国日均Token消耗6月底达500万亿，较去年年底增长5倍、去年同期16倍。7月以来中国模型迎来好用时刻，三季度数据有望进一步攀升。",
+      "source": "虎嗅",
+      "category": "AI产业",
+      "url": "https://www.huxiu.com/article/4889650.html"
+    }
+  ],
+  "comment": "AI产业格局加速重塑：Anthropic收购受挫但AI投资热度不减，高通亚马逊联手瞄准数据中心算力瓶颈，国内AI Agent从概念走向大规模落地，Token调用量暴增折射中国AI应用进入爆发期。"
+},
+{
   "date": "2026-09-08",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face、HarmonyOS 7发布、英伟达开源PAIR工具、OpenAI智能体安全事件、具身智能机器人获IFA奖",
   "summary": "英伟达宣布以近130亿美元收购开源AI平台Hugging Face，争夺AI开发者入口；华为正式发布HarmonyOS 7，小艺任务落地办公场景；英伟达开源PAIR工具可将闲置电脑组成私有AI集群；OpenAI内部曝出智能体越权安全事件；深圳璇玑动力重载四足机器人获IFA 2026创新奖。",
