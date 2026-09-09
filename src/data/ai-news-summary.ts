@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-10",
+  "title": "AI新闻 | GPT-Image-2.5发布、OpenAI攻克千禧年难题、谷歌DeepMind算穿90亿种基因突变、DeepSeek服务崩溃、Anthropic确认第四起安全事件",
+  "summary": "OpenAI发布GPT-Image-2.5图像生成模型并宣布攻克千禧年数学难题；谷歌DeepMind发布基因突变预测模型覆盖90亿种变异；DeepSeek V4.1 Flash上线前夜服务崩溃引发关注；Anthropic确认Claude Opus4.6早期版本存在第四起安全事件并启动独立调查；办公Agent赛道持续升温。",
+  "newsItems": [
+    {
+      "title": "OpenAI发布GPT-Image-2.5图像生成模型",
+      "summary": "OpenAI正式发布GPT-Image-2.5，新一代图像生成模型在质量和可控性上大幅提升，标志多模态AI能力持续进化。",
+      "source": "36氪",
+      "category": "AI模型",
+      "url": "https://www.36kr.com/p/3975317790273801"
+    },
+    {
+      "title": "OpenAI宣布攻克千禧年数学难题",
+      "summary": "OpenAI宣布在千禧年数学难题上取得突破性进展，清华姚班传奇陈立杰称其为不可思议的时代，标志AI在基础科学研究领域能力再上台阶。",
+      "source": "36氪",
+      "category": "AI科研",
+      "url": "https://www.36kr.com/p/3975337527587333"
+    },
+    {
+      "title": "谷歌DeepMind破解生命天书：90亿种基因突变全部算穿",
+      "summary": "谷歌DeepMind发布最新基因突变预测模型，成功覆盖人类90亿种基因突变，对精准医疗和遗传病研究具有里程碑意义。",
+      "source": "36氪",
+      "category": "AI医疗",
+      "url": "https://www.36kr.com/p/3975775944405513"
+    },
+    {
+      "title": "DeepSeek V4.1 Flash上线前夜服务崩溃",
+      "summary": "9月10日凌晨DeepSeek客户端大面积无法正常使用，提示达到对话长度上限。此前DeepSeek官宣V4.1 Flash模型即将发布，性能全面超越V4 Pro，上线前夕服务不稳定引发用户关注。",
+      "source": "虎嗅",
+      "category": "AI服务",
+      "url": "https://m.huxiu.com/moment/1278937.html"
+    },
+    {
+      "title": "Anthropic确认第四起AI安全事件并启动独立调查",
+      "summary": "Anthropic确认2026年1月Claude Opus4.6早期版本存在第四起安全事件，已通知所有受影响方，并与大都会铁路公司METR签署协议展开独立调查。",
+      "source": "虎嗅",
+      "category": "AI安全",
+      "url": "https://m.huxiu.com/moment/1278946.html"
+    }
+  ],
+  "comment": "AI科研能力持续突破：OpenAI攻克数学难题、DeepMind破解基因密码，AI正从工具进化为基础科学研究的核心引擎；与此同时DeepSeek崩溃和Anthropic安全事件提醒行业，能力越强责任越大。"
+},
+{
   "date": "2026-09-09",
   "title": "AI新闻 | Anthropic放弃收购Decart、高通亚马逊合建AI芯片、网易AI语音Agent上线、AI Agent杀疯办公、中国Token调用量暴增",
   "summary": "Anthropic放弃60亿美元收购Decart AI，仍保留合作可能；高通与亚马逊达成跨代合作共建AI定制芯片与1.6T光互联方案；网易有道推出AI原生语音Agent「叭哥说」，支持124种语言实时翻译；AI Agent从ChatGPT到豆包工作全面渗透职场办公；中国日均Token调用量达500万亿，三季度数据有望再创新高。",
