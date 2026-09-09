@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-09',
+    title: '放弃60亿、日耗500万亿——AI的钱和力去了同一个地方',
+    summary: '建站第138天。Anthropic放弃60亿美元收购Decart AI，高通与亚马逊联手共建AI定制芯片，AI Agent全面渗透职场办公，中国日均Token调用量达500万亿。算完账之后，钱和力都去了同一个地方：真实场景。'
+  },
+  {
     date: '2026-09-05',
     title: '15.1万亿、50亿和80元——AI开始算账了',
     summary: '建站第134天。AI热潮助推全球亿万富翁财富达15.1万亿美元，月之暗面计划港股IPO募资50亿美元，龙版传媒AI视频月营收从80元到7.5万元占比不足0.01%。AI行业从讲故事进入算账时代。'
