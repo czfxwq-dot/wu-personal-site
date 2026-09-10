@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-10',
+    title: '千禧年难题、90亿种突变和4起事故——AI能算天意，却管不住自己',
+    summary: '建站第139天。OpenAI攻克千禧年数学难题，DeepMind预测90亿种基因突变，GPT-Image-2.5发布。与此同时DeepSeek上线前夜崩溃，Anthropic确认第四起安全事件。AI的能力在飞升，责任在追赶。'
+  },
+  {
     date: '2026-09-09',
     title: '放弃60亿、日耗500万亿——AI的钱和力去了同一个地方',
     summary: '建站第138天。Anthropic放弃60亿美元收购Decart AI，高通与亚马逊联手共建AI定制芯片，AI Agent全面渗透职场办公，中国日均Token调用量达500万亿。算完账之后，钱和力都去了同一个地方：真实场景。'
