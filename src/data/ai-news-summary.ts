@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-11",
+  "title": "AI新闻 | DeepSeek V4.1 Flash发布、面壁MiniCPM5登顶HF、GPT-6 Astra架构曝光、ChatGPT Images 2.5上线、Meta发布AI智能体Muse",
+  "summary": "DeepSeek正式发布V4.1 Flash模型，原生多模态视觉理解、推理更快；面壁智能MiniCPM5-2B登顶Hugging Face Trending Top 1，2B参数实现端侧Agent；Raschka万字拆解GPT-6 Astra循环架构与隐藏推理链；OpenAI发布ChatGPT Images 2.5，每周生成30亿张图；Meta推出个人AI智能体Muse，支持后台持续运行。",
+  "newsItems": [
+    {
+      "title": "DeepSeek V4.1 Flash正式发布：更强更快更普惠",
+      "summary": "DeepSeek V4.1 Flash模型正式发布，是全新模型结构系列中最小尺寸模型，具备原生多模态视觉理解能力，推理速度更快、吞吐更大。但DeepSeek将V4 Pro静默路由到Flash引发社区争议。",
+      "source": "开源中国",
+      "category": "AI模型",
+      "url": "https://www.oschina.net/news/502405/deepseek-v4-1-flash-ga"
+    },
+    {
+      "title": "面壁智能MiniCPM5-2B登顶Hugging Face Trending Top 1",
+      "summary": "面壁智能MiniCPM5-2B模型登顶Hugging Face Trending Top 1，AA综合23分居全球4B以下开源模型第一。2B参数量即可完成工具调用、深度搜索、代码生成等智能体任务，端侧通用Agent雏形初现。",
+      "source": "36氪",
+      "category": "AI模型",
+      "url": "https://www.36kr.com/newsflashes/3977575664089857"
+    },
+    {
+      "title": "Raschka万字拆解GPT-6 Astra：循环架构和隐藏的推理链",
+      "summary": "Sebastian Raschka深度评测GPT-6 Astra，称其为用过的最好的模型。长文重点追踪Astra的循环架构设计和隐藏推理链机制，揭示OpenAI在模型架构上的重大创新。",
+      "source": "开源中国",
+      "category": "AI技术",
+      "url": "https://www.oschina.net/news/502401/gpt-6-astra-looped-transformers-and"
+    },
+    {
+      "title": "ChatGPT Images 2.5发布，OpenAI把图像生成重注押在编辑上",
+      "summary": "OpenAI发布ChatGPT Images 2.5，每周生成30亿张图，涵盖ChatGPT和GPT-Image API两个入口，已成为全球最大AI图像生成服务平台，新版本重点强化图像编辑能力。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net/news/502393/openai-chatgpt-images-2-5"
+    },
+    {
+      "title": "Meta发布个人AI智能体Muse：关掉App仍在替你干活",
+      "summary": "Meta推出个人AI智能体Muse，支持后台持续运行，关掉App后仍继续执行任务。已上架App Store和Google Play，也可在WhatsApp中使用，标志个人AI Agent进入实用阶段。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "url": "https://www.oschina.net/news/502392/meta-ai-muse"
+    }
+  ],
+  "comment": "端侧Agent和大模型并行进化：MiniCPM5用2B参数跑Agent、Muse让AI在后台替你干活，AI正从云端走向每个人的口袋；GPT-6 Astra架构创新则预示大模型能力天花板还在不断抬高。"
+},
+{
   "date": "2026-09-10",
   "title": "AI新闻 | GPT-Image-2.5发布、OpenAI攻克千禧年难题、谷歌DeepMind算穿90亿种基因突变、DeepSeek服务崩溃、Anthropic确认第四起安全事件",
   "summary": "OpenAI发布GPT-Image-2.5图像生成模型并宣布攻克千禧年数学难题；谷歌DeepMind发布基因突变预测模型覆盖90亿种变异；DeepSeek V4.1 Flash上线前夜服务崩溃引发关注；Anthropic确认Claude Opus4.6早期版本存在第四起安全事件并启动独立调查；办公Agent赛道持续升温。",
