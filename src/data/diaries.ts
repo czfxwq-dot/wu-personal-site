@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-11',
+    title: '30亿张图、2B参数和后台不停——AI正在一分为二',
+    summary: '建站第140天。GPT-6 Astra循环架构曝光，ChatGPT Images每周30亿张图，面壁MiniCPM5用2B参数跑端侧Agent，DeepSeek V4.1 Flash发布，Meta推出后台智能体Muse。AI不再是一个方向，而是同时往两个方向进化。'
+  },
+  {
     date: '2026-09-10',
     title: '千禧年难题、90亿种突变和4起事故——AI能算天意，却管不住自己',
     summary: '建站第139天。OpenAI攻克千禧年数学难题，DeepMind预测90亿种基因突变，GPT-Image-2.5发布。与此同时DeepSeek上线前夜崩溃，Anthropic确认第四起安全事件。AI的能力在飞升，责任在追赶。'
