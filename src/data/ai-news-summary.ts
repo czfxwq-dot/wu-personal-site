@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-12",
+  "title": "AI新闻 | 国常会部署算力基础设施、DeepSeek V4 Pro继续提供API、浪潮信息90亿定增AI基建、Arm发布移动AI计算平台、AI安全边界从数据迁到Context",
+  "summary": "国常会部署算力基础设施建设，推动算电协同算网融合；DeepSeek宣布9月14日后继续提供V4 Pro API服务；浪潮信息拟定增90亿元投入AI基础设施；Arm发布第二代移动计算子系统CSS for Mobile 2面向智能体AI；AI安全领域出现新范式转变，Context安全成为新焦点。",
+  "newsItems": [
+    {
+      "title": "国常会：进一步完善算力基础设施，积极推进关键技术和装备研发应用",
+      "summary": "李强主持召开国务院常务会议，要求坚持合理布局、规范有序，进一步完善算力基础设施，推进关键技术和装备研发应用，构建多层次网络化算力体系，推动算电协同、算网融合，加快绿电直连、源网荷储等项目落地。",
+      "source": "36氪",
+      "category": "AI政策",
+      "url": "https://www.36kr.com/newsflashes/3978912529005319"
+    },
+    {
+      "title": "DeepSeek宣布9月14日后继续提供V4 Pro的API调用服务",
+      "summary": "DeepSeek宣布为响应广大用户需求，决定在2026年9月14日之后继续提供DeepSeek V4 Pro的API调用服务，计费方式保持不变，如有变动将另行通知。此前社区担忧V4 Pro API可能被下线。",
+      "source": "36氪",
+      "category": "AI服务",
+      "url": "https://www.36kr.com/newsflashes/3978941735091206"
+    },
+    {
+      "title": "浪潮信息拟定增募资不超90亿元投建AI基础设施等项目",
+      "summary": "浪潮信息拟向特定对象发行A股股票，募集资金总额不超过90亿元，用于面向智能体规模化应用的新一代AI基础设施研发及产业化、绿色智算集群液冷原生算力基础设施、多智能体协同存算融合算力基础设施等项目。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/newsflashes/3978913441889281"
+    },
+    {
+      "title": "Arm发布第二代移动计算子系统CSS for Mobile 2，面向智能体AI",
+      "summary": "Arm在上海举办年度旗舰活动，发布第二代移动终端计算子系统CSS for Mobile 2，集成Arm C2 CPU集群、Mali G2-Ultra NX GPU，面向智能体AI与AI原生图形，为移动设备提供完整AI计算平台。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "url": "https://www.ithome.com/1/001/434.htm"
+    },
+    {
+      "title": "AI安全新范式：Context安全正在取代数据安全成为新焦点",
+      "summary": "虎嗅报道指出，AI安全的边界正在从传统数据安全迁移到Context安全，AADP出现后Agent安全开始把\"能做\"和\"该做\"真正分开，权限体系面临全新挑战，Agent带来的安全问题远超传统计算机安全范畴。",
+      "source": "虎嗅",
+      "category": "AI安全",
+      "url": "https://www.huxiu.com/article/4890596.html"
+    }
+  ],
+  "comment": "政策端国常会定调算力基建、产业端浪潮90亿押注AI基础设施、技术端Arm为移动端注入Agent算力——AI正从模型竞赛全面转向基础设施竞赛；而Context安全的提出，意味着行业开始认真面对Agent时代的治理难题。"
+},
+{
   "date": "2026-09-11",
   "title": "AI新闻 | DeepSeek V4.1 Flash发布、面壁MiniCPM5登顶HF、GPT-6 Astra架构曝光、ChatGPT Images 2.5上线、Meta发布AI智能体Muse",
   "summary": "DeepSeek正式发布V4.1 Flash模型，原生多模态视觉理解、推理更快；面壁智能MiniCPM5-2B登顶Hugging Face Trending Top 1，2B参数实现端侧Agent；Raschka万字拆解GPT-6 Astra循环架构与隐藏推理链；OpenAI发布ChatGPT Images 2.5，每周生成30亿张图；Meta推出个人AI智能体Muse，支持后台持续运行。",
