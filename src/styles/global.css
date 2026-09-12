@@ -1,3 +1,5 @@
+@import "survey.css";
+
 /* ===================================================
    全局样式 — 温润而坚定
    50岁成熟稳重的 AI 实践者气质
@@ -1021,4 +1023,3 @@ article tbody tr:last-child td {
     gap: 12px;
   }
 }
-@import "survey.css";

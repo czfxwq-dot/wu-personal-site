@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-solves-90year-math-problem',
+    date: '2026-09-12',
+    title: 'AI解出90年数学难题，人类却看不懂过程',
+    excerpt: 'OpenAI内部未公开模型破解了纳维-斯托克斯存在性与光滑性问题——90年来人类最聪明的脑袋都没能证明的千禧年大奖难题。但真正值得思考的不是答案本身，而是：如果AI给出了答案，但人类看不懂推导过程——这算"理解"吗？',
+    tag: 'AI前沿',
+  },
+  {
     slug: 'altman-ai-danger-monopoly',
     date: '2026-08-26',
     title: '造ChatGPT的人坦言AI很危险，最讽刺的是：他自己就是「危险」本身',
