@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-13",
+  "title": "AI新闻 | 菲尔兹奖得主联名警告AI错位、月之暗面500亿美元估值遇风波",
+  "summary": "今日AI圈重磅：25位菲尔兹奖得主联名警告AI与数学研究目标错位；月之暗面估值飙至500亿美元却遭内部风波；智谱上市后继续募资，大模型战场转向资本竞赛；OpenAI发布Agents API推动编程工具平台化；小米开源CocktailASR-1解决鸡尾酒会语音识别难题。",
+  "newsItems": [
+    {
+      "title": "陶哲轩等25位菲尔兹奖得主警告：AI与数学研究目标严重错位",
+      "summary": "当地时间9月11日，陶哲轩、邓煜等25位菲尔兹奖得主发表联合声明，警告AI快速用于解决数学问题可能使AI发展目标与数学研究目标严重错位。声明指出，大型语言模型解决重大数学问题的能力大幅提升，但AI企业将数学问题作为能力基准，可能导致数学研究本身被边缘化。",
+      "source": "36氪",
+      "category": "AI安全与伦理",
+      "url": "https://www.36kr.com/newsflashes/3979862818569223"
+    },
+    {
+      "title": "估值狂飙至500亿美元，月之暗面突然遭遇暗剑",
+      "summary": "9月11日深夜，一张无信源的微信群聊截图在创投圈飞速扩散。接近12日中午，月之暗面官方微博发布法务声明，称网传关于创始人及员工的信息纯属捏造。Kimi估值已达500亿美元，但此次风波暴露出高速成长中的内部管理挑战。",
+      "source": "虎嗅",
+      "category": "大模型动态",
+      "url": "https://www.huxiu.com/article/4890711.html"
+    },
+    {
+      "title": "智谱上市后募资，大模型战场变了",
+      "summary": "智谱上市后再次从资本市场募资，Kimi谋求上市，DeepSeek转向算力基础设施，海外OpenAI和Anthropic也在奔向IPO。大模型战场从技术竞赛转向资本与商业化的全面较量，行业格局正在发生深刻变化。",
+      "source": "虎嗅",
+      "category": "大模型动态",
+      "url": "https://www.huxiu.com/article/4890703.html"
+    },
+    {
+      "title": "OpenAI把Codex做成API：Agents API开放托管会话与沙箱",
+      "summary": "OpenAI正式上线Agents API，将Codex的执行环境通过托管REST API暴露给开发者。核心端点POST api.openai.com/v1/agents支持创建托管会话与沙箱，开发者可以在云端运行代码生成和Agent任务，标志着AI编程工具从IDE插件走向平台化。",
+      "source": "开源中国",
+      "category": "AI开发工具",
+      "url": "https://www.oschina.net/news/502418"
+    },
+    {
+      "title": "小米开源工业级目标说话人语音识别大模型CocktailASR-1",
+      "summary": "小米开源CocktailASR-1模型，解决多人同时讲话场景下的目标说话人提取难题。该模型不是做简单降噪，而是从根本上实现了对嘈杂人群中特定人声的精准识别，为智能会议、客服等场景提供了新的技术方案。",
+      "source": "开源中国",
+      "category": "开源项目",
+      "url": "https://www.oschina.net/news/502427/xiaomi-cocktailasr-1"
+    }
+  ],
+  "comment": "AI行业正从纯技术竞赛进入资本、安全与商业化的多维博弈阶段，数学界的集体警告尤为值得深思。"
+},
+{
   "date": "2026-09-12",
   "title": "AI新闻 | 国常会部署算力基础设施、DeepSeek V4 Pro继续提供API、浪潮信息90亿定增AI基建、Arm发布移动AI计算平台、AI安全边界从数据迁到Context",
   "summary": "国常会部署算力基础设施建设，推动算电协同算网融合；DeepSeek宣布9月14日后继续提供V4 Pro API服务；浪潮信息拟定增90亿元投入AI基础设施；Arm发布第二代移动计算子系统CSS for Mobile 2面向智能体AI；AI安全领域出现新范式转变，Context安全成为新焦点。",
