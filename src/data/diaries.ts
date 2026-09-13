@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-13',
+    title: '25位菲尔兹奖得主、500亿美元和1个API——AI进入多维博弈',
+    summary: '建站第142天。25位菲尔兹奖得主联名警告AI与数学研究目标错位，月之暗面估值飙至500亿美元却遭内部风波，智谱上市后继续募资，OpenAI发布Agents API推动编程工具平台化，小米开源CocktailASR-1解决鸡尾酒会语音识别难题。AI的战场不再只有技术。'
+  },
+  {
     date: '2026-09-11',
     title: '30亿张图、2B参数和后台不停——AI正在一分为二',
     summary: '建站第140天。GPT-6 Astra循环架构曝光，ChatGPT Images每周30亿张图，面壁MiniCPM5用2B参数跑端侧Agent，DeepSeek V4.1 Flash发布，Meta推出后台智能体Muse。AI不再是一个方向，而是同时往两个方向进化。'
