@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-14",
+  "title": "AI新闻 | Anthropic创始人呼吁AI圈踩刹车、OpenAI关停史上最快模型、三大巨头讨论AI标准机构",
+  "summary": "Anthropic创始人呼吁AI圈暂停前进，奥特曼、马斯克罕见挺身支持；OpenAI宣布关停史上最快模型并放弃今年IPO计划；Anthropic、OpenAI、Google自7月起举行工作组会议讨论创建AI标准机构；微软CEO纳德拉发声支持AI审慎发展；“全华班”AI程序员公司估值达480亿美元。",
+  "newsItems": [
+    {
+      "title": "Anthropic创始人呼吁AI圈踩刹车，奥特曼、马斯克罕见挺身支持",
+      "summary": "Anthropic创始人发起呼吁，建议AI行业暂停前进、重新审视发展节奏。OpenAI CEO奥特曼和马斯克罕见地达成一致，纷纷表示支持。这是AI巨头们首次在“放慢脚步”上达成共识，反映出行业对AI安全风险的担忧正在加剧。",
+      "source": "36氪",
+      "category": "AI安全与治理",
+      "url": "https://www.36kr.com/p/3981130388929280"
+    },
+    {
+      "title": "OpenAI宣布关停史上最快模型，今年不再IPO",
+      "summary": "OpenAI官宣关停其史上最快的模型，同时确认今年不会进行IPO。这意味着OpenAI在商业化路径上选择了更务实的策略，优先解决产品和安全问题而非资本市场。",
+      "source": "36氪",
+      "category": "大模型动态",
+      "url": "https://www.36kr.com/p/3981250979036163"
+    },
+    {
+      "title": "Anthropic、OpenAI、Google讨论创建AI标准机构",
+      "summary": "消息称Anthropic、OpenAI和Google自7月以来一直举行工作组会议，讨论创建一个由行业主导的AI标准机构。这是AI三巨头首次在标准化层面进行正式合作，可能影响未来AI模型的安全评估、负责任AI治理等方面。",
+      "source": "虎嗅",
+      "category": "AI安全与治理",
+      "url": "https://www.huxiu.com/moment/1279942.html"
+    },
+    {
+      "title": "微软CEO纳德拉：支持AI审慎发展，发布MAI模型行为准则",
+      "summary": "微软CEO纳德拉发声表示，任何对超级智能的探索都必须基于“如果AI不能造福人类且不受人类控制，就不值得研发”的原则。微软将发布自研MAI模型的《行为准则》并公开征求意见，强调闭源和开源模型应当并行发展。",
+      "source": "虎嗅",
+      "category": "AI安全与治理",
+      "url": "https://www.huxiu.com/moment/1279937.html"
+    },
+    {
+      "title": "“全华班”AI程序员公司估值480亿美元",
+      "summary": "一家由中国团队全班打造的AI程序员公司估值达到480亿美元，展现了中国AI开发工具赛道的强劲增长势头。这也是中国 AI创业公司在全球开发工具市场中崛起的标志性事件。",
+      "source": "36氪",
+      "category": "AI开发工具",
+      "url": "https://www.36kr.com/p/3981230650522630"
+    }
+  ],
+  "comment": "AI三巨头集体调转节奏、讨论标准化，行业正从“谁更快”转向“谁更稳”的新阶段。"
+},
+{
   "date": "2026-09-13",
   "title": "AI新闻 | 菲尔兹奖得主联名警告AI错位、月之暗面500亿美元估值遇风波",
   "summary": "今日AI圈重磅：25位菲尔兹奖得主联名警告AI与数学研究目标错位；月之暗面估值飙至500亿美元却遭内部风波；智谱上市后继续募资，大模型战场转向资本竞赛；OpenAI发布Agents API推动编程工具平台化；小米开源CocktailASR-1解决鸡尾酒会语音识别难题。",
