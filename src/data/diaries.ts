@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-14',
+    title: '4家巨头、1个共识——AI集体踩刹车',
+    summary: '建站第143天。Anthropic创始人呼吁AI圈暂停前进，奥特曼、马斯克罕见支持；OpenAI关停史上最快模型并放弃今年IPO；三巨头讨论创建AI标准机构；微软发布MAI模型行为准则。AI从"谁更快"转向"谁更稳"。'
+  },
+  {
     date: '2026-09-13',
     title: '25位菲尔兹奖得主、500亿美元和1个API——AI进入多维博弈',
     summary: '建站第142天。25位菲尔兹奖得主联名警告AI与数学研究目标错位，月之暗面估值飙至500亿美元却遭内部风波，智谱上市后继续募资，OpenAI发布Agents API推动编程工具平台化，小米开源CocktailASR-1解决鸡尾酒会语音识别难题。AI的战场不再只有技术。'
