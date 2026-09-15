@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-16",
+  "title": "AI新闻 | 谷歌TPU百万芯片、AI安全争议与半导体洗牌",
+  "summary": "谷歌TPU架构扩展至百万芯片级，电力成核心瓶颈；Anthropic安全研究员辞职引发AI安全争议；字节跳动因AI投入利润下滑；博通CEO回应AI放缓担忧维持收入目标；工信部印发电子信息制造业十五五规划，韩国半导体界恐慌。AI基础设施扩张与安全治理的矛盾成为本周焦点。",
+  "newsItems": [
+    {
+      "title": "谷歌TPU AI基建规模迈入100万级，核心瓶颈从缺芯转向缺电",
+      "summary": "谷歌在SEMICON Taiwan 2026宣布TPU系统已扩展至100万芯片级规模，超大规模AI模型训练可跨多个数据中心分布式训练，电力供应成为限制进一步扩张的核心瓶颈。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/1/002/828.htm"
+    },
+    {
+      "title": "最安全的AI公司也守不住安全承诺，Anthropic研究员辞职引发争议",
+      "summary": "Anthropic安全研究员Jacob Coxon辞职，批评公司未尽安全责任、盲目推进超级智能。其辞职帖浏览量超1.47亿，AI安全治理问题再度成为公众焦点。",
+      "source": "虎嗅",
+      "category": "AI安全",
+      "url": "https://www.huxiu.com/article/4891450.html"
+    },
+    {
+      "title": "因AI投入加大，字节跳动今年上半年利润降至200亿美元",
+      "summary": "据The Information报道，字节跳动今年上半年净利润下降至200亿美元，降幅为个位数百分比。同期营收1200亿美元同比增长约30%，TikTok国际广告和电商增长强劲。",
+      "source": "IT之家",
+      "category": "AI投资",
+      "url": "https://www.ithome.com/1/002/764.htm"
+    },
+    {
+      "title": "博通CEO陈福阳回应AI放缓担忧：算力需求仍强劲，长期收入目标不变",
+      "summary": "针对Anthropic CEO主张放缓大模型研发引发的市场恐慌，博通CEO表态算力需求仍强劲。AI基础设施板块投资者开始重新评估，但博通维持长期收入目标不变。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "url": "https://www.ithome.com/1/002/767.htm"
+    },
+    {
+      "title": "越封锁越替代：电子业十五五规划与韩国半导体的恐慌",
+      "summary": "工信部与国家发改委联合印发电子信息制造业十五五规划。韩国中央日报同日刊文称，韩企负责人承认以前的风险是没法向中国卖东西，以后是中国不用买韩国的东西了。",
+      "source": "虎嗅",
+      "category": "半导体政策",
+      "url": "https://www.huxiu.com/article/4891435.html"
+    }
+  ],
+  "comment": "AI基建狂飙与安全治理的矛盾正在激化——谷歌百万芯片证明算力不缺，缺的是电和信任。"
+},
+{
   "date": "2026-09-15",
   "title": "AI新闻 | 中国电信预测算力需求年增10倍、甲骨文裁员筹建AI基础设施、雷军探访宇树机器人",
   "summary": "中国电信研究院发布报告预测未来2-3年我国算力需求年均增长近10倍，推理算力占比将达80%；甲骨文启动新一轮裁员为AI基础设施筹资；雷军现身宇树科技观看人形机器人表演；地平线智驾芯片面临价格战压力；古尔曼预测折叠屏手机10年内成主流。",
