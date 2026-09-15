@@ -12,6 +12,13 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-surpass-experts-3-4-years',
+    date: '2026-09-16',
+    title: '业内预言AI 3‑4年或将超越顶尖专家，中年人不必恐慌，但要看清这几件事',
+    excerpt: 'OpenAI前联合创始人John Schulman预判：AI可能3-4年内全面超越顶尖人类专家。中年人不必恐慌，但要看清三件事：不和AI拼速度、善用但分清边界、保持尝试能力。',
+    tag: 'AI观点',
+  },
+  {
     slug: 'ai-solves-90year-math-problem',
     date: '2026-09-12',
     title: 'AI解出90年数学难题，人类却看不懂过程',
