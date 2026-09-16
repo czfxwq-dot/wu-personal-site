@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-17",
+  "title": "AI新闻 | 诺和诺德联手Anthropic、AI能源联盟成立与字节AI制药估值15亿",
+  "summary": "诺和诺德与Anthropic合作将Claude引入药物研发，标志AI制药进入新阶段；英伟达、谷歌联合成立AI能源管理联盟解决数据中心电力瓶颈；字节AI制药部门Anew Labs首轮外部融资估值15亿美元；京东发布七鲜大厨首创AI膳食+炒菜机器人组合；黄仁勋表示中国业界不认同AI末日论。AI正加速渗透制药、能源、消费等垂直领域。",
+  "newsItems": [
+    {
+      "title": "诺和诺德与Anthropic将合作使用Claude推进药物研发",
+      "summary": "诺和诺德宣布与Anthropic合作，将Claude引入辅助研发工作流程，加速药物发现与开发效率。这是大型药企与AI大模型公司深度合作的又一标志性事件。",
+      "source": "36氪",
+      "category": "AI制药",
+      "url": "https://www.36kr.com/newsflashes/3986065030789896"
+    },
+    {
+      "title": "英伟达、谷歌、Emerald AI发起成立AI能源管理联盟",
+      "summary": "英伟达、谷歌与Emerald AI共同宣布成立AI能源管理联盟，推动灵活型AI数据中心发展，解决AI工厂扩张中的电网侧革新问题。",
+      "source": "IT之家",
+      "category": "AI基础设施",
+      "url": "https://www.ithome.com/1/003/301.htm"
+    },
+    {
+      "title": "字节跳动AI制药部门Anew Labs估值15亿美元",
+      "summary": "字节跳动AI制药部门Anew Labs完成2.9亿美元首轮外部融资，投后估值15亿美元，字节保留56%股份。AI制药赛道持续升温。",
+      "source": "虎嗅",
+      "category": "AI制药",
+      "url": "https://www.huxiu.com/article/4891829.html"
+    },
+    {
+      "title": "京东推出七鲜大厨：AI膳食规划+净菜供应链+炒菜机器人",
+      "summary": "京东发布全新业务七鲜大厨，定位家庭健康膳食执行官，全球首创AI健康膳食规划+品质净菜供应链+智能炒菜机器人组合，首批预售覆盖北上广深。",
+      "source": "IT之家",
+      "category": "AI消费",
+      "url": "https://www.ithome.com/1/003/288.htm"
+    },
+    {
+      "title": "黄仁勋：在中国没人谈所谓AI末日论",
+      "summary": "英伟达CEO黄仁勋在All-In Summit峰会表示，在中国没有人会谈AI末日论，认为中国业界更关注AI的实际应用价值而非安全风险。",
+      "source": "IT之家",
+      "category": "行业观点",
+      "url": "https://www.ithome.com/1/003/266.htm"
+    }
+  ],
+  "comment": "AI正从通用大模型竞赛转向垂直行业深度落地，制药、能源、消费全面开花。"
+},
+{
   "date": "2026-09-16",
   "title": "AI新闻 | 谷歌TPU百万芯片、AI安全争议与半导体洗牌",
   "summary": "谷歌TPU架构扩展至百万芯片级，电力成核心瓶颈；Anthropic安全研究员辞职引发AI安全争议；字节跳动因AI投入利润下滑；博通CEO回应AI放缓担忧维持收入目标；工信部印发电子信息制造业十五五规划，韩国半导体界恐慌。AI基础设施扩张与安全治理的矛盾成为本周焦点。",
