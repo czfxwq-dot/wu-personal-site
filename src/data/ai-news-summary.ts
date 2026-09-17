@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-18",
+  "title": "AI新闻 | 英伟达芯片销量将翻倍，Agent时代加速到来",
+  "summary": "黄仁勋预测英伟达2027年芯片销量翻倍，AI算力需求持续爆发；vivo蓝河操作系统向AgentOS转型，AI从对话走向自主执行；字节旗下AI制药公司Anew独立融资15亿美元；腾讯阿里字节纷纷为AI Agent构建运行环境；超七成用户拒绝让AI完全控制电脑，安全顾虑成普及关键。",
+  "newsItems": [
+    {
+      "title": "黄仁勋：英伟达明年芯片销量将是今年的两倍",
+      "summary": "英伟达CEO黄仁勋在苏格兰科技行业高管会议上表示，预计2027年芯片销量将是2026年的约两倍，同时强调AI安全至关重要，企业不应对安全性没信心的产品上市。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "url": "https://www.ithome.com/1/003/831.htm"
+    },
+    {
+      "title": "当AI开始自己办事，vivo蓝河操作系统走向AgentOS",
+      "summary": "vivo蓝河操作系统从对话式AI转向AgentOS方向，AI不再只是给出建议而是直接替用户完成任务，技术重心向Harness工程演进，让AI从会回答跨越到能执行、能验证。",
+      "source": "IT之家",
+      "category": "AI Agent",
+      "url": "https://www.ithome.com/1/003/875.htm"
+    },
+    {
+      "title": "AI制药独角兽Anew单飞，字节推了一把最烧钱的慢生意",
+      "summary": "字节跳动旗下AI制药公司Anew Labs完成首轮外部融资2.9亿美元，估值15亿美元，从字节拆分独立运营，探索AI驱动的新型Biotech模式。",
+      "source": "虎嗅",
+      "category": "AI制药",
+      "url": "https://www.huxiu.com/article/4892135.html"
+    },
+    {
+      "title": "腾讯阿里字节为什么都在给Agent造世界",
+      "summary": "AI下半场重心从解决问题转向定义问题，腾讯阿里字节等大厂纷纷为AI Agent构建运行环境和测试场，Agent的环境既是考场也是训练场。",
+      "source": "虎嗅",
+      "category": "AI Agent",
+      "url": "https://www.huxiu.com/article/4892106.html"
+    },
+    {
+      "title": "超七成受访者不愿让AI工具完全控制电脑",
+      "summary": "外媒调查显示43%受访者明确拒绝AI访问电脑，另有27%持保留态度，安全顾虑成为AI Agent普及的关键障碍，提示词注入等攻击风险引发广泛关注。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "url": "https://www.ithome.com/1/003/881.htm"
+    }
+  ],
+  "comment": "Agent从概念走向产品，但用户信任还没跟上——技术跑得快，安全得追上。"
+},
+{
   "date": "2026-09-17",
   "title": "AI新闻 | 诺和诺德联手Anthropic、AI能源联盟成立与字节AI制药估值15亿",
   "summary": "诺和诺德与Anthropic合作将Claude引入药物研发，标志AI制药进入新阶段；英伟达、谷歌联合成立AI能源管理联盟解决数据中心电力瓶颈；字节AI制药部门Anew Labs首轮外部融资估值15亿美元；京东发布七鲜大厨首创AI膳食+炒菜机器人组合；黄仁勋表示中国业界不认同AI末日论。AI正加速渗透制药、能源、消费等垂直领域。",
