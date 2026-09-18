@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-19",
+  "title": "AI新闻 | Anthropic年底建5GW算力，Naive AI估值14亿美元",
+  "summary": "Anthropic计划年底前建成5吉瓦算力，加速AI基础设施布局；大模型初创Naive AI完成4亿美元融资估值达14亿美元，腾讯IDG等参投；MiniMax Code CLI以MIT协议正式开源；美AI巨头转向20-30MW小型算力部署；AI餐饮渗透率仅15%，上海目标2028年超70%。",
+  "newsItems": [
+    {
+      "title": "Anthropic公司计划年底前建成5吉瓦算力",
+      "summary": "据报道，Anthropic公司计划年底前建成5吉瓦算力，持续加码AI基础设施建设，算力竞赛进入新阶段。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/newsflashes/3988896604453890"
+    },
+    {
+      "title": "大模型初创公司Naive AI估值达14亿美元",
+      "summary": "今年2月创立的AI模型初创公司Naive AI完成三轮融资合计4亿美元，投后估值达14.2亿美元，投资方包括腾讯、IDG资本、经纬创投及红杉，最早将于本月推出首款大语言模型。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/newsflashes/3988893203364866"
+    },
+    {
+      "title": "MiniMax Code CLI正式开源",
+      "summary": "MiniMax Code CLI的v0.4.12版本面向全球开发者开放，以MIT协议正式开源，为开发者提供更多选择。",
+      "source": "36氪",
+      "category": "AI开源",
+      "url": "https://www.36kr.com/newsflashes/3988920115460873"
+    },
+    {
+      "title": "美AI巨头盯上更快落地的小型算力部署",
+      "summary": "Anthropic和OpenAI在争夺AI基础设施之际，正寻求20-30MW规模的小型数据中心交易，与此前数百兆瓦乃至吉瓦级的大项目形成互补。",
+      "source": "虎嗅",
+      "category": "AI基础设施",
+      "url": "https://www.huxiu.com/article/4892390.html"
+    },
+    {
+      "title": "AI怎么当餐厅的隐形店长",
+      "summary": "红餐产业研究院数据显示中国餐饮AI应用渗透率仅15%，上海目标2028年团餐、快餐、茶饮咖啡全链条智能化渗透率超70%，从15%到70%的跨越正在加速。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4892392.html"
+    }
+  ],
+  "comment": "算力竞赛进入精细化阶段：巨头一边冲刺吉瓦级大项目，一边布局小型算力快速落地，AI基础设施生态日趋多元。"
+},
+{
   "date": "2026-09-18",
   "title": "AI新闻 | 英伟达芯片销量将翻倍，Agent时代加速到来",
   "summary": "黄仁勋预测英伟达2027年芯片销量翻倍，AI算力需求持续爆发；vivo蓝河操作系统向AgentOS转型，AI从对话走向自主执行；字节旗下AI制药公司Anew独立融资15亿美元；腾讯阿里字节纷纷为AI Agent构建运行环境；超七成用户拒绝让AI完全控制电脑，安全顾虑成普及关键。",
