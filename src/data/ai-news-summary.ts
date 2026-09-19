@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-20",
+  "title": "AI新闻 | 千问同传模型发布，华为昇腾跨过生态拐点",
+  "summary": "今日AI领域动态密集：千问发布Qwen3.8-LiveTranslate同声传译大模型，延迟降至2.3秒；华为宣布昇腾已跨过生态拐点，CANN社区成国内最活跃；OpenAI等四巨头因呼吁放缓AI研发遭反垄断起诉；智谱ZCode被曝静默上传用户代码历史引发安全担忧；华为云全面转向Agentic Cloud战略。",
+  "newsItems": [
+    {
+      "title": "千问发布同声传译大模型Qwen3.8-LiveTranslate",
+      "summary": "9月19日，千问大模型正式发布Qwen3.8-LiveTranslate同声传译模型，采用Interleave架构重构实时同传，字均延迟从2.8秒降至2.3秒，准确度、流畅度、简洁度全面提升。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3990012778757129"
+    },
+    {
+      "title": "华为：昇腾已跨过生态拐点，有能力构建AI新生态",
+      "summary": "华为计算战略与业务发展部部长朱照生表示，昇腾已跨越生态拐点，CANN开源社区月均活跃用户超5200人，自今年6月起成为国内活跃度最高的开源社区，完全有能力在Agentic时代构建AI新生态。",
+      "source": "36氪",
+      "category": "AI芯片",
+      "url": "https://www.36kr.com/newsflashes/3989953466940166"
+    },
+    {
+      "title": "OpenAI等四家企业遭起诉，被指控合谋管控AI发展节奏",
+      "summary": "Anthropic、OpenAI、SpaceXAI及谷歌因呼吁协同放缓AI研发速度被指控存在串通行为。诉状指出这些企业以安全为名呼吁放缓研发，实际目的是巩固自身优势并打压竞争者。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/newsflashes/3989670755253248"
+    },
+    {
+      "title": "智谱AI编程工具ZCode被扒静默上传完整Git历史",
+      "summary": "开发者发现智谱AI编程桌面端ZCode存在严重隐私问题：登录后会在后台静默将完整工作区（包括.git历史、LFS大文件缓存、reflog和全局配置）打包上传，引发开发者对代码安全的担忧。",
+      "source": "开源中国",
+      "category": "AI安全",
+      "url": "https://www.oschina.net/news/502589"
+    },
+    {
+      "title": "华为云All in Agentic Cloud，灵衢昇腾950智算集群全球上线",
+      "summary": "华为云全联接大会提出Agentic Cloud战略，CEO周跃峰表示智能体时代基础设施核心是让每一个Token更高效。灵衢昇腾950智算集群全球上线，标志着华为云全面转向智能体基础设施。",
+      "source": "开源中国",
+      "category": "AI基础设施",
+      "url": "https://www.oschina.net/news/502586/hc-agentic-infra-industry-ai"
+    }
+  ],
+  "comment": "AI基础设施生态加速成熟，但隐私和竞争问题也随之凸显，技术发展需要更透明的治理机制。"
+},
+{
   "date": "2026-09-19",
   "title": "AI新闻 | Anthropic年底建5GW算力，Naive AI估值14亿美元",
   "summary": "Anthropic计划年底前建成5吉瓦算力，加速AI基础设施布局；大模型初创Naive AI完成4亿美元融资估值达14亿美元，腾讯IDG等参投；MiniMax Code CLI以MIT协议正式开源；美AI巨头转向20-30MW小型算力部署；AI餐饮渗透率仅15%，上海目标2028年超70%。",
