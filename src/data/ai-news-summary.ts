@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-21",
+  "title": "AI新闻 | OpenAI烧钱2800亿，Anthropic筹备新模型，谷歌千亿押注芬兰",
+  "summary": "OpenAI预计到2030年将消耗近2800亿美元现金，算力军备竞赛持续升温；Anthropic考虑在IPO前发布新模型应对GPT-6 Astra势头；谷歌宣布两年内投资130亿欧元在芬兰建AI基础设施并签署核电协议；虎嗅深度探讨AGI时代的\"关机键\"问题；AI新顶流Jev刷屏全球却一句话不说，展示多模态新方向。",
+  "newsItems": [
+    {
+      "title": "OpenAI预计到2030年底将消耗近2800亿美元现金",
+      "summary": "据报道，OpenAI预计到2030年底将消耗近2800亿美元现金，凸显AI基础设施投资的巨大规模和商业化压力，算力军备竞赛进入白热化阶段。",
+      "source": "36氪",
+      "category": "AI投资",
+      "url": "https://www.36kr.com/newsflashes/3991482735016968"
+    },
+    {
+      "title": "Anthropic据悉考虑在IPO前发布新AI模型",
+      "summary": "Anthropic正考虑推出新模型以应对OpenAI GPT-6 Astra的势头。据Ramp数据，GPT-6 Astra约占企业AI支出的13%，Anthropic旗下Claude Fable约占8%，竞争格局持续演变。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/3991399772371972"
+    },
+    {
+      "title": "谷歌砸千亿跑去芬兰建AI基础设施，美国拟管AI出口",
+      "summary": "谷歌宣布未来两年在芬兰投资130亿欧元建设AI基础设施，并购买芬兰核电站一半电力，签下22年核电协议。这是谷歌在欧洲最大单笔投资，也是美国以外首份核电采购协议，AI巨头已等不及美国电网扩容。",
+      "source": "虎嗅",
+      "category": "AI基础设施",
+      "url": "https://www.huxiu.com/article/4892690.html"
+    },
+    {
+      "title": "欢迎来到AGI时代，但关机键在哪里？",
+      "summary": "虎嗅深度文章指出，2026年9月这一次\"AGI来了\"确实不同。OpenAI发布新模型后，AI能力跃升引发对AGI治理的深层思考：当AI系统越来越强大，谁来掌控\"关机键\"？",
+      "source": "虎嗅",
+      "category": "AI治理",
+      "url": "https://www.huxiu.com/article/4892725.html"
+    },
+    {
+      "title": "刷屏全球的AI新顶流Jev：一句话都不说，到底怎么玩？",
+      "summary": "AI领域新顶流Jev刷屏全球，它并不说话。OpenAI研究员Diogo Almeida参与研发的这款模型，打破了大语言模型\"能写能聊\"的主流方向，展示了多模态交互的全新可能性。",
+      "source": "虎嗅",
+      "category": "AI产品",
+      "url": "https://www.huxiu.com/article/4892713.html"
+    }
+  ],
+  "comment": "算力军备竞赛进入千亿级别，核电成为AI基础设施新选项，但AGI治理问题亟需回答——技术狂奔的同时，谁来按关机键？"
+},
+{
   "date": "2026-09-20",
   "title": "AI新闻 | 千问同传模型发布，华为昇腾跨过生态拐点",
   "summary": "今日AI领域动态密集：千问发布Qwen3.8-LiveTranslate同声传译大模型，延迟降至2.3秒；华为宣布昇腾已跨过生态拐点，CANN社区成国内最活跃；OpenAI等四巨头因呼吁放缓AI研发遭反垄断起诉；智谱ZCode被曝静默上传用户代码历史引发安全担忧；华为云全面转向Agentic Cloud战略。",
