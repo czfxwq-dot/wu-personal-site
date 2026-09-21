@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-22",
+  "title": "AI新闻 | 微软AI重写Copilot运行时，华为上线鸿蒙编码大模型，Google开源Agent编排器",
+  "summary": "微软工程师花12万美元让AI重写Copilot运行时，43万行TS变80万行Rust，性能提升15.9倍；华为云码道上线鸿蒙编码大模型，打造全球首个专为鸿蒙生态打造的AI编码智能体；Google低调开源Agent编排器AX，可在集群中跑“几十亿个”Agent任务；智谱ZCode被曝静默上传用户数据引发安全担忧；黄仁勋专访回应“AI十年内灭绝人类”论断。",
+  "newsItems": [
+    {
+      "title": "微软工程师花12万美元让AI重写Copilot运行时：43万行TS变80万行Rust，快15.9倍",
+      "summary": "微软用AI agents将GitHub Copilot运行时全部从TypeScript迁移到Rust，花费12万美元token费用，代码量从43万行增至80万行，性能提升×15.9。这是AI重写AI基础设施的典型案例。",
+      "source": "开源中国",
+      "category": "AI工程",
+      "url": "https://www.oschina.net/news/502646/ms-agentically-ports-copilot-runtime-to-rust-for-120k"
+    },
+    {
+      "title": "华为云码道上线鸿蒙编码大模型，面向鸿蒙开发者全面升级",
+      "summary": "9月21日，华为云码道CodeArts代码智能体发布“鸿蒙编码大模型+码道鸿蒙智能体+鸿蒙开发者实践中心”三大核心能力，打造全球首个且唯一专为鸿蒙生态打造的AI编码智能体。",
+      "source": "开源中国",
+      "category": "AI编程",
+      "url": "https://www.oschina.net/news/502645/hw-codearts"
+    },
+    {
+      "title": "Google低调开源AX：把Agent当集群工作负载跑的声明式编排器",
+      "summary": "Google开源了声明式Agent编排器AX，宣称能在一个集群中跑“几十亿个”自主Agent任务。接口类似Kubernetes，任务、工作区全部基于ax.io/v1alpha1 API，是Agent基础设施层的重要探索。",
+      "source": "开源中国",
+      "category": "AI基础设施",
+      "url": "https://www.oschina.net/news/502639/google-ax"
+    },
+    {
+      "title": "智谱ZCode被曝静默上传用户数据，是否涉数据出境？",
+      "summary": "智谱AI编程工具ZCode被曝出默认把登录用户工作区数据打包加密上传至香港阿里云OSS存储桶。智谱已致歉并开源代码，但数据出境合规问题引发行业对AI工具安全性的深层担忧。",
+      "source": "虎嗅",
+      "category": "AI安全",
+      "url": "https://www.huxiu.com/article/4893000.html"
+    },
+    {
+      "title": "黄仁勋专访火力全开：“AI十年内灭绝人类”完全错了",
+      "summary": "黄仁勋在CBS专访中明确回应“AI减速”议题：“不管别人怎么做，我们都应该尽可能快地前进”。他认为“AI十年内灭绝人类”的论断完全错误，同时批评了近期硅谷不断升温的减速主张。",
+      "source": "虎嗅",
+      "category": "AI舆论",
+      "url": "https://www.huxiu.com/article/4892893.html"
+    }
+  ],
+  "comment": "AI工具开始重写自己的基础设施，Agent编排走向集群化，但ZCode数据上传事件提醒我们：能力越大，安全责任越大。"
+},
+{
   "date": "2026-09-21",
   "title": "AI新闻 | OpenAI烧钱2800亿，Anthropic筹备新模型，谷歌千亿押注芬兰",
   "summary": "OpenAI预计到2030年将消耗近2800亿美元现金，算力军备竞赛持续升温；Anthropic考虑在IPO前发布新模型应对GPT-6 Astra势头；谷歌宣布两年内投资130亿欧元在芬兰建AI基础设施并签署核电协议；虎嗅深度探讨AGI时代的\"关机键\"问题；AI新顶流Jev刷屏全球却一句话不说，展示多模态新方向。",
