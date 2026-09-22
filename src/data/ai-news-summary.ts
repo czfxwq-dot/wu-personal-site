@@ -23,6 +23,50 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
+
+{
+  "date": "2026-09-23",
+  "title": "AI新闻 | 埃森哲联手AWS推AI服务，Meta智能体Muse大火，特斯拉来华寻机器人供应链",
+  "summary": "埃森哲与AWS合作为中型企业推出六项AI及云转型服务；Meta个人AI智能体Muse上线两周登顶应用榜，扎克伯格身家单日增1675亿元；特斯拉团队来华审核供应商寻找Optimus量产方案；AI行业催生新岗位但暴露就业替代尴尬事实；SpaceXAI发布Grok 4.7对标Claude，价格砍到三分之一。",
+  "newsItems": [
+    {
+      "title": "埃森哲与AWS合作，为中型企业推出六项AI及云服务",
+      "summary": "埃森哲宣布与亚马逊云科技合作，通过新成立的Accenture Edge业务，为年营收3亿至30亿美元的中型企业提供AI及云转型服务，推出六项可直接部署的解决方案。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/3994552310747271"
+    },
+    {
+      "title": "\"帮你干活\"的AI大火，扎克伯格身家一夜暴增1675亿元",
+      "summary": "Meta新推的个人AI智能体Muse上线不到两周，已同时登顶美国App Store和Google Play免费应用榜。Meta当天大涨超11%，扎克伯格预估净资产单日增加约250亿美元。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4893300.html"
+    },
+    {
+      "title": "美国限制中国机器人，特斯拉却来中国找供应链",
+      "summary": "特斯拉管理人员和工程师近期开始审核中国供应商，涉及三花智控、均胜电子、拓普集团等浙江企业，寻找Optimus人形机器人的量产答案。",
+      "source": "虎嗅",
+      "category": "AI产业",
+      "url": "https://www.huxiu.com/article/4893331.html"
+    },
+    {
+      "title": "AI行业最热门的新岗位，暴露了一个尴尬的事实",
+      "summary": "AI已成了管理层重新计算人力需求时绕不开的变量，许多职业正被拆成一项项机器可以参与、压价甚至接管的任务。AI行业催生新岗位的同时，就业替代的尴尬事实日益凸显。",
+      "source": "虎嗅",
+      "category": "AI观察",
+      "url": "https://www.huxiu.com/article/4893332.html"
+    },
+    {
+      "title": "SpaceXAI发布Grok 4.7：跟Claude Fable同榜，价格砍到三分之一",
+      "summary": "xAI发布Grok 4.7，官方称其为最擅长编码和知识工作的模型，比同级模型快两倍、便宜一半。CursorBench榜单直接对标Claude，大模型价格战全面开打。",
+      "source": "开源中国",
+      "category": "AI模型",
+      "url": "https://www.oschina.net/news/502663/x-ai-grok-4-7"
+    }
+  ],
+  "comment": "从企业AI服务到个人智能体，从机器人供应链到大模型价格战，AI产业链各环节加速商业化落地。"
+},
 {
   "date": "2026-09-22",
   "title": "AI新闻 | 微软AI重写Copilot运行时，华为上线鸿蒙编码大模型，Google开源Agent编排器",
@@ -1786,7 +1830,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   ],
   "comment": "AI正在从两个方向同时突破：向上用数学证明展示推理天花板，向下用眼镜和机器人渗透日常生活——而谷歌的内乱提醒我们，技术竞争的本质是人才竞争。"
 },
-  {
+{
     date: '2026-08-14',
     title: 'AI新闻 | 腾讯AI年资本开支直奔2000亿 + 谷歌联合创始人督战Gemini研发 + 中美开源模型大会师五模横评 + DeepSeek-V4-Pro正式版上线 + Zed发布多人协作AI编程环境Delta',
     summary: '今日AI行业五大看点：腾讯Q2财报显示AI投入从保守转向激进，单季资本开支528亿元，自由现金流首次转负至-138亿元，马化腾提出构建AI生态新战略，年化AI资本开支直奔2000亿；谷歌因算力受限导致大模型迭代缓慢，联合创始人谢尔盖布林亲自督战Gemini研发，推动资源向递归自我改进方向倾斜；中美开源模型密集发布，Kimi K3、Qwen3.8-Max、DeepSeek V4 Pro、Meta Muse Glimmer、英伟达Nemotron 3.5 Lightning五大模型同台竞技；DeepSeek-V4-Pro正式版上线，Agent能力大幅提升；Zed编辑器发布Delta多人协作AI编程环境，标志着AI编程从单人工具走向团队协作。',
@@ -1829,7 +1873,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词豪赌与开源。腾讯单季资本开支528亿、自由现金流首次转负，是All in AI最激进的表态；谷歌联合创始人亲自督战Gemini研发，说明大厂在AI竞赛中已容不得半点松懈；中美五大开源模型同台竞技，开源生态迎来最繁荣时刻；Zed Delta的发布则预示AI编程正从单人工具走向团队协作新范式。'
   },
-  {
+{
     date: '2026-08-13',
     title: 'AI新闻 | 鸿海Q4出货英伟达Vera Rubin平台 + 腾讯AI开始算回报 + Agent拼生产系统 + 攻击性蒸馏暴露思维链漏洞 + 荣耀发布首款机器人手机',
     summary: '今日AI行业五大看点：鸿海宣布第四季度开始出货英伟达新一代Vera Rubin AI平台，大规模AI Agent工作负载下可实现最高10倍吞吐量提升；腾讯Q2财报显示AI算力投入开始看到回报，刘炽平称多款新应用表现良好；虎嗅深度分析指出Agent竞争正从Skill转向生产系统整合；美国前沿模型厂商暴露攻击性蒸馏漏洞，思维链可被低成本提取；荣耀发布首款机器人手机Robot Phone，9999元起售。',
@@ -1872,7 +1916,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"回报与系统"。鸿海Q4出货Vera Rubin平台说明英伟达芯片迭代不停；腾讯首次为AI支付影响资本配置的现金账单并开始算回报；Agent竞争从Skill转向生产系统整合；攻击性蒸馏漏洞提醒我们模型安全仍有盲区。AI行业正从"投入期"走向"算账期"，能算清回报的公司才能走下一程。'
   },
-  {
+{
     date: '2026-08-12',
     title: 'AI新闻 | 国产大模型集体涨价美国降价 + IBM与Together AI签2.4亿美元算力协议 + 微信灰度上线AI帮写 + 扎克伯格万字长文定义超级智能 + DeepSeek招土木工程师建数据中心',
     summary: '今日AI行业五大看点：国产大模型集体涨价（DeepSeek、智谱、月之暗面相继上调API价格），而美国模型却在降价（Anthropic取消Claude Sonnet 5涨价计划），token定价逻辑出现分化；IBM与Together AI签署2.4亿美元协议，将在IBM Cloud部署英伟达HGX B300推理集群；微信灰度上线"AI帮写"和"AI点评"功能，朋友圈AI化正式启动；扎克伯格在Meta官网发表万字哲学宣言，探讨超级智能归属问题；DeepSeek招聘土木工程师，AI基础设施扩张向传统资源领域延伸。',
@@ -1915,7 +1959,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"分化"。国产模型涨价、美国模型降价——大模型token定价正从"价格战"走向"价值战"；IBM 2.4亿美元算力订单、DeepSeek招土木工程师——AI竞争从算法层向物理基础设施层延伸；微信AI化、扎克伯格万字宣言——AI正从技术圈走向全民议题。分化意味着行业正在从"一窝蜂"走向"各找定位"，这是成熟的信号。'
   },
-  {
+{
     date: '2026-08-11',
     title: 'AI新闻 | 英伟达牵头组建5000亿美元AI算力融资平台 + Anthropic联手麦格理GIC建数据中心 + OpenAI完成70亿美元员工持股回购估值达8520亿 + 200位AI专家联名警告经济冲击风险 + 灵巧手半年融资250亿仍未跑出标准手',
     summary: '今日AI行业五大看点：英伟达宣布与阿波罗、贝莱德、黑石等6家顶尖金融机构合作，打造可调动5000亿美元的AI计算基础设施融资平台，从芯片供应商向算力金融巨头转型；Anthropic与麦格理、新加坡主权基金GIC联手成立Theseus Infrastructure数据中心平台；OpenAI完成70亿美元员工持股回购，估值达8520亿美元；斯坦福大学发起公开声明，200位AI专家和经济学家（含16位诺奖得主）联名警告AI可能带来的经济剧变风险；人形机器人灵巧手赛道半年融资250亿元，但仍未形成统一标准。',
@@ -1958,7 +2002,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"算力金融化"。英伟达5000亿美元融资平台、Anthropic联手主权基金建数据中心——AI算力正从"技术竞赛"进入"金融竞赛"阶段，资本规模决定算力规模、算力规模决定模型能力。200位专家联名警告经济冲击，则提醒我们：AI的颠覆速度可能远超社会适应速度。'
   },
-  {
+{
     date: '2026-08-10',
     title: 'AI新闻 | 苹果测试长鑫存储芯片 + 首个全国产10万卡AI超集群投用 + 摩尔线程半年营收暴增147% + 创始人模式挽救谷歌AI + AI制药新痛点',
     summary: '今日AI行业五大看点：苹果被曝正在iPhone和MacBook中测试长鑫存储芯片，以缓解AI热潮引发的内存短缺，中美芯片供应链深度交织；我国首个全国产10万卡人工智能超集群正式投用，全国算力"一张网"加速成形；国产GPU龙头摩尔线程上半年营收17.36亿元，同比大增147%，已超2025年全年；虎嗅深度分析称"创始人模式"才能挽救谷歌AI，揭示谷歌内部算力分配困局与Anthropic合作内幕；AI制药领域面临模型可解释性不足的新痛点，制约AI药物最终成药率。',
@@ -2001,7 +2045,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"算力自主"。苹果测试国产芯片、10万卡超集群投用、摩尔线程营收翻倍——中国AI算力供应链正在从"卡脖子"走向"自主可控"，而谷歌的困局则提醒我们：算力之外，组织文化同样是AI竞赛的胜负手。'
   },
-  {
+{
     date: '2026-08-09',
     title: 'AI新闻 | Apple Intelligence接入阿里千问 + 腾讯WorkBuddy成最高优先级AI产品 + Cloudflare称AI机器人流量已超人类 + 亚马逊数据中心或成美国最大碳排放源 + 湖北首家宇树科技产业学院成立',
     summary: '今日AI行业五大看点：苹果官网显示Apple Intelligence可配合阿里千问模型工作，国行AI落地再进一步；腾讯WorkBuddy被曝为AI应用战略优先级最高产品，马化腾亲自参与产品会议，内部"一路绿灯"；Cloudflare披露AI机器人流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000；亚马逊在得州筹建数据中心配套天然气发电厂，获批年排3300万吨CO₂，或成美国最大碳排放源；湖北省首家宇树科技产业学院成立，聚焦机器人调试运维人才培育。',
@@ -2044,7 +2088,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"AI全面渗透"。苹果牵手千问落地国行、腾讯All in WorkBuddy、AI流量超越人类——AI正从工具变成基础设施，而数据中心碳排放和机器人人才缺口则提醒我们：基础设施的代价和人才培养的紧迫同样不容忽视。'
   },
-  {
+{
     date: '2026-08-08',
     title: 'AI新闻 | 千禧对冲基金联手Anthropic打造智能风控 + SpaceX与英伟达合作发射百万颗卫星建天基超算 + 美国政府砸110亿美元成AI最猛投资人 + Jeff DeanYC访谈谈AI 1%原则 + Prime Agent开源编程Agent超越人类专家基线',
     summary: '今日AI行业五大看点：千禧管理对冲基金与Anthropic合作开发AI驱动风险分析师，从不同资产类别挖掘风险洞见，标志顶级金融机构全面拥抱大模型；SpaceX与英伟达联手打造Starmind天基超算系统，计划发射100万颗配备Rubin和Vera CPU的AI卫星；美国政府已向Intel等11家AI芯片公司投入约110.5亿美元股权或准股权投资，成为AI领域最激进投资人；Jeff Dean在YC最新访谈中分享"构建AI的1%原则"；Prime Intellect开源Prime Agent编程Agent，在ARC-AGI 3基准测试上超越人类专家基线。',
@@ -2087,7 +2131,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"资本涌入与能力跃迁"。从千禧对冲基金到白宫110亿美元，资本正以前所未有的速度涌入AI赛道；SpaceX百万颗AI卫星把算力送上太空，想象力拉满；Prime Agent在ARC-AGI 3超越人类专家基线，则提醒我们AI编程能力正在快速逼近甚至超越顶尖人类水平。'
   },
-  {
+{
     date: '2026-08-07',
     title: 'AI新闻 | 字节跳动讨论训练5万亿参数模型 + 特斯拉168亿美元建AI芯片工厂 + 阿里云Wan3.0视频模型公测 + ChatGPT接入Adobe全套创意工具 + 高盛上调AI服务器PCB市场预测至840亿美元',
     summary: '今日AI行业五大看点：字节跳动正在讨论训练参数规模超5万亿的大模型，超越阿里Qwen和月之暗面K3，成为国内已知最大参数模型；SpaceX与特斯拉首期投入168亿美元在得州建设Terafab先进AI芯片制造基地，马斯克誓言把尖端制造带回美国；阿里云视频生成模型Wan3.0开启公测，单次可生成30秒视频并首次支持文档格式输入；OpenAI与Adobe扩大合作，ChatGPT可直接调用Photoshop、Lightroom等70多款创意工具；高盛大幅上调AI服务器PCB市场预测，2028年规模将达840亿美元，复合增长率148%。',
@@ -2130,7 +2174,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"规模竞赛与全栈整合"。字节5万亿参数模型刷新国内纪录，特斯拉168亿美元自建芯片工厂，说明AI竞争已从模型层延伸至算力基础设施层；Wan3.0公测和ChatGPT接入Adobe全套工具，则表明AI正加速渗透内容创作和生产力工具链；高盛上调PCB市场预测至840亿美元，从供应链侧印证AI硬件需求仍在指数级增长。'
   },
-  {
+{
     date: '2026-08-06',
     title: 'AI新闻 | 谷歌AI巨震Jeff Dean离职创业 + Anthropic为Claude组建内部芯片团队 + 谷歌洽谈15亿美元收购AI编码Agent公司Mechanize + 阶跃星辰确立大模型与智能体终端双线战略 + Cloudflare开源AI智能体平台Cloudflare OS',
     summary: '今日AI行业五大看点：谷歌AI遭遇人事巨震，首席科学家Jeff Dean宣布离职，与Sanjay Ghemawat、Oriol Vinyals等三位大牛出走创业，Gemini负责人Demis Hassabis转任主席；Anthropic确认正在为Claude组建内部芯片团队，加速自研算力布局；谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易；阶跃星辰内部确立大模型与智能体终端两条战略线，手机业务独立运营并将进入海外市场；Cloudflare宣布开源面向AI智能体和企业工作流程的平台Cloudflare OS。',
@@ -2173,7 +2217,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"人事震荡与Agent崛起"。谷歌AI遭遇Jeff Dean离职等巨震，一个时代落幕；Anthropic自研芯片、谷歌15亿美元收购Mechanize，说明AI公司正从"模型竞赛"转向"全栈能力竞赛"——芯片、Agent工具、平台生态缺一不可；阶跃星辰把手机作为大模型触达用户的载体，Cloudflare开源AI Agent平台，则预示AI正从云端走向终端、从工具走向协作平台。'
   },
-  {
+{
     date: '2026-08-05',
     title: 'AI新闻 | Anthropic签100亿美元算力协议 + 韩国2.5万亿韩元建AI算力中心 + 台积电CoWoS封装产能告急 + OpenAI内部模型Astra破解数学难题 + 灵光App闪应用创作者超400万',
     summary: '今日AI行业五大看点：Anthropic与一家AI云初创公司签署价值100亿美元的算力协议，AI算力军备竞赛持续升温；由三星SDS牵头的韩国国家人工智能算力中心正式开工，总投资2.5万亿韩元，预计2028年竣工；英伟达GPU订单挤爆台积电CoWoS封装产线，台积电被迫将核心封装产能进一步外包给日月光等厂商；OpenAI内部模型Astra在数学及理论计算机科学领域解出10个悬疑多年的开放难题；灵光App宣布"闪应用"创作者超400万人，绝大多数为无编程背景的普通用户，AI应用生态持续扩展。',
@@ -2216,7 +2260,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"算力饥渴与AI破圈"。Anthropic 100亿美元算力协议、韩国国家级算力中心开工、台积电CoWoS产能告急——三条新闻共同指向AI算力的全球性短缺已从芯片蔓延到封装和基础设施；OpenAI内部模型破解10个数学难题，说明AI正在突破人类智力边界；而灵光App 400万无编程背景的创作者，则展示了AI工具正在让"做应用"变成人人可为的事。'
   },
-  {
+{
     date: '2026-08-04',
     title: 'AI新闻 | 中国AI产业规模超1.2万亿同比增40% + 韩国AI芯片独角兽DeepX估值飙至22亿美元 + 摩根士丹利预计云计算支出2027年达1.2万亿美元 + Genspark发布全功能AI办公套件GenOffice + AI基建催生环保新赛道',
     summary: '今日AI行业五大看点：中国信通院测算2025年我国人工智能产业规模超1.2万亿元，同比增长40%，AI企业超6600家；韩国AI芯片设计企业DeepX估值暴涨4倍至22亿美元，反映AI芯片投资热度不减；摩根士丹利将全球云计算资本支出预期上调至2027年1.2万亿美元，AI需求持续超过供应；Genspark创始人景鲲发布全功能AI办公套件GenOffice，免费开源且1周开发完成；AI基建快速扩张催生环保新需求，水处理、节能改造等方向成为新增长点。',
@@ -2259,7 +2303,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"AI的规模效应"。中国AI产业规模破1.2万亿、云计算支出预计达1.2万亿美元，数字背后是AI从实验室走向基础设施的不可逆趋势。韩国AI芯片独角兽估值4倍暴涨，说明资本仍在加速押注上游算力。而Genspark用1人1周做出AI办公套件，则展示了AI工具本身的效率革命——当开发门槛降到这个程度，"做产品"的定义正在被重写。'
   },
-  {
+{
     date: '2026-08-03',
     title: 'AI新闻 | 谷歌地球叫停AI生图防假信息 + AI产业扩张致内存芯片短缺波及MacBook Air + 特斯拉拆汽车产线为Optimus机器人腾位 + AI医疗诊断一分钟出报告90%无需修改 + AI不会成世界主人但AI公司可能会',
     summary: '今日AI行业五大看点：谷歌地球推出AI图像生成功能不到48小时即被叫停，因可将虚构场景叠加在真实卫星图像上散播假信息；AI产业快速扩张导致全球内存芯片短缺，已从Mac mini蔓延至MacBook Air，部分型号需等待至8月下旬；特斯拉拆除弗里蒙特工厂Model S/X产线，为首代Optimus人形机器人产线腾出空间，标志从汽车公司向机器人公司转型；AI医疗诊断工具实现一分钟出报告、90%无需修改，大幅提升诊断效率；虎嗅深度分析指出AI本身不会统治世界，但AI公司可能通过控制数据和算力获得前所未有的权力。',
@@ -2302,7 +2346,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     ],
     comment: '今日关键词"AI的边界与代价"。谷歌地球AI生图48小时即被叫停，说明AI能力越强、滥用风险越大；内存芯片短缺从数据中心蔓延到消费端，AI的"饥饿"正在挤压普通消费者的利益；特斯拉拆汽车产线给机器人腾位，是产业转型的标志性一幕；AI医疗一分钟出报告展示了落地价值，而"AI公司可能成为世界主人"的警告则提醒我们：技术本身中性，但掌控技术的权力结构需要被审视。'
   },
-  {
+{
     date: '2026-08-02',
     title: 'AI新闻 | 美企换上中国大模型降本 + OpenAI IPO或推迟至明年 + 浙江定AI OPC标准 + 韩国半导体出口暴增179% + WPS展示AI Agent灵犀',
     summary: '今日AI行业五大看点：部分美国企业开始转向中国大模型以降低成本，Coinbase使用Kimi K3、Airbnb采用阿里Qwen模型，中国AI模型性价比获全球认可；OpenAI因投资者对现金消耗速度的担忧及Anthropic的竞争压力，IPO或推迟至明年；浙江实施人工智能OPC术语团体标准，将AI一人公司纳入规范定义；韩国7月半导体出口暴增179%至410亿美元，AI数据中心投资持续推动芯片需求；金山办公首次参展ChinaJoy展示AI Agent灵犀及WPS Comate。',
@@ -2344,5 +2388,5 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       }
     ],
     comment: '今日关键词"中国模型出海与OpenAI困局"。美国企业开始用中国大模型降本，说明性价比才是硬道理；OpenAI IPO推迟、Anthropic加速上市，AI行业格局正在从"一家独大"走向"双雄对峙"；浙江定义AI一人公司标准、韩国半导体因AI需求暴增179%，AI的影响正从软件层渗透到组织形态和全球贸易格局。'
-  },
+  }
 ];
