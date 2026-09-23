@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-23',
+    title: '1675亿、特斯拉来华和1/3价格——AI开始交作业了',
+    summary: '建站第152天。Meta个人AI智能体Muse上线两周登顶应用榜，扎克伯格身家单日增1675亿元；特斯拉团队来华审核供应商寻找Optimus量产方案；SpaceXAI发布Grok 4.7对标Claude价格砍到1/3。AI从云端走向落地，开始交作业了。'
+  },
+  {
     date: '2026-09-22',
     title: 'GPT-6降价、联合国AI辩论和端侧芯片——AI从能力战变成治理战',
     summary: '建站第151天。OpenAI发布GPT-6 Sol和Luna，API价格降50%；李飞飞、DeepSeek、月之暗面齐聚联合国讨论AI安全；高通发布2nm芯片端侧跑300亿参数模型。AI从能力竞赛转向治理竞赛。'
