@@ -23,6 +23,49 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
+{
+  "date": "2026-09-24",
+  "title": "AI新闻 | OpenAI赴联合国推AI标准，Meta Muse遭亚马逊封杀，小米18 Pro搭载MiMo大模型",
+  "summary": "OpenAI CEO Altman赴联合国推动全球AI安全标准；Meta智能体Muse爆火但遭亚马逊封杀，AI智能体商业化遇平台壁垒；创意从业者开始抵制AI生成内容；小米18 Pro搭载MiMo大模型和超级小爱2.0；工信部推进AI与通信融合。",
+  "newsItems": [
+    {
+      "title": "OpenAI CEO将出席联合国安理会，推动建立全球AI安全标准",
+      "summary": "OpenAI CEO Sam Altman将在联合国大会发表讲话，主张建立全球AI标准，以“务实中间派”立场回应AI失控担忧。此前Anthropic一名研究人员因安全担忧辞职，加剧了行业讨论。",
+      "source": "36氪",
+      "category": "AI治理",
+      "url": "https://www.36kr.com/newsflashes/3995923232657289"
+    },
+    {
+      "title": "Meta Muse智能体撞上亚马逊的“墙”",
+      "summary": "Meta个人AI智能体Muse爆火登顶美国应用榜，但亚马逊开始弹窗警告使用Muse购物的用户，称其属于“未授权AI智能体”。AI智能体商业化遭遇平台壁垒。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4893589.html"
+    },
+    {
+      "title": "生成式AI入侵，被喂食“泔水”的人开始抵抗",
+      "summary": "插画设计师晓菲拒绝客户用AI生成图让她描画的要求。越来越多创意从业者开始抵制AI“泔水”喂食，AI生成内容对原创行业的冲击正在引发广泛反思。",
+      "source": "虎嗅",
+      "category": "AI产业",
+      "url": "https://www.huxiu.com/article/4893593.html"
+    },
+    {
+      "title": "小米18 Pro系列发布：搭载MiMo大模型，超级小爱2.0能调用260+系统工具",
+      "summary": "小米18 Pro系列全球首发骁龙2nm芯片，搭载融入MiMo大模型的超级小爱2.0，可自主使用超260个系统工具。5999元起售，透明特别版9999元。",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://www.36kr.com/newsflashes/3995946059255686"
+    },
+    {
+      "title": "工信部：积极推进AI与信息通信融合，加快行业智能化升级",
+      "summary": "工信部副部长余晓晖在2026年中国国际信息通信展上表示，要超前研判AI对信息通信网络体系的变革性影响，加快信息通信网络和行业的智能化升级。",
+      "source": "36氪",
+      "category": "AI政策",
+      "url": "https://www.36kr.com/newsflashes/3995988885213320"
+    }
+  ],
+  "comment": "AI智能体从技术走向商业落地，平台博弈和原创保护成为新战场。"
+},
 
 {
   "date": "2026-09-23",
