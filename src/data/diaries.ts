@@ -12,6 +12,16 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-22',
+    title: 'GPT-6降价、联合国AI辩论和端侧芯片——AI从能力战变成治理战',
+    summary: '建站第151天。OpenAI发布GPT-6 Sol和Luna，API价格降50%；李飞飞、DeepSeek、月之暗面齐聚联合国讨论AI安全；高通发布2nm芯片端侧跑300亿参数模型。AI从能力竞赛转向治理竞赛。'
+  },
+  {
+    date: '2026-09-21',
+    title: '世界模型、万元机器人和天地算力——AI开始拥有身体',
+    summary: '建站第150天。李飞飞的世界模型让AI从生成内容走向理解世界；消费级人形机器人价格下探至万元级；SpaceX携手英伟达共建天地一体AI算力；日本政府为物理AI收集数据目标2040年产业规模20万亿日元。AI开始拥有身体。'
+  },
+  {
     date: '2026-09-20',
     title: '垄断诉讼、AI部队和开源逆袭——AI从技术战变成政治战',
     summary: '建站第149天。四大AI巨头被反垄断起诉，特朗普组建美军AI部队，开源模型token流量首超闭源占78.4%，Anthropic运营真实湿实验室。AI从技术竞赛全面升级为政治博弈。'
