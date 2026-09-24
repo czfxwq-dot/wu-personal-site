@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-25",
+  "title": "AI新闻 | 迪士尼设首位CTO全面拥抱AI，脑机接口大赛释放医保信号，四足机器人市场争榜",
+  "summary": "迪士尼设立百年首位CTO全面拥抱AI；医保局举办脑机接口大赛释放医疗AI落地信号；Counterpoint与IDC同日发榜四足机器人市场排名引争议；AI创业一天出产品被指最昂贵幻觉；AI生成内容治理成行业焦点。",
+  "newsItems": [
+    {
+      "title": "百年大厂迎来第一个CTO，迪士尼也要All in AI了",
+      "summary": "迪士尼设立公司百年历史中第一个首席技术官（CTO），职位聚焦AI技术。这位CTO是从一家新兴AI公司CEO位置上挖来的，有趣的是一年前该公司还被迪士尼发律师函警告。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4893839.html"
+    },
+    {
+      "title": "医保局下场办了场脑机接口大赛，透露什么信号",
+      "summary": "2026全球脑机接口×医保创新场景大赛决赛举行，251个项目在9类赛道角逐。意念传书脑控打字等技术亮相，脑机接口在渐冻症等医疗场景的应用需求迫切，医保局下场释放医疗AI落地加速信号。",
+      "source": "虎嗅",
+      "category": "AI医疗",
+      "url": "https://www.huxiu.com/article/4893868.html"
+    },
+    {
+      "title": "四足机器人：宇树第一，智元、云深处争第二",
+      "summary": "Counterpoint和IDC同日发布全球四足机器人市场报告，第一名均为宇树科技。但第二名排名出现分歧：Counterpoint按出货量排智元酷拓第二，IDC按收入排云深处第二，两套数字反映市场统计维度差异。",
+      "source": "虎嗅",
+      "category": "AI机器人",
+      "url": "https://www.huxiu.com/article/4893854.html"
+    },
+    {
+      "title": "一天做出产品，正在成为AI创业者最昂贵的幻觉",
+      "summary": "2024年马修·加拉格尔花2万美元用AI启动Medvi远程医疗公司，首年做出4.01亿美元销售额。但文章指出AI快速出产品的幻觉让很多创业者忽视深层问题，AI替代不了商业本质。",
+      "source": "虎嗅",
+      "category": "AI创业",
+      "url": "https://www.huxiu.com/article/4893886.html"
+    },
+    {
+      "title": "谁来阻止赛博洪水淹没世界",
+      "summary": "AI批量生成的低质内容（slop）成为年度热词。Spotify下架超7500万首AI生成歌曲，X平台Grok生图引发近10起诉讼。AI内容生产成本趋近于零，供给不再依靠人的创意，社区内容治理面临新挑战。",
+      "source": "虎嗅",
+      "category": "AI治理",
+      "url": "https://www.huxiu.com/article/4893586.html"
+    }
+  ],
+  "comment": "从迪士尼百年首设CTO到脑机接口进医保，AI正在从工具层走向战略层，但内容治理和创业幻觉提醒我们：技术加速不等于价值自动兑现。"
+},
+{
   "date": "2026-09-24",
   "title": "AI新闻 | OpenAI赴联合国推AI标准，Meta Muse遭亚马逊封杀，小米18 Pro搭载MiMo大模型",
   "summary": "OpenAI CEO Altman赴联合国推动全球AI安全标准；Meta智能体Muse爆火但遭亚马逊封杀，AI智能体商业化遇平台壁垒；创意从业者开始抵制AI生成内容；小米18 Pro搭载MiMo大模型和超级小爱2.0；工信部推进AI与通信融合。",
