@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-24',
+    title: '黄仁勋的工程化宣言、2万元机器人和迪士尼的AI赌注——AI从实验室走进产业',
+    summary: '建站第153天。黄仁勋接受纽约时报专访称AI风险应工程化而非神秘化；启元机器人19999元开卖复制消费电子打法；迪士尼任命百年首位CTO挖来Character.AI前CEO；豆包裁员对话团队砍半，高瓴合伙人跳槽DeepSeek。AI产业化拐点已到。'
+  },
+  {
     date: '2026-09-23',
     title: '1675亿、特斯拉来华和1/3价格——AI开始交作业了',
     summary: '建站第152天。Meta个人AI智能体Muse上线两周登顶应用榜，扎克伯格身家单日增1675亿元；特斯拉团队来华审核供应商寻找Optimus量产方案；SpaceXAI发布Grok 4.7对标Claude价格砍到1/3。AI从云端走向落地，开始交作业了。'
