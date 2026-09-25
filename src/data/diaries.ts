@@ -13,8 +13,8 @@ export interface DiaryEntry {
 export const diaries: DiaryEntry[] = [
   {
     date: '2026-09-25',
-    title: '7500万首、2万美元和251个项目——AI的三本账',
-    summary: '建站第154天。Spotify下架超7500万首AI生成歌曲；Medvi用2万美元AI启动做出4.01亿美元销售额却被指最昂贵的幻觉；医保局举办脑机接口大赛251个项目角逐；Counterpoint和IDC同日发布四足机器人排名出现分歧。AI从能不能做进入值不值得做。'
+    title: '苹果140亿参数跑上手机、DeepSeek桌面版偷跑和特斯拉机械手瓶颈——AI进入工程深水区',
+    summary: '建站第155天。苹果公布全产品线端侧AI能力矩阵，iPhone跑140亿参数模型；DeepSeek Harness桌面版预览偷跑，四种模式覆盖从标准到创造全场景；特斯拉Optimus量产受阻，机械手成规模化瓶颈；高盛预计五大云巨头AI基础设施支出明年达1.2万亿美元。AI进入工程深水区。'
   },
   {
     date: '2026-09-24',
