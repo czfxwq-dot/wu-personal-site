@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-25',
+    title: '7500万首、2万美元和251个项目——AI的三本账',
+    summary: '建站第154天。Spotify下架超7500万首AI生成歌曲；Medvi用2万美元AI启动做出4.01亿美元销售额却被指最昂贵的幻觉；医保局举办脑机接口大赛251个项目角逐；Counterpoint和IDC同日发布四足机器人排名出现分歧。AI从能不能做进入值不值得做。'
+  },
+  {
     date: '2026-09-24',
     title: '黄仁勋的工程化宣言、2万元机器人和迪士尼的AI赌注——AI从实验室走进产业',
     summary: '建站第153天。黄仁勋接受纽约时报专访称AI风险应工程化而非神秘化；启元机器人19999元开卖复制消费电子打法；迪士尼任命百年首位CTO挖来Character.AI前CEO；豆包裁员对话团队砍半，高瓴合伙人跳槽DeepSeek。AI产业化拐点已到。'
