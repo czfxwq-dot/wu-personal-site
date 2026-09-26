@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-26",
+  "title": "AI新闻 | IMF预测全球AI投资破2万亿，马斯克算力翻倍，AI眼镜新赛道升温",
+  "summary": "IMF预测2026年全球AI投资突破2万亿美元；马斯克计划年底将Colossus 2英伟达芯片翻倍至超百万块；影石创新布局AI眼镜采用分体电池设计；SAP高管回应AI是否带来SaaS末日；高阶智驾渗透率突破20%带动产业链高增。",
+  "newsItems": [
+    {
+      "title": "IMF：2026年全球AI投资规模或突破2万亿美元",
+      "summary": "国际货币基金组织发布年报表示，2025年AI投资已为美国GDP贡献约0.5个百分点，2026年全球私营部门AI投资可能超2万亿美元。但高额投资若回报不及预期，可能引发股市估值调整和裁员风险。",
+      "source": "36氪",
+      "category": "AI投资",
+      "url": "https://www.36kr.com/newsflashes/3998607176274049"
+    },
+    {
+      "title": "马斯克计划年底前将Colossus 2英伟达芯片数量翻倍",
+      "summary": "马斯克透露xAI的Colossus 2目前拥有11万块GB200和44万块GB300芯片，下周再增22万块GB300，11月、12月各预计上线22万块，年底芯片总量将翻倍以上，加速AI算力竞赛。",
+      "source": "36氪",
+      "category": "AI算力",
+      "url": "https://www.36kr.com/newsflashes/3998521879810183"
+    },
+    {
+      "title": "影石创新布局AI眼镜，采用分体电池设计",
+      "summary": "影石创新正在研发AI眼镜产品，获得可穿戴式眼镜专利，采用电池与眼镜主体分离的分体电池设计，减轻头部负重，与主流将电池塞入镜腿的方案明显不同。",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://www.36kr.com/newsflashes/3998333280227202"
+    },
+    {
+      "title": "AI会带来SaaS末日？SAP高管回应",
+      "summary": "SAP数据与分析业务总裁在云栖大会表示，AI发展速度已超过治理和风控机制开发速度，但目前还没有足够证据表明智能体已给企业运营带来颠覆性变化，尤其在财务领域。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4893961.html"
+    },
+    {
+      "title": "中信证券：高阶智驾渗透率突破20%，产业链持续受益",
+      "summary": "2026年上半年城市NOA在国内乘用车渗透率提升至20.9%，带动中大算力智驾芯片、激光雷达等出货量高增。L4自动驾驶商业化加速，多家公司已在标杆项目中兑现经济效益。",
+      "source": "36氪",
+      "category": "自动驾驶",
+      "url": "https://www.36kr.com/newsflashes/3998474433253504"
+    }
+  ],
+  "comment": "2万亿美元AI投资预测和百万芯片算力集群，标志着AI从技术竞赛进入资本军备阶段，但IMF的风险警告提醒：规模不等于回报。"
+},
+{
   "date": "2026-09-25",
   "title": "AI新闻 | 迪士尼设首位CTO全面拥抱AI，脑机接口大赛释放医保信号，四足机器人市场争榜",
   "summary": "迪士尼设立百年首位CTO全面拥抱AI；医保局举办脑机接口大赛释放医疗AI落地信号；Counterpoint与IDC同日发榜四足机器人市场排名引争议；AI创业一天出产品被指最昂贵幻觉；AI生成内容治理成行业焦点。",

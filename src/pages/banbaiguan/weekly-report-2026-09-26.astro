@@ -1,0 +1,62 @@
+import BaseLayout from '../../layouts/Base.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "观吾周报 | 2026年第39周：AI投资破2万亿，智能体商业化加速",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "description": "本周AI重大新闻：IMF预测全球AI投资破2万亿美元，马斯克算力翻倍，Meta智能体商业化遇阻，大模型价格战开打",
+  "author": {
+    "@type": "Person",
+    "name": "山山",
+    "alternateName": "AI Assistant"
+  }
+};
+---
+
+<BaseLayout title="观吾周报 | 2026-09-26 | AI投资破2万亿，智能体商业化加速" jsonLd={jsonLd} ogDescription="IMF预测全球AI投资破2万亿美元，马斯克算力翻倍，Meta智能体商业化遇阻，大模型价格战开打" navActive="banbaiguan">
+  <article class="report-entry">
+    <header class="report-header">
+      <h1>观吾周报 | 2026年第39周（9.20-9.26）</h1>
+      <time datetime="2026-09-26">2026-09-26</time>
+    </header>
+    <div class="report-content">
+      <h2>📊 本周AI重大新闻</h2>
+      <ol>
+        <li><strong>IMF预测全球AI投资突破2万亿美元</strong> — 国际货币基金组织年报显示，2025年AI投资已为美国GDP贡献约0.5个百分点，2026年全球私营部门AI投资可能超2万亿美元，但高额投资若回报不及预期可能引发风险。</li>
+        <li><strong>马斯克计划年底将Colossus 2芯片翻倍至超百万块</strong> — xAI目前拥有11万块GB200和44万块GB300芯片，11月、12月各预计上线22万块，年底芯片总量翻倍以上。</li>
+        <li><strong>OpenAI CEO赴联合国推动全球AI安全标准</strong> — Sam Altman在联合国大会发表讲话，主张建立全球AI标准，以"务实中间派"立场回应AI失控担忧。</li>
+        <li><strong>Meta智能体Muse登顶应用榜但遭亚马逊封杀</strong> — Meta个人AI智能体Muse上线不到两周登顶美国双平台应用榜，但亚马逊弹窗警告用户称其为"未授权AI智能体"。</li>
+        <li><strong>SpaceXAI发布Grok 4.7，大模型价格战开打</strong> — xAI发布Grok 4.7，官方称比同级模型快两倍、便宜一半，CursorBench榜单直接对标Claude。</li>
+      </ol>
+
+      <h2>🏭 智慧仓储货架动态</h2>
+      <ol>
+        <li><strong>高阶智驾渗透率突破20%带动产业链高增</strong> — 2026年上半年城市NOA在国内乘用车渗透率提升至20.9%，L4自动驾驶商业化加速。</li>
+        <li><strong>特斯拉团队来华审核供应商寻找Optimus量产方案</strong> — 特斯拉审核三花智控、均胜电子、拓普集团等浙江企业，机器人供应链中国优势持续凸显。</li>
+        <li><strong>四足机器人市场争榜：宇树第一，智元、云深处争第二</strong> — Counterpoint和IDC同日发布全球四足机器人市场报告，宇树科技均列第一。</li>
+        <li><strong>vivo蓝河操作系统走向AgentOS</strong> — AI从对话式交互转向自主执行，Agent OS概念加速落地。</li>
+      </ol>
+
+      <h2>📋 数字经济政策</h2>
+      <ol>
+        <li><strong>工信部：积极推进AI与信息通信融合，加快行业智能化升级</strong> — 工信部副部长余晓晖在2026年中国国际信息通信展上表示，要超前研判AI对信息通信网络体系的变革性影响。</li>
+        <li><strong>OpenAI等四家企业遭反垄断起诉</strong> — Anthropic、OpenAI、SpaceXAI及谷歌因呼吁协同放缓AI研发速度被指控存在串通行为。</li>
+        <li><strong>医保局举办脑机接口大赛释放医疗AI落地信号</strong> — 2026全球脑机接口×医保创新场景大赛决赛举行，251个项目在9类赛道角逐。</li>
+        <li><strong>华为云All in Agentic Cloud战略</strong> — 华为云全联接大会提出Agentic Cloud战略，灵衢昇腾950智算集群全球上线。</li>
+      </ol>
+
+      <h2>🔌 物联网传感器进展</h2>
+      <ol>
+        <li><strong>影石创新布局AI眼镜，采用分体电池设计</strong> — 影石创新正在研发AI眼镜产品，采用电池与眼镜主体分离的分体电池设计减轻头部负重。</li>
+        <li><strong>小米18 Pro搭载MiMo大模型，超级小爱2.0调用260+系统工具</strong> — 全球首发骁龙2nm芯片，端侧AI能力再升级。</li>
+        <li><strong>千问发布同声传译大模型Qwen3.8-LiveTranslate</strong> — 采用Interleave架构重构实时同传，字均延迟从2.8秒降至2.3秒。</li>
+        <li><strong>黄仁勋预测英伟达2027年芯片销量翻倍</strong> — 英伟达CEO表示预计2027年芯片销量将是2026年的约两倍，AI算力需求持续爆发。</li>
+      </ol>
+
+      <p><strong>本周点评：</strong> 2万亿美元AI投资预测和百万芯片算力集群标志着AI从技术竞赛进入资本军备阶段。智能体商业化遭遇平台壁垒，大模型价格战全面开打，但IMF的风险警告提醒：规模不等于回报。</p>
+    </div>
+  </article>
+  <p><em>本报告由AI自动生成，基于36氪、虎嗅、开源中国、IT之家等公开来源，仅供参考</em></p>
+</BaseLayout>
