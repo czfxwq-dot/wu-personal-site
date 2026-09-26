@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-27",
+  "title": "AI新闻 | 中美AI政策对话升温，Anthropic抢建吉瓦级算力中心，大模型价格战白热化",
+  "summary": "中美就AI治理深入讨论，美方改用\"超级智能\"表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元；Meta AI产品Muse曝安全漏洞。",
+  "newsItems": [
+    {
+      "title": "外交部发言人就人工智能问题答记者问",
+      "summary": "外交部发言人回应美方用\"超级智能\"代替\"人工智能\"的表述，表示中方重视美方立场，中美元首会晤时就AI问题深入讨论，各方应结合技术发展加强交流。",
+      "source": "36氪",
+      "category": "AI政策",
+      "url": "https://www.36kr.com/newsflashes/4000094842769289"
+    },
+    {
+      "title": "Anthropic洽谈1吉瓦数据中心容量交易",
+      "summary": "Claude开发商Anthropic正与阿波罗全球管理控股的数据中心开发商谈判，拟租赁最高1吉瓦算力容量，显示AI公司对超大规模算力的迫切需求。",
+      "source": "36氪",
+      "category": "AI算力",
+      "url": "https://www.36kr.com/newsflashes/3999708319895426"
+    },
+    {
+      "title": "全世界搞AI的都在抢中国电池，订单狂翻几十倍",
+      "summary": "AI算力中心耗电量巨大，一座大型算力中心年电费达数十亿元。GPU芯片吃电推动储能需求爆发，中国电池企业订单激增，AI基建带动能源供应链重构。",
+      "source": "虎嗅",
+      "category": "AI能源",
+      "url": "https://www.huxiu.com/article/4894068.html"
+    },
+    {
+      "title": "大模型价格战持续升温，智谱市值跌至3000亿港元",
+      "summary": "国内外头部大模型纷纷降价，智谱港股股价持续下跌，总市值回落至3000亿港元左右。今年1月上市发行价116.2港元，6月曾升至2980港元高位，目前波动剧烈。",
+      "source": "虎嗅",
+      "category": "大模型",
+      "url": "https://www.huxiu.com/article/4894049.html"
+    },
+    {
+      "title": "Meta AI产品Muse曝两处安全漏洞",
+      "summary": "Meta的AI产品Muse被发现存在安全漏洞，攻击者可访问用户专属虚拟机获取邮件、文档等数据。漏洞由外部研究员通过漏洞赏金计划上报，Meta拟加强风险提示。",
+      "source": "36氪",
+      "category": "AI安全",
+      "url": "https://www.36kr.com/newsflashes/4000034032439430"
+    }
+  ],
+  "comment": "AI竞赛从模型层向算力基建和能源供应链延伸，政策治理与安全议题同步升温，行业进入深水区。"
+},
+{
   "date": "2026-09-26",
   "title": "AI新闻 | IMF预测全球AI投资破2万亿，马斯克算力翻倍，AI眼镜新赛道升温",
   "summary": "IMF预测2026年全球AI投资突破2万亿美元；马斯克计划年底将Colossus 2英伟达芯片翻倍至超百万块；影石创新布局AI眼镜采用分体电池设计；SAP高管回应AI是否带来SaaS末日；高阶智驾渗透率突破20%带动产业链高增。",
