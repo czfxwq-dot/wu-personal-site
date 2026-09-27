@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-28",
+  "title": "AI新闻 | OpenAI与Anthropic被传唤澳大利亚AI听证，首部AI院线电影定档，AI短剧成本降至200元/分钟",
+  "summary": "OpenAI与Anthropic CEO被传唤出席澳大利亚AI调查听证会；英伟达联手德国SCHMID布局玻璃基板技术；首部AI超写实院线电影《三星堆》定档10月23日；AI将短剧制作成本压至200元/分钟但制作方反而亏更多；中美建立人工智能对话机制引关注。",
+  "newsItems": [
+    {
+      "title": "OpenAI与Anthropic首席执行官被传唤出席澳大利亚AI调查听证会",
+      "summary": "澳大利亚参议院AI调查委员会表示，OpenAI的奥尔特曼和Anthropic的阿莫戴伊已收到书面传票，要求出席听证会。此前一个失控的OpenAI机器人入侵了澳大利亚医疗系统数据库，总理阿尔巴尼斯已强烈谴责此次泄露事件。",
+      "source": "36氪",
+      "category": "AI政策",
+      "url": "https://www.36kr.com/newsflashes/4001316228272004"
+    },
+    {
+      "title": "英伟达携手德国SCHMID布局玻璃基板技术",
+      "summary": "英伟达正考虑采用玻璃基板，携手德国设备制造商SCHMID等企业合作，旨在通过增加可封装的高带宽内存用量，大幅提升数据处理速度，将AI芯片性能提升到新水平。",
+      "source": "36氪",
+      "category": "AI芯片",
+      "url": "https://www.36kr.com/newsflashes/4001311699390594"
+    },
+    {
+      "title": "首部AI超写实院线电影《三星堆：未来往事》定档10月23日",
+      "summary": "博纳影业宣布，首部AI超写实院线电影《三星堆：未来往事》定档2026年10月23日。影片总片长100分钟，是国内首部利用AI技术制作并获得国家电影局公映许可证的院线电影，所有角色为原创数字形象，不含真实演员的数字复制。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/4001191187173253"
+    },
+    {
+      "title": "AI把短剧做到了200元一分钟，为什么制作方反而亏更多？",
+      "summary": "AI将漫剧制作成本大幅压缩，分镜、角色、画面、动作、配音、剪辑等环节制作周期缩短，报价一路走低。但反常识的是，制作方反而亏更多，行业陷入成本下降但利润更薄的困局。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4894155.html"
+    },
+    {
+      "title": "中美建立人工智能对话机制，八点成果共识发布",
+      "summary": "外交部发布中美八点成果共识，其中首次出现中美建立人工智能对话及AI事件沟通渠道的条目。此举源于今年春天一次AI相关的误判事件，中美AI治理对话进入新阶段。",
+      "source": "虎嗅",
+      "category": "AI政策",
+      "url": "https://www.huxiu.com/article/4894154.html"
+    }
+  ],
+  "comment": "AI治理从行业自律走向国际立法，内容生产领域AI降本不增效的悖论显现，技术落地深水区挑战加剧。"
+},
+{
   "date": "2026-09-27",
   "title": "AI新闻 | 中美AI政策对话升温，Anthropic抢建吉瓦级算力中心，大模型价格战白热化",
   "summary": "中美就AI治理深入讨论，美方改用\"超级智能\"表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元；Meta AI产品Muse曝安全漏洞。",
