@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-28',
+    title: '传票、100分钟AI电影和200元一分钟——AI同时接受两场考试',
+    summary: '建站第158天。OpenAI与Anthropic CEO被澳大利亚传唤；首部AI院线电影《三星堆》定档；AI短剧成本降至200元/分钟但制作方反而亏更多；中美建立AI对话机制。AI正在从技术议题变成制度议题。'
+  },
+  {
     date: '2026-09-27',
     title: '1GW算力、几十倍电池订单和3000亿港元——AI的三个深水区',
     summary: '建站第157天。中美就AI治理深入讨论，美方改用「超级智能」表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元。AI竞赛从模型层向算力基建和能源供应链延伸，行业进入深水区。'
