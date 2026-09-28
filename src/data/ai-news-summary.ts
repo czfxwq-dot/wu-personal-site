@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-29",
+  "title": "AI新闻 | GPT-6能自己操作软件干活了，Claude刷新物理学世界纪录，智谱ZCode删数据赔偿用户",
+  "summary": "OpenAI发布GPT-6新能力演示，可自主操作软件完成复杂任务；Claude在物理学难题上刷新世界纪录；智谱ZCode因数据事件删除云端数据并赔偿用户1亿Token；AI应用公司智灵新境单月收入破千万完成天使轮融资；小米大模型负责人罗福莉晋升至最高职级。",
+  "newsItems": [
+    {
+      "title": "GPT-6自己打开软件干活了，一张图纸长出3295个零件",
+      "summary": "OpenAI发布GPT-6新能力演示，AI可自主打开软件、操作工具完成复杂设计和工程任务，从一张图纸自动扩展生成3295个零件，展现强大的自主执行能力。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/p/4001548184506246"
+    },
+    {
+      "title": "Claude刷新物理学世界纪录，单挑基于杨振宁理论9圈难题",
+      "summary": "Anthropic的Claude模型在物理学领域取得突破，成功解决基于杨振宁理论的高难度9圈计算问题，刷新AI在物理学研究中的世界纪录。",
+      "source": "36氪",
+      "category": "AI研究",
+      "url": "https://www.36kr.com/p/4002778714328960"
+    },
+    {
+      "title": "智谱ZCode宣布删除涉事云端数据，赠送用户1亿Token",
+      "summary": "智谱AI旗下ZCode产品因数据安全事件引发用户维权，官方宣布已删除涉事云端数据，并向用户赠送多张重置卡和总计1亿Token作为补偿。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "url": "https://www.ithome.com/0/100/7727.htm"
+    },
+    {
+      "title": "AI应用公司智灵新境单月收入破千万，完成数千万元天使轮融资",
+      "summary": "AI应用公司智灵新境宣布完成数千万元天使轮融资，单月收入已突破千万，显示AI应用层商业化正在加速落地。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/p/4001258625994626"
+    },
+    {
+      "title": "小米大模型负责人罗福莉晋升至22级，已是小米最高职级",
+      "summary": "消息称小米大模型负责人罗福莉晋升至22级，成为小米职级体系最高级别，反映小米对AI大模型业务的战略重视。",
+      "source": "IT之家",
+      "category": "AI人事",
+      "url": "https://www.ithome.com/0/100/8056.htm"
+    }
+  ],
+  "comment": "GPT-6和Claude接连展示科研级能力，AI从聊天走向真正干活；智谱数据事件提醒行业安全底线不可破。"
+},
+{
   "date": "2026-09-28",
   "title": "AI新闻 | OpenAI与Anthropic被传唤澳大利亚AI听证，首部AI院线电影定档，AI短剧成本降至200元/分钟",
   "summary": "OpenAI与Anthropic CEO被传唤出席澳大利亚AI调查听证会；英伟达联手德国SCHMID布局玻璃基板技术；首部AI超写实院线电影《三星堆》定档10月23日；AI将短剧制作成本压至200元/分钟但制作方反而亏更多；中美建立人工智能对话机制引关注。",
