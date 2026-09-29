@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-09-30",
+  "title": "AI新闻 | DeepSeek v0.2发布、Claude Sonnet 5.5落地、AMD 82亿美元收购World Labs",
+  "summary": "今日AI领域动态密集：DeepSeek Harness v0.2预览版正式发布，提供桌面端安装包；Anthropic推出Claude Sonnet 5.5，速度提升30%，Agent编程能力大幅提升；AMD以82亿美元收购李飞飞创办的World Labs，进军具身智能；Manus 2.0发布自研Agent框架Cascade；最高法首次发布AI裁判规则24条，划定归责边界。",
+  "newsItems": [
+    {
+      "title": "DeepSeek Harness v0.2预览版正式发布",
+      "summary": "9月29日，DeepSeek Harness v0.2预览版正式发布，提供开箱即用的macOS和Windows桌面端安装包。新版本预置了面向日常办公和开发的常用功能，同时新增插件安装与管理页面，扩展能力进一步增强。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/newsflashes/4004459316137858"
+    },
+    {
+      "title": "Claude Sonnet 5.5落地：速度快3成、Agent编程评测从10%跳到70%",
+      "summary": "Anthropic发布Claude 5.5家族第二个成员Sonnet 5.5，定位为Opus 5.5的「快而省」互补款，专攻范围明确的高频日常任务、修bug和文档处理。Agent编程评测得分从10%跃升至70%，性能提升显著。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net/news/502794/claude-sonnet-5-5"
+    },
+    {
+      "title": "AMD花82亿美元收购李飞飞的World Labs，她直接空降成首席科学家",
+      "summary": "AMD宣布以82亿美元全资收购李飞飞2024年创立的AI实验室World Labs，以股票形式完成交易，预计今年年底前完成。李飞飞将空降成为AMD首席科学家，此举标志着AMD正式进军具身智能和「真实世界AI」领域。",
+      "source": "开源中国",
+      "category": "具身智能",
+      "url": "https://www.oschina.net/news/502790/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion"
+    },
+    {
+      "title": "Manus 2.0发布：自研框架Cascade省32%成本，视频编辑器把时间线交到你手上",
+      "summary": "Manus 2.0上线，定义为架构级更新。推出三块新内容：自研Agent框架Cascade、桌面应用升级成共享工作区Manus Studio、以及全新的视频编辑器。Cascade框架可节省32%成本，标志着AI Agent从单点工具向平台化演进。",
+      "source": "开源中国",
+      "category": "AI Agent",
+      "url": "https://www.oschina.net/news/502788/manus-2-0"
+    },
+    {
+      "title": "AI出事谁担责？最高法24条划定归责边界",
+      "summary": "2026年9月7日，最高人民法院发布《关于依法审理涉人工智能纠纷案件的意见》，共24条。这是最高院首次就人工智能裁判颁发裁判规则，试图在尚无专门AI立法的情况下解决深度伪造、算法歧视等问题的归责难题。",
+      "source": "虎嗅",
+      "category": "政策法规",
+      "url": "https://www.huxiu.com/article/4894670.html"
+    }
+  ],
+  "comment": "今日AI领域呈现「技术突破+资本涌入+监管跟进」三重奏：大模型能力持续跃升，具身智能迎来巨头入场，而最高法的首次发声标志着AI治理从野蛮生长走向规则建立。"
+},
+{
   "date": "2026-09-29",
   "title": "AI新闻 | GPT-6能自己操作软件干活了，Claude刷新物理学世界纪录，智谱ZCode删数据赔偿用户",
   "summary": "OpenAI发布GPT-6新能力演示，可自主操作软件完成复杂任务；Claude在物理学难题上刷新世界纪录；智谱ZCode因数据事件删除云端数据并赔偿用户1亿Token；AI应用公司智灵新境单月收入破千万完成天使轮融资；小米大模型负责人罗福莉晋升至最高职级。",
