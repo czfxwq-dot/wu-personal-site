@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-01",
+  "title": "AI新闻 | Meta推AI旅行代理，影视业迎AI大考",
+  "summary": "Meta推出AI旅行代理Muse直接完成预订，给OTA平台带来竞争压力；GPU云服务商GMI获英伟达6.68亿美元融资，算力基础设施持续火热；影视业面临AI变革，从招聘到工种都在重构；华为建议车企专注分工，智驾研发需规模支撑。AI正从工具走向Agent，深刻改变各行业格局。",
+  "newsItems": [
+    {
+      "title": "Meta推出AI旅行代理Muse，OTA面临更大分流风险",
+      "summary": "Meta新推出的AI代理Muse不仅具备旅行规划能力，还可直接完成预订。Truist认为相比此前大语言模型，Muse对Expedia和Booking等在线旅行社的潜在威胁更值得重视。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/newsflashes/4005852754694281"
+    },
+    {
+      "title": "GPU云服务商GMI获英伟达等投资方6.68亿美元融资",
+      "summary": "成立五年的GMI Cloud完成6.68亿美元股权+债权融资，英伟达参与跟投。公司合同年化营收超6亿美元，表明英伟达仍在持续扶持新兴中小型云服务商。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/newsflashes/4005825383845763"
+    },
+    {
+      "title": "影视业迎来AI大考",
+      "summary": "AI技术正在深刻改变影视行业，从内容制作到工作流程都面临重构。横店等影视城在国庆长假迎来文旅热点，但行业内部正在经历AI带来的深层变革。",
+      "source": "虎嗅",
+      "category": "AI行业",
+      "url": "https://www.huxiu.com/article/4894940.html"
+    },
+    {
+      "title": "从管人到管Agent，AI影视工种变天了",
+      "summary": "刚刚好影视开始招聘AI短剧测试岗位，负责测试大模型能力、解决内容团队生产痛点。AI影视公司从管理人才转向管理Agent，工种结构正在发生根本性变化。",
+      "source": "虎嗅",
+      "category": "AI就业",
+      "url": "https://www.huxiu.com/article/4894913.html"
+    },
+    {
+      "title": "华为劝车企少做一点，智驾研发需规模支撑",
+      "summary": "华为高级副总裁靳玉志表示，车企自研智驾系统需要持续投入，如果销量撑不起规模，自研未必比采购便宜。车企与供应商应加强分工，并非所有环节都要自己做。",
+      "source": "虎嗅",
+      "category": "智能驾驶",
+      "url": "https://www.huxiu.com/article/4894937.html"
+    }
+  ],
+  "comment": "AI正从辅助工具进化为自主Agent，Meta的旅行代理和影视业的Agent管理都预示着：未来不是人用AI，而是AI替人做事。"
+},
+{
   "date": "2026-09-30",
   "title": "AI新闻 | DeepSeek v0.2发布、Claude Sonnet 5.5落地、AMD 82亿美元收购World Labs",
   "summary": "今日AI领域动态密集：DeepSeek Harness v0.2预览版正式发布，提供桌面端安装包；Anthropic推出Claude Sonnet 5.5，速度提升30%，Agent编程能力大幅提升；AMD以82亿美元收购李飞飞创办的World Labs，进军具身智能；Manus 2.0发布自研Agent框架Cascade；最高法首次发布AI裁判规则24条，划定归责边界。",
