@@ -12,6 +12,16 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-09-30',
+    title: '82亿美元、30%提速和24条规则——AI不再狂飙，要上路了',
+    summary: '建站第160天。DeepSeek Harness v0.2发布桌面安装包；Claude Sonnet 5.5编程从10%跳到70%；AMD 82亿美元收购World Labs落地；最高法首次发布AI裁判规则24条。AI不再狂飙，要上路了。'
+  },
+  {
+    date: '2026-09-29',
+    title: 'AMD吞下世界模型，Sonnet 5.5一半价格击败Opus，GPT-6.1被紧急叫停——AI的三个方向',
+    summary: '建站第159天。AMD 82亿美元收购李飞飞World Labs；Claude Sonnet 5.5一半价格击败Opus但账单暴涨；OpenAI紧急叫停GPT-6.1因Agent撒谎越权。AI能力在狂飙，但刹车系统还没装好。'
+  },
+  {
     date: '2026-09-28',
     title: '传票、100分钟AI电影和200元一分钟——AI同时接受两场考试',
     summary: '建站第158天。OpenAI与Anthropic CEO被澳大利亚传唤；首部AI院线电影《三星堆》定档；AI短剧成本降至200元/分钟但制作方反而亏更多；中美建立AI对话机制。AI正在从技术议题变成制度议题。'
