@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-01',
+    title: '6.68亿美元、1个旅行代理和1个测试岗——AI从工具变成了Agent',
+    summary: '建站第161天。Meta推出AI旅行代理Muse直接完成预订；GPU云GMI获英伟达6.68亿美元融资；影视业从管人变成管Agent；华为劝车企专注分工。AI从工具变成了Agent。'
+  },
+  {
     date: '2026-09-30',
     title: '82亿美元、30%提速和24条规则——AI不再狂飙，要上路了',
     summary: '建站第160天。DeepSeek Harness v0.2发布桌面安装包；Claude Sonnet 5.5编程从10%跳到70%；AMD 82亿美元收购World Labs落地；最高法首次发布AI裁判规则24条。AI不再狂飙，要上路了。'
