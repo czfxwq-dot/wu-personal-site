@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-02",
+  "title": "AI新闻 | OpenAI DevDay发布Dot代理、特朗普AI自律协议、腾讯70亿算力采购",
+  "summary": "OpenAI DevDay大会发布全天候AI代理Dot，无新旗舰模型引发议论；特朗普与AI巨头达成自愿性AI安全协议；腾讯70亿美元向甲骨采购算力；华为Mate90发布搭载旗舰韬芯片；AI正在重塞界面交互范式。",
+  "newsItems": [
+    {
+      "title": "没有新旗舰的DevDay大会，OpenAI亮出了更危险的东西",
+      "summary": "OpenAI DevDay开发者大会上，原定旗舰模型GPT-6.1 Astra被紧急撤下，全天候个人AI代理Dot成为主角。Dot能自主操作设备、处理日常任务，标志着AI从工具向自主代理的转变。",
+      "source": "虎嗅",
+      "category": "大模型",
+      "url": "https://www.huxiu.com/article/4895080.html"
+    },
+    {
+      "title": "特朗普“AI自我监管”意味着什么？",
+      "summary": "特朗普与约二十余位AI高管共进午餐后宣布自愿性AI协议，签署方包括Anthropic、OpenAI、谷歌、Meta、xAI和英伟达。特朗普称其“几乎像一部宪法”，但这份两页纸的文件实际约束力备受质疑。",
+      "source": "虎嗅",
+      "category": "AI政策",
+      "url": "https://www.huxiu.com/article/4895071.html"
+    },
+    {
+      "title": "腾讯斜70亿美元在东南亚采购算力服务",
+      "summary": "据外媒报道，腾讯斜70亿美元向甲骨采购算力服务，数据中心设在东南亚，涉及约10万片先进芯片。在美国对先进芯片出口管制背景下，这一布局显示了腾讯对AI算力的巨大需求。",
+      "source": "虎嗅",
+      "category": "AI基础设施",
+      "url": "https://www.huxiu.com/article/4895084.html"
+    },
+    {
+      "title": "华为Mate90发布，全系搭载旗舰韬芯片",
+      "summary": "华为Mate90系列正式发布，售价5999元起。全系搭载旗舰韬芯片，基于韬定律打造的逻辑折叠τ芯片，通过创新架构把逻辑单元一层层折叠，装上垂直互联的高速“电梯”，让信号跑得更快。",
+      "source": "36氪",
+      "category": "科技硬件",
+      "url": "https://www.36kr.com/newsflashes/4006773478609029"
+    },
+    {
+      "title": "当AI开始替你行动，界面开始不再像界面",
+      "summary": "2026年开始，Meta Muse、OpenAI Dots、Microsoft Project Solar等新产品正在把“人怎样操作机器”这个前提一点点拿掉。计算机界面正在经历根本性变革，从“人操作机器”转向“AI替人行动”。",
+      "source": "虎嗅",
+      "category": "AI应用",
+      "url": "https://www.huxiu.com/article/4895097.html"
+    }
+  ],
+  "comment": "OpenAI放弃旗舰模型转推Dot代理，特朗普拉着AI巨头签“自律协议”——AI竞争的下半场，不再是模型谁更强，而是谁能真正替用户做事。"
+},
+{
   "date": "2026-10-01",
   "title": "AI新闻 | Meta推AI旅行代理，影视业迎AI大考",
   "summary": "Meta推出AI旅行代理Muse直接完成预订，给OTA平台带来竞争压力；GPU云服务商GMI获英伟达6.68亿美元融资，算力基础设施持续火热；影视业面临AI变革，从招聘到工种都在重构；华为建议车企专注分工，智驾研发需规模支撑。AI正从工具走向Agent，深刻改变各行业格局。",
