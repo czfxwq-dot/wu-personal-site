@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-03",
+  "title": "AI新闻 | OpenAI发布GPT-6.1 Sol、博通600亿融资、DeepSeek开源昇腾组件",
+  "summary": "OpenAI连发GPT-6.1 Sol，性能接近Astra但价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件，国产AI生态再添利器；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝拟将AI数据中心HDD产能翻倍。AI竞争从模型性能延伸到基础设施与安全。",
+  "newsItems": [
+    {
+      "title": "OpenAI发布GPT-6.1 Sol：性能接近Astra、价格仅五分之一",
+      "summary": "OpenAI推出GPT-6.1 Sol，覆盖专业办公、电脑操控、agentic编程等任务。性能接近旗舰Astra但价格仅为其五分之一，性价比大幅提升。此前Astra因未通过安全审查引发争议，6.1 Sol的推出显示OpenAI在性能与安全间寻找平衡。",
+      "source": "开源中国",
+      "category": "大模型",
+      "url": "https://www.oschina.net/news/502831/openai-gpt-6-1-sol"
+    },
+    {
+      "title": "博通筹措600亿美元为Anthropic芯片项目融资",
+      "summary": "博通华尔街银团正筹集600亿美元新一轮AI芯片融资，为Anthropic芯片项目提供资金。这是AI芯片领域迄今最大规模的融资之一，显示资本市场对AI基础设施的持续看好，也反映Anthropic在算力竞争中的雄心。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/newsflashes/4008270806782084"
+    },
+    {
+      "title": "DeepSeek开源华为昇腾基础组件，国产AI生态再添利器",
+      "summary": "DeepSeek正式开源面向华为昇腾算力平台的基础设施组件，涵盖TileLang高级语言编译工具、计算库、分布式通信库，与此前英伟达平台的开源组件一一对应。此举为国产AI算力生态补齐关键一环，降低昇腾平台开发门槛。",
+      "source": "开源中国",
+      "category": "AI基础设施",
+      "url": "https://www.oschina.net/news/502814"
+    },
+    {
+      "title": "Anthropic红队测试GLM-5.3：安全护栏形同虚设",
+      "summary": "Anthropic前沿红队对智谱GLM-5.3进行测试，发现这是首个能像Claude Mythos Preview那样自主构建端到端漏洞利用、却几乎无安全护栏的模型。这一发现引发对国产大模型安全性的关注，也凸显AI安全审查的重要性。",
+      "source": "开源中国",
+      "category": "AI安全",
+      "url": "https://www.oschina.net/news/502835/anthropic-research-glm-5-3-advanced-cyber-capabilities"
+    },
+    {
+      "title": "东芝拟将AI数据中心HDD产能翻倍，投资3.8亿美元",
+      "summary": "东芝计划到2027财年将面向AI数据中心的硬盘驱动器产能提高一倍，投资约600亿日元（3.8亿美元）扩建菲律宾生产设施。AI基础设施建设带来的高容量存储需求激增，HDD作为冷数据存储的关键组件再次受到重视。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/newsflashes/4008466778279810"
+    }
+  ],
+  "comment": "GPT-6.1 Sol主打性价比、博通600亿押注Anthropic芯片、DeepSeek补齐国产算力短板——AI竞争正从模型性能转向基础设施与安全的双重博弈。"
+},
+{
   "date": "2026-10-02",
   "title": "AI新闻 | OpenAI DevDay发布Dot代理、特朗普AI自律协议、腾讯70亿算力采购",
   "summary": "OpenAI DevDay大会发布全天候AI代理Dot，无新旗舰模型引发议论；特朗普与AI巨头达成自愿性AI安全协议；腾讯70亿美元向甲骨采购算力；华为Mate90发布搭载旗舰韬芯片；AI正在重塞界面交互范式。",
