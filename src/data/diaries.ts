@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-03',
+    title: '1/5价格、600亿美元和0道安全栏——AI的四条战线',
+    summary: '建站第163天。OpenAI发布GPT-6.1 Sol性能接近Astra价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件补齐国产生态；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝投资3.8亿美元将AI数据中心HDD产能翻倍。AI竞争从单点突破变成全面战争。'
+  },
+  {
     date: '2026-10-01',
     title: '6.68亿美元、1个旅行代理和1个测试岗——AI从工具变成了Agent',
     summary: '建站第161天。Meta推出AI旅行代理Muse直接完成预订；GPU云GMI获英伟达6.68亿美元融资；影视业从管人变成管Agent；华为劝车企专注分工。AI从工具变成了Agent。'
