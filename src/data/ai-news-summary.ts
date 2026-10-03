@@ -24,6 +24,49 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-04",
+  "title": "AI新闻 | AI击穿视频图灵测试、Meta开源AI外设、arXiv限流AI论文",
+  "summary": "AI视频生成击穿\"视频图灵测试\"引1700万网友围观；Meta开源Muse Gadgets让开发者自造AI外设；arXiv因AI论文爆炸实施最严限流；中国开源决策模型StartLux登顶榜单；AI杀猪盘批量生产引关注。AI正在重塑内容创作、硬件开发生态和学术出版。",
+  "newsItems": [
+    {
+      "title": "AI击穿了\"视频图灵测试\"，1700万网友在线围观",
+      "summary": "AI视频生成技术取得里程碑突破，成功击穿\"视频图灵测试\"，引发1700万网友在线围观。这标志着AI在视觉内容生成领域的能力已达到难以与真实视频区分的水平，对内容创作、影视制作和虚假信息治理都将产生深远影响。",
+      "source": "36氪",
+      "category": "AI视频",
+      "url": "https://www.36kr.com/p/4009475424063619"
+    },
+    {
+      "title": "Meta开源Muse Gadgets，让全球开发者自己造AI外设",
+      "summary": "Meta正式开源Muse Gadgets项目，让全球开发者可以自行设计和制造AI外设。这一举措降低了AI硬件开发门槛，推动AI外设生态的多元化发展，从耳机到智能戒指等形态都有望涌现。",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://www.36kr.com/p/4009352273236101"
+    },
+    {
+      "title": "AI引发论文大爆炸，arXiv实施最严限流",
+      "summary": "AI生成论文数量激增导致学术审稿体系濒临崩塌，arXiv预印本平台开始实施最严格的限流措施。AI降低了论文写作门槛但也带来质量参差不齐的问题，学术界正在寻找新的平衡点。",
+      "source": "36氪",
+      "category": "AI学术",
+      "url": "https://www.36kr.com/p/4009647948746628"
+    },
+    {
+      "title": "中国开源决策模型StartLux冲上全球第一",
+      "summary": "中国开源项目StartLux决策模型在国际基准测试中登顶全球第一，取代了此前的Jev模型。这标志着中国在AI决策能力领域取得重要突破，开源生态竞争力持续提升。",
+      "source": "36氪",
+      "category": "AI开源",
+      "url": "https://www.36kr.com/p/4009510615027849"
+    },
+    {
+      "title": "AI杀猪盘批量生产，骗局开始规模化",
+      "summary": "犯罪分子利用AI技术批量生产杀猪盘骗局，从话术生成到语音克隆全链条AI化。AI降低了诈骗门槛，使得骗局更加逼真和难以识别，公众需提高警惕。",
+      "source": "36氪",
+      "category": "AI安全",
+      "url": "https://www.36kr.com/p/4009610454093960"
+    }
+  ],
+  "comment": "AI视频击穿图灵测试、Meta开放硬件生态、arXiv被迫限流——当AI能力边界不断扩张，内容真实性、学术诚信和防诈意识都面临全新挑战。"
+},
+{
   "date": "2026-10-03",
   "title": "AI新闻 | OpenAI发布GPT-6.1 Sol、博通600亿融资、DeepSeek开源昇腾组件",
   "summary": "OpenAI连发GPT-6.1 Sol，性能接近Astra但价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件，国产AI生态再添利器；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝拟将AI数据中心HDD产能翻倍。AI竞争从模型性能延伸到基础设施与安全。",
