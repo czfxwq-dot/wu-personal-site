@@ -1,0 +1,382 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+import { dailyNewsSummaries } from '../../../data/ai-news-summary';
+import { t } from '../../../i18n/utils';
+
+const allCategories = ['LLM', 'Hardware', 'Industry', 'Investment', 'Policy', 'Research', 'Tools'];
+
+const newsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AI News | Guanwu",
+  "description": "Daily AI industry news roundup with one-line commentary",
+  "url": "https://ban-bai.com/en/ai-news/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MonolithIoT (Changzhou) Co., Ltd."
+  }
+};
+
+const allDates = dailyNewsSummaries.map(d => d.date);
+---
+
+<BaseLayout lang="en" title={t('navAiNews', 'en') + ' | Guanwu'} jsonLd={newsJsonLd} navActive="ai-news">
+  <section class="page-section">
+    <h1>{t('navAiNews', 'en')}</h1>
+    <p class="subtitle">
+      Daily AI industry news roundup with one-line commentary
+    </p>
+
+    <!-- Search + filters -->
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="text" id="news-search" class="search-input" placeholder="Search titles or content..." />
+      </div>
+      <select id="news-date-filter" class="date-filter">
+        <option value="">All Dates</option>
+        {allDates.map(d => <option value={d}>{d}</option>)}
+      </select>
+      <select id="news-category-filter" class="date-filter">
+        <option value="">All Categories</option>
+        {allCategories.map(c => <option value={c}>{c}</option>)}
+      </select>
+      <span id="news-count" class="result-count">{dailyNewsSummaries.length} days total</span>
+    </div>
+
+    <div id="news-list">
+      {dailyNewsSummaries.map((day) => (
+        <div class="news-day" data-date={day.date}
+          data-search={`${day.titleEn || day.title} ${day.summaryEn || day.summary} ${day.commentEn || day.comment} ${day.newsItems.map(n => `${n.titleEn || n.title} ${n.summaryEn || n.summary} ${n.source}`).join(' ')}`.toLowerCase()}>
+          <div class="news-day-header">
+            <time datetime={day.date}>{day.date}</time>
+            <span class="news-count">{day.newsItems.length} items</span>
+          </div>
+
+          <h2 class="news-day-title">{day.titleEn || day.title}</h2>
+          <p class="news-day-summary">{day.summaryEn || day.summary}</p>
+
+          <div class="news-items">
+            {day.newsItems.map((item) => (
+              <div class="news-item" data-category={item.categoryEn || item.category}
+                data-item-search={`${item.titleEn || item.title} ${item.summaryEn || item.summary} ${item.source}`.toLowerCase()}>
+                <div class="news-item-header">
+                  <span class="news-item-category" data-category={item.categoryEn || item.category}>{item.categoryEn || item.category}</span>
+                  <h3>{item.titleEn || item.title}</h3>
+                </div>
+                <p class="news-item-text">{item.summaryEn || item.summary}</p>
+                <span class="news-item-source">{item.source}</span>
+              </div>
+            ))}
+          </div>
+
+          {(day.commentEn || day.comment) && (
+            <div class="news-comment">
+              <strong>One-line commentary: </strong>{day.commentEn || day.comment}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div id="news-no-result" class="no-result" style="display:none;">
+      <p>No matching news found</p>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources-note">
+      <h3>News Sources</h3>
+      <p>AI news is curated daily from the following authoritative channels:</p>
+      <div class="sources-list">
+        <a href="https://techcrunch.com/tag/artificial-intelligence/" target="_blank" rel="noopener">TechCrunch AI</a>
+        <a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener">The Verge AI</a>
+        <a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener">VentureBeat AI</a>
+        <a href="https://www.wired.com/tag/artificial-intelligence/" target="_blank" rel="noopener">WIRED AI</a>
+        <a href="https://36kr.com/" target="_blank" rel="noopener">36Kr</a>
+        <a href="https://www.jiqizhixin.com/" target="_blank" rel="noopener">Jiqizhixin</a>
+        <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a>
+        <a href="https://openai.com/news" target="_blank" rel="noopener">OpenAI News</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .page-section h1 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--color-text-light);
+  }
+
+  /* Search bar */
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0 24px;
+    flex-wrap: wrap;
+  }
+  .search-input-wrap {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: var(--color-text-light);
+    pointer-events: none;
+  }
+  .search-input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--color-card);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input:focus {
+    border-color: var(--color-accent);
+  }
+  .date-filter {
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--color-card);
+    color: var(--color-text);
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .date-filter:focus {
+    border-color: var(--color-accent);
+  }
+  .result-count {
+    font-size: 13px;
+    color: var(--color-text-light);
+    white-space: nowrap;
+  }
+
+  .news-day {
+    padding: 32px 20px;
+    margin-bottom: 20px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+  .news-day:last-child {
+    margin-bottom: 0;
+  }
+  .news-day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .news-day-header time {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+  .news-count {
+    font-size: 12px;
+    padding: 2px 8px;
+    background: var(--color-bg);
+    border-radius: 4px;
+    color: var(--color-text-light);
+  }
+  .news-day-title {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .news-day-summary {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0 0 20px;
+  }
+  .news-items {
+    margin-bottom: 20px;
+  }
+  .news-item {
+    padding: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .news-item-header {
+    margin-bottom: 8px;
+  }
+  .news-item-category {
+    font-size: 11px;
+    padding: 2px 6px;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .news-item-category[data-category="LLM"] {
+    background: #8b5cf6;
+  }
+  .news-item-category[data-category="Hardware"] {
+    background: #f97316;
+  }
+  .news-item-category[data-category="Industry"] {
+    background: #0ea5e9;
+  }
+  .news-item-category[data-category="Investment"] {
+    background: #22c55e;
+  }
+  .news-item-category[data-category="Policy"] {
+    background: #ef4444;
+  }
+  .news-item-category[data-category="Research"] {
+    background: #6366f1;
+  }
+  .news-item-category[data-category="Tools"] {
+    background: #14b8a6;
+  }
+  .news-item-header h3 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 500;
+  }
+  .news-item-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0 0 8px;
+  }
+  .news-item-source {
+    font-size: 12px;
+    color: var(--color-text-light);
+  }
+  .news-comment {
+    padding: 12px 16px;
+    background: var(--color-bg);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .no-result {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--color-text-light);
+    font-size: 15px;
+  }
+
+  .sources-note {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--color-bg);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+  }
+  .sources-note h3 {
+    font-size: 15px;
+    margin: 0 0 12px;
+    color: var(--color-heading);
+  }
+  .sources-note p {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin: 0 0 12px;
+  }
+  .sources-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .sources-list a {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .sources-list a:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('news-search') as HTMLInputElement;
+  const dateFilter = document.getElementById('news-date-filter') as HTMLSelectElement;
+  const categoryFilter = document.getElementById('news-category-filter') as HTMLSelectElement;
+  const newsList = document.getElementById('news-list')!;
+  const noResult = document.getElementById('news-no-result')!;
+  const countEl = document.getElementById('news-count')!;
+  const days = newsList.querySelectorAll('.news-day') as NodeListOf<HTMLElement>;
+
+  function filterNews() {
+    const keyword = searchInput.value.trim().toLowerCase();
+    const date = dateFilter.value;
+    const category = categoryFilter.value;
+    let visibleDays = 0;
+
+    days.forEach(day => {
+      const dayMatchKeyword = !keyword || (day.dataset.search || '').includes(keyword);
+      const dayMatchDate = !date || day.dataset.date === date;
+
+      const items = day.querySelectorAll('.news-item') as NodeListOf<HTMLElement>;
+      let hasMatchingItem = !category;
+      if (category) {
+        items.forEach(item => {
+          if (item.dataset.category === category) {
+            hasMatchingItem = true;
+          }
+        });
+      }
+
+      items.forEach(item => {
+        const itemMatchKeyword = !keyword || (item.dataset.itemSearch || '').includes(keyword);
+        item.style.display = itemMatchKeyword ? '' : 'none';
+      });
+
+      const show = dayMatchKeyword && dayMatchDate && hasMatchingItem;
+      day.style.display = show ? '' : 'none';
+      if (show) visibleDays++;
+    });
+
+    noResult.style.display = visibleDays === 0 ? '' : 'none';
+    countEl.textContent = `${days.length} days total`;
+  }
+
+  searchInput.addEventListener('input', filterNews);
+  dateFilter.addEventListener('change', filterNews);
+  categoryFilter.addEventListener('change', filterNews);
+</script>

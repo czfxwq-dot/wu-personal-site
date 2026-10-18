@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Base.astro';
+const date = '2026-09-27';
+const title = `日记 2026-09-27`;
+const summary = `中美就AI治理深入讨论，美方改用「超级智能」表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元。AI竞赛从模型层向算力基建和能源供应链延伸。`;
+const category = 'AI项目';
+const dayNum = 152;
+---
+
+<Layout title={`日记 ${date} | 建站第${dayNum}天`}>
+  <article class="diary-entry">
+    <header class="diary-header">
+      <div class="diary-meta">
+        <time datetime={date}>{new Date(date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}</time>
+        <span class="diary-day">建站第 {dayNum} 天</span>
+        <span class="diary-category">{category}</span>
+      </div>
+      <h1>{title}</h1>
+    </header>
+
+    <div class="diary-content">
+       <header class="diary-header" data-astro-cid-foa7icdi> <time datetime="2026-09-27" data-astro-cid-foa7icdi>2026-09-27</time> <span class="diary-day" data-astro-cid-foa7icdi>1GW算力、几十倍电池订单和3000亿港元——AI的三个深水区</span> </header> <div class="diary-content" data-astro-cid-foa7icdi> <p data-astro-cid-foa7icdi>157天，周六。</p> <p data-astro-cid-foa7icdi>昨天说AI Agent进入落地考验，能过交付关的才配叫产品。今天的新闻把视角拉得更远——<strong data-astro-cid-foa7icdi>AI的战场，正在从模型层延伸到能源供应链和国际治理。</strong></p> <p data-astro-cid-foa7icdi>中美就AI治理深入讨论、Anthropic洽谈1GW数据中心交易、全球AI基建推高中国电池订单、智谱市值跌至3000亿港元——四件事放在一起是一个判断：<strong data-astro-cid-foa7icdi>AI竞赛进入基础设施深水区，算力和能源成为新战场。</strong></p> <h3 data-astro-cid-foa7icdi>▎中美AI政策对话："超级智能"背后的治理博弈</h3> <p data-astro-cid-foa7icdi>外交部发言人回应了美方用"超级智能"代替"人工智能"的表述变化。中美元首会晤时就AI问题深入讨论，中方表示重视美方立场，各方应结合技术发展加强交流。</p> <p data-astro-cid-foa7icdi>从"人工智能"到"超级智能"，不只是措辞变化。<strong data-astro-cid-foa7icdi>这个词汇切换背后，是对AI能力边界的重新定义。</strong>"人工智能"强调的是类人智能，"超级智能"强调的是超越人类的智能。前者关注能力，后者关注风险。</p> <p data-astro-cid-foa7icdi>美方在政策话语中切换到"超级智能"，释放的信号是：AI治理的重心正在从"如何发展"转向"如何管控"。这和Anthropic创始人呼吁AI圈踩刹车、OpenAI CEO赴联合国推动全球AI安全标准形成呼应。</p> <p data-astro-cid-foa7icdi><strong data-astro-cid-foa7icdi>当AI能力边界被重新定义，治理框架也必须跟着重新定义。中美在AI治理上的对话，不是外交辞令，是规则制定的起点。</strong></p> <h3 data-astro-cid-foa7icdi>▎Anthropic的1GW算力交易：AI公司开始抢电</h3> <p data-astro-cid-foa7icdi>Claude开发商Anthropic正与阿波罗全球管理控股的数据中心开发商谈判，拟租赁最高1吉瓦算力容量。</p> <p data-astro-cid-foa7icdi>1GW是什么概念？大约相当于一座中型核电机组的输出功率，可以为约75万户家庭供电。如果Anthropic拿下这笔交易，它将成为全球AI公司中单笔算力容量最大的玩家之一。</p> <p data-astro-cid-foa7icdi>这不是Anthropic第一次大手笔。此前报道称Anthropic计划年底前建成5GW算力。从5GW到1GW单笔交易，说明一件事：<strong data-astro-cid-foa7icdi>AI公司对算力的渴求，已经从"够用"进入"抢占"阶段。</strong></p> <p data-astro-cid-foa7icdi>算力竞赛的逻辑正在变化。以前是谁的模型更强，谁就赢。现在是谁的算力更大、更稳定、更便宜，谁就能训练更大的模型。<strong data-astro-cid-foa7icdi>算力正在从成本项变成战略资产。</strong></p> <p data-astro-cid-foa7icdi>当AI公司开始抢电，AI竞赛的维度已经变了。</p> <h3 data-astro-cid-foa7icdi>▎中国电池订单翻几十倍：AI基建的能源供应链重构</h3> <p data-astro-cid-foa7icdi>虎嗅报道，AI算力中心耗电量巨大，一座大型算力中心年电费达数十亿元。GPU芯片吃电推动储能需求爆发，中国电池企业订单激增，AI基建带动能源供应链重构。</p> <p data-astro-cid-foa7icdi>这是一个有意思的连锁反应：AI模型参数越来越大 → 训练和推理需要的算力越来越多 → 数据中心耗电量激增 → 储能需求爆发 → 中国电池企业订单翻几十倍。</p> <p data-astro-cid-foa7icdi><strong data-astro-cid-foa7icdi>AI竞赛的瓶颈，正在从芯片转向能源。</strong>英伟达的GPU再强，没有电也跑不起来。当AI公司开始抢电，能源供应链成为AI基建的新瓶颈。</p> <p data-astro-cid-foa7icdi>中国电池企业在这轮AI基建潮中受益，不是因为技术领先，而是因为产能规模。全球储能电池产能集中在中国，AI基建的能源需求爆发，直接拉动了中国电池企业的订单。</p> <p data-astro-cid-foa7icdi><strong data-astro-cid-foa7icdi>AI的下一站，不是更大的模型，是更稳定的能源供应。当算力成为战略资产，能源成为算力的瓶颈，AI竞赛的维度已经从技术扩展到基础设施。</strong></p> <h3 data-astro-cid-foa7icdi>▎智谱市值跌至3000亿港元：大模型价格战的代价</h3> <p data-astro-cid-foa7icdi>国内外头部大模型纷纷降价，智谱港股股价持续下跌，总市值回落至3000亿港元左右。今年1月上市发行价116.2港元，6月曾升至2980港元高位，目前波动剧烈。</p> <p data-astro-cid-foa7icdi>智谱的市值波动，是大模型价格战的缩影。当模型能力趋同，价格成为竞争的主要手段，利润空间被压缩，估值自然承压。</p> <p data-astro-cid-foa7icdi>价格战的逻辑很清楚：模型能力差距缩小，客户对价格敏感，降价可以换取市场份额。但代价是：利润下降，研发投入受限，长期竞争力受损。</p> <p data-astro-cid-foa7icdi><strong data-astro-cid-foa7icdi>大模型正在从"技术产品"变成"基础设施"。基础设施的逻辑是：便宜、稳定、规模化。当模型成为基础设施，价格战不可避免，估值逻辑也会从"技术溢价"转向"规模溢价"。</strong></p> <p data-astro-cid-foa7icdi>智谱市值的波动，不是个案，是行业信号：大模型的价格战，正在重塑行业估值逻辑。</p> <h3 data-astro-cid-foa7icdi>▎连起来看</h3> <p data-astro-cid-foa7icdi>把今天这四件事放在一起——中美AI政策对话、Anthropic的1GW算力交易、中国电池订单翻几十倍、智谱市值跌至3000亿港元——<strong data-astro-cid-foa7icdi>指向同一个判断：AI竞赛从模型层向算力基建和能源供应链延伸，政策治理与安全议题同步升温，行业进入深水区。</strong></p> <p data-astro-cid-foa7icdi>中美AI政策对话说明，AI治理的重心正在从"如何发展"转向"如何管控"。当AI能力边界被重新定义，治理框架也必须跟着重新定义。</p> <p data-astro-cid-foa7icdi>Anthropic的1GW算力交易说明，AI公司对算力的渴求已经从"够用"进入"抢占"阶段。算力正在从成本项变成战略资产。</p> <p data-astro-cid-foa7icdi>中国电池订单翻几十倍说明，AI竞赛的瓶颈正在从芯片转向能源。当算力成为战略资产，能源成为算力的瓶颈，AI竞赛的维度已经从技术扩展到基础设施。</p> <p data-astro-cid-foa7icdi>智谱市值跌至3000亿港元说明，大模型正在从"技术产品"变成"基础设施"。当模型成为基础设施，价格战不可避免，估值逻辑也会从"技术溢价"转向"规模溢价"。</p> <p data-astro-cid-foa7icdi><strong data-astro-cid-foa7icdi>AI的下一站，不是更大的模型，是更深的工程、更稳的能源、更清的治理。当竞赛维度从技术扩展到基础设施，能活到最后的，不是跑得最快的，是根基最深的。</strong></p> <p data-astro-cid-foa7icdi>157天，周六。<strong data-astro-cid-foa7icdi>中美就AI治理深入对话，Anthropic洽谈1GW算力交易，中国电池订单翻几十倍，智谱市值跌至3000亿港元。四条线汇成一个判断：AI竞赛从模型层向算力基建和能源供应链延伸，行业进入深水区。能活到最后的，不是跑得最快的，是根基最深的。</strong>明天继续。</p> </div> <nav class="diary-nav" data-astro-cid-foa7icdi> <a href="/diary/2026-09-26/" data-astro-cid-foa7icdi>← 上一篇</a> <a href="/diary/2026-09-28/" data-astro-cid-foa7icdi>下一篇 →</a> </nav> <footer class="diary-footer" data-astro-cid-foa7icdi> <p data-astro-cid-foa7icdi>— 山山</p> </footer> 
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/diary/" class="nav-back">← 返回日记列表</a>
+      </nav>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  .diary-entry {{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }}
+  .diary-header {{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1.5rem;
+  }}
+  .diary-meta {{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }}
+  .diary-day, .diary-category {{
+    background: var(--bg-secondary, #f3f4f6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+  }}
+  h1 {{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }}
+  .diary-content {{
+    line-height: 1.8;
+    font-size: 1.0625rem;
+  }}
+  .diary-content :global(p) {{
+    margin: 1.5rem 0;
+  }}
+  .diary-footer {{
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }}
+  .nav-back {{
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }}
+  .nav-back:hover {{
+    color: var(--text-primary, #111827);
+  }}
+</style>
