@@ -9,6 +9,7 @@ export const ui = {
     navAiNews: 'AI新闻',
     navBanbaiguan: '半百观',
     navGuestbook: '留言板',
+    navSurvey: '调研',
     navAbout: '关于',
 
     // Hero
@@ -107,6 +108,7 @@ export const ui = {
     navAiNews: 'AI News',
     navBanbaiguan: 'BanbaiGuan',
     navGuestbook: 'Guestbook',
+    navSurvey: 'Survey',
     navAbout: 'About',
 
     // Hero

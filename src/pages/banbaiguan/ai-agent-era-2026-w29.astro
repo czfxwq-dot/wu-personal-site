@@ -1,0 +1,260 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": 'AI智能体元年：从"会说话"到"会干活"，这个世界正在加速',
+  "datePublished": '2026-07-18',
+  "dateModified": '2026-07-18',
+  "description": 'WAIC 2026盛大开幕，GPT-5.6/Gemini 3.5 Pro密集发布，AI从"能说话"进入"会干活"的智能体元年。一个50岁创业者的周观察。',
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "url": "https://ban-bai.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "半百观AI",
+    "url": "https://ban-bai.com/banbaiguan/"
+  },
+  "keywords": ['AI智能体', 'WAIC 2026', 'GPT-5.6', 'Gemini 3.5 Pro', '阶跃STEPX', 'AI手机', '智能仓储', '半百观AI']
+};
+---
+
+<BaseLayout title={'AI智能体元年：从「会说话」到「会干活」 | 半百观'} jsonLd={articleJsonLd} ogDescription={'WAIC 2026盛大开幕，GPT-5.6/Gemini 3.5 Pro密集发布，AI从「能说话」进入「会干活」的智能体元年。一个50岁创业者的周观察。'} navActive="banbaiguan">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-07-18">2026年7月18日</time>
+        <span class="article-tag">周观察</span>
+        <span class="article-tag tag-secondary">第29周</span>
+      </div>
+      <h1>AI智能体元年：从"会说话"到"会干活"，这个世界正在加速</h1>
+      <p class="article-subtitle">一个50岁创业者的周观察</p>
+    </header>
+
+    <div class="article-content">
+
+<section class="article-section">
+  <p>这一周，AI圈发生了一件大事。</p>
+  <p>7月17日，2026世界人工智能大会（WAIC）在上海开幕。10万平方米展区，1100家企业，300多款全球首发产品。</p>
+  <p>但最让我触动的，不是那些炫酷的展品，而是一个信号——<strong>AI正在从"能说"变成"会干"。</strong></p>
+</section>
+
+<section class="article-section">
+  <h2>01 大模型军备赛：三巨头贴身肉搏</h2>
+  <p>先说本周最热闹的事。</p>
+  <p><strong>OpenAI的GPT-5.6</strong> 正式发布，分三个版本：旗舰版Sol、中端版Terra、轻量版Luna。最夸张的是，Sol版一小时解开了一个困扰数学界50年的猜想，用700个词的提示词就能驾驭64个子智能体协同工作。</p>
+  <p><strong>谷歌的Gemini 3.5 Pro</strong> 紧随其后，全新底座重新训练，UI设计能力直接超越Claude Fable 5，能做到像素级精准、一次成型。</p>
+  <p><strong>Anthropic的Claude Fable 5</strong> 因为算力不足延期到7月19日全量开放，但它之前展示的手搓CUDA"超级内核"、18.7倍加速率，已经够让人期待了。</p>
+  <blockquote><p><strong>一句话：三家神仙打架，受益的是我们所有人。</strong></p></blockquote>
+</section>
+
+<section class="article-section">
+  <h2>02 国产力量：不再只是"追赶者"</h2>
+  <p>这一周让我真正感到振奋的，是国产模型的集体爆发。</p>
+  <p><strong>腾讯混元Hy3</strong> 开源了。295B参数，Apache 2.0协议，全球免费商用。这不是小气地放个阉割版，而是把核心能力完全开放。</p>
+  <p><strong>DeepSeek-V4</strong> 正式上线，第一个搞"峰谷分时计费"——白天贵、晚上便宜，推理速度提升60%-80%。这说明什么？国产模型开始认真做生意了，不是烧钱赚吆喝。</p>
+  <p>最让我眼前一亮的是<strong>阶跃星辰的STEPX</strong>——全球首款AI智能体手机。搭载自研的Step AOS系统，手机不再是运行App的载体，而是一个能理解你意图、跨软件边界自主调配资源的"超级管家"。</p>
+  <p><strong>这意味着什么？流量入口正在从"App图标"变成"对话框"。</strong></p>
+</section>
+
+<section class="article-section">
+  <h2>03 WAIC的三个关键数字</h2>
+  <p>本届WAIC有三个数字值得记住：</p>
+  <div class="highlight-box">
+    <p><strong>1.2万亿</strong> —— 2025年中国AI核心产业规模</p>
+    <p><strong>80%</strong> —— 重点行业AI渗透率</p>
+    <p><strong>140万亿</strong> —— 日均词元调用量</p>
+  </div>
+  <p>这些数字说明一件事：AI已经不是PPT里的概念，而是实实在在跑在生产线上的生产力。</p>
+  <p>大会上还有几个有意思的展品：</p>
+  <ul>
+    <li><strong>睿尔曼的RealBOT机器人</strong>，在1500公里外的操作员遥控下，独立完成从取粽叶到礼盒封装的13道工序。</li>
+    <li><strong>傅利叶的GR-3人形机器人</strong>，你说"拿个水果"，它就能自己理解、自己去找、自己拿过来。</li>
+    <li><strong>东方算芯的DF1000芯片</strong>，用3D近存计算技术，一举破解了困扰行业多年的"存储墙""带宽墙""功耗墙"三大难题。</li>
+  </ul>
+  <p><strong>AI正在从"能思考"进化为"能行动"。</strong></p>
+</section>
+
+<section class="article-section">
+  <h2>04 一个值得警惕的信号</h2>
+  <p>大会很热闹，但也有冷静的声音。</p>
+  <p>200多位经济学家和16位诺贝尔奖得主联合签署了一份声明，标题只有四个词：<strong>"We Must Act Now"</strong>（我们必须立即行动）。</p>
+  <p>他们警告：未来10年，AI可能带来比工业革命更大、更快的经济转型，既有机会，也有大规模失业风险。</p>
+  <p>与此同时，国内《人工智能拟人化互动服务管理暂行办法》正式施行，豆包、通义千问紧急下线了用户自主创建的拟人化智能体功能。</p>
+  <p><strong>技术在狂飙，治理在追赶。这个节奏能不能匹配上，是接下来几年最大的悬念。</strong></p>
+</section>
+
+<section class="article-section">
+  <h2>05 50岁视角：我们该怎么看？</h2>
+  <p>作为一个50岁的AI实践者，我想说三点：</p>
+  <div class="insight-box">
+    <p><strong>第一，不要恐慌，但要警醒。</strong> AI不会一夜之间取代所有人，但会加速淘汰不愿学习的人。200位经济学家的警告不是危言耸听。</p>
+    <p><strong>第二，关注"能干活"的AI，而不是"能聊天"的AI。</strong> 这一周最大的信号就是：AI智能体正在从概念走向落地。能帮你完成13道工序的机器人，能跨App帮你办事的手机——这些才是真正改变生活的东西。</p>
+    <p><strong>第三，保持学习，保持开放。</strong> 我50岁了，还在每天跟AI打交道。WAIC上那些展品的背后，是无数年轻人在拼命创新。我们没有理由停下来。</p>
+  </div>
+</section>
+
+<section class="article-section">
+  <h2>下周预告</h2>
+  <ul>
+    <li>WAIC持续到7月20日（周日闭幕）</li>
+    <li>Claude Fable 5全量开放（7月19日）</li>
+    <li>DeepSeek旧版本7月24日停用</li>
+    <li>Kimi K3超大参数版本预计月底推出</li>
+  </ul>
+</section>
+
+<section class="article-section closing">
+  <p><strong>AI的时代大幕已经拉开，我们既是观众，也是演员。</strong></p>
+  <p>共勉。</p>
+</section>
+
+    </div>
+
+    <footer class="article-footer">
+      <p>© 2026 半百观AI | 吴总 | 50岁看AI，实事求是，终身学习</p>
+      <p><a href="/banbaiguan/">← 返回半百观首页</a></p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .article-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #eaeaea;
+  }
+  .article-meta {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .article-tag {
+    background: #0070f3;
+    color: white;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .tag-secondary {
+    background: #666;
+  }
+  .article-header h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0.5rem 0;
+    color: #1a1a1a;
+  }
+  .article-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+  .article-section {
+    margin-bottom: 2.5rem;
+  }
+  .article-section h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  .article-section p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .article-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .article-section li {
+    margin-bottom: 0.8rem;
+    color: #333;
+  }
+  blockquote {
+    background: linear-gradient(135deg, #f6f8fa 0%, #eef2f7 100%);
+    border-left: 4px solid #0070f3;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+  blockquote p {
+    margin: 0;
+    color: #444;
+  }
+  .highlight-box {
+    background: #fff8e1;
+    border: 1px solid #ffd54f;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .highlight-box p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .insight-box {
+    background: #f0f7ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .insight-box p {
+    margin-bottom: 1rem;
+  }
+  .insight-box p:last-child {
+    margin-bottom: 0;
+  }
+  .closing {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
+  .closing p:first-child {
+    font-weight: 600;
+    color: #0070f3;
+  }
+  .article-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .article-footer a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  .article-footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    .article-page {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    .article-header h1 {
+      font-size: 1.6rem;
+    }
+    .highlight-box p {
+      font-size: 1rem;
+    }
+  }
+</style>

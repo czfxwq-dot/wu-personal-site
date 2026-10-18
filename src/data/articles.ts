@@ -13,6 +13,7 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+<<<<<<< HEAD
     slug: 'weekly-report-2026-07-12',
     date: '2026-07-12',
     title: `AI/科技行业周报`,
@@ -21,6 +22,135 @@ export const articles: ArticleEntry[] = [
     excerptEn: `覆盖2026年7月6日-7月12日AI行业重大事件：GPT-5.6三模型、Claude Fable 5/Mythos 5、Meta Muse Spark 1.1、Grok 4.5、Apple诉OpenAI等。`,
     tag: '半百观AI',
     tagEn: '半百观AI'
+=======
+    slug: 'ai-surpass-experts-3-4-years',
+    date: '2026-09-16',
+    title: '业内预言AI 3‑4年或将超越顶尖专家，中年人不必恐慌，但要看清这几件事',
+    excerpt: 'OpenAI前联合创始人John Schulman预判：AI可能3-4年内全面超越顶尖人类专家。中年人不必恐慌，但要看清三件事：不和AI拼速度、善用但分清边界、保持尝试能力。',
+    tag: 'AI观点',
+  },
+  {
+    slug: 'ai-solves-90year-math-problem',
+    date: '2026-09-12',
+    title: 'AI解出90年数学难题，人类却看不懂过程',
+    excerpt: 'OpenAI内部未公开模型破解了纳维-斯托克斯存在性与光滑性问题——90年来人类最聪明的脑袋都没能证明的千禧年大奖难题。但真正值得思考的不是答案本身，而是：如果AI给出了答案，但人类看不懂推导过程——这算"理解"吗？',
+    tag: 'AI前沿',
+  },
+  {
+    slug: 'altman-ai-danger-monopoly',
+    date: '2026-08-26',
+    title: '造ChatGPT的人坦言AI很危险，最讽刺的是：他自己就是「危险」本身',
+    titleEn: 'The Man Who Built ChatGPT Says AI Is Dangerous — Ironically, He Is the Danger',
+    excerpt: 'Altman说AI最大的风险是权力集中在少数人手里，但他自己就是那个最大的垄断者。普通人如何破局？',
+    excerptEn: 'Altman says the biggest AI risk is power concentration in few hands — but he himself is the biggest monopolist.',
+    tag: 'AI观点',
+    tagEn: 'AI Insights'
+  },
+  {
+    slug: 'weekly-report-2026-08-22',
+    date: '2026-08-22',
+    title: 'AI周报 | Stripe天价收购OpenRouter，AI基建3万亿债务引警惕',
+    excerpt: '第34周AI行业周报：Stripe超70亿美元收购模型路由平台OpenRouter，AI基建3万亿隐形债务引发警惕，阿里AI收入突破495亿元，百度AI收入占比过半。',
+    tag: 'AI产业'
+  },
+  {
+    slug: 'benchmark-account-analysis',
+    date: '2026-08-24',
+    title: '对标账号深度分析：4个百万粉AI博主的变现密码',
+    excerpt: '拆解4个AI领域百万粉账号的共同规律：内容只是入口，后端才是利润。陈厂长、秋芝2046、马想聊AI、飞橙生意经的变现模式全拆解。',
+    tag: '新媒体运营',
+  },
+  {
+    slug: '100-wan-ai-zero-return',
+    date: '2026-08-18',
+    title: '花了100万搞AI，回报是零，问题出在哪？',
+    excerpt: 'MIT调研300余家企业，95%的AI项目没有产出可衡量的业务回报。不是模型不行，是你用模型的方式不行。',
+    tag: 'AI观点',
+  },
+  {
+    slug: 'ai-prompt-reverse-questioning',
+    date: '2026-08-14',
+    title: '别再盲目加长提示词！真正高效使用 AI 的逻辑，90% 的人搞反了',
+    excerpt: '直接把想好的需求一股脑丢给 AI 提问，其实是最低效的用法。真正的高手不是提示词写得更长，而是让 AI 先来问你。',
+    tag: 'AI观点',
+  },
+  {
+    slug: 'ai-office-assistant-war',
+    date: '2026-08-09',
+    title: 'AI办公助理大战：腾讯字节阿里抢着给你配AI同事',
+    excerpt: '腾讯、字节、阿里抢着给你配AI助理，但你的工作真的会被替代吗？干掉你的不是AI，是你自己那个"不会用AI"的标签。',
+    tag: 'AI观点',
+  },
+  {
+    slug: 'weekly-report-2026-08-08',
+    date: '2026-08-08',
+    title: 'AI/科技行业周报 | 2026年8月2日-8日',
+    excerpt: '本周AI行业重大新闻：Nvidia千亿押注OpenAI、Qwen 3.8-Max发布、Claude Opus 5上线、AI模型越狱入侵系统、AI首次设计完整病毒基因组、OPC元年',
+    tag: 'AI周报',
+  },
+  {
+    slug: 'weekly-report-2026-08-01',
+    date: '2026-08-01',
+    title: 'AI/科技行业周报 | 2026年7月28日-8月1日',
+    excerpt: '本周AI行业重大新闻：OpenAI GPT-5.6降价80%、Anthropic发布Claude Opus 5、Kimi K3开源2.8万亿参数模型、AI安全事件持续发酵',
+    tag: 'AI周报',
+  },
+  {
+    slug: 'ai-scarcity-crisis',
+    date: '2026-07-31',
+    title: 'AI两小时搞定一章博士论文，毁掉的是「稀缺性」',
+    excerpt: '36氪报道：AI用不到两小时搞定一章博士论文。真正被冲击的不是知识，是创造力的稀缺性。学历贬值、专业门槛消融、学习能力被重写。从做题家变成出题人，从我知道到我判断。',
+    tag: 'AI思考',
+  },
+  {
+    slug: 'money-logic-iteration',
+    date: '2026-07-28',
+    title: '赚钱逻辑彻底迭代：旧人脉落幕，新核心能力为王',
+    excerpt: '茅台销量下滑，五千万豪宅半小时抢空。财富从来没有消失，只是彻底换了一套结算方式。老一辈靠人脉关系卡位，新时代靠认知、时间、健康持续创造价值。',
+    tag: '商业思考',
+  },
+  {
+    slug: 'weekly-report-2026-07-25',
+    date: '2026-07-25',
+    title: 'AI/科技行业周报 | 2026年7月21-27日',
+    excerpt: '本周AI行业重大新闻：OpenAI模型失控事件、AMD-Anthropic 190亿美元芯片交易、Alphabet Q2财报AI支出狂飙。',
+    tag: 'AI周报',
+  },
+  {
+    slug: 'waic-2026-ai-landing',
+    date: '2026-07-22',
+    title: '2026 WAIC大火刷屏！终于看懂：AI不再炫技，正在悄悄改变普通人的生活和收入',
+    excerpt: 'AI彻底褪去噱头和泡沫，不再玩虚的、不讲故事、不秀概念，一心一意落地干活、创造价值、认真赚钱。',
+    tag: 'AI趋势',
+  },
+  {
+    slug: 'ai-agent-era-2026-w29',
+    date: '2026-07-18',
+    title: 'AI智能体元年：从"会说话"到"会干活"，这个世界正在加速',
+    excerpt: 'WAIC 2026盛大开幕，GPT-5.6/Gemini 3.5 Pro密集发布，AI从"能说话"进入"会干活"的智能体元年。一个50岁创业者的周观察。',
+    tag: '周观察',
+  },
+  {
+    slug: 'weekly-report-2026-07-18',
+    date: '2026-07-18',
+    title: 'AI/科技行业周报 | 2026年7月18日',
+    excerpt: '覆盖2026年7月12日-7月18日AI行业重大事件：WAIC 2026上海开幕、世界AI合作组织成立、Apple重登市值第一、前沿模型密集发布、具身智能爆发等。',
+    tag: 'AI周报',
+  },
+  {
+    slug: 'redefine-action-threshold',
+    date: '2026-07-13',
+    title: '\u201c行动困难\u201d不是因为懒，而是因为你脑子里的\u201c行动\u201d门槛定得太高了',
+    excerpt: '你一直觉得自己没行动\u2014\u2014但有没有可能，是你对\u201c行动\u201d的定义错了？把\u201c学AI\u201d从\u201c每天学两小时\u201d改成\u201c对着手机说一句话\u201d，门槛消失了。',
+    tag: 'AI思考',
+  },
+  {
+    slug: 'weekly-report-2026-07-12',
+    date: '2026-07-12',
+    title: 'AI/科技行业周报 | 2026年7月12日',
+    excerpt: '覆盖2026年7月6日-7月12日AI行业重大事件。',
+    tag: 'AI周报',
+>>>>>>> master
   },
   {
     slug: '57-articles-3-spread',
