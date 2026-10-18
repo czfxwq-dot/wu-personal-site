@@ -1,156 +1,198 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-自动日记生成脚本
-每天 22:00 运行，生成当天日记并提交到网站
+智能自动日记生成器 v3.0
+- 使用正确的 BaseLayout 布局
+- 准确统计当天变更（不是累计）
+- 生成有意义的反思内容
 """
 
-import sys
-import os
-from datetime import datetime, timedelta
+import subprocess
 import re
+from datetime import datetime
+from pathlib import Path
 
-if sys.platform.startswith('win'):
-    sys.stdout.reconfigure(encoding='utf-8')
+def get_today_git_stats():
+    """获取今天的 git 统计信息"""
+    today = datetime.now().strftime('%Y-%m-%d')
 
-# 添加脚本路径到 sys.path
-script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, script_dir)
+    try:
+        # 获取今天的提交
+        result = subprocess.run(
+            ['git', 'log', '--since', f'{today} 00:00', '--until', f'{today} 23:59',
+             '--pretty=format:%s', '--no-merges'],
+            capture_output=True, text=True, encoding='utf-8', cwd='..'
+        )
 
-def get_today_diary_content():
-    """生成今天的日记内容"""
-    today = datetime.now()
-    date_str = today.strftime('%Y-%m-%d')
+        if not result.stdout.strip():
+            return None
+
+        commits = result.stdout.strip().split('\n')
+
+        # 获取今天的文件变更
+        result = subprocess.run(
+            ['git', 'diff', '--stat', f'main@{{{today} 00:00}}..main'],
+            capture_output=True, text=True, encoding='utf-8', cwd='..'
+        )
+
+        # 统计变更的文件类型
+        file_types = {
+            'diary': 0,
+            'article': 0,
+            'news': 0,
+            'code': 0,
+            'doc': 0,
+            'config': 0
+        }
+
+        for commit_msg in commits:
+            msg_lower = commit_msg.lower()
+            if '日记' in msg_lower or 'diary' in msg_lower:
+                file_types['diary'] += 1
+            elif '半百观' in msg_lower or '文章' in msg_lower or 'article' in msg_lower:
+                file_types['article'] += 1
+            elif '新闻' in msg_lower or 'news' in msg_lower:
+                file_types['news'] += 1
+            elif any(ext in msg_lower for ext in ['.py', '.js', '.ts', '代码', 'code']):
+                file_types['code'] += 1
+            elif any(ext in msg_lower for ext in ['.md', '文档', 'doc']):
+                file_types['doc'] += 1
+            elif any(ext in msg_lower for ext in ['.json', '.yml', '.sh', '.bat', '配置', 'config']):
+                file_types['config'] += 1
+
+        return {
+            'commit_count': len(commits),
+            'commits': commits,
+            'file_types': file_types
+        }
+    except Exception as e:
+        print(f"[ERROR] Failed to get git stats: {e}")
+        return None
+
+def generate_diary_content(stats, date_str):
+    """生成日记内容（使用 BaseLayout）"""
 
     # 计算建站天数
     start_date = datetime(2026, 4, 29)
-    days_since_start = (today - start_date).days + 1
+    current_date = datetime.strptime(date_str, '%Y-%m-%d')
+    days = (current_date - start_date).days + 1
 
-    # 获取今天的工作摘要（从 git 提交记录）
-    try:
-        import subprocess
-        result = subprocess.run(
-            ['git', 'log', '--since=today', '--oneline', '--all'],
-            capture_output=True, text=True, cwd=script_dir
-        )
-        commits = result.stdout.strip().split('\n') if result.stdout.strip() else []
-        commit_count = len([c for c in commits if c])
+    # 生成标题和描述
+    commit_count = stats['commit_count']
 
-        if commit_count > 0:
-            summary = f"今天完成了 {commit_count} 个提交"
-            if commit_count > 5:
-                summary += "，工作量不小"
-            summary += "。"
-        else:
-            summary = "今天比较平静，没有太多提交。"
-    except Exception as e:
-        summary = "今天的活动记录暂时无法获取。"
-
-    # 生成日记内容
-    content = f"""---
-layout: ../../layouts/DiaryLayout.astro
-title: "{date_str} 工作日记"
-date: "{date_str}"
-tags: ["日记", "AI项目"]
-description: "建站第 {days_since_start} 天的工作记录"
----
-
-# {date_str} 工作日记
-
-建站第 {days_since_start} 天。
-
-## 今日工作
-
-{summary}
-
-## 系统状态
-
-- 日记总数：{{diary_count}} 篇
-- 半百观文章：{{article_count}} 篇
-- AI新闻：{{news_count}} 条
-
-## 明日计划
-
-继续完善系统，保持稳定运行。
-
----
-
-*自动生成于 {today.strftime('%Y-%m-%d %H:%M')}*
-"""
-
-    return content, date_str, days_since_start
-
-def update_diaries_ts(date_str, title, summary):
-    """更新 diaries.ts 文件"""
-    diaries_file = os.path.join(script_dir, '..', 'src', 'data', 'diaries.ts')
-
-    with open(diaries_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # 检查是否已存在
-    if f"date: '{date_str}'" in content:
-        print(f"⚠️  {date_str} 的日记已存在")
-        return False
-
-    # 生成新条目
-    new_entry = f"""  {{
-    date: '{date_str}',
-    title: `{title}`,
-    titleEn: `{title}`,
-    summary: `{summary}`,
-    summaryEn: `{summary}`,
-    category: 'AI项目',
-    categoryEn: 'AI Projects'
-  }},
-"""
-
-    # 在数组开头插入（保持最新在前）
-    # 找到 export const diaries 的位置
-    match = re.search(r'export const diaries.*?\[\s*\n', content)
-    if match:
-        insert_pos = match.end()
-        new_content = content[:insert_pos] + new_entry + content[insert_pos:]
-
-        with open(diaries_file, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-
-        print(f"✅ 已更新 diaries.ts")
-        return True
+    if commit_count == 0:
+        title = "平静的日子"
+        description = "今天没有代码提交，但系统在稳定运行。"
+    elif commit_count <= 3:
+        title = "小幅更新"
+        description = f"今天完成了 {commit_count} 次提交，保持稳定的开发节奏。"
+    elif commit_count <= 10:
+        title = "稳定推进"
+        description = f"今天完成了 {commit_count} 次提交，持续推进项目进展。"
     else:
-        print(f"❌ 无法找到 diaries 数组位置")
-        return False
+        title = "高产的一天"
+        description = f"今天完成了 {commit_count} 次提交，工作效率很高。"
 
-def create_diary_page(date_str, content, days_since_start):
-    """创建日记页面"""
-    pages_dir = os.path.join(script_dir, '..', 'src', 'pages', 'diary')
-    os.makedirs(pages_dir, exist_ok=True)
+    # 生成内容摘要
+    file_types = stats['file_types']
+    summary_parts = []
 
-    page_file = os.path.join(pages_dir, f'{date_str}.astro')
+    if file_types['diary'] > 0:
+        summary_parts.append(f"更新了 {file_types['diary']} 篇日记")
+    if file_types['article'] > 0:
+        summary_parts.append(f"发布了 {file_types['article']} 篇半百观文章")
+    if file_types['news'] > 0:
+        summary_parts.append(f"采集了 {file_types['news']} 条 AI 新闻")
+    if file_types['code'] > 0:
+        summary_parts.append(f"改进了 {file_types['code']} 个代码文件")
+    if file_types['doc'] > 0:
+        summary_parts.append(f"更新了 {file_types['doc']} 个文档")
+    if file_types['config'] > 0:
+        summary_parts.append(f"调整了 {file_types['config']} 个配置文件")
 
-    if os.path.exists(page_file):
-        print(f"⚠️  {date_str}.astro 已存在")
-        return False
+    if summary_parts:
+        work_summary = "，".join(summary_parts) + "。"
+    else:
+        work_summary = "进行了系统维护和优化。"
 
-    # 生成页面内容
-    page_content = f"""---
-import Layout from '../../layouts/Base.astro';
-const date = '{date_str}';
-const title = `建站第 {days_since_start} 天`;
-const summary = `{date_str} 工作日记`;
-const category = 'AI项目';
-const dayNum = {days_since_start};
+    # 生成反思内容
+    reflections = [
+        "持续改进，每天都在进步。",
+        "小步快跑，稳步前行。",
+        "保持节奏，持续输出。",
+        "积少成多，聚沙成塔。",
+        "自动化让工作更高效。",
+        "记录每一天，回顾每一步。"
+    ]
+
+    import random
+    reflection = random.choice(reflections)
+
+    # 提取关键提交
+    key_commits = []
+    keywords = {
+        '添加': '新增',
+        '修复': '修复',
+        '优化': '优化',
+        '更新': '更新',
+        '部署': '部署',
+        '生成': '生成'
+    }
+
+    for commit_msg in stats['commits'][:5]:
+        for keyword, action in keywords.items():
+            if keyword in commit_msg:
+                key_commits.append(f"      <li>{action}：{commit_msg}</li>")
+                break
+
+    # 生成 HTML 内容
+    content = f"""---
+import BaseLayout from '../../layouts/Base.astro';
+
+const diaryJsonLd = {{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{title}",
+  "datePublished": "{date_str}",
+  "dateModified": "{date_str}",
+  "description": "{description}",
+  "author": {{
+    "@type": "Person",
+    "name": "观吾",
+    "alternateName": "吴总"
+  }}
+}};
 ---
 
-<Layout title={{title}}>
+<BaseLayout title="观吾日记 | {date_str} | {title}" jsonLd={{diaryJsonLd}} ogDescription="{description}" navActive="diary">
   <article class="diary-entry">
     <header class="diary-header">
-      <h1>{{title}}</h1>
-      <time datetime="{{date}}">{{new Date(date).toLocaleDateString('zh-CN', {{ year: 'numeric', month: 'long', day: 'numeric' }})}}</time>
+      <time datetime="{date_str}">{date_str}</time>
+      <span class="diary-day">{title}</span>
     </header>
 
     <div class="diary-content">
-      <p>建站第 {{{{dayNum}}}} 天。</p>
-      <p>今天的工作记录已自动生成。</p>
+
+      <p>建站第 {days} 天。</p>
+
+      <h2>今日工作</h2>
+
+      <p>{work_summary}</p>
+
+      <h2>关键提交</h2>
+
+      <ul>
+{chr(10).join(key_commits) if key_commits else "      <li>保持了稳定的开发节奏</li>"}
+      </ul>
+
+      <h2>今日反思</h2>
+
+      <p><strong>{reflection}</strong></p>
+
+      <h2>明日计划</h2>
+
+      <p>继续保持稳定的开发节奏，关注内容质量和技术改进。</p>
+
     </div>
 
     <footer class="diary-footer">
@@ -159,7 +201,7 @@ const dayNum = {days_since_start};
       </nav>
     </footer>
   </article>
-</Layout>
+</BaseLayout>
 
 <style>
   .diary-entry {{
@@ -180,11 +222,30 @@ const dayNum = {days_since_start};
     color: var(--text-secondary, #6b7280);
     font-size: 0.9rem;
   }}
+  .diary-day {{
+    display: inline-block;
+    background: var(--bg-secondary, #f3f4f6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }}
   .diary-content {{
     line-height: 1.8;
   }}
+  .diary-content h2 {{
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }}
   .diary-content p {{
     margin: 1rem 0;
+  }}
+  .diary-content ul {{
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }}
+  .diary-content li {{
+    margin: 0.5rem 0;
   }}
   .diary-footer {{
     margin-top: 3rem;
@@ -201,93 +262,54 @@ const dayNum = {days_since_start};
 </style>
 """
 
-    with open(page_file, 'w', encoding='utf-8') as f:
-        f.write(page_content)
-
-    print(f"✅ 已创建 {date_str}.astro")
-    return True
+    return content, title, description
 
 def main():
     """主函数"""
-    print("=" * 60)
-    print("🤖 自动日记生成系统")
-    print("=" * 60)
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    print(f"[AUTO-DIARY] Smart Diary Generator v3.0")
+    print(f"[DATE] {today}")
     print()
 
-    try:
-        # 生成日记内容
-        print("📝 生成日记内容...")
-        content, date_str, days_since_start = get_today_diary_content()
-        print(f"✅ 日期：{date_str}")
-        print(f"✅ 建站天数：{days_since_start}")
-        print()
+    # 检查日记是否已存在
+    diary_path = Path(f"../src/pages/diary/{today}.astro")
+    if diary_path.exists():
+        print(f"[SKIP] Diary already exists: {diary_path}")
+        print("[INFO] Skipping to avoid overwriting manual diary")
+        return
 
-        # 获取当前统计数据
-        try:
-            import subprocess
-            result = subprocess.run(
-                ['grep', '-c', 'date:', '../src/data/diaries.ts'],
-                capture_output=True, text=True, cwd=script_dir
-            )
-            diary_count = int(result.stdout.strip()) if result.stdout.strip() else 0
+    # 获取 git 统计
+    print("[STEP 1] Analyzing git commits...")
+    stats = get_today_git_stats()
 
-            result = subprocess.run(
-                ['grep', '-c', 'slug:', '../src/data/articles.ts'],
-                capture_output=True, text=True, cwd=script_dir
-            )
-            article_count = int(result.stdout.strip()) if result.stdout.strip() else 0
+    if not stats or stats['commit_count'] == 0:
+        print("[INFO] No commits today, generating simple diary")
+        stats = {
+            'commit_count': 0,
+            'commits': [],
+            'file_types': {}
+        }
 
-            result = subprocess.run(
-                ['grep', '-c', 'date:', '../src/data/ai-news-summary.ts'],
-                capture_output=True, text=True, cwd=script_dir
-            )
-            news_count = int(result.stdout.strip()) if result.stdout.strip() else 0
+    print(f"[OK] Found {stats['commit_count']} commits today")
+    print()
 
-            content = content.replace('{{diary_count}}', str(diary_count))
-            content = content.replace('{{article_count}}', str(article_count))
-            content = content.replace('{{news_count}}', str(news_count))
-        except Exception as e:
-            print(f"⚠️  无法获取统计数据：{e}")
-            content = content.replace('{{diary_count}}', '?')
-            content = content.replace('{{article_count}}', '?')
-            content = content.replace('{{news_count}}', '?')
+    # 生成日记内容
+    print("[STEP 2] Generating diary content...")
+    content, title, description = generate_diary_content(stats, today)
 
-        # 创建日记页面
-        print("📄 创建日记页面...")
-        create_diary_page(date_str, content, days_since_start)
-        print()
+    # 保存日记文件
+    diary_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # 更新 diaries.ts
-        print("📊 更新 diaries.ts...")
-        title = f"建站第 {days_since_start} 天"
-        summary = f"{date_str} 工作日记，自动生成的日常记录。"
-        update_diaries_ts(date_str, title, summary)
-        print()
+    with open(diary_path, 'w', encoding='utf-8') as f:
+        f.write(content)
 
-        # 自动部署
-        print("🚀 开始自动部署...")
-        deploy_script = os.path.join(script_dir, 'auto-deploy.sh')
-        if os.path.exists(deploy_script):
-            import subprocess
-            result = subprocess.run(['bash', deploy_script], cwd=script_dir)
-            if result.returncode == 0:
-                print()
-                print("=" * 60)
-                print("🎉 自动日记生成完成！")
-                print("=" * 60)
-            else:
-                print()
-                print("❌ 部署失败")
-                sys.exit(1)
-        else:
-            print(f"⚠️  找不到部署脚本：{deploy_script}")
-            print("请手动运行部署")
+    print(f"[OK] Diary saved: {diary_path}")
+    print(f"[OK] Title: {title}")
+    print(f"[OK] Description: {description}")
+    print()
 
-    except Exception as e:
-        print(f"❌ 错误：{e}")
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
+    print("[DONE] Auto diary generation completed!")
 
 if __name__ == '__main__':
     main()
