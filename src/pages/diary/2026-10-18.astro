@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Base.astro';
+const date = '2026-10-18';
+const title = `建站第 173 天`;
+const summary = `2026-10-18 工作日记`;
+const category = 'AI项目';
+const dayNum = 173;
+---
+
+<Layout title={title}>
+  <article class="diary-entry">
+    <header class="diary-header">
+      <h1>{title}</h1>
+      <time datetime="{date}">{new Date(date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+    </header>
+
+    <div class="diary-content">
+      <p>建站第 {{dayNum}} 天。</p>
+      <p>今天的工作记录已自动生成。</p>
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/diary/" class="nav-back">← 返回日记列表</a>
+      </nav>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+  }
+  time {
+    color: var(--text-secondary, #6b7280);
+    font-size: 0.9rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .diary-content p {
+    margin: 1rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--primary-color, #3b82f6);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    text-decoration: underline;
+  }
+</style>
