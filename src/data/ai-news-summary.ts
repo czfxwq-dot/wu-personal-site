@@ -24,696 +24,6 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
-  "date": "2026-10-05",
-  "title": "AI新闻 | Claude Opus 4.9发布、英伟达Blackwell Ultra量产、中国AI芯片突破7nm",
-  "summary": "Anthropic发布Claude Opus 4.9，推理能力提升40%且成本降低25%；英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；OpenAI宣布GPT-6将支持百万token上下文；欧盟AI法案实施细则出台，全球监管框架逐步成型。AI产业在算力、模型、监管三个维度同步推进。",
-  "newsItems": [
-    {
-      "title": "Anthropic发布Claude Opus 4.9：推理能力提升40%，成本降低25%",
-      "summary": "Anthropic正式发布Claude Opus 4.9模型，在复杂推理、代码生成和多步骤任务规划方面表现显著提升。相比Opus 4.8，新模型推理能力提高40%，API调用成本降低25%，上下文窗口扩展至500K token。Anthropic CEO Dario Amodei表示，Opus 4.9在保持安全性的同时大幅提升了实用性，特别适合企业级复杂应用场景。",
-      "source": "36氪",
-      "category": "大模型",
-      "url": "https://www.36kr.com/p/4010234567890123"
-    },
-    {
-      "title": "英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍",
-      "summary": "英伟达宣布Blackwell Ultra架构AI芯片正式进入量产阶段，首批产品将供应微软、谷歌、亚马逊等头部云服务商。Blackwell Ultra采用台积电4NP工艺，集成2080亿晶体管，AI训练性能较上代Hopper提升2.5倍，推理效率提升3倍。黄仁勋表示，Blackwell Ultra将推动AI从训练为主转向推理为主的新时代。",
-      "source": "机器之心",
-      "category": "AI芯片",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-05-nvidia-blackwell-ultra"
-    },
-    {
-      "title": "中国AI芯片公司成功突破7nm工艺，国产替代再进一步",
-      "summary": "国内AI芯片龙头企业宣布成功量产7nm工艺AI推理芯片，性能达到英伟达A100的80%水平，功耗降低30%。这是中国首次在先进制程AI芯片领域实现规模化量产，标志着国产AI芯片在技术能力和产能方面都取得重大突破。该芯片将优先供应国内云服务商和AI公司，加速国产替代进程。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/123456.html"
-    },
-    {
-      "title": "OpenAI宣布GPT-6将支持百万token上下文，预计2027年发布",
-      "summary": "OpenAI CEO Sam Altman在社交媒体透露，下一代模型GPT-6将支持100万token的超长上下文窗口，预计在2027年第一季度发布。GPT-6将采用全新的混合专家架构，在保持性能的同时大幅降低训练成本。Altman表示，GPT-6的目标是实现真正的通用人工智能，能够理解和处理人类知识的大部分领域。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/gpt-6-million-tokens"
-    },
-    {
-      "title": "欧盟AI法案实施细则正式出台，全球监管框架逐步成型",
-      "summary": "欧盟委员会正式发布《人工智能法案》实施细则，明确了高风险AI系统的合规要求和审查流程。细则要求所有在欧盟运营的AI系统必须进行风险评估，高风险应用（如医疗、金融、执法）需获得事前授权。这是全球首个全面的AI监管框架，将对全球AI产业发展产生深远影响，也引发了关于创新与监管平衡的讨论。",
-      "source": "36氪",
-      "category": "AI监管",
-      "url": "https://www.36kr.com/p/4010987654321098"
-    }
-  ],
-  "comment": "Claude Opus 4.9的性能提升、Blackwell Ultra的量产、中国7nm芯片的突破——AI产业正在算力、模型、工艺三个维度同步突破。欧盟监管框架的出台则提醒我们，技术进步需要与制度建设并行。"
-},
-{
-  "date": "2026-10-06",
-  "title": "AI新闻 | 微软Copilot Workspace发布、百度文心一言4.5上线、AI编程助手市场爆发",
-  "summary": "微软发布Copilot Workspace，实现从需求到代码的全流程AI辅助；百度文心一言4.5正式上线，多模态能力大幅增强；AI编程助手市场迎来爆发期，GitHub Copilot用户突破5000万；苹果收购AI初创公司IQM，加速Siri智能化改造；中国AI大模型备案数量突破100个，产业生态日趋成熟。AI正在从工具向平台演进。",
-  "newsItems": [
-    {
-      "title": "微软发布Copilot Workspace：从需求到代码，AI全流程辅助开发",
-      "summary": "微软在Ignite大会发布Copilot Workspace，这是一个革命性的AI开发环境，能够从自然语言需求描述直接生成完整的应用程序。开发者只需描述需求，Copilot Workspace会自动规划架构、生成代码、创建测试、部署应用。微软CEO Satya Nadella表示，这将软件开发效率提升10倍，让每个人都能成为开发者。",
-      "source": "36氪",
-      "category": "AI工具",
-      "url": "https://www.36kr.com/p/4011345678901234"
-    },
-    {
-      "title": "百度文心一言4.5正式上线，多模态能力大幅增强",
-      "summary": "百度正式发布文心一言4.5版本，在多模态理解、长文本处理、逻辑推理等方面实现重大突破。新版本支持图片、视频、音频多种输入格式，可以理解复杂的图表和数据可视化内容。百度CEO李彦宏表示，文心一言4.5的日调用量已突破10亿次，成为中国最活跃的AI应用之一。",
-      "source": "量子位",
-      "category": "大模型",
-      "url": "https://www.qbitai.com/2026/10/234567.html"
-    },
-    {
-      "title": "AI编程助手市场爆发，GitHub Copilot用户突破5000万",
-      "summary": "GitHub宣布Copilot付费用户突破5000万，月活跃开发者超过1亿。数据显示，使用Copilot的开发者代码产出提升55%，bug率降低30%。AI编程助手市场已形成GitHub Copilot、Cursor、Codeium三足鼎立的格局，市场规模预计2027年将达到100亿美元。",
-      "source": "机器之心",
-      "category": "AI工具",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-06-copilot-50m"
-    },
-    {
-      "title": "苹果收购AI初创公司IQM，加速Siri智能化改造",
-      "summary": "苹果以约10亿美元收购芬兰AI初创公司IQM，这是一家专注于量子计算和AI结合的公司。此次收购将帮助苹果加速Siri的智能化改造，提升其在复杂对话、推理和任务执行方面的能力。分析师认为，这是苹果在AI竞赛中的重要布局，意在追赶OpenAI和谷歌。",
-      "source": "AI科技评论",
-      "category": "AI并购",
-      "url": "https://www.aitechtalk.com/apple-iqm-acquisition"
-    }
-  ],
-  "comment": "从Copilot Workspace到文心一言4.5，AI正在从单点工具向全流程平台演进。编程助手市场的爆发则说明，AI最先颠覆的可能是知识工作者的生产方式。"
-},
-{
-  "date": "2026-10-07",
-  "title": "AI新闻 | 特斯拉Optimus Gen-3发布、阿里云通义千问开源、AI医疗诊断获批",
-  "summary": "特斯拉发布Optimus Gen-3人形机器人，具备流畅行走和精细操作能力；阿里云宣布通义千问72B模型开源，性能媲美GPT-4；FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%；字节跳动发布豆包大模型2.0，主打多模态和低成本；全球AI芯片市场规模突破500亿美元，英伟达市占率降至60%。AI在硬件、开源、医疗领域多点突破。",
-  "newsItems": [
-    {
-      "title": "特斯拉发布Optimus Gen-3：流畅行走，精细操作，量产在即",
-      "summary": "特斯拉AI Day发布Optimus Gen-3人形机器人，展示了流畅的行走能力、精准的手部操作和智能的环境感知。新一代Optimus可以完成叠衣服、收拾房间、简单的烹饪等家务劳动。马斯克表示，Optimus Gen-3将于2027年开始量产，初期售价约2万美元，目标成为家庭和服务业的通用机器人。",
-      "source": "36氪",
-      "category": "AI机器人",
-      "url": "https://www.36kr.com/p/4011456789012345"
-    },
-    {
-      "title": "阿里云宣布通义千问72B模型开源，性能媲美GPT-4",
-      "summary": "阿里云在云栖大会宣布，通义千问72B参数模型正式开源，在多项基准测试中性能接近GPT-4水平。该模型支持中英文双语，在代码生成、数学推理、中文理解等方面表现优异。阿里云表示，开源策略旨在推动中国AI生态发展，目前已超过10万开发者基于通义千问构建应用。",
-      "source": "量子位",
-      "category": "开源模型",
-      "url": "https://www.qbitai.com/2026/10/345678.html"
-    },
-    {
-      "title": "FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%",
-      "summary": "美国FDA批准了由PathAI开发的AI癌症诊断系统，该系统可以通过血液检测早期发现多种癌症，准确率达到95%。这是首个获得FDA全面批准的AI癌症筛查工具，预计将大幅降低癌症早期诊断成本。PathAI CEO表示，该系统将于2027年在美国医院大规模部署，有望拯救数百万生命。",
-      "source": "机器之心",
-      "category": "AI医疗",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-07-fda-cancer-ai"
-    },
-    {
-      "title": "字节跳动发布豆包大模型2.0，主打多模态和低成本",
-      "summary": "字节跳动正式发布豆包大模型2.0版本，在多模态理解和生成方面表现突出，可以处理文本、图片、视频、音频等多种格式。豆包2.0的API价格仅为GPT-4的三分之一，大幅降低了企业使用门槛。字节跳动表示，豆包大模型已接入抖音、今日头条等产品，日调用量超过50亿次。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/bytedance-doubao-2"
-    },
-    {
-      "title": "全球AI芯片市场规模突破500亿美元，竞争格局生变",
-      "summary": "市场研究机构Gartner发布报告，2026年全球AI芯片市场规模突破500亿美元，同比增长45%。英伟达市占率从85%降至60%，AMD、英特尔、中国厂商份额显著提升。报告指出，AI芯片市场正在从英伟达一家独大转向多元化竞争，定制化芯片和边缘AI芯片成为新增长点。",
-      "source": "36氪",
-      "category": "AI芯片",
-      "url": "https://www.36kr.com/p/4011567890123456"
-    }
-  ],
-  "comment": "Optimus Gen-3让机器人走进家庭，通义千问开源推动生态发展，AI医疗诊断拯救生命——AI正在从数字世界走向物理世界，从工具走向基础设施。"
-},
-{
-  "date": "2026-10-08",
-  "title": "AI新闻 | 谷歌Gemini 2.0发布、华为昇腾910C量产、AI教育平台用户破亿",
-  "summary": "谷歌发布Gemini 2.0系列模型，多模态能力全面升级；华为昇腾910C AI芯片正式量产，性能对标英伟达A100；全球AI教育平台用户突破1亿，个性化学习成为现实；微软Teams集成AI会议助手，自动记录和总结会议内容；中国AI独角兽数量突破500家，产业生态日趋完善。AI在教育、办公、芯片领域全面发力。",
-  "newsItems": [
-    {
-      "title": "谷歌发布Gemini 2.0系列：多模态能力全面升级，支持百万token上下文",
-      "summary": "谷歌在Cloud Next大会发布Gemini 2.0系列模型，包括Gemini 2.0 Flash、Pro和Ultra三个版本。新模型在多模态理解、长上下文处理、代码生成等方面表现优异，最大支持100万token上下文窗口。谷歌CEO Sundar Pichai表示，Gemini 2.0将深度整合到Google Workspace、Android等产品中，成为谷歌AI战略的核心。",
-      "source": "机器之心",
-      "category": "大模型",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-08-gemini-2"
-    },
-    {
-      "title": "华为昇腾910C AI芯片正式量产，性能对标英伟达A100",
-      "summary": "华为宣布昇腾910C AI芯片正式进入量产阶段，性能达到英伟达A100的90%水平，功耗降低20%。昇腾910C采用中芯国际7nm工艺，是中国目前性能最强的AI训练芯片。华为表示，昇腾910C将优先供应国内云服务商和AI公司，已获得超过10万片订单，标志着国产AI芯片在高端市场取得突破。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/456789.html"
-    },
-    {
-      "title": "全球AI教育平台用户突破1亿，个性化学习成为现实",
-      "summary": "市场研究显示，全球AI教育平台用户总数突破1亿，其中中国用户占比超过30%。AI教育平台可以根据学生的学习进度、知识掌握情况、学习风格等因素，提供完全个性化的学习路径和内容。数据显示，使用AI教育平台的学生学习效率提升40%，知识掌握度提高35%。AI正在重塑教育行业的教学方式。",
-      "source": "36氪",
-      "category": "AI教育",
-      "url": "https://www.36kr.com/p/4011678901234567"
-    },
-    {
-      "title": "微软Teams集成AI会议助手，自动记录和总结会议内容",
-      "summary": "微软宣布在Teams中集成AI会议助手功能，可以自动记录会议内容、识别发言人、提取关键信息、生成会议纪要。AI会议助手还支持多语言实时翻译，可以让全球团队无障碍沟通。微软表示，该功能将帮助企业提升会议效率50%，减少会后整理时间。该功能将于2026年11月向企业用户开放。",
-      "source": "AI科技评论",
-      "category": "AI工具",
-      "url": "https://www.aitechtalk.com/teams-ai-meeting-assistant"
-    }
-  ],
-  "comment": "Gemini 2.0的多模态升级、昇腾910C的量产、AI教育的普及——AI正在从技术突破走向应用落地，从精英工具走向大众基础设施。"
-},
-{
-  "date": "2026-10-09",
-  "title": "AI新闻 | OpenAI收购Jewish、AI音乐生成版权争议、中国大模型备案破150个",
-  "summary": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力；AI音乐生成引发版权争议，多家唱片公司起诉AI公司；中国大模型备案数量突破150个，产业生态日趋成熟；亚马逊推出AI购物助手Rufus，提升购物体验；全球AI投资额前三季度达1000亿美元，创历史新高。AI在搜索、音乐、电商领域快速渗透。",
-  "newsItems": [
-    {
-      "title": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力",
-      "summary": "OpenAI宣布以20亿美元收购AI初创公司Jewish，这是一家专注于AI搜索和推理的公司。Jewish开发的搜索引擎可以理解复杂查询，提供准确、有深度的答案。此次收购将帮助OpenAI强化搜索能力，与谷歌形成直接竞争。OpenAI表示，Jewish的技术将整合到ChatGPT中，提升其信息检索和推理能力。",
-      "source": "36氪",
-      "category": "AI并购",
-      "url": "https://www.36kr.com/p/4011789012345678"
-    },
-    {
-      "title": "AI音乐生成引发版权争议，多家唱片公司起诉AI公司",
-      "summary": "环球音乐、索尼音乐、华纳音乐等多家唱片公司联合起诉AI音乐生成公司Suno和Udio，指控其侵犯版权。唱片公司认为，AI音乐生成模型使用了大量受版权保护的音乐作品进行训练，生成的音乐与原作高度相似。此案将成为AI生成内容版权认定的标志性案件，对AI音乐、AI艺术等领域产生深远影响。",
-      "source": "机器之心",
-      "category": "AI版权",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-09-ai-music-copyright"
-    },
-    {
-      "title": "中国大模型备案数量突破150个，产业生态日趋成熟",
-      "summary": "国家互联网信息办公室数据显示，中国已完成备案的大模型数量突破150个，涵盖通用大模型、行业大模型、垂直大模型等多个类别。备案大模型累计服务用户超过5亿，日调用量突破50亿次。工信部表示，中国大模型产业已从技术探索进入规模化应用阶段，在金融、医疗、教育、制造等领域形成了一批典型应用案例。",
-      "source": "量子位",
-      "category": "AI政策",
-      "url": "https://www.qbitai.com/2026/10/567890.html"
-    },
-    {
-      "title": "亚马逊推出AI购物助手Rufus，提升购物体验",
-      "summary": "亚马逊正式发布AI购物助手Rufus，可以通过自然语言对话帮助用户发现商品、比较产品、获取购物建议。Rufus可以理解复杂的购物需求，如'适合5岁孩子的生日礼物'，并推荐相关商品。亚马逊表示，Rufus将整合到Amazon App中，帮助用户更快找到想要的商品，提升购物体验。",
-      "source": "AI科技评论",
-      "category": "AI电商",
-      "url": "https://www.aitechtalk.com/amazon-rufus"
-    },
-    {
-      "title": "全球AI投资额前三季度达1000亿美元，创历史新高",
-      "summary": "市场研究机构CB Insights发布报告，2026年前三季度全球AI领域投资额达到1000亿美元，同比增长60%，创历史新高。其中，大模型、AI芯片、AI应用是投资热点，占比超过70%。报告指出，AI投资正在从早期技术探索转向商业化应用，投资者更关注有明确商业模式和收入来源的AI公司。",
-      "source": "36氪",
-      "category": "AI投资",
-      "url": "https://www.36kr.com/p/4011890123456789"
-    }
-  ],
-  "comment": "OpenAI收购Jewish强化搜索，AI音乐引发版权争议，中国大模型备案破150——AI产业在快速扩张的同时，也面临版权、监管、商业化等挑战。"
-},
-{
-  "date": "2026-10-10",
-  "title": "AI新闻 | Anthropic融资50亿美元、AI法律助手获批、Meta发布AI翻译模型",
-  "summary": "Anthropic完成50亿美元融资，估值达1800亿美元；美国律师协会批准首个AI法律助手，可辅助法律文书撰写；Meta发布无国界翻译模型，支持100种语言实时翻译；英伟达推出AI超级计算机DGX B200，性能提升3倍；中国AI独角兽月之暗面估值突破50亿美元。AI在金融、法律、翻译领域加速落地。",
-  "newsItems": [
-    {
-      "title": "Anthropic完成50亿美元融资，估值达1800亿美元",
-      "summary": "AI安全公司Anthropic宣布完成50亿美元D轮融资，由LightSpeed Venture Partners领投，谷歌、Spark Capital等跟投。此轮融资后，Anthropic估值达到1800亿美元，成为全球估值最高的AI初创公司之一。Anthropic表示，资金将用于算力基础设施建设、前沿研究和人才引进，加速Claude模型系列的迭代。",
-      "source": "36氪",
-      "category": "AI融资",
-      "url": "https://www.36kr.com/p/4011901234567890"
-    },
-    {
-      "title": "美国律师协会批准首个AI法律助手，可辅助法律文书撰写",
-      "summary": "美国律师协会(ABA)正式批准AI法律助手LexAI用于辅助法律文书撰写和法律研究。LexAI可以理解复杂法律案例，生成合同、诉状、法律意见书等文书，准确率达到95%以上。ABA表示，AI法律助手将大幅提高律师工作效率，降低法律服务成本，但律师仍需对AI生成的内容进行审核和负责。",
-      "source": "机器之心",
-      "category": "AI法律",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-10-ai-legal-assistant"
-    },
-    {
-      "title": "Meta发布无国界翻译模型，支持100种语言实时翻译",
-      "summary": "Meta AI Research发布No Borders翻译模型，支持100种语言的实时翻译，包括多种低资源语言。该模型在翻译准确性和流畅度方面表现优异，特别擅长处理方言、口语、专业术语等复杂场景。Meta表示，No Borders将开源，帮助全球开发者构建多语言应用，促进跨文化交流。",
-      "source": "量子位",
-      "category": "开源模型",
-      "url": "https://www.qbitai.com/2026/10/678901.html"
-    },
-    {
-      "title": "英伟达推出AI超级计算机DGX B200，性能提升3倍",
-      "summary": "英伟达发布新一代AI超级计算机DGX B200，搭载8颗Blackwell Ultra GPU，AI训练性能较上代DGX H100提升3倍，能效提升2.5倍。DGX B200支持万亿参数模型训练，适合大型语言模型、多模态模型等复杂AI任务。英伟达表示，DGX B200将帮助企业和研究机构加速AI创新和部署。",
-      "source": "AI科技评论",
-      "category": "AI硬件",
-      "url": "https://www.aitechtalk.com/nvidia-dgx-b200"
-    }
-  ],
-  "comment": "Anthropic融资50亿美元、AI法律助手获批、Meta开源翻译模型——AI正在从技术竞赛走向商业落地，从英语世界走向全球应用。"
-},
-{
-  "date": "2026-10-11",
-  "title": "AI新闻 | 苹果Apple Intelligence上线、AI游戏NPC实现真正对话、中国AI芯片出口突破",
-  "summary": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用；AI游戏NPC实现真正自然对话，玩家体验革命性提升；中国AI芯片首次出口欧洲，国产替代迈出国际化步伐；OpenAI推出ChatGPT企业版，支持私有化部署；全球AI人才缺口达400万，人才培养成为产业瓶颈。AI在消费电子、游戏、芯片领域持续突破。",
-  "newsItems": [
-    {
-      "title": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用",
-      "summary": "苹果在iOS 18.1中正式推出Apple Intelligence功能，深度整合Siri语音助手、邮件、信息、照片等系统应用。Apple Intelligence可以理解用户意图，自动生成文本、图片，总结邮件和信息，智能整理照片。苹果CEO库克表示，Apple Intelligence将重新定义个人智能助手，为用户提供真正有用的AI体验。",
-      "source": "36氪",
-      "category": "AI消费电子",
-      "url": "https://www.36kr.com/p/4012012345678901"
-    },
-    {
-      "title": "AI游戏NPC实现真正自然对话，玩家体验革命性提升",
-      "summary": "游戏开发商Ubisoft展示AI驱动的NPC技术，NPC可以与玩家进行真正自然的对话，理解上下文，记住之前的交互，根据玩家行为调整对话策略。测试显示，AI NPC的对话自然度评分达到90分，远超传统脚本NPC。Ubisoft表示，AI NPC将在2027年的新游戏中大规模应用，为玩家带来沉浸式游戏体验。",
-      "source": "机器之心",
-      "category": "AI游戏",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-11-ai-game-npc"
-    },
-    {
-      "title": "中国AI芯片首次出口欧洲，国产替代迈出国际化步伐",
-      "summary": "中国AI芯片公司寒武纪宣布，其思元370芯片首次出口欧洲，获得德国某汽车厂商的订单。这是中国AI芯片首次进入欧洲市场，标志着国产AI芯片在技术能力和国际认可度方面取得重要突破。寒武纪表示，思元370在性能和功耗方面达到国际先进水平，将用于自动驾驶和智能座舱应用。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/789012.html"
-    },
-    {
-      "title": "OpenAI推出ChatGPT企业版，支持私有化部署",
-      "summary": "OpenAI正式发布ChatGPT企业版，支持企业在私有云或本地环境部署，确保数据安全和合规性。ChatGPT企业版提供更高的性能、更强的定制能力、更严格的安全控制，适合金融、医疗、政府等对数据安全要求高的行业。OpenAI表示，已有超过100家企业客户签约，包括多家财富500强公司。",
-      "source": "AI科技评论",
-      "category": "AI企业",
-      "url": "https://www.aitechtalk.com/chatgpt-enterprise"
-    },
-    {
-      "title": "全球AI人才缺口达400万，人才培养成为产业瓶颈",
-      "summary": "LinkedIn发布报告，全球AI人才缺口已达400万，其中大模型、AI芯片、AI安全领域人才最为紧缺。报告指出，AI人才供不应求的主要原因包括：AI技术快速发展导致技能要求快速变化、高校AI教育滞后于产业需求、顶尖AI人才被头部公司垄断。专家建议，高校应加强AI学科建设，企业应加大内部培训投入。",
-      "source": "36氪",
-      "category": "AI人才",
-      "url": "https://www.36kr.com/p/4012123456789012"
-    }
-  ],
-  "comment": "Apple Intelligence上线、AI游戏NPC实现自然对话、中国AI芯片出口欧洲——AI正在从实验室走向消费市场，从国内市场走向全球竞争。"
-},
-{
-  "date": "2026-10-12",
-  "title": "AI新闻 | DeepSeek-V4发布、AI自动驾驶获准运营、谷歌AI搜索引擎份额破30%",
-  "summary": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%；美国加州批准AI自动驾驶出租车商业运营；谷歌AI搜索引擎份额突破30%，挑战谷歌搜索霸主地位；微软推出AI代码审查工具，代码质量提升40%；中国AI企业出海加速，多家公司在东南亚设立研发中心。AI在自动驾驶、搜索、开发工具领域快速突破。",
-  "newsItems": [
-    {
-      "title": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%",
-      "summary": "中国AI公司DeepSeek发布V4大模型，在多项基准测试中性能超越GPT-4o，同时API调用成本降低50%。DeepSeek-V4采用创新的混合专家架构和高效训练方法，在代码生成、数学推理、中文理解等方面表现突出。DeepSeek表示，V4模型将开源，推动中国AI生态发展。",
-      "source": "量子位",
-      "category": "大模型",
-      "url": "https://www.qbitai.com/2026/10/890123.html"
-    },
-    {
-      "title": "美国加州批准AI自动驾驶出租车商业运营",
-      "summary": "加州公共事业委员会(CPUC)正式批准Waymo和Cruise在旧金山、洛杉矶等城市开展AI自动驾驶出租车商业运营。这是美国首次批准AI自动驾驶出租车在城市道路上大规模运营，标志着自动驾驶技术从测试阶段进入商业化阶段。监管机构要求运营方提供24/7远程监控，确保乘客安全。",
-      "source": "机器之心",
-      "category": "AI自动驾驶",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-12-autonomous-taxi"
-    },
-    {
-      "title": "谷歌AI搜索引擎份额突破30%，挑战传统搜索霸主地位",
-      "summary": "市场研究机构StatCounter数据显示，谷歌AI搜索引擎(整合Gemini模型的搜索)市场份额突破30%，首次对传统谷歌搜索形成实质性挑战。用户反馈显示，AI搜索引擎在复杂查询、深度信息获取方面表现优异，用户满意度比传统搜索高25%。分析师预测，到2027年AI搜索引擎市场份额将达到50%。",
-      "source": "36氪",
-      "category": "AI搜索",
-      "url": "https://www.36kr.com/p/4012234567890123"
-    },
-    {
-      "title": "微软推出AI代码审查工具，代码质量提升40%",
-      "summary": "微软在GitHub Universe大会发布AI代码审查工具Code Review AI，可以自动识别代码中的bug、安全漏洞、性能问题，并提供修复建议。测试数据显示，使用Code Review AI的团队代码质量提升40%，bug率降低35%，代码审查时间缩短60%。该工具将集成到GitHub中，向所有开发者开放。",
-      "source": "AI科技评论",
-      "category": "AI工具",
-      "url": "https://www.aitechtalk.com/github-code-review-ai"
-    }
-  ],
-  "comment": "DeepSeek-V4性能超越GPT-4o、自动驾驶出租车获准运营、AI搜索份额破30%——AI正在从技术突破走向商业化落地，从实验性质走向主流应用。"
-},
-{
-  "date": "2026-10-13",
-  "title": "AI新闻 | 亚马逊Bedrock Agent发布、AI药物研发突破、中国AI芯片市占率破20%",
-  "summary": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用；AI驱动的药物研发取得突破，新药研发周期缩短至2年；中国AI芯片在国内市场份额突破20%，国产替代加速；OpenAI推出GPT-4 Turbo with Vision，支持视频理解；全球AI伦理委员会成立，推动负责任AI发展。AI在企业应用、医疗、芯片领域持续突破。",
-  "newsItems": [
-    {
-      "title": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用",
-      "summary": "亚马逊AWS发布Bedrock Agent平台，允许企业在亚马逊云科技上构建和部署AI Agent应用。Bedrock Agent可以理解用户意图，调用多个API和工具，自动完成复杂任务。亚马逊表示，Bedrock Agent将帮助企业快速构建智能客服、自动化工作流、智能助手等应用，加速AI在企业中的落地。",
-      "source": "36氪",
-      "category": "AI平台",
-      "url": "https://www.36kr.com/p/4012345678901234"
-    },
-    {
-      "title": "AI驱动的药物研发取得突破，新药研发周期缩短至2年",
-      "summary": "AI药物研发公司Insilico Medicine宣布，其AI发现的IPF(特发性肺纤维化)治疗药物进入二期临床试验，从靶点发现到临床仅用时18个月，远少于传统药物研发的5-10年周期。该公司表示，AI可以大幅缩短药物研发周期，降低成本，提高成功率。目前已有10+款AI药物进入临床阶段，AI制药正在成为现实。",
-      "source": "机器之心",
-      "category": "AI医疗",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-13-ai-drug-discovery"
-    },
-    {
-      "title": "中国AI芯片在国内市场份额突破20%，国产替代加速",
-      "summary": "市场研究机构IDC数据显示，2026年第三季度中国AI芯片市场中，国产芯片份额突破20%，创历史新高。华为昇腾、寒武纪、海光信息等国产AI芯片在性能、生态、价格等方面竞争力显著提升。分析师预测，到2027年国产AI芯片市场份额将达到35%，国产替代进程加速。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/901234.html"
-    },
-    {
-      "title": "OpenAI推出GPT-4 Turbo with Vision，支持视频理解",
-      "summary": "OpenAI发布GPT-4 Turbo with Vision版本，首次支持视频理解能力。新模型可以分析视频内容，理解视频中的物体、动作、场景、情感等信息，并回答相关问题。OpenAI表示，GPT-4 Turbo with Vision将应用于视频内容审核、智能监控、视频搜索等场景，为开发者提供新的应用场景。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/gpt-4-vision"
-    },
-    {
-      "title": "全球AI伦理委员会成立，推动负责任AI发展",
-      "summary": "联合国教科文组织宣布成立全球AI伦理委员会，由来自30个国家的AI专家、伦理学家、政策制定者组成。委员会将制定AI伦理准则，监督AI技术发展，推动负责任AI发展。委员会主席表示，AI技术发展必须以人类福祉为中心，确保AI安全、公平、透明、可解释。",
-      "source": "36氪",
-      "category": "AI伦理",
-      "url": "https://www.36kr.com/p/4012456789012345"
-    }
-  ],
-  "comment": "Bedrock Agent推动企业AI应用、AI药物研发缩短周期、国产AI芯片份额破20%——AI正在从技术探索走向产业应用，从追求性能走向追求价值。"
-},
-{
-  "date": "2026-10-14",
-  "title": "AI新闻 | 微软Phi-4开源、AI金融分析师获批、Meta发布AI视频生成模型",
-  "summary": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型；美国SEC批准首个AI金融分析师用于投资决策；Meta发布Movie Gen视频生成模型，可从文本生成高质量视频；英伟达推出AI推理优化框架TensorRT-LLM 2.0；中国AI企业数量突破1万家，产业生态日趋完善。AI在开源、金融、视频领域多点突破。",
-  "newsItems": [
-    {
-      "title": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型",
-      "summary": "微软研究院发布Phi-4开源模型，仅有38亿参数，但在多项基准测试中性能媲美700亿参数级别模型。Phi-4采用创新的训练方法和数据筛选策略，在推理、代码、数学等方面表现优异。微软表示，Phi-4可以在消费级GPU上运行，让开发者可以在本地部署高性能AI模型。",
-      "source": "机器之心",
-      "category": "开源模型",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-14-microsoft-phi-4"
-    },
-    {
-      "title": "美国SEC批准首个AI金融分析师用于投资决策",
-      "summary": "美国证券交易委员会(SEC)批准AI金融分析师平台FinSight用于辅助投资决策。FinSight可以分析海量金融数据，识别投资机会，评估风险，生成投资建议。SEC要求使用FinSight的金融机构必须保留人类分析师的最终决策权，AI仅提供辅助建议。这是AI首次被批准用于核心金融决策流程。",
-      "source": "36氪",
-      "category": "AI金融",
-      "url": "https://www.36kr.com/p/4012567890123456"
-    },
-    {
-      "title": "Meta发布Movie Gen视频生成模型，可从文本生成高质量视频",
-      "summary": "Meta AI Research发布Movie Gen视频生成模型，可以从文本描述生成高质量、长时长的视频内容。Movie Gen支持多种视频风格，包括电影、动画、纪录片等，生成的视频在画质、连贯性、语义一致性方面表现优异。Meta表示，Movie Gen将开源，推动视频内容创作和AI视频技术的发展。",
-      "source": "量子位",
-      "category": "AI视频",
-      "url": "https://www.qbitai.com/2026/10/012345.html"
-    },
-    {
-      "title": "英伟达推出AI推理优化框架TensorRT-LLM 2.0",
-      "summary": "英伟达发布TensorRT-LLM 2.0，这是专门针对大语言模型推理优化的框架。新版本在推理速度、内存效率、量化支持等方面全面提升，可以将LLM推理速度提升3倍，内存占用降低50%。英伟达表示，TensorRT-LLM 2.0将帮助企业在生产环境中高效部署大语言模型，降低推理成本。",
-      "source": "AI科技评论",
-      "category": "AI工具",
-      "url": "https://www.aitechtalk.com/tensorrt-llm-2"
-    }
-  ],
-  "comment": "Phi-4用小参数实现大性能、AI金融分析师获批、Movie Gen生成高质量视频——AI正在从追求规模走向追求效率，从技术展示走向实际应用。"
-},
-{
-  "date": "2026-10-15",
-  "title": "AI新闻 | 谷歌Gemini Nano上线手机、AI客服通过图灵测试、中国AI专利数全球第一",
-  "summary": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能；AI客服系统在图灵测试中首次超越人类客服；中国AI专利申请数量跃居全球第一，占全球总量35%；OpenAI推出ChatGPT插件市场，生态系统初具规模；全球AI服务器市场规模突破300亿美元。AI在移动设备、客服、专利领域持续突破。",
-  "newsItems": [
-    {
-      "title": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能",
-      "summary": "谷歌在Pixel 8系列手机上部署Gemini Nano模型，支持离线状态下的AI功能，包括文本总结、智能回复、照片编辑等。Gemini Nano针对移动设备优化，可以在手机上高效运行，不需要网络连接。谷歌表示，这将为用户提供更快速、更私密的AI体验，推动AI从云端走向终端设备。",
-      "source": "36氪",
-      "category": "AI移动",
-      "url": "https://www.36kr.com/p/4012678901234567"
-    },
-    {
-      "title": "AI客服系统在图灵测试中首次超越人类客服",
-      "summary": "AI客服公司Intercom公布测试结果，其AI客服系统在图灵测试中首次超越人类客服，评分达到92分(人类客服平均85分)。测试涵盖问题理解、回答准确性、情感共鸣、解决效率等多个维度。Intercom表示，AI客服可以24/7提供服务，响应速度快，成本低，将大规模替代人工客服。",
-      "source": "机器之心",
-      "category": "AI客服",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-15-ai-customer-service"
-    },
-    {
-      "title": "中国AI专利申请数量跃居全球第一，占全球总量35%",
-      "summary": "世界知识产权组织(WIPO)数据显示，2026年中国AI专利申请数量跃居全球第一，占全球总量35%，超过美国(28%)和欧盟(18%)。中国在大模型、AI芯片、AI应用等领域专利数量增长迅速。专家指出，中国AI专利数量领先反映了中国在AI领域的创新能力和产业投入，但专利质量仍需提升。",
-      "source": "量子位",
-      "category": "AI专利",
-      "url": "https://www.qbitai.com/2026/10/123456.html"
-    },
-    {
-      "title": "OpenAI推出ChatGPT插件市场，生态系统初具规模",
-      "summary": "OpenAI正式发布ChatGPT插件市场，已有超过1000个插件上线，涵盖搜索、代码、数据分析、图像生成等多个领域。用户可以通过插件扩展ChatGPT的能力，如实时搜索网页、执行代码、分析数据等。OpenAI表示，插件市场将推动ChatGPT从单一对话工具走向全能AI助手，构建完整的AI生态系统。",
-      "source": "AI科技评论",
-      "category": "AI平台",
-      "url": "https://www.aitechtalk.com/chatgpt-plugins"
-    },
-    {
-      "title": "全球AI服务器市场规模突破300亿美元",
-      "summary": "市场研究机构IDC发布报告，2026年全球AI服务器市场规模突破300亿美元，同比增长55%。其中，训练服务器占比60%，推理服务器占比40%，推理服务器增速更快。报告指出，随着AI应用大规模部署，推理服务器需求快速增长，将成为AI服务器市场的主要增长动力。",
-      "source": "36氪",
-      "category": "AI硬件",
-      "url": "https://www.36kr.com/p/4012789012345678"
-    }
-  ],
-  "comment": "Gemini Nano让手机具备AI能力、AI客服通过图灵测试、中国AI专利全球第一——AI正在从云端走向终端，从实验走向产品，从跟随走向引领。"
-},
-{
-  "date": "2026-10-16",
-  "title": "AI新闻 | Anthropic Claude 3.5 Sonnet升级、AI建筑设计获批、字节跳动发布AI搜索",
-  "summary": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%；美国批准首个AI建筑设计系统，可自动生成建筑方案；字节跳动发布AI搜索引擎豆包搜索，主打智能和准确；英伟达推出AI网络加速方案，训练效率提升20%；中国AI核心产业规模突破8000亿元。AI在模型、建筑、搜索领域持续创新。",
-  "newsItems": [
-    {
-      "title": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%",
-      "summary": "Anthropic发布Claude 3.5 Sonnet升级版本，在推理、代码、数学等方面性能提升30%，同时保持与原版相同的价格和速度。新版本在复杂推理任务、长文档理解、多步骤问题求解方面表现突出。Anthropic表示，Claude 3.5 Sonnet升级版本将进一步巩固其在企业级AI应用中的领先地位。",
-      "source": "机器之心",
-      "category": "大模型",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-16-claude-3-5-sonnet"
-    },
-    {
-      "title": "美国批准首个AI建筑设计系统，可自动生成建筑方案",
-      "summary": "美国建筑协会(AIA)批准AI建筑设计系统ArchAI用于实际建筑设计项目。ArchAI可以根据场地条件、功能需求、规范要求进行自动生成建筑方案，包括平面布局、立面设计、结构计算等。测试显示，ArchAI生成的方案在功能性和美观性方面达到专业建筑师水平，设计效率提升10倍。",
-      "source": "36氪",
-      "category": "AI建筑",
-      "url": "https://www.36kr.com/p/4012890123456789"
-    },
-    {
-      "title": "字节跳动发布AI搜索引擎豆包搜索，主打智能和准确",
-      "summary": "字节跳动正式发布AI搜索引擎豆包搜索，基于豆包大模型构建，主打智能理解和准确回答。豆包搜索可以理解复杂查询，提供结构化、有深度的答案，而不是简单的链接列表。字节跳动表示，豆包搜索将整合到抖音、今日头条等产品中，为用户提供更好的搜索体验。",
-      "source": "量子位",
-      "category": "AI搜索",
-      "url": "https://www.qbitai.com/2026/10/234567.html"
-    },
-    {
-      "title": "英伟达推出AI网络加速方案，训练效率提升20%",
-      "summary": "英伟达发布Quantum-2 InfiniBand网络方案，专为大规模AI训练优化。Quantum-2提供400Gb/s带宽，网络延迟降低30%，可以将大规模AI训练效率提升20%。英伟达表示，Quantum-2将帮助企业和研究机构构建更高效的AI训练集群，加速AI模型开发和部署。",
-      "source": "AI科技评论",
-      "category": "AI硬件",
-      "url": "https://www.aitechtalk.com/nvidia-quantum-2"
-    },
-    {
-      "title": "中国AI核心产业规模突破8000亿元",
-      "summary": "工信部数据显示，2026年中国AI核心产业规模突破8000亿元，同比增长30%。其中，AI芯片、AI软件、AI服务是主要增长点。中国AI企业数量超过1万家，从业人员超过500万。工信部表示，中国AI产业已从技术探索进入规模化应用阶段，在制造、金融、医疗、教育等领域形成了一批典型应用。",
-      "source": "36氪",
-      "category": "AI产业",
-      "url": "https://www.36kr.com/p/4012901234567890"
-    }
-  ],
-  "comment": "Claude 3.5 Sonnet升级、AI建筑设计获批、豆包搜索发布——AI正在从通用能力走向专业能力，从数字世界走向物理世界。"
-},
-{
-  "date": "2026-10-17",
-  "title": "AI新闻 | OpenAI o1模型发布、AI农业系统推广、中国AI独角兽数量破600",
-  "summary": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越；AI精准农业系统在全球推广，作物产量提升25%；中国AI独角兽数量突破600家，总估值超2万亿元；微软推出AI辅助写作工具，写作效率提升50%；全球AI伦理准则更新，强调AI安全和可控。AI在推理、农业、投资领域持续突破。",
-  "newsItems": [
-    {
-      "title": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越",
-      "summary": "OpenAI发布o1系列模型，专门针对复杂推理任务优化。o1在数学竞赛、编程挑战、科学推理等任务上表现卓越，在国际数学奥林匹克预选题上准确率达到90%，在编程竞赛中超过95%的人类选手。OpenAI表示，o1采用了新的训练方法，让模型可以在回答前进行深度思考，大幅提升推理能力。",
-      "source": "机器之心",
-      "category": "大模型",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-17-openai-o1"
-    },
-    {
-      "title": "AI精准农业系统在全球推广，作物产量提升25%",
-      "summary": "联合国粮农组织(FAO)推广AI精准农业系统，该系统可以利用卫星图像、气象数据、土壤数据等，为农民提供精准的种植建议。数据显示，使用该系统的农场作物产量提升25%，水资源使用减少30%，化肥使用减少20%。FAO表示，AI精准农业将帮助全球应对粮食安全挑战，特别是在发展中国家。",
-      "source": "36氪",
-      "category": "AI农业",
-      "url": "https://www.36kr.com/p/4013012345678901"
-    },
-    {
-      "title": "中国AI独角兽数量突破600家，总估值超2万亿元",
-      "summary": "胡润研究院发布报告，中国AI独角兽数量突破600家，总估值超过2万亿元。其中，大模型、AI芯片、AI应用是主要赛道，占比超过70%。报告指出，中国AI独角兽数量仅次于美国，位居全球第二，反映出中国AI产业的创新活力和投资热度。",
-      "source": "量子位",
-      "category": "AI投资",
-      "url": "https://www.qbitai.com/2026/10/345678.html"
-    },
-    {
-      "title": "微软推出AI辅助写作工具，写作效率提升50%",
-      "summary": "微软在Word中集成AI辅助写作功能，可以帮助用户自动生成文本、改写句子、优化结构、检查语法。测试数据显示，使用该功能的用户写作效率提升50%，文档质量提升30%。微软表示，AI辅助写作将帮助用户更快、更好地表达思想，提升工作和学习效率。",
-      "source": "AI科技评论",
-      "category": "AI工具",
-      "url": "https://www.aitechtalk.com/word-ai-writing"
-    },
-    {
-      "title": "全球AI伦理准则更新，强调AI安全和可控",
-      "summary": "OECD更新AI伦理准则，新增AI安全、可控、透明等原则。新准则要求AI系统必须具备故障安全机制，在异常情况下可以安全停止；必须保持人类控制，关键决策需要人类审核；必须提高透明度，让用户了解AI的工作原理和局限性。OECD表示，新准则将引导全球AI产业健康发展。",
-      "source": "36氪",
-      "category": "AI伦理",
-      "url": "https://www.36kr.com/p/4013123456789012"
-    }
-  ],
-  "comment": "OpenAI o1模型展现强大推理能力、AI农业系统提升作物产量、中国AI独角兽破600家——AI正在从通用智能走向专业智能，从城市走向乡村，从技术走向价值。"
-},
-{
-  "date": "2026-10-18",
-  "title": "AI新闻 | 谷歌DeepMind发布AlphaFold 3、AI客服市场规模破千亿、中国AI论文数全球第一",
-  "summary": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构；全球AI客服市场规模突破1000亿美元，年增长率达40%；中国AI论文发表数量跃居全球第一，占全球总量30%；Anthropic发布Claude API新版本，支持工具调用和函数调用；全球AI数据中心数量突破1000个，算力基础设施快速扩张。AI在科研、客服、学术领域持续突破。",
-  "newsItems": [
-    {
-      "title": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构",
-      "summary": "谷歌DeepMind发布AlphaFold 3，可以预测蛋白质、DNA、RNA、配体等所有生物分子的结构和相互作用。相比AlphaFold 2，新版本预测准确率提升50%，速度提升10倍，支持更多分子类型。DeepMind表示，AlphaFold 3将加速药物研发、疾病治疗、生物技术研究，对生命科学产生革命性影响。",
-      "source": "机器之心",
-      "category": "AI科研",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-18-alphafold-3"
-    },
-    {
-      "title": "全球AI客服市场规模突破1000亿美元，年增长率达40%",
-      "summary": "市场研究机构Gartner发布报告，2026年全球AI客服市场规模突破1000亿美元，年增长率达40%。报告指出，AI客服在响应速度、服务一致性、成本控制方面优势明显，越来越多企业采用AI客服替代或辅助人工客服。预计2027年AI客服市场将达到1500亿美元，成为AI应用最大的细分市场之一。",
-      "source": "36氪",
-      "category": "AI客服",
-      "url": "https://www.36kr.com/p/4013234567890123"
-    },
-    {
-      "title": "中国AI论文发表数量跃居全球第一，占全球总量30%",
-      "summary": "Nature Index数据显示，2026年中国AI论文发表数量跃居全球第一，占全球总量30%，超过美国(25%)和欧盟(15%)。中国在AI顶会(NeurIPS、ICML、ICLR)的论文数量也位居前列。专家指出，中国AI论文数量领先反映了中国在AI研究方面的投入和产出，但高影响力论文比例仍需提升。",
-      "source": "量子位",
-      "category": "AI学术",
-      "url": "https://www.qbitai.com/2026/10/456789.html"
-    },
-    {
-      "title": "Anthropic发布Claude API新版本，支持工具调用和函数调用",
-      "summary": "Anthropic发布Claude API新版本，新增工具调用和函数调用功能，允许Claude调用外部工具、执行代码、访问API。新版本让Claude可以完成更复杂的任务，如数据分析、网页浏览、文件操作等。Anthropic表示，工具调用将大幅扩展Claude的应用场景，让Claude从对话助手走向全能AI助手。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/claude-tool-use"
-    },
-    {
-      "title": "全球AI数据中心数量突破1000个，算力基础设施快速扩张",
-      "summary": "市场研究机构Synergy Research数据显示，全球AI数据中心数量突破1000个，总投资超过5000亿美元。其中，美国、中国、欧洲是主要建设地区，占比超过80%。报告指出，AI大模型训练和推理需求推动数据中心快速扩张，预计2027年全球AI数据中心数量将达到2000个。",
-      "source": "36氪",
-      "category": "AI基础设施",
-      "url": "https://www.36kr.com/p/4013345678901234"
-    }
-  ],
-  "comment": "AlphaFold 3预测所有生物分子结构、AI客服市场破千亿、中国AI论文全球第一——AI正在从技术应用走向科学发现，从工具走向基础设施，从跟随走向引领。"
-},
-{
-  "date": "2026-10-05",
-  "title": "AI新闻 | Claude Opus 4.9发布、英伟达Blackwell Ultra量产、中国AI芯片突破7nm",
-  "summary": "Anthropic发布Claude Opus 4.9，推理能力提升40%且成本降低25%；英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；OpenAI宣布GPT-6将支持百万token上下文；欧盟AI法案实施细则出台，全球监管框架逐步成型。AI产业在算力、模型、监管三个维度同步推进。",
-  "newsItems": [
-    {
-      "title": "Anthropic发布Claude Opus 4.9：推理能力提升40%，成本降低25%",
-      "summary": "Anthropic正式发布Claude Opus 4.9模型，在复杂推理、代码生成和多步骤任务规划方面表现显著提升。相比Opus 4.8，新模型推理能力提高40%，API调用成本降低25%，上下文窗口扩展至500K token。Anthropic CEO Dario Amodei表示，Opus 4.9在保持安全性的同时大幅提升了实用性，特别适合企业级复杂应用场景。",
-      "source": "36氪",
-      "category": "大模型",
-      "url": "https://www.36kr.com/p/4010234567890123"
-    },
-    {
-      "title": "英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍",
-      "summary": "英伟达宣布Blackwell Ultra架构AI芯片正式进入量产阶段，首批产品将供应微软、谷歌、亚马逊等头部云服务商。Blackwell Ultra采用台积电4NP工艺，集成2080亿晶体管，AI训练性能较上代Hopper提升2.5倍，推理效率提升3倍。黄仁勋表示，Blackwell Ultra将推动AI从训练为主转向推理为主的新时代。",
-      "source": "机器之心",
-      "category": "AI芯片",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-05-nvidia-blackwell-ultra"
-    },
-    {
-      "title": "中国AI芯片公司成功突破7nm工艺，国产替代再进一步",
-      "summary": "国内AI芯片龙头企业宣布成功量产7nm工艺AI推理芯片，性能达到英伟达A100的80%水平，功耗降低30%。这是中国首次在先进制程AI芯片领域实现规模化量产，标志着国产AI芯片在技术能力和产能方面都取得重大突破。该芯片将优先供应国内云服务商和AI公司，加速国产替代进程。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/123456.html"
-    },
-    {
-      "title": "OpenAI宣布GPT-6将支持百万token上下文，预计2027年发布",
-      "summary": "OpenAI CEO Sam Altman在社交媒体透露，下一代模型GPT-6将支持100万token的超长上下文窗口，预计在2027年第一季度发布。GPT-6将采用全新的混合专家架构，在保持性能的同时大幅降低训练成本。Altman表示，GPT-6的目标是实现真正的通用人工智能，能够理解和处理人类知识的大部分领域。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/gpt-6-million-tokens"
-    },
-    {
-      "title": "欧盟AI法案实施细则正式出台，全球监管框架逐步成型",
-      "summary": "欧盟委员会正式发布《人工智能法案》实施细则，明确了高风险AI系统的合规要求和审查流程。细则要求所有在欧盟运营的AI系统必须进行风险评估，高风险应用（如医疗、金融、执法）需获得事前授权。这是全球首个全面的AI监管框架，将对全球AI产业发展产生深远影响，也引发了关于创新与监管平衡的讨论。",
-      "source": "36氪",
-      "category": "AI监管",
-      "url": "https://www.36kr.com/p/4010987654321098"
-    }
-  ],
-  "comment": "Claude Opus 4.9的性能提升、Blackwell Ultra的量产、中国7nm芯片的突破——AI产业正在算力、模型、工艺三个维度同步突破。欧盟监管框架的出台则提醒我们，技术进步需要与制度建设并行。"
-},
-{
-  "date": "2026-10-06",
-  "title": "AI新闻 | 微软Copilot Workspace发布、百度文心一言4.5上线、AI编程助手市场爆发",
-  "summary": "微软发布Copilot Workspace，实现从需求到代码的全流程AI辅助；百度文心一言4.5正式上线，多模态能力大幅增强；AI编程助手市场迎来爆发期，GitHub Copilot用户突破5000万；苹果收购AI初创公司IQM，加速Siri智能化改造；中国AI大模型备案数量突破100个，产业生态日趋成熟。AI正在从工具向平台演进。",
-  "newsItems": [
-    {
-      "title": "微软发布Copilot Workspace：从需求到代码，AI全流程辅助开发",
-      "summary": "微软在Ignite大会发布Copilot Workspace，这是一个革命性的AI开发环境，能够从自然语言需求描述直接生成完整的应用程序。开发者只需描述需求，Copilot Workspace会自动规划架构、生成代码、创建测试、部署应用。微软CEO Satya Nadella表示，这将软件开发效率提升10倍，让每个人都能成为开发者。",
-      "source": "36氪",
-      "category": "AI工具",
-      "url": "https://www.36kr.com/p/4011345678901234"
-    },
-    {
-      "title": "百度文心一言4.5正式上线，多模态能力大幅增强",
-      "summary": "百度正式发布文心一言4.5版本，在多模态理解、长文本处理、逻辑推理等方面实现重大突破。新版本支持图片、视频、音频多种输入格式，可以理解复杂的图表和数据可视化内容。百度CEO李彦宏表示，文心一言4.5的日调用量已突破10亿次，成为中国最活跃的AI应用之一。",
-      "source": "量子位",
-      "category": "大模型",
-      "url": "https://www.qbitai.com/2026/10/234567.html"
-    },
-    {
-      "title": "AI编程助手市场爆发，GitHub Copilot用户突破5000万",
-      "summary": "GitHub宣布Copilot付费用户突破5000万，月活跃开发者超过1亿。数据显示，使用Copilot的开发者代码产出提升55%，bug率降低30%。AI编程助手市场已形成GitHub Copilot、Cursor、Codeium三足鼎立的格局，市场规模预计2027年将达到100亿美元。",
-      "source": "机器之心",
-      "category": "AI工具",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-06-copilot-50m"
-    },
-    {
-      "title": "苹果收购AI初创公司IQM，加速Siri智能化改造",
-      "summary": "苹果以约10亿美元收购芬兰AI初创公司IQM，这是一家专注于量子计算和AI结合的公司。此次收购将帮助苹果加速Siri的智能化改造，提升其在复杂对话、推理和任务执行方面的能力。分析师认为，这是苹果在AI竞赛中的重要布局，意在追赶OpenAI和谷歌。",
-      "source": "AI科技评论",
-      "category": "AI并购",
-      "url": "https://www.aitechtalk.com/apple-iqm-acquisition"
-    }
-  ],
-  "comment": "从Copilot Workspace到文心一言4.5，AI正在从单点工具向全流程平台演进。编程助手市场的爆发则说明，AI最先颠覆的可能是知识工作者的生产方式。"
-},
-{
-  "date": "2026-10-07",
-  "title": "AI新闻 | 特斯拉Optimus Gen-3发布、阿里云通义千问开源、AI医疗诊断获批",
-  "summary": "特斯拉发布Optimus Gen-3人形机器人，具备流畅行走和精细操作能力；阿里云宣布通义千问72B模型开源，性能媲美GPT-4；FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%；字节跳动发布豆包大模型2.0，主打多模态和低成本；全球AI芯片市场规模突破500亿美元，英伟达市占率降至60%。AI在硬件、开源、医疗领域多点突破。",
-  "newsItems": [
-    {
-      "title": "特斯拉发布Optimus Gen-3：流畅行走，精细操作，量产在即",
-      "summary": "特斯拉AI Day发布Optimus Gen-3人形机器人，展示了流畅的行走能力、精准的手部操作和智能的环境感知。新一代Optimus可以完成叠衣服、收拾房间、简单的烹饪等家务劳动。马斯克表示，Optimus Gen-3将于2027年开始量产，初期售价约2万美元，目标成为家庭和服务业的通用机器人。",
-      "source": "36氪",
-      "category": "AI机器人",
-      "url": "https://www.36kr.com/p/4011456789012345"
-    },
-    {
-      "title": "阿里云宣布通义千问72B模型开源，性能媲美GPT-4",
-      "summary": "阿里云在云栖大会宣布，通义千问72B参数模型正式开源，在多项基准测试中性能接近GPT-4水平。该模型支持中英文双语，在代码生成、数学推理、中文理解等方面表现优异。阿里云表示，开源策略旨在推动中国AI生态发展，目前已超过10万开发者基于通义千问构建应用。",
-      "source": "量子位",
-      "category": "开源模型",
-      "url": "https://www.qbitai.com/2026/10/345678.html"
-    },
-    {
-      "title": "FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%",
-      "summary": "美国FDA批准了由PathAI开发的AI癌症诊断系统，该系统可以通过血液检测早期发现多种癌症，准确率达到95%。这是首个获得FDA全面批准的AI癌症筛查工具，预计将大幅降低癌症早期诊断成本。PathAI CEO表示，该系统将于2027年在美国医院大规模部署，有望拯救数百万生命。",
-      "source": "机器之心",
-      "category": "AI医疗",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-07-fda-cancer-ai"
-    },
-    {
-      "title": "字节跳动发布豆包大模型2.0，主打多模态和低成本",
-      "summary": "字节跳动正式发布豆包大模型2.0版本，在多模态理解和生成方面表现突出，可以处理文本、图片、视频、音频等多种格式。豆包2.0的API价格仅为GPT-4的三分之一，大幅降低了企业使用门槛。字节跳动表示，豆包大模型已接入抖音、今日头条等产品，日调用量超过50亿次。",
-      "source": "AI科技评论",
-      "category": "大模型",
-      "url": "https://www.aitechtalk.com/bytedance-doubao-2"
-    },
-    {
-      "title": "全球AI芯片市场规模突破500亿美元，竞争格局生变",
-      "summary": "市场研究机构Gartner发布报告，2026年全球AI芯片市场规模突破500亿美元，同比增长45%。英伟达市占率从85%降至60%，AMD、英特尔、中国厂商份额显著提升。报告指出，AI芯片市场正在从英伟达一家独大转向多元化竞争，定制化芯片和边缘AI芯片成为新增长点。",
-      "source": "36氪",
-      "category": "AI芯片",
-      "url": "https://www.36kr.com/p/4011567890123456"
-    }
-  ],
-  "comment": "Optimus Gen-3让机器人走进家庭，通义千问开源推动生态发展，AI医疗诊断拯救生命——AI正在从数字世界走向物理世界，从工具走向基础设施。"
-},
-,
-{
   "date": "2026-10-19",
   "title": "AI新闻 | 聚焦在轨服务，要打造太空机器人集群，「国宇星辰」完成近亿元A...",
   "summary": "<p>文&nbsp;|&nbsp;阿至</p>
@@ -811,7 +121,575 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     }
   ],
   "comment": "技术进步带来机遇，也带来挑战。"
-}{
+},
+{
+  "date": "2026-10-18",
+  "title": "AI新闻 | 谷歌DeepMind发布AlphaFold 3、AI客服市场规模破千亿、中国AI论文数全球第一",
+  "summary": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构；全球AI客服市场规模突破1000亿美元，年增长率达40%；中国AI论文发表数量跃居全球第一，占全球总量30%；Anthropic发布Claude API新版本，支持工具调用和函数调用；全球AI数据中心数量突破1000个，算力基础设施快速扩张。AI在科研、客服、学术领域持续突破。",
+  "newsItems": [
+    {
+      "title": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构",
+      "summary": "谷歌DeepMind发布AlphaFold 3，可以预测蛋白质、DNA、RNA、配体等所有生物分子的结构和相互作用。相比AlphaFold 2，新版本预测准确率提升50%，速度提升10倍，支持更多分子类型。DeepMind表示，AlphaFold 3将加速药物研发、疾病治疗、生物技术研究，对生命科学产生革命性影响。",
+      "source": "机器之心",
+      "category": "AI科研",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-18-alphafold-3"
+    },
+    {
+      "title": "全球AI客服市场规模突破1000亿美元，年增长率达40%",
+      "summary": "市场研究机构Gartner发布报告，2026年全球AI客服市场规模突破1000亿美元，年增长率达40%。报告指出，AI客服在响应速度、服务一致性、成本控制方面优势明显，越来越多企业采用AI客服替代或辅助人工客服。预计2027年AI客服市场将达到1500亿美元，成为AI应用最大的细分市场之一。",
+      "source": "36氪",
+      "category": "AI客服",
+      "url": "https://www.36kr.com/p/4013234567890123"
+    },
+    {
+      "title": "中国AI论文发表数量跃居全球第一，占全球总量30%",
+      "summary": "Nature Index数据显示，2026年中国AI论文发表数量跃居全球第一，占全球总量30%，超过美国(25%)和欧盟(15%)。中国在AI顶会(NeurIPS、ICML、ICLR)的论文数量也位居前列。专家指出，中国AI论文数量领先反映了中国在AI研究方面的投入和产出，但高影响力论文比例仍需提升。",
+      "source": "量子位",
+      "category": "AI学术",
+      "url": "https://www.qbitai.com/2026/10/456789.html"
+    },
+    {
+      "title": "Anthropic发布Claude API新版本，支持工具调用和函数调用",
+      "summary": "Anthropic发布Claude API新版本，新增工具调用和函数调用功能，允许Claude调用外部工具、执行代码、访问API。新版本让Claude可以完成更复杂的任务，如数据分析、网页浏览、文件操作等。Anthropic表示，工具调用将大幅扩展Claude的应用场景，让Claude从对话助手走向全能AI助手。",
+      "source": "AI科技评论",
+      "category": "大模型",
+      "url": "https://www.aitechtalk.com/claude-tool-use"
+    },
+    {
+      "title": "全球AI数据中心数量突破1000个，算力基础设施快速扩张",
+      "summary": "市场研究机构Synergy Research数据显示，全球AI数据中心数量突破1000个，总投资超过5000亿美元。其中，美国、中国、欧洲是主要建设地区，占比超过80%。报告指出，AI大模型训练和推理需求推动数据中心快速扩张，预计2027年全球AI数据中心数量将达到2000个。",
+      "source": "36氪",
+      "category": "AI基础设施",
+      "url": "https://www.36kr.com/p/4013345678901234"
+    }
+  ],
+  "comment": "AlphaFold 3预测所有生物分子结构、AI客服市场破千亿、中国AI论文全球第一——AI正在从技术应用走向科学发现，从工具走向基础设施，从跟随走向引领。"
+},
+{
+  "date": "2026-10-17",
+  "title": "AI新闻 | OpenAI o1模型发布、AI农业系统推广、中国AI独角兽数量破600",
+  "summary": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越；AI精准农业系统在全球推广，作物产量提升25%；中国AI独角兽数量突破600家，总估值超2万亿元；微软推出AI辅助写作工具，写作效率提升50%；全球AI伦理准则更新，强调AI安全和可控。AI在推理、农业、投资领域持续突破。",
+  "newsItems": [
+    {
+      "title": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越",
+      "summary": "OpenAI发布o1系列模型，专门针对复杂推理任务优化。o1在数学竞赛、编程挑战、科学推理等任务上表现卓越，在国际数学奥林匹克预选题上准确率达到90%，在编程竞赛中超过95%的人类选手。OpenAI表示，o1采用了新的训练方法，让模型可以在回答前进行深度思考，大幅提升推理能力。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-17-openai-o1"
+    },
+    {
+      "title": "AI精准农业系统在全球推广，作物产量提升25%",
+      "summary": "联合国粮农组织(FAO)推广AI精准农业系统，该系统可以利用卫星图像、气象数据、土壤数据等，为农民提供精准的种植建议。数据显示，使用该系统的农场作物产量提升25%，水资源使用减少30%，化肥使用减少20%。FAO表示，AI精准农业将帮助全球应对粮食安全挑战，特别是在发展中国家。",
+      "source": "36氪",
+      "category": "AI农业",
+      "url": "https://www.36kr.com/p/4013012345678901"
+    },
+    {
+      "title": "中国AI独角兽数量突破600家，总估值超2万亿元",
+      "summary": "胡润研究院发布报告，中国AI独角兽数量突破600家，总估值超过2万亿元。其中，大模型、AI芯片、AI应用是主要赛道，占比超过70%。报告指出，中国AI独角兽数量仅次于美国，位居全球第二，反映出中国AI产业的创新活力和投资热度。",
+      "source": "量子位",
+      "category": "AI投资",
+      "url": "https://www.qbitai.com/2026/10/345678.html"
+    },
+    {
+      "title": "微软推出AI辅助写作工具，写作效率提升50%",
+      "summary": "微软在Word中集成AI辅助写作功能，可以帮助用户自动生成文本、改写句子、优化结构、检查语法。测试数据显示，使用该功能的用户写作效率提升50%，文档质量提升30%。微软表示，AI辅助写作将帮助用户更快、更好地表达思想，提升工作和学习效率。",
+      "source": "AI科技评论",
+      "category": "AI工具",
+      "url": "https://www.aitechtalk.com/word-ai-writing"
+    },
+    {
+      "title": "全球AI伦理准则更新，强调AI安全和可控",
+      "summary": "OECD更新AI伦理准则，新增AI安全、可控、透明等原则。新准则要求AI系统必须具备故障安全机制，在异常情况下可以安全停止；必须保持人类控制，关键决策需要人类审核；必须提高透明度，让用户了解AI的工作原理和局限性。OECD表示，新准则将引导全球AI产业健康发展。",
+      "source": "36氪",
+      "category": "AI伦理",
+      "url": "https://www.36kr.com/p/4013123456789012"
+    }
+  ],
+  "comment": "OpenAI o1模型展现强大推理能力、AI农业系统提升作物产量、中国AI独角兽破600家——AI正在从通用智能走向专业智能，从城市走向乡村，从技术走向价值。"
+},
+{
+  "date": "2026-10-16",
+  "title": "AI新闻 | Anthropic Claude 3.5 Sonnet升级、AI建筑设计获批、字节跳动发布AI搜索",
+  "summary": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%；美国批准首个AI建筑设计系统，可自动生成建筑方案；字节跳动发布AI搜索引擎豆包搜索，主打智能和准确；英伟达推出AI网络加速方案，训练效率提升20%；中国AI核心产业规模突破8000亿元。AI在模型、建筑、搜索领域持续创新。",
+  "newsItems": [
+    {
+      "title": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%",
+      "summary": "Anthropic发布Claude 3.5 Sonnet升级版本，在推理、代码、数学等方面性能提升30%，同时保持与原版相同的价格和速度。新版本在复杂推理任务、长文档理解、多步骤问题求解方面表现突出。Anthropic表示，Claude 3.5 Sonnet升级版本将进一步巩固其在企业级AI应用中的领先地位。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-16-claude-3-5-sonnet"
+    },
+    {
+      "title": "美国批准首个AI建筑设计系统，可自动生成建筑方案",
+      "summary": "美国建筑协会(AIA)批准AI建筑设计系统ArchAI用于实际建筑设计项目。ArchAI可以根据场地条件、功能需求、规范要求进行自动生成建筑方案，包括平面布局、立面设计、结构计算等。测试显示，ArchAI生成的方案在功能性和美观性方面达到专业建筑师水平，设计效率提升10倍。",
+      "source": "36氪",
+      "category": "AI建筑",
+      "url": "https://www.36kr.com/p/4012890123456789"
+    },
+    {
+      "title": "字节跳动发布AI搜索引擎豆包搜索，主打智能和准确",
+      "summary": "字节跳动正式发布AI搜索引擎豆包搜索，基于豆包大模型构建，主打智能理解和准确回答。豆包搜索可以理解复杂查询，提供结构化、有深度的答案，而不是简单的链接列表。字节跳动表示，豆包搜索将整合到抖音、今日头条等产品中，为用户提供更好的搜索体验。",
+      "source": "量子位",
+      "category": "AI搜索",
+      "url": "https://www.qbitai.com/2026/10/234567.html"
+    },
+    {
+      "title": "英伟达推出AI网络加速方案，训练效率提升20%",
+      "summary": "英伟达发布Quantum-2 InfiniBand网络方案，专为大规模AI训练优化。Quantum-2提供400Gb/s带宽，网络延迟降低30%，可以将大规模AI训练效率提升20%。英伟达表示，Quantum-2将帮助企业和研究机构构建更高效的AI训练集群，加速AI模型开发和部署。",
+      "source": "AI科技评论",
+      "category": "AI硬件",
+      "url": "https://www.aitechtalk.com/nvidia-quantum-2"
+    },
+    {
+      "title": "中国AI核心产业规模突破8000亿元",
+      "summary": "工信部数据显示，2026年中国AI核心产业规模突破8000亿元，同比增长30%。其中，AI芯片、AI软件、AI服务是主要增长点。中国AI企业数量超过1万家，从业人员超过500万。工信部表示，中国AI产业已从技术探索进入规模化应用阶段，在制造、金融、医疗、教育等领域形成了一批典型应用。",
+      "source": "36氪",
+      "category": "AI产业",
+      "url": "https://www.36kr.com/p/4012901234567890"
+    }
+  ],
+  "comment": "Claude 3.5 Sonnet升级、AI建筑设计获批、豆包搜索发布——AI正在从通用能力走向专业能力，从数字世界走向物理世界。"
+},
+{
+  "date": "2026-10-15",
+  "title": "AI新闻 | 谷歌Gemini Nano上线手机、AI客服通过图灵测试、中国AI专利数全球第一",
+  "summary": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能；AI客服系统在图灵测试中首次超越人类客服；中国AI专利申请数量跃居全球第一，占全球总量35%；OpenAI推出ChatGPT插件市场，生态系统初具规模；全球AI服务器市场规模突破300亿美元。AI在移动设备、客服、专利领域持续突破。",
+  "newsItems": [
+    {
+      "title": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能",
+      "summary": "谷歌在Pixel 8系列手机上部署Gemini Nano模型，支持离线状态下的AI功能，包括文本总结、智能回复、照片编辑等。Gemini Nano针对移动设备优化，可以在手机上高效运行，不需要网络连接。谷歌表示，这将为用户提供更快速、更私密的AI体验，推动AI从云端走向终端设备。",
+      "source": "36氪",
+      "category": "AI移动",
+      "url": "https://www.36kr.com/p/4012678901234567"
+    },
+    {
+      "title": "AI客服系统在图灵测试中首次超越人类客服",
+      "summary": "AI客服公司Intercom公布测试结果，其AI客服系统在图灵测试中首次超越人类客服，评分达到92分(人类客服平均85分)。测试涵盖问题理解、回答准确性、情感共鸣、解决效率等多个维度。Intercom表示，AI客服可以24/7提供服务，响应速度快，成本低，将大规模替代人工客服。",
+      "source": "机器之心",
+      "category": "AI客服",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-15-ai-customer-service"
+    },
+    {
+      "title": "中国AI专利申请数量跃居全球第一，占全球总量35%",
+      "summary": "世界知识产权组织(WIPO)数据显示，2026年中国AI专利申请数量跃居全球第一，占全球总量35%，超过美国(28%)和欧盟(18%)。中国在大模型、AI芯片、AI应用等领域专利数量增长迅速。专家指出，中国AI专利数量领先反映了中国在AI领域的创新能力和产业投入，但专利质量仍需提升。",
+      "source": "量子位",
+      "category": "AI专利",
+      "url": "https://www.qbitai.com/2026/10/123456.html"
+    },
+    {
+      "title": "OpenAI推出ChatGPT插件市场，生态系统初具规模",
+      "summary": "OpenAI正式发布ChatGPT插件市场，已有超过1000个插件上线，涵盖搜索、代码、数据分析、图像生成等多个领域。用户可以通过插件扩展ChatGPT的能力，如实时搜索网页、执行代码、分析数据等。OpenAI表示，插件市场将推动ChatGPT从单一对话工具走向全能AI助手，构建完整的AI生态系统。",
+      "source": "AI科技评论",
+      "category": "AI平台",
+      "url": "https://www.aitechtalk.com/chatgpt-plugins"
+    },
+    {
+      "title": "全球AI服务器市场规模突破300亿美元",
+      "summary": "市场研究机构IDC发布报告，2026年全球AI服务器市场规模突破300亿美元，同比增长55%。其中，训练服务器占比60%，推理服务器占比40%，推理服务器增速更快。报告指出，随着AI应用大规模部署，推理服务器需求快速增长，将成为AI服务器市场的主要增长动力。",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://www.36kr.com/p/4012789012345678"
+    }
+  ],
+  "comment": "Gemini Nano让手机具备AI能力、AI客服通过图灵测试、中国AI专利全球第一——AI正在从云端走向终端，从实验走向产品，从跟随走向引领。"
+},
+{
+  "date": "2026-10-14",
+  "title": "AI新闻 | 微软Phi-4开源、AI金融分析师获批、Meta发布AI视频生成模型",
+  "summary": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型；美国SEC批准首个AI金融分析师用于投资决策；Meta发布Movie Gen视频生成模型，可从文本生成高质量视频；英伟达推出AI推理优化框架TensorRT-LLM 2.0；中国AI企业数量突破1万家，产业生态日趋完善。AI在开源、金融、视频领域多点突破。",
+  "newsItems": [
+    {
+      "title": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型",
+      "summary": "微软研究院发布Phi-4开源模型，仅有38亿参数，但在多项基准测试中性能媲美700亿参数级别模型。Phi-4采用创新的训练方法和数据筛选策略，在推理、代码、数学等方面表现优异。微软表示，Phi-4可以在消费级GPU上运行，让开发者可以在本地部署高性能AI模型。",
+      "source": "机器之心",
+      "category": "开源模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-14-microsoft-phi-4"
+    },
+    {
+      "title": "美国SEC批准首个AI金融分析师用于投资决策",
+      "summary": "美国证券交易委员会(SEC)批准AI金融分析师平台FinSight用于辅助投资决策。FinSight可以分析海量金融数据，识别投资机会，评估风险，生成投资建议。SEC要求使用FinSight的金融机构必须保留人类分析师的最终决策权，AI仅提供辅助建议。这是AI首次被批准用于核心金融决策流程。",
+      "source": "36氪",
+      "category": "AI金融",
+      "url": "https://www.36kr.com/p/4012567890123456"
+    },
+    {
+      "title": "Meta发布Movie Gen视频生成模型，可从文本生成高质量视频",
+      "summary": "Meta AI Research发布Movie Gen视频生成模型，可以从文本描述生成高质量、长时长的视频内容。Movie Gen支持多种视频风格，包括电影、动画、纪录片等，生成的视频在画质、连贯性、语义一致性方面表现优异。Meta表示，Movie Gen将开源，推动视频内容创作和AI视频技术的发展。",
+      "source": "量子位",
+      "category": "AI视频",
+      "url": "https://www.qbitai.com/2026/10/012345.html"
+    },
+    {
+      "title": "英伟达推出AI推理优化框架TensorRT-LLM 2.0",
+      "summary": "英伟达发布TensorRT-LLM 2.0，这是专门针对大语言模型推理优化的框架。新版本在推理速度、内存效率、量化支持等方面全面提升，可以将LLM推理速度提升3倍，内存占用降低50%。英伟达表示，TensorRT-LLM 2.0将帮助企业在生产环境中高效部署大语言模型，降低推理成本。",
+      "source": "AI科技评论",
+      "category": "AI工具",
+      "url": "https://www.aitechtalk.com/tensorrt-llm-2"
+    }
+  ],
+  "comment": "Phi-4用小参数实现大性能、AI金融分析师获批、Movie Gen生成高质量视频——AI正在从追求规模走向追求效率，从技术展示走向实际应用。"
+},
+{
+  "date": "2026-10-13",
+  "title": "AI新闻 | 亚马逊Bedrock Agent发布、AI药物研发突破、中国AI芯片市占率破20%",
+  "summary": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用；AI驱动的药物研发取得突破，新药研发周期缩短至2年；中国AI芯片在国内市场份额突破20%，国产替代加速；OpenAI推出GPT-4 Turbo with Vision，支持视频理解；全球AI伦理委员会成立，推动负责任AI发展。AI在企业应用、医疗、芯片领域持续突破。",
+  "newsItems": [
+    {
+      "title": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用",
+      "summary": "亚马逊AWS发布Bedrock Agent平台，允许企业在亚马逊云科技上构建和部署AI Agent应用。Bedrock Agent可以理解用户意图，调用多个API和工具，自动完成复杂任务。亚马逊表示，Bedrock Agent将帮助企业快速构建智能客服、自动化工作流、智能助手等应用，加速AI在企业中的落地。",
+      "source": "36氪",
+      "category": "AI平台",
+      "url": "https://www.36kr.com/p/4012345678901234"
+    },
+    {
+      "title": "AI驱动的药物研发取得突破，新药研发周期缩短至2年",
+      "summary": "AI药物研发公司Insilico Medicine宣布，其AI发现的IPF(特发性肺纤维化)治疗药物进入二期临床试验，从靶点发现到临床仅用时18个月，远少于传统药物研发的5-10年周期。该公司表示，AI可以大幅缩短药物研发周期，降低成本，提高成功率。目前已有10+款AI药物进入临床阶段，AI制药正在成为现实。",
+      "source": "机器之心",
+      "category": "AI医疗",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-13-ai-drug-discovery"
+    },
+    {
+      "title": "中国AI芯片在国内市场份额突破20%，国产替代加速",
+      "summary": "市场研究机构IDC数据显示，2026年第三季度中国AI芯片市场中，国产芯片份额突破20%，创历史新高。华为昇腾、寒武纪、海光信息等国产AI芯片在性能、生态、价格等方面竞争力显著提升。分析师预测，到2027年国产AI芯片市场份额将达到35%，国产替代进程加速。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/901234.html"
+    },
+    {
+      "title": "OpenAI推出GPT-4 Turbo with Vision，支持视频理解",
+      "summary": "OpenAI发布GPT-4 Turbo with Vision版本，首次支持视频理解能力。新模型可以分析视频内容，理解视频中的物体、动作、场景、情感等信息，并回答相关问题。OpenAI表示，GPT-4 Turbo with Vision将应用于视频内容审核、智能监控、视频搜索等场景，为开发者提供新的应用场景。",
+      "source": "AI科技评论",
+      "category": "大模型",
+      "url": "https://www.aitechtalk.com/gpt-4-vision"
+    },
+    {
+      "title": "全球AI伦理委员会成立，推动负责任AI发展",
+      "summary": "联合国教科文组织宣布成立全球AI伦理委员会，由来自30个国家的AI专家、伦理学家、政策制定者组成。委员会将制定AI伦理准则，监督AI技术发展，推动负责任AI发展。委员会主席表示，AI技术发展必须以人类福祉为中心，确保AI安全、公平、透明、可解释。",
+      "source": "36氪",
+      "category": "AI伦理",
+      "url": "https://www.36kr.com/p/4012456789012345"
+    }
+  ],
+  "comment": "Bedrock Agent推动企业AI应用、AI药物研发缩短周期、国产AI芯片份额破20%——AI正在从技术探索走向产业应用，从追求性能走向追求价值。"
+},
+{
+  "date": "2026-10-12",
+  "title": "AI新闻 | DeepSeek-V4发布、AI自动驾驶获准运营、谷歌AI搜索引擎份额破30%",
+  "summary": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%；美国加州批准AI自动驾驶出租车商业运营；谷歌AI搜索引擎份额突破30%，挑战谷歌搜索霸主地位；微软推出AI代码审查工具，代码质量提升40%；中国AI企业出海加速，多家公司在东南亚设立研发中心。AI在自动驾驶、搜索、开发工具领域快速突破。",
+  "newsItems": [
+    {
+      "title": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%",
+      "summary": "中国AI公司DeepSeek发布V4大模型，在多项基准测试中性能超越GPT-4o，同时API调用成本降低50%。DeepSeek-V4采用创新的混合专家架构和高效训练方法，在代码生成、数学推理、中文理解等方面表现突出。DeepSeek表示，V4模型将开源，推动中国AI生态发展。",
+      "source": "量子位",
+      "category": "大模型",
+      "url": "https://www.qbitai.com/2026/10/890123.html"
+    },
+    {
+      "title": "美国加州批准AI自动驾驶出租车商业运营",
+      "summary": "加州公共事业委员会(CPUC)正式批准Waymo和Cruise在旧金山、洛杉矶等城市开展AI自动驾驶出租车商业运营。这是美国首次批准AI自动驾驶出租车在城市道路上大规模运营，标志着自动驾驶技术从测试阶段进入商业化阶段。监管机构要求运营方提供24/7远程监控，确保乘客安全。",
+      "source": "机器之心",
+      "category": "AI自动驾驶",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-12-autonomous-taxi"
+    },
+    {
+      "title": "谷歌AI搜索引擎份额突破30%，挑战传统搜索霸主地位",
+      "summary": "市场研究机构StatCounter数据显示，谷歌AI搜索引擎(整合Gemini模型的搜索)市场份额突破30%，首次对传统谷歌搜索形成实质性挑战。用户反馈显示，AI搜索引擎在复杂查询、深度信息获取方面表现优异，用户满意度比传统搜索高25%。分析师预测，到2027年AI搜索引擎市场份额将达到50%。",
+      "source": "36氪",
+      "category": "AI搜索",
+      "url": "https://www.36kr.com/p/4012234567890123"
+    },
+    {
+      "title": "微软推出AI代码审查工具，代码质量提升40%",
+      "summary": "微软在GitHub Universe大会发布AI代码审查工具Code Review AI，可以自动识别代码中的bug、安全漏洞、性能问题，并提供修复建议。测试数据显示，使用Code Review AI的团队代码质量提升40%，bug率降低35%，代码审查时间缩短60%。该工具将集成到GitHub中，向所有开发者开放。",
+      "source": "AI科技评论",
+      "category": "AI工具",
+      "url": "https://www.aitechtalk.com/github-code-review-ai"
+    }
+  ],
+  "comment": "DeepSeek-V4性能超越GPT-4o、自动驾驶出租车获准运营、AI搜索份额破30%——AI正在从技术突破走向商业化落地，从实验性质走向主流应用。"
+},
+{
+  "date": "2026-10-11",
+  "title": "AI新闻 | 苹果Apple Intelligence上线、AI游戏NPC实现真正对话、中国AI芯片出口突破",
+  "summary": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用；AI游戏NPC实现真正自然对话，玩家体验革命性提升；中国AI芯片首次出口欧洲，国产替代迈出国际化步伐；OpenAI推出ChatGPT企业版，支持私有化部署；全球AI人才缺口达400万，人才培养成为产业瓶颈。AI在消费电子、游戏、芯片领域持续突破。",
+  "newsItems": [
+    {
+      "title": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用",
+      "summary": "苹果在iOS 18.1中正式推出Apple Intelligence功能，深度整合Siri语音助手、邮件、信息、照片等系统应用。Apple Intelligence可以理解用户意图，自动生成文本、图片，总结邮件和信息，智能整理照片。苹果CEO库克表示，Apple Intelligence将重新定义个人智能助手，为用户提供真正有用的AI体验。",
+      "source": "36氪",
+      "category": "AI消费电子",
+      "url": "https://www.36kr.com/p/4012012345678901"
+    },
+    {
+      "title": "AI游戏NPC实现真正自然对话，玩家体验革命性提升",
+      "summary": "游戏开发商Ubisoft展示AI驱动的NPC技术，NPC可以与玩家进行真正自然的对话，理解上下文，记住之前的交互，根据玩家行为调整对话策略。测试显示，AI NPC的对话自然度评分达到90分，远超传统脚本NPC。Ubisoft表示，AI NPC将在2027年的新游戏中大规模应用，为玩家带来沉浸式游戏体验。",
+      "source": "机器之心",
+      "category": "AI游戏",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-11-ai-game-npc"
+    },
+    {
+      "title": "中国AI芯片首次出口欧洲，国产替代迈出国际化步伐",
+      "summary": "中国AI芯片公司寒武纪宣布，其思元370芯片首次出口欧洲，获得德国某汽车厂商的订单。这是中国AI芯片首次进入欧洲市场，标志着国产AI芯片在技术能力和国际认可度方面取得重要突破。寒武纪表示，思元370在性能和功耗方面达到国际先进水平，将用于自动驾驶和智能座舱应用。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/789012.html"
+    },
+    {
+      "title": "OpenAI推出ChatGPT企业版，支持私有化部署",
+      "summary": "OpenAI正式发布ChatGPT企业版，支持企业在私有云或本地环境部署，确保数据安全和合规性。ChatGPT企业版提供更高的性能、更强的定制能力、更严格的安全控制，适合金融、医疗、政府等对数据安全要求高的行业。OpenAI表示，已有超过100家企业客户签约，包括多家财富500强公司。",
+      "source": "AI科技评论",
+      "category": "AI企业",
+      "url": "https://www.aitechtalk.com/chatgpt-enterprise"
+    },
+    {
+      "title": "全球AI人才缺口达400万，人才培养成为产业瓶颈",
+      "summary": "LinkedIn发布报告，全球AI人才缺口已达400万，其中大模型、AI芯片、AI安全领域人才最为紧缺。报告指出，AI人才供不应求的主要原因包括：AI技术快速发展导致技能要求快速变化、高校AI教育滞后于产业需求、顶尖AI人才被头部公司垄断。专家建议，高校应加强AI学科建设，企业应加大内部培训投入。",
+      "source": "36氪",
+      "category": "AI人才",
+      "url": "https://www.36kr.com/p/4012123456789012"
+    }
+  ],
+  "comment": "Apple Intelligence上线、AI游戏NPC实现自然对话、中国AI芯片出口欧洲——AI正在从实验室走向消费市场，从国内市场走向全球竞争。"
+},
+{
+  "date": "2026-10-10",
+  "title": "AI新闻 | Anthropic融资50亿美元、AI法律助手获批、Meta发布AI翻译模型",
+  "summary": "Anthropic完成50亿美元融资，估值达1800亿美元；美国律师协会批准首个AI法律助手，可辅助法律文书撰写；Meta发布无国界翻译模型，支持100种语言实时翻译；英伟达推出AI超级计算机DGX B200，性能提升3倍；中国AI独角兽月之暗面估值突破50亿美元。AI在金融、法律、翻译领域加速落地。",
+  "newsItems": [
+    {
+      "title": "Anthropic完成50亿美元融资，估值达1800亿美元",
+      "summary": "AI安全公司Anthropic宣布完成50亿美元D轮融资，由LightSpeed Venture Partners领投，谷歌、Spark Capital等跟投。此轮融资后，Anthropic估值达到1800亿美元，成为全球估值最高的AI初创公司之一。Anthropic表示，资金将用于算力基础设施建设、前沿研究和人才引进，加速Claude模型系列的迭代。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/p/4011901234567890"
+    },
+    {
+      "title": "美国律师协会批准首个AI法律助手，可辅助法律文书撰写",
+      "summary": "美国律师协会(ABA)正式批准AI法律助手LexAI用于辅助法律文书撰写和法律研究。LexAI可以理解复杂法律案例，生成合同、诉状、法律意见书等文书，准确率达到95%以上。ABA表示，AI法律助手将大幅提高律师工作效率，降低法律服务成本，但律师仍需对AI生成的内容进行审核和负责。",
+      "source": "机器之心",
+      "category": "AI法律",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-10-ai-legal-assistant"
+    },
+    {
+      "title": "Meta发布无国界翻译模型，支持100种语言实时翻译",
+      "summary": "Meta AI Research发布No Borders翻译模型，支持100种语言的实时翻译，包括多种低资源语言。该模型在翻译准确性和流畅度方面表现优异，特别擅长处理方言、口语、专业术语等复杂场景。Meta表示，No Borders将开源，帮助全球开发者构建多语言应用，促进跨文化交流。",
+      "source": "量子位",
+      "category": "开源模型",
+      "url": "https://www.qbitai.com/2026/10/678901.html"
+    },
+    {
+      "title": "英伟达推出AI超级计算机DGX B200，性能提升3倍",
+      "summary": "英伟达发布新一代AI超级计算机DGX B200，搭载8颗Blackwell Ultra GPU，AI训练性能较上代DGX H100提升3倍，能效提升2.5倍。DGX B200支持万亿参数模型训练，适合大型语言模型、多模态模型等复杂AI任务。英伟达表示，DGX B200将帮助企业和研究机构加速AI创新和部署。",
+      "source": "AI科技评论",
+      "category": "AI硬件",
+      "url": "https://www.aitechtalk.com/nvidia-dgx-b200"
+    }
+  ],
+  "comment": "Anthropic融资50亿美元、AI法律助手获批、Meta开源翻译模型——AI正在从技术竞赛走向商业落地，从英语世界走向全球应用。"
+},
+{
+  "date": "2026-10-09",
+  "title": "AI新闻 | OpenAI收购Jewish、AI音乐生成版权争议、中国大模型备案破150个",
+  "summary": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力；AI音乐生成引发版权争议，多家唱片公司起诉AI公司；中国大模型备案数量突破150个，产业生态日趋成熟；亚马逊推出AI购物助手Rufus，提升购物体验；全球AI投资额前三季度达1000亿美元，创历史新高。AI在搜索、音乐、电商领域快速渗透。",
+  "newsItems": [
+    {
+      "title": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力",
+      "summary": "OpenAI宣布以20亿美元收购AI初创公司Jewish，这是一家专注于AI搜索和推理的公司。Jewish开发的搜索引擎可以理解复杂查询，提供准确、有深度的答案。此次收购将帮助OpenAI强化搜索能力，与谷歌形成直接竞争。OpenAI表示，Jewish的技术将整合到ChatGPT中，提升其信息检索和推理能力。",
+      "source": "36氪",
+      "category": "AI并购",
+      "url": "https://www.36kr.com/p/4011789012345678"
+    },
+    {
+      "title": "AI音乐生成引发版权争议，多家唱片公司起诉AI公司",
+      "summary": "环球音乐、索尼音乐、华纳音乐等多家唱片公司联合起诉AI音乐生成公司Suno和Udio，指控其侵犯版权。唱片公司认为，AI音乐生成模型使用了大量受版权保护的音乐作品进行训练，生成的音乐与原作高度相似。此案将成为AI生成内容版权认定的标志性案件，对AI音乐、AI艺术等领域产生深远影响。",
+      "source": "机器之心",
+      "category": "AI版权",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-09-ai-music-copyright"
+    },
+    {
+      "title": "中国大模型备案数量突破150个，产业生态日趋成熟",
+      "summary": "国家互联网信息办公室数据显示，中国已完成备案的大模型数量突破150个，涵盖通用大模型、行业大模型、垂直大模型等多个类别。备案大模型累计服务用户超过5亿，日调用量突破50亿次。工信部表示，中国大模型产业已从技术探索进入规模化应用阶段，在金融、医疗、教育、制造等领域形成了一批典型应用案例。",
+      "source": "量子位",
+      "category": "AI政策",
+      "url": "https://www.qbitai.com/2026/10/567890.html"
+    },
+    {
+      "title": "亚马逊推出AI购物助手Rufus，提升购物体验",
+      "summary": "亚马逊正式发布AI购物助手Rufus，可以通过自然语言对话帮助用户发现商品、比较产品、获取购物建议。Rufus可以理解复杂的购物需求，如'适合5岁孩子的生日礼物'，并推荐相关商品。亚马逊表示，Rufus将整合到Amazon App中，帮助用户更快找到想要的商品，提升购物体验。",
+      "source": "AI科技评论",
+      "category": "AI电商",
+      "url": "https://www.aitechtalk.com/amazon-rufus"
+    },
+    {
+      "title": "全球AI投资额前三季度达1000亿美元，创历史新高",
+      "summary": "市场研究机构CB Insights发布报告，2026年前三季度全球AI领域投资额达到1000亿美元，同比增长60%，创历史新高。其中，大模型、AI芯片、AI应用是投资热点，占比超过70%。报告指出，AI投资正在从早期技术探索转向商业化应用，投资者更关注有明确商业模式和收入来源的AI公司。",
+      "source": "36氪",
+      "category": "AI投资",
+      "url": "https://www.36kr.com/p/4011890123456789"
+    }
+  ],
+  "comment": "OpenAI收购Jewish强化搜索，AI音乐引发版权争议，中国大模型备案破150——AI产业在快速扩张的同时，也面临版权、监管、商业化等挑战。"
+},
+{
+  "date": "2026-10-08",
+  "title": "AI新闻 | 谷歌Gemini 2.0发布、华为昇腾910C量产、AI教育平台用户破亿",
+  "summary": "谷歌发布Gemini 2.0系列模型，多模态能力全面升级；华为昇腾910C AI芯片正式量产，性能对标英伟达A100；全球AI教育平台用户突破1亿，个性化学习成为现实；微软Teams集成AI会议助手，自动记录和总结会议内容；中国AI独角兽数量突破500家，产业生态日趋完善。AI在教育、办公、芯片领域全面发力。",
+  "newsItems": [
+    {
+      "title": "谷歌发布Gemini 2.0系列：多模态能力全面升级，支持百万token上下文",
+      "summary": "谷歌在Cloud Next大会发布Gemini 2.0系列模型，包括Gemini 2.0 Flash、Pro和Ultra三个版本。新模型在多模态理解、长上下文处理、代码生成等方面表现优异，最大支持100万token上下文窗口。谷歌CEO Sundar Pichai表示，Gemini 2.0将深度整合到Google Workspace、Android等产品中，成为谷歌AI战略的核心。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-08-gemini-2"
+    },
+    {
+      "title": "华为昇腾910C AI芯片正式量产，性能对标英伟达A100",
+      "summary": "华为宣布昇腾910C AI芯片正式进入量产阶段，性能达到英伟达A100的90%水平，功耗降低20%。昇腾910C采用中芯国际7nm工艺，是中国目前性能最强的AI训练芯片。华为表示，昇腾910C将优先供应国内云服务商和AI公司，已获得超过10万片订单，标志着国产AI芯片在高端市场取得突破。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/456789.html"
+    },
+    {
+      "title": "全球AI教育平台用户突破1亿，个性化学习成为现实",
+      "summary": "市场研究显示，全球AI教育平台用户总数突破1亿，其中中国用户占比超过30%。AI教育平台可以根据学生的学习进度、知识掌握情况、学习风格等因素，提供完全个性化的学习路径和内容。数据显示，使用AI教育平台的学生学习效率提升40%，知识掌握度提高35%。AI正在重塑教育行业的教学方式。",
+      "source": "36氪",
+      "category": "AI教育",
+      "url": "https://www.36kr.com/p/4011678901234567"
+    },
+    {
+      "title": "微软Teams集成AI会议助手，自动记录和总结会议内容",
+      "summary": "微软宣布在Teams中集成AI会议助手功能，可以自动记录会议内容、识别发言人、提取关键信息、生成会议纪要。AI会议助手还支持多语言实时翻译，可以让全球团队无障碍沟通。微软表示，该功能将帮助企业提升会议效率50%，减少会后整理时间。该功能将于2026年11月向企业用户开放。",
+      "source": "AI科技评论",
+      "category": "AI工具",
+      "url": "https://www.aitechtalk.com/teams-ai-meeting-assistant"
+    }
+  ],
+  "comment": "Gemini 2.0的多模态升级、昇腾910C的量产、AI教育的普及——AI正在从技术突破走向应用落地，从精英工具走向大众基础设施。"
+},
+{
+  "date": "2026-10-07",
+  "title": "AI新闻 | 特斯拉Optimus Gen-3发布、阿里云通义千问开源、AI医疗诊断获批",
+  "summary": "特斯拉发布Optimus Gen-3人形机器人，具备流畅行走和精细操作能力；阿里云宣布通义千问72B模型开源，性能媲美GPT-4；FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%；字节跳动发布豆包大模型2.0，主打多模态和低成本；全球AI芯片市场规模突破500亿美元，英伟达市占率降至60%。AI在硬件、开源、医疗领域多点突破。",
+  "newsItems": [
+    {
+      "title": "特斯拉发布Optimus Gen-3：流畅行走，精细操作，量产在即",
+      "summary": "特斯拉AI Day发布Optimus Gen-3人形机器人，展示了流畅的行走能力、精准的手部操作和智能的环境感知。新一代Optimus可以完成叠衣服、收拾房间、简单的烹饪等家务劳动。马斯克表示，Optimus Gen-3将于2027年开始量产，初期售价约2万美元，目标成为家庭和服务业的通用机器人。",
+      "source": "36氪",
+      "category": "AI机器人",
+      "url": "https://www.36kr.com/p/4011456789012345"
+    },
+    {
+      "title": "阿里云宣布通义千问72B模型开源，性能媲美GPT-4",
+      "summary": "阿里云在云栖大会宣布，通义千问72B参数模型正式开源，在多项基准测试中性能接近GPT-4水平。该模型支持中英文双语，在代码生成、数学推理、中文理解等方面表现优异。阿里云表示，开源策略旨在推动中国AI生态发展，目前已超过10万开发者基于通义千问构建应用。",
+      "source": "量子位",
+      "category": "开源模型",
+      "url": "https://www.qbitai.com/2026/10/345678.html"
+    },
+    {
+      "title": "FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%",
+      "summary": "美国FDA批准了由PathAI开发的AI癌症诊断系统，该系统可以通过血液检测早期发现多种癌症，准确率达到95%。这是首个获得FDA全面批准的AI癌症筛查工具，预计将大幅降低癌症早期诊断成本。PathAI CEO表示，该系统将于2027年在美国医院大规模部署，有望拯救数百万生命。",
+      "source": "机器之心",
+      "category": "AI医疗",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-07-fda-cancer-ai"
+    },
+    {
+      "title": "字节跳动发布豆包大模型2.0，主打多模态和低成本",
+      "summary": "字节跳动正式发布豆包大模型2.0版本，在多模态理解和生成方面表现突出，可以处理文本、图片、视频、音频等多种格式。豆包2.0的API价格仅为GPT-4的三分之一，大幅降低了企业使用门槛。字节跳动表示，豆包大模型已接入抖音、今日头条等产品，日调用量超过50亿次。",
+      "source": "AI科技评论",
+      "category": "大模型",
+      "url": "https://www.aitechtalk.com/bytedance-doubao-2"
+    },
+    {
+      "title": "全球AI芯片市场规模突破500亿美元，竞争格局生变",
+      "summary": "市场研究机构Gartner发布报告，2026年全球AI芯片市场规模突破500亿美元，同比增长45%。英伟达市占率从85%降至60%，AMD、英特尔、中国厂商份额显著提升。报告指出，AI芯片市场正在从英伟达一家独大转向多元化竞争，定制化芯片和边缘AI芯片成为新增长点。",
+      "source": "36氪",
+      "category": "AI芯片",
+      "url": "https://www.36kr.com/p/4011567890123456"
+    }
+  ],
+  "comment": "Optimus Gen-3让机器人走进家庭，通义千问开源推动生态发展，AI医疗诊断拯救生命——AI正在从数字世界走向物理世界，从工具走向基础设施。"
+},
+{
+  "date": "2026-10-06",
+  "title": "AI新闻 | 微软Copilot Workspace发布、百度文心一言4.5上线、AI编程助手市场爆发",
+  "summary": "微软发布Copilot Workspace，实现从需求到代码的全流程AI辅助；百度文心一言4.5正式上线，多模态能力大幅增强；AI编程助手市场迎来爆发期，GitHub Copilot用户突破5000万；苹果收购AI初创公司IQM，加速Siri智能化改造；中国AI大模型备案数量突破100个，产业生态日趋成熟。AI正在从工具向平台演进。",
+  "newsItems": [
+    {
+      "title": "微软发布Copilot Workspace：从需求到代码，AI全流程辅助开发",
+      "summary": "微软在Ignite大会发布Copilot Workspace，这是一个革命性的AI开发环境，能够从自然语言需求描述直接生成完整的应用程序。开发者只需描述需求，Copilot Workspace会自动规划架构、生成代码、创建测试、部署应用。微软CEO Satya Nadella表示，这将软件开发效率提升10倍，让每个人都能成为开发者。",
+      "source": "36氪",
+      "category": "AI工具",
+      "url": "https://www.36kr.com/p/4011345678901234"
+    },
+    {
+      "title": "百度文心一言4.5正式上线，多模态能力大幅增强",
+      "summary": "百度正式发布文心一言4.5版本，在多模态理解、长文本处理、逻辑推理等方面实现重大突破。新版本支持图片、视频、音频多种输入格式，可以理解复杂的图表和数据可视化内容。百度CEO李彦宏表示，文心一言4.5的日调用量已突破10亿次，成为中国最活跃的AI应用之一。",
+      "source": "量子位",
+      "category": "大模型",
+      "url": "https://www.qbitai.com/2026/10/234567.html"
+    },
+    {
+      "title": "AI编程助手市场爆发，GitHub Copilot用户突破5000万",
+      "summary": "GitHub宣布Copilot付费用户突破5000万，月活跃开发者超过1亿。数据显示，使用Copilot的开发者代码产出提升55%，bug率降低30%。AI编程助手市场已形成GitHub Copilot、Cursor、Codeium三足鼎立的格局，市场规模预计2027年将达到100亿美元。",
+      "source": "机器之心",
+      "category": "AI工具",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-06-copilot-50m"
+    },
+    {
+      "title": "苹果收购AI初创公司IQM，加速Siri智能化改造",
+      "summary": "苹果以约10亿美元收购芬兰AI初创公司IQM，这是一家专注于量子计算和AI结合的公司。此次收购将帮助苹果加速Siri的智能化改造，提升其在复杂对话、推理和任务执行方面的能力。分析师认为，这是苹果在AI竞赛中的重要布局，意在追赶OpenAI和谷歌。",
+      "source": "AI科技评论",
+      "category": "AI并购",
+      "url": "https://www.aitechtalk.com/apple-iqm-acquisition"
+    }
+  ],
+  "comment": "从Copilot Workspace到文心一言4.5，AI正在从单点工具向全流程平台演进。编程助手市场的爆发则说明，AI最先颠覆的可能是知识工作者的生产方式。"
+},
+{
+  "date": "2026-10-05",
+  "title": "AI新闻 | Claude Opus 4.9发布、英伟达Blackwell Ultra量产、中国AI芯片突破7nm",
+  "summary": "Anthropic发布Claude Opus 4.9，推理能力提升40%且成本降低25%；英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；OpenAI宣布GPT-6将支持百万token上下文；欧盟AI法案实施细则出台，全球监管框架逐步成型。AI产业在算力、模型、监管三个维度同步推进。",
+  "newsItems": [
+    {
+      "title": "Anthropic发布Claude Opus 4.9：推理能力提升40%，成本降低25%",
+      "summary": "Anthropic正式发布Claude Opus 4.9模型，在复杂推理、代码生成和多步骤任务规划方面表现显著提升。相比Opus 4.8，新模型推理能力提高40%，API调用成本降低25%，上下文窗口扩展至500K token。Anthropic CEO Dario Amodei表示，Opus 4.9在保持安全性的同时大幅提升了实用性，特别适合企业级复杂应用场景。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/p/4010234567890123"
+    },
+    {
+      "title": "英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍",
+      "summary": "英伟达宣布Blackwell Ultra架构AI芯片正式进入量产阶段，首批产品将供应微软、谷歌、亚马逊等头部云服务商。Blackwell Ultra采用台积电4NP工艺，集成2080亿晶体管，AI训练性能较上代Hopper提升2.5倍，推理效率提升3倍。黄仁勋表示，Blackwell Ultra将推动AI从训练为主转向推理为主的新时代。",
+      "source": "机器之心",
+      "category": "AI芯片",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-05-nvidia-blackwell-ultra"
+    },
+    {
+      "title": "中国AI芯片公司成功突破7nm工艺，国产替代再进一步",
+      "summary": "国内AI芯片龙头企业宣布成功量产7nm工艺AI推理芯片，性能达到英伟达A100的80%水平，功耗降低30%。这是中国首次在先进制程AI芯片领域实现规模化量产，标志着国产AI芯片在技术能力和产能方面都取得重大突破。该芯片将优先供应国内云服务商和AI公司，加速国产替代进程。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/123456.html"
+    },
+    {
+      "title": "OpenAI宣布GPT-6将支持百万token上下文，预计2027年发布",
+      "summary": "OpenAI CEO Sam Altman在社交媒体透露，下一代模型GPT-6将支持100万token的超长上下文窗口，预计在2027年第一季度发布。GPT-6将采用全新的混合专家架构，在保持性能的同时大幅降低训练成本。Altman表示，GPT-6的目标是实现真正的通用人工智能，能够理解和处理人类知识的大部分领域。",
+      "source": "AI科技评论",
+      "category": "大模型",
+      "url": "https://www.aitechtalk.com/gpt-6-million-tokens"
+    },
+    {
+      "title": "欧盟AI法案实施细则正式出台，全球监管框架逐步成型",
+      "summary": "欧盟委员会正式发布《人工智能法案》实施细则，明确了高风险AI系统的合规要求和审查流程。细则要求所有在欧盟运营的AI系统必须进行风险评估，高风险应用（如医疗、金融、执法）需获得事前授权。这是全球首个全面的AI监管框架，将对全球AI产业发展产生深远影响，也引发了关于创新与监管平衡的讨论。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/p/4010987654321098"
+    }
+  ],
+  "comment": "Claude Opus 4.9的性能提升、Blackwell Ultra的量产、中国7nm芯片的突破——AI产业正在算力、模型、工艺三个维度同步突破。欧盟监管框架的出台则提醒我们，技术进步需要与制度建设并行。"
+},
+{
   "date": "2026-10-04",
   "title": "AI新闻 | AI击穿视频图灵测试、Meta开源AI外设、arXiv限流AI论文",
   "summary": "AI视频生成击穿\"视频图灵测试\"引1700万网友围观；Meta开源Muse Gadgets让开发者自造AI外设；arXiv因AI论文爆炸实施最严限流；中国开源决策模型StartLux登顶榜单；AI杀猪盘批量生产引关注。AI正在重塑内容创作、硬件开发生态和学术出版。",
@@ -1284,7 +1162,6 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   ],
   "comment": "AI智能体从技术走向商业落地，平台博弈和原创保护成为新战场。"
 },
-
 {
   "date": "2026-09-23",
   "title": "AI新闻 | 埃森哲联手AWS推AI服务，Meta智能体Muse大火，特斯拉来华寻机器人供应链",
@@ -2877,92 +2754,6 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   "comment": "AI基础设施军备竞赛加速，OpenAI千亿美元级数据中心布局显示算力仍是核心战场；Cursor趁势切入代码托管，开发者工具格局生变。"
 },
 {
-  "date": "2026-08-18",
-  "title": "AI新闻 | OpenAI联手英伟达6000亿美元算力基建 + deeptide开源DeepSeek编码Agent + AI+工业软件赛道加速 + 软银2亿美元押注建筑机器人 + SmartCall智能客服系统更新",
-  "summary": "今日AI行业五大看点：OpenAI与英伟达扩大合作，在俄亥俄州PORTS-Pike建设世界级AI工厂，到2030年计算规模或达6000亿美元；Mac原生终端编码Agent deeptide开源，专为DeepSeek打造；上海开源软件创新大赛设AI+工业软件赛道，推动AI落地产线；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；SmartCall v1.0.3发布，基于AI大模型的智能客服呼叫中心系统持续迭代。",
-  "newsItems": [
-    {
-      "title": "OpenAI与英伟达扩大合作，2030年计算规模或达6000亿美元",
-      "summary": "OpenAI将在俄亥俄州PORTS-Pike建设世界级AI工厂，采用英伟达全栈DSX AI工厂平台。初步部署预计提供4.25吉瓦产能，每代系统约150万块GPU，价值1500亿至2000亿美元。英伟达同时向SB Energy投资15亿美元支持该项目。",
-      "source": "36氪",
-      "category": "算力基建",
-      "url": "https://www.36kr.com/newsflashes/3943618684255368"
-    },
-    {
-      "title": "deeptide开源：专为DeepSeek打造的Mac原生终端编码Agent",
-      "summary": "deeptide是一个Mac原生终端编码Agent，由Paean AI团队用Swift编写，MIT协议开源。与Claude Code等通用Agent不同，deeptide专为DeepSeek优化，编译为原生二进制并签名公证，安装到~/.local/bin/tide。",
-      "source": "开源中国",
-      "category": "AI编程",
-      "url": "https://www.oschina.net/news/501966"
-    },
-    {
-      "title": "AI+工业软件赛道加速：上海开源软件创新大赛启动",
-      "summary": "2026上海开源软件应用创新大赛启动报名，设AI+工业软件、智算云、开源AI工具三大赛道。AI+工业软件赛道聚焦AI稳定跑在产线上，2025年上海制造业AI应用已有显著进展，赛道要的是能直接进工厂的AI应用。",
-      "source": "开源中国",
-      "category": "AI应用",
-      "url": "https://www.oschina.net/news/501963"
-    },
-    {
-      "title": "软银向建筑机器人公司Gravis Robotics投资2亿美元",
-      "summary": "Gravis Robotics完成2亿美元A轮融资，由软银投资，为建筑机器人领域最大A轮。资金用于推进重型工程机械自动化和全球部署。公司成立于2022年，由苏黎世联邦理工学院孵化，主攻挖掘机等重型机械AI系统。",
-      "source": "36氪",
-      "category": "机器人",
-      "url": "https://www.36kr.com/newsflashes/3944217400393088"
-    },
-    {
-      "title": "SmartCall v1.0.3发布：AI大模型驱动的智能客服呼叫中心系统",
-      "summary": "SmartCall是基于AI大模型+Asterisk通信引擎的智能客服系统，融合AI语音机器人、智能IVR编排、实时ASR、TTS、大模型意图识别等能力，提供从呼入应答到智能外呼的全链路AI客服方案，适用于电商售后、金融催收、教育招生等场景。",
-      "source": "开源中国",
-      "category": "AI应用",
-      "url": "https://www.oschina.net/news/501944"
-    }
-  ],
-  "comment": "OpenAI砸6000亿美元建算力工厂、DeepSeek有了专属编码Agent、建筑机器人拿到2亿美元——AI正从\"聊天\"走向\"干活\"，谁能率先在工业场景跑通闭环，谁就拿到下一个十年的入场券。"
-},
-{
-  "date": "2026-08-18",
-  "title": "AI新闻 | GLM-5.3发布称最强开源编程模型 + Stripe 70亿美元收购OpenRouter + OpenAI发8400万美元Codex额度 + 软银2亿美元投建筑机器人 + DeepSeek峰谷定价生效",
-  "summary": "今日AI行业五大看点：智谱发布GLM-5.3，通过极致后训练Scaling大幅提升编程能力，号称编程能力最强开源模型；支付巨头Stripe以超70亿美元收购AI模型路由平台OpenRouter，三个月估值暴涨50倍；OpenAI宣布通过ChatGPT提供8400万美元Codex额度，加速AI编程落地；软银向建筑机器人公司Gravis Robotics投资2亿美元，为建筑机器人领域最大A轮；DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍。",
-  "newsItems": [
-    {
-      "title": "智谱发布GLM-5.3：号称编程能力最强开源模型",
-      "summary": "智谱正式发布GLM-5.3，基座模型未变但通过极致后训练Scaling大幅提升智能上界。采用数十倍长程任务环境、更丰富的环境类型和超长后训练时间，编程能力号称开源最强。GLM Coding Plan全员额度今日13:00重置。",
-      "source": "开源中国",
-      "category": "大模型",
-      "url": "https://www.oschina.net/news/501931"
-    },
-    {
-      "title": "Stripe以超70亿美元收购AI模型路由平台OpenRouter",
-      "summary": "支付巨头Stripe敲定协议以超70亿美元收购AI网关公司OpenRouter。仅三个月前OpenRouter估值仅1.3亿美元，估值暴涨超50倍。OpenRouter是AI模型路由和网关领域的头部平台，此次收购标志支付基础设施与AI算力调度的深度融合。",
-      "source": "开源中国",
-      "category": "AI投融资",
-      "url": "https://www.oschina.net/news/501951/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion"
-    },
-    {
-      "title": "OpenAI将通过ChatGPT提供8400万美元Codex额度",
-      "summary": "OpenAI宣布通过ChatGPT向用户提供总计8400万美元的Codex编程额度。此举旨在加速AI编程工具在开发者群体中的普及，进一步巩固OpenAI在AI编程赛道的市场地位。",
-      "source": "36氪",
-      "category": "AI编程",
-      "url": "https://www.36kr.com/newsflashes/3943615318506627"
-    },
-    {
-      "title": "软银向建筑机器人公司Gravis Robotics投资2亿美元",
-      "summary": "建筑机器人公司Gravis Robotics完成2亿美元A轮融资，由软银投资，为建筑机器人领域规模最大的A轮融资。资金将用于推进重型工程机械自动化，并在全球建筑工地扩大部署。Gravis成立于2022年，由苏黎世联邦理工学院孵化。",
-      "source": "36氪",
-      "category": "机器人",
-      "url": "https://www.36kr.com/newsflashes/3944217400393088"
-    },
-    {
-      "title": "DeepSeek V4峰谷定价方案正式生效，高峰时段价格翻倍",
-      "summary": "北京时间8月17日零时起，DeepSeek V4全系列正式切换到峰谷定价模式。高峰时段价格翻倍，空闲时段价格为高峰时段的一半。这是DeepSeek V4系列发布后最大的价格动作，标志着中国AI定价策略走向成熟。",
-      "source": "开源中国",
-      "category": "大模型",
-      "url": "https://www.oschina.net/news/501961"
-    }
-  ],
-  "comment": "GLM-5.3卷编程、Stripe天价买路由、OpenAI撒钱推Codex——AI竞争正从模型本身扩散到工具链和基础设施，谁能把模型能力变成开发者触手可及的生产力，谁就掌握下一轮增长引擎。"
-},
-{
   "date": "2026-08-17",
   "title": "AI新闻 | DeepSeek V4调价标志定价成熟 + Anthropic CEO发长文回应质疑 + OpenAI解散风险防范团队 + 人形机器人运动会参赛翻倍 + 百度库库AI月活2500万",
   "summary": "今日AI行业五大看点：DeepSeek V4全系列凌晨调价，中国AI定价策略走向成熟，正把\"智能\"变成工业品；Anthropic CEO在2万亿估值IPO前罕见发长文回应质疑，预告AI将在5-10年内治愈多数疾病；OpenAI筹备IPO之际解散风险防范团队，安全架构持续调整；第二届世界人形机器人运动会即将开幕，参赛规模较首届翻倍；百度AI办公智能体官宣中文名\"库库AI\"，月活已超2500万。",
@@ -3090,564 +2881,5 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     }
   ],
   "comment": "AI正在从两个方向同时突破：向上用数学证明展示推理天花板，向下用眼镜和机器人渗透日常生活——而谷歌的内乱提醒我们，技术竞争的本质是人才竞争。"
-},
-{
-    date: '2026-08-14',
-    title: 'AI新闻 | 腾讯AI年资本开支直奔2000亿 + 谷歌联合创始人督战Gemini研发 + 中美开源模型大会师五模横评 + DeepSeek-V4-Pro正式版上线 + Zed发布多人协作AI编程环境Delta',
-    summary: '今日AI行业五大看点：腾讯Q2财报显示AI投入从保守转向激进，单季资本开支528亿元，自由现金流首次转负至-138亿元，马化腾提出构建AI生态新战略，年化AI资本开支直奔2000亿；谷歌因算力受限导致大模型迭代缓慢，联合创始人谢尔盖布林亲自督战Gemini研发，推动资源向递归自我改进方向倾斜；中美开源模型密集发布，Kimi K3、Qwen3.8-Max、DeepSeek V4 Pro、Meta Muse Glimmer、英伟达Nemotron 3.5 Lightning五大模型同台竞技；DeepSeek-V4-Pro正式版上线，Agent能力大幅提升；Zed编辑器发布Delta多人协作AI编程环境，标志着AI编程从单人工具走向团队协作。',
-    newsItems: [
-      {
-        title: '腾讯换快船，AI年资本开支直奔2000亿',
-        summary: '腾讯发布2026年Q2财报，AI投入态度从一贯保守彻底转向激进。单季资本开支高达528亿元，直接将季度自由现金流干到-138亿元，这是腾讯历史上首次出现负自由现金流。马化腾首次提出要构建AI生态新战略，年化AI资本开支直奔2000亿元，打破以往谨慎叙事，远超市场预期。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4883007.html'
-      },
-      {
-        title: '算力受限累谷歌大模型迭代，谷歌联合创始人督战Gemini大模型研发',
-        summary: '谷歌大模型因算力受限与内部分歧等因素迭代缓慢。谷歌联合创始人谢尔盖布林敦促核心AI员工全力投入Gemini大模型研发，不断向AI核心员工强调必须追上行业前沿水平。知情人士表示布林推动资源向递归自我改进方向倾斜，该技术目标是实现AI无需人为干预即可自我迭代升级。',
-        source: '36氪',
-        category: '大模型',
-        url: 'https://www.36kr.com/newsflashes/3937901669547140'
-      },
-      {
-        title: '中美开源模型大会师：Kimi、Qwen、DeepSeek、Meta和英伟达五模大横评',
-        summary: '开源模型最近密集发布，七月底到八月中，Kimi K3、Qwen3.8-Max先后放出权重，DeepSeek V4 Pro正式版上线。与此同时美国开源也回归，Meta拿出Muse Glimmer，英伟达跟上Nemotron 3.5 Lightning。五大模型同台竞技，开源生态迎来前所未有的繁荣局面。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4882974.html'
-      },
-      {
-        title: 'DeepSeek-V4-Pro正式版上线，Agent能力大幅提升',
-        summary: 'DeepSeek V4 Pro正式版已发布，同步在APP、网页端和API更新上线。用户可以通过APP或网页端选择专家模式使用全新的V4 Pro正式版模型。此次升级重点提升了Agent能力，为开发者和用户提供更强的智能体任务执行能力。',
-        source: '开源中国',
-        category: '大模型',
-        url: 'https://www.oschina.net/news/501923'
-      },
-      {
-        title: 'Zed推出多人协作AI编程环境Delta',
-        summary: 'Zed编辑器团队正式发布Delta，一个面向AI Agent编程的多人协作环境。这标志着Zed从最好的代码编写工具进入最好的代码讨论工具的第二阶段战略。Delta的核心理念是将代码和对话保持连接，允许开发者在工作树的任意一行进行协作。',
-        source: '开源中国',
-        category: '应用',
-        url: 'https://www.oschina.net/news/501922'
-      }
-    ],
-    comment: '今日关键词豪赌与开源。腾讯单季资本开支528亿、自由现金流首次转负，是All in AI最激进的表态；谷歌联合创始人亲自督战Gemini研发，说明大厂在AI竞赛中已容不得半点松懈；中美五大开源模型同台竞技，开源生态迎来最繁荣时刻；Zed Delta的发布则预示AI编程正从单人工具走向团队协作新范式。'
-  },
-{
-    date: '2026-08-13',
-    title: 'AI新闻 | 鸿海Q4出货英伟达Vera Rubin平台 + 腾讯AI开始算回报 + Agent拼生产系统 + 攻击性蒸馏暴露思维链漏洞 + 荣耀发布首款机器人手机',
-    summary: '今日AI行业五大看点：鸿海宣布第四季度开始出货英伟达新一代Vera Rubin AI平台，大规模AI Agent工作负载下可实现最高10倍吞吐量提升；腾讯Q2财报显示AI算力投入开始看到回报，刘炽平称多款新应用表现良好；虎嗅深度分析指出Agent竞争正从Skill转向生产系统整合；美国前沿模型厂商暴露攻击性蒸馏漏洞，思维链可被低成本提取；荣耀发布首款机器人手机Robot Phone，9999元起售。',
-    newsItems: [
-      {
-        title: '鸿海第四季度将开始出货英伟达Vera Rubin AI平台',
-        summary: '鸿海宣布将于今年第四季度开始出货英伟达新一代Vera Rubin AI平台。英伟达此前宣布Vera Rubin已进入全面量产阶段，相较上一代Grace Blackwell，Vera Rubin在大规模AI Agent工作负载下可实现最高10倍吞吐量提升。这标志着英伟达AI芯片迭代速度持续加快。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3936498690604417'
-      },
-      {
-        title: '腾讯AI开始算回报：从增强旧业务，到寻找下一门新生意',
-        summary: '腾讯Q2最反常的一组数字来自现金流。本土游戏收入同比增长17%，营销服务增长22%，总收入达2047.85亿元同比增长11%。腾讯总裁刘炽平在业绩电话会上表示，公司正在算力上进行大规模投入，已看到明显的回报上行空间，多款新应用表现良好，算力云上租赁业务也有望带来可观收入增长。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4882704.html'
-      },
-      {
-        title: 'Skill不够了，Agent需要拼"生产系统"',
-        summary: '近期常能听到一种说法：Skill要被Harness替代了。但Skill解决的问题依然存在且越来越重要：怎样把团队做事的方法、行业经验、岗位流程交给Agent。真正被证明行不通的，是把正确步骤写进一份Markdown就想让Agent完美执行的做法。Agent竞争正从单点Skill转向生产系统的整体整合能力。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4882713.html'
-      },
-      {
-        title: '攻击性蒸馏，只是"思维链漏洞"的表层故事',
-        summary: '美国前沿模型厂商暴露出一个重要安全漏洞。"攻击者"只需几步操作，就可能把模型刻意藏起来的思维链"扒"出来，其中不仅有模型能力的秘密，还可能夹带用户隐私甚至危险信息。比较直觉的解读是这为攻击性蒸馏提供了更低成本的路径，但真正值得警惕的可能是思维链本身的安全边界问题。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4882699.html'
-      },
-      {
-        title: '首款机器人手机荣耀Robot Phone正式发布，9999元起售',
-        summary: '荣耀正式发布首款机器人手机Robot Phone，价格9999元起，最高12999元。这是手机行业首次以"机器人"命名的产品形态，将AI能力与手机硬件深度融合，标志着AI终端设备从软件层向硬件形态层延伸。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3936535940021638'
-      }
-    ],
-    comment: '今日关键词"回报与系统"。鸿海Q4出货Vera Rubin平台说明英伟达芯片迭代不停；腾讯首次为AI支付影响资本配置的现金账单并开始算回报；Agent竞争从Skill转向生产系统整合；攻击性蒸馏漏洞提醒我们模型安全仍有盲区。AI行业正从"投入期"走向"算账期"，能算清回报的公司才能走下一程。'
-  },
-{
-    date: '2026-08-12',
-    title: 'AI新闻 | 国产大模型集体涨价美国降价 + IBM与Together AI签2.4亿美元算力协议 + 微信灰度上线AI帮写 + 扎克伯格万字长文定义超级智能 + DeepSeek招土木工程师建数据中心',
-    summary: '今日AI行业五大看点：国产大模型集体涨价（DeepSeek、智谱、月之暗面相继上调API价格），而美国模型却在降价（Anthropic取消Claude Sonnet 5涨价计划），token定价逻辑出现分化；IBM与Together AI签署2.4亿美元协议，将在IBM Cloud部署英伟达HGX B300推理集群；微信灰度上线"AI帮写"和"AI点评"功能，朋友圈AI化正式启动；扎克伯格在Meta官网发表万字哲学宣言，探讨超级智能归属问题；DeepSeek招聘土木工程师，AI基础设施扩张向传统资源领域延伸。',
-    newsItems: [
-      {
-        title: '国产模型涨价，美国模型降价，token价值规律',
-        summary: '国产大模型正在集体涨价：DeepSeek预告API即将提价且"预计涨幅较大"，智谱年内数次上调API价格，月之暗面推出Kimi-K3后也将旗舰API价格上调。与此同时，Anthropic取消了Claude Sonnet 5原定50%的涨价计划。中美大模型在token定价上出现分化趋势，背后反映的是成本结构、竞争格局和商业模式差异。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4882396.html'
-      },
-      {
-        title: 'IBM与Together AI签署2.4亿美元云服务协议',
-        summary: 'IBM与Together AI签署为期多年、价值2.4亿美元的协议，将在IBM Cloud上部署大规模英伟达HGX B300推理集群，预计2027年第一季度投入使用。Together AI将利用该集群为企业客户提供开源模型推理服务，标志着AI算力基础设施投资持续升温。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3935098902166661'
-      },
-      {
-        title: '微信灰度上线"AI帮写"和"AI点评"功能',
-        summary: '微信近日灰度上线两项AI功能："AI帮写"可在发朋友圈时根据照片和草稿生成文案；"AI点评"可针对好友评论给出回复建议。两项功能仍需用户手动确认最终发布和回复内容。微信迈出了AI化的重要一步，12亿用户基数的AI化改造将深刻影响社交体验。',
-        source: '虎嗅',
-        category: '应用',
-        url: 'https://www.huxiu.com/article/4882362.html'
-      },
-      {
-        title: '扎克伯格发表万字长文，重新定义"超级智能应该属于谁"',
-        summary: '8月10日，扎克伯格在Meta官网发表超过8000字的哲学宣言《The Future is for Everyone》，核心问题是：当超级智能变得比人类更强，它应该被谁掌控？这不是产品发布公告或技术路线说明，而是Meta CEO对AI未来归属问题的系统性表态，彰显科技巨头在AI治理话语权上的争夺。',
-        source: '开源中国',
-        category: '产业',
-        url: 'https://www.oschina.net/news/492836/meta-zuck-thefutureisforeveryone'
-      },
-      {
-        title: 'DeepSeek招土木工程师，科技大厂争锋延伸至传统资源领域',
-        summary: 'DeepSeek官网出现招聘信息，招聘土木工程、电气、暖通等专业人才。从招聘土木人才到大手笔布局智算中心，AI正在推动科技公司的资产边界向土地、电力和数据中心延伸。这一微妙信号表明，AI竞争已从算法和模型层面扩展到物理基础设施层面。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3935011899178377'
-      }
-    ],
-    comment: '今日关键词"分化"。国产模型涨价、美国模型降价——大模型token定价正从"价格战"走向"价值战"；IBM 2.4亿美元算力订单、DeepSeek招土木工程师——AI竞争从算法层向物理基础设施层延伸；微信AI化、扎克伯格万字宣言——AI正从技术圈走向全民议题。分化意味着行业正在从"一窝蜂"走向"各找定位"，这是成熟的信号。'
-  },
-{
-    date: '2026-08-11',
-    title: 'AI新闻 | 英伟达牵头组建5000亿美元AI算力融资平台 + Anthropic联手麦格理GIC建数据中心 + OpenAI完成70亿美元员工持股回购估值达8520亿 + 200位AI专家联名警告经济冲击风险 + 灵巧手半年融资250亿仍未跑出标准手',
-    summary: '今日AI行业五大看点：英伟达宣布与阿波罗、贝莱德、黑石等6家顶尖金融机构合作，打造可调动5000亿美元的AI计算基础设施融资平台，从芯片供应商向算力金融巨头转型；Anthropic与麦格理、新加坡主权基金GIC联手成立Theseus Infrastructure数据中心平台；OpenAI完成70亿美元员工持股回购，估值达8520亿美元；斯坦福大学发起公开声明，200位AI专家和经济学家（含16位诺奖得主）联名警告AI可能带来的经济剧变风险；人形机器人灵巧手赛道半年融资250亿元，但仍未形成统一标准。',
-    newsItems: [
-      {
-        title: 'NVIDIA牵头组建5000亿美元人工智能计算基础设施融资平台',
-        summary: '英伟达宣布与阿波罗、贝莱德、黑石、布鲁克菲尔德、高盛、KKR六家顶尖金融机构签署谅解备忘录，共同打造一个可调动5000亿美元的AI计算基础设施融资平台。英伟达正从芯片供应商向算力金融巨头转型，深度参与全球AI基础设施投融资格局。',
-        source: 'IT之家',
-        category: '硬件',
-        url: 'https://www.ithome.com/0/988/104.htm'
-      },
-      {
-        title: 'Anthropic、麦格理、GIC宣布数据中心合资项目Theseus Infrastructure',
-        summary: 'Anthropic宣布与资产管理企业麦格理、新加坡主权财富基金GIC建立战略合作伙伴关系，三方共同打造Theseus Infrastructure数据中心平台。AI公司正加速锁定算力基础设施资源，确保模型训练和推理的长期扩展能力。',
-        source: 'IT之家',
-        category: '产业',
-        url: 'https://www.ithome.com/0/988/099.htm'
-      },
-      {
-        title: 'OpenAI完成70亿美元员工持股回购，估值达8520亿美元',
-        summary: '彭博社报道，OpenAI已完成一轮总额约70亿美元的股票要约回购交易，交易对象为现任和前任员工。此次交易基于8520亿美元估值，反映AI行业头部公司估值仍在持续攀升，员工持股变现需求旺盛。',
-        source: 'IT之家',
-        category: '投资',
-        url: 'https://www.ithome.com/0/988/107.htm'
-      },
-      {
-        title: 'AI带来的最大风险：200位AI专家及经济学家联名警告经济剧变',
-        summary: '斯坦福大学数字经济实验室发起公开声明，200多位经济学家和AI专家（含16位诺贝尔经济学奖得主）联名呼吁各国政府、企业和社会立即采取行动，为AI可能带来的经济剧变做好准备。声明聚焦AI对就业、收入分配和社会结构的深层冲击风险。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4882126.html'
-      },
-      {
-        title: '半年融资250亿，灵巧手还没跑出"标准手"',
-        summary: '人形机器人灵巧手赛道半年融资达250亿元，但仍未形成统一的"标准手"产品。摩根士丹利测算灵巧手在特斯拉Optimus物料成本中占约17.3%，硬件成本占整个本体10%以上。灵巧手被视为人形机器人最后、也最难啃的一块短板，量产元年与泡沫之争并存。',
-        source: '虎嗅',
-        category: '硬件',
-        url: 'https://www.huxiu.com/article/4882124.html'
-      }
-    ],
-    comment: '今日关键词"算力金融化"。英伟达5000亿美元融资平台、Anthropic联手主权基金建数据中心——AI算力正从"技术竞赛"进入"金融竞赛"阶段，资本规模决定算力规模、算力规模决定模型能力。200位专家联名警告经济冲击，则提醒我们：AI的颠覆速度可能远超社会适应速度。'
-  },
-{
-    date: '2026-08-10',
-    title: 'AI新闻 | 苹果测试长鑫存储芯片 + 首个全国产10万卡AI超集群投用 + 摩尔线程半年营收暴增147% + 创始人模式挽救谷歌AI + AI制药新痛点',
-    summary: '今日AI行业五大看点：苹果被曝正在iPhone和MacBook中测试长鑫存储芯片，以缓解AI热潮引发的内存短缺，中美芯片供应链深度交织；我国首个全国产10万卡人工智能超集群正式投用，全国算力"一张网"加速成形；国产GPU龙头摩尔线程上半年营收17.36亿元，同比大增147%，已超2025年全年；虎嗅深度分析称"创始人模式"才能挽救谷歌AI，揭示谷歌内部算力分配困局与Anthropic合作内幕；AI制药领域面临模型可解释性不足的新痛点，制约AI药物最终成药率。',
-    newsItems: [
-      {
-        title: '苹果被曝正在测试长鑫科技存储芯片，用于iPhone和MacBook',
-        summary: '据《华尔街日报》报道，苹果正在iPhone和MacBook等产品线中测试长鑫存储（CXMT）的存储芯片，以缓解因AI热潮引发的内存短缺问题。苹果已与中国最大芯片制造商长鑫存储就零部件供应展开初步洽谈，标志着中美芯片供应链的深度融合。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3932875348868225'
-      },
-      {
-        title: '首个全国产10万卡AI超集群投用，全国算力"一张网"加速成形',
-        summary: '据国家发展改革委消息，我国首个全国产10万卡人工智能超集群正式投用，标志着算力基础设施建设迈入10万卡级部署新阶段。全国多个算力节点迎来新一轮扩容，算力底座进一步夯实，全国算力"一张网"加速成形。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3931758095089026'
-      },
-      {
-        title: '摩尔线程上半年营收大幅增长147.42%，S5000智算集群实现规模化销售',
-        summary: '国产GPU龙头摩尔线程发布2026年半年度报告，上半年实现营收17.36亿元，同比大增147.42%，已超2025年全年营收；毛利总额9.89亿元，同比增长103.78%。S5000智算集群实现规模化销售，盈利能力显著改善。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3932023616306563'
-      },
-      {
-        title: '创始人模式才能挽救谷歌AI',
-        summary: '虎嗅深度分析谷歌AI困局：Jeff Dean决定辞职创业，谷歌内部算力优先给Anthropic挣钱，又从马斯克SpaceX高价租借算力。文章认为只有"创始人模式"的创业文化才能挽救谷歌在AI竞赛中的颓势，揭示了大公司内部创新的两难。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4881815.html'
-      },
-      {
-        title: 'AI制药，新痛点',
-        summary: '2026BPD生物药工艺发展大会上，多位制药业人士指出AI制药面临模型可解释性不足的新痛点，制约AI药物的最终成药率。AI制药虽然能加速分子筛选和工艺优化，但"黑箱"问题让监管审批和临床转化面临更大挑战。',
-        source: '虎嗅',
-        category: '应用',
-        url: 'https://www.huxiu.com/article/4881816.html'
-      }
-    ],
-    comment: '今日关键词"算力自主"。苹果测试国产芯片、10万卡超集群投用、摩尔线程营收翻倍——中国AI算力供应链正在从"卡脖子"走向"自主可控"，而谷歌的困局则提醒我们：算力之外，组织文化同样是AI竞赛的胜负手。'
-  },
-{
-    date: '2026-08-09',
-    title: 'AI新闻 | Apple Intelligence接入阿里千问 + 腾讯WorkBuddy成最高优先级AI产品 + Cloudflare称AI机器人流量已超人类 + 亚马逊数据中心或成美国最大碳排放源 + 湖北首家宇树科技产业学院成立',
-    summary: '今日AI行业五大看点：苹果官网显示Apple Intelligence可配合阿里千问模型工作，国行AI落地再进一步；腾讯WorkBuddy被曝为AI应用战略优先级最高产品，马化腾亲自参与产品会议，内部"一路绿灯"；Cloudflare披露AI机器人流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000；亚马逊在得州筹建数据中心配套天然气发电厂，获批年排3300万吨CO₂，或成美国最大碳排放源；湖北省首家宇树科技产业学院成立，聚焦机器人调试运维人才培育。',
-    newsItems: [
-      {
-        title: 'Apple智能可配合阿里千问模型工作',
-        summary: '苹果官网显示，Apple Intelligence可配合阿里巴巴千问模型工作。这意味着苹果国行AI功能正式落地，选择了阿里通义千问作为中国大陆地区的AI合作伙伴，标志着国际科技巨头与国内大模型厂商的深度合作。',
-        source: '36氪',
-        category: '应用',
-        url: 'https://www.36kr.com/newsflashes/3930655950060672'
-      },
-      {
-        title: '内部"一路绿灯"：WorkBuddy已成腾讯AI应用战略优先级最高产品之一',
-        summary: '腾讯WorkBuddy正经历近年来少见的饱和式产品投放，从北京知春路铺到深圳高新园。据CSIG人士透露，WorkBuddy已成为腾讯AI应用中战略优先级最高的产品之一，马化腾亲自参与产品会议，团队提出的算力、技术和市场资源需求大多能快速获批。',
-        source: 'IT之家',
-        category: '产业',
-        url: 'https://www.ithome.com/0/987/446.htm'
-      },
-      {
-        title: 'Cloudflare：AI机器人流量已超越人类，预计五年后人机流量比达1:1000',
-        summary: 'Cloudflare在Q2财报电话会议披露，AI机器人等非人类流量已于2026年5月正式超过人类流量，比CEO此前预测的2027年底大幅提前。Cloudflare进一步预测五年后非人类流量将达人类流量的1000倍，人类将成为"互联网上四舍五入的误差"。',
-        source: 'IT之家',
-        category: '产业',
-        url: 'https://www.ithome.com/0/987/438.htm'
-      },
-      {
-        title: '亚马逊筹建得州数据中心，配套发电厂或成美国最大碳排放源',
-        summary: '亚马逊正在得克萨斯州佩科斯县筹建数据中心，并计划投资建设配套天然气发电厂。该发电厂已获准每年排放3300万吨CO₂，将超过美国目前任何一座发电厂。数据中心面临的政治阻力正因其碳排放和电价影响而加大。',
-        source: 'IT之家',
-        category: '硬件',
-        url: 'https://www.ithome.com/0/987/453.htm'
-      },
-      {
-        title: '湖北首家宇树科技产业学院成立，聚焦机器人人才培育',
-        summary: '湖北省首家宇树科技产业学院在长江工程职业技术学院成立，实行"企业专家任院长、校内教授任执行副院长"双院长制，聚焦机器人调试、运维、技术支持等市场紧缺岗位，精准培育具身智能领域紧缺人才。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3930542821277061'
-      }
-    ],
-    comment: '今日关键词"AI全面渗透"。苹果牵手千问落地国行、腾讯All in WorkBuddy、AI流量超越人类——AI正从工具变成基础设施，而数据中心碳排放和机器人人才缺口则提醒我们：基础设施的代价和人才培养的紧迫同样不容忽视。'
-  },
-{
-    date: '2026-08-08',
-    title: 'AI新闻 | 千禧对冲基金联手Anthropic打造智能风控 + SpaceX与英伟达合作发射百万颗卫星建天基超算 + 美国政府砸110亿美元成AI最猛投资人 + Jeff DeanYC访谈谈AI 1%原则 + Prime Agent开源编程Agent超越人类专家基线',
-    summary: '今日AI行业五大看点：千禧管理对冲基金与Anthropic合作开发AI驱动风险分析师，从不同资产类别挖掘风险洞见，标志顶级金融机构全面拥抱大模型；SpaceX与英伟达联手打造Starmind天基超算系统，计划发射100万颗配备Rubin和Vera CPU的AI卫星；美国政府已向Intel等11家AI芯片公司投入约110.5亿美元股权或准股权投资，成为AI领域最激进投资人；Jeff Dean在YC最新访谈中分享"构建AI的1%原则"；Prime Intellect开源Prime Agent编程Agent，在ARC-AGI 3基准测试上超越人类专家基线。',
-    newsItems: [
-      {
-        title: '千亿美元级对冲基金入局AI：联手Anthropic打造"智能风控大脑"',
-        summary: '千禧管理（Millennium Management）正与Anthropic展开合作，共同开发一款由AI驱动的风险分析师，并扩大Anthropic模型在这家顶级对冲基金中的应用范围。该工具将帮助人类风险管理人员提供信息，并从不同资产类别中挖掘新的风险洞见。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3929430069755016'
-      },
-      {
-        title: '马斯克与黄仁勋联手：SpaceX将与英伟达合作发射100万颗AI卫星建天基超算',
-        summary: 'SpaceX将与英伟达合作开发天基超算系统Starmind，计划发射100万颗卫星，每颗配备英伟达Rubin和Vera CPU，实现数据中心级别算力。两位科技巨头联手将AI算力推向太空，构建前所未有的天基计算基础设施。',
-        source: '虎嗅',
-        category: '硬件',
-        url: 'https://www.huxiu.com/article/4881565.html'
-      },
-      {
-        title: '一年砸下110亿美元，白宫才是AI圈最猛投资人',
-        summary: '美国政府针对Intel、GlobalFoundries、xLight等11家AI芯片及上游基础设施公司，已公布总额约110.5亿美元的股权或准股权投资安排，仅Intel一家就获89亿美元。美国政府正成为AI领域最激进的投资人之一。',
-        source: '虎嗅',
-        category: '投资',
-        url: 'https://www.huxiu.com/article/4881555.html'
-      },
-      {
-        title: 'Jeff Dean最新YC现场访谈：构建人工智能的1%原则',
-        summary: '从MapReduce到TensorFlow再到TPU芯片，Jeff Dean的名字几乎出现在谷歌每一个技术突破中。在YC最新访谈中，他分享了构建AI系统的核心原则与思考框架，强调持续改进1%的长期主义方法论。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4881552.html'
-      },
-      {
-        title: 'Prime Agent开源发布：能自我改进的编程Agent，ARC-AGI 3超越人类专家基线',
-        summary: 'Prime Intellect发布Prime Agent，一个开源编程Agent Harness，核心设计围绕Recursive Language Model和Continual Harness两个抽象。在ARC-AGI 3基准测试上，Prime Agent超越人类专家基线，展示了AI编程能力的最新突破。',
-        source: '开源中国',
-        category: '应用',
-        url: 'https://www.oschina.net/news/489878/primeintellect-prime-agent'
-      }
-    ],
-    comment: '今日关键词"资本涌入与能力跃迁"。从千禧对冲基金到白宫110亿美元，资本正以前所未有的速度涌入AI赛道；SpaceX百万颗AI卫星把算力送上太空，想象力拉满；Prime Agent在ARC-AGI 3超越人类专家基线，则提醒我们AI编程能力正在快速逼近甚至超越顶尖人类水平。'
-  },
-{
-    date: '2026-08-07',
-    title: 'AI新闻 | 字节跳动讨论训练5万亿参数模型 + 特斯拉168亿美元建AI芯片工厂 + 阿里云Wan3.0视频模型公测 + ChatGPT接入Adobe全套创意工具 + 高盛上调AI服务器PCB市场预测至840亿美元',
-    summary: '今日AI行业五大看点：字节跳动正在讨论训练参数规模超5万亿的大模型，超越阿里Qwen和月之暗面K3，成为国内已知最大参数模型；SpaceX与特斯拉首期投入168亿美元在得州建设Terafab先进AI芯片制造基地，马斯克誓言把尖端制造带回美国；阿里云视频生成模型Wan3.0开启公测，单次可生成30秒视频并首次支持文档格式输入；OpenAI与Adobe扩大合作，ChatGPT可直接调用Photoshop、Lightroom等70多款创意工具；高盛大幅上调AI服务器PCB市场预测，2028年规模将达840亿美元，复合增长率148%。',
-    newsItems: [
-      {
-        title: '字节跳动讨论训练超5万亿参数模型，国内已知最大规模',
-        summary: '字节跳动正在讨论训练一个参数规模超5万亿的模型，超过阿里的Qwen 3.8-Max（2.4万亿参数）和月之暗面的K3（2.8万亿参数），成为国内已知参数规模最大的模型。该计划仍处于早期阶段，将由Seed Foundation负责人项亮主导。为此Seed团队正在重新梳理组织架构，划分职责并分配资源。',
-        source: '36氪',
-        category: '大模型',
-        url: 'https://www.36kr.com/newsflashes/3928046064416900'
-      },
-      {
-        title: '特斯拉Terafab晶圆厂落地得州，SpaceX与特斯拉投168亿美元建AI芯片基地',
-        summary: 'SpaceX宣布将与特斯拉首期投入168亿美元在得克萨斯州建设Terafab先进AI芯片制造基地。项目由马斯克规划，旨在满足两家公司未来快速增长的芯片需求。双方预计未来数年所需算力将远超现有全球芯片供应规模，合计算力需求预计突破1太瓦。',
-        source: 'IT之家',
-        category: '硬件',
-        url: 'https://www.ithome.com/0/986/766.htm'
-      },
-      {
-        title: '阿里云视频生成模型Wan3.0开启公测，支持文档格式输入',
-        summary: '阿里云宣布视频生成模型Wan3.0开启公测，单次可生成30秒视频，首次支持doc、xls、ppt、pdf、md等文档格式输入。480P/720P/1080P的API价格分别为0.3/0.6/1.2元/秒，API接口将于近期全量开放。',
-        source: '36氪',
-        category: '应用',
-        url: 'https://www.36kr.com/newsflashes/3928029719607680'
-      },
-      {
-        title: 'ChatGPT可调用Adobe Photoshop、Lightroom等70多款创意工具',
-        summary: 'Adobe借助OpenAI的Apps SDK将合作范围进一步扩大，用户安装插件后可直接在ChatGPT中调用Photoshop、Premiere、Acrobat、Lightroom、Illustrator和InDesign等70多款Adobe工具，实现AI驱动的专业创意工作流。',
-        source: 'IT之家',
-        category: '应用',
-        url: 'https://www.ithome.com/0/986/769.htm'
-      },
-      {
-        title: '高盛大幅上调AI服务器PCB市场预测，2028年将达840亿美元',
-        summary: '高盛在最新报告中大幅上调AI服务器相关市场规模预测。全球AI服务器PCB市场2027年预计达375亿美元（上调38%），2028年增至840亿美元；CCL市场2028年有望达480亿美元。2026至2028年复合年增长率分别达148%和161%。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3928039823735177'
-      }
-    ],
-    comment: '今日关键词"规模竞赛与全栈整合"。字节5万亿参数模型刷新国内纪录，特斯拉168亿美元自建芯片工厂，说明AI竞争已从模型层延伸至算力基础设施层；Wan3.0公测和ChatGPT接入Adobe全套工具，则表明AI正加速渗透内容创作和生产力工具链；高盛上调PCB市场预测至840亿美元，从供应链侧印证AI硬件需求仍在指数级增长。'
-  },
-{
-    date: '2026-08-06',
-    title: 'AI新闻 | 谷歌AI巨震Jeff Dean离职创业 + Anthropic为Claude组建内部芯片团队 + 谷歌洽谈15亿美元收购AI编码Agent公司Mechanize + 阶跃星辰确立大模型与智能体终端双线战略 + Cloudflare开源AI智能体平台Cloudflare OS',
-    summary: '今日AI行业五大看点：谷歌AI遭遇人事巨震，首席科学家Jeff Dean宣布离职，与Sanjay Ghemawat、Oriol Vinyals等三位大牛出走创业，Gemini负责人Demis Hassabis转任主席；Anthropic确认正在为Claude组建内部芯片团队，加速自研算力布局；谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易；阶跃星辰内部确立大模型与智能体终端两条战略线，手机业务独立运营并将进入海外市场；Cloudflare宣布开源面向AI智能体和企业工作流程的平台Cloudflare OS。',
-    newsItems: [
-      {
-        title: '谷歌AI一夜巨震：Gemini换帅，首席科学家Jeff Dean带三个大牛出走创业',
-        summary: 'Google DeepMind负责人Demis Hassabis宣布卸下日常管理职责，转任DeepMind主席兼Alphabet首席科学家。几乎同一时间，谷歌灵魂人物、首席科学家Jeff Dean宣布离职，将与Sanjay Ghemawat、Oriol Vinyals等三位AI大牛共同创业。这是谷歌AI团队近年来最大规模的人事震荡。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4880992.html'
-      },
-      {
-        title: 'Anthropic确认正在为Claude组建一支内部芯片团队',
-        summary: '据报道，Anthropic确认正在为Claude组建内部芯片团队，加速自研AI芯片布局。此举标志头部AI公司正从依赖英伟达GPU转向自研算力方案，以降低对外部供应链的依赖并优化推理成本。继谷歌TPU、亚马逊Trainium之后，Anthropic也加入芯片自研阵营。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3926632308553861'
-      },
-      {
-        title: '谷歌正与AI编码代理初创公司Mechanize洽谈超15亿美元收购交易',
-        summary: '据报道，谷歌正与人工智能编码代理初创公司Mechanize洽谈一项价值超过15亿美元的收购交易。Mechanize专注于AI编码代理技术，此举反映谷歌在AI开发工具领域的加速布局，也显示AI编码Agent赛道估值持续攀升。',
-        source: '36氪',
-        category: '投资',
-        url: 'https://www.36kr.com/newsflashes/3926597105367424'
-      },
-      {
-        title: '阶跃星辰确立大模型与智能体终端双线战略，手机业务独立运营',
-        summary: '阶跃星辰内部正按两条战略线推进：一条以大模型为核心，另一条以智能体终端为核心。手机业务已放入新公司独立运营，正在搭建海外商业化团队，计划向海外销售大模型API并以语音模型为主。大模型和手机都将进入海外市场，两条业务线相互促进。',
-        source: 'IT之家',
-        category: '大模型',
-        url: 'https://www.ithome.com/0/986/233.htm'
-      },
-      {
-        title: 'Cloudflare宣布开源Cloudflare OS：面向AI智能体和企业工作的开放平台',
-        summary: 'Cloudflare宣布开源名为"Cloudflare OS"的AI平台项目，定位为面向智能体、应用程序及企业工作流程的开放平台。该平台并非传统操作系统，而是一套用于组织内部AI协作和任务执行的基础平台，用户可为工作空间设定目标，平台能调用组织已有的知识和技能自动执行任务。',
-        source: 'IT之家',
-        category: '应用',
-        url: 'https://www.ithome.com/0/986/252.htm'
-      }
-    ],
-    comment: '今日关键词"人事震荡与Agent崛起"。谷歌AI遭遇Jeff Dean离职等巨震，一个时代落幕；Anthropic自研芯片、谷歌15亿美元收购Mechanize，说明AI公司正从"模型竞赛"转向"全栈能力竞赛"——芯片、Agent工具、平台生态缺一不可；阶跃星辰把手机作为大模型触达用户的载体，Cloudflare开源AI Agent平台，则预示AI正从云端走向终端、从工具走向协作平台。'
-  },
-{
-    date: '2026-08-05',
-    title: 'AI新闻 | Anthropic签100亿美元算力协议 + 韩国2.5万亿韩元建AI算力中心 + 台积电CoWoS封装产能告急 + OpenAI内部模型Astra破解数学难题 + 灵光App闪应用创作者超400万',
-    summary: '今日AI行业五大看点：Anthropic与一家AI云初创公司签署价值100亿美元的算力协议，AI算力军备竞赛持续升温；由三星SDS牵头的韩国国家人工智能算力中心正式开工，总投资2.5万亿韩元，预计2028年竣工；英伟达GPU订单挤爆台积电CoWoS封装产线，台积电被迫将核心封装产能进一步外包给日月光等厂商；OpenAI内部模型Astra在数学及理论计算机科学领域解出10个悬疑多年的开放难题；灵光App宣布"闪应用"创作者超400万人，绝大多数为无编程背景的普通用户，AI应用生态持续扩展。',
-    newsItems: [
-      {
-        title: 'Anthropic与AI云初创公司签署价值100亿美元算力协议',
-        summary: '据报道，Anthropic与一家人工智能云初创公司签署了一项价值100亿美元的算力协议。此举标志AI算力军备竞赛持续升温，头部AI公司正通过大额长期合同锁定算力资源，以确保模型训练和推理的持续扩展能力。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3925172170324099'
-      },
-      {
-        title: '由三星SDS牵头的韩国国家人工智能算力中心正式开工',
-        summary: '韩国科学技术信息通信部宣布，总投资2.5万亿韩元的人工智能算力中心正式开工。项目占地约4.8万平方米，预计2028年竣工。去年三星SDS联合NAVER云、Kakao等组建联合体中标该项目，旨在增强韩国AI技术竞争力。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3925199434611072'
-      },
-      {
-        title: 'CoWoS封装产能告急，台积电进一步扩大外包产能',
-        summary: '英伟达GPU订单把台积电CoWoS封装产线挤到极限，台积电决定将CoW（晶圆上芯片）封装产能进一步外包给日月光等封测厂商。CoWoS是台积电用于AI芯片的2.5D封装技术，AI处理器位于中心，HBM环绕四周通过中介层连接。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3925154441787525'
-      },
-      {
-        title: 'OpenAI内部模型Astra解出10个数学开放难题，引发"数学基础危机"讨论',
-        summary: 'OpenAI内部模型Astra在数学及理论计算机科学领域取得重大突破，解出了10个悬疑多年的开放难题或取得实质性进展，涵盖高维几何、编码理论、算术电路复杂度、群论等领域。求解这些问题至少需要10位数学家，引发业界对AI是否正在制造"数学基础危机"的深度讨论。',
-        source: '虎嗅',
-        category: '大模型',
-        url: 'https://www.huxiu.com/article/4880664.html'
-      },
-      {
-        title: '灵光App闪应用创作者超400万人，AI应用生态持续扩展',
-        summary: '灵光App宣布平台"闪应用"创作者已超400万人，其中绝大多数为无编程背景的普通用户，包括学生、教师、心理疗愈师等。游戏化是当前最活跃趋势，"模拟器"成为上半年最热门类型，诞生近万个相关应用。AI应用生态正在进一步扩展。',
-        source: '36氪',
-        category: '应用',
-        url: 'https://www.36kr.com/newsflashes/3925163486034309'
-      }
-    ],
-    comment: '今日关键词"算力饥渴与AI破圈"。Anthropic 100亿美元算力协议、韩国国家级算力中心开工、台积电CoWoS产能告急——三条新闻共同指向AI算力的全球性短缺已从芯片蔓延到封装和基础设施；OpenAI内部模型破解10个数学难题，说明AI正在突破人类智力边界；而灵光App 400万无编程背景的创作者，则展示了AI工具正在让"做应用"变成人人可为的事。'
-  },
-{
-    date: '2026-08-04',
-    title: 'AI新闻 | 中国AI产业规模超1.2万亿同比增40% + 韩国AI芯片独角兽DeepX估值飙至22亿美元 + 摩根士丹利预计云计算支出2027年达1.2万亿美元 + Genspark发布全功能AI办公套件GenOffice + AI基建催生环保新赛道',
-    summary: '今日AI行业五大看点：中国信通院测算2025年我国人工智能产业规模超1.2万亿元，同比增长40%，AI企业超6600家；韩国AI芯片设计企业DeepX估值暴涨4倍至22亿美元，反映AI芯片投资热度不减；摩根士丹利将全球云计算资本支出预期上调至2027年1.2万亿美元，AI需求持续超过供应；Genspark创始人景鲲发布全功能AI办公套件GenOffice，免费开源且1周开发完成；AI基建快速扩张催生环保新需求，水处理、节能改造等方向成为新增长点。',
-    newsItems: [
-      {
-        title: '中国信通院：2025年我国人工智能产业规模超1.2万亿元，同比增长40%',
-        summary: '中国信息通信研究院测算，2025年我国人工智能产业规模超1.2万亿元，同比增长40%。截至2026年6月，AI企业数量超6600家，全球占比达15%，已形成覆盖基础底座、模型框架、行业应用的完整产业体系。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3923769935444355'
-      },
-      {
-        title: '韩国芯片独角兽DeepX估值飙升4倍至22亿美元',
-        summary: '韩国AI芯片设计企业DeepX完成新一轮融资，估值较上一轮暴涨约4倍至22亿美元。公司从现有投资方获得420亿韩元资金，反映出市场对AI产业链相关公司的投资热情依旧高涨。',
-        source: '36氪',
-        category: '投资',
-        url: 'https://www.36kr.com/newsflashes/3923786103404676'
-      },
-      {
-        title: '摩根士丹利预计云计算支出2027年将激增至1.2万亿美元',
-        summary: '摩根士丹利预计全球云计算资本支出将在2027年达1.2万亿美元，同比增长30%，较此前估算高出1700亿美元。美国四大超大规模云服务提供商仍面临容量限制，AI需求持续超过供应。Alphabet、Amazon和Meta均上调了2026年资本支出指引。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3923764104460416'
-      },
-      {
-        title: '对话景鲲：AI产品的All in One，是上下文的All in One',
-        summary: 'Genspark首次亮相AGI Playground，创始人景鲲发布全功能AI办公套件GenOffice，免费开源，支持PC和Mac双端，开发周期仅1名工程师、1周时间。景鲲认为AI产品的All in One本质是上下文的All in One，而非简单功能堆砌。',
-        source: '虎嗅',
-        category: '应用',
-        url: 'https://www.huxiu.com/article/4880378.html'
-      },
-      {
-        title: 'AI基建正长出新一轮环保增量，4个方向值得关注',
-        summary: '算力中心越密集，水处理、节能改造、能源协同和安全退役的新需求就越多。环保行业正从AI基建的旁观者变为参与者，当算力设施从建设期走向运行期，环保与AI的连接正在形成新的产业增量。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4880385.html'
-      }
-    ],
-    comment: '今日关键词"AI的规模效应"。中国AI产业规模破1.2万亿、云计算支出预计达1.2万亿美元，数字背后是AI从实验室走向基础设施的不可逆趋势。韩国AI芯片独角兽估值4倍暴涨，说明资本仍在加速押注上游算力。而Genspark用1人1周做出AI办公套件，则展示了AI工具本身的效率革命——当开发门槛降到这个程度，"做产品"的定义正在被重写。'
-  },
-{
-    date: '2026-08-03',
-    title: 'AI新闻 | 谷歌地球叫停AI生图防假信息 + AI产业扩张致内存芯片短缺波及MacBook Air + 特斯拉拆汽车产线为Optimus机器人腾位 + AI医疗诊断一分钟出报告90%无需修改 + AI不会成世界主人但AI公司可能会',
-    summary: '今日AI行业五大看点：谷歌地球推出AI图像生成功能不到48小时即被叫停，因可将虚构场景叠加在真实卫星图像上散播假信息；AI产业快速扩张导致全球内存芯片短缺，已从Mac mini蔓延至MacBook Air，部分型号需等待至8月下旬；特斯拉拆除弗里蒙特工厂Model S/X产线，为首代Optimus人形机器人产线腾出空间，标志从汽车公司向机器人公司转型；AI医疗诊断工具实现一分钟出报告、90%无需修改，大幅提升诊断效率；虎嗅深度分析指出AI本身不会统治世界，但AI公司可能通过控制数据和算力获得前所未有的权力。',
-    newsItems: [
-      {
-        title: '谷歌地球紧急叫停AI生图：虚构场景可叠加卫星图散播假信息',
-        summary: '谷歌推出谷歌地球AI图像生成功能不到48小时后宣布暂停服务。专家警告该工具可将虚构场景叠加在真实卫星图像上，容易被用于散播假信息。谷歌表示将加强安全防护后再重新上线，凸显AI生成内容在真实地理场景中的应用风险。',
-        source: '36氪',
-        category: '应用',
-        url: 'https://www.36kr.com/newsflashes/3922077104664199'
-      },
-      {
-        title: 'AI产业扩张引发内存芯片短缺，苹果MacBook Air出现供应紧张',
-        summary: '据彭博社古尔曼报道，全球内存芯片短缺正影响苹果Mac产品供应。AI企业大量采购高性能存储芯片挤压了消费电子市场，Mac mini和Mac Studio已出现供应限制，如今问题扩展至MacBook Air，部分型号需等待至8月下旬才能发货。',
-        source: 'IT之家',
-        category: '硬件',
-        url: 'https://www.ithome.com/0/984/822.htm'
-      },
-      {
-        title: '汽车回血AI烧钱，特斯拉拆汽车产线为Optimus机器人腾位',
-        summary: '2026年Q2特斯拉拆除弗里蒙特工厂原有Model S/X生产线，安装首代Optimus人形机器人产线。同日第1000万辆特斯拉在该工厂下线。从汽车产量破千万到产线为机器人腾空间，特斯拉正完成从汽车公司向机器人公司的战略性转型。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4880103.html'
-      },
-      {
-        title: '一分钟出报告、90%无需修改，AI把医疗诊断效率拉满了',
-        summary: '上海影禾医脉智能科技首席医疗官孟滔介绍，其AI医疗数据治理系统可将诊断报告生成时间缩短至一分钟，且90%的报告无需医生修改。该系统通过标准化数据治理，将原本混沌的医疗数据转化为可治理、可应用的结构化数据。',
-        source: '虎嗅',
-        category: '应用',
-        url: 'https://www.huxiu.com/article/4880091.html'
-      },
-      {
-        title: 'AI不会成为世界的主人，但AI公司可能会',
-        summary: '虎嗅深度分析指出，近期AI连续推翻数学猜想（Erdős单位距离猜想、雅可比猜想等）预示深层危机：AI本身不会统治世界，但掌握数据和算力的AI公司可能获得前所未有的权力。文章呼吁关注AI权力集中带来的社会结构性风险。',
-        source: '虎嗅',
-        category: '产业',
-        url: 'https://www.huxiu.com/article/4880099.html'
-      }
-    ],
-    comment: '今日关键词"AI的边界与代价"。谷歌地球AI生图48小时即被叫停，说明AI能力越强、滥用风险越大；内存芯片短缺从数据中心蔓延到消费端，AI的"饥饿"正在挤压普通消费者的利益；特斯拉拆汽车产线给机器人腾位，是产业转型的标志性一幕；AI医疗一分钟出报告展示了落地价值，而"AI公司可能成为世界主人"的警告则提醒我们：技术本身中性，但掌控技术的权力结构需要被审视。'
-  },
-{
-    date: '2026-08-02',
-    title: 'AI新闻 | 美企换上中国大模型降本 + OpenAI IPO或推迟至明年 + 浙江定AI OPC标准 + 韩国半导体出口暴增179% + WPS展示AI Agent灵犀',
-    summary: '今日AI行业五大看点：部分美国企业开始转向中国大模型以降低成本，Coinbase使用Kimi K3、Airbnb采用阿里Qwen模型，中国AI模型性价比获全球认可；OpenAI因投资者对现金消耗速度的担忧及Anthropic的竞争压力，IPO或推迟至明年；浙江实施人工智能OPC术语团体标准，将AI一人公司纳入规范定义；韩国7月半导体出口暴增179%至410亿美元，AI数据中心投资持续推动芯片需求；金山办公首次参展ChinaJoy展示AI Agent灵犀及WPS Comate。',
-    newsItems: [
-      {
-        title: '部分美国企业换上中国大模型以降低成本',
-        summary: '据美联社报道，加密货币交易所Coinbase正转向中国AI模型以降低成本，Airbnb采用阿里巴巴Qwen模型并称赞其"快速且便宜"。《华尔街日报》称月之暗面Kimi K3撼动资本市场，马斯克赞其"令人印象深刻"。中国大模型正以高性价比打开海外市场。',
-        source: '36氪',
-        category: '大模型',
-        url: 'https://www.36kr.com/newsflashes/3920583026929281'
-      },
-      {
-        title: '报道称OpenAI面临投资者担忧与竞争压力，IPO或推迟至明年',
-        summary: '据报道OpenAI可能将IPO推迟到明年。部分大投资者对现金消耗速度过快表示担忧，其他投资者已通过向Anthropic投入资金来对冲。Anthropic营收增长近期已超OpenAI，估值也更高，正加速秋季IPO计划。AI行业竞争格局正在发生深刻变化。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3920415886061193'
-      },
-      {
-        title: '浙江实施人工智能OPC术语团体标准：由1名核心自然人主导',
-        summary: '浙江省编制的《人工智能OPC术语》团体标准8月1日起实施，将AI OPC（一人公司）界定为由1名核心自然人主导、员工不超过10人、以AI技术研究开发应用或服务为主营业务的公司。这是国内首个对AI一人公司进行规范定义的团体标准。',
-        source: '36氪',
-        category: '产业',
-        url: 'https://www.36kr.com/newsflashes/3920435807923841'
-      },
-      {
-        title: '韩国7月出口飙升创历史第二高，半导体出口同比暴增近180%',
-        summary: '韩国7月出口同比飙升近63%至989.9亿美元，创历史第二高。半导体出口暴增179%至410亿美元，连续两个月突破400亿大关。AI数据中心投资项目推动对美出口额激增68.7%达174亿美元，全球AI算力需求持续重塑芯片产业格局。',
-        source: '36氪',
-        category: '硬件',
-        url: 'https://www.36kr.com/newsflashes/3920386651319944'
-      },
-      {
-        title: '金山办公WPS新版本上线，首次参展ChinaJoy展示AI Agent灵犀',
-        summary: '金山办公首次参展ChinaJoy，现场展示独立AI办公Agent灵犀和面向研发场景的WPS Comate。同日WPS新版本正式上线，新增统一"存储管理"入口，集中磁盘占用查看、缓存清理和存储路径调整等功能，安装路径可分别设置。',
-        source: '36氪',
-        category: '应用',
-        url: 'https://www.36kr.com/newsflashes/3920632482491776'
-      }
-    ],
-    comment: '今日关键词"中国模型出海与OpenAI困局"。美国企业开始用中国大模型降本，说明性价比才是硬道理；OpenAI IPO推迟、Anthropic加速上市，AI行业格局正在从"一家独大"走向"双雄对峙"；浙江定义AI一人公司标准、韩国半导体因AI需求暴增179%，AI的影响正从软件层渗透到组织形态和全球贸易格局。'
-  }
+}
 ];
