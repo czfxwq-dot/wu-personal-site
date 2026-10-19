@@ -23,7 +23,106 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
+,
 {
+  "date": "2026-10-19",
+  "title": "AI新闻 | 聚焦在轨服务，要打造太空机器人集群，「国宇星辰」完成近亿元A...",
+  "summary": "<p>文&nbsp;|&nbsp;阿至</p>
+  <p>商业航天的叙事，正在从“把卫星送上天”过渡；<h2>今日热点导览</h2>
+  <p>DeepSeek新模型Token消耗降超五成</p>
+  ；<p class="image-wrapper"><img src="https://img.36k；<p>作者｜黄楠</p>
+  <p>编辑｜袁斯来</p>
+  <p>硬氪获悉，具身大脑公司「格物通智；<p class="image-wrapper"><img src="https://img.36k。",
+  "newsItems": [
+    {
+      "title": "聚焦在轨服务，要打造太空机器人集群，「国宇星辰」完成近亿元A轮融资｜36氪首发",
+      "summary": "<p>文&nbsp;|&nbsp;阿至</p>
+  <p>商业航天的叙事，正在从“把卫星送上天”过渡至“卫星上天后”怎么管、怎么运营。</p>
+  <p>除了组网建设加速，一个直观的信号是，低轨星座的补网压力也正在逼近。根据NASA戈达德航天中心此前发布的研究数据，2020至2024年间，有583颗星链卫星从极低地球轨道坠落。而为了防止失控与碰撞，卫星的主动变轨和避让动作也变得愈发频繁。根据Spa",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://36kr.com/p/4032195238482313?f=rss"
+    },
+    {
+      "title": "8点1氪丨iPhone Duo溢价暴跌至3000元；多家A股科技龙头公司宣布计划回购；王自如称想与罗永浩和解",
+      "summary": "<h2>今日热点导览</h2>
+  <p>DeepSeek新模型Token消耗降超五成</p>
+  <p>燃油车在中国市场销售占比首次跌破三分之一</p>
+  <p>特斯拉将发布财报，SpaceX将公布上市后的第二份财报</p>
+  <p>Swisse“抗糖丸”被检出铅超标，官方客服：相关批次未进入中国销售</p>
+  <p>港股结算机制生变：“T+2”将改为“T+1”，2028年下半年完成</p",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://36kr.com/p/4032044521558403?f=rss"
+    },
+    {
+      "title": "老板们不再把钱交给VC了",
+      "summary": "<p class="image-wrapper"><img src="https://img.36krcdn.com/hsossms/20261018/v2_50ce313c2f4d4da7a72684ebe47c2fe8@5579416_oswg53054oswg1080oswg721_img_000?x-oss-process=image/format,jpg/interlace,1" /><",
+      "source": "36氪",
+      "category": "AI动态",
+      "url": "https://36kr.com/p/4031081236042116?f=rss"
+    },
+    {
+      "title": "前华为车BU世界模型基模负责人创业，杭州具身大脑公司获近亿元融资｜硬氪首发",
+      "summary": "<p>作者｜黄楠</p>
+  <p>编辑｜袁斯来</p>
+  <p>硬氪获悉，具身大脑公司「格物通智」已完成近亿元天使轮融资，投资方包括匹克投资、鸿富资产、杭州资本、杭州人才集团、某省级具身产投及多家头部上市公司。资金将主要用于物理反演世界模型的大规模预训练与技术迭代、硬件与本体构建等，加快人才引进和规模扩充，并推进多个场景PoC验证和真实数据采集。Maple Pledge 枫承资本出任本轮独家私",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://36kr.com/p/4025325566054529?f=rss"
+    },
+    {
+      "title": "禾赛不只想卖激光雷达｜最前线",
+      "summary": "<p class="image-wrapper"><img src="https://img.36krcdn.com/hsossms/20261017/v2_d24d03c033e94341864214f5601af8ed@6310690_oswg6862128oswg2640oswg1772_img_png?x-oss-process=image/quality,q_80/format,jpg/",
+      "source": "36氪",
+      "category": "AI动态",
+      "url": "https://36kr.com/p/4028766019719557?f=rss"
+    },
+    {
+      "title": "对话费德勒：加入On昂跑，是我回馈网球的一种方式",
+      "summary": "<p><strong>作者 |&nbsp;谢芸子</strong></p>
+  <p><strong>编辑 | 张帆</strong></p>
+  <p>10月14日的晚间，在深圳人才公园的海岸，2000台无人机上演了一场震撼人心的灯光秀。</p>
+  <p>先是一只大手抛出一只网球，继而展现费德勒不同时期的打球影像，最后在天空中呈现“Dream On”的字样，化作“烟火”。</p>
+  <p>这",
+      "source": "36氪",
+      "category": "AI动态",
+      "url": "https://36kr.com/p/4028636199555713?f=rss"
+    },
+    {
+      "title": "9点1氪丨特斯拉发布“会飞”的跑车，预订金33.2万元；中国限制或禁止出口AI等领域40项技术；长鑫科技预计前三季度净利超1300亿",
+      "summary": "<h2><strong>今日热点导览</strong></h2>
+  <ul>
+   <li>DeepSeek将整合多团队成立产品部，崔添翼出任负责人</li>
+   <li>铁路车次编排将调整，更高时速动车组新增X字头</li>
+   <li>iPhone Duo预售秒罄</li>
+   <li>美国肯德基将改用可口可乐</li>
+   <li>亚马逊限制Grok机器人下单，马斯克回应</li>",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://36kr.com/p/4029260041245314?f=rss"
+    },
+    {
+      "title": "零跑电池负责人宋忆宁：电池产业已成熟，车企自研迎来好时机｜36氪专访",
+      "summary": "<p>“电池行业已经很成熟了，所以我们才进入。”</p>
+  <p>9月，理想汽车宣布将“理想牌”电池推向全系车型，小米汽车官宣欣旺达、中创新航成为自研的“龙甲电池”战略伙伴。车企自研电池由此成为舆论焦点，与之相伴随的，是行业对于车企自研电池的必要性、车企牌电池性能的质疑。</p>
+  <p>而零跑科技高级副总裁、电池产品负责人宋忆宁则提出了一个行业“反共识”，在他看来，电池行业已相当成熟，这恰是",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://36kr.com/p/4028541747007879?f=rss"
+    },
+    {
+      "title": "长鑫科技出手，新芯航途XHEART累计融资50亿｜36氪独家",
+      "summary": "<p>36氪从多位产业人士处了解到，物理AI算力芯片公司新芯航途XHEART近日完成战略轮融资。本轮融资引入雷诺集团首次投资，奇瑞汽车追加投资，中国存储龙头企业长鑫科技也参与了本轮融资。</p>
+  <p>据悉，新芯航途XHEART已获历史总融资额约50亿元。</p>
+  <p>这轮融资的资方中，雷诺集团是欧洲头部车企，去年销售规模超200万辆。奇瑞集团是芜湖地方性国企，销售规模同样常年保持在数百",
+      "source": "36氪",
+      "category": "AI硬件",
+      "url": "https://36kr.com/p/4028536443327112?f=rss"
+    }
+  ],
+  "comment": "技术进步带来机遇，也带来挑战。"
+}{
   "date": "2026-10-04",
   "title": "AI新闻 | AI击穿视频图灵测试、Meta开源AI外设、arXiv限流AI论文",
   "summary": "AI视频生成击穿\"视频图灵测试\"引1700万网友围观；Meta开源Muse Gadgets让开发者自造AI外设；arXiv因AI论文爆炸实施最严限流；中国开源决策模型StartLux登顶榜单；AI杀猪盘批量生产引关注。AI正在重塑内容创作、硬件开发生态和学术出版。",
