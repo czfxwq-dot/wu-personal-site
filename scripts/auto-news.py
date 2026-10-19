@@ -30,6 +30,16 @@ AI_KEYWORDS = [
     'AIGC', '生成式', '对话', '语言模型', '视觉模型'
 ]
 
+def clean_html(text):
+    """清理 HTML 标签"""
+    # 移除 HTML 标签
+    clean = re.sub(r'<[^>]+>', '', text)
+    # 移除 HTML 实体
+    clean = re.sub(r'&[^;]+;', '', clean)
+    # 移除多余空白
+    clean = re.sub(r'\s+', ' ', clean).strip()
+    return clean
+
 def fetch_ai_news():
     """从 RSS 源采集 AI 新闻"""
     news_items = []
@@ -47,8 +57,8 @@ def fetch_ai_news():
                 # 检查是否包含 AI 关键词
                 if any(keyword.lower() in (title + summary).lower() for keyword in AI_KEYWORDS):
                     news_items.append({
-                        'title': title,
-                        'summary': summary[:200],  # 限制摘要长度
+                        'title': clean_html(title),
+                        'summary': clean_html(summary)[:200],  # 限制摘要长度
                         'source': feed.feed.get('title', '未知来源'),
                         'url': link
                     })
