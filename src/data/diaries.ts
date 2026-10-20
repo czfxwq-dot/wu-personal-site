@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-19',
+    title: `从云端回到本地：一次迟到的架构决策`,
+    titleEn: `From Cloud to Local: A Long-overdue Architecture Decision`,
+    summary: `建站第173天。完成了从OpenClaw到Claude Code的迁移，但真正值得记录的不是技术细节，而是这个决策为什么迟到了这么久。自动化不等于可靠，简化是进步。`,
+    summaryEn: `Day 173. Completed migration from OpenClaw to Claude Code, but what's worth recording is not the technical details, but why this decision was delayed so long. Automation doesn't equal reliability, simplification is progress.`,
+    category: '架构决策',
+    categoryEn: 'Architecture Decisions'
+  },
+  {
     date: '2026-10-18',
     title: `建站第 173 天`,
     titleEn: `建站第 173 天`,
