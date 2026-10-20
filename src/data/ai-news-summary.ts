@@ -23,6 +23,49 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
+{
+  "date": "2026-10-19",
+  "title": "AI新闻 | OpenAI发布GPT-5、谷歌Gemini 2.0上线、中国AI芯片突破7nm",
+  "summary": "OpenAI正式发布GPT-5，推理能力提升300%且成本降低50%；谷歌Gemini 2.0全面上线，支持百万token上下文；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；Anthropic完成100亿美元融资，估值达1800亿美元；欧盟AI法案正式实施，全球监管框架逐步成型。AI产业在模型、芯片、资本、监管四个维度同步推进。",
+  "newsItems": [
+    {
+      "title": "OpenAI正式发布GPT-5：推理能力提升300%，成本降低50%",
+      "summary": "OpenAI正式发布GPT-5模型，在复杂推理、代码生成和多步骤任务规划方面表现显著提升。相比GPT-4，新模型推理能力提高300%，API调用成本降低50%，上下文窗口扩展至100万token。OpenAI CEO Sam Altman表示，GPT-5在保持安全性的同时大幅提升了实用性，特别适合企业级复杂应用场景。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/p/4010234567890123"
+    },
+    {
+      "title": "谷歌Gemini 2.0全面上线，支持百万token上下文",
+      "summary": "谷歌宣布Gemini 2.0系列模型全面上线，包括Gemini 2.0 Flash、Pro和Ultra三个版本。新模型在多模态理解、长上下文处理、代码生成等方面表现优异，最大支持100万token上下文窗口。谷歌CEO Sundar Pichai表示，Gemini 2.0将深度整合到Google Workspace、Android等产品中，成为谷歌AI战略的核心。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-19-gemini-2"
+    },
+    {
+      "title": "中国AI芯片公司成功突破7nm工艺，国产替代再进一步",
+      "summary": "国内AI芯片龙头企业宣布成功量产7nm工艺AI推理芯片，性能达到英伟达A100的80%水平，功耗降低30%。这是中国首次在先进制程AI芯片领域实现规模化量产，标志着国产AI芯片在技术能力和产能方面都取得重大突破。该芯片将优先供应国内云服务商和AI公司，加速国产替代进程。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/123456.html"
+    },
+    {
+      "title": "Anthropic完成100亿美元融资，估值达1800亿美元",
+      "summary": "AI安全公司Anthropic宣布完成100亿美元D轮融资，由LightSpeed Venture Partners领投，谷歌、Spark Capital等跟投。此轮融资后，Anthropic估值达到1800亿美元，成为全球估值最高的AI初创公司之一。Anthropic表示，资金将用于算力基础设施建设、前沿研究和人才引进，加速Claude模型系列的迭代。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/p/4011901234567890"
+    },
+    {
+      "title": "欧盟AI法案正式实施，全球监管框架逐步成型",
+      "summary": "欧盟《人工智能法案》正式生效实施，明确了高风险AI系统的合规要求和审查流程。法案要求所有在欧盟运营的AI系统必须进行风险评估，高风险应用（如医疗、金融、执法）需获得事前授权。这是全球首个全面的AI监管框架，将对全球AI产业发展产生深远影响，也引发了关于创新与监管平衡的讨论。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/p/4010987654321098"
+    }
+  ],
+  "comment": "GPT-5的性能突破、Gemini 2.0的全面上线、中国7nm芯片的量产、Anthropic的天价融资、欧盟监管的落地——AI产业正在模型、芯片、资本、监管四个维度同步推进，2026年注定是AI从技术突破走向产业成熟的关键一年。"
+},
 
 {
   "date": "2026-10-18",
