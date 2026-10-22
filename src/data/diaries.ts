@@ -12,6 +12,15 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-22',
+    title: `小幅更新`,
+    titleEn: `Minor Updates`,
+    summary: `今天完成了 1 次提交，保持稳定的开发节奏。`,
+    summaryEn: `Completed 1 commit today, maintaining a steady development pace.`,
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-10-21',
     title: `定时任务：让自动化真正落地`,
     titleEn: `Scheduled Tasks: Making Automation Real`,
