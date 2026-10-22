@@ -12,6 +12,24 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-21',
+    title: `定时任务：让自动化真正落地`,
+    titleEn: `Scheduled Tasks: Making Automation Real`,
+    summary: `建站第175天。创建了Windows定时任务，让自动化系统真正开始运行。但定时任务只是开始，不是结束。自动化系统的价值不在于"自动"，而在于"可靠"。`,
+    summaryEn: `Day 175. Created Windows scheduled tasks to make the automation system really run. But scheduled tasks are just the beginning, not the end. The value of automation systems lies not in being "automatic", but in being "reliable".`,
+    category: '自动化',
+    categoryEn: 'Automation'
+  },
+  {
+    date: '2026-10-20',
+    title: `自动化的第一步：让系统自己跑起来`,
+    titleEn: `First Step of Automation: Let the System Run by Itself`,
+    summary: `建站第174天。迁移完成后，开始搭建自动化系统。创建了自动日记和AI新闻的定时任务。自动化不是目的，而是手段。自动化是放大器，不是替代品。`,
+    summaryEn: `Day 174. After migration completed, started building automation system. Created scheduled tasks for auto diary and AI news. Automation is not the goal, but the means. Automation is an amplifier, not a replacement.`,
+    category: '自动化',
+    categoryEn: 'Automation'
+  },
+  {
     date: '2026-10-19',
     title: `从云端回到本地：一次迟到的架构决策`,
     titleEn: `From Cloud to Local: A Long-overdue Architecture Decision`,

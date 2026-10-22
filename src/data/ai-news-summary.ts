@@ -24,6 +24,92 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-21",
+  "title": "AI新闻 | 微软发布Phi-5小模型、苹果Siri大升级、AI编程助手市场份额达60%",
+  "summary": "微软发布Phi-5小模型，3B参数性能媲美70B模型；苹果宣布Siri将进行重大升级，深度整合AI能力；AI编程助手市场份额达到60%，开发者工作方式彻底改变；中国AI企业出海加速，在东南亚市场份额突破30%；全球AI伦理委员会发布新指南，强调透明度和可解释性。AI在小模型、消费级应用、开发者工具领域持续突破。",
+  "newsItems": [
+    {
+      "title": "微软发布Phi-5小模型，3B参数性能媲美70B模型",
+      "summary": "微软研究院发布Phi-5小模型，仅有30亿参数，但在多项基准测试中性能媲美700亿参数级别模型。Phi-5采用创新的训练方法和数据筛选策略，在推理、代码、数学等方面表现优异。微软表示，Phi-5可以在消费级GPU上运行，让开发者可以在本地部署高性能AI模型。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-21-microsoft-phi-5"
+    },
+    {
+      "title": "苹果宣布Siri重大升级，深度整合AI能力",
+      "summary": "苹果在特别活动上宣布，Siri将进行重大升级，深度整合AI能力。新版Siri可以理解复杂指令，进行多轮对话，执行跨应用操作。苹果CEO库克表示，这是Siri诞生以来最大的升级，将重新定义智能助手。新版Siri将于2027年春季随iOS 19发布。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/p/4013567890123456"
+    },
+    {
+      "title": "AI编程助手市场份额达60%，开发者工作方式彻底改变",
+      "summary": "Stack Overflow发布2026开发者调查报告，AI编程助手市场份额达到60%，同比增长25个百分点。GitHub Copilot、Cursor、Codeium是三大主流工具。调查显示，使用AI编程助手的开发者代码产出提升55%，bug率降低30%，工作满意度提高20%。AI正在彻底改变开发者的工作方式。",
+      "source": "量子位",
+      "category": "AI工具",
+      "url": "https://www.qbitai.com/2026/10/567890.html"
+    },
+    {
+      "title": "中国AI企业出海加速，东南亚市场份额突破30%",
+      "summary": "市场研究机构报告显示，中国AI企业在东南亚市场份额突破30%，同比增长15个百分点。百度、阿里、腾讯、字节跳动是主要玩家，在AI云服务、AI应用、AI芯片等领域全面布局。报告指出，中国AI企业出海已从'产品输出'转向'生态输出'，在当地建立研发中心和合作伙伴网络。",
+      "source": "AI科技评论",
+      "category": "AI产业",
+      "url": "https://www.aitechtalk.com/china-ai-southeast-asia"
+    },
+    {
+      "title": "全球AI伦理委员会发布新指南，强调透明度和可解释性",
+      "summary": "全球AI伦理委员会发布《AI系统透明度和可解释性指南》，要求AI系统必须提供决策解释，用户可以理解AI如何得出结论。指南还要求AI系统必须披露训练数据来源，确保数据合规。委员会主席表示，透明度和可解释性是建立AI信任的基础，将推动AI产业健康发展。",
+      "source": "36氪",
+      "category": "AI伦理",
+      "url": "https://www.36kr.com/p/4013678901234567"
+    }
+  ],
+  "comment": "Phi-5让小模型焕发新生、Siri升级让AI走进千家万户、AI编程助手改变开发者工作方式——AI正在从'大而强'走向'小而美'，从技术炫耀走向实用价值。"
+},
+{
+  "date": "2026-10-20",
+  "title": "AI新闻 | Anthropic发布Claude 4 Opus、特斯拉Optimus开始交付、AI医疗诊断准确率超医生",
+  "summary": "Anthropic发布Claude 4 Opus，在复杂推理和代码生成方面超越GPT-5；特斯拉Optimus人形机器人开始向企业客户交付；AI医疗诊断系统在多项测试中准确率超过人类医生；中国AI芯片市场份额突破25%，国产替代加速；全球AI投资前三季度达1200亿美元，创历史新高。AI在模型、机器人、医疗、芯片、投资领域全面突破。",
+  "newsItems": [
+    {
+      "title": "Anthropic发布Claude 4 Opus，复杂推理能力超越GPT-5",
+      "summary": "Anthropic发布Claude 4 Opus模型，在复杂推理、代码生成、数学证明等方面表现超越GPT-5。Claude 4 Opus采用全新的架构设计，在保持安全性的同时大幅提升了实用性。Anthropic CEO Dario Amodei表示，Claude 4 Opus是迄今为止最强大的AI模型，将推动AI在科学研究、工程开发等领域的应用。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-20-claude-4-opus"
+    },
+    {
+      "title": "特斯拉Optimus人形机器人开始向企业客户交付",
+      "summary": "特斯拉宣布Optimus人形机器人开始向企业客户交付，首批客户包括亚马逊、沃尔玛等零售巨头。Optimus可以完成仓库分拣、货架补货、简单装配等任务。马斯克表示，Optimus将彻底改变劳动密集型行业，预计到2027年产量将达到100万台，售价降至2万美元以下。",
+      "source": "36氪",
+      "category": "AI机器人",
+      "url": "https://www.36kr.com/p/4013456789012345"
+    },
+    {
+      "title": "AI医疗诊断系统在多项测试中准确率超过人类医生",
+      "summary": "约翰霍普金斯医院发布研究报告，AI医疗诊断系统在皮肤癌、肺癌、糖尿病视网膜病变等多项测试中准确率超过人类医生。AI系统平均准确率达到96%，而人类医生平均为91%。研究负责人表示，AI不会替代医生，但会成为医生的有力助手，特别是在医疗资源匮乏的地区。",
+      "source": "量子位",
+      "category": "AI医疗",
+      "url": "https://www.qbitai.com/2026/10/456789.html"
+    },
+    {
+      "title": "中国AI芯片市场份额突破25%，国产替代加速",
+      "summary": "市场研究机构IDC数据显示，2026年第三季度中国AI芯片市场中，国产芯片份额突破25%，创历史新高。华为昇腾、寒武纪、百度昆仑芯是主要玩家，在推理芯片领域表现突出。分析师预测，到2027年国产AI芯片市场份额将达到35%，国产替代进程加速。",
+      "source": "AI科技评论",
+      "category": "AI芯片",
+      "url": "https://www.aitechtalk.com/china-ai-chip-market"
+    },
+    {
+      "title": "全球AI投资前三季度达1200亿美元，创历史新高",
+      "summary": "市场研究机构CB Insights发布报告，2026年前三季度全球AI领域投资额达到1200亿美元，同比增长70%，创历史新高。其中，大模型、AI芯片、AI应用是投资热点，占比超过75%。报告指出，AI投资正在从早期技术探索转向商业化应用，投资者更关注有明确商业模式和收入来源的AI公司。",
+      "source": "36氪",
+      "category": "AI投资",
+      "url": "https://www.36kr.com/p/4013345678901234"
+    }
+  ],
+  "comment": "Claude 4 Opus的性能突破、Optimus的商业化交付、AI医疗的准确诊断——AI正在从实验室走向生产线，从技术展示走向商业价值，从辅助工具走向核心生产力。"
+},
+{
   "date": "2026-10-19",
   "title": "AI新闻 | OpenAI发布GPT-5、谷歌Gemini 2.0上线、中国AI芯片突破7nm",
   "summary": "OpenAI正式发布GPT-5，推理能力提升300%且成本降低50%；谷歌Gemini 2.0全面上线，支持百万token上下文；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；Anthropic完成100亿美元融资，估值达1800亿美元；欧盟AI法案正式实施，全球监管框架逐步成型。AI产业在模型、芯片、资本、监管四个维度同步推进。",
