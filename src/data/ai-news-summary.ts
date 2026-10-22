@@ -24,49 +24,6 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
-  "date": "2026-10-22",
-  "title": "AI新闻 | OpenAI发布GPT-5 Turbo、谷歌Gemini 2.5上线、中国AI芯片突破5nm",
-  "summary": "OpenAI正式发布GPT-5 Turbo，推理速度提升3倍且成本降低40%；谷歌Gemini 2.5系列全面上线，支持千万token超长上下文；中国AI芯片公司成功突破5nm工艺，达到国际先进水平；Meta发布开源多模态模型Llama 4，性能媲美GPT-5；全球AI监管框架加速成型，多国签署AI安全协议。AI在速度、规模、工艺、开源、监管五个维度同步推进。",
-  "newsItems": [
-    {
-      "title": "OpenAI正式发布GPT-5 Turbo：推理速度提升3倍，成本降低40%",
-      "summary": "OpenAI正式发布GPT-5 Turbo模型，在保持GPT-5性能的同时，推理速度提升3倍，API调用成本降低40%。新模型采用优化的推理架构和量化技术，特别适合实时应用场景。OpenAI CEO Sam Altman表示，GPT-5 Turbo让高性能AI变得更加普惠，将推动AI在更多商业场景中的大规模部署。",
-      "source": "36氪",
-      "category": "大模型",
-      "url": "https://www.36kr.com/p/4014567890123456"
-    },
-    {
-      "title": "谷歌Gemini 2.5全面上线，支持千万token超长上下文",
-      "summary": "谷歌宣布Gemini 2.5系列模型全面上线，包括Gemini 2.5 Flash、Pro和Ultra三个版本。新模型最大支持1000万token上下文窗口，可以处理整本书籍、完整代码库等超长内容。谷歌CEO Sundar Pichai表示，Gemini 2.5将重新定义长文本理解能力，为研究、法律、教育等专业领域带来革命性变化。",
-      "source": "机器之心",
-      "category": "大模型",
-      "url": "https://www.jiqizhixin.com/articles/2026-10-22-gemini-2-5"
-    },
-    {
-      "title": "中国AI芯片公司成功突破5nm工艺，达到国际先进水平",
-      "summary": "国内AI芯片龙头企业宣布成功量产5nm工艺AI训练芯片，性能达到英伟达H100的95%水平，功耗降低25%。这是中国首次在先进制程AI训练芯片领域实现规模化量产，标志着国产AI芯片在核心技术上取得重大突破。该芯片将优先供应国内大型云服务商和AI研究机构，加速国产替代进程。",
-      "source": "量子位",
-      "category": "AI芯片",
-      "url": "https://www.qbitai.com/2026/10/678901.html"
-    },
-    {
-      "title": "Meta发布开源多模态模型Llama 4，性能媲美GPT-5",
-      "summary": "Meta AI Research发布开源多模态模型Llama 4，在文本、图像、视频、音频等多模态任务上表现优异，综合性能媲美GPT-5。Llama 4采用全新的混合专家架构，支持模块化扩展。Meta表示，Llama 4将完全开源，推动全球AI研究者共同推进多模态AI技术发展。",
-      "source": "AI科技评论",
-      "category": "开源模型",
-      "url": "https://www.aitechtalk.com/meta-llama-4"
-    },
-    {
-      "title": "全球AI监管框架加速成型，多国签署AI安全协议",
-      "summary": "在联合国AI峰会上，包括中美欧在内的50多个国家签署《AI安全与发展协议》，建立全球AI治理框架。协议涵盖AI安全标准、伦理准则、跨境数据流动、技术合作等核心议题。联合国秘书长表示，这是全球AI治理的重要里程碑，将推动AI技术安全、可靠、可持续发展。",
-      "source": "36氪",
-      "category": "AI监管",
-      "url": "https://www.36kr.com/p/4014678901234567"
-    }
-  ],
-  "comment": "GPT-5 Turbo的速度突破、Gemini 2.5的长度极限、中国5nm芯片的自主突破、Llama 4的开源贡献、全球监管的协同推进——AI正在从单点突破走向全面发展，从技术竞争走向生态共建。"
-},
-{
   "date": "2026-10-21",
   "title": "AI新闻 | 微软发布Phi-5小模型、苹果Siri大升级、AI编程助手市场份额达60%",
   "summary": "微软发布Phi-5小模型，3B参数性能媲美70B模型；苹果宣布Siri将进行重大升级，深度整合AI能力；AI编程助手市场份额达到60%，开发者工作方式彻底改变；中国AI企业出海加速，在东南亚市场份额突破30%；全球AI伦理委员会发布新指南，强调透明度和可解释性。AI在小模型、消费级应用、开发者工具领域持续突破。",
