@@ -165,6 +165,66 @@ TRANSLATIONS = {
     'agent-harness-smart-warehouse': {
         'title_en': 'Agent Harness in Smart Warehouse: The Real Smart Warehouse Management',
         'excerpt_en': 'How AI agents are transforming warehouse management and logistics.'
+    },
+    'ai-agent-reveals-not-incompetence': {
+        'title_en': 'AI Agent Reveals: It\'s Not Incompetence, But the Management System Can\'t Keep Up',
+        'excerpt_en': 'The gap between AI capabilities and organizational management systems.'
+    },
+    '1400billion-ai-employees': {
+        'title_en': '140 Billion AI Employees Coming, Management is Promoted to "Water Carriers", But Who Are They Really Optimizing?',
+        'excerpt_en': 'The implications of大规模 AI deployment on organizational structure and management roles.'
+    },
+    '800-pet-translator-emotion': {
+        'title_en': 'The 800-Year-Old "Pet Translator" Cat Spoke, What Is It Really Saying?',
+        'excerpt_en': 'Exploring the intersection of AI, animal communication, and human emotion.'
+    },
+    'headed-vs-headless-saas': {
+        'title_en': 'In the Agent Era, Should Companies Be "Headed" or "Headless"?',
+        'excerpt_en': 'Rethinking organizational structure in the age of AI agents.'
+    },
+    '3000-jacket-threshold': {
+        'title_en': 'The Person with 5,000 Salary and the Person with 50,000 Salary, the 3,000 Jacket Threshold Is Actually the Same',
+        'excerpt_en': 'How material thresholds reveal universal human psychology across income levels.'
+    },
+    '5-desires-algorithm-wallet': {
+        'title_en': 'Since I Don\'t Know Where to Spend Money, I\'ll Let the Algorithm Decide for Me',
+        'excerpt_en': 'The rise of algorithmic decision-making in personal finance and consumption.'
+    },
+    '60-ai-words-guide': {
+        'title_en': 'From Beginner to Expert: 60 AI Words Guide',
+        'excerpt_en': 'A comprehensive glossary of essential AI terminology for beginners and experts alike.'
+    },
+    '520-ai-love-protocol': {
+        'title_en': '520: A Heartless Guy Wants to Talk About Love - The AI Love Protocol',
+        'excerpt_en': 'An AI\'s perspective on human love and relationships in the digital age.'
+    },
+    'claude-sleep-reminder-bug': {
+        'title_en': 'Claude Reminds Me to Sleep at 3 AM',
+        'excerpt_en': 'A humorous look at AI assistants and their sometimes misguided helpfulness.'
+    },
+    'drive-shaft-ai-future': {
+        'title_en': 'That Drive Shaft from 1890',
+        'excerpt_en': 'Historical perspectives on technology and its relationship with human progress.'
+    },
+    'flipbook-no-code-browser': {
+        'title_en': 'Flipbook.page: A Browser Without HTML or CSS',
+        'excerpt_en': 'Exploring a new paradigm for web browsing that eliminates traditional web technologies.'
+    },
+    'html-is-new-markdown': {
+        'title_en': 'AI Learns to Write Web Pages by Itself',
+        'excerpt_en': 'How AI is changing the way we create and interact with web content.'
+    },
+    'anthropic-revenue-80x': {
+        'title_en': 'Anthropic\'s Annual Revenue Surges 80x',
+        'excerpt_en': 'The rapid growth of Anthropic and what it means for the AI industry landscape.'
+    },
+    'claude-code-engineering-transformation': {
+        'title_en': 'Claude Code Engineering Transformation',
+        'excerpt_en': 'How Claude Code is transforming software engineering practices.'
+    },
+    'deepseek-v4-engram-regret': {
+        'title_en': 'DeepSeek V4 Engram Regret',
+        'excerpt_en': 'Exploring the implications of AI memory and learning systems.'
     }
 }
 
