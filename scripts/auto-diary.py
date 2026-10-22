@@ -1,23 +1,87 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-智能自动日记生成器 v3.0
+智能自动日记生成器 v3.1
 - 使用正确的 BaseLayout 布局
 - 准确统计当天变更（不是累计）
 - 生成有意义的反思内容
+- 添加完整日志记录
+- 添加失败通知机制
 """
 
 import subprocess
 import re
+import logging
+import smtplib
 from datetime import datetime
 from pathlib import Path
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# 配置日志
+log_dir = Path(__file__).parent / 'logs'
+log_dir.mkdir(exist_ok=True)
+log_file = log_dir / f"auto-diary-{datetime.now().strftime('%Y-%m')}.log"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file, encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# 通知配置（可选，需要配置邮箱信息）
+NOTIFICATION_ENABLED = False
+SMTP_SERVER = "smtp.example.com"
+SMTP_PORT = 587
+SMTP_USERNAME = "your-email@example.com"
+SMTP_PASSWORD = "your-password"
+NOTIFICATION_EMAIL = "your-email@example.com"
+
+def send_notification(subject, message, is_error=False):
+    """发送通知邮件（如果配置了的话）"""
+    if not NOTIFICATION_ENABLED:
+        return
+
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = SMTP_USERNAME
+        msg['To'] = NOTIFICATION_EMAIL
+        msg['Subject'] = f"[{'错误' if is_error else '通知'}] {subject}"
+
+        body = f"""
+自动日记系统{'错误' if is_error else '通知'}
+
+时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+{message}
+
+---
+此邮件由自动日记系统发送
+        """
+        msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()
+        server.login(SMTP_USERNAME, SMTP_PASSWORD)
+        server.send_message(msg)
+        server.quit()
+
+        logger.info("通知邮件已发送")
+    except Exception as e:
+        logger.error(f"发送通知邮件失败: {e}")
 
 def get_today_git_stats():
     """获取今天的 git 统计信息"""
     today = datetime.now().strftime('%Y-%m-%d')
+    logger.info(f"开始获取 {today} 的 git 统计信息")
 
     try:
         # 获取今天的提交
+        logger.debug("执行 git log 命令...")
         result = subprocess.run(
             ['git', 'log', '--since', f'{today} 00:00', '--until', f'{today} 23:59',
              '--pretty=format:%s', '--no-merges'],
@@ -25,9 +89,11 @@ def get_today_git_stats():
         )
 
         if not result.stdout.strip():
+            logger.info("今天没有 git 提交")
             return None
 
         commits = result.stdout.strip().split('\n')
+        logger.info(f"找到 {len(commits)} 次提交")
 
         # 获取今天的文件变更
         result = subprocess.run(
@@ -66,7 +132,8 @@ def get_today_git_stats():
             'file_types': file_types
         }
     except Exception as e:
-        print(f"[ERROR] Failed to get git stats: {e}")
+        logger.error(f"获取 git 统计信息失败: {e}", exc_info=True)
+        send_notification("获取 git 统计信息失败", f"错误信息: {e}", is_error=True)
         return None
 
 def generate_diary_content(stats, date_str):
@@ -268,48 +335,57 @@ def main():
     """主函数"""
     today = datetime.now().strftime('%Y-%m-%d')
 
-    print(f"[AUTO-DIARY] Smart Diary Generator v3.0")
-    print(f"[DATE] {today}")
-    print()
+    logger.info("=" * 60)
+    logger.info(f"自动日记生成器启动 - {today}")
+    logger.info("=" * 60)
 
-    # 检查日记是否已存在
-    diary_path = Path(f"../src/pages/diary/{today}.astro")
-    if diary_path.exists():
-        print(f"[SKIP] Diary already exists: {diary_path}")
-        print("[INFO] Skipping to avoid overwriting manual diary")
-        return
+    try:
+        # 检查日记是否已存在
+        diary_path = Path(f"../src/pages/diary/{today}.astro")
+        if diary_path.exists():
+            logger.info(f"日记已存在，跳过生成: {diary_path}")
+            return
 
-    # 获取 git 统计
-    print("[STEP 1] Analyzing git commits...")
-    stats = get_today_git_stats()
+        # 获取 git 统计
+        logger.info("步骤 1/3: 分析 git 提交...")
+        stats = get_today_git_stats()
 
-    if not stats or stats['commit_count'] == 0:
-        print("[INFO] No commits today, generating simple diary")
-        stats = {
-            'commit_count': 0,
-            'commits': [],
-            'file_types': {}
-        }
+        if not stats or stats['commit_count'] == 0:
+            logger.info("今天没有提交，生成简单日记")
+            stats = {
+                'commit_count': 0,
+                'commits': [],
+                'file_types': {}
+            }
 
-    print(f"[OK] Found {stats['commit_count']} commits today")
-    print()
+        logger.info(f"找到 {stats['commit_count']} 次提交")
 
-    # 生成日记内容
-    print("[STEP 2] Generating diary content...")
-    content, title, description = generate_diary_content(stats, today)
+        # 生成日记内容
+        logger.info("步骤 2/3: 生成日记内容...")
+        content, title, description = generate_diary_content(stats, today)
 
-    # 保存日记文件
-    diary_path.parent.mkdir(parents=True, exist_ok=True)
+        # 保存日记文件
+        logger.info("步骤 3/3: 保存日记文件...")
+        diary_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(diary_path, 'w', encoding='utf-8') as f:
-        f.write(content)
+        with open(diary_path, 'w', encoding='utf-8') as f:
+            f.write(content)
 
-    print(f"[OK] Diary saved: {diary_path}")
-    print(f"[OK] Title: {title}")
-    print(f"[OK] Description: {description}")
-    print()
+        logger.info(f"日记已保存: {diary_path}")
+        logger.info(f"标题: {title}")
+        logger.info(f"描述: {description}")
 
-    print("[DONE] Auto diary generation completed!")
+        logger.info("=" * 60)
+        logger.info("自动日记生成完成！")
+        logger.info("=" * 60)
+
+        # 发送成功通知（可选）
+        # send_notification("日记生成成功", f"标题: {title}\n描述: {description}")
+
+    except Exception as e:
+        logger.error(f"自动日记生成失败: {e}", exc_info=True)
+        send_notification("自动日记生成失败", f"日期: {today}\n错误: {e}", is_error=True)
+        raise
 
 if __name__ == '__main__':
     main()

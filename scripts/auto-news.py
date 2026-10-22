@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AI新闻自动采集与生成器 v1.0
+AI新闻自动采集与生成器 v1.1
 - 从 RSS 源采集 AI 相关新闻
 - 生成每日新闻汇总
 - 更新 ai-news-summary.ts 数据文件
+- 添加完整日志记录
+- 优化网络超时处理
 """
 
 import feedparser
@@ -13,6 +15,25 @@ from datetime import datetime
 from pathlib import Path
 import re
 import random
+import logging
+
+# 配置日志
+log_dir = Path(__file__).parent / 'logs'
+log_dir.mkdir(exist_ok=True)
+log_file = log_dir / f"auto-news-{datetime.now().strftime('%Y-%m')}.log"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file, encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# 网络请求超时设置（秒）
+REQUEST_TIMEOUT = 10
 
 # AI 新闻 RSS 源
 RSS_FEEDS = [
@@ -43,12 +64,23 @@ def clean_html(text):
 def fetch_ai_news():
     """从 RSS 源采集 AI 新闻"""
     news_items = []
+    success_count = 0
+    fail_count = 0
+
+    logger.info(f"开始从 {len(RSS_FEEDS)} 个 RSS 源采集新闻")
 
     for feed_url in RSS_FEEDS:
         try:
-            print(f"[RSS] Fetching: {feed_url}")
-            feed = feedparser.parse(feed_url)
+            logger.info(f"正在采集: {feed_url}")
 
+            # 使用 requests 先获取内容，设置超时
+            response = requests.get(feed_url, timeout=REQUEST_TIMEOUT)
+            response.raise_for_status()
+
+            # 解析 RSS
+            feed = feedparser.parse(response.content)
+
+            entry_count = 0
             for entry in feed.entries[:10]:  # 每个源取前10条
                 title = entry.get('title', '')
                 summary = entry.get('summary', '')
@@ -62,8 +94,22 @@ def fetch_ai_news():
                         'source': feed.feed.get('title', '未知来源'),
                         'url': link
                     })
+                    entry_count += 1
+
+            logger.info(f"成功采集 {entry_count} 条相关新闻")
+            success_count += 1
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"采集超时 ({REQUEST_TIMEOUT}s): {feed_url}")
+            fail_count += 1
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"网络请求失败: {feed_url} - {e}")
+            fail_count += 1
         except Exception as e:
-            print(f"[WARN] Failed to fetch {feed_url}: {e}")
+            logger.error(f"采集失败: {feed_url} - {e}", exc_info=True)
+            fail_count += 1
+
+    logger.info(f"采集完成: 成功 {success_count} 个源, 失败 {fail_count} 个源")
 
     # 去重（按标题）
     seen_titles = set()
@@ -73,6 +119,7 @@ def fetch_ai_news():
             seen_titles.add(item['title'])
             unique_news.append(item)
 
+    logger.info(f"去重后共 {len(unique_news)} 条新闻，返回前 10 条")
     return unique_news[:10]  # 最多返回10条
 
 def categorize_news(title, summary):
@@ -151,12 +198,14 @@ def update_ai_news_file(news_summary, file_path):
     """更新 ai-news-summary.ts 文件"""
 
     try:
+        logger.info(f"开始更新文件: {file_path}")
+
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
 
         # 检查是否已存在该日期的新闻
         if f'"date": "{news_summary["date"]}"' in content:
-            print(f"[SKIP] News already exists for {news_summary['date']}")
+            logger.info(f"新闻已存在: {news_summary['date']}")
             return False
 
         # 生成新的新闻条目
@@ -194,57 +243,62 @@ def update_ai_news_file(news_summary, file_path):
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
+            logger.info("文件更新成功")
             return True
         else:
-            print("[ERROR] Could not find insertion point")
+            logger.error("无法找到插入位置")
             return False
 
     except Exception as e:
-        print(f"[ERROR] Failed to update file: {e}")
+        logger.error(f"更新文件失败: {e}", exc_info=True)
         return False
 
 def main():
     """主函数"""
     today = datetime.now().strftime('%Y-%m-%d')
 
-    print(f"[AUTO-NEWS] AI News Auto-Generator v1.0")
-    print(f"[DATE] {today}")
-    print()
+    logger.info("=" * 60)
+    logger.info(f"AI新闻采集器启动 - {today}")
+    logger.info("=" * 60)
 
-    # 采集新闻
-    print("[STEP 1] Fetching AI news from RSS feeds...")
-    news_items = fetch_ai_news()
+    try:
+        # 采集新闻
+        logger.info("步骤 1/3: 从 RSS 源采集 AI 新闻...")
+        news_items = fetch_ai_news()
 
-    if not news_items:
-        print("[WARN] No AI news found today")
-        return
+        if not news_items:
+            logger.warning("今天没有找到 AI 新闻")
+            return
 
-    print(f"[OK] Found {len(news_items)} AI news items")
-    print()
+        logger.info(f"找到 {len(news_items)} 条 AI 新闻")
 
-    # 生成汇总
-    print("[STEP 2] Generating news summary...")
-    news_summary = generate_news_summary(news_items, today)
+        # 生成汇总
+        logger.info("步骤 2/3: 生成新闻汇总...")
+        news_summary = generate_news_summary(news_items, today)
 
-    if not news_summary:
-        print("[ERROR] Failed to generate summary")
-        return
+        if not news_summary:
+            logger.error("生成新闻汇总失败")
+            return
 
-    print(f"[OK] Title: {news_summary['title']}")
-    print(f"[OK] Items: {len(news_summary['newsItems'])}")
-    print()
+        logger.info(f"标题: {news_summary['title']}")
+        logger.info(f"新闻数量: {len(news_summary['newsItems'])}")
 
-    # 更新数据文件
-    print("[STEP 3] Updating ai-news-summary.ts...")
-    file_path = Path('../src/data/ai-news-summary.ts')
+        # 更新数据文件
+        logger.info("步骤 3/3: 更新 ai-news-summary.ts...")
+        file_path = Path('../src/data/ai-news-summary.ts')
 
-    if update_ai_news_file(news_summary, file_path):
-        print(f"[OK] File updated: {file_path}")
-    else:
-        print("[SKIP] No update needed")
+        if update_ai_news_file(news_summary, file_path):
+            logger.info(f"文件已更新: {file_path}")
+        else:
+            logger.warning("文件未更新（可能已存在或出错）")
 
-    print()
-    print("[DONE] AI news generation completed!")
+        logger.info("=" * 60)
+        logger.info("AI新闻采集完成！")
+        logger.info("=" * 60)
+
+    except Exception as e:
+        logger.error(f"AI新闻采集失败: {e}", exc_info=True)
+        raise
 
 if __name__ == '__main__':
     main()
