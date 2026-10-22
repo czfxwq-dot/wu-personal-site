@@ -13,6 +13,16 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: 'ai-first-work-experience',
+    date: '2026-10-22',
+    title: `AI来了，年轻人怎么获得"第一份工作经验"？`,
+    titleEn: `AI来了，年轻人怎么获得"第一份工作经验"？`,
+    excerpt: `没有经验，却被要求尽快上手；AI又接过了一部分基础任务。新人从哪里开始？从真实招聘信息里找一项任务，做个小样本，留下自己的判断与修改。`,
+    excerptEn: `No experience, but asked to get started quickly; AI has taken over some basic tasks. Where do newcomers start? Find a task from real job postings, make a small sample, and leave your own judgment and modifications.`,
+    tag: 'AI观点',
+    tagEn: 'AI观点'
+  },
+  {
     slug: 'ai-surpass-experts-3-4-years',
     date: '2026-09-16',
     title: `业内预言AI 3‑4年或将超越顶尖专家，中年人不必恐慌，但要看清这几件事`,
