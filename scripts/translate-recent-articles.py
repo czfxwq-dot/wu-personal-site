@@ -225,6 +225,10 @@ TRANSLATIONS = {
     'deepseek-v4-engram-regret': {
         'title_en': 'DeepSeek V4 Engram Regret',
         'excerpt_en': 'Exploring the implications of AI memory and learning systems.'
+    },
+    'deepseek-v4-open-source': {
+        'title_en': 'DeepSeek V4 Open Source: A New Era for Open-Source AI',
+        'excerpt_en': 'DeepSeek\'s decision to open-source their V4 model marks a significant milestone in the open-source AI movement.'
     }
 }
 

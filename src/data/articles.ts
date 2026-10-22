@@ -456,9 +456,9 @@ export const articles: ArticleEntry[] = [
     slug: 'deepseek-v4-open-source',
     date: '2026-05-11',
     title: `DeepSeek V4开源：万亿参数、百万token上下文`,
-    titleEn: `DeepSeek V4开源：万亿参数、百万token上下文`,
+    titleEn: `DeepSeek V4 Open Source: A New Era for Open-Source AI`,
     excerpt: `DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。`,
-    excerptEn: `DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。`,
+    excerptEn: `DeepSeek's decision to open-source their V4 model marks a significant milestone in the open-source AI movement.`,
     tag: 'AI观点',
     tagEn: '半百观AI'
   },
