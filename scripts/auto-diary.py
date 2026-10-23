@@ -355,7 +355,14 @@ def main():
             stats = {
                 'commit_count': 0,
                 'commits': [],
-                'file_types': {}
+                'file_types': {
+                    'diary': 0,
+                    'article': 0,
+                    'news': 0,
+                    'code': 0,
+                    'doc': 0,
+                    'config': 0
+                }
             }
 
         logger.info(f"找到 {stats['commit_count']} 次提交")
