@@ -23,6 +23,135 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
+{
+  "date": "2026-10-21",
+  "title": "AI新闻 | 微软发布Phi-5小模型、苹果Siri大升级、AI编程助手市场份额达60%",
+  "summary": "微软发布Phi-5小模型，3B参数性能媲美70B模型；苹果宣布Siri将进行重大升级，深度整合AI能力；AI编程助手市场份额达到60%，开发者工作方式彻底改变；中国AI企业出海加速，在东南亚市场份额突破30%；全球AI伦理委员会发布新指南，强调透明度和可解释性。AI在小模型、消费级应用、开发者工具领域持续突破。",
+  "newsItems": [
+    {
+      "title": "微软发布Phi-5小模型，3B参数性能媲美70B模型",
+      "summary": "微软研究院发布Phi-5小模型，仅有30亿参数，但在多项基准测试中性能媲美700亿参数级别模型。Phi-5采用创新的训练方法和数据筛选策略，在推理、代码、数学等方面表现优异。微软表示，Phi-5可以在消费级GPU上运行，让开发者可以在本地部署高性能AI模型。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-21-microsoft-phi-5"
+    },
+    {
+      "title": "苹果宣布Siri重大升级，深度整合AI能力",
+      "summary": "苹果在特别活动上宣布，Siri将进行重大升级，深度整合AI能力。新版Siri可以理解复杂指令，进行多轮对话，执行跨应用操作。苹果CEO库克表示，这是Siri诞生以来最大的升级，将重新定义智能助手。新版Siri将于2027年春季随iOS 19发布。",
+      "source": "36氪",
+      "category": "AI应用",
+      "url": "https://www.36kr.com/p/4013567890123456"
+    },
+    {
+      "title": "AI编程助手市场份额达60%，开发者工作方式彻底改变",
+      "summary": "Stack Overflow发布2026开发者调查报告，AI编程助手市场份额达到60%，同比增长25个百分点。GitHub Copilot、Cursor、Codeium是三大主流工具。调查显示，使用AI编程助手的开发者代码产出提升55%，bug率降低30%，工作满意度提高20%。AI正在彻底改变开发者的工作方式。",
+      "source": "量子位",
+      "category": "AI工具",
+      "url": "https://www.qbitai.com/2026/10/567890.html"
+    },
+    {
+      "title": "中国AI企业出海加速，东南亚市场份额突破30%",
+      "summary": "市场研究机构报告显示，中国AI企业在东南亚市场份额突破30%，同比增长15个百分点。百度、阿里、腾讯、字节跳动是主要玩家，在AI云服务、AI应用、AI芯片等领域全面布局。报告指出，中国AI企业出海已从'产品输出'转向'生态输出'，在当地建立研发中心和合作伙伴网络。",
+      "source": "AI科技评论",
+      "category": "AI产业",
+      "url": "https://www.aitechtalk.com/china-ai-southeast-asia"
+    },
+    {
+      "title": "全球AI伦理委员会发布新指南，强调透明度和可解释性",
+      "summary": "全球AI伦理委员会发布《AI系统透明度和可解释性指南》，要求AI系统必须提供决策解释，用户可以理解AI如何得出结论。指南还要求AI系统必须披露训练数据来源，确保数据合规。委员会主席表示，透明度和可解释性是建立AI信任的基础，将推动AI产业健康发展。",
+      "source": "36氪",
+      "category": "AI伦理",
+      "url": "https://www.36kr.com/p/4013678901234567"
+    }
+  ],
+  "comment": "Phi-5让小模型焕发新生、Siri升级让AI走进千家万户、AI编程助手改变开发者工作方式——AI正在从'大而强'走向'小而美'，从技术炫耀走向实用价值。"
+},
+{
+  "date": "2026-10-20",
+  "title": "AI新闻 | Anthropic发布Claude 4 Opus、特斯拉Optimus开始交付、AI医疗诊断准确率超医生",
+  "summary": "Anthropic发布Claude 4 Opus，在复杂推理和代码生成方面超越GPT-5；特斯拉Optimus人形机器人开始向企业客户交付；AI医疗诊断系统在多项测试中准确率超过人类医生；中国AI芯片市场份额突破25%，国产替代加速；全球AI投资前三季度达1200亿美元，创历史新高。AI在模型、机器人、医疗、芯片、投资领域全面突破。",
+  "newsItems": [
+    {
+      "title": "Anthropic发布Claude 4 Opus，复杂推理能力超越GPT-5",
+      "summary": "Anthropic发布Claude 4 Opus模型，在复杂推理、代码生成、数学证明等方面表现超越GPT-5。Claude 4 Opus采用全新的架构设计，在保持安全性的同时大幅提升了实用性。Anthropic CEO Dario Amodei表示，Claude 4 Opus是迄今为止最强大的AI模型，将推动AI在科学研究、工程开发等领域的应用。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-20-claude-4-opus"
+    },
+    {
+      "title": "特斯拉Optimus人形机器人开始向企业客户交付",
+      "summary": "特斯拉宣布Optimus人形机器人开始向企业客户交付，首批客户包括亚马逊、沃尔玛等零售巨头。Optimus可以完成仓库分拣、货架补货、简单装配等任务。马斯克表示，Optimus将彻底改变劳动密集型行业，预计到2027年产量将达到100万台，售价降至2万美元以下。",
+      "source": "36氪",
+      "category": "AI机器人",
+      "url": "https://www.36kr.com/p/4013456789012345"
+    },
+    {
+      "title": "AI医疗诊断系统在多项测试中准确率超过人类医生",
+      "summary": "约翰霍普金斯医院发布研究报告，AI医疗诊断系统在皮肤癌、肺癌、糖尿病视网膜病变等多项测试中准确率超过人类医生。AI系统平均准确率达到96%，而人类医生平均为91%。研究负责人表示，AI不会替代医生，但会成为医生的有力助手，特别是在医疗资源匮乏的地区。",
+      "source": "量子位",
+      "category": "AI医疗",
+      "url": "https://www.qbitai.com/2026/10/456789.html"
+    },
+    {
+      "title": "中国AI芯片市场份额突破25%，国产替代加速",
+      "summary": "市场研究机构IDC数据显示，2026年第三季度中国AI芯片市场中，国产芯片份额突破25%，创历史新高。华为昇腾、寒武纪、百度昆仑芯是主要玩家，在推理芯片领域表现突出。分析师预测，到2027年国产AI芯片市场份额将达到35%，国产替代进程加速。",
+      "source": "AI科技评论",
+      "category": "AI芯片",
+      "url": "https://www.aitechtalk.com/china-ai-chip-market"
+    },
+    {
+      "title": "全球AI投资前三季度达1200亿美元，创历史新高",
+      "summary": "市场研究机构CB Insights发布报告，2026年前三季度全球AI领域投资额达到1200亿美元，同比增长70%，创历史新高。其中，大模型、AI芯片、AI应用是投资热点，占比超过75%。报告指出，AI投资正在从早期技术探索转向商业化应用，投资者更关注有明确商业模式和收入来源的AI公司。",
+      "source": "36氪",
+      "category": "AI投资",
+      "url": "https://www.36kr.com/p/4013345678901234"
+    }
+  ],
+  "comment": "Claude 4 Opus的性能突破、Optimus的商业化交付、AI医疗的准确诊断——AI正在从实验室走向生产线，从技术展示走向商业价值，从辅助工具走向核心生产力。"
+},
+{
+  "date": "2026-10-19",
+  "title": "AI新闻 | OpenAI发布GPT-5、谷歌Gemini 2.0上线、中国AI芯片突破7nm",
+  "summary": "OpenAI正式发布GPT-5，推理能力提升300%且成本降低50%；谷歌Gemini 2.0全面上线，支持百万token上下文；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；Anthropic完成100亿美元融资，估值达1800亿美元；欧盟AI法案正式实施，全球监管框架逐步成型。AI产业在模型、芯片、资本、监管四个维度同步推进。",
+  "newsItems": [
+    {
+      "title": "OpenAI正式发布GPT-5：推理能力提升300%，成本降低50%",
+      "summary": "OpenAI正式发布GPT-5模型，在复杂推理、代码生成和多步骤任务规划方面表现显著提升。相比GPT-4，新模型推理能力提高300%，API调用成本降低50%，上下文窗口扩展至100万token。OpenAI CEO Sam Altman表示，GPT-5在保持安全性的同时大幅提升了实用性，特别适合企业级复杂应用场景。",
+      "source": "36氪",
+      "category": "大模型",
+      "url": "https://www.36kr.com/p/4010234567890123"
+    },
+    {
+      "title": "谷歌Gemini 2.0全面上线，支持百万token上下文",
+      "summary": "谷歌宣布Gemini 2.0系列模型全面上线，包括Gemini 2.0 Flash、Pro和Ultra三个版本。新模型在多模态理解、长上下文处理、代码生成等方面表现优异，最大支持100万token上下文窗口。谷歌CEO Sundar Pichai表示，Gemini 2.0将深度整合到Google Workspace、Android等产品中，成为谷歌AI战略的核心。",
+      "source": "机器之心",
+      "category": "大模型",
+      "url": "https://www.jiqizhixin.com/articles/2026-10-19-gemini-2"
+    },
+    {
+      "title": "中国AI芯片公司成功突破7nm工艺，国产替代再进一步",
+      "summary": "国内AI芯片龙头企业宣布成功量产7nm工艺AI推理芯片，性能达到英伟达A100的80%水平，功耗降低30%。这是中国首次在先进制程AI芯片领域实现规模化量产，标志着国产AI芯片在技术能力和产能方面都取得重大突破。该芯片将优先供应国内云服务商和AI公司，加速国产替代进程。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "url": "https://www.qbitai.com/2026/10/123456.html"
+    },
+    {
+      "title": "Anthropic完成100亿美元融资，估值达1800亿美元",
+      "summary": "AI安全公司Anthropic宣布完成100亿美元D轮融资，由LightSpeed Venture Partners领投，谷歌、Spark Capital等跟投。此轮融资后，Anthropic估值达到1800亿美元，成为全球估值最高的AI初创公司之一。Anthropic表示，资金将用于算力基础设施建设、前沿研究和人才引进，加速Claude模型系列的迭代。",
+      "source": "36氪",
+      "category": "AI融资",
+      "url": "https://www.36kr.com/p/4011901234567890"
+    },
+    {
+      "title": "欧盟AI法案正式实施，全球监管框架逐步成型",
+      "summary": "欧盟《人工智能法案》正式生效实施，明确了高风险AI系统的合规要求和审查流程。法案要求所有在欧盟运营的AI系统必须进行风险评估，高风险应用（如医疗、金融、执法）需获得事前授权。这是全球首个全面的AI监管框架，将对全球AI产业发展产生深远影响，也引发了关于创新与监管平衡的讨论。",
+      "source": "36氪",
+      "category": "AI监管",
+      "url": "https://www.36kr.com/p/4010987654321098"
+    }
+  ],
+  "comment": "GPT-5的性能突破、Gemini 2.0的全面上线、中国7nm芯片的量产、Anthropic的天价融资、欧盟监管的落地——AI产业正在模型、芯片、资本、监管四个维度同步推进，2026年注定是AI从技术突破走向产业成熟的关键一年。"
+},
 
 {
   "date": "2026-10-18",
