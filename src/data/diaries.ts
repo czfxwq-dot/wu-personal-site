@@ -57,9 +57,27 @@ export const diaries: DiaryEntry[] = [
     categoryEn: 'AI Projects'
   },
   {
+    date: '2026-10-04',
+    title: `当守门人离开：AI安全负责人辞职的启示`,
+    titleEn: `When the Gatekeeper Leaves: Insights from AI Safety Leader's Resignation`,
+    summary: `建站第159天。某AI公司的安全负责人辞职了，论文审核系统正在崩溃，1万名工程师在维持着这个数字世界。当守门人离开时，我们失去的不是技术，而是信任。`,
+    summaryEn: `Day 159. An AI company's safety leader resigned, the paper review system is collapsing, and 10,000 engineers are maintaining this digital world. When gatekeepers leave, what we lose is not technology, but trust.`,
+    category: '反思',
+    categoryEn: 'Reflection'
+  },
+  {
     date: '2026-10-03',
     title: '1/5价格、600亿美元和0道安全栏——AI的四条战线',
     summary: '建站第163天。OpenAI发布GPT-6.1 Sol性能接近Astra价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件补齐国产生态；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝投资3.8亿美元将AI数据中心HDD产能翻倍。AI竞争从单点突破变成全面战争。'
+  },
+  {
+    date: '2026-10-02',
+    title: `当AI成为资本游戏：420亿贷款背后的真相`,
+    titleEn: `When AI Becomes a Capital Game: The Truth Behind the $42 Billion Loan`,
+    summary: `建站第157天。博通为Anthropic筹措420亿贷款，AI投资总额达646亿。钱在涌入，规则在制定，但真正的问题可能没有人愿意面对。`,
+    summaryEn: `Day 157. Broadcom is raising $42 billion in loans for Anthropic, with total AI investment reaching $64.6 billion. Money is flowing in, rules are being made, but the real problems may be ones no one wants to face.`,
+    category: '反思',
+    categoryEn: 'Reflection'
   },
   {
     date: '2026-10-01',

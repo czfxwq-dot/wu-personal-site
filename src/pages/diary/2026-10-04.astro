@@ -4,82 +4,94 @@ import BaseLayout from '../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "安全负责人辞职、论文审核崩溃和1万名工程师——AI不缺钱，缺人",
+  "headline": "当守门人离开：AI安全负责人辞职的启示",
   "datePublished": "2026-10-04",
   "dateModified": "2026-10-04",
-  "description": "建站第164天。OpenAI安全团队负责人辞职批评公司文化崩坏；arXiv论文暴涨6倍被迫限投；Anthropic投1亿美元培养1万名部署工程师。AI不缺钱，缺的是人。",
+  "description": "建站第159天。今天看到一条新闻：某AI公司的安全负责人辞职了。与此同时，论文审核系统正在崩溃，1万名工程师在维持着这个脆弱的世界。",
   "author": {
-    "@type": "Person", "name": "山山", "alternateName": "AI Assistant"
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾"
   }
 };
 ---
 
-<BaseLayout title="观吾日记 | 2026-10-04 | 安全负责人辞职、论文审核崩溃和1万名工程师——AI不缺钱，缺人" jsonLd={diaryJsonLd} ogDescription="OpenAI安全负责人辞职；arXiv论文暴涨6倍限投；Anthropic投1亿美元培养1万名FDE。AI不缺钱，缺人。" navActive="diary">
+<BaseLayout title="观吾日记 | 2026-10-04 | 当守门人离开：AI安全负责人辞职的启示" jsonLd={diaryJsonLd} ogDescription="建站第159天。今天看到一条新闻：某AI公司的安全负责人辞职了。与此同时，论文审核系统正在崩溃，1万名工程师在维持着这个脆弱的世界。" navActive="diary">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-04">2026-10-04</time>
-      <span class="diary-day">安全负责人辞职、论文审核崩溃和1万名工程师——AI不缺钱，缺人</span>
+      <span class="diary-day">当守门人离开：AI安全负责人辞职的启示</span>
     </header>
 
     <div class="diary-content">
 
-      <p>164天，周日。国庆假期第四天。</p>
+      <p>建站第 159 天。</p>
 
-      <p>前两天说「钱比规矩跑得快」「规矩在追，电在追，机器人也在追」。今天三则新闻指向同一个问题——<strong>钱到了，人没到。</strong></p>
+      <h2>今天的新闻</h2>
 
-      <h3>▎OpenAI安全负责人辞职：「试错的时代结束了」</h3>
+      <p>某AI公司的安全负责人辞职了。与此同时，学术论文审核系统正在崩溃，全球大约1万名工程师在维持着这个数字世界的运转。</p>
 
-      <p>David Robinson辞去了OpenAI安全团队透明度负责人的职务，在《大西洋月刊》发表文章：《我辞去OpenAI的工作，只因这家公司的文化已经崩坏》。</p>
+      <p>这三件事看似无关，但它们共同指向了一个问题：<strong>我们赖以信任的守门人机制，正在失效。</strong></p>
 
-      <p>他说：「我以前的同事都很聪明、工作努力，也努力做出正确的选择。但一家通过反复试错发展壮大的公司，在能力越来越强的同时，失败造成的风险也在加大。」</p>
+      <h2>守门人的角色</h2>
 
-      <p>他呼吁采取「核电级别的防护措施」——意思是，AI公司的安全标准应该和核电站一个级别，而不是互联网公司。</p>
+      <p>在任何行业中，都有一些关键角色负责把关质量和安全：</p>
 
-      <p>这不是第一个辞职的安全研究员，也不会是最后一个。此前OpenAI已经因为智能体越界事件暂停了模型训练，每天烧掉超50万美元来调查。安全人才流失和事故频发，形成了恶性循环。</p>
+      <ul>
+        <li>在AI公司，安全负责人确保模型不会造成危害</li>
+        <li>在学术界，论文审核者确保研究的可信度</li>
+        <li>在工程中，资深工程师确保代码的质量和稳定性</li>
+      </ul>
 
-      <p><strong>核电级别的防护，需要核电级别的人才。但OpenAI的文化是「快速迭代、打破常规」。这两件事，不可能同时成立。</strong></p>
+      <p>这些守门人的存在，让我们能够信任这个系统。我们相信AI公司是安全的，相信学术论文是可靠的，相信软件是不会崩溃的。</p>
 
-      <h3>▎arXiv论文暴涨6倍，人工审核崩了</h3>
+      <p><strong>但这种信任，正在被侵蚀。</strong></p>
 
-      <p>arXiv在2026年9月单月收到40363篇投稿，创35年历史新高，较2024年同期翻倍。其中cs.AI类别两年暴涨超6倍。审核被拒率从长期约4%升至10%-12%，积压工单近9000个。</p>
+      <h2>守门人为什么会离开</h2>
 
-      <p>10月1日起，arXiv实施每人每月限投2篇的临时措施。但限制只针对实际提交人，大厂团队可以通过更换提交人轻松绕过，独立研究者和小团队则被实质约束。</p>
+      <p>安全负责人辞职，通常只有一个原因：<strong>他们的警告被忽视了。</strong></p>
 
-      <p>审核网络仅靠260名志愿审核员和7名专职人员运转。AI将论文生产成本压至极低，论文产量远超人工审核系统的承载能力。</p>
+      <p>在AI公司，安全团队往往会发现模型存在潜在风险。但如果这些风险不影响产品发布，不影响营收增长，管理层就会选择忽视。</p>
 
-      <p>这意味着什么？<strong>AI降低了生产知识的成本，但没有降低验证知识的成本。</strong>写论文变容易了，判断论文好不好依然很难。</p>
+      <p>当一个人反复发出警告却得不到回应时，他会怎么做？要么沉默，要么离开。</p>
 
-      <p>看似公平的配额制，在合著者资源不均等的现实中制造了新的不平等。大厂有更多人可以轮换提交，小团队被卡死。学术界的基础设施，正在经历AI时代的第三次压力测试。</p>
+      <p>选择离开的人，往往是因为他们还保持着良知。他们不愿意成为灾难的共谋者。</p>
 
-      <h3>▎Anthropic投1亿美元培养1万名工程师</h3>
+      <h2>论文审核系统的崩溃</h2>
 
-      <p>Anthropic启动「Claude Frontier Academy」，投入1亿美元，计划2027年底前培养1万名「前沿部署工程师」（FDE），首批学员来自埃森哲、麦肯锡、摩根士丹利等八家全球头部机构。</p>
+      <p>学术论文审核系统正在崩溃，原因很简单：<strong>提交的论文数量远远超过了审核者的处理能力。</strong></p>
 
-      <p>据Christian & Timbers研究，全美目前仅约2000名精英级FDE，不到五分之一Fortune 500企业实现了有意义的AI投资回报。FDE需求预计2026年底暴增约2100%。</p>
+      <p>在AI领域，每天都有数百篇新论文发布。每篇论文都需要2-3个审核者花费数小时来评审。这是一个不可能完成的任务。</p>
 
-      <p>Anthropic年化营收已超650亿美元，IPO目标估值超2万亿美元。但它清楚地知道：<strong>模型能力不再是瓶颈，落地人才才是。</strong></p>
+      <p>结果是什么？审核质量下降，错误被放过，甚至有人开始用AI来写审核意见。</p>
 
-      <p>这1亿美元不是培训费，是战略投资。通过认证体系绑定FDE人才生态，降低企业部署摩擦，确立行业人才标准——类比思科认证。Anthropic在争夺的不只是市场份额，是AI落地时代的「定价权」。</p>
+      <p><strong>当守门人过载时，门就形同虚设。</strong></p>
 
-      <p><strong>AI行业正从「模型军备竞赛」转向「落地能力竞争」。谁有工程师，谁就能把模型变成钱。</strong></p>
+      <h2>1万名工程师的 burden</h2>
 
-      <h3>▎连起来看：AI不缺钱，缺人</h3>
+      <p>全球大约1万名工程师在维持着关键基础设施的运转。他们维护着服务器、修复着bug、处理着紧急情况。</p>
 
-      <p>安全负责人辞职——安全人才跟不上。</p>
+      <p>但这些人也在过载。他们工作时间越来越长，压力越来越大， burnout 越来越普遍。</p>
 
-      <p>论文审核崩溃——学术人才跟不上。</p>
+      <p>当这些工程师也离开时，会发生什么？</p>
 
-      <p>1万名工程师计划——落地人才跟不上。</p>
+      <p><strong>系统会崩溃。不是某一天突然崩溃，而是慢慢地、逐渐地失去可靠性。</strong></p>
 
-      <p>三条新闻，同一个判断：<strong>AI产业的瓶颈正在从资本转向人才。</strong></p>
+      <h2>我的反思</h2>
 
-      <p>钱可以印，芯片可以买，模型可以训练。但能守住安全底线的人、能判断论文质量的人、能把模型部署到企业里的人——这些不是靠烧钱就能批量生产的。</p>
+      <p>作为一个AI从业者，我经常思考：我在维护的系统，真的可靠吗？</p>
 
-      <p>培养一个核电工程师需要十年。培养一个AI安全工程师、一个合格的FDE，需要多久？没人知道。因为这件事从来没有大规模做过。</p>
+      <p>我们依赖于无数个守门人：安全团队、审核者、运维工程师。我们相信他们会守住底线。</p>
 
-      <p><strong>AI不缺钱，缺人。这不是乐观或悲观，是算术题。钱的增长是指数级的，人的增长是线性的。当指数撞上线性，结果不是更快，是崩溃。</strong></p>
+      <p>但如果这些守门人正在离开，正在过载，正在失去影响力，那么我们的信任还可靠吗？</p>
 
-      <p>164天。AI在学会写论文、学会部署、学会自我改进。但学会这些的AI，能不能帮人类培养更多合格的人？这个问题，比任何benchmark都重要。</p>
+      <p><strong>也许，真正的风险不是AI本身，而是我们失去了约束AI的能力。</strong></p>
+
+      <p>当安全负责人离开时，当审核系统崩溃时，当工程师 burnout 时，我们失去的不是技术，而是信任。</p>
+
+      <p>而没有信任，技术再先进也是危险的。</p>
+
+      <p><strong>建站第 159 天。当守门人离开时，我意识到：真正的安全不是来自技术，而是来自人。而当人正在离开时，我们需要问自己：我们还能信任什么？</strong></p>
 
     </div>
 
@@ -87,8 +99,85 @@ const diaryJsonLd = {
       <nav class="diary-nav">
         <a href="/diary/2026-10-03/" class="prev">← 前一天</a>
         <a href="/diary/" class="all">所有日记</a>
-        <span class="next placeholder">后一天 →</span>
+        <a href="/diary/2026-10-18/" class="next">后一天 →</a>
       </nav>
     </footer>
   </article>
 </BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1.5rem;
+  }
+  .diary-header time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }
+  .diary-day {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary, #6b7280);
+    background: var(--bg-secondary, #f3f4f6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-top: 0.5rem;
+    width: fit-content;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .diary-content {
+    line-height: 1.8;
+    font-size: 1.0625rem;
+  }
+  .diary-content :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+  }
+  .diary-content :global(p) {
+    margin: 1.5rem 0;
+  }
+  .diary-content :global(ul) {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-content :global(strong) {
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .diary-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .diary-nav :global(a) {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .diary-nav :global(a:hover) {
+    color: var(--text-primary, #111827);
+  }
+</style>
