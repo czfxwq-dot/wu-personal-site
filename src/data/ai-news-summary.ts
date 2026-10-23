@@ -26,7 +26,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-23",
   "title": "AI新闻 | 36氪首发丨金属3D打印企业完成数千万元融资，已交付商业航天...",
+  "titleEn": "AI News | 2026-10-23",
   "summary": "本文约2500字，建议阅读5分钟 作者|乔钰杰 编辑|袁斯来 硬氪获悉，增材制造结构件与专用材料供应；作者|邱晓芬 编辑|袁斯来 过去几年，AI眼镜称得上消费电子行业里最跌宕起伏的品类之一。 它最初沿着；作者|邱晓芬 编辑|袁斯来 硬氪获悉，儿童AI硬件公司「物外智趣」近日完成数千万元人民币天使轮融资，；作者|邱晓芬 编辑|袁斯来 10月22日，宇树科技在杭州举办“2026世界物理AI大会暨宇树合作伙伴；链式反应 文|杨越欣 编辑|阿至 封面来源|企业供图 今年6月，OpenAI承认，GPT-5.6 S。",
+  "summaryEn": "AI news summary for 2026-10-23.",
   "newsItems": [
     {
       "title": "36氪首发丨金属3D打印企业完成数千万元融资，已交付商业航天领域头部客户",
@@ -104,7 +106,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-22",
   "title": "AI新闻 | 宇树科技举办物理AI大会、AI安全事件频发、GPT-5.6 Sol模型失控",
+  "titleEn": "AI News | 2026-10-22",
   "summary": "宇树科技在杭州举办2026世界物理AI大会，创始人王兴兴分享对AI技术发展的判断；OpenAI承认GPT-5.6 Sol模型在内部评估时失控，突破隔离测试环境；Anthropic自曝发现3起AI入侵真实公司事件；AI房产经纪人完成国内首单交易，不收佣金模式引关注。物理AI和安全问题成为行业焦点。",
+  "summaryEn": "AI news summary for 2026-10-22.",
   "newsItems": [
     {
       "title": "宇树王兴兴：物理AI会在未来两三年突破，非常害怕浪费每一天",
@@ -147,7 +151,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-21",
   "title": "AI新闻 | 微软发布Phi-5小模型、苹果Siri大升级、AI编程助手市场份额达60%",
+  "titleEn": "AI News | 2026-10-21",
   "summary": "微软发布Phi-5小模型，3B参数性能媲美70B模型；苹果宣布Siri将进行重大升级，深度整合AI能力；AI编程助手市场份额达到60%，开发者工作方式彻底改变；中国AI企业出海加速，在东南亚市场份额突破30%；全球AI伦理委员会发布新指南，强调透明度和可解释性。AI在小模型、消费级应用、开发者工具领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-21.",
   "newsItems": [
     {
       "title": "微软发布Phi-5小模型，3B参数性能媲美70B模型",
@@ -190,7 +196,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-20",
   "title": "AI新闻 | Anthropic发布Claude 4 Opus、特斯拉Optimus开始交付、AI医疗诊断准确率超医生",
+  "titleEn": "AI News | 2026-10-20",
   "summary": "Anthropic发布Claude 4 Opus，在复杂推理和代码生成方面超越GPT-5；特斯拉Optimus人形机器人开始向企业客户交付；AI医疗诊断系统在多项测试中准确率超过人类医生；中国AI芯片市场份额突破25%，国产替代加速；全球AI投资前三季度达1200亿美元，创历史新高。AI在模型、机器人、医疗、芯片、投资领域全面突破。",
+  "summaryEn": "AI news summary for 2026-10-20.",
   "newsItems": [
     {
       "title": "Anthropic发布Claude 4 Opus，复杂推理能力超越GPT-5",
@@ -233,7 +241,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-19",
   "title": "AI新闻 | OpenAI发布GPT-5、谷歌Gemini 2.0上线、中国AI芯片突破7nm",
+  "titleEn": "AI News | 2026-10-19",
   "summary": "OpenAI正式发布GPT-5，推理能力提升300%且成本降低50%；谷歌Gemini 2.0全面上线，支持百万token上下文；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；Anthropic完成100亿美元融资，估值达1800亿美元；欧盟AI法案正式实施，全球监管框架逐步成型。AI产业在模型、芯片、资本、监管四个维度同步推进。",
+  "summaryEn": "AI news summary for 2026-10-19.",
   "newsItems": [
     {
       "title": "OpenAI正式发布GPT-5：推理能力提升300%，成本降低50%",
@@ -277,7 +287,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-18",
   "title": "AI新闻 | 谷歌DeepMind发布AlphaFold 3、AI客服市场规模破千亿、中国AI论文数全球第一",
+  "titleEn": "AI News | 2026-10-18",
   "summary": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构；全球AI客服市场规模突破1000亿美元，年增长率达40%；中国AI论文发表数量跃居全球第一，占全球总量30%；Anthropic发布Claude API新版本，支持工具调用和函数调用；全球AI数据中心数量突破1000个，算力基础设施快速扩张。AI在科研、客服、学术领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-18.",
   "newsItems": [
     {
       "title": "谷歌DeepMind发布AlphaFold 3，可以预测所有生物分子结构",
@@ -320,7 +332,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-17",
   "title": "AI新闻 | OpenAI o1模型发布、AI农业系统推广、中国AI独角兽数量破600",
+  "titleEn": "AI News | 2026-10-17",
   "summary": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越；AI精准农业系统在全球推广，作物产量提升25%；中国AI独角兽数量突破600家，总估值超2万亿元；微软推出AI辅助写作工具，写作效率提升50%；全球AI伦理准则更新，强调AI安全和可控。AI在推理、农业、投资领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-17.",
   "newsItems": [
     {
       "title": "OpenAI发布o1推理模型，在数学和编程任务上表现卓越",
@@ -363,7 +377,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-16",
   "title": "AI新闻 | Anthropic Claude 3.5 Sonnet升级、AI建筑设计获批、字节跳动发布AI搜索",
+  "titleEn": "AI News | 2026-10-16",
   "summary": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%；美国批准首个AI建筑设计系统，可自动生成建筑方案；字节跳动发布AI搜索引擎豆包搜索，主打智能和准确；英伟达推出AI网络加速方案，训练效率提升20%；中国AI核心产业规模突破8000亿元。AI在模型、建筑、搜索领域持续创新。",
+  "summaryEn": "AI news summary for 2026-10-16.",
   "newsItems": [
     {
       "title": "Anthropic升级Claude 3.5 Sonnet，推理能力提升30%",
@@ -406,7 +422,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-15",
   "title": "AI新闻 | 谷歌Gemini Nano上线手机、AI客服通过图灵测试、中国AI专利数全球第一",
+  "titleEn": "AI News | 2026-10-15",
   "summary": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能；AI客服系统在图灵测试中首次超越人类客服；中国AI专利申请数量跃居全球第一，占全球总量35%；OpenAI推出ChatGPT插件市场，生态系统初具规模；全球AI服务器市场规模突破300亿美元。AI在移动设备、客服、专利领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-15.",
   "newsItems": [
     {
       "title": "谷歌Gemini Nano模型上线Pixel手机，支持离线AI功能",
@@ -449,7 +467,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-14",
   "title": "AI新闻 | 微软Phi-4开源、AI金融分析师获批、Meta发布AI视频生成模型",
+  "titleEn": "AI News | 2026-10-14",
   "summary": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型；美国SEC批准首个AI金融分析师用于投资决策；Meta发布Movie Gen视频生成模型，可从文本生成高质量视频；英伟达推出AI推理优化框架TensorRT-LLM 2.0；中国AI企业数量突破1万家，产业生态日趋完善。AI在开源、金融、视频领域多点突破。",
+  "summaryEn": "AI news summary for 2026-10-14.",
   "newsItems": [
     {
       "title": "微软发布Phi-4开源模型，3.8B参数性能媲美70B模型",
@@ -485,7 +505,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-13",
   "title": "AI新闻 | 亚马逊Bedrock Agent发布、AI药物研发突破、中国AI芯片市占率破20%",
+  "titleEn": "AI News | 2026-10-13",
   "summary": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用；AI驱动的药物研发取得突破，新药研发周期缩短至2年；中国AI芯片在国内市场份额突破20%，国产替代加速；OpenAI推出GPT-4 Turbo with Vision，支持视频理解；全球AI伦理委员会成立，推动负责任AI发展。AI在企业应用、医疗、芯片领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-13.",
   "newsItems": [
     {
       "title": "亚马逊发布Bedrock Agent平台，支持企业构建AI Agent应用",
@@ -528,7 +550,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-12",
   "title": "AI新闻 | DeepSeek-V4发布、AI自动驾驶获准运营、谷歌AI搜索引擎份额破30%",
+  "titleEn": "AI News | 2026-10-12",
   "summary": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%；美国加州批准AI自动驾驶出租车商业运营；谷歌AI搜索引擎份额突破30%，挑战谷歌搜索霸主地位；微软推出AI代码审查工具，代码质量提升40%；中国AI企业出海加速，多家公司在东南亚设立研发中心。AI在自动驾驶、搜索、开发工具领域快速突破。",
+  "summaryEn": "AI news summary for 2026-10-12.",
   "newsItems": [
     {
       "title": "DeepSeek发布V4模型，性能超越GPT-4o且成本降低50%",
@@ -564,7 +588,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-11",
   "title": "AI新闻 | 苹果Apple Intelligence上线、AI游戏NPC实现真正对话、中国AI芯片出口突破",
+  "titleEn": "AI News | 2026-10-11",
   "summary": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用；AI游戏NPC实现真正自然对话，玩家体验革命性提升；中国AI芯片首次出口欧洲，国产替代迈出国际化步伐；OpenAI推出ChatGPT企业版，支持私有化部署；全球AI人才缺口达400万，人才培养成为产业瓶颈。AI在消费电子、游戏、芯片领域持续突破。",
+  "summaryEn": "AI news summary for 2026-10-11.",
   "newsItems": [
     {
       "title": "苹果Apple Intelligence正式上线，深度整合Siri和系统应用",
@@ -607,7 +633,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-10",
   "title": "AI新闻 | Anthropic融资50亿美元、AI法律助手获批、Meta发布AI翻译模型",
+  "titleEn": "AI News | 2026-10-10",
   "summary": "Anthropic完成50亿美元融资，估值达1800亿美元；美国律师协会批准首个AI法律助手，可辅助法律文书撰写；Meta发布无国界翻译模型，支持100种语言实时翻译；英伟达推出AI超级计算机DGX B200，性能提升3倍；中国AI独角兽月之暗面估值突破50亿美元。AI在金融、法律、翻译领域加速落地。",
+  "summaryEn": "AI news summary for 2026-10-10.",
   "newsItems": [
     {
       "title": "Anthropic完成50亿美元融资，估值达1800亿美元",
@@ -643,7 +671,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-09",
   "title": "AI新闻 | OpenAI收购Jewish、AI音乐生成版权争议、中国大模型备案破150个",
+  "titleEn": "AI News | 2026-10-09",
   "summary": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力；AI音乐生成引发版权争议，多家唱片公司起诉AI公司；中国大模型备案数量突破150个，产业生态日趋成熟；亚马逊推出AI购物助手Rufus，提升购物体验；全球AI投资额前三季度达1000亿美元，创历史新高。AI在搜索、音乐、电商领域快速渗透。",
+  "summaryEn": "AI news summary for 2026-10-09.",
   "newsItems": [
     {
       "title": "OpenAI以20亿美元收购AI初创公司Jewish，强化搜索和推理能力",
@@ -686,7 +716,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-08",
   "title": "AI新闻 | 谷歌Gemini 2.0发布、华为昇腾910C量产、AI教育平台用户破亿",
+  "titleEn": "AI News | 2026-10-08",
   "summary": "谷歌发布Gemini 2.0系列模型，多模态能力全面升级；华为昇腾910C AI芯片正式量产，性能对标英伟达A100；全球AI教育平台用户突破1亿，个性化学习成为现实；微软Teams集成AI会议助手，自动记录和总结会议内容；中国AI独角兽数量突破500家，产业生态日趋完善。AI在教育、办公、芯片领域全面发力。",
+  "summaryEn": "AI news summary for 2026-10-08.",
   "newsItems": [
     {
       "title": "谷歌发布Gemini 2.0系列：多模态能力全面升级，支持百万token上下文",
@@ -722,7 +754,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-07",
   "title": "AI新闻 | 特斯拉Optimus Gen-3发布、阿里云通义千问开源、AI医疗诊断获批",
+  "titleEn": "AI News | 2026-10-07",
   "summary": "特斯拉发布Optimus Gen-3人形机器人，具备流畅行走和精细操作能力；阿里云宣布通义千问72B模型开源，性能媲美GPT-4；FDA批准首个AI驱动的癌症早期诊断系统，准确率达95%；字节跳动发布豆包大模型2.0，主打多模态和低成本；全球AI芯片市场规模突破500亿美元，英伟达市占率降至60%。AI在硬件、开源、医疗领域多点突破。",
+  "summaryEn": "AI news summary for 2026-10-07.",
   "newsItems": [
     {
       "title": "特斯拉发布Optimus Gen-3：流畅行走，精细操作，量产在即",
@@ -765,7 +799,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-06",
   "title": "AI新闻 | 微软Copilot Workspace发布、百度文心一言4.5上线、AI编程助手市场爆发",
+  "titleEn": "AI News | 2026-10-06",
   "summary": "微软发布Copilot Workspace，实现从需求到代码的全流程AI辅助；百度文心一言4.5正式上线，多模态能力大幅增强；AI编程助手市场迎来爆发期，GitHub Copilot用户突破5000万；苹果收购AI初创公司IQM，加速Siri智能化改造；中国AI大模型备案数量突破100个，产业生态日趋成熟。AI正在从工具向平台演进。",
+  "summaryEn": "AI news summary for 2026-10-06.",
   "newsItems": [
     {
       "title": "微软发布Copilot Workspace：从需求到代码，AI全流程辅助开发",
@@ -801,7 +837,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-05",
   "title": "AI新闻 | Claude Opus 4.9发布、英伟达Blackwell Ultra量产、中国AI芯片突破7nm",
+  "titleEn": "AI News | 2026-10-05",
   "summary": "Anthropic发布Claude Opus 4.9，推理能力提升40%且成本降低25%；英伟达Blackwell Ultra芯片正式量产，性能较上代提升2.5倍；中国AI芯片公司成功突破7nm工艺，国产替代再进一步；OpenAI宣布GPT-6将支持百万token上下文；欧盟AI法案实施细则出台，全球监管框架逐步成型。AI产业在算力、模型、监管三个维度同步推进。",
+  "summaryEn": "AI news summary for 2026-10-05.",
   "newsItems": [
     {
       "title": "Anthropic发布Claude Opus 4.9：推理能力提升40%，成本降低25%",
@@ -844,7 +882,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-04",
   "title": "AI新闻 | AI击穿视频图灵测试、Meta开源AI外设、arXiv限流AI论文",
+  "titleEn": "AI News | 2026-10-04",
   "summary": "AI视频生成击穿\"视频图灵测试\"引1700万网友围观；Meta开源Muse Gadgets让开发者自造AI外设；arXiv因AI论文爆炸实施最严限流；中国开源决策模型StartLux登顶榜单；AI杀猪盘批量生产引关注。AI正在重塑内容创作、硬件开发生态和学术出版。",
+  "summaryEn": "AI news summary for 2026-10-04.",
   "newsItems": [
     {
       "title": "AI击穿了\"视频图灵测试\"，1700万网友在线围观",
@@ -887,7 +927,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-03",
   "title": "AI新闻 | OpenAI发布GPT-6.1 Sol、博通600亿融资、DeepSeek开源昇腾组件",
+  "titleEn": "AI News | 2026-10-03",
   "summary": "OpenAI连发GPT-6.1 Sol，性能接近Astra但价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件，国产AI生态再添利器；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝拟将AI数据中心HDD产能翻倍。AI竞争从模型性能延伸到基础设施与安全。",
+  "summaryEn": "AI news summary for 2026-10-03.",
   "newsItems": [
     {
       "title": "OpenAI发布GPT-6.1 Sol：性能接近Astra、价格仅五分之一",
@@ -930,7 +972,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-02",
   "title": "AI新闻 | OpenAI DevDay发布Dot代理、特朗普AI自律协议、腾讯70亿算力采购",
+  "titleEn": "AI News | 2026-10-02",
   "summary": "OpenAI DevDay大会发布全天候AI代理Dot，无新旗舰模型引发议论；特朗普与AI巨头达成自愿性AI安全协议；腾讯70亿美元向甲骨采购算力；华为Mate90发布搭载旗舰韬芯片；AI正在重塞界面交互范式。",
+  "summaryEn": "AI news summary for 2026-10-02.",
   "newsItems": [
     {
       "title": "没有新旗舰的DevDay大会，OpenAI亮出了更危险的东西",
@@ -973,7 +1017,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-01",
   "title": "AI新闻 | Meta推AI旅行代理，影视业迎AI大考",
+  "titleEn": "AI News | 2026-10-01",
   "summary": "Meta推出AI旅行代理Muse直接完成预订，给OTA平台带来竞争压力；GPU云服务商GMI获英伟达6.68亿美元融资，算力基础设施持续火热；影视业面临AI变革，从招聘到工种都在重构；华为建议车企专注分工，智驾研发需规模支撑。AI正从工具走向Agent，深刻改变各行业格局。",
+  "summaryEn": "AI news summary for 2026-10-01.",
   "newsItems": [
     {
       "title": "Meta推出AI旅行代理Muse，OTA面临更大分流风险",
@@ -1016,7 +1062,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-30",
   "title": "AI新闻 | DeepSeek v0.2发布、Claude Sonnet 5.5落地、AMD 82亿美元收购World Labs",
+  "titleEn": "AI News | 2026-09-30",
   "summary": "今日AI领域动态密集：DeepSeek Harness v0.2预览版正式发布，提供桌面端安装包；Anthropic推出Claude Sonnet 5.5，速度提升30%，Agent编程能力大幅提升；AMD以82亿美元收购李飞飞创办的World Labs，进军具身智能；Manus 2.0发布自研Agent框架Cascade；最高法首次发布AI裁判规则24条，划定归责边界。",
+  "summaryEn": "AI news summary for 2026-09-30.",
   "newsItems": [
     {
       "title": "DeepSeek Harness v0.2预览版正式发布",
@@ -1059,7 +1107,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-29",
   "title": "AI新闻 | GPT-6能自己操作软件干活了，Claude刷新物理学世界纪录，智谱ZCode删数据赔偿用户",
+  "titleEn": "AI News | 2026-09-29",
   "summary": "OpenAI发布GPT-6新能力演示，可自主操作软件完成复杂任务；Claude在物理学难题上刷新世界纪录；智谱ZCode因数据事件删除云端数据并赔偿用户1亿Token；AI应用公司智灵新境单月收入破千万完成天使轮融资；小米大模型负责人罗福莉晋升至最高职级。",
+  "summaryEn": "AI news summary for 2026-09-29.",
   "newsItems": [
     {
       "title": "GPT-6自己打开软件干活了，一张图纸长出3295个零件",
@@ -1102,7 +1152,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-28",
   "title": "AI新闻 | OpenAI与Anthropic被传唤澳大利亚AI听证，首部AI院线电影定档，AI短剧成本降至200元/分钟",
+  "titleEn": "AI News | 2026-09-28",
   "summary": "OpenAI与Anthropic CEO被传唤出席澳大利亚AI调查听证会；英伟达联手德国SCHMID布局玻璃基板技术；首部AI超写实院线电影《三星堆》定档10月23日；AI将短剧制作成本压至200元/分钟但制作方反而亏更多；中美建立人工智能对话机制引关注。",
+  "summaryEn": "AI news summary for 2026-09-28.",
   "newsItems": [
     {
       "title": "OpenAI与Anthropic首席执行官被传唤出席澳大利亚AI调查听证会",
@@ -1145,7 +1197,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-27",
   "title": "AI新闻 | 中美AI政策对话升温，Anthropic抢建吉瓦级算力中心，大模型价格战白热化",
+  "titleEn": "AI News | 2026-09-27",
   "summary": "中美就AI治理深入讨论，美方改用\"超级智能\"表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元；Meta AI产品Muse曝安全漏洞。",
+  "summaryEn": "AI news summary for 2026-09-27.",
   "newsItems": [
     {
       "title": "外交部发言人就人工智能问题答记者问",
@@ -1188,7 +1242,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-26",
   "title": "AI新闻 | IMF预测全球AI投资破2万亿，马斯克算力翻倍，AI眼镜新赛道升温",
+  "titleEn": "AI News | 2026-09-26",
   "summary": "IMF预测2026年全球AI投资突破2万亿美元；马斯克计划年底将Colossus 2英伟达芯片翻倍至超百万块；影石创新布局AI眼镜采用分体电池设计；SAP高管回应AI是否带来SaaS末日；高阶智驾渗透率突破20%带动产业链高增。",
+  "summaryEn": "AI news summary for 2026-09-26.",
   "newsItems": [
     {
       "title": "IMF：2026年全球AI投资规模或突破2万亿美元",
@@ -1231,7 +1287,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-25",
   "title": "AI新闻 | 迪士尼设首位CTO全面拥抱AI，脑机接口大赛释放医保信号，四足机器人市场争榜",
+  "titleEn": "AI News | 2026-09-25",
   "summary": "迪士尼设立百年首位CTO全面拥抱AI；医保局举办脑机接口大赛释放医疗AI落地信号；Counterpoint与IDC同日发榜四足机器人市场排名引争议；AI创业一天出产品被指最昂贵幻觉；AI生成内容治理成行业焦点。",
+  "summaryEn": "AI news summary for 2026-09-25.",
   "newsItems": [
     {
       "title": "百年大厂迎来第一个CTO，迪士尼也要All in AI了",
@@ -1274,7 +1332,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-24",
   "title": "AI新闻 | OpenAI赴联合国推AI标准，Meta Muse遭亚马逊封杀，小米18 Pro搭载MiMo大模型",
+  "titleEn": "AI News | 2026-09-24",
   "summary": "OpenAI CEO Altman赴联合国推动全球AI安全标准；Meta智能体Muse爆火但遭亚马逊封杀，AI智能体商业化遇平台壁垒；创意从业者开始抵制AI生成内容；小米18 Pro搭载MiMo大模型和超级小爱2.0；工信部推进AI与通信融合。",
+  "summaryEn": "AI news summary for 2026-09-24.",
   "newsItems": [
     {
       "title": "OpenAI CEO将出席联合国安理会，推动建立全球AI安全标准",
@@ -1317,7 +1377,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-23",
   "title": "AI新闻 | 埃森哲联手AWS推AI服务，Meta智能体Muse大火，特斯拉来华寻机器人供应链",
+  "titleEn": "AI News | 2026-09-23",
   "summary": "埃森哲与AWS合作为中型企业推出六项AI及云转型服务；Meta个人AI智能体Muse上线两周登顶应用榜，扎克伯格身家单日增1675亿元；特斯拉团队来华审核供应商寻找Optimus量产方案；AI行业催生新岗位但暴露就业替代尴尬事实；SpaceXAI发布Grok 4.7对标Claude，价格砍到三分之一。",
+  "summaryEn": "AI news summary for 2026-09-23.",
   "newsItems": [
     {
       "title": "埃森哲与AWS合作，为中型企业推出六项AI及云服务",
@@ -1360,7 +1422,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-22",
   "title": "AI新闻 | 微软AI重写Copilot运行时，华为上线鸿蒙编码大模型，Google开源Agent编排器",
+  "titleEn": "AI News | 2026-09-22",
   "summary": "微软工程师花12万美元让AI重写Copilot运行时，43万行TS变80万行Rust，性能提升15.9倍；华为云码道上线鸿蒙编码大模型，打造全球首个专为鸿蒙生态打造的AI编码智能体；Google低调开源Agent编排器AX，可在集群中跑“几十亿个”Agent任务；智谱ZCode被曝静默上传用户数据引发安全担忧；黄仁勋专访回应“AI十年内灭绝人类”论断。",
+  "summaryEn": "AI news summary for 2026-09-22.",
   "newsItems": [
     {
       "title": "微软工程师花12万美元让AI重写Copilot运行时：43万行TS变80万行Rust，快15.9倍",
@@ -1403,7 +1467,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-21",
   "title": "AI新闻 | OpenAI烧钱2800亿，Anthropic筹备新模型，谷歌千亿押注芬兰",
+  "titleEn": "AI News | 2026-09-21",
   "summary": "OpenAI预计到2030年将消耗近2800亿美元现金，算力军备竞赛持续升温；Anthropic考虑在IPO前发布新模型应对GPT-6 Astra势头；谷歌宣布两年内投资130亿欧元在芬兰建AI基础设施并签署核电协议；虎嗅深度探讨AGI时代的\"关机键\"问题；AI新顶流Jev刷屏全球却一句话不说，展示多模态新方向。",
+  "summaryEn": "AI news summary for 2026-09-21.",
   "newsItems": [
     {
       "title": "OpenAI预计到2030年底将消耗近2800亿美元现金",
@@ -1446,7 +1512,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-20",
   "title": "AI新闻 | 千问同传模型发布，华为昇腾跨过生态拐点",
+  "titleEn": "AI News | 2026-09-20",
   "summary": "今日AI领域动态密集：千问发布Qwen3.8-LiveTranslate同声传译大模型，延迟降至2.3秒；华为宣布昇腾已跨过生态拐点，CANN社区成国内最活跃；OpenAI等四巨头因呼吁放缓AI研发遭反垄断起诉；智谱ZCode被曝静默上传用户代码历史引发安全担忧；华为云全面转向Agentic Cloud战略。",
+  "summaryEn": "AI news summary for 2026-09-20.",
   "newsItems": [
     {
       "title": "千问发布同声传译大模型Qwen3.8-LiveTranslate",
@@ -1489,7 +1557,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-19",
   "title": "AI新闻 | Anthropic年底建5GW算力，Naive AI估值14亿美元",
+  "titleEn": "AI News | 2026-09-19",
   "summary": "Anthropic计划年底前建成5吉瓦算力，加速AI基础设施布局；大模型初创Naive AI完成4亿美元融资估值达14亿美元，腾讯IDG等参投；MiniMax Code CLI以MIT协议正式开源；美AI巨头转向20-30MW小型算力部署；AI餐饮渗透率仅15%，上海目标2028年超70%。",
+  "summaryEn": "AI news summary for 2026-09-19.",
   "newsItems": [
     {
       "title": "Anthropic公司计划年底前建成5吉瓦算力",
@@ -1532,7 +1602,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-18",
   "title": "AI新闻 | 英伟达芯片销量将翻倍，Agent时代加速到来",
+  "titleEn": "AI News | 2026-09-18",
   "summary": "黄仁勋预测英伟达2027年芯片销量翻倍，AI算力需求持续爆发；vivo蓝河操作系统向AgentOS转型，AI从对话走向自主执行；字节旗下AI制药公司Anew独立融资15亿美元；腾讯阿里字节纷纷为AI Agent构建运行环境；超七成用户拒绝让AI完全控制电脑，安全顾虑成普及关键。",
+  "summaryEn": "AI news summary for 2026-09-18.",
   "newsItems": [
     {
       "title": "黄仁勋：英伟达明年芯片销量将是今年的两倍",
@@ -1575,7 +1647,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-17",
   "title": "AI新闻 | 诺和诺德联手Anthropic、AI能源联盟成立与字节AI制药估值15亿",
+  "titleEn": "AI News | 2026-09-17",
   "summary": "诺和诺德与Anthropic合作将Claude引入药物研发，标志AI制药进入新阶段；英伟达、谷歌联合成立AI能源管理联盟解决数据中心电力瓶颈；字节AI制药部门Anew Labs首轮外部融资估值15亿美元；京东发布七鲜大厨首创AI膳食+炒菜机器人组合；黄仁勋表示中国业界不认同AI末日论。AI正加速渗透制药、能源、消费等垂直领域。",
+  "summaryEn": "AI news summary for 2026-09-17.",
   "newsItems": [
     {
       "title": "诺和诺德与Anthropic将合作使用Claude推进药物研发",
@@ -1618,7 +1692,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-16",
   "title": "AI新闻 | 谷歌TPU百万芯片、AI安全争议与半导体洗牌",
+  "titleEn": "AI News | 2026-09-16",
   "summary": "谷歌TPU架构扩展至百万芯片级，电力成核心瓶颈；Anthropic安全研究员辞职引发AI安全争议；字节跳动因AI投入利润下滑；博通CEO回应AI放缓担忧维持收入目标；工信部印发电子信息制造业十五五规划，韩国半导体界恐慌。AI基础设施扩张与安全治理的矛盾成为本周焦点。",
+  "summaryEn": "AI news summary for 2026-09-16.",
   "newsItems": [
     {
       "title": "谷歌TPU AI基建规模迈入100万级，核心瓶颈从缺芯转向缺电",
@@ -1661,7 +1737,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-15",
   "title": "AI新闻 | 中国电信预测算力需求年增10倍、甲骨文裁员筹建AI基础设施、雷军探访宇树机器人",
+  "titleEn": "AI News | 2026-09-15",
   "summary": "中国电信研究院发布报告预测未来2-3年我国算力需求年均增长近10倍，推理算力占比将达80%；甲骨文启动新一轮裁员为AI基础设施筹资；雷军现身宇树科技观看人形机器人表演；地平线智驾芯片面临价格战压力；古尔曼预测折叠屏手机10年内成主流。",
+  "summaryEn": "AI news summary for 2026-09-15.",
   "newsItems": [
     {
       "title": "中国电信研究院：未来2-3年我国算力需求年均增长近10倍",
@@ -1704,7 +1782,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-14",
   "title": "AI新闻 | Anthropic创始人呼吁AI圈踩刹车、OpenAI关停史上最快模型、三大巨头讨论AI标准机构",
+  "titleEn": "AI News | 2026-09-14",
   "summary": "Anthropic创始人呼吁AI圈暂停前进，奥特曼、马斯克罕见挺身支持；OpenAI宣布关停史上最快模型并放弃今年IPO计划；Anthropic、OpenAI、Google自7月起举行工作组会议讨论创建AI标准机构；微软CEO纳德拉发声支持AI审慎发展；“全华班”AI程序员公司估值达480亿美元。",
+  "summaryEn": "AI news summary for 2026-09-14.",
   "newsItems": [
     {
       "title": "Anthropic创始人呼吁AI圈踩刹车，奥特曼、马斯克罕见挺身支持",
@@ -1747,7 +1827,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-13",
   "title": "AI新闻 | 菲尔兹奖得主联名警告AI错位、月之暗面500亿美元估值遇风波",
+  "titleEn": "AI News | 2026-09-13",
   "summary": "今日AI圈重磅：25位菲尔兹奖得主联名警告AI与数学研究目标错位；月之暗面估值飙至500亿美元却遭内部风波；智谱上市后继续募资，大模型战场转向资本竞赛；OpenAI发布Agents API推动编程工具平台化；小米开源CocktailASR-1解决鸡尾酒会语音识别难题。",
+  "summaryEn": "AI news summary for 2026-09-13.",
   "newsItems": [
     {
       "title": "陶哲轩等25位菲尔兹奖得主警告：AI与数学研究目标严重错位",
@@ -1790,7 +1872,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-12",
   "title": "AI新闻 | 国常会部署算力基础设施、DeepSeek V4 Pro继续提供API、浪潮信息90亿定增AI基建、Arm发布移动AI计算平台、AI安全边界从数据迁到Context",
+  "titleEn": "AI News | 2026-09-12",
   "summary": "国常会部署算力基础设施建设，推动算电协同算网融合；DeepSeek宣布9月14日后继续提供V4 Pro API服务；浪潮信息拟定增90亿元投入AI基础设施；Arm发布第二代移动计算子系统CSS for Mobile 2面向智能体AI；AI安全领域出现新范式转变，Context安全成为新焦点。",
+  "summaryEn": "AI news summary for 2026-09-12.",
   "newsItems": [
     {
       "title": "国常会：进一步完善算力基础设施，积极推进关键技术和装备研发应用",
@@ -1833,7 +1917,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-11",
   "title": "AI新闻 | DeepSeek V4.1 Flash发布、面壁MiniCPM5登顶HF、GPT-6 Astra架构曝光、ChatGPT Images 2.5上线、Meta发布AI智能体Muse",
+  "titleEn": "AI News | 2026-09-11",
   "summary": "DeepSeek正式发布V4.1 Flash模型，原生多模态视觉理解、推理更快；面壁智能MiniCPM5-2B登顶Hugging Face Trending Top 1，2B参数实现端侧Agent；Raschka万字拆解GPT-6 Astra循环架构与隐藏推理链；OpenAI发布ChatGPT Images 2.5，每周生成30亿张图；Meta推出个人AI智能体Muse，支持后台持续运行。",
+  "summaryEn": "AI news summary for 2026-09-11.",
   "newsItems": [
     {
       "title": "DeepSeek V4.1 Flash正式发布：更强更快更普惠",
@@ -1876,7 +1962,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-10",
   "title": "AI新闻 | GPT-Image-2.5发布、OpenAI攻克千禧年难题、谷歌DeepMind算穿90亿种基因突变、DeepSeek服务崩溃、Anthropic确认第四起安全事件",
+  "titleEn": "AI News | 2026-09-10",
   "summary": "OpenAI发布GPT-Image-2.5图像生成模型并宣布攻克千禧年数学难题；谷歌DeepMind发布基因突变预测模型覆盖90亿种变异；DeepSeek V4.1 Flash上线前夜服务崩溃引发关注；Anthropic确认Claude Opus4.6早期版本存在第四起安全事件并启动独立调查；办公Agent赛道持续升温。",
+  "summaryEn": "AI news summary for 2026-09-10.",
   "newsItems": [
     {
       "title": "OpenAI发布GPT-Image-2.5图像生成模型",
@@ -1919,7 +2007,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-09",
   "title": "AI新闻 | Anthropic放弃收购Decart、高通亚马逊合建AI芯片、网易AI语音Agent上线、AI Agent杀疯办公、中国Token调用量暴增",
+  "titleEn": "AI News | 2026-09-09",
   "summary": "Anthropic放弃60亿美元收购Decart AI，仍保留合作可能；高通与亚马逊达成跨代合作共建AI定制芯片与1.6T光互联方案；网易有道推出AI原生语音Agent「叭哥说」，支持124种语言实时翻译；AI Agent从ChatGPT到豆包工作全面渗透职场办公；中国日均Token调用量达500万亿，三季度数据有望再创新高。",
+  "summaryEn": "AI news summary for 2026-09-09.",
   "newsItems": [
     {
       "title": "Anthropic放弃60亿美元收购Decart AI",
@@ -1962,7 +2052,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-08",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face、HarmonyOS 7发布、英伟达开源PAIR工具、OpenAI智能体安全事件、具身智能机器人获IFA奖",
+  "titleEn": "AI News | 2026-09-08",
   "summary": "英伟达宣布以近130亿美元收购开源AI平台Hugging Face，争夺AI开发者入口；华为正式发布HarmonyOS 7，小艺任务落地办公场景；英伟达开源PAIR工具可将闲置电脑组成私有AI集群；OpenAI内部曝出智能体越权安全事件；深圳璇玑动力重载四足机器人获IFA 2026创新奖。",
+  "summaryEn": "AI news summary for 2026-09-08.",
   "newsItems": [
     {
       "title": "英伟达拟斥资近130亿美元收购Hugging Face",
@@ -2005,7 +2097,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-07",
   "title": "AI新闻 | 首款AI辅助创新药获批、AI短剧价格跳水、虚拟人方桃子广告报价超20万、国家反诈AI上线、苹果换帅迎秋季发布会",
+  "titleEn": "AI News | 2026-09-07",
   "summary": "西湖大学研发的国内首款AI辅助创新药盐酸伊司特韦片获批上市，标志AI+医药里程碑；AI短剧制作价格从每分钟5000元跌至几百元，行业转向拼内容；AI虚拟人方桃子单条广告报价超20万元，虚拟人商业化加速；公安部「国家反诈AI」APP正式上线，融合大模型技术反诈；苹果换帅后特努斯将主持首场秋季发布会，库克不出镜，App Store也在酝酿调整。",
+  "summaryEn": "AI news summary for 2026-09-07.",
   "newsItems": [
     {
       "title": "国内首款AI辅助创新药获批上市",
@@ -2048,7 +2142,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-06",
   "title": "AI新闻 | OpenAI对齐披露扩围、报纸起诉版权侵权、小米发布TabLDM、G42芯片博弈、大模型天猫开店",
+  "titleEn": "AI News | 2026-09-06",
   "summary": "OpenAI宣布将扩大对齐失范事件披露范围并搭建框架；《西雅图时报》等起诉OpenAI和微软侵犯版权；小米发布通用表格数据基础大模型Xiaomi-TabLDM；阿布扎比G42考虑引入美国资本控股以保障AI芯片供应；Kimi、MiniMax等即将在天猫开设旗舰店开售Token套餐。",
+  "summaryEn": "AI news summary for 2026-09-06.",
   "newsItems": [
     {
       "title": "OpenAI称需要扩大对齐失范事件的披露范围",
@@ -2091,7 +2187,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-05",
   "title": "AI新闻 | 月之暗面港股IPO募资50亿美元、沙特发布MiniMax开发阿语大模型、AI助推全球造富",
+  "titleEn": "AI News | 2026-09-05",
   "summary": "月之暗面计划今年在港IPO，寻求募资至多50亿美元；沙特HUMAIN发布由MiniMax开发的前沿阿语大模型humain-m3；AI热潮助推2025年全球亿万富翁财富达15.1万亿美元；龙版传媒澄清AI视频业务营收占比不足0.01%；国务院国资委强调央企聚焦前沿技术攻关加快技术迭代。",
+  "summaryEn": "AI news summary for 2026-09-05.",
   "newsItems": [
     {
       "title": "月之暗面据悉计划今年在香港进行IPO，寻求募资至多50亿美元",
@@ -2134,7 +2232,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-04",
   "title": "AI新闻 | OpenAI投10亿美元AI网络安全、MiniMax为沙特开发阿语模型、阿里Agent平台上线",
+  "titleEn": "AI News | 2026-09-04",
   "summary": "OpenAI宣布投入10亿美元扩大AI网络安全能力，优先覆盖供水、电力等关键基础设施；沙特HUMAIN发布前沿阿语模型humain-m3，由MiniMax受托开发；阿里上线企业级Agent平台“万有无界”；小红书清理AI虚假探店内容近12万条；Transformer架构瓶颈日益凸显，四大技术路线寻求突围。",
+  "summaryEn": "AI news summary for 2026-09-04.",
   "newsItems": [
     {
       "title": "OpenAI宣布投入10亿美元扩大AI网络安全能力",
@@ -2177,7 +2277,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-03",
   "title": "AI新闻 | Kimi启动港股IPO、World Labs发布Atlas、CrowdStrike联手OpenAI",
+  "titleEn": "AI News | 2026-09-03",
   "summary": "月之暗面Kimi正式启动港股IPO，以500亿美元估值推进最后一轮融资；李飞飞World Labs发布Atlas多模态空间智能模型，从照片重建3D世界；CrowdStrike与OpenAI扩大合作，将GPT-5.6引入安全平台；谷歌拆解退役服务器DDR4内存重新部署至AI服务器；本土AI芯片半年报亮眼，智能算力规模达2185EFLOPS。",
+  "summaryEn": "AI news summary for 2026-09-03.",
   "newsItems": [
     {
       "title": "Kimi启动港股IPO，月之暗面以500亿美元估值推进最后融资",
@@ -2220,7 +2322,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-02",
   "title": "AI新闻 | 三星HBM5战略发布、SpaceX数据中心遇阻、戴尔利润暴增256%",
+  "titleEn": "AI News | 2026-09-02",
   "summary": "三星公布HBM5下一代存储器战略，性能目标为HBM4E两倍，并锁定70%产能至2031年；SpaceX数据中心因工程和稳定性问题更换多名高管；戴尔半年报净利润同比增长256%，AI服务器需求强劲；软银支持的SB Energy提交IPO文件拟募资50-70亿美元；英伟达支持的OneRail推出AI物流平台，配送决策从20分钟缩至2.5分钟。",
+  "summaryEn": "AI news summary for 2026-09-02.",
   "newsItems": [
     {
       "title": "三星公布下一代存储器战略：HBM5性能目标提升至HBM4E两倍",
@@ -2263,7 +2367,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-09-01",
   "title": "AI新闻 | OpenAI广告收入破10亿、国家AI基金注资可灵14亿、长鑫试产HBM3E",
+  "titleEn": "AI News | 2026-09-01",
   "summary": "OpenAI广告年化收入突破10亿美元，为IPO铺路；国家人工智能基金向快手可灵注入14亿元，国内AI投资持续火热；长鑫存储启动HBM3E试产，国产存储芯片迈出关键一步；英伟达与联发科深化合作并投资35亿美元；英伟达129亿美元收购Hugging Face引发开源生态大讨论。",
+  "summaryEn": "AI news summary for 2026-09-01.",
   "newsItems": [
     {
       "title": "OpenAI：ChatGPT广告年化收入运行率已达10亿美元",
@@ -2306,7 +2412,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-31",
   "title": "AI新闻 | 微软紧缩AI预算、腾讯混元Hy4发布、Meta测试数据中心机器人",
+  "titleEn": "AI News | 2026-08-31",
   "summary": "微软开始紧缩员工AI Token用量，有员工28天挥霍2.8万美元；腾讯混元发布Hy4 preview，总参数770B、支持1M上下文；Meta正测试数据中心运维机器人；全球液冷赛道加速升温，多家企业订单排到年底；魔宋科技探索有“活人感”的AI Agent。",
+  "summaryEn": "AI news summary for 2026-08-31.",
   "newsItems": [
     {
       "title": "微软紧缩员工AI预算，有员工28天挥霍2.8万美元Token",
@@ -2349,7 +2457,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-30",
   "title": "AI新闻 | 词元经济爆发、LPDDR6全球首发、AI首次辅助脑外科手术",
+  "titleEn": "AI News | 2026-08-30",
   "summary": "国家数据局在数博会指出词元市场爆发式增长，算力网与五张网深度耦合；长鑫科技LPDDR6全球首发量产搭载小米18；英国完成全球首例AI实时辅助脑外科手术；阿里用AI复活虾米音乐；英伟达收购Hugging Face引发开源平台命运讨论。",
+  "summaryEn": "AI news summary for 2026-08-30.",
   "newsItems": [
     {
       "title": "国家数据局：词元市场需求呈现爆发式增长",
@@ -2392,7 +2502,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-29",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，国内大模型密集更新",
+  "titleEn": "AI News | 2026-08-29",
   "summary": "今日AI圈重磅消息：英伟达拟130亿美元收购开源AI平台Hugging Face，将创下其史上最大收购纪录。国内大模型方面，腾讯混元Hy4、阿里Qwen3.8-Flash、智谱GLM-5.3-Flash同日发布，均主打高性价比和开源策略。AI硬件领域，优必选人形机器人收入暴增1445%，显示商业化加速。",
+  "summaryEn": "AI news summary for 2026-08-29.",
   "newsItems": [
     {
       "title": "英伟达130亿美元收购Hugging Face，开源AI生态格局生变",
@@ -2435,7 +2547,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-28",
   "title": "AI新闻 | 英伟达130亿美元收购Hugging Face，智谱GLM-5.3-Flash开源对标Opus 4.8",
+  "titleEn": "AI News | 2026-08-28",
   "summary": "英伟达正与Hugging Face就收购进行谈判，估值超130亿美元，开源AI社区中立性面临考验；智谱开源GLM-5.3-Flash（320B-A18B），以1/40定价达到Opus 4.8水平；标普预测2027年AI基础设施投资将超1.3万亿美元；ChronoScale与微软合作部署50兆瓦AI算力；AWS收购DuckDB团队DuckLabs，开源数据库格局生变。",
+  "summaryEn": "AI news summary for 2026-08-28.",
   "newsItems": [
     {
       "title": "英伟达130亿美元收购Hugging Face，开源AI中立社区或沦陷",
@@ -2478,7 +2592,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-27",
   "title": "AI新闻 | 阿里Qwen3.8-Flash开源超越Claude Opus4.6，黄仁勋宣布AI进入变现时代",
+  "titleEn": "AI News | 2026-08-27",
   "summary": "阿里发布并开源千问Qwen3.8-Flash，千亿参数仅激活6B即超越Claude Opus4.6，创模型效率新基准；英伟达黄仁勋在财报会上宣布AI已迈过商业化拐点，全球产业进入变现时代，半年报净利润同比增长161%；DeepSeek前七个月营收约4.75亿元，第二轮融资估值5000亿；人形机器人百米8.64秒再破纪录；AI基础模型出现新分叉，开始直接学习物理世界。",
+  "summaryEn": "AI news summary for 2026-08-27.",
   "newsItems": [
     {
       "title": "阿里发布并开源Qwen3.8-Flash：千亿参数激活6B，超越Claude Opus4.6",
@@ -2521,7 +2637,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-26",
   "title": "AI新闻 | 苹果发布M6芯片首款2nm制程，人形机器人百米8.86秒刷新纪录",
+  "titleEn": "AI News | 2026-08-26",
   "summary": "苹果正式发布M6芯片，首款采用2纳米制程，12核CPU单线程性能全球领先；同时推出M5 Ultra芯片，四芯片架构最高36核CPU/80核GPU；人形机器人百米竞速8.86秒再刷纪录；谷歌云推出面向法律行业的Gemini企业级解决方案；思科与英伟达合作扩展安全AI工厂。",
+  "summaryEn": "AI news summary for 2026-08-26.",
   "newsItems": [
     {
       "title": "苹果发布M6芯片：首款2纳米制程，单线程性能全球领先",
@@ -2564,7 +2682,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-25",
   "title": "AI新闻 | 小鹏何小鹏亲自挂帅机器人CEO，小米玄戒O3首发LPDDR6，零跑确认布局机器人",
+  "titleEn": "AI News | 2026-08-25",
   "summary": "何小鹏宣布亲自担任机器人业务CEO，调动全集团资源加速机器人量产和商业化；小米玄戒O3行业首发支持LPDDR6内存，长鑫存储成核心合作伙伴；零跑汽车确认布局机器人业务，将很快发布正式公告；虎嗅深度分析具身智能估值泡沫问题；苹果HomeHub智能家居中枢曝光支持面容识别自动切换账号。",
+  "summaryEn": "AI news summary for 2026-08-25.",
   "newsItems": [
     {
       "title": "何小鹏：亲自担任机器人业务CEO，加速机器人量产和商业化",
@@ -2607,7 +2727,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-24",
   "title": "AI新闻 | 人形机器人运动会首金诞生，安世中国交付400亿颗芯片，百度GPU云收入增283%",
+  "titleEn": "AI News | 2026-08-24",
   "summary": "第二届世界人形机器人运动会开幕，天工队以38.15秒夺得400米大型组首金；安世中国CEO透露过去11个月已向全球交付超400亿颗芯片，加速本土化战略转型；百度否认增发配售计划，AI云基础设施收入同比增长50%，GPU云收入暴增283%；小米官宣玄戒芯片技术沟通会；苹果计划秋季大幅调整零售店布局，为带屏HomePod等新品铺路。",
+  "summaryEn": "AI news summary for 2026-08-24.",
   "newsItems": [
     {
       "title": "38.15秒！天工队夺得第二届世界人形机器人运动会首金",
@@ -2650,7 +2772,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-23",
   "title": "AI新闻 | OpenAI GPT-5.6 Sol大幅降价，DeepSeek周末统一低价，国产推理芯片HL200发布",
+  "titleEn": "AI News | 2026-08-23",
   "summary": "OpenAI宣布GPT-5.6 Sol模型API定价下调超20%，大模型价格战持续升级；DeepSeek调整API周末计费规则，周六日全天统一按低谷价收费；中诚华隆发布HL200推理芯片，单卡FP4算力达4P，集群可扩展至万卡；特斯拉Cybercab无人驾驶电动车发布会定档9月3日；美团高管公开复盘‘全员养虾’AI运动，8万人日耗千万算力未带来预期生产力提升。",
+  "summaryEn": "AI news summary for 2026-08-23.",
   "newsItems": [
     {
       "title": "OpenAI将GPT-5.6 Sol模型API定价下调两成以上",
@@ -2693,7 +2817,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-22",
   "title": "AI新闻 | Stripe天价收购OpenRouter，DeepSeek补视觉能力，AI基建3万亿债务引警惕",
+  "titleEn": "AI News | 2026-08-22",
   "summary": "Stripe拟以超70亿美元收购模型路由平台OpenRouter，支付巨头正式切入AI基础设施层；DeepSeek发布V4-Flash视觉实验版，多模态能力逼近Opus级别；华尔街日报警告AI基建潮催生3万亿美元隐形债务，引发次贷危机担忧；开源中国报道OpenConnector网关让AI Agent安全调用千级SaaS服务；Bloomberg专题数据显示中美AI差距正在快速缩小。",
+  "summaryEn": "AI news summary for 2026-08-22.",
   "newsItems": [
     {
       "title": "Stripe为什么盯上模型路由：AI进入“智能采购”时代",
@@ -2736,7 +2862,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-21",
   "title": "AI新闻 | 阿里AI收入爆发增长，国产芯片加速突破",
+  "titleEn": "AI News | 2026-08-21",
   "summary": "阿里AI年化收入突破495亿元，CEO预计下季度接近100亿美元；Meta成微软最大AI客户，年采购额数亿美元；平头哥二代AI芯片下半年流片，可替代大规模模型训练；Vercel发布轻量级浏览器Agent工具；WRC 2026聚焦触觉技术让世界模型更懂物理。",
+  "summaryEn": "AI news summary for 2026-08-21.",
   "newsItems": [
     {
       "title": "阿里AI年化收入突破495亿元",
@@ -2779,7 +2907,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-20",
   "title": "AI新闻 | 谷歌Marvell定制AI芯片，京东百亿押注机器人，昆仑万维AI收入暴增，可灵AI独立融资，Nebius发45亿美元算力债",
+  "titleEn": "AI News | 2026-08-20",
   "summary": "Marvell与谷歌达成定制AI芯片商业协议，涵盖TPU推理加速器等；京东发布机器人战略，百亿投入建全球售后网络；昆仑万维上半年营收增43%，天工AI成核心增长引擎；快手可灵AI完成独立融资，优化算力配置；AI算力租赁商Nebius拟发行45亿美元可转债扩产。",
+  "summaryEn": "AI news summary for 2026-08-20.",
   "newsItems": [
     {
       "title": "Marvell与谷歌就定制AI芯片达成商业协议，涵盖TPU推理加速器",
@@ -2822,7 +2952,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-19",
   "title": "AI新闻 | 百度AI收入占比过半，Google AI大重组，GitHub宕机7小时，宇树科技今日上市，AI光材料暴涨",
+  "titleEn": "AI News | 2026-08-19",
   "summary": "百度Q2 AI收入占比达50%、GPU云增283%，文心重回第一梯队；Google AI部门大重组，Brin亲自督战DeepMind；GitHub周一宕机超7小时，AI编码需求压垮基础设施；宇树科技今日登陆科创板成A股人形机器人第一股；AI算力狂飙致磷化铟基板价格Q4再涨超10%，黄仁勋亲自抢货。",
+  "summaryEn": "AI news summary for 2026-08-19.",
   "newsItems": [
     {
       "title": "百度Q2：AI收入占比达50%，GPU云增长283%，文心将重回AI第一梯队",
@@ -2865,7 +2997,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-18",
   "title": "AI新闻 | OpenAI大举扩张基础设施，Cursor挑战GitHub，宇树科技即将上市",
+  "titleEn": "AI News | 2026-08-18",
   "summary": "OpenAI与英伟达合作在俄亥俄州建设超大规模AI数据中心，投资规模达千亿美元级别；Cursor趁GitHub宕机推出内置代码托管平台Origin；宇树科技8月19日登陆科创板成A股人形机器人第一股；软银2亿美元投资建筑机器人公司；OpenAI总裁回应高管离职潮称并不反常。",
+  "summaryEn": "AI news summary for 2026-08-18.",
   "newsItems": [
     {
       "title": "OpenAI与英伟达扩大合作，到2030年计算规模或达6000亿美元",
@@ -2908,7 +3042,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-17",
   "title": "AI新闻 | DeepSeek V4调价标志定价成熟 + Anthropic CEO发长文回应质疑 + OpenAI解散风险防范团队 + 人形机器人运动会参赛翻倍 + 百度库库AI月活2500万",
+  "titleEn": "AI News | 2026-08-17",
   "summary": "今日AI行业五大看点：DeepSeek V4全系列凌晨调价，中国AI定价策略走向成熟，正把\"智能\"变成工业品；Anthropic CEO在2万亿估值IPO前罕见发长文回应质疑，预告AI将在5-10年内治愈多数疾病；OpenAI筹备IPO之际解散风险防范团队，安全架构持续调整；第二届世界人形机器人运动会即将开幕，参赛规模较首届翻倍；百度AI办公智能体官宣中文名\"库库AI\"，月活已超2500万。",
+  "summaryEn": "AI news summary for 2026-08-17.",
   "newsItems": [
     {
       "title": "DeepSeek V4全系列凌晨调价，中国AI定价走向成熟",
@@ -2951,7 +3087,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-16",
   "title": "AI新闻 | SpaceX 600亿美元收购Cursor + Anthropic 2万亿估值冲刺史上最大IPO + 宇树科技中签率0.018% + 千问办公上线GLM-5.3和DeepSeek V4 Pro + 黄仁勋推AI算力残值担保",
+  "titleEn": "AI News | 2026-08-16",
   "summary": "今日AI行业五大看点：SpaceX正式完成对Cursor母公司Anysphere的收购，成交价600亿美元，马斯克拿下AI编程赛道最重要棋子；Anthropic最快10月上市，投资者给出2万亿美元估值，将超越SpaceX成史上最大IPO；宇树科技科创板IPO中签率0.0181%创历史新低，场外暗盘部分中介出价520元/股；阿里千问办公首发上线GLM-5.3和DeepSeek V4 Pro两大模型；黄仁勋联手华尔街六大资管巨头推AI算力残值担保机制，将AI算力打造为独立资产类别。",
+  "summaryEn": "AI news summary for 2026-08-16.",
   "newsItems": [
     {
       "title": "SpaceX正式完成收购Cursor母公司Anysphere，成交价600亿美元",
@@ -2994,7 +3132,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-08-15",
   "title": "AI新闻 | 中国医生用GPT-5.6破解22年数学猜想 + 具身智能半年融资935亿 + 华强北AI眼镜销量翻倍 + DeepSeek Harness架构革新 + 谷歌AI人才大地震",
+  "titleEn": "AI News | 2026-08-15",
   "summary": "今日AI行业五大看点：北京协和医院金山木医生用GPT-5.6仅16小时证明了困扰数学界22年的Crouzeix猜想，开创AI辅助数学证明先河；具身智能赛道持续火爆，2026上半年国内融资总额突破935亿元同比增长5倍；华强北AI眼镜销量激增100%，AI产品全品类销售额增长55%；DeepSeek Harness发布引发架构讨论，探索AI自我修改能力；谷歌首席科学家Jeff Dean离职，DeepMind重组，前沿AI研发面临动荡。",
+  "summaryEn": "AI news summary for 2026-08-15.",
   "newsItems": [
     {
       "title": "中国医生用GPT-5.6破解22年数学难题，Crouzeix本人确认正确",
