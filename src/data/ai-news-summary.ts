@@ -23,7 +23,6 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
-,
 {
   "date": "2026-10-23",
   "title": "AI新闻 | 36氪首发丨金属3D打印企业完成数千万元融资，已交付商业航天...",
