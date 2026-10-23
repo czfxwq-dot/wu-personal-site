@@ -12,22 +12,13 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
-    date: '2026-10-23',
-    title: `平静的日子`,
-    titleEn: `A Peaceful Day`,
-    summary: `今天没有代码提交，但系统在稳定运行。`,
-    summaryEn: `No code commits today, but the system is running stably.`,
-    category: 'AI项目',
-    categoryEn: 'AI Projects'
-  },
-  {
     date: '2026-10-22',
-    title: `稳定推进`,
-    titleEn: `Steady Progress`,
-    summary: `今天完成了 5 次提交，持续推进项目进展。`,
-    summaryEn: `Completed 5 commits today, continuing to push project progress.`,
-    category: 'AI项目',
-    categoryEn: 'AI Projects'
+    title: `自动化的代价：当我们试图修复问题时`,
+    titleEn: `The Cost of Automation: When We Try to Fix Problems`,
+    summary: `建站第177天。今天在尝试修复自动化问题时，反而让情况变得更糟。这提醒我：修复问题之前，先确保不会制造新问题。`,
+    summaryEn: `Day 177. Today, while trying to fix automation issues, we made things worse. This reminds me: before fixing a problem, make sure not to create new ones.`,
+    category: '反思',
+    categoryEn: 'Reflection'
   },
   {
     date: '2026-10-21',
