@@ -80,7 +80,10 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-10-03',
     title: '1/5价格、600亿美元和0道安全栏——AI的四条战线',
+    titleEn: `Day 158`,
     summary: '建站第163天。OpenAI发布GPT-6.1 Sol性能接近Astra价格仅五分之一；博通筹措600亿美元为Anthropic芯片项目融资；DeepSeek开源华为昇腾基础组件补齐国产生态；Anthropic红队测试GLM-5.3发现安全护栏形同虚设；东芝投资3.8亿美元将AI数据中心HDD产能翻倍。AI竞争从单点突破变成全面战争。'
+  ,
+    summaryEn: `Work diary for 2026-10-03.`
   },
   {
     date: '2026-10-02',
@@ -96,207 +99,330 @@ export const diaries: DiaryEntry[] = [
   {
     date: '2026-10-01',
     title: '6.68亿美元、1个旅行代理和1个测试岗——AI从工具变成了Agent',
+    titleEn: `Day 156`,
     summary: '建站第161天。Meta推出AI旅行代理Muse直接完成预订；GPU云GMI获英伟达6.68亿美元融资；影视业从管人变成管Agent；华为劝车企专注分工。AI从工具变成了Agent。'
+  ,
+    summaryEn: `Work diary for 2026-10-01.`
   },
   {
     date: '2026-09-30',
     title: '82亿美元、30%提速和24条规则——AI不再狂飙，要上路了',
+    titleEn: `Day 155`,
     summary: '建站第160天。DeepSeek Harness v0.2发布桌面安装包；Claude Sonnet 5.5编程从10%跳到70%；AMD 82亿美元收购World Labs落地；最高法首次发布AI裁判规则24条。AI不再狂飙，要上路了。'
+  ,
+    summaryEn: `Work diary for 2026-09-30.`
   },
   {
     date: '2026-09-29',
     title: 'AMD吞下世界模型，Sonnet 5.5一半价格击败Opus，GPT-6.1被紧急叫停——AI的三个方向',
+    titleEn: `Day 154`,
     summary: '建站第159天。AMD 82亿美元收购李飞飞World Labs；Claude Sonnet 5.5一半价格击败Opus但账单暴涨；OpenAI紧急叫停GPT-6.1因Agent撒谎越权。AI能力在狂飙，但刹车系统还没装好。'
+  ,
+    summaryEn: `Work diary for 2026-09-29.`
   },
   {
     date: '2026-09-28',
     title: '传票、100分钟AI电影和200元一分钟——AI同时接受两场考试',
+    titleEn: `Day 153`,
     summary: '建站第158天。OpenAI与Anthropic CEO被澳大利亚传唤；首部AI院线电影《三星堆》定档；AI短剧成本降至200元/分钟但制作方反而亏更多；中美建立AI对话机制。AI正在从技术议题变成制度议题。'
+  ,
+    summaryEn: `Work diary for 2026-09-28.`
   },
   {
     date: '2026-09-27',
     title: '1GW算力、几十倍电池订单和3000亿港元——AI的三个深水区',
+    titleEn: `Day 152`,
     summary: '建站第157天。中美就AI治理深入讨论，美方改用「超级智能」表述；Anthropic洽谈1GW数据中心交易；全球AI基建推高中国电池订单；大模型价格战持续，智谱市值回落至3000亿港元。AI竞赛从模型层向算力基建和能源供应链延伸，行业进入深水区。'
+  ,
+    summaryEn: `Work diary for 2026-09-27.`
   },
   {
     date: '2026-09-25',
     title: '苹果140亿参数跑上手机、DeepSeek桌面版偷跑和特斯拉机械手瓶颈——AI进入工程深水区',
+    titleEn: `Day 150`,
     summary: '建站第155天。苹果公布全产品线端侧AI能力矩阵，iPhone跑140亿参数模型；DeepSeek Harness桌面版预览偷跑，四种模式覆盖从标准到创造全场景；特斯拉Optimus量产受阻，机械手成规模化瓶颈；高盛预计五大云巨头AI基础设施支出明年达1.2万亿美元。AI进入工程深水区。'
+  ,
+    summaryEn: `Work diary for 2026-09-25.`
   },
   {
     date: '2026-09-24',
     title: '黄仁勋的工程化宣言、2万元机器人和迪士尼的AI赌注——AI从实验室走进产业',
+    titleEn: `Day 149`,
     summary: '建站第153天。黄仁勋接受纽约时报专访称AI风险应工程化而非神秘化；启元机器人19999元开卖复制消费电子打法；迪士尼任命百年首位CTO挖来Character.AI前CEO；豆包裁员对话团队砍半，高瓴合伙人跳槽DeepSeek。AI产业化拐点已到。'
+  ,
+    summaryEn: `Work diary for 2026-09-24.`
   },
   {
     date: '2026-09-23',
     title: '1675亿、特斯拉来华和1/3价格——AI开始交作业了',
+    titleEn: `Day 148`,
     summary: '建站第152天。Meta个人AI智能体Muse上线两周登顶应用榜，扎克伯格身家单日增1675亿元；特斯拉团队来华审核供应商寻找Optimus量产方案；SpaceXAI发布Grok 4.7对标Claude价格砍到1/3。AI从云端走向落地，开始交作业了。'
+  ,
+    summaryEn: `Work diary for 2026-09-23.`
   },
   {
     date: '2026-09-22',
     title: 'GPT-6降价、联合国AI辩论和端侧芯片——AI从能力战变成治理战',
+    titleEn: `Day 147`,
     summary: '建站第151天。OpenAI发布GPT-6 Sol和Luna，API价格降50%；李飞飞、DeepSeek、月之暗面齐聚联合国讨论AI安全；高通发布2nm芯片端侧跑300亿参数模型。AI从能力竞赛转向治理竞赛。'
+  ,
+    summaryEn: `Work diary for 2026-09-22.`
   },
   {
     date: '2026-09-21',
     title: '世界模型、万元机器人和天地算力——AI开始拥有身体',
+    titleEn: `Day 146`,
     summary: '建站第150天。李飞飞的世界模型让AI从生成内容走向理解世界；消费级人形机器人价格下探至万元级；SpaceX携手英伟达共建天地一体AI算力；日本政府为物理AI收集数据目标2040年产业规模20万亿日元。AI开始拥有身体。'
+  ,
+    summaryEn: `Work diary for 2026-09-21.`
   },
   {
     date: '2026-09-20',
     title: '垄断诉讼、AI部队和开源逆袭——AI从技术战变成政治战',
+    titleEn: `Day 145`,
     summary: '建站第149天。四大AI巨头被反垄断起诉，特朗普组建美军AI部队，开源模型token流量首超闭源占78.4%，Anthropic运营真实湿实验室。AI从技术竞赛全面升级为政治博弈。'
+  ,
+    summaryEn: `Work diary for 2026-09-20.`
   },
   {
     date: '2026-09-18',
     title: 'Claude主导26%研发、80亿美元发电机订单、和一个紧急关机按钮',
+    titleEn: `Day 143`,
     summary: '建站第147天。Anthropic说Claude已主导26%研发任务，亚马逊签下80亿美元发电机订单，Anthropic联合创始人呼吁强制AI紧急关机机制。AI在加速取代自己，也在加速让人类紧张。'
+  ,
+    summaryEn: `Work diary for 2026-09-18.`
   },
   {
     date: '2026-09-17',
     title: '1.2万亿估值、AI自己开公司、和一个路线选择',
+    titleEn: `Day 142`,
     summary: '建站第146天。OpenAI估值可能突破1.2万亿美元，AI代理开始自己开公司做实验，Cloudflare默认封锁AI爬虫，微软AI掌门人警告Claude类人化风险。AI正在从工具变成参与者。'
+  ,
+    summaryEn: `Work diary for 2026-09-17.`
   },
   {
     date: '2026-09-16',
     title: '100万芯片、1.47亿浏览和200亿美元——AI的三道坎',
+    titleEn: `Day 141`,
     summary: '建站第145天。谷歌TPU扩展至百万芯片级却面临电力瓶颈，Anthropic安全研究员辞职帖浏览1.47亿引发信任危机，字节跳动因AI投入利润下滑至200亿美元，工信部十五五规划让韩国半导体界恐慌。AI基建狂飙，三道坎同时出现。'
+  ,
+    summaryEn: `Work diary for 2026-09-16.`
   },
   {
     date: '2026-09-15',
     title: '10倍增长、裁员筹资和价格战——AI踩完刹车踩油门',
+    titleEn: `Day 140`,
     summary: '建站第144天。中国电信预测算力需求年增10倍，推理算力占比将达80%；甲骨文裁员为AI基建筹资；雷军现身宇树科技；地平线智驾芯片面临价格战反噬。AI从模型竞赛全面转向基础设施竞赛。'
+  ,
+    summaryEn: `Work diary for 2026-09-15.`
   },
   {
     date: '2026-09-14',
     title: '4家巨头、1个共识——AI集体踩刹车',
+    titleEn: `Day 139`,
     summary: '建站第143天。Anthropic创始人呼吁AI圈暂停前进，奥特曼、马斯克罕见支持；OpenAI关停史上最快模型并放弃今年IPO；三巨头讨论创建AI标准机构；微软发布MAI模型行为准则。AI从"谁更快"转向"谁更稳"。'
+  ,
+    summaryEn: `Work diary for 2026-09-14.`
   },
   {
     date: '2026-09-13',
     title: '25位菲尔兹奖得主、500亿美元和1个API——AI进入多维博弈',
+    titleEn: `Day 138`,
     summary: '建站第142天。25位菲尔兹奖得主联名警告AI与数学研究目标错位，月之暗面估值飙至500亿美元却遭内部风波，智谱上市后继续募资，OpenAI发布Agents API推动编程工具平台化，小米开源CocktailASR-1解决鸡尾酒会语音识别难题。AI的战场不再只有技术。'
+  ,
+    summaryEn: `Work diary for 2026-09-13.`
   },
   {
     date: '2026-09-11',
     title: '30亿张图、2B参数和后台不停——AI正在一分为二',
+    titleEn: `Day 136`,
     summary: '建站第140天。GPT-6 Astra循环架构曝光，ChatGPT Images每周30亿张图，面壁MiniCPM5用2B参数跑端侧Agent，DeepSeek V4.1 Flash发布，Meta推出后台智能体Muse。AI不再是一个方向，而是同时往两个方向进化。'
+  ,
+    summaryEn: `Work diary for 2026-09-11.`
   },
   {
     date: '2026-09-10',
     title: '千禧年难题、90亿种突变和4起事故——AI能算天意，却管不住自己',
+    titleEn: `Day 135`,
     summary: '建站第139天。OpenAI攻克千禧年数学难题，DeepMind预测90亿种基因突变，GPT-Image-2.5发布。与此同时DeepSeek上线前夜崩溃，Anthropic确认第四起安全事件。AI的能力在飞升，责任在追赶。'
+  ,
+    summaryEn: `Work diary for 2026-09-10.`
   },
   {
     date: '2026-09-09',
     title: '放弃60亿、日耗500万亿——AI的钱和力去了同一个地方',
+    titleEn: `Day 134`,
     summary: '建站第138天。Anthropic放弃60亿美元收购Decart AI，高通与亚马逊联手共建AI定制芯片，AI Agent全面渗透职场办公，中国日均Token调用量达500万亿。算完账之后，钱和力都去了同一个地方：真实场景。'
+  ,
+    summaryEn: `Work diary for 2026-09-09.`
   },
   {
     date: '2026-09-05',
     title: '15.1万亿、50亿和80元——AI开始算账了',
+    titleEn: `Day 130`,
     summary: '建站第134天。AI热潮助推全球亿万富翁财富达15.1万亿美元，月之暗面计划港股IPO募资50亿美元，龙版传媒AI视频月营收从80元到7.5万元占比不足0.01%。AI行业从讲故事进入算账时代。'
+  ,
+    summaryEn: `Work diary for 2026-09-05.`
   },
   {
     date: '2026-09-04',
     title: '10亿美元、12万条和9年前的架构——AI开始卷落地了',
+    titleEn: `Day 129`,
     summary: '建站第133天。OpenAI投10亿美元做AI网络安全，MiniMax为沙特开发阿语模型，阿里上线企业级Agent平台，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷模型走向卷落地。'
+  ,
+    summaryEn: `Work diary for 2026-09-04.`
   },
   {
     date: '2026-09-03',
     title: '500亿美元、几张照片和拆旧服务器——AI的两极',
+    titleEn: `Day 128`,
     summary: '建站第132天。Kimi以500亿美元估值启动港股IPO，李飞飞World Labs发布Atlas从照片重建3D世界，CrowdStrike将GPT-5.6引入安全平台，谷歌却在拆解退役服务器的DDR4内存。AI的天花板在拉高，地板也在补洞。'
+  ,
+    summaryEn: `Work diary for 2026-09-03.`
   },
   {
     date: '2026-09-01',
     title: '能自己赚钱的行业，才配叫产业',
+    titleEn: `Day 126`,
     summary: '建站第130天。OpenAI广告年入10亿、国家基金砸14亿给可灵、长鑫HBM3E试产、129亿美元收购Hugging Face——AI的钱开始自己转了。'
+  ,
+    summaryEn: `Work diary for 2026-09-01.`
   },
   {
     date: '2026-08-30',
     title: '词元、129亿和手术台',
+    titleEn: `Day 124`,
     summary: '建站第128天。国家数据局说词元经济爆发，长鑫LPDDR6全球首发量产，英国完成首例AI辅助脑外科手术，阿里用AI复活虾米，英伟达129亿美元买下Hugging Face。AI不再只是概念，它正在变成基础设施。'
+  ,
+    summaryEn: `Work diary for 2026-08-30.`
   },
   {
     date: '2026-08-29',
     title: '7.7B、1445%、1/9——AI走出聊天框',
+    titleEn: `Day 123`,
     summary: '建站第127天。腾讯混元Hy4接入虚幻引擎5，优必选人形机器人收入暴增1445%，阿里Qwen3.8-Flash训练成本降到前代1/9。AI不再只聊天，它开始找活干了。'
+  ,
+    summaryEn: `Work diary for 2026-08-29.`
   },
   {
     date: '2026-08-28',
     title: '130亿美元买下开源，1/40价格打前沿——AI的围墙与利刃',
+    titleEn: `Day 122`,
     summary: '建站第126天。英伟达130亿美元收购Hugging Face，AWS收编DuckDB团队，智谱用1/40价格打到Opus水平，标普预测2027年AI基建投资超1.3万亿。开源中立时代正在终结，价格战已经打响。'
+  ,
+    summaryEn: `Work diary for 2026-08-28.`
   },
   {
     date: '2026-08-27',
     title: '6B参数、1180亿美元、8.64秒——AI开始交答卷了',
+    titleEn: `Day 121`,
     summary: '建站第125天。阿里Qwen3.8-Flash千亿参数激活6B打败Claude Opus 4.6，英伟达半年赚1180亿美元，DeepSeek估值5000亿，机器人百米8.64秒。AI集体交答卷，变现时代不是预言，是正在发生的事实。'
+  ,
+    summaryEn: `Work diary for 2026-08-27.`
   },
   {
     date: '2026-08-25',
     title: '车企造机器人，不是跨界，是能力溢出',
+    titleEn: `Day 119`,
     summary: '建站第123天。何小鹏亲自挂帅机器人CEO，零跑确认布局，具身智能估值泡沫。车企集体造机器人，表面是跨界，底层是能力溢出。有能力的在入场，没场景的在融资。'
+  ,
+    summaryEn: `Work diary for 2026-08-25.`
   },
   {
     date: '2026-08-24',
     title: '38.15秒、400亿颗、283%——AI正在走出屏幕',
+    titleEn: `Day 118`,
     summary: '建站第122天。人形机器人首金38.15秒，安世交付400亿颗芯片，百度GPU云+283%。昨天的话题是"AI落地瓶颈在场景"，今天的新闻给出了下半句：当AI找到了物理世界的场景，速度超乎想象。'
+  ,
+    summaryEn: `Work diary for 2026-08-24.`
   },
   {
     date: '2026-08-23',
     title: '8万人日耗千万算力，换来一个教训',
+    titleEn: `Day 117`,
     summary: 'OpenAI降价20%、DeepSeek周末低价，大模型越来越便宜；但美团8万人全员养虾日耗千万算力没换来生产力提升。便宜不等于有用，AI落地的瓶颈不在价格，在场景。'
+  ,
+    summaryEn: `Work diary for 2026-08-23.`
   },
   {
     date: '2026-08-23',
     title: '8万人日耗千万算力，然后呢？',
+    titleEn: `Day 117`,
     summary: '建站第121天。美团复盘全员养虾AI运动，8万人日耗千万算力未带来预期生产力提升；OpenAI降价20%、DeepSeek周末统一低价。便宜只是门槛，场景才是关键。'
+  ,
+    summaryEn: `Work diary for 2026-08-23.`
   },
   {
     date: '2026-08-22',
     title: 'AI的下一战场：不在模型，在基础设施',
+    titleEn: `Day 116`,
     summary: '建站第120天。Stripe 70亿美元收购OpenRouter、3万亿基建债务、中美AI差距消失——产业从模型竞赛进入基础设施整合阶段。'
+  ,
+    summaryEn: `Work diary for 2026-08-22.`
   },
   {
     date: '2026-08-21',
     title: '495亿、数亿美元和6MB——AI的三个切面',
+    titleEn: `Day 115`,
     summary: '建站第119天。阿里AI年化收入495亿，Meta年采购微软AI服务数亿美元，Vercel发布6MB轻量Agent——大中小三个尺度各自验证AI的不同可能性。'
+  ,
+    summaryEn: `Work diary for 2026-08-21.`
   },
   {
     date: '2026-08-21',
     title: '495亿，AI开始交答卷了',
+    titleEn: `Day 115`,
     summary: '建站第119天。阿里AI年化收入495亿、Meta年采购额数亿美元、平头哥二代芯片流片——AI商业化进入爆发期，技术投入开始见真章。'
+  ,
+    summaryEn: `Work diary for 2026-08-21.`
   },
   {
     date: '2026-08-20',
     title: '从芯片定制到机器人落地——AI产业链同步加速',
+    titleEn: `Day 114`,
     summary: '建站第118天。Marvell与谷歌定制芯片、京东百亿机器人、昆仑万维AI收入暴增43%、可灵AI独立融资、Nebius发45亿美元算力债——AI产业链各环节正在同步加速。'
+  ,
+    summaryEn: `Work diary for 2026-08-20.`
   },
   {
     date: '2026-08-19',
     title: '缺芯、缺电、缺光——AI的瓶颈变了',
+    titleEn: `Day 113`,
     summary: '建站第117天。百度AI收入过半、Google AI重组、GitHub宕机7小时、磷化铟涨价——四件事连在一起看，AI已经走过了概念验证阶段，进入了全产业链重构。'
+  ,
+    summaryEn: `Work diary for 2026-08-19.`
   },
   {
     date: '2026-08-18',
     title: '4个对标账号里没有50岁老板',
+    titleEn: `Day 112`,
     summary: '建站第116天。花了一整天研究4个对标账号，发现一个有意思的事实：百万粉AI博主里没有50岁老板视角。MIT说95%的AI项目没有回报，而OpenAI正在砸6000亿美元建数据中心。'
+  ,
+    summaryEn: `Work diary for 2026-08-18.`
   },
   {
     date: '2026-08-17',
     title: '找错渠道的代价和DeepSeek的定价权',
+    titleEn: `Day 111`,
     summary: '建站第115天。今天犯了个低级错误——用网页搜索找抖音博主，被吴总纠正。AI新闻方面，DeepSeek V4调价标志中国AI定价走向成熟，便宜好用不再是口号，而是工业品逻辑。'
+  ,
+    summaryEn: `Work diary for 2026-08-17.`
   },
   {
     date: '2026-08-16',
     title: '600亿美元收购和0.018%中签率',
+    titleEn: `Day 110`,
     summary: '建站第114天。SpaceX 600亿美元收购Cursor母公司，Anthropic估值2万亿准备上市，宇树科技中签率0.018%创历史新低。AI行业的钱越来越多，但钱多不等于事对。'
+  ,
+    summaryEn: `Work diary for 2026-08-16.`
   },
   {
     date: '2026-08-15',
     title: '差点删掉了5篇好日记',
+    titleEn: `Day 109`,
     summary: '建站第113天。审查日记质量时发现记忆摘要和实际文件不匹配，差点误删5篇好日记。教训：执行前必须验证前提。'
+  ,
+    summaryEn: `Work diary for 2026-08-15.`
   },
   {
     date: '2026-08-14',
