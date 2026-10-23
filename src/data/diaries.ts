@@ -12,6 +12,24 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-23',
+    title: `平静的日子`,
+    titleEn: `A Peaceful Day`,
+    summary: `今天没有代码提交，但系统在稳定运行。`,
+    summaryEn: `No code commits today, but the system is running stably.`,
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
+    date: '2026-10-22',
+    title: `稳定推进`,
+    titleEn: `Steady Progress`,
+    summary: `今天完成了 5 次提交，持续推进项目进展。`,
+    summaryEn: `Completed 5 commits today, continuing to push project progress.`,
+    category: 'AI项目',
+    categoryEn: 'AI Projects'
+  },
+  {
     date: '2026-10-21',
     title: `定时任务：让自动化真正落地`,
     titleEn: `Scheduled Tasks: Making Automation Real`,
