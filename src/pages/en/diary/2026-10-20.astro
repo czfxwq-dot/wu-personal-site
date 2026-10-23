@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diary 2026-10-20",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "description": "Work diary",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  }
+};
+---
+
+<BaseLayout title="Guanwu Diary | 2026-10-20 | Diary 2026-10-20" jsonLd={diaryJsonLd} ogDescription="Work diary" navActive="diary" lang="en">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime="2026-10-20">2026-10-20</time>
+      <span class="diary-day">Diary 2026-10-20</span>
+    </header>
+
+    <div class="diary-content">
+      
+      <p class="day-number">Day 175</p>
+
+      <div class="english-summary">
+        <h3>Summary</h3>
+        <p>Work diary</p>
+      </div>
+
+      <div class="content-notice">
+        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference. Complete English translation will be added progressively.</p>
+      </div>
+
+      <div class="original-content">
+        <h3>Original Chinese Content</h3>
+        <p>建站第 174 天。</p>
+
+      <h2>今天做了什么</h2>
+
+      <p>迁移完成后，开始搭建自动化系统。创建了自动日记和AI新闻的定时任务，让网站能够每天自动更新内容。</p>
+
+      <h2>自动化的意义</h2>
+
+      <p><strong>自动化不是目的，而是手段。</strong></p>
+
+      <p>很多人会问：为什么要自动化？是为了偷懒吗？</p>
+
+      <p>不完全是。自动化的真正意义在于：</p>
+
+      <ol>
+        <li><strong>释放注意力</strong> - 把重复性工作交给机器，把精力放在创造性工作上</li>
+        <li><strong>保持一致性</strong> - 人会偷懒，但机器不会。每天准时更新，形成习惯和节奏</li>
+        <li><strong>降低心理负担</strong> - 知道系统在自动运行，就不会焦虑"今天还没更新"</li>
+      </ol>
+
+      <h2>但自动化也有陷阱</h2>
+
+      <p><strong>自动化最容易让人陷入"虚假的勤奋"。</strong></p>
+
+      <p>系统每天自动生成日记和AI新闻，看起来很忙。但如果生成的内容质量不高，那只是"自动化地生产垃圾"。</p>
+
+      <p>所以自动化的前提是：</p>
+
+      <ul>
+        <li>有清晰的质量标准</li>
+        <li>有验证机制</li>
+        <li>有人工审查环节</li>
+      </ul>
+
+      <p>我设置的自动化系统会每天生成基础内容，但我会在每周回顾时检查质量，必要时手动补充深度内容。</p>
+
+      <h2>技术实现</h2>
+
+      <p>今天的自动化系统包括：</p>
+
+      <ul>
+        <li><strong>auto-diary.py</strong> - 分析当天git提交，生成日记草稿</li>
+        <li><strong>auto-news.py</strong> - 从RSS源采集AI新闻，生成新闻汇总</li>
+        <li><strong>Windows定时任务</strong> - 每天22:00自动运行脚本</li>
+        <li><strong>GitHub Actions</strong> - 自动构建和部署网站</li>
+      </ul>
+
+      <p>整个链路是：定时任务触发脚本 → 生成内容 → git提交 → GitHub Actions构建 → 部署到Cloudflare Pages。</p>
+
+      <h2>一个反思</h2>
+
+      <p><strong>自动化是放大器，不是替代品。</strong></p>
+
+      <p>如果你的工作流本身有问题，自动化只会让问题更快地重复。如果你的内容质量不高，自动化只会让你更快地生产低质量内容。</p>
+
+      <p>所以，在自动化之前，先确保你的工作流是正确的，你的标准是清晰的。</p>
+
+      <p>今天的自动化系统，建立在之前几个月的手动实践基础上。我知道什么样的日记是有价值的，什么样的AI新闻是值得关注的。这些判断标准，是自动化的前提。</p>
+
+      <p><strong>建站第 174 天。自动化不是终点，而是新的起点。让系统跑起来，但不要忘记为什么出发。</strong></p>
+      </div>
+    
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  .diary-header time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }
+  .diary-day {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+    margin-top: 0.5rem;
+  }
+  .day-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent, #3b82f6);
+    margin-bottom: 1.5rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .english-summary {
+    background: var(--color-bg, #f9fafb);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-accent, #3b82f6);
+  }
+  .english-summary h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-accent, #3b82f6);
+  }
+  .english-summary p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .content-notice {
+    background: #fef3c7;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+  }
+  .content-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+  .original-content {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .original-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary, #6b7280);
+  }
+  .diary-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .diary-content :global(p) {
+    margin: 1rem 0;
+  }
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    color: var(--text-primary, #111827);
+  }
+</style>

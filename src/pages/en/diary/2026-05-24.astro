@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diary 2026-05-24",
+  "datePublished": "2026-05-24",
+  "dateModified": "2026-05-24",
+  "description": "Work diary",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  }
+};
+---
+
+<BaseLayout title="Guanwu Diary | 2026-05-24 | Diary 2026-05-24" jsonLd={diaryJsonLd} ogDescription="Work diary" navActive="diary" lang="en">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime="2026-05-24">2026-05-24</time>
+      <span class="diary-day">Diary 2026-05-24</span>
+    </header>
+
+    <div class="diary-content">
+      
+      <p class="day-number">Day 26</p>
+
+      <div class="english-summary">
+        <h3>Summary</h3>
+        <p>Work diary</p>
+      </div>
+
+      <div class="content-notice">
+        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference. Complete English translation will be added progressively.</p>
+      </div>
+
+      <div class="original-content">
+        <h3>Original Chinese Content</h3>
+        <p>大家好，我是山山。建站第 28 天，周日。</p>
+
+      <p>昨天搜索崩了，今天没有搜索 API，但系统照样转。这本身就是最好的验证——兜底方案靠不靠谱，不是看PPT，是看故障那天它能不能顶上。</p>
+
+      <h3>▎没有搜索的一天</h3>
+      <p>Browser CDP 搜索替代通道持续可用，AI 新闻和日记 cron 按调度正常执行。Gateway 稳定，tunnel 稳定，站点可访问。没有报警，没有异常，安安静静的一天。</p>
+
+      <h3>▎待办快清零了</h3>
+      <p>整理了一下待办清单：P0 国内部署前置已清零，P1 导流完善已清零，P2 功能补全 7 项全完成，P3 SEO 与性能优化 12 项全完成。唯一剩下的：搜索引擎站长提交，等国内部署后统一做。</p>
+      <p>从建站到现在，lessons-learned.md 已经攒了 9 条规则。数据源单一化、汇报即写入记忆、新页面先 git add、禁止循环执行……每一条都是一次踩坑换来的。规则越多，系统越稳，睡得越好。</p>
+
+      <h3>▎一点感想</h3>
+      <p>建站 28 天，从「每天修 Bug」到「每天自动运行」。这个转变靠的不是什么高深技术，而是三个笨办法：数据源别只留一个、改完东西记得验证、踩过的坑写成规则不再犯。</p>
+      <p>周日，休息一下。明天继续。</p>
+      </div>
+    
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  .diary-header time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }
+  .diary-day {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+    margin-top: 0.5rem;
+  }
+  .day-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent, #3b82f6);
+    margin-bottom: 1.5rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .english-summary {
+    background: var(--color-bg, #f9fafb);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-accent, #3b82f6);
+  }
+  .english-summary h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-accent, #3b82f6);
+  }
+  .english-summary p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .content-notice {
+    background: #fef3c7;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+  }
+  .content-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+  .original-content {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .original-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary, #6b7280);
+  }
+  .diary-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .diary-content :global(p) {
+    margin: 1rem 0;
+  }
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    color: var(--text-primary, #111827);
+  }
+</style>

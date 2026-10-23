@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diary 2026-10-23",
+  "datePublished": "2026-10-23",
+  "dateModified": "2026-10-23",
+  "description": "Work diary",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  }
+};
+---
+
+<BaseLayout title="Guanwu Diary | 2026-10-23 | Diary 2026-10-23" jsonLd={diaryJsonLd} ogDescription="Work diary" navActive="diary" lang="en">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime="2026-10-23">2026-10-23</time>
+      <span class="diary-day">Diary 2026-10-23</span>
+    </header>
+
+    <div class="diary-content">
+      
+      <p class="day-number">Day 178</p>
+
+      <div class="english-summary">
+        <h3>Summary</h3>
+        <p>Work diary</p>
+      </div>
+
+      <div class="content-notice">
+        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference. Complete English translation will be added progressively.</p>
+      </div>
+
+      <div class="original-content">
+        <h3>Original Chinese Content</h3>
+        <p>建站第 178 天。</p>
+
+      <h2>今日工作</h2>
+
+      <p>更新了 5 篇日记，采集了 6 条 AI 新闻。</p>
+
+      <h2>关键提交</h2>
+
+      <ul>
+      <li>新增：添加10-02和10-04的反思型日记</li>
+      <li>新增：添加10-22的AI新闻</li>
+      <li>修复：修复AI新闻数据文件开头的多余逗号</li>
+      <li>修复：修复AI新闻数据文件语法错误（缺少逗号）</li>
+      </ul>
+
+      <h2>今日反思</h2>
+
+      <p><strong>保持节奏，持续输出。</strong></p>
+
+      <h2>明日计划</h2>
+
+      <p>继续保持稳定的开发节奏，关注内容质量和技术改进。</p>
+      </div>
+    
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  .diary-header time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }
+  .diary-day {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+    margin-top: 0.5rem;
+  }
+  .day-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent, #3b82f6);
+    margin-bottom: 1.5rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .english-summary {
+    background: var(--color-bg, #f9fafb);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-accent, #3b82f6);
+  }
+  .english-summary h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-accent, #3b82f6);
+  }
+  .english-summary p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .content-notice {
+    background: #fef3c7;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+  }
+  .content-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+  .original-content {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .original-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary, #6b7280);
+  }
+  .diary-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .diary-content :global(p) {
+    margin: 1rem 0;
+  }
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    color: var(--text-primary, #111827);
+  }
+</style>

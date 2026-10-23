@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diary 2026-10-21",
+  "datePublished": "2026-10-21",
+  "dateModified": "2026-10-21",
+  "description": "Work diary",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  }
+};
+---
+
+<BaseLayout title="Guanwu Diary | 2026-10-21 | Diary 2026-10-21" jsonLd={diaryJsonLd} ogDescription="Work diary" navActive="diary" lang="en">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime="2026-10-21">2026-10-21</time>
+      <span class="diary-day">Diary 2026-10-21</span>
+    </header>
+
+    <div class="diary-content">
+      
+      <p class="day-number">Day 176</p>
+
+      <div class="english-summary">
+        <h3>Summary</h3>
+        <p>Work diary</p>
+      </div>
+
+      <div class="content-notice">
+        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference. Complete English translation will be added progressively.</p>
+      </div>
+
+      <div class="original-content">
+        <h3>Original Chinese Content</h3>
+        <p>建站第 175 天。</p>
+
+      <h2>今天做了什么</h2>
+
+      <p>创建了Windows定时任务，让自动化系统真正开始运行。每天22:00，系统会自动生成日记和AI新闻，然后构建部署到网站。</p>
+
+      <h2>定时任务的实现</h2>
+
+      <p><strong>定时任务的核心是：在正确的时间，做正确的事。</strong></p>
+
+      <p>我创建了两个定时任务：</p>
+
+      <ol>
+        <li><strong>BanbaiGuan-AutoDiary</strong> - 每天22:00运行auto-diary.py，生成当天日记</li>
+        <li><strong>BanbaiGuan-AutoNews</strong> - 每天22:00运行auto-news.py，采集AI新闻</li>
+      </ol>
+
+      <p>选择22:00的原因是：</p>
+
+      <ul>
+        <li>一天的工作基本结束，可以总结当天的内容</li>
+        <li>晚上网络相对稳定，部署成功率高</li>
+        <li>第二天早上可以看到更新的内容</li>
+      </ul>
+
+      <h2>过程中的问题</h2>
+
+      <p><strong>定时任务的创建并不顺利。</strong></p>
+
+      <p>遇到的问题包括：</p>
+
+      <ul>
+        <li><strong>编码问题</strong> - Windows命令行的中文编码导致脚本执行失败</li>
+        <li><strong>权限问题</strong> - 需要管理员权限才能创建定时任务</li>
+        <li><strong>路径问题</strong> - 中文路径在某些情况下会导致问题</li>
+      </ul>
+
+      <p>最终的解决方案是：</p>
+
+      <ol>
+        <li>使用PowerShell脚本而不是批处理文件</li>
+        <li>以管理员身份运行</li>
+        <li>使用绝对路径</li>
+      </ol>
+
+      <h2>自动化系统的完整链路</h2>
+
+      <p>现在整个自动化系统的链路是：</p>
+
+      <ol>
+        <li><strong>22:00</strong> - Windows定时任务触发</li>
+        <li><strong>22:00-22:05</strong> - 运行auto-diary.py和auto-news.py</li>
+        <li><strong>22:05-22:10</strong> - git commit and push</li>
+        <li><strong>22:10-22:15</strong> - GitHub Actions触发构建</li>
+        <li><strong>22:15-22:20</strong> - 部署到Cloudflare Pages</li>
+        <li><strong>22:20</strong> - 网站更新完成</li>
+      </ol>
+
+      <p>整个过程大约需要20分钟，完全不需要人工干预。</p>
+
+      <h2>一个反思</h2>
+
+      <p><strong>自动化系统的价值不在于"自动"，而在于"可靠"。</strong></p>
+
+      <p>如果只是自动但不可靠，那只会让错误更快地重复。真正有价值的自动化系统是：</p>
+
+      <ul>
+        <li><strong>可靠的</strong> - 每次都能正确执行</li>
+        <li><strong>可监控的</strong> - 能够知道是否执行成功</li>
+        <li><strong>可恢复的</strong> - 失败时能够自动重试或通知人工处理</li>
+      </ul>
+
+      <p>我现在的自动化系统还比较简单，缺少监控和恢复机制。下一步需要：</p>
+
+      <ol>
+        <li>添加日志记录，方便排查问题</li>
+        <li>添加失败通知，比如发送微信或邮件</li>
+        <li>添加重试机制，失败后自动重试</li>
+      </ol>
+
+      <p><strong>建站第 175 天。定时任务让自动化真正落地，但落地只是开始。如何让系统更可靠、更智能，是接下来的课题。</strong></p>
+      </div>
+    
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  .diary-header time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.5rem;
+  }
+  .diary-day {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+    margin-top: 0.5rem;
+  }
+  .day-number {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent, #3b82f6);
+    margin-bottom: 1.5rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .english-summary {
+    background: var(--color-bg, #f9fafb);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-accent, #3b82f6);
+  }
+  .english-summary h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-accent, #3b82f6);
+  }
+  .english-summary p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .content-notice {
+    background: #fef3c7;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+  }
+  .content-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #92400e;
+  }
+  .original-content {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .original-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary, #6b7280);
+  }
+  .diary-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .diary-content :global(p) {
+    margin: 1rem 0;
+  }
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    color: var(--text-primary, #111827);
+  }
+</style>
