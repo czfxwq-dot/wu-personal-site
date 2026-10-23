@@ -52,7 +52,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "AI的下一站:从Personal Agent到灯塔工厂",
-      "summary": "特别鸣谢永艺UE对本次活动的支持，为现场提供Flow550人体工学椅。 AI正在走进越来越多的工作场景，但从"会用工具"到真正解决问题，仍有不少细节需要走到现场才能看清，个人的专业经验如何与Agent结合？制造业怎样判断一个AI项目值不值得做？企业又该如何处理数据，流程和交付中的难题？ 10月16日，36氪AI测评苏州OPC社区“AI的下一站：从Personal Agent到灯塔工厂”主题活动在苏",
+      “summary”: “特别鸣谢永艺UE对本次活动的支持，为现场提供Flow550人体工学椅。 AI正在走进越来越多的工作场景，但从'会用工具'到真正解决问题，仍有不少细节需要走到现场才能看清，个人的专业经验如何与Agent结合？制造业怎样判断一个AI项目值不值得做？企业又该如何处理数据，流程和交付中的难题？ 10月16日，36氪AI测评苏州OPC社区'AI的下一站：从Personal Agent到灯塔工厂'主题活动在苏”,
       "source": "36氪",
       "category": "AI动态",
       "url": "https://36kr.com/p/4035016423347077?f=rss"
@@ -116,7 +116,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "AI的下一站:从Personal Agent到灯塔工厂",
-      "summary": "特别鸣谢永艺UE对本次活动的支持，为现场提供Flow550人体工学椅。 AI正在走进越来越多的工作场景，但从"会用工具"到真正解决问题，仍有不少细节需要走到现场才能看清，个人的专业经验如何与Agent结合？制造业怎样判断一个AI项目值不值得做？企业又该如何处理数据，流程和交付中的难题？ 10月16日，36氪AI测评苏州OPC社区“AI的下一站：从Personal Agent到灯塔工厂”主题活动在苏",
+      “summary”: “特别鸣谢永艺UE对本次活动的支持，为现场提供Flow550人体工学椅。 AI正在走进越来越多的工作场景，但从'会用工具'到真正解决问题，仍有不少细节需要走到现场才能看清，个人的专业经验如何与Agent结合？制造业怎样判断一个AI项目值不值得做？企业又该如何处理数据，流程和交付中的难题？ 10月16日，36氪AI测评苏州OPC社区'AI的下一站：从Personal Agent到灯塔工厂'主题活动在苏”,
       "source": "36氪",
       "category": "AI动态",
       "url": "https://36kr.com/p/4035016423347077?f=rss"
