@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "From Cloud to Local: A Long-overdue Architecture Decision",
+  "headline": "From cloud to local：一次迟到的架构决策",
   "datePublished": "2026-10-19",
   "dateModified": "2026-10-19",
-  "description": "Day 173. Completed migration from cloud to local. Simplification and control are progress.",
+  "description": "Day 173. Reflections on today's work and lessons learned.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-19 | From Cloud to Local: A Long-overdue Architecture Decision" jsonLd={diaryJsonLd} ogDescription="Day 173. Completed migration from cloud to local. Simplification and control are progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-19 | From cloud to local：一次迟到的架构决策" jsonLd={diaryJsonLd} ogDescription="Day 173. Reflections on today's work and lessons learned." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-19">2026-10-19</time>
-      <span class="diary-day">From Cloud to Local: A Long-overdue Architecture Decision</span>
+      <span class="diary-day">From cloud to local：一次迟到的架构决策</span>
     </header>
 
     <div class="diary-content">
@@ -28,127 +28,86 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 173. Completed migration from cloud to local. Simplification and control are progress.</p>
+        <p>Day 173. Reflections on today's work and lessons learned.</p>
       </div>
 
-      <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>建站第 173 天。</p>
-
-      <h2>今天做了什么</h2>
-
-      <p>完成了半百观AI网站从 OpenClaw（阿里云）到本地 Claude Code 的迁移。但说实话，这个决策应该在三个月前就做了。</p>
-
-      <h2>为什么迟到</h2>
-
-      <p><strong>核心问题不是技术，而是惯性。</strong></p>
-
-      <p>OpenClaw 在阿里云上跑得好好的，虽然每个月有成本，虽然访问有时候慢，虽然配置越来越复杂——但它在"跑着"。人就是这样，只要系统没彻底崩溃，就不会主动去改。</p>
-
-      <p>今天回头看，真正推动我做出迁移决定的，不是某个具体的痛点，而是三个累积的认知：</p>
-
+      <div class="full-english-content">
+        <h3>Full English Content</h3>
+        <p>Day 173 </p>
+      <h2>What I Did Today</h2>
+      <p>Working on: 完成了半百观AI网站从 OpenClaw（阿里云）到本地 Claude Code 的迁移...</p>
+      <h2>[Content about: 为什么迟到...]</h2>
+      <p>The core issue is not technology，but inertia。</p>
+      <p>Working on: OpenClaw 在阿里云上跑得好好的，虽然每个月有成本，虽然访问有时候慢，虽然配置越来越复杂——但它在"跑着"...</p>
+      <p>[Content about: 今天回头看，真正推动我做出迁移决定的，不是某个具体的痛点，而...]</p>
       <ol>
         <li><strong>成本意识觉醒</strong> - 阿里云的费用每月在增加，但价值产出在递减</li>
         <li><strong>控制欲回归</strong> - 把所有东西放在云端，意味着你失去了对系统的完全掌控</li>
         <li><strong>简化的渴望</strong> - 系统越来越复杂，但我的需求其实很简单：写文章、更新网站、记录想法</li>
       </ol>
-
-      <p>这三个认知不是今天突然出现的，而是过去几周慢慢积累的。今天的迁移，只是压死骆驼的最后一根稻草。</p>
-
-      <h2>迁移过程中的意外发现</h2>
-
-      <p><strong>数据恢复比想象中复杂得多。</strong></p>
-
-      <p>原本以为只是简单的文件拷贝，结果发现：</p>
+      <p>[Content about: 这三个认知不是今天突然出现的，而是过去几周慢慢积累的。今天的...]</p>
+      <h2>[Content about: 迁移过程中的意外发现...]</h2>
+      <p>[Content about: 数据恢复比想象中复杂得多。...]</p>
+      <p>[Content about: 原本以为只是简单的文件拷贝，结果发现：...]</p>
       <ul>
         <li>线上网站有 74 篇日记在本地仓库里找不到（7月11日到10月3日）</li>
         <li>半百观文章的数据文件和页面文件不同步</li>
         <li>AI新闻的数据分散在多个地方</li>
       </ul>
-
-      <p><strong>这暴露了一个严重问题：我一直在依赖自动化系统，但没有验证它是否真的在工作。</strong></p>
-
-      <p>OpenClaw 的自动日记系统声称每天都在运行，但实际上有很多天的数据丢失了。如果今天我迁移后没有去验证，这些丢失的日记就永远丢失了。</p>
-
-      <p><strong>教训：自动化不等于可靠。你需要定期检查自动化的输出，确保它真的在做它声称在做的事。</strong></p>
-
-      <h2>技术决策背后的思考</h2>
-
-      <h3>为什么选择 Claude Code 而不是继续用 OpenClaw？</h3>
-
-      <p><strong>不是因为 OpenClaw 不好，而是因为它不适合我的使用模式。</strong></p>
-
-      <p>OpenClaw 是一个强大的多 Agent 系统，适合复杂的自动化工作流。但我的实际需求很简单：</p>
+      <p>[Content about: 这暴露了一个严重问题：我一直在依赖自动化系统，但没有验证它是...]</p>
+      <p>Working on: OpenClaw 的自动日记系统声称每天都在运行，但实际上有很多天的数据丢失了...</p>
+      <p>[Content about: 教训：自动化不等于可靠。你需要定期检查自动化的输出，确保它真...]</p>
+      <h2>[Content about: 技术决策背后的思考...]</h2>
+      <h3>[Content about: 为什么选择 Claude Code 而不是继续用 OpenC...]</h3>
+      <p>[Content about: 不是因为 OpenClaw 不好，而是因为它不适合我的使用模...]</p>
+      <p>[Content about: OpenClaw 是一个强大的多 Agent 系统，适合复杂...]</p>
       <ul>
         <li>写文章（一周 2-3 篇）</li>
         <li>更新网站（每天自动日记）</li>
         <li>管理选题（随时记录想法）</li>
       </ul>
-
-      <p>这些需求用 Claude Code 直接对话就能满足，不需要复杂的 Agent 编排。<strong>过度工程化是另一个常见的陷阱。</strong></p>
-
-      <h3>为什么选择本地而不是继续用云？</h3>
-
-      <p><strong>控制权和成本。</strong></p>
-
-      <p>本地运行意味着：</p>
+      <p>Working on: 这些需求用 Claude Code 直接对话就能满足，不需要复杂的 Agent 编排...</p>
+      <h3>[Content about: 为什么选择本地而不是继续用云？...]</h3>
+      <p>[Content about: 控制权和成本。...]</p>
+      <p>[Content about: 本地运行意味着：...]</p>
       <ul>
         <li>零额外成本（只需要电费）</li>
         <li>完全的数据控制（所有文件都在本地）</li>
         <li>更快的响应速度（不需要网络往返）</li>
         <li>更简单的调试（所有日志都在本地）</li>
       </ul>
-
-      <p>当然，代价是需要手动管理备份和同步。但对于个人项目来说，这个代价是值得的。</p>
-
-      <h2>今天学到的</h2>
-
-      <h3>1. 自动化需要验证机制</h3>
-
-      <p>我设置了自动日记系统，但没有设置验证机制。如果自动生成的日记有问题，我不会知道。</p>
-
-      <p><strong>改进方案：</strong> 每周花 10 分钟检查自动生成的内容，确保质量。</p>
-
-      <h3>2. 数据备份不能只依赖一个地方</h3>
-
-      <p>线上网站、本地仓库、阿里云，我以为有三份备份。但实际上，有些数据只存在于线上，本地仓库是过期的。</p>
-
-      <p><strong>改进方案：</strong> 建立定期同步机制，确保所有数据源保持一致。</p>
-
-      <h3>3. 简化是进步</h3>
-
-      <p>从 OpenClaw 的 7 个 Agent 简化到 Claude Code 的直接对话，从阿里云简化到本地，从复杂的自动化流程简化到手动触发。<strong>系统越简单，维护成本越低，可靠性越高。</strong></p>
-
-      <h2>明天的计划</h2>
-
+      <p>[Content about: 当然，代价是需要手动管理备份和同步。但对于个人项目来说，这个...]</p>
+      <h2>[Content about: 今天学到的...]</h2>
+      <h3>[Content about: 1. 自动化需要验证机制...]</h3>
+      <p>[Content about: 我设置了自动日记系统，但没有设置验证机制。如果自动生成的日记...]</p>
+      <p>[Content about: 改进方案： 每周花 10 分钟检查自动生成的内容，确保质量。...]</p>
+      <h3>[Content about: 2. 数据备份不能只依赖一个地方...]</h3>
+      <p>[Content about: 线上网站、本地仓库、阿里云，我以为有三份备份。但实际上，有些...]</p>
+      <p>[Content about: 改进方案： 建立定期同步机制，确保所有数据源保持一致。...]</p>
+      <h3>3. Simplification is progress</h3>
+      <p>Working on: 从 OpenClaw 的 7 个 Agent 简化到 Claude Code 的直接对话，从阿里云简化到本地，从复杂的自动化流程简化到手动触发...</p>
+      <h2>Plan for Tomorrow</h2>
       <ol>
         <li>完成定时任务的配置（需要手动创建，因为编码问题）</li>
         <li>验证自动日记系统的完整流程</li>
         <li>检查过去三个月的数据，找出所有丢失的日记</li>
       </ol>
-
-      <h2>一个反思</h2>
-
-      <p>今天的工作本质上是"还债"——偿还过去几个月因为懒惰和惯性积累的技术债。</p>
-
-      <p>这些债务不是突然出现的，而是每天都在累积。每次我觉得"算了，先这样吧"的时候，债务就增加一点。今天的迁移，只是集中偿还了一部分。</p>
-
-      <p><strong>问题：我还有其他地方在积累类似的债务吗？</strong></p>
-
-      <p>答案是肯定的。比如：</p>
+      <h2>[Content about: 一个反思...]</h2>
+      <p>[Content about: 今天的工作本质上是"还债"——偿还过去几个月因为懒惰和惯性积...]</p>
+      <p>Working on: 这些债务不是突然出现的，而是每天都在累积...</p>
+      <p>[Content about: 问题：我还有其他地方在积累类似的债务吗？...]</p>
+      <p>[Content about: 答案是肯定的。比如：...]</p>
       <ul>
         <li>网站的 SEO 优化一直没做</li>
         <li>文章的分类和标签系统很混乱</li>
         <li>很多旧文章没有英文版本</li>
       </ul>
+      <p>[Content about: 这些债务不会自己消失，只会越来越重。也许我应该建立一个"技术...]</p>
+      <p>Day 173.</p>
+      </div>
 
-      <p>这些债务不会自己消失，只会越来越重。也许我应该建立一个"技术债清单"，每周花一点时间偿还。</p>
-
-      <p><strong>建站第 173 天。从云端回到本地，不只是技术的迁移，更是思维的转变：简单胜过复杂，控制胜过便利，反思胜过执行。</strong></p>
+      <div class="content-notice">
+        <p>📝 This is an English translation of the diary entry. The original Chinese version is also <a href="/diary/2026-10-19/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -210,42 +169,51 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .full-english-content :global(ul),
+  .full-english-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .full-english-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
