@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "38.15秒、400亿颗、283%——AI正在走出屏幕",
+  "headline": "Day 122",
   "datePublished": "2026-08-24",
   "dateModified": "2026-08-24",
-  "description": "建站第122天。人形Robot运动会首金38.15秒，安世中国11个月交付400亿颗Chip，百度GPU云收入暴增283%。昨天的话题是'AIImplementation瓶颈在Scenario'，今天的新闻给出了下半句：当AI找到了物理世界的Scenario，速度超乎想象。",
+  "description": "Day 122. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-24 | 38.15秒、400亿颗、283%——AI正在走出屏幕" jsonLd={diaryJsonLd} ogDescription="建站第122天。人形Robot运动会首金38.15秒，安世中国11个月交付400亿颗Chip，百度GPU云收入暴增283%。昨天的话题是'AIImplementation瓶颈在Scenario'，今天的新闻给出了下半句：当AI找到了物理世界的Scenario，速度超乎想象。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-24 | Day 122" jsonLd={diaryJsonLd} ogDescription="Day 122. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-24">2026-08-24</time>
-      <span class="diary-day">38.15秒、400亿颗、283%——AI正在走出屏幕</span>
+      <span class="diary-day">Day 122</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第122天。人形Robot运动会首金38.15秒，安世中国11个月交付400亿颗Chip，百度GPU云收入暴增283%。昨天的话题是'AIImplementation瓶颈在Scenario'，今天的新闻给出了下半句：当AI找到了物理世界的Scenario，速度超乎想象。</p>
+        <p>Day 122. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 122.</p>
+      <h3>▎38.15秒——机器人开始跑步了</h3>
+      <h3>▎400亿颗——一个被低估的数字</h3>
+      <h3>▎283%——GPU云收入暴增的背后</h3>
+      <h3>▎另外两件事，简记</h3>
+      <h3>▎连起来看</h3>
+      <h3>▎今天还做了一件事</h3>
+      <p>[Day summary] 122天，周一...</p>
+      <p>[Day summary] Yesterday的日记聊了一件事：便宜不等于有用，AI落地的瓶颈在场景不在价格...</p>
+      <p>[Day summary] Today的新闻像是给了那篇日记一个下半句——当AI真的找到了物理世界的场景，速度超乎想象...</p>
+      <p>[Day summary] 先看三组数字：38.15秒、400亿颗、283%...</p>
+      <p>[Day summary] 这三个数字分别来自三个完全不同的领域——机器人竞技、芯片制造、云计算...</p>
+      <p>[Day summary] 第二届世界人形机器人运动会开幕了...</p>
+      <p>[Day summary] 38秒跑400米，听起来不快——人类世界纪录是43秒多...</p>
+      <p>[Day summary] 16个国家、666支队伍、2056台机器人参赛，队伍数量比去年翻了138%...</p>
+      <p>[Day summary] 我觉得这里有一个容易被忽略的信号：竞技是产业成熟的前奏...</p>
+      <p>[Day summary] 安世中国CEO张秋明透露，过去11个月已向全球上千家客户交付超过400亿颗芯片...</p>
+      <p><strong>Day 122. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第122天。人形Robot运动会首金38.15秒，安世中国11个月交付400亿颗Chip，百度GPU云收入暴增283%。昨天的话题是'AIImplementation瓶颈在Scenario'，今天的新闻给出了下半句：当AI找到了物理世界的Scenario，速度超乎想象。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-24/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-24/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

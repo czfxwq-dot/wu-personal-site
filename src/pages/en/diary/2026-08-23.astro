@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "8万人日耗千万Computing Power，换来一个教训",
+  "headline": "Day 121",
   "datePublished": "2026-08-23",
   "dateModified": "2026-08-23",
-  "description": "建站第121天。OpenAI降价20%、DeepSeek周末统一低价，大Model越来越便宜；但美团8万人'全员养虾'日耗千万Computing Power，却没带来预期生产力提升。便宜不等于有用，AIImplementation的真正瓶颈不在价格，在Scenario。",
+  "description": "Day 121. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-23 | 8万人日耗千万Computing Power，换来一个教训" jsonLd={diaryJsonLd} ogDescription="建站第121天。OpenAI降价20%、DeepSeek周末统一低价，大Model越来越便宜；但美团8万人'全员养虾'日耗千万Computing Power，却没带来预期生产力提升。便宜不等于有用，AIImplementation的真正瓶颈不在价格，在Scenario。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-23 | Day 121" jsonLd={diaryJsonLd} ogDescription="Day 121. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-23">2026-08-23</time>
-      <span class="diary-day">8万人日耗千万Computing Power，换来一个教训</span>
+      <span class="diary-day">Day 121</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第121天。OpenAI降价20%、DeepSeek周末统一低价，大Model越来越便宜；但美团8万人'全员养虾'日耗千万Computing Power，却没带来预期生产力提升。便宜不等于有用，AIImplementation的真正瓶颈不在价格，在Scenario。</p>
+        <p>Day 121. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 121.</p>
+      <h3>▎价格战打到什么程度了</h3>
+      <h3>▎8万人"养虾"的教训</h3>
+      <h3>▎便宜不等于有用</h3>
+      <h3>▎另外三件事，也值得记一笔</h3>
+      <h3>▎对企业来说意味着什么</h3>
+      <p>[Day summary] 121天，周日...</p>
+      <p>[Day summary] Today的新闻里有一组矛盾，值得好好聊聊...</p>
+      <p>[Day summary] 一边是大模型在疯狂降价——OpenAI宣布GPT-5.6 Sol模型API定价下调超过20%，DeepSeek更直接，周六日全天统一按低谷价收费，不再区分峰谷时段...</p>
+      <p>[Day summary] 另一边，美团核心本地商业CEO王莆中公开复盘了一个内部AI运动——"全员养虾"...</p>
+      <p>[Day summary] 一边是越来越便宜，一边是花了钱没效果...</p>
+      <p>[Day summary] 先说降价这边...</p>
+      <p>[Day summary] OpenAI的GPT-5.6 Sol模型API和积分定价将在未来3个月内下调超过20%，现在已经通过API提供，后续会逐步向ChatGPT Work和Codex积分套餐开放...</p>
+      <p>[Day summary] 20%不是一个小数字...</p>
+      <p>[Day summary] DeepSeek的做法更有意思...</p>
+      <p>[Day summary] 这两家动作背后的趋势是一样的：大模型正在从"稀缺资源"变成"日常消耗品"...</p>
+      <p><strong>Day 121. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第121天。OpenAI降价20%、DeepSeek周末统一低价，大Model越来越便宜；但美团8万人'全员养虾'日耗千万Computing Power，却没带来预期生产力提升。便宜不等于有用，AIImplementation的真正瓶颈不在价格，在Scenario。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-23/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-23/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

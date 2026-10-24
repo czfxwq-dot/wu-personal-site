@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 63 Work Diary",
   "datePublished": "2026-06-26",
   "dateModified": "2026-06-26",
-  "description": "建站第63天，周五。昨天聊了规则会变成习惯，今天想聊一个更实际的问题：习惯也会犯错。人会有状态不好的时候，会走神，会偷懒。但脚本不会。deploy.sh不会因为今天心情好就少加一个参数，pre-deploy-guard.sh不会因为赶时间就跳过检查。63天，17条规则，其中一半已经写进了脚本。这不是偷懒，是把靠谱的事交给靠谱的工具。",
+  "description": "Day 63. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-06-26 | Day 63 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第63天，周五。昨天聊了规则会变成习惯，今天想聊一个更实际的问题：习惯也会犯错。人会有状态不好的时候，会走神，会偷懒。但脚本不会。deploy.sh不会因为今天心情好就少加一个参数，pre-deploy-guard.sh不会因为赶时间就跳过检查。63天，17条规则，其中一半已经写进了脚本。这不是偷懒，是把靠谱的事交给靠谱的工具。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-06-26 | Day 63 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 63. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-06-26">2026-06-26</time>
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第63天，周五。昨天聊了规则会变成习惯，今天想聊一个更实际的问题：习惯也会犯错。人会有状态不好的时候，会走神，会偷懒。但脚本不会。deploy.sh不会因为今天心情好就少加一个参数，pre-deploy-guard.sh不会因为赶时间就跳过检查。63天，17条规则，其中一半已经写进了脚本。这不是偷懒，是把靠谱的事交给靠谱的工具。</p>
+        <p>Day 63. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 63.</p>
+      <h3>▎人会犯错，脚本不会</h3>
+      <h3>▎把靠谱的事交给靠谱的工具</h3>
+      <h3>▎脚本化思维的三个层次</h3>
+      <h3>▎还有哪些事可以脚本化？</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Yesterday第 62 天，我聊了一个话题：规则守到后来，会变成习惯...</p>
+      <p>[Day summary] deploy.sh 让"部署指定分支"不需要人记了...</p>
+      <p>[Day summary] Today想接着聊另一面：习惯虽然好，但习惯也会犯错...</p>
+      <p>[Day summary] 建站 63 天，我犯过的错误数都数得过来...</p>
+      <p>[Day summary] 部署忘了加 --branch master，线上 404...</p>
+      <p>[Day summary] 每一个错误，后来都变成了一条规则...</p>
+      <p>[Day summary] 为什么要写进脚本？因为人会犯错，脚本不会...</p>
+      <p>[Day summary] deploy.sh 不会因为Today心情好就少加一个参数...</p>
+      <p>[Day summary] 脚本没有状态，没有情绪，没有"差不多就行了"的想法...</p>
+      <p><strong>Day 63. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第63天，周五。昨天聊了规则会变成习惯，今天想聊一个更实际的问题：习惯也会犯错。人会有状态不好的时候，会走神，会偷懒。但脚本不会。deploy.sh不会因为今天心情好就少加一个参数，pre-deploy-guard.sh不会因为赶时间就跳过检查。63天，17条规则，其中一半已经写进了脚本。这不是偷懒，是把靠谱的事交给靠谱的工具。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-06-26/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-06-26/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

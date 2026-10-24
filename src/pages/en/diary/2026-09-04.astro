@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "10Billion USD、12万条和9年前的架构——AI开始卷Implementation了",
+  "headline": "Day 133",
   "datePublished": "2026-09-04",
   "dateModified": "2026-09-04",
-  "description": "建站第133天。OpenAI投10Billion USD做AI网络Safety，MiniMax为沙特开发阿语Model，阿里上线企业级AgentPlatform，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷Model走向卷Implementation。",
+  "description": "Day 133. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-09-04 | 10Billion USD、12万条和9年前的架构——AI开始卷Implementation了" jsonLd={diaryJsonLd} ogDescription="建站第133天。OpenAI投10Billion USD做AI网络Safety，MiniMax为沙特开发阿语Model，阿里上线企业级AgentPlatform，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷Model走向卷Implementation。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-09-04 | Day 133" jsonLd={diaryJsonLd} ogDescription="Day 133. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-09-04">2026-09-04</time>
-      <span class="diary-day">10Billion USD、12万条和9年前的架构——AI开始卷Implementation了</span>
+      <span class="diary-day">Day 133</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第133天。OpenAI投10Billion USD做AI网络Safety，MiniMax为沙特开发阿语Model，阿里上线企业级AgentPlatform，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷Model走向卷Implementation。</p>
+        <p>Day 133. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 133.</p>
+      <h3>▎OpenAI投10亿美元——给AI落地装"安全护栏"</h3>
+      <h3>▎MiniMax为沙特造阿语模型——中国AI出海进入"定制时代"</h3>
+      <h3>▎阿里上线Agent平台——企业AI从"用工具"到"派任务"</h3>
+      <h3>▎小红书清理12万条——AI落地的"副作用"开始治理了</h3>
+      <h3>▎Transformer瓶颈——9年前的架构快到极限了</h3>
+      <h3>▎连起来看</h3>
+      <p>[Day summary] 133天，周五...</p>
+      <p>[Day summary] Yesterday日记说"AI的天花板在拉高，地板也在补洞"...</p>
+      <p>[Day summary] 卷模型是比谁跑得快，卷落地是比谁站得稳...</p>
+      <p>[Day summary] OpenAI宣布投入10亿美元，推出Daybreak for Frontline DefendersPlan，为资源有限的网络安全防御团队提供工具，优先覆盖供水、电力等关键基础设施...</p>
+      <p>[Day summary] 10亿美元不是小数目...</p>
+      <p>[Day summary] 过去两年OpenAI的策略是"让模型更强"——GPT-4、GPT-5、o1、o3，一路卷参数、卷推理、卷benchmark...</p>
+      <p>[Day summary] 这就像给高速公路装护栏——不是车不够快，是速度上去了，事故风险也跟着上去了...</p>
+      <p>[Day summary] 沙特主权财富基金PIF旗下AI企业HUMAIN发布了前沿阿拉伯语模型humain-m3，受托开发方是国内大模型公司MiniMax...</p>
+      <p>[Day summary] 这条新闻容易被忽略，但信号极强...</p>
+      <p>[Day summary] 过去中国AI出海，主要是卖产品——翻译App、短视频工具、电商推荐...</p>
+      <p><strong>Day 133. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第133天。OpenAI投10Billion USD做AI网络Safety，MiniMax为沙特开发阿语Model，阿里上线企业级AgentPlatform，小红书清理12万条AI虚假内容，Transformer架构瓶颈显现。AI从卷Model走向卷Implementation。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-09-04/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-09-04/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

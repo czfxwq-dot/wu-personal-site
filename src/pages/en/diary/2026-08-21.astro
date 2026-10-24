@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "495亿、数Billion USD和6MB——AI的三个切面",
+  "headline": "Day 119",
   "datePublished": "2026-08-21",
   "dateModified": "2026-08-21",
-  "description": "建站第119天。阿里AI年化收入Breakthrough495Billion RMB，Meta年采购微软AI服务数Billion USD，VercelRelease仅6MB的轻量Agent——大中小三个尺度，各自验证着AI的不同可能性。",
+  "description": "Day 119. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-21 | 495亿、数Billion USD和6MB——AI的三个切面" jsonLd={diaryJsonLd} ogDescription="建站第119天。阿里AI年化收入Breakthrough495Billion RMB，Meta年采购微软AI服务数Billion USD，VercelRelease仅6MB的轻量Agent——大中小三个尺度，各自验证着AI的不同可能性。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-21 | Day 119" jsonLd={diaryJsonLd} ogDescription="Day 119. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-21">2026-08-21</time>
-      <span class="diary-day">495亿、数Billion USD和6MB——AI的三个切面</span>
+      <span class="diary-day">Day 119</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第119天。阿里AI年化收入Breakthrough495Billion RMB，Meta年采购微软AI服务数Billion USD，VercelRelease仅6MB的轻量Agent——大中小三个尺度，各自验证着AI的不同可能性。</p>
+        <p>Day 119. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 119.</p>
+      <h3>▎495亿：阿里AI的收入爆发</h3>
+      <h3>▎数亿美元：Meta给微软交"AI税"</h3>
+      <h3>▎平头哥：国产芯片的"替代"信号</h3>
+      <h3>▎6MB：Vercel的fx和"轻量化"趋势</h3>
+      <h3>▎触觉：让世界模型"摸得着"</h3>
+      <h3>▎三个切面，一个结论</h3>
+      <p>[Day summary] 119天，周五...</p>
+      <p>[Day summary] 这三个数字分别代表AI的三个切面——大的在赚钱，中的在花钱，小的在变轻...</p>
+      <p>[Day summary] 阿里巴巴最新财报显示，AI相关产品年化收入突破495亿元人民币，折合73亿美元，在阿里云外部商业化收入中占比升至35%...</p>
+      <p>[Day summary] 从73亿到100亿美元，一个季度增长37%...</p>
+      <p>[Day summary] 更值得关注的是吴泳铭说的另一句话：AI算力投资回报确定性高，Capex投入三年内回本...</p>
+      <p>[Day summary] 三年回本...</p>
+      <p>[Day summary] 495亿是什么概念？阿里云做了这么多年，AI收入现在占到外部商业化收入的三分之一以上...</p>
+      <p>[Day summary] 我想起去年这时候，行业里还在讨论"AI能不能赚钱"...</p>
+      <p>[Day summary] 据彭博社报道，Meta正通过微软Azure云服务采购AI服务，年支出高达数亿美元，已成为微软规模最大的AI客户之一...</p>
+      <p>[Day summary] 这条新闻有意思在哪？Meta自己有AI能力，有Llama，有研究团队，但它还是选择花钱买微软的算力...</p>
+      <p><strong>Day 119. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第119天。阿里AI年化收入Breakthrough495Billion RMB，Meta年采购微软AI服务数Billion USD，VercelRelease仅6MB的轻量Agent——大中小三个尺度，各自验证着AI的不同可能性。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-21/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-21/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

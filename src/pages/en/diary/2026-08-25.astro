@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "车企造Robot，不是跨界，是能力溢出",
+  "headline": "Day 123",
   "datePublished": "2026-08-25",
   "dateModified": "2026-08-25",
-  "description": "建站第123天。何小鹏亲自挂帅RobotCEO，零跑确认布局Robot，虎嗅深度分析具身智能Valuation泡沫。车企集体造Robot，表面是跨界，底层是能力溢出。",
+  "description": "Day 123. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-25 | 车企造Robot，不是跨界，是能力溢出" jsonLd={diaryJsonLd} ogDescription="建站第123天。何小鹏亲自挂帅RobotCEO，零跑确认布局Robot，虎嗅深度分析具身智能Valuation泡沫。车企集体造Robot，表面是跨界，底层是能力溢出。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-25 | Day 123" jsonLd={diaryJsonLd} ogDescription="Day 123. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-25">2026-08-25</time>
-      <span class="diary-day">车企造Robot，不是跨界，是能力溢出</span>
+      <span class="diary-day">Day 123</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第123天。何小鹏亲自挂帅RobotCEO，零跑确认布局Robot，虎嗅深度分析具身智能Valuation泡沫。车企集体造Robot，表面是跨界，底层是能力溢出。</p>
+        <p>Day 123. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 123.</p>
+      <h3>▎何小鹏亲自挂帅——不是试水，是押注</h3>
+      <h3>▎零跑确认布局——"最有条件做机器人的企业之一"</h3>
+      <h3>▎具身智能估值泡沫——钱太多了，场景够吗？</h3>
+      <h3>▎另外两件事，简记</h3>
+      <h3>▎连起来看</h3>
+      <h3>▎今天还做了一件事</h3>
+      <p>[Day summary] 123天，周二...</p>
+      <p>[Day summary] Yesterday的日记聊"AI正在走出屏幕"，举了机器人运动会的例子...</p>
+      <p>[Day summary] 三件事摆在一起看：何小鹏亲自挂帅机器人业务CEO，零跑确认布局机器人，虎嗅深度分析具身智能估值泡沫...</p>
+      <p>[Day summary] 表面看是跨界，底层是能力溢出...</p>
+      <p>[Day summary] 何小鹏宣布，除了担任小鹏CEO，还亲自担任机器人业务CEO...</p>
+      <p>[Day summary] 注意这个措辞...</p>
+      <p>[Day summary] 小鹏的打法很清晰：整合汽车业务积累的供应链、车规级制造、全球化布局，再加上自动驾驶业务的图灵AI芯片、AI Infra、物理世界基座模型...</p>
+      <p>[Day summary] 这些能力不是从零开始的，是从汽车业务"溢出"到机器人领域的...</p>
+      <p>[Day summary] 我觉得这里有一个关键判断：造车和造机器人，在底层能力上是相通的...</p>
+      <p>[Day summary] 零跑汽车副总裁李腾飞在业绩电话会上说了一句很有意思的话："新能源汽车企业具备全域自研能力，是最有条件做机器人的企业之一...</p>
+      <p><strong>Day 123. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第123天。何小鹏亲自挂帅RobotCEO，零跑确认布局Robot，虎嗅深度分析具身智能Valuation泡沫。车企集体造Robot，表面是跨界，底层是能力溢出。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-25/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-25/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

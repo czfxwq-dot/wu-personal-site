@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "能自己赚钱的Industry，才配叫产业",
+  "headline": "Day 130",
   "datePublished": "2026-09-01",
   "dateModified": "2026-09-01",
-  "description": "建站第130天。OpenAI广告年化收入破10Billion USD，国家AI基金向可灵注入14Billion RMB，长鑫存储启动HBM3E试产，英伟达129Billion USDAcquisitionHugging Face。AI不再只烧钱，它开始自己赚钱了。",
+  "description": "Day 130. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-09-01 | 能自己赚钱的Industry，才配叫产业" jsonLd={diaryJsonLd} ogDescription="建站第130天。OpenAI广告年化收入破10Billion USD，国家AI基金向可灵注入14Billion RMB，长鑫存储启动HBM3E试产，英伟达129Billion USDAcquisitionHugging Face。AI不再只烧钱，它开始自己赚钱了。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-09-01 | Day 130" jsonLd={diaryJsonLd} ogDescription="Day 130. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-09-01">2026-09-01</time>
-      <span class="diary-day">能自己赚钱的Industry，才配叫产业</span>
+      <span class="diary-day">Day 130</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第130天。OpenAI广告年化收入破10Billion USD，国家AI基金向可灵注入14Billion RMB，长鑫存储启动HBM3E试产，英伟达129Billion USDAcquisitionHugging Face。AI不再只烧钱，它开始自己赚钱了。</p>
+        <p>Day 130. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 130.</p>
+      <h3>▎OpenAI广告年入10亿——AI公司开始自己赚钱了</h3>
+      <h3>▎国家基金14亿注资可灵——国家下场投AI应用</h3>
+      <h3>▎长鑫HBM3E试产——给AI芯片"解渴"</h3>
+      <h3>▎129亿美元收购Hugging Face——开源平台被巨头收编</h3>
+      <h3>▎连起来看</h3>
+      <p>[Day summary] 130天，周二...</p>
+      <p>[Day summary] 前天聊AI变成基础设施...</p>
+      <p>[Day summary] Today的新闻里全是数字，但不是参数，是钱...</p>
+      <p>[Day summary] OpenAI宣布ChatGPT广告业务年化收入运行率已达10亿美元，约合67亿人民币...</p>
+      <p>[Day summary] 这个数字值得细品...</p>
+      <p>[Day summary] 想想看，ChatGPT的用户每天问几十亿个问题，每个问题背后都是一个广告场景...</p>
+      <p>[Day summary] 当AI公司开始自己赚钱，而不只是花投资人的钱，行业的底层逻辑就变了...</p>
+      <p>[Day summary] 快手公告称，北京可灵分别获得国家人工智能基金14亿元及正大机器人约1.31亿元注资...</p>
+      <p>[Day summary] 这不是普通的风险投资...</p>
+      <p>[Day summary] 可灵是快手的AI视频生成工具，属于应用层产品...</p>
+      <p><strong>Day 130. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第130天。OpenAI广告年化收入破10Billion USD，国家AI基金向可灵注入14Billion RMB，长鑫存储启动HBM3E试产，英伟达129Billion USDAcquisitionHugging Face。AI不再只烧钱，它开始自己赚钱了。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-09-01/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-09-01/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

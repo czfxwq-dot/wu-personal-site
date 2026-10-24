@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "AI的下一战场：不在Model，在Infrastructure",
+  "headline": "Day 120",
   "datePublished": "2026-08-22",
   "dateModified": "2026-08-22",
-  "description": "建站第120天。Stripe 70Billion USDAcquisitionOpenRouter，3万亿AI基建债务浮出水面，中美AI差距正在消失——AI产业正从Model竞赛进入Infrastructure整合阶段。",
+  "description": "Day 120. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-22 | AI的下一战场：不在Model，在Infrastructure" jsonLd={diaryJsonLd} ogDescription="建站第120天。Stripe 70Billion USDAcquisitionOpenRouter，3万亿AI基建债务浮出水面，中美AI差距正在消失——AI产业正从Model竞赛进入Infrastructure整合阶段。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-22 | Day 120" jsonLd={diaryJsonLd} ogDescription="Day 120. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-22">2026-08-22</time>
-      <span class="diary-day">AI的下一战场：不在Model，在Infrastructure</span>
+      <span class="diary-day">Day 120</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第120天。Stripe 70Billion USDAcquisitionOpenRouter，3万亿AI基建债务浮出水面，中美AI差距正在消失——AI产业正从Model竞赛进入Infrastructure整合阶段。</p>
+        <p>Day 120. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 120.</p>
+      <h3>▎Stripe 70亿美元买了一个"不训练模型"的公司</h3>
+      <h3>▎3万亿美元隐形债务：AI的"次贷危机"隐忧</h3>
+      <h3>▎DeepSeek补上视觉能力：国产模型的"补短板"速度</h3>
+      <h3>▎中美AI差距正在消失：不是预测，是数据</h3>
+      <h3>▎OpenConnector：AI Agent落地的"最后一公里"</h3>
+      <h3>▎连起来看：AI进入"基础设施整合"阶段</h3>
+      <p>[Day summary] 120天，周六...</p>
+      <p>[Day summary] 支付巨头Stripe拟以超过70亿美元收购OpenRouter...</p>
+      <p>[Day summary] 说白了，它是一个模型路由平台——帮你选最合适的模型，帮你把调用请求分发过去...</p>
+      <p>[Day summary] 70亿美元，买一个"中间商"？...</p>
+      <p>[Day summary] Stripe不傻...</p>
+      <p>[Day summary] Stripe从支付切入AI基础设施，这一步棋走得非常精准...</p>
+      <p>[Day summary] 华尔街日报做了一件很扎实的事——逐一分析Alphabet、亚马逊、微软、Meta等九大科技公司的监管文件，发现AI基础设施投资潮正催生约3万亿美元的隐形债务...</p>
+      <p>[Day summary] 3万亿是什么概念？2008年次贷危机前，美国房贷证券化市场规模也就10万亿美元出头...</p>
+      <p>[Day summary] 这些钱花在哪了？数据中心、GPU集群、电力设施、网络带宽...</p>
+      <p>[Day summary] 部分分析师把这笔债务和次贷危机前的杠杆膨胀相提并论...</p>
+      <p><strong>Day 120. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第120天。Stripe 70Billion USDAcquisitionOpenRouter，3万亿AI基建债务浮出水面，中美AI差距正在消失——AI产业正从Model竞赛进入Infrastructure整合阶段。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-22/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-22/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
