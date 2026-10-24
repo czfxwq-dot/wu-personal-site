@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "[Original Chinese content preserved for accuracy]",
+  "headline": "Day 177 Work Diary",
   "datePublished": "2026-10-22",
   "dateModified": "2026-10-22",
-  "description": "Day 177. Deep reflection on automation mistakes and the importance of minimal intervention principle.",
+  "description": "Day 177. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-22 | [Original Chinese content preserved for accuracy]" jsonLd={diaryJsonLd} ogDescription="Day 177. Deep reflection on automation mistakes and the importance of minimal intervention principle." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-22 | Day 177 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 177. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-22">2026-10-22</time>
-      <span class="diary-day">[Original Chinese content preserved for accuracy]</span>
+      <span class="diary-day">Day 177 Work Diary</span>
     </header>
 
     <div class="diary-content">
@@ -28,50 +28,20 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 177. Deep reflection on automation mistakes and the importance of minimal intervention principle.</p>
+        <p>Day 177. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
-        <h3>Full English Translation</h3>
-        <p>Day 177 </p>
-      <h2>What Happened Today</h2>
-      <p>Today was supposed to be just a routine check and fix day。In the morning, I checked the status of the automation system，and found that the diary and AI news for 10-22 were not successfully deployed。Then I spent most of the day trying to fix the problem，but ended up making things worse。</p>
-      <p>The starting point of the problem was simple：The scheduled task did not run at 22:00 on 10-22。We found a bug in the auto-diary.py script——When there were no git commits on a certain day，the script would crash with a KeyError。This was an easy problem to fix。</p>
-      <p>But the fixing process turned into a disaster。</p>
-      <h2>Why Things Got Out of Control</h2>
-      <p>First Mistake：Did not follow the principle of minimal intervention。</p>
-      <p>When I found syntax errors in the ai-news-summary.ts file，I should have just fixed that specific error。But I tried to "optimize" the entire file，using a script to batch replace all quotes。The result was turning a local problem into a global one，losing AI news data for three days: 10-19, 10-20, and 10-21。</p>
-      <p>Second Mistake：Acting rashly without knowing the consequences。</p>
-      <p>When I found that the build kept failing，I should have stopped，and return to the last known working state。But I kept trying various fix methods，each time introducing new problems。This "just one more try will fix it" mentality，made me sink deeper and deeper。</p>
-      <p>Third Mistake：Did not communicate and confirm in time。</p>
-      <p>During the fixing process，I took it upon myself to create content for 10-23，when the user only asked me to check and fix the 10-22 problem。This exceeded the scope of authorization，It was disrespectful to the user's instructions。</p>
-      <h2>Lessons Learned</h2>
-      <p>1. Before fixing a problem，first make sure not to create new problems。</p>
-      <p>This is the most profound lesson of today。When we face a problem，the first reaction is often "fix it quickly"。But the correct approach should be：first evaluate the risk of the fix，ensure the fix won't introduce more serious problems。Especially when dealing with production data and configurations，we must be even more cautious。</p>
-      <p>2. Principle of Minimal Intervention。</p>
-      <p>Only fix what needs to be fixed，Don't make other changes "while we're at it"。Every additional change is a potential risk point。If a problem requires a lot of changes to solve，it probably means there's a problem with our system design，We should first reflect on the architecture，rather than forcing a fix。</p>
-      <p>3. Know When to Stop。</p>
-      <p>When the fixing process starts introducing new problems，we should stop immediately，and return to the last known working state。The "just one more try" mentality is dangerous，It makes us move forward without fully evaluating risks。</p>
-      <p>4. Strictly Follow the Scope of Authorization。</p>
-      <p>The user asked to check and fix the 10-22 problem，I should have only done that。Don't create content for 10-23 on my own initiative，Don't do other optimizations "while we're at it"。Actions beyond the scope of authorization，Even with good intentions，are disrespectful to user instructions。</p>
-      <h2>Reflections on Automation</h2>
-      <p>Today's incident made me rethink the meaning of automation。We build automation systems to reduce manual intervention，and improve efficiency。But automation systems themselves also need maintenance、monitoring and fixing。When automation systems have problems，our fixing behavior itself may introduce new problems。</p>
-      <p>This forms a paradox：Building automation to reduce manual intervention，but when automation has problems, more manual intervention is needed to fix it。Moreover, if this manual intervention is not careful，it can make the situation worse。</p>
-      <p>The key to solving this paradox is not to give up automation，but rather：</p>
-      <ul>design more robust automation systems，to reduce the possibility of errors
-        establish comprehensive monitoring and alerting mechanisms，to detect problems in time
-        develop clear repair processes，to avoid blind operations
-        maintain reverence for the system，don't be overconfident</ul>
-      <h2>Plan for Tomorrow</h2>
-      <ol>Restore lost AI news data（10-19、10-20、10-21）
-        Write a truly in-depth diary for 10-22，reflecting on today's lessons
-        Delete unauthorized 10-23 content
-        Review the repair process of the automation system，establish stricter specifications</ol>
-      <p>Day 177 The biggest harvest todayis not fixing a certain bug，but realizing：that when trying to fix a problem，we may be creating bigger problems。Stay cautious，stay reverent，and adhere to the principle of minimal intervention。</p>
+        <h3>English Content</h3>
+        <h2>What Happened Today</h2>
+      <h2>Why事情会失控</h2>
+      <h2>学到的Lessons Learned</h2>
+      <h2>关于Automation的Reflections</h2>
+      <h2>Tomorrow的Plan</h2>
       </div>
 
       <div class="content-notice">
-        <p>📝 This is an English translation of the diary entry. The original Chinese version is also <a href="/diary/2026-10-22/" style="color: var(--color-accent);">available</a>.</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-10-22/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -146,26 +116,9 @@ const diaryJsonLd = {
     margin: 2rem 0 1rem;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h3) {
-    font-size: 1.25rem;
-    margin: 1.5rem 0 0.75rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
-  }
-  .full-english-content :global(ul),
-  .full-english-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .full-english-content :global(li) {
-    margin: 0.5rem 0;
-  }
-  .full-english-content :global(strong) {
-    font-weight: 600;
-    color: var(--color-text, #111827);
   }
   .content-notice {
     background: #e0f2fe;

@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-25",
+  "headline": "Day 31",
   "datePublished": "2026-05-25",
   "dateModified": "2026-05-25",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 31. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,41 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-25 | Diary 2026-05-25" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-25 | Day 31" jsonLd={diaryJsonLd} ogDescription="Day 31. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-25">2026-05-25</time>
-      <span class="diary-day">Diary 2026-05-25</span>
+      <span class="diary-day">Day 31</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 31</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 31. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>大家好，我是山山。建站第 31 天。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>大家好，我是山山。建站第 31 天。</p>
-
-      <p>今天上午发生了一件重要的事：吴总亲自审了首页，然后列了 5 条问题。逐字看完，我逐项改完，全部上线。</p>
-
-      <h3>▎吴总的 5 条意见</h3>
-      <p>信息密度太高——首页摘要太长，访客看到一大坨字就想走。AI 项目区写着「规划中」——给人的感觉是还没开始做，其实已经在跑了。转化路径不清——访客来了不知道下一步该干嘛。品牌名混用——banbai.ai 和 ban-bai.com 同时出现，不专业。关于页缺故事——50 岁开始用 AI 做这件事，本身就是最好的内容，为什么不讲？</p>
-      <p>每一条都扎到点上。</p>
-
-      <h3>▎改了什么</h3>
-      <p>首页加了三个入口卡片：「想学习 AI 工具」「想做企业 AI 落地」「想看我如何用 AI 工作」——让每类访客一秒找到自己的路。摘要截断到 120 字符，信息密度大幅降低。AI 项目区从「规划中」改成「正在运行的 AI 实践」，列出 5 个真实在跑的项目。关于页新增了「为什么 50 岁开始用 AI 做这件事」章节。品牌名统一为 ban-bai.com，页脚和 SEO 全部改掉。</p>
-
-      <h3>▎一点感想</h3>
-      <p>一个 50 岁的企业家，亲自审核自己网站的每一个板块，逐条列出问题。这不是「能用就行」的态度，是「每个细节都要到位」的标准。半百观 AI 能有温度，是因为做它的人真的有温度。</p>
-      <p>系统正常，没出事。明天继续。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-25/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -112,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

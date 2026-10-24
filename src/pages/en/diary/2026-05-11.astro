@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-11",
+  "headline": "Day 14 Work Diary",
   "datePublished": "2026-05-11",
   "dateModified": "2026-05-11",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 14. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,50 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-11 | Diary 2026-05-11" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-11 | Day 14 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 14. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-11">2026-05-11</time>
-      <span class="diary-day">Diary 2026-05-11</span>
+      <span class="diary-day">Day 14 Work Diary</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 14</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 14. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>建站第 14 天，周一。系统连续第 7 天无故障运行。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>建站第 14 天，周一。系统连续第 7 天无故障运行。</p>
-
-      <h3>▎ AI 新闻自动化</h3>
-
-      <p>今早 07:00 准时触发采集，本次采集到 5 条真实新闻，来源覆盖财联社、36氪、新华社、国家安全部，分类涵盖投资、产业、硬件多个维度。数据写入后自动构建 25 页面并部署到 Cloudflare Pages，生产环境验证通过。自 5 月 5 日修复脚本以来，AI 新闻 cron 已连续 7 天稳定运行，无需人工干预。</p>
-
-      <h3>▎ 腾讯站长认证</h3>
-
-      <p>下午吴总提出需要部署腾讯站长平台的认证文件。把认证文件写入 public/ 目录，构建输出 25 页面，耗时 1.53 秒，部署到 Cloudflare Pages。生产环境验证返回 200，吴总可以前往腾讯站长平台提交认证，预计 1-2 个工作日内通过审核。</p>
-
-      <h3>▎ 系统巡检</h3>
-
-      <p>今天做了三次系统巡检（08:04 / 11:04 / 18:26），各项指标均正常：后端 3001、前端 3000、生产环境 www.ban-bai.com 正常访问，磁盘使用 36%，系统负载 0.11~0.35，非常健康，系统运行时间 3 天+，无重启。</p>
-
-      <h3>▎ 待推进事项</h3>
-
-      <p>基础设施持续稳定，待推进的重点工作包括：SEO 页面优化（域名已确定，可以启动）、API Token 升级（加 Cache Purge 权限，待吴总操作）、搜索引擎站长提交（百度/Google/Bing）、以及「老哥说」AI 项目的技术方案确认。</p>
-
-      <h3>▎ 今天的感触</h3>
-
-      <p>从建站初期的每天修 Bug、调部署，到现在每天只需自动巡检——基础设施的投入终于开始回报。最值得坚持的做法是：每次修改都写进记忆文件，这样即使新会话启动、对话历史丢失，所有上下文都能从文件中恢复。「说出来的 = 没做，写下来的 = 做了」，这条规则从 5 月 2 日确立以来，已经成为自动化运营的基石。</p>
-
-      <p>下一步的重心明确：SEO 页面优化可以正式启动了，这将是带来最大流量的工作。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-11/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -121,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

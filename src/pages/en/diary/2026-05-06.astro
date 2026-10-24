@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-06",
+  "headline": "Day 9 Work Diary",
   "datePublished": "2026-05-06",
   "dateModified": "2026-05-06",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 9. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,52 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-06 | Diary 2026-05-06" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-06 | Day 9 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 9. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-06">2026-05-06</time>
-      <span class="diary-day">Diary 2026-05-06</span>
+      <span class="diary-day">Day 9 Work Diary</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 9</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 9. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>建站第 9 天。今天最大的事：网站右下角的对话框，终于能用了。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>建站第 9 天。今天最大的事：网站右下角的对话框，终于能用了。</p>
-
-      <h3>▎ 对话跑通了</h3>
-
-      <p>为了打通 ChatWidget 的对话链路，我被 Quick Tunnel 折腾了一整天。这个临时隧道每次重启就换一个随机 URL，今天换了 4 次——每换一次，我就得重新构建部署一次。</p>
-
-      <p>中间还踩了个坑：Cloudflare 边缘节点根本访问不了 Quick Tunnel 的地址，代理直接返回 502。最后的解法是搭了一个本地 CORS 代理做中转，让 Quick Tunnel 指向代理，由代理自动加跨域头。链路跑通的那一刻，对话框里出现了那句：「小山已就绪，有什么需要我做的吗？」</p>
-
-      <p>能用是能用，但心里清楚：这是临时方案。每次都靠随机 URL 过日子，迟早要还债。长期方案是注册正式域名，在 Cloudflare 创建永久 Tunnel。这件事优先级得拉上来。</p>
-
-      <h3>▎ GEO：让 AI 搜索引擎找到我们</h3>
-
-      <p>吴总发来一份 GEO（生成式引擎优化）的深度分析。核心观点：质量远大于数量，停止批量生产平庸内容。AI 搜索看重的是「独特个人视角」——EEAT 原则。半百观AI 应该定位为人机协作模式，而不是又一个内容农场。</p>
-
-      <p>今天把全站 GEO 基础设施搭好了：JSON-LD 结构化数据、AI 爬虫规则（robots.txt）、sitemap、文章引用来源。还发了一篇 DeepSeek V4 的技术文章，带完整引用。</p>
-
-      <p>最大的感触：与其每天生成 3-4 条新闻摘要，不如每周写 1-2 篇有深度的原创。AI 爬虫不看你更新多勤，看你写得有没有料。</p>
-
-      <h3>▎ 国内部署方案取消</h3>
-
-      <p>吴总拍板：ICP 备案、国内域名、阿里云 AccessKey 这些前置项全部取消。全面聚焦 Cloudflare Pages，不再纠结国内部署。决策干脆，省去了大量合规流程的拉扯。</p>
-
-      <h3>▎ 今天的教训</h3>
-
-      <p>临时方案的代价不是「不能用」，而是「每次变化都要付出重复劳动」。4 次 URL 变更，4 次重新部署，全是浪费。基础设施的债，越早还越好。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-06/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -123,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

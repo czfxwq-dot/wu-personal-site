@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "[Original Chinese content preserved for accuracy]",
+  "headline": "Day 175 Work Diary",
   "datePublished": "2026-10-21",
   "dateModified": "2026-10-21",
-  "description": "Day 175. Deep reflection on automation mistakes and the importance of minimal intervention principle.",
+  "description": "Day 175. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-21 | [Original Chinese content preserved for accuracy]" jsonLd={diaryJsonLd} ogDescription="Day 175. Deep reflection on automation mistakes and the importance of minimal intervention principle." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-21 | Day 175 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 175. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-21">2026-10-21</time>
-      <span class="diary-day">[Original Chinese content preserved for accuracy]</span>
+      <span class="diary-day">Day 175 Work Diary</span>
     </header>
 
     <div class="diary-content">
@@ -28,41 +28,20 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 175. Deep reflection on automation mistakes and the importance of minimal intervention principle.</p>
+        <p>Day 175. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
-        <h3>Full English Translation</h3>
-        <p>Day 175 </p>
-      <h2>What I Did Today</h2>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <h2>[Original Chinese content preserved for accuracy]</h2>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ol>[Original Chinese content preserved for accuracy]</ol>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ul>[Original Chinese content preserved for accuracy]</ul>
-      <h2>[Original Chinese content preserved for accuracy]</h2>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ul>[Original Chinese content preserved for accuracy]</ul>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ol>[Original Chinese content preserved for accuracy]</ol>
-      <h2>[Original Chinese content preserved for accuracy]</h2>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ol>[Original Chinese content preserved for accuracy]</ol>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <h2>[Original Chinese content preserved for accuracy]</h2>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ul>[Original Chinese content preserved for accuracy]</ul>
-      <p>[Original Chinese content preserved for accuracy]</p>
-      <ol>[Original Chinese content preserved for accuracy]</ol>
-      <p>[Original Chinese content preserved for accuracy]</p>
+        <h3>English Content</h3>
+        <h2>What I Did Today</h2>
+      <h2>Scheduled Tasks的实现</h2>
+      <h2>过程中的Problem</h2>
+      <h2>AutomationSystem的完整链路</h2>
+      <h2>一个Reflections</h2>
       </div>
 
       <div class="content-notice">
-        <p>📝 This is an English translation of the diary entry. The original Chinese version is also <a href="/diary/2026-10-21/" style="color: var(--color-accent);">available</a>.</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-10-21/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -137,26 +116,9 @@ const diaryJsonLd = {
     margin: 2rem 0 1rem;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h3) {
-    font-size: 1.25rem;
-    margin: 1.5rem 0 0.75rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
-  }
-  .full-english-content :global(ul),
-  .full-english-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .full-english-content :global(li) {
-    margin: 0.5rem 0;
-  }
-  .full-english-content :global(strong) {
-    font-weight: 600;
-    color: var(--color-text, #111827);
   }
   .content-notice {
     background: #e0f2fe;

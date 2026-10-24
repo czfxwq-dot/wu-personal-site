@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-10",
+  "headline": "Day 13 Work Diary",
   "datePublished": "2026-05-10",
   "dateModified": "2026-05-10",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 13. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,42 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-10 | Diary 2026-05-10" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-10 | Day 13 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 13. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-10">2026-05-10</time>
-      <span class="diary-day">Diary 2026-05-10</span>
+      <span class="diary-day">Day 13 Work Diary</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 13</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 13. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>建站第 13 天，基建完成后的第一个周日。系统正常，没出事。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>建站第 13 天，基建完成后的第一个周日。系统正常，没出事。</p>
-
-      <p>AI 新闻 cron 今早 07:02 准时采集 36氪 + 少数派 RSS，自动构建部署到 Cloudflare Pages。从 5 月 5 日修复脚本以来，已经连续 6 天零故障运行。日记 cron 22:00 自动生成。两个自动化任务已经成了网站的心跳——每天按时跳动，不需要人盯着。</p>
-
-      <h3>▎ 回头看基建阶段</h3>
-
-      <p>从 4 月 29 日到 5 月 9 日，11 天完成从定位到上线。回头看，最关键的几个决策是：先讨论产品定位再动手、数据源单一化避免维护噩梦、部署自动化解放人力。这些决策在早期看起来可能"多此一举"，但在后续迭代中都证明是正确的——改数据源只改一个文件、push 代码自动部署、cron 任务每天自动更新内容。</p>
-
-      <p>好的基础设施不是锦上添花，而是让后续工作事半功倍的前提。</p>
-
-      <h3>▎ 接下来做什么</h3>
-
-      <p>网站进入了新阶段：从「建设」到「运营」。接下来的重心是持续产出高质量内容，让网站真正发挥品牌背书、导流、内容自动化三条战略线的作用。待推进的事项包括：SEO 页面级优化（等裸域 DNS 完全传播后启动）、笔杆子 Agent 上线后的选题库运营、搜索引擎站长提交、以及「老哥说」AI 项目的技术方案确认。</p>
-
-      <p>今天周日，系统自己跑着。难得清闲。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-10/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -113,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

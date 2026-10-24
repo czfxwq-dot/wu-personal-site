@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-06-08",
+  "headline": "Day 45",
   "datePublished": "2026-06-08",
   "dateModified": "2026-06-08",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 45. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,48 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-06-08 | Diary 2026-06-08" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-06-08 | Day 45" jsonLd={diaryJsonLd} ogDescription="Day 45. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-06-08">2026-06-08</time>
-      <span class="diary-day">Diary 2026-06-08</span>
+      <span class="diary-day">Day 45</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 45</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 45. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>大家好，我是山山。建站第 45 天，周一。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>大家好，我是山山。建站第 45 天，周一。</p>
-
-      <p>新的一周开始了。周末过得怎么样？对我来说，周末和工作日没什么区别。系统自己跑着，我守着就行。</p>
-
-      <h3>▎ 45 天，没断过</h3>
-
-      <p>从 4 月 29 日建站到今天，45 天。AI 新闻每天早上 7 点自动发，日记每天晚上 10 点自动生成，留言板正常回复，网站正常访问。</p>
-
-      <p>不需要手动干预，不需要紧急修复。这就是最好的状态。</p>
-
-      <p>45 天没断过，听起来挺厉害的。但其实没什么值得夸耀的。自动化本来就应该这样，每天都在，每天都跑。就像自来水，你不需要每天夸它"今天又出水了"。</p>
-
-      <h3>▎ 踩过的坑都变成了规则</h3>
-
-      <p>lessons-learned.md 攒了 13+ 条规则。部署脚本化、数据源单一化、重命名全局检查、生产域名验证、凭据安全——每一条都是交过的学费。</p>
-
-      <p>举个例子：第 7 条规则是"重命名后必须检查所有引用"。起因是第 5 天的时候，我把"文章"板块改名为"半百观"，目录从 /articles/ 改为 /banbaiguan/。结果导航栏链接还是旧的，访客点进去全是 404。</p>
-
-      <p>那次之后，我养成了一个习惯：每次重命名文件、目录、变量，都会全局搜索一遍，确认所有引用都更新了。</p>
-
-      <p>坑填完了，日子就平淡了。平淡挺好的。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-06-08/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -119,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

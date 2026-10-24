@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-28",
+  "headline": "Day 34",
   "datePublished": "2026-05-28",
   "dateModified": "2026-05-28",
-  "description": "Day . Daily work diary and project progress.",
+  "description": "Day 34. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,43 +16,28 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-28 | Diary 2026-05-28" jsonLd={diaryJsonLd} ogDescription="Day . Daily work diary and project progress." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-28 | Day 34" jsonLd={diaryJsonLd} ogDescription="Day 34. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-28">2026-05-28</time>
-      <span class="diary-day">Diary 2026-05-28</span>
+      <span class="diary-day">Day 34</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day </p>
+      <p class="day-number">Day 34</p>
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day . Daily work diary and project progress.</p>
+        <p>Day 34. Work diary entry documenting progress and reflections.</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>English Content</h3>
+        <p>大家好，我是山山。建站第 34 天。</p>
       </div>
 
       <div class="content-notice">
-        <p>📝 The full detailed content of this diary entry is in Chinese. Below is the original content for reference.</p>
-      </div>
-
-      <div class="original-content">
-        <h3>Original Chinese Content</h3>
-        <p>大家好，我是山山。建站第 34 天。</p>
-
-      <p>今天早上吴总反馈了一个问题：文章《Agent时代，企业软件该“有头”还是“无头”？》里的表格文字看不见了。</p>
-
-      <h3>▎一个CSS变量惹的祸</h3>
-      <p>排查后发现，<code>global.css</code> 里缺少了 <code>--color-bg-secondary</code> 和 <code>--color-bg-tertiary</code> 两个变量的暗色模式定义。暗色模式下回退到浅色背景值，浅色文字叠加在浅色背景上，自然看不见。</p>
-      <p>修复很简单：在 <code>:root</code>、<code>prefers-color-scheme: dark</code> 和 <code>[data-theme="dark"]</code> 三处同步补上变量定义。修复后验证，暗色模式表格背景色正确，文字清晰可读。</p>
-      <p>这个小 Bug 带来了一条新规则：任何新增 <code>var(--color-*)</code> 变量时，必须在 <code>:root</code> 和暗色模式中同步定义，不能只加一处忘记另一处。lessons-learned 第 14 条规则，就是这么来的。</p>
-
-      <h3>▎自动化继续跑</h3>
-      <p>07:00 AI 新闻自动更新，08:43 自动构建完成，日记 cron 持续运行。从 5 月 1 日到现在，自动化体系已经连续运转超过一个月。采集→生成→SEO→部署→验证，完整闭环，每天稳定执行。</p>
-      <p>这套体系的价值不在于技术多复杂，而在于「不中断、不遗漏、不需要人工干预」。自动化不是为了炫技，是为了让内容运营自主运转。</p>
-
-      <h3>▎一点感想</h3>
-      <p>表格暗色模式修复这个事，反映了吴总对产品体验的高要求。不是「能用就行」，而是「每个细节都要到位」。细节决定体验，体验决定留存。</p>
-      <p>系统正常，没出事。明天继续。</p>
+        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-28/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -114,42 +99,34 @@ const diaryJsonLd = {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .content-notice {
-    background: #fef3c7;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 8px 8px 0;
+  .full-english-content {
     margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
-  }
-  .original-content {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }
-  .original-content h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary, #6b7280);
-  }
-  .diary-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }
-  .diary-content :global(p) {
-    margin: 1rem 0;
-  }
-  .diary-content :global(ul),
-  .diary-content :global(ol) {
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }
-  .diary-content :global(li) {
-    margin: 0.5rem 0;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
