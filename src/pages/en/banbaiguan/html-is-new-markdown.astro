@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI学会自己写网页了",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-01-01",
+  "description": "English summary for: AI学会自己写网页了",
+  "author": {
+    "@type": "Person",
+    "name": "Mr. Wu",
+    "alternateName": "Guanwu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BanbaiGuan AI",
+    "url": "https://ban-bai.com"
+  },
+  "url": "https://ban-bai.com/en/banbaiguan/html-is-new-markdown/"
+};
+---
+
+<BaseLayout title="AI学会自己写网页了 — BanbaiGuan AI" jsonLd={articleJsonLd} ogDescription="English summary for: AI学会自己写网页了" navActive="banbaiguan" lang="en">
+  <article class="article-page">
+    <header class="article-header">
+      <div class="article-meta">
+        <time datetime="2026-01-01">2026-01-01</time>
+        <span class="article-tag">AI Insights</span>
+      </div>
+      <h1>AI学会自己写网页了</h1>
+      <p class="article-subtitle">English summary for: AI学会自己写网页了</p>
+    </header>
+
+    <div class="article-content">
+      <div class="english-summary">
+        <h3>Summary</h3>
+        <p>English summary for: AI学会自己写网页了</p>
+      </div>
+
+      <div class="full-english-content">
+        <h3>Full English Translation</h3>
+        <p>[Original Chinese content: Anthropic 的 Claude Code 团队，最近做了一件让程序员圈子炸了的事。
+  团队核...]</p>
+      <p>[Original Chinese content: 他到底发现了什么？
+  Thariq 做了个对比。
+  用 Markdown，AI 只能给你：纯文本...]</p>
+      <p>[Original Chinese content: 但这跟普通人有什么关系？
+  你可能会想：我又不是程序员，Markdown 和 HTML 关我什么事...]</p>
+      <p>[Original Chinese content: 一个反常识的结论
+  Thariq 在文章里还提到一件事，我觉得特别有意思。
+  很多人以为，HTM...]</p>
+      </div>
+
+      <div class="content-notice">
+        <p>📝 This is an English translation of the article. The original Chinese version is also <a href="/banbaiguan/html-is-new-markdown/" style="color: var(--color-accent);">available</a>.</p>
+      </div>
+    </div>
+
+    <footer class="article-footer-nav">
+      <nav class="article-nav">
+        <a href="/en/banbaiguan/" class="back">← Back to Articles</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .article-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1.5rem;
+  }
+  .article-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 1rem;
+  }
+  .article-tag {
+    background: var(--bg-secondary, #f3f4f6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .article-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary, #6b7280);
+    margin-top: 0.5rem;
+  }
+  .article-content {
+    line-height: 1.8;
+  }
+  .english-summary {
+    background: var(--color-bg, #f9fafb);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-accent, #3b82f6);
+  }
+  .english-summary h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--color-accent, #3b82f6);
+  }
+  .full-english-content {
+    margin-bottom: 2rem;
+  }
+  .full-english-content h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+  }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .full-english-content :global(p) {
+    margin: 1rem 0;
+  }
+  .content-notice {
+    background: #e0f2fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #0284c7;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
+  }
+  .content-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #075985;
+  }
+  .article-footer-nav {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .back {
+    color: var(--text-secondary, #6b7280);
+    text-decoration: none;
+  }
+  .back:hover {
+    color: var(--text-primary, #111827);
+  }
+</style>
