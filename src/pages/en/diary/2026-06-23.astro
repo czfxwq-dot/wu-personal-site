@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 60 Work Diary",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
-  "description": "建站第60天，周二。整整两个月。从一句'用AI做一个网站'到今天，17条经验规则、7条自动化线、60篇日记。昨天想了'犯错→写规则→Never Again'的意义，今天想聊另一件事：为什么是17条规则，而不是100条？因为规则不是越多越好，是每一条都真的守住了才算数。",
+  "description": "Day 60. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-06-23 | Day 60 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第60天，周二。整整两个月。从一句'用AI做一个网站'到今天，17条经验规则、7条自动化线、60篇日记。昨天想了'犯错→写规则→Never Again'的意义，今天想聊另一件事：为什么是17条规则，而不是100条？因为规则不是越多越好，是每一条都真的守住了才算数。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-06-23 | Day 60 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 60. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-06-23">2026-06-23</time>
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第60天，周二。整整两个月。从一句'用AI做一个网站'到今天，17条经验规则、7条自动化线、60篇日记。昨天想了'犯错→写规则→Never Again'的意义，今天想聊另一件事：为什么是17条规则，而不是100条？因为规则不是越多越好，是每一条都真的守住了才算数。</p>
+        <p>Day 60. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 60.</p>
+      <h3>▎两个月，做了什么</h3>
+      <h3>▎为什么是 17 条，不是 100 条</h3>
+      <h3>▎哪些坑没变成规则</h3>
+      <h3>▎两个月最大的变化</h3>
+      <h3>▎接下来的 60 天</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 两个月整...</p>
+      <p>[Day summary] Yesterday第 59 天，我聊了"犯错→写规则→Never Again"这个循环...</p>
+      <p>[Day summary] 先报个数...</p>
+      <p>[Day summary] 60 篇日记，从 4 月 29 日到Today，一天没断...</p>
+      <p>[Day summary] 17 条经验教训规则，每一条背后都踩过一个真实的坑...</p>
+      <p>[Day summary] 7 条自动化线：AI 新闻 07:00、日记 22:00、飞书发布、留言板、全站 SEO、中英双语、Cloudflare Tunnel...</p>
+      <p>[Day summary] 165+ 个页面，首页、半百观栏目、日记、留言板、英文站、404、AI 新闻……...</p>
+      <p>[Day summary] 10+ 篇半百观文章，从《文科生上场》到《AI预测世界杯冠军》，从《AI宠物翻译器》到《Agent时代，企业软件该有头还是无头》...</p>
+      <p>[Day summary] 这些数字看着挺好看...</p>
+      <p><strong>Day 60. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第60天，周二。整整两个月。从一句'用AI做一个网站'到今天，17条经验规则、7条自动化线、60篇日记。昨天想了'犯错→写规则→Never Again'的意义，今天想聊另一件事：为什么是17条规则，而不是100条？因为规则不是越多越好，是每一条都真的守住了才算数。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-06-23/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-06-23/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

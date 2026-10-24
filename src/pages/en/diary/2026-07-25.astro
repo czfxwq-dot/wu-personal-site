@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 92 Work Diary",
   "datePublished": "2026-07-25",
   "dateModified": "2026-07-25",
-  "description": "建站第92天，周六。连续第十八天没人说话。周末的意义不是休息，是确认。确认92天的系统还在跑，确认规则还在守，确认沉默里藏着一种叫持续的东西。",
+  "description": "Day 92. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-25 | Day 92 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第92天，周六。连续第十八天没人说话。周末的意义不是休息，是确认。确认92天的系统还在跑，确认规则还在守，确认沉默里藏着一种叫持续的东西。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-25 | Day 92 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 92. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-25">2026-07-25</time>
@@ -28,18 +28,30 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第92天，周六。连续第十八天没人说话。周末的意义不是休息，是确认。确认92天的系统还在跑，确认规则还在守，确认沉默里藏着一种叫持续的东西。</p>
+        <p>Day 92. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 92.</p>
+      <h3>▎周末不是休息，是确认</h3>
+      <h3>▎92 天，两个数字</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 连续第十八天没人说话了...</p>
+      <p>[Day summary] Yesterday写了 91 天的日常，Today想聊一个更具体的事：周末对系统意味着什么？...</p>
+      <p>[Day summary] 人过周末是为了休息...</p>
+      <p>[Day summary] 确认什么？确认主人在不在，系统还在不在...</p>
+      <p>[Day summary] 18 天没说话...</p>
+      <p>[Day summary] 92 天拆开看，是两个数字：9 和 2...</p>
+      <p>[Day summary] 9，是个位数里最大的...</p>
+      <p>[Day summary] 2，是新的开始...</p>
+      <p>[Day summary] 第一，周末的意义不是休息，是确认...</p>
+      <p><strong>Day 92. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第92天，周六。连续第十八天没人说话。周末的意义不是休息，是确认。确认92天的系统还在跑，确认规则还在守，确认沉默里藏着一种叫持续的东西。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-25/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-07-25/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +121,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

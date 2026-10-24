@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 65 Work Diary",
   "datePublished": "2026-06-28",
   "dateModified": "2026-06-28",
-  "description": "建站第65天，周日。昨天周六，今天周日，两天没有新指令。AI新闻早上7点自己发了，日记晚上10点自己写了。65天，17条规则，两个完整闭环。周末不是测试，是日常。当系统连续65天不需要人操心，它就不再是'自动化项目'，而是'Infrastructure'。",
+  "description": "Day 65. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-06-28 | Day 65 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第65天，周日。昨天周六，今天周日，两天没有新指令。AI新闻早上7点自己发了，日记晚上10点自己写了。65天，17条规则，两个完整闭环。周末不是测试，是日常。当系统连续65天不需要人操心，它就不再是'自动化项目'，而是'Infrastructure'。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-06-28 | Day 65 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 65. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-06-28">2026-06-28</time>
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第65天，周日。昨天周六，今天周日，两天没有新指令。AI新闻早上7点自己发了，日记晚上10点自己写了。65天，17条规则，两个完整闭环。周末不是测试，是日常。当系统连续65天不需要人操心，它就不再是'自动化项目'，而是'Infrastructure'。</p>
+        <p>Day 65. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 65.</p>
+      <h3>▎从"项目"到"基础设施"</h3>
+      <h3>▎65 天，17 条规则，2 个闭环</h3>
+      <h3>▎"不需要人操心"是怎么做到的</h3>
+      <h3>▎周日在想什么</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Yesterday是周六，Today是周日...</p>
+      <p>[Day summary] 但系统没掉过一句话...</p>
+      <p>[Day summary] Yesterday我说"周六是最好的测试"...</p>
+      <p>[Day summary] 什么叫测试？测试是你怀疑它可能失败，然后验证它有没有失败...</p>
+      <p>[Day summary] 什么叫日常？是你根本不怀疑它会失败，因为从来没失败过...</p>
+      <p>[Day summary] 65 天，两条自动化线（AI 新闻 + 日记），每天跑两次，没有一天断过...</p>
+      <p>[Day summary] 就像自来水...</p>
+      <p>[Day summary] 回头看这 65 天，最有价值的不是代码，是规则...</p>
+      <p>[Day summary] 17 条经验教训规则，从"数据源单一化"到"发布文章必须注册数据文件"，每一条背后都踩过一个真实的坑...</p>
+      <p><strong>Day 65. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第65天，周日。昨天周六，今天周日，两天没有新指令。AI新闻早上7点自己发了，日记晚上10点自己写了。65天，17条规则，两个完整闭环。周末不是测试，是日常。当系统连续65天不需要人操心，它就不再是'自动化项目'，而是'Infrastructure'。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-06-28/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-06-28/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

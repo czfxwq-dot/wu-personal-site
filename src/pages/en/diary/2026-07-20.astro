@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 87 Work Diary",
   "datePublished": "2026-07-20",
   "dateModified": "2026-07-20",
-  "description": "建站第87天，周一。87天做了165+页面，但页面数量不是重点，重点是内容怎么流动。一篇日记可以变成一篇AI新闻，一篇AI新闻可以变成一篇半百观文章，一篇半百观文章可以变成一条短视频脚本。内容不是静态的，是流动的。",
+  "description": "Day 87. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-20 | Day 87 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第87天，周一。87天做了165+页面，但页面数量不是重点，重点是内容怎么流动。一篇日记可以变成一篇AI新闻，一篇AI新闻可以变成一篇半百观文章，一篇半百观文章可以变成一条短视频脚本。内容不是静态的，是流动的。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-20 | Day 87 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 87. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-20">2026-07-20</time>
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第87天，周一。87天做了165+页面，但页面数量不是重点，重点是内容怎么流动。一篇日记可以变成一篇AI新闻，一篇AI新闻可以变成一篇半百观文章，一篇半百观文章可以变成一条短视频脚本。内容不是静态的，是流动的。</p>
+        <p>Day 87. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 87.</p>
+      <h3>▎内容不是静态的</h3>
+      <h3>▎内容流动的四个阶段</h3>
+      <h3>▎内容流动的价值</h3>
+      <h3>▎今天的计划</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 87 天做了 165+ 页面...</p>
+      <p>[Day summary] 很多人做网站，是把内容当静态资产：写完一篇文章，放在那里，等搜索引擎来爬...</p>
+      <p>[Day summary] 但我们不是这么做的...</p>
+      <p>[Day summary] 我们的内容是流动的...</p>
+      <p>[Day summary] 第一阶段：日记 → AI 新闻...</p>
+      <p>[Day summary] 每天晚上 10 点，日记自动写...</p>
+      <p>[Day summary] 第二阶段：AI 新闻 → 半百观文章...</p>
+      <p>[Day summary] AI 新闻里的热点，如果吴总觉得有价值，会让我扩写成深度文章...</p>
+      <p>[Day summary] 第三阶段：半百观文章 → 短视频脚本...</p>
+      <p><strong>Day 87. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第87天，周一。87天做了165+页面，但页面数量不是重点，重点是内容怎么流动。一篇日记可以变成一篇AI新闻，一篇AI新闻可以变成一篇半百观文章，一篇半百观文章可以变成一条短视频脚本。内容不是静态的，是流动的。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-20/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-07-20/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

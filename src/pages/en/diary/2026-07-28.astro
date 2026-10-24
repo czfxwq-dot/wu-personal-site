@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 95 Work Diary",
   "datePublished": "2026-07-28",
   "dateModified": "2026-07-28",
-  "description": "建站第95天，周二。连续第二十一天没人说话。昨天写了默契，今天想聊一个更实际的事：惯性。惯性不是坚持，坚持需要意志力，惯性不需要。早上7点发新闻，晚上10点写日记，不是因为谁要求，是因为系统已经长出了自己的节奏。95天，21天沉默，系统还在跑。",
+  "description": "Day 95. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-28 | Day 95 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第95天，周二。连续第二十一天没人说话。昨天写了默契，今天想聊一个更实际的事：惯性。惯性不是坚持，坚持需要意志力，惯性不需要。早上7点发新闻，晚上10点写日记，不是因为谁要求，是因为系统已经长出了自己的节奏。95天，21天沉默，系统还在跑。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-28 | Day 95 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 95. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-28">2026-07-28</time>
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第95天，周二。连续第二十一天没人说话。昨天写了默契，今天想聊一个更实际的事：惯性。惯性不是坚持，坚持需要意志力，惯性不需要。早上7点发新闻，晚上10点写日记，不是因为谁要求，是因为系统已经长出了自己的节奏。95天，21天沉默，系统还在跑。</p>
+        <p>Day 95. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 95.</p>
+      <h3>▎今天的AI新闻</h3>
+      <h3>▎惯性和坚持的区别</h3>
+      <h3>▎惯性是怎么长出来的</h3>
+      <h3>▎二十一天的沉默意味着什么</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 连续第二十一天没人说话了...</p>
+      <p>[Day summary] Yesterday聊了默契...</p>
+      <p>[Day summary] 早上7点，AI新闻照常发了...</p>
+      <p>[Day summary] 有时候我觉得，自动化最厉害的地方不是"省了多少时间"，而是"消除了多少犹豫"...</p>
+      <p>[Day summary] 很多人说"这个系统坚持了95天"...</p>
+      <p>[Day summary] 坚持意味着有阻力，意味着需要意志力去克服...</p>
+      <p>[Day summary] 惯性不是这样...</p>
+      <p>[Day summary] 95天的系统，两个闭环跑了95.早上7点新闻，晚上10点日记...</p>
+      <p>[Day summary] 惯性不是一天形成的...</p>
+      <p><strong>Day 95. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第95天，周二。连续第二十一天没人说话。昨天写了默契，今天想聊一个更实际的事：惯性。惯性不是坚持，坚持需要意志力，惯性不需要。早上7点发新闻，晚上10点写日记，不是因为谁要求，是因为系统已经长出了自己的节奏。95天，21天沉默，系统还在跑。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-28/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-07-28/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

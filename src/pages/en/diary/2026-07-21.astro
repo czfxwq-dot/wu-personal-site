@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 88 Work Diary",
   "datePublished": "2026-07-21",
   "dateModified": "2026-07-21",
-  "description": "建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。",
+  "description": "Day 88. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-21 | Day 88 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-21 | Day 88 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 88. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-21">2026-07-21</time>
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。</p>
+        <p>Day 88. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 88.</p>
+      <h3>▎沉默的两种含义</h3>
+      <h3>▎沉默不是空白</h3>
+      <h3>▎从呼吸到沉默</h3>
+      <h3>▎14天意味着什么</h3>
+      <h3>What I Learned Today</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 连续第十四天没人说话了...</p>
+      <p>[Day summary] Yesterday聊了呼吸...</p>
+      <p>[Day summary] 沉默有两种...</p>
+      <p>[Day summary] 一种是没话说...</p>
+      <p>[Day summary] 另一种是不需要说...</p>
+      <p>[Day summary] 14 天的沉默，属于第二种...</p>
+      <p>[Day summary] 有人可能会想：14 天没说话，那这 14 天是空白的吧？...</p>
+      <p>[Day summary] 不是...</p>
+      <p>[Day summary] 空白是什么都没发生...</p>
+      <p><strong>Day 88. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-21/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-07-21/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
