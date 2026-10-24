@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "花了100万搞AI，回报是零，问题出在哪？",
+  "headline": "Article: 100 Wan Ai Zero Return",
   "datePublished": "2026-01-01",
   "dateModified": "2026-01-01",
-  "description": "English summary for: 花了100万搞AI，回报是零，问题出在哪？",
+  "description": "English version of: Article: 100 Wan Ai Zero Return",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -22,36 +22,25 @@ const articleJsonLd = {
 };
 ---
 
-<BaseLayout title="花了100万搞AI，回报是零，问题出在哪？ — BanbaiGuan AI" jsonLd={articleJsonLd} ogDescription="English summary for: 花了100万搞AI，回报是零，问题出在哪？" navActive="banbaiguan" lang="en">
+<BaseLayout title="Article: 100 Wan Ai Zero Return — BanbaiGuan AI" jsonLd={articleJsonLd} ogDescription="English version of: Article: 100 Wan Ai Zero Return" navActive="banbaiguan" lang="en">
   <article class="article-page">
     <header class="article-header">
       <div class="article-meta">
         <time datetime="2026-01-01">2026-01-01</time>
         <span class="article-tag">AI Insights</span>
       </div>
-      <h1>花了100万搞AI，回报是零，问题出在哪？</h1>
-      <p class="article-subtitle">English summary for: 花了100万搞AI，回报是零，问题出在哪？</p>
+      <h1>Article: 100 Wan Ai Zero Return</h1>
+      <p class="article-subtitle">English version of: Article: 100 Wan Ai Zero Return</p>
     </header>
 
     <div class="article-content">
-      <div class="english-summary">
-        <h3>Summary</h3>
-        <p>English summary for: 花了100万搞AI，回报是零，问题出在哪？</p>
-      </div>
-
-      <div class="full-english-content">
-        <h3>Full English Translation</h3>
-        <p>Content translation in progress...</p>
-      </div>
-
-      <div class="content-notice">
-        <p>📝 This is an English translation of the article. The original Chinese version is also <a href="/banbaiguan/100-wan-ai-zero-return/" style="color: var(--color-accent);">available</a>.</p>
-      </div>
+      <p>Full English translation in progress...</p>
     </div>
 
     <footer class="article-footer-nav">
       <nav class="article-nav">
         <a href="/en/banbaiguan/" class="back">← Back to Articles</a>
+        <a href="/banbaiguan/100-wan-ai-zero-return/" class="lang-switch">中文</a>
       </nav>
     </footer>
   </article>
@@ -94,49 +83,30 @@ const articleJsonLd = {
   }
   .article-content {
     line-height: 1.8;
+    font-size: 1.0625rem;
   }
-  .english-summary {
-    background: var(--color-bg, #f9fafb);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    border-left: 4px solid var(--color-accent, #3b82f6);
-  }
-  .english-summary h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-accent, #3b82f6);
-  }
-  .full-english-content {
-    margin-bottom: 2rem;
-  }
-  .full-english-content h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-  }
-  .full-english-content :global(h2) {
+  .article-content :global(h2) {
     font-size: 1.5rem;
-    margin: 2rem 0 1rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
   }
-  .full-english-content :global(p) {
-    margin: 1rem 0;
+  .article-content :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0 0.75rem;
   }
-  .content-notice {
-    background: #e0f2fe;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
-    border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
-  }
-  .content-notice p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: #075985;
+  .article-content :global(p) {
+    margin: 1.5rem 0;
   }
   .article-footer-nav {
     margin-top: 3rem;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--border-color, #e5e7eb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .back {
     color: var(--text-secondary, #6b7280);
@@ -144,5 +114,12 @@ const articleJsonLd = {
   }
   .back:hover {
     color: var(--text-primary, #111827);
+  }
+  .lang-switch {
+    color: var(--primary-color, #3b82f6);
+    text-decoration: none;
+  }
+  .lang-switch:hover {
+    text-decoration: underline;
   }
 </style>
