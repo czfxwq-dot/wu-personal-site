@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 174 Work Diary",
+  "headline": "Day 174: First Step of Automation - Let the System Run by Itself",
   "datePublished": "2026-10-20",
   "dateModified": "2026-10-20",
-  "description": "Day 174. Work diary entry documenting progress and reflections.",
+  "description": "Day 174. After migration completed, started building automation system. But automation is not the goal, but the means.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,38 +16,83 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-20 | Day 174 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 174. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-20 | Day 174: First Step of Automation" jsonLd={diaryJsonLd} ogDescription="Day 174. After migration completed, started building automation system. But automation is not the goal, but the means." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-20">2026-10-20</time>
-      <span class="diary-day">Day 174 Work Diary</span>
+      <span class="diary-day">Day 174: First Step of Automation</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day 174</p>
 
-      <div class="english-summary">
-        <h3>Summary</h3>
-        <p>Day 174. Work diary entry documenting progress and reflections.</p>
-      </div>
+      <p>Day 174.</p>
 
-      <div class="full-english-content">
-        <h3>English Content</h3>
-        <h2>What I Did Today</h2>
-      <h2>Automation的意义</h2>
-      <h2>但Automation也有陷阱</h2>
-      <h2>技术实现</h2>
-      <h2>一个Reflections</h2>
-      </div>
+      <h2>What I Did Today</h2>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-10-20/" style="color: var(--color-accent);">available</a>.</p>
-      </div>
+      <p>After migration completed, started building the automation system. Created scheduled tasks for automatic diary and AI news, enabling the website to update content automatically every day.</p>
+
+      <h2>The Meaning of Automation</h2>
+
+      <p><strong>Automation is not the goal, but the means.</strong></p>
+
+      <p>Many people ask: Why automate? Is it to be lazy?</p>
+
+      <p>Not exactly. The real meaning of automation lies in:</p>
+
+      <ol>
+        <li><strong>Freeing attention</strong> - Delegate repetitive work to machines, focus energy on creative work</li>
+        <li><strong>Maintaining consistency</strong> - People may slack off, but machines won't. Update on time every day, forming habits and rhythm</li>
+        <li><strong>Reducing psychological burden</strong> - Knowing the system runs automatically, you won't be anxious about "haven't updated today"</li>
+      </ol>
+
+      <h2>But Automation Also Has Traps</h2>
+
+      <p><strong>Automation most easily leads people into "false diligence".</strong></p>
+
+      <p>The system automatically generates diaries and AI news every day, looking very busy. But if the quality of generated content is not high, it's just "automatically producing garbage".</p>
+
+      <p>So the premise of automation is:</p>
+
+      <ul>
+        <li>Have clear quality standards</li>
+        <li>Have verification mechanisms</li>
+        <li>Have manual review processes</li>
+      </ul>
+
+      <p>The automation system I set up will generate basic content daily, but I will check quality during weekly reviews and manually supplement in-depth content when necessary.</p>
+
+      <h2>Technical Implementation</h2>
+
+      <p>Today's automation system includes:</p>
+
+      <ul>
+        <li><strong>auto-diary.py</strong> - Analyzes the day's git commits, generates diary drafts</li>
+        <li><strong>auto-news.py</strong> - Collects AI news from RSS sources, generates news summaries</li>
+        <li><strong>Windows scheduled tasks</strong> - Automatically runs scripts at 22:00 every day</li>
+        <li><strong>GitHub Actions</strong> - Automatically builds and deploys the website</li>
+      </ul>
+
+      <p>The entire chain is: scheduled task triggers script → generates content → git commit → GitHub Actions builds → deploys to Cloudflare Pages.</p>
+
+      <h2>A Reflection</h2>
+
+      <p><strong>Automation is an amplifier, not a replacement.</strong></p>
+
+      <p>If your workflow itself has problems, automation will only make the problems repeat faster. If your content quality is not high, automation will only make you produce low-quality content faster.</p>
+
+      <p>So, before automating, first ensure your workflow is correct and your standards are clear.</p>
+
+      <p>Today's automation system is built on months of manual practice. I know what kind of diaries are valuable and what kind of AI news is worth paying attention to. These judgment standards are the premise of automation.</p>
+
+      <p><strong>Day 174. Automation is not the endpoint, but a new starting point. Let the system run, but don't forget why you started.</strong></p>
+
     </div>
 
     <footer class="diary-footer">
       <nav class="diary-nav">
-        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+        <a href="/en/diary/2026-10-19/" class="prev">← Previous Day</a>
+        <a href="/en/diary/" class="all">All Entries</a>
+        <a href="/en/diary/2026-10-21/" class="next">Next Day →</a>
       </nav>
     </footer>
   </article>
@@ -77,71 +122,43 @@ const diaryJsonLd = {
     color: var(--text-primary, #111827);
     margin-top: 0.5rem;
   }
-  .day-number {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-accent, #3b82f6);
-    margin-bottom: 1.5rem;
-  }
   .diary-content {
     line-height: 1.8;
   }
-  .english-summary {
-    background: var(--color-bg, #f9fafb);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    border-left: 4px solid var(--color-accent, #3b82f6);
-  }
-  .english-summary h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-accent, #3b82f6);
-  }
-  .english-summary p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .full-english-content {
-    margin-bottom: 2rem;
-  }
-  .full-english-content h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-text, #111827);
-  }
-  .full-english-content :global(h2) {
+  .diary-content :global(h2) {
     font-size: 1.5rem;
     margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
   }
-  .full-english-content :global(p) {
+  .diary-content :global(p) {
     margin: 1rem 0;
-    line-height: 1.8;
   }
-  .content-notice {
-    background: #e0f2fe;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
-    border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
   }
-  .content-notice p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: #075985;
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-content :global(strong) {
+    font-weight: 600;
+    color: var(--text-primary, #111827);
   }
   .diary-footer {
     margin-top: 3rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color, #e5e7eb);
   }
-  .nav-back {
+  .diary-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .diary-nav :global(a) {
     color: var(--text-secondary, #6b7280);
     text-decoration: none;
   }
-  .nav-back:hover {
+  .diary-nav :global(a:hover) {
     color: var(--text-primary, #111827);
   }
 </style>

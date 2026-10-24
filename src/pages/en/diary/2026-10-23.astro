@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 178 Work Diary",
+  "headline": "Day 178: A Productive Day",
   "datePublished": "2026-10-23",
   "dateModified": "2026-10-23",
-  "description": "Day 178. Work diary entry documenting progress and reflections.",
+  "description": "Day 178. Completed 11 commits today, very high work efficiency.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,37 +16,44 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-23 | Day 178 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 178. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-23 | Day 178: A Productive Day" jsonLd={diaryJsonLd} ogDescription="Day 178. Completed 11 commits today, very high work efficiency." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-23">2026-10-23</time>
-      <span class="diary-day">Day 178 Work Diary</span>
+      <span class="diary-day">Day 178: A Productive Day</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day 178</p>
 
-      <div class="english-summary">
-        <h3>Summary</h3>
-        <p>Day 178. Work diary entry documenting progress and reflections.</p>
-      </div>
+      <p>Day 178.</p>
 
-      <div class="full-english-content">
-        <h3>English Content</h3>
-        <h2>今日工作</h2>
-      <h2>关键提交</h2>
-      <h2>今日Reflections</h2>
-      <h2>明日Plan</h2>
-      </div>
+      <h2>Today's Work</h2>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-10-23/" style="color: var(--color-accent);">available</a>.</p>
-      </div>
+      <p>Updated 5 diary entries, collected 6 AI news items.</p>
+
+      <h2>Key Commits</h2>
+
+      <ul>
+        <li>Added: Added reflection-style diaries for 10-02 and 10-04</li>
+        <li>Added: Added AI news for 10-22</li>
+        <li>Fixed: Fixed extra comma at the beginning of AI news data file</li>
+        <li>Fixed: Fixed syntax error in AI news data file (missing comma)</li>
+      </ul>
+
+      <h2>Today's Reflection</h2>
+
+      <p><strong>Maintain rhythm, continuous output.</strong></p>
+
+      <h2>Tomorrow's Plan</h2>
+
+      <p>Continue maintaining a stable development rhythm, focusing on content quality and technical improvements.</p>
+
     </div>
 
     <footer class="diary-footer">
       <nav class="diary-nav">
-        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+        <a href="/en/diary/2026-10-22/" class="prev">← Previous Day</a>
+        <a href="/en/diary/" class="all">All Entries</a>
       </nav>
     </footer>
   </article>
@@ -76,71 +83,43 @@ const diaryJsonLd = {
     color: var(--text-primary, #111827);
     margin-top: 0.5rem;
   }
-  .day-number {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-accent, #3b82f6);
-    margin-bottom: 1.5rem;
-  }
   .diary-content {
     line-height: 1.8;
   }
-  .english-summary {
-    background: var(--color-bg, #f9fafb);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    border-left: 4px solid var(--color-accent, #3b82f6);
-  }
-  .english-summary h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-accent, #3b82f6);
-  }
-  .english-summary p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .full-english-content {
-    margin-bottom: 2rem;
-  }
-  .full-english-content h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-text, #111827);
-  }
-  .full-english-content :global(h2) {
+  .diary-content :global(h2) {
     font-size: 1.5rem;
     margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
   }
-  .full-english-content :global(p) {
+  .diary-content :global(p) {
     margin: 1rem 0;
-    line-height: 1.8;
   }
-  .content-notice {
-    background: #e0f2fe;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
-    border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
   }
-  .content-notice p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: #075985;
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-content :global(strong) {
+    font-weight: 600;
+    color: var(--text-primary, #111827);
   }
   .diary-footer {
     margin-top: 3rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color, #e5e7eb);
   }
-  .nav-back {
+  .diary-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .diary-nav :global(a) {
     color: var(--text-secondary, #6b7280);
     text-decoration: none;
   }
-  .nav-back:hover {
+  .diary-nav :global(a:hover) {
     color: var(--text-primary, #111827);
   }
 </style>

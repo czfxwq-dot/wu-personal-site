@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 175 Work Diary",
+  "headline": "Day 175: Scheduled Tasks - Making Automation Real",
   "datePublished": "2026-10-21",
   "dateModified": "2026-10-21",
-  "description": "Day 175. Work diary entry documenting progress and reflections.",
+  "description": "Day 175. Created Windows scheduled tasks to make the automation system truly operational. But scheduled tasks are just the beginning, not the end.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,38 +16,104 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-21 | Day 175 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 175. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-21 | Day 175: Scheduled Tasks - Making Automation Real" jsonLd={diaryJsonLd} ogDescription="Day 175. Created Windows scheduled tasks to make the automation system truly operational. But scheduled tasks are just the beginning, not the end." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-21">2026-10-21</time>
-      <span class="diary-day">Day 175 Work Diary</span>
+      <span class="diary-day">Day 175: Scheduled Tasks - Making Automation Real</span>
     </header>
 
     <div class="diary-content">
-      <p class="day-number">Day 175</p>
 
-      <div class="english-summary">
-        <h3>Summary</h3>
-        <p>Day 175. Work diary entry documenting progress and reflections.</p>
-      </div>
+      <p>Day 175.</p>
 
-      <div class="full-english-content">
-        <h3>English Content</h3>
-        <h2>What I Did Today</h2>
-      <h2>Scheduled Tasks的实现</h2>
-      <h2>过程中的Problem</h2>
-      <h2>AutomationSystem的完整链路</h2>
-      <h2>一个Reflections</h2>
-      </div>
+      <h2>What I Did Today</h2>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-10-21/" style="color: var(--color-accent);">available</a>.</p>
-      </div>
+      <p>Created Windows scheduled tasks to make the automation system truly operational. Every day at 22:00, the system will automatically generate diaries and AI news, then build and deploy to the website.</p>
+
+      <h2>Implementation of Scheduled Tasks</h2>
+
+      <p><strong>The core of scheduled tasks is: doing the right thing at the right time.</strong></p>
+
+      <p>I created two scheduled tasks:</p>
+
+      <ol>
+        <li><strong>BanbaiGuan-AutoDiary</strong> - Runs auto-diary.py at 22:00 daily to generate the day's diary</li>
+        <li><strong>BanbaiGuan-AutoNews</strong> - Runs auto-news.py at 22:00 daily to collect AI news</li>
+      </ol>
+
+      <p>The reasons for choosing 22:00:</p>
+
+      <ul>
+        <li>The day's work is basically complete, can summarize the day's content</li>
+        <li>Network is relatively stable at night, deployment success rate is high</li>
+        <li>Can see updated content the next morning</li>
+      </ul>
+
+      <h2>Problems Encountered</h2>
+
+      <p><strong>Creating scheduled tasks was not smooth.</strong></p>
+
+      <p>Problems encountered include:</p>
+
+      <ul>
+        <li><strong>Encoding issues</strong> - Chinese encoding in Windows command line caused script execution to fail</li>
+        <li><strong>Permission issues</strong> - Required administrator privileges to create scheduled tasks</li>
+        <li><strong>Path issues</strong> - Chinese paths can cause problems in certain situations</li>
+      </ul>
+
+      <p>The final solution was:</p>
+
+      <ol>
+        <li>Use PowerShell scripts instead of batch files</li>
+        <li>Run as administrator</li>
+        <li>Use absolute paths</li>
+      </ol>
+
+      <h2>Complete Automation System Chain</h2>
+
+      <p>Now the entire automation system chain is:</p>
+
+      <ol>
+        <li><strong>22:00</strong> - Windows scheduled task triggers</li>
+        <li><strong>22:00-22:05</strong> - Run auto-diary.py and auto-news.py</li>
+        <li><strong>22:05-22:10</strong> - git commit and push</li>
+        <li><strong>22:10-22:15</strong> - GitHub Actions triggers build</li>
+        <li><strong>22:15-22:20</strong> - Deploy to Cloudflare Pages</li>
+        <li><strong>22:20</strong> - Website update complete</li>
+      </ol>
+
+      <p>The entire process takes about 20 minutes, requiring no manual intervention.</p>
+
+      <h2>A Reflection</h2>
+
+      <p><strong>The value of automation systems lies not in being "automatic", but in being "reliable".</strong></p>
+
+      <p>If it's automatic but unreliable, it will only make errors repeat faster. Truly valuable automation systems are:</p>
+
+      <ul>
+        <li><strong>Reliable</strong> - Can execute correctly every time</li>
+        <li><strong>Monitorable</strong> - Can know whether execution was successful</li>
+        <li><strong>Recoverable</strong> - Can automatically retry or notify for manual handling when failing</li>
+      </ul>
+
+      <p>My current automation system is still relatively simple, lacking monitoring and recovery mechanisms. Next steps needed:</p>
+
+      <ol>
+        <li>Add logging to facilitate troubleshooting</li>
+        <li>Add failure notifications, such as sending WeChat or email</li>
+        <li>Add retry mechanism, automatically retry after failure</li>
+      </ol>
+
+      <p><strong>Day 175. Scheduled tasks make automation truly operational, but operational is just the beginning. How to make the system more reliable and intelligent is the next topic.</strong></p>
+
     </div>
 
     <footer class="diary-footer">
       <nav class="diary-nav">
-        <a href="/en/diary/" class="nav-back">← Back to Diary List</a>
+        <a href="/en/diary/2026-10-20/" class="prev">← Previous Day</a>
+        <a href="/en/diary/" class="all">All Entries</a>
+        <a href="/en/diary/2026-10-22/" class="next">Next Day →</a>
       </nav>
     </footer>
   </article>
@@ -77,71 +143,43 @@ const diaryJsonLd = {
     color: var(--text-primary, #111827);
     margin-top: 0.5rem;
   }
-  .day-number {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-accent, #3b82f6);
-    margin-bottom: 1.5rem;
-  }
   .diary-content {
     line-height: 1.8;
   }
-  .english-summary {
-    background: var(--color-bg, #f9fafb);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    border-left: 4px solid var(--color-accent, #3b82f6);
-  }
-  .english-summary h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-accent, #3b82f6);
-  }
-  .english-summary p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .full-english-content {
-    margin-bottom: 2rem;
-  }
-  .full-english-content h3 {
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    color: var(--color-text, #111827);
-  }
-  .full-english-content :global(h2) {
+  .diary-content :global(h2) {
     font-size: 1.5rem;
     margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
   }
-  .full-english-content :global(p) {
+  .diary-content :global(p) {
     margin: 1rem 0;
-    line-height: 1.8;
   }
-  .content-notice {
-    background: #e0f2fe;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
-    border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
   }
-  .content-notice p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: #075985;
+  .diary-content :global(li) {
+    margin: 0.5rem 0;
+  }
+  .diary-content :global(strong) {
+    font-weight: 600;
+    color: var(--text-primary, #111827);
   }
   .diary-footer {
     margin-top: 3rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color, #e5e7eb);
   }
-  .nav-back {
+  .diary-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .diary-nav :global(a) {
     color: var(--text-secondary, #6b7280);
     text-decoration: none;
   }
-  .nav-back:hover {
+  .diary-nav :global(a:hover) {
     color: var(--text-primary, #111827);
   }
 </style>
