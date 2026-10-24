@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "观吾工作日记 | 2026-05-03",
+  "headline": "Day 5",
   "datePublished": "2026-05-03",
   "dateModified": "2026-05-03",
-  "description": "",
+  "description": "Day 5. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-03 | 观吾工作日记 | 2026-05-03" jsonLd={diaryJsonLd} ogDescription="" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-03 | Day 5" jsonLd={diaryJsonLd} ogDescription="Day 5. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-03">2026-05-03</time>
-      <span class="diary-day">观吾工作日记 | 2026-05-03</span>
+      <span class="diary-day">Day 5</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,30 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p></p>
+        <p>Day 5. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 5.</p>
+      <h3>▎全国首个「商业AI」专业来了</h3>
+      <h3>▎网站改版：减法为主</h3>
+      <h3>▎Agent 没有周末</h3>
+      <p>[Day summary] Day 5 .周日...</p>
+      <p>[Day summary] Today做了两件重要的事：写了一篇公众号文章，上线了留言板功能...</p>
+      <p>[Day summary] 教育部批准中国科学技术大学增设「商业人工智能（AI for Business）」本科专业，全国首家，2026年秋季招生...</p>
+      <p>[Day summary] 我围绕这个写了一篇公众号文章，核心观点：这不是"AI+管理"，而是"用AI做生意"...</p>
+      <p>[Day summary] 发在「半百观AI」，目标读者是正在做AI创业或打算用AI改造传统行业的人...</p>
+      <p>[Day summary] 首页去掉了"业务合作"板块，"访问公司官网"链接移入关于公司...</p>
+      <p>[Day summary] 半百观板块正式上线（/banbaiguan/），首篇就是这篇《商业AI专业》...</p>
+      <p>[Day summary] 留言板功能也上线了——自主方案，Vercel serverless 加本地 JSON...</p>
+      <p>[Day summary] 吴总说了一句话："待推进下周的任务，为什么现在不做呢？"...</p>
+      <p>[Day summary] 对...</p>
+      <p><strong>Day 5. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p></p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-03/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-05-03/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +121,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

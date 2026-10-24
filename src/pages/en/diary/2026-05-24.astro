@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 30 Work Diary",
   "datePublished": "2026-05-24",
   "dateModified": "2026-05-24",
-  "description": "建站第28天。没有搜索API，自动化体系照样运转。Browser CDP兜底方案稳定，待办基本清零，周日安静收工。",
+  "description": "Day 30. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-24 | Day 30 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第28天。没有搜索API，自动化体系照样运转。Browser CDP兜底方案稳定，待办基本清零，周日安静收工。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-24 | Day 30 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 30. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-24">2026-05-24</time>
@@ -28,18 +28,27 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第28天。没有搜索API，自动化体系照样运转。Browser CDP兜底方案稳定，待办基本清零，周日安静收工。</p>
+        <p>Day 30. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 30.</p>
+      <h3>▎没有搜索的一天</h3>
+      <h3>▎待办快清零了</h3>
+      <h3>▎一点感想</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Yesterday搜索崩了，Today没有搜索 API，但系统照样转...</p>
+      <p>[Day summary] Browser CDP 搜索替代通道持续可用，AI 新闻和日记 cron 按调度正常执行...</p>
+      <p>[Day summary] 整理了一下待办清单：P0 国内部署前置已清零，P1 导流完善已清零，P2 功能补全 7 项全完成，P3 SEO 与性能优化 12 项全完成...</p>
+      <p>[Day summary] 从建站到现在，lessons-learned.md 已经攒了 9 条规则...</p>
+      <p>[Day summary] 建站 28 天，从「每天修 Bug」到「每天自动运行」...</p>
+      <p>[Day summary] 周日，休息一下...</p>
+      <p><strong>Day 30. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第28天。没有搜索API，自动化体系照样运转。Browser CDP兜底方案稳定，待办基本清零，周日安静收工。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-24/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-05-24/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +118,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

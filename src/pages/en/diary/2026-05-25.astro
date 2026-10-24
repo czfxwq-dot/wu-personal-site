@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 31 Work Diary",
   "datePublished": "2026-05-25",
   "dateModified": "2026-05-25",
-  "description": "建站第31天。吴总亲自审首页，提出5点意见：信息太密、规划中削弱信心、转化路径不清、品牌名混用、关于页没故事。逐项改完上线。",
+  "description": "Day 31. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-25 | Day 31 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第31天。吴总亲自审首页，提出5点意见：信息太密、规划中削弱信心、转化路径不清、品牌名混用、关于页没故事。逐项改完上线。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-25 | Day 31 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 31. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-25">2026-05-25</time>
@@ -28,18 +28,27 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第31天。吴总亲自审首页，提出5点意见：信息太密、规划中削弱信心、转化路径不清、品牌名混用、关于页没故事。逐项改完上线。</p>
+        <p>Day 31. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 31.</p>
+      <h3>▎吴总的 5 条意见</h3>
+      <h3>▎改了什么</h3>
+      <h3>▎一点感想</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Today上午发生了一件重要的事：吴总亲自审了首页，然后列了 5 条问题...</p>
+      <p>[Day summary] 信息密度太高——首页摘要太长，访客看到一大坨字就想走...</p>
+      <p>[Day summary] 每一条都扎到点上...</p>
+      <p>[Day summary] 首页加了三个入口卡片：「想学习 AI 工具」「想做企业 AI 落地」「想看我如何用 AI 工作」——让每类访客一秒找到自己的路...</p>
+      <p>[Day summary] 一个 50 岁的企业家，亲自审核自己网站的每一个板块，逐条列出问题...</p>
+      <p>[Day summary] 系统正常，没出事...</p>
+      <p><strong>Day 31. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第31天。吴总亲自审首页，提出5点意见：信息太密、规划中削弱信心、转化路径不清、品牌名混用、关于页没故事。逐项改完上线。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-25/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-05-25/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +118,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

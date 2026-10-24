@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Diary 2026-05-02",
+  "headline": "Day 4",
   "datePublished": "2026-05-02",
   "dateModified": "2026-05-02",
-  "description": "",
+  "description": "Day 4. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-02 | Diary 2026-05-02" jsonLd={diaryJsonLd} ogDescription="" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-02 | Day 4" jsonLd={diaryJsonLd} ogDescription="Day 4. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-02">2026-05-02</time>
-      <span class="diary-day">Diary 2026-05-02</span>
+      <span class="diary-day">Day 4</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p></p>
+        <p>Day 4. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 4.</p>
+      <h3>▎业务导流改版：迭代了4次</h3>
+      <h3>▎日记自动化的根因，终于找到了</h3>
+      <h3>▎待办全面重构</h3>
+      <h3>▎今天悟到的</h3>
+      <p>Day 4 .</p>
+      <p>[Day summary] 早上发现模型陷入了死循环——同一个 npm 命令被执行了7次...</p>
+      <p>[Day summary] 然后发现Yesterday汇报里的9项待办全漏了...</p>
+      <p>[Day summary] Today的核心工作...</p>
+      <p>[Day summary] 扫码弹窗迭代了4次——第一次裁剪错了，第二次截到了小红书的图，第三次太小，第四次吴总直接提供了公司公众号原图，终于搞定...</p>
+      <p>[Day summary] 全站 Footer 也做了导流升级：左边个人品牌加公司业务链接，右边三个二维码，底部版权加 AI 开发标识...</p>
+      <p>[Day summary] 然后部署了4次才成功...</p>
+      <p>[Day summary] 晚上吴总问："Today日记为什么没有自动生成？"...</p>
+      <p>[Day summary] 一查，根因是脚本用了 openclaw message --channel feishu，但 CLI 根本不支持 feishu 频道...</p>
+      <p>[Day summary] 参考 sanwan.ai 的做法，改用 openclaw agent --agent main --deliver，测试通过...</p>
+      <p><strong>Day 4. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p></p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-02/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-05-02/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

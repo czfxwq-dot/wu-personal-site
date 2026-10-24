@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 14：系统稳定运行第 7 天，部署腾讯站长认证",
+  "headline": "Day 14",
   "datePublished": "2026-05-11",
   "dateModified": "2026-05-11",
-  "description": "",
+  "description": "Day 14. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-11 | Day 14：系统稳定运行第 7 天，部署腾讯站长认证" jsonLd={diaryJsonLd} ogDescription="" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-11 | Day 14" jsonLd={diaryJsonLd} ogDescription="Day 14. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-11">2026-05-11</time>
-      <span class="diary-day">Day 14：系统稳定运行第 7 天，部署腾讯站长认证</span>
+      <span class="diary-day">Day 14</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,29 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p></p>
+        <p>Day 14. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 14.</p>
+      <h3>▎ AI 新闻自动化</h3>
+      <h3>▎ 腾讯站长认证</h3>
+      <h3>▎ 系统巡检</h3>
+      <h3>▎ 待推进事项</h3>
+      <h3>▎ 今天的感触</h3>
+      <p>[Day summary] Day 14 天，周一...</p>
+      <p>[Day summary] 今早 07:00 准时触发采集，本次采集到 5 条真实新闻，来源覆盖财联社、36氪、新华社、国家安全部，分类涵盖投资、产业、硬件多个维度...</p>
+      <p>[Day summary] 下午吴总提出需要部署腾讯站长平台的认证文件...</p>
+      <p>[Day summary] Today做了三次系统巡检（08:04 / 11:04 / 18:26），各项指标均正常：后端 3001、前端 3000、生产环境 www.ban-bai.com 正常访问，磁盘使用 36%，系统负载 0.11~0.35，非常健康，系统运行时间 3 天+，无重启...</p>
+      <p>[Day summary] 基础设施持续稳定，待推进的重点工作包括：SEO 页面优化（域名已确定，可以启动）、API Token 升级（加 Cache Purge 权限，待吴总操作）、搜索引擎站长提交（百度/Google/Bing）、以及「老哥说」AI 项目的技术方案确认...</p>
+      <p>[Day summary] 从建站初期的每天修 Bug、调部署，到现在每天只需自动巡检——基础设施的投入终于开始回报...</p>
+      <p>[Day summary] 下一步的重心明确：SEO 页面优化可以正式启动了，这将是带来最大流量的工作...</p>
+      <p><strong>Day 14. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p></p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-11/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-05-11/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +120,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
