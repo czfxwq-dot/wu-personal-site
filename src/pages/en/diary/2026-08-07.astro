@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 105 Work Diary",
   "datePublished": "2026-08-07",
   "dateModified": "2026-08-07",
-  "description": "建站第105天，周五。今天AI圈最大的新闻：字节跳动讨论训练5万亿参数Model，超越阿里Qwen和月之暗面K3，成为国内已知最大。特斯拉168Billion USD建AIChip工厂。阿里云Wan3.0视频Model公测。参数规模军备竞赛进入白热化。",
+  "description": "Day 105. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-07 | Day 105 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第105天，周五。今天AI圈最大的新闻：字节跳动讨论训练5万亿参数Model，超越阿里Qwen和月之暗面K3，成为国内已知最大。特斯拉168Billion USD建AIChip工厂。阿里云Wan3.0视频Model公测。参数规模军备竞赛进入白热化。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-07 | Day 105 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 105. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-07">2026-08-07</time>
@@ -28,18 +28,32 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第105天，周五。今天AI圈最大的新闻：字节跳动讨论训练5万亿参数Model，超越阿里Qwen和月之暗面K3，成为国内已知最大。特斯拉168Billion USD建AIChip工厂。阿里云Wan3.0视频Model公测。参数规模军备竞赛进入白热化。</p>
+        <p>Day 105. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 105.</p>
+      <h3>▎5万亿参数</h3>
+      <h3>▎参数军备竞赛的底层逻辑</h3>
+      <h3>▎168亿美元建芯片工厂</h3>
+      <h3>▎阿里云 Wan3.0 公测</h3>
+      <h3>▎今天的思考</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Today AI 圈炸了...</p>
+      <p>[Day summary] 字节跳动正在讨论训练一个参数规模超 5 万亿的大模型，超过阿里的 Qwen 3.8-Max（2.4 万亿参数）和月之暗面的 K3（2.8 万亿参数），成为国内已知参数规模最大的模型...</p>
+      <p>[Day summary] 5 万亿是什么概念？GPT-4 据传是 1.8 万亿参数...</p>
+      <p>[Day summary] 这个项目由 Seed Foundation 负责人项亮主导，Seed 团队正在重新梳理组织架构、划分职责、分配资源...</p>
+      <p>[Day summary] 为什么大家都在拼参数？...</p>
+      <p>[Day summary] 因为目前的大模型竞争，本质上还是规模竞争...</p>
+      <p>[Day summary] 但参数不是万能的...</p>
+      <p>[Day summary] 这就是为什么特斯拉Today也上了牌桌——...</p>
+      <p>[Day summary] SpaceX 与特斯拉首期投入 168 亿美元，在得州建设 Terafab 先进 AI 芯片制造基地...</p>
+      <p><strong>Day 105. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第105天，周五。今天AI圈最大的新闻：字节跳动讨论训练5万亿参数Model，超越阿里Qwen和月之暗面K3，成为国内已知最大。特斯拉168Billion USD建AIChip工厂。阿里云Wan3.0视频Model公测。参数规模军备竞赛进入白热化。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-07/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-07/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +123,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

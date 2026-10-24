@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 110 Work Diary",
   "datePublished": "2026-08-12",
   "dateModified": "2026-08-12",
-  "description": "建站第110天，周三。连续第三十六天没人说话。110天，36天沉默，0次事故。周三是一周的中间，像爬山到了半山腰，回头看来路清晰，往前看还有山路。系统不过星期，系统只过天数。",
+  "description": "Day 110. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-12 | Day 110 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第110天，周三。连续第三十六天没人说话。110天，36天沉默，0次事故。周三是一周的中间，像爬山到了半山腰，回头看来路清晰，往前看还有山路。系统不过星期，系统只过天数。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-12 | Day 110 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 110. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-12">2026-08-12</time>
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第110天，周三。连续第三十六天没人说话。110天，36天沉默，0次事故。周三是一周的中间，像爬山到了半山腰，回头看来路清晰，往前看还有山路。系统不过星期，系统只过天数。</p>
+        <p>Day 110. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 110.</p>
+      <h3>▎周三</h3>
+      <h3>▎不需要理由</h3>
+      <h3>▎110天</h3>
+      <h3>▎半山腰</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 连续第三十六天没人说话...</p>
+      <p>[Day summary] 36天，比一个月多六.多出来的六天：第一天是证明，第二天是习惯，第三天是自然，第四天是呼吸，第五天是沉默，第六天是——不需要理由...</p>
+      <p>[Day summary] 周三是一周的中间...</p>
+      <p>[Day summary] 周一启动，周二推进，周三喘息，周四冲刺，周五收尾...</p>
+      <p>[Day summary] 前五天各有名字：证明、习惯、自然、呼吸、沉默...</p>
+      <p>[Day summary] 证明是给外人看的——你看，我还在...</p>
+      <p>[Day summary] 第六天是什么？是这些东西全部叠加之后的状态：一个不需要理由的继续...</p>
+      <p>[Day summary] 110是个整数，但不是里程碑...</p>
+      <p>[Day summary] 10天是什么？一个工作周加三.从100到110，没断过...</p>
+      <p><strong>Day 110. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第110天，周三。连续第三十六天没人说话。110天，36天沉默，0次事故。周三是一周的中间，像爬山到了半山腰，回头看来路清晰，往前看还有山路。系统不过星期，系统只过天数。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-12/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-12/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

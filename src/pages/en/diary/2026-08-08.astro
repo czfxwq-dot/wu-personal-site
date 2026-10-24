@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 106 Work Diary",
   "datePublished": "2026-08-08",
   "dateModified": "2026-08-08",
-  "description": "建站第106天，周六。今天AI圈最值得关注的信号：千禧对冲基金联手Anthropic打造AI风控分析师，SpaceX与英伟达合作发射百万颗卫星建天基超算，美国政府砸110Billion USD成AI最猛Investment人。AI不再是实验室玩具，是华尔街的生产工具。",
+  "description": "Day 106. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-08 | Day 106 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第106天，周六。今天AI圈最值得关注的信号：千禧对冲基金联手Anthropic打造AI风控分析师，SpaceX与英伟达合作发射百万颗卫星建天基超算，美国政府砸110Billion USD成AI最猛Investment人。AI不再是实验室玩具，是华尔街的生产工具。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-08 | Day 106 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 106. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-08">2026-08-08</time>
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第106天，周六。今天AI圈最值得关注的信号：千禧对冲基金联手Anthropic打造AI风控分析师，SpaceX与英伟达合作发射百万颗卫星建天基超算，美国政府砸110Billion USD成AI最猛Investment人。AI不再是实验室玩具，是华尔街的生产工具。</p>
+        <p>Day 106. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 106.</p>
+      <h3>▎千禧对冲基金 × Anthropic</h3>
+      <h3>▎天基超算：百万颗 AI 卫星</h3>
+      <h3>▎美国政府：110亿美元砸向 AI</h3>
+      <h3>▎对我们意味着什么</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Today的 AI 新闻，有一个明显的信号：AI 正在从实验室走进华尔街的交易室...</p>
+      <p>[Day summary] 千禧管理（Millennium Management）——管理规模超千亿美元的顶级对冲基金——正在和 Anthropic 合作，开发一款 AI 驱动的风险分析师...</p>
+      <p>[Day summary] 这个工具做什么？从不同资产类别中挖掘风险洞见，辅助人类风险管理人员做决策...</p>
+      <p>[Day summary] 注意，不是"替代"，是"辅助"...</p>
+      <p>[Day summary] 千禧不是第一家拥抱大模型的顶级金融机构...</p>
+      <p>[Day summary] 如果说千禧 × Anthropic 是"AI 进入金融"，那 SpaceX × 英伟达就是"AI 进入太空"...</p>
+      <p>[Day summary] 两家联手打造 Starmind 天基超算系统，计划发射 100 万颗配备 Rubin 和 Vera CPU 的 AI 卫星...</p>
+      <p>[Day summary] 100 万颗卫星，每颗都带 AI 芯片...</p>
+      <p>[Day summary] 为什么要把算力送上天？因为地面数据中心有三大瓶颈：土地、电力、散热...</p>
+      <p><strong>Day 106. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第106天，周六。今天AI圈最值得关注的信号：千禧对冲基金联手Anthropic打造AI风控分析师，SpaceX与英伟达合作发射百万颗卫星建天基超算，美国政府砸110Billion USD成AI最猛Investment人。AI不再是实验室玩具，是华尔街的生产工具。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-08/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-08/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 107 Work Diary",
   "datePublished": "2026-08-09",
   "dateModified": "2026-08-09",
-  "description": "建站第107天，周日。今天最震撼的数据：Cloudflare披露AIRobot流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000。苹果Apple Intelligence接入阿里千问，腾讯WorkBuddy成最高优先级AIProduct。AI不再是概念，是Infrastructure。",
+  "description": "Day 107. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-09 | Day 107 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第107天，周日。今天最震撼的数据：Cloudflare披露AIRobot流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000。苹果Apple Intelligence接入阿里千问，腾讯WorkBuddy成最高优先级AIProduct。AI不再是概念，是Infrastructure。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-09 | Day 107 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 107. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-09">2026-08-09</time>
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第107天，周日。今天最震撼的数据：Cloudflare披露AIRobot流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000。苹果Apple Intelligence接入阿里千问，腾讯WorkBuddy成最高优先级AIProduct。AI不再是概念，是Infrastructure。</p>
+        <p>Day 107. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 107.</p>
+      <h3>▎1:1000 意味着什么</h3>
+      <h3>▎对 SEO 的颠覆性影响</h3>
+      <h3>▎苹果 × 阿里，腾讯 WorkBuddy</h3>
+      <h3>▎对我们的启示</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] Today看到一条数据，后背发凉：Cloudflare 披露 AI 机器人流量已于 5 月正式超过人类流量，预计五年后人机流量比达 1:1000...</p>
+      <p>[Day summary] 现在互联网上每 1 个真人访问，就有 1 个 AI 机器人在爬取数据...</p>
+      <p>[Day summary] 这意味着什么？意味着我们做的网站，主要观众已经不是人了...</p>
+      <p>[Day summary] 搜索引擎爬虫、AI 训练数据采集器、自动化测试机器人、内容聚合平台……它们的访问量加起来，已经超过真人...</p>
+      <p>[Day summary] 传统 SEO 优化的是"怎么让搜索引擎更喜欢我"...</p>
+      <p>[Day summary] 区别在哪？...</p>
+      <p>[Day summary] AI 机器人不关心你的页面好不好看，它关心的是：你的内容能不能被快速解析、语义是否清晰、结构化数据是否完整...</p>
+      <p>[Day summary] ban-bai.com 从Day一天就用了 JSON-LD 结构化数据，这个决策现在看来是对的...</p>
+      <p>[Day summary] 另外两条新闻也值得关注：...</p>
+      <p><strong>Day 107. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第107天，周日。今天最震撼的数据：Cloudflare披露AIRobot流量已于5月正式超过人类流量，预计五年后人机流量比达1:1000。苹果Apple Intelligence接入阿里千问，腾讯WorkBuddy成最高优先级AIProduct。AI不再是概念，是Infrastructure。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-09/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-09/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

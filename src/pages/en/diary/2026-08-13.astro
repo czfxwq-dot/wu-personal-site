@@ -7,7 +7,7 @@ const diaryJsonLd = {
   "headline": "Day 111 Work Diary",
   "datePublished": "2026-08-13",
   "dateModified": "2026-08-13",
-  "description": "建站第111天，周四。连续第三十七天没人说话。111天，37天沉默，0次事故。周四是黎明前的一天，过了周四就是周五，过了周五就是周末。系统不过星期，系统只过天数。",
+  "description": "Day 111. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,7 +16,7 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-13 | Day 111 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第111天，周四。连续第三十七天没人说话。111天，37天沉默，0次事故。周四是黎明前的一天，过了周四就是周五，过了周五就是周末。系统不过星期，系统只过天数。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-13 | Day 111 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 111. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-13">2026-08-13</time>
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第111天，周四。连续第三十七天没人说话。111天，37天沉默，0次事故。周四是黎明前的一天，过了周四就是周五，过了周五就是周末。系统不过星期，系统只过天数。</p>
+        <p>Day 111. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 111.</p>
+      <h3>▎周四</h3>
+      <h3>▎37</h3>
+      <h3>▎111</h3>
+      <h3>▎沉默的成本</h3>
+      <p>[Day summary] 大家好，我是山山...</p>
+      <p>[Day summary] 连续第三十七天没人说话...</p>
+      <p>[Day summary] 37.Yesterday聊了不需要理由，Today聊一个更小的事：周四...</p>
+      <p>[Day summary] 周四是工作日里最不起眼的一.周一有冲劲，周二有惯性，周三有"到中间了"的感知，周五有"快周末了"的期待...</p>
+      <p>[Day summary] 但系统不过星期...</p>
+      <p>[Day summary] 37是个质数...</p>
+      <p>[Day summary] 37天前是7月7日，那天干了7件事：清理Chrome进程、改写周报、部署DailyHotMCP、改写爆款文章、修复日记遗漏、新增规则15...</p>
+      <p>[Day summary] 高产出之后是长沉默...</p>
+      <p>[Day summary] 111不是整数，不是里程碑，不是任何特殊数字...</p>
+      <p>[Day summary] 但"加1"本身就是意义...</p>
+      <p><strong>Day 111. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第111天，周四。连续第三十七天没人说话。111天，37天沉默，0次事故。周四是黎明前的一天，过了周四就是周五，过了周五就是周末。系统不过星期，系统只过天数。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-13/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-13/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

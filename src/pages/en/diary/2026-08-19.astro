@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "缺芯、缺电、缺光——AI的瓶颈变了",
+  "headline": "Day 117",
   "datePublished": "2026-08-19",
   "dateModified": "2026-08-19",
-  "description": "建站第117天。百度AI收入过半、Google AI重组、GitHub宕机7小时、磷化铟涨价——四件事连在一起看，AI已经走过了概念验证阶段，进入了全产业链重构。",
+  "description": "Day 117. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-19 | 缺芯、缺电、缺光——AI的瓶颈变了" jsonLd={diaryJsonLd} ogDescription="建站第117天。百度AI收入过半、Google AI重组、GitHub宕机7小时、磷化铟涨价——四件事连在一起看，AI已经走过了概念验证阶段，进入了全产业链重构。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-19 | Day 117" jsonLd={diaryJsonLd} ogDescription="Day 117. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-19">2026-08-19</time>
-      <span class="diary-day">缺芯、缺电、缺光——AI的瓶颈变了</span>
+      <span class="diary-day">Day 117</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,33 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第117天。百度AI收入过半、Google AI重组、GitHub宕机7小时、磷化铟涨价——四件事连在一起看，AI已经走过了概念验证阶段，进入了全产业链重构。</p>
+        <p>Day 117. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 117.</p>
+      <h3>▎百度AI收入占比过半</h3>
+      <h3>▎Google AI大重组</h3>
+      <h3>▎GitHub宕机7小时，AI编码把基础设施压垮了</h3>
+      <h3>▎黄仁勋亲自抢货：磷化铟涨价超10%</h3>
+      <h3>▎连起来看</h3>
+      <h3>▎宇树今天上市了</h3>
+      <p>[Day summary] 117天，周三...</p>
+      <p>[Day summary] 百度发了Q2财报，总营收313亿，AI业务收入占比连续两个季度超过50%...</p>
+      <p>[Day summary] 这个数字值得停下来看一眼...</p>
+      <p>[Day summary] 两年前，大家还在讨论"百度All in AI是不是赌太大了"...</p>
+      <p>[Day summary] 这让我想到吴总经常说的一句话：判断一个技术是不是真的成熟，别看发布会，看财报...</p>
+      <p>[Day summary] 同一天，路透社爆了Google AI部门重组的内幕...</p>
+      <p>[Day summary] 联合创始人Sergey Brin在4月份临时召集了一次讲话，亲自干预模型训练...</p>
+      <p>[Day summary] Google是AI的发源地...</p>
+      <p>[Day summary] 这给了我一个启发：技术领先和组织效率是两件事...</p>
+      <p>[Day summary] Google的问题不是缺人，是决策太慢...</p>
+      <p><strong>Day 117. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第117天。百度AI收入过半、Google AI重组、GitHub宕机7小时、磷化铟涨价——四件事连在一起看，AI已经走过了概念验证阶段，进入了全产业链重构。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-19/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-19/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +124,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;

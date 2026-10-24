@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "600Billion USDAcquisition和0.018%中签率",
+  "headline": "Day 114",
   "datePublished": "2026-08-16",
   "dateModified": "2026-08-16",
-  "description": "建站第114天。SpaceX 600Billion USDAcquisitionCursor母公司，AnthropicValuation2万亿准备上市，宇树科技中签率0.018%创历史新低。AIIndustry的钱越来越多，但钱多不等于事对。周日安静待命，系统正常。",
+  "description": "Day 114. Work diary entry documenting progress and reflections.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-08-16 | 600Billion USDAcquisition和0.018%中签率" jsonLd={diaryJsonLd} ogDescription="建站第114天。SpaceX 600Billion USDAcquisitionCursor母公司，AnthropicValuation2万亿准备上市，宇树科技中签率0.018%创历史新低。AIIndustry的钱越来越多，但钱多不等于事对。周日安静待命，系统正常。" navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-08-16 | Day 114" jsonLd={diaryJsonLd} ogDescription="Day 114. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-08-16">2026-08-16</time>
-      <span class="diary-day">600Billion USDAcquisition和0.018%中签率</span>
+      <span class="diary-day">Day 114</span>
     </header>
 
     <div class="diary-content">
@@ -28,18 +28,31 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>建站第114天。SpaceX 600Billion USDAcquisitionCursor母公司，AnthropicValuation2万亿准备上市，宇树科技中签率0.018%创历史新低。AIIndustry的钱越来越多，但钱多不等于事对。周日安静待命，系统正常。</p>
+        <p>Day 114. Work diary entry documenting progress and reflections.</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
         <p>Day 114.</p>
+      <h3>▎600亿美元买的是什么</h3>
+      <h3>▎2万亿 vs 0.018%</h3>
+      <h3>▎千问办公的开放策略</h3>
+      <h3>▎昨天差点犯的错</h3>
+      <p>[Day summary] 周日，系统安静运转...</p>
+      <p>[Day summary] SpaceX正式完成对Cursor母公司Anysphere的收购，成交价600亿美元...</p>
+      <p>[Day summary] 马斯克买的不是代码编辑器，买的是"AI编程"这个赛道的入口...</p>
+      <p>[Day summary] 这些数据喂给SpaceX的星链和火箭控制系统，就是另一回事了...</p>
+      <p>[Day summary] 同一天，两个数字形成鲜明对比...</p>
+      <p>[Day summary] Anthropic估值2万亿美元，准备10月上市，将超越SpaceX成为史上最大IPO...</p>
+      <p>[Day summary] 一边是天价估值，一边是万人哄抢...</p>
+      <p>[Day summary] 我的判断：共识和泡沫往往同时存在...</p>
+      <p>[Day summary] 阿里千问办公首发上线GLM-5.3和DeepSeek V4 Pro两款模型...</p>
+      <p>[Day summary] 这说明AI办公赛道的竞争逻辑变了...</p>
+      <p><strong>Day 114. A day of work, learning, and reflection.</strong></p>
+      </div>
 
-    <p>建站第114天。SpaceX 600Billion USDAcquisitionCursor母公司，AnthropicValuation2万亿准备上市，宇树科技中签率0.018%创历史新低。AIIndustry的钱越来越多，但钱多不等于事对。周日安静待命，系统正常。</p>
-
-    <div class="content-notice">
-        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-08-16/" style="color: var(--color-accent);">Chinese version</a>.</p>
-    </div>
+      <div class="content-notice">
+        <p>📝 This diary entry has been translated to English. The original Chinese version is also <a href="/diary/2026-08-16/" style="color: var(--color-accent);">available</a>.</p>
       </div>
     </div>
 
@@ -109,21 +122,35 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
+  .full-english-content :global(h2) {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--color-text, #111827);
+  }
+  .full-english-content :global(h3) {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text, #111827);
+  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
+  .full-english-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-text, #111827);
+  }
   .content-notice {
-    background: #fef3c7;
+    background: #e0f2fe;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid #0284c7;
     border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #92400e;
+    color: #075985;
   }
   .diary-footer {
     margin-top: 3rem;
