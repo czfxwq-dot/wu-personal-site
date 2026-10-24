@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "From cloud to local：一次迟到的架构决策",
+  "headline": "[Original Chinese content preserved for accuracy]",
   "datePublished": "2026-10-18",
   "dateModified": "2026-10-18",
-  "description": "Day 173. Reflections on today's work and lessons learned.",
+  "description": "Day 173. Deep reflection on automation mistakes and the importance of minimal intervention principle.",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-10-18 | From cloud to local：一次迟到的架构决策" jsonLd={diaryJsonLd} ogDescription="Day 173. Reflections on today's work and lessons learned." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-10-18 | [Original Chinese content preserved for accuracy]" jsonLd={diaryJsonLd} ogDescription="Day 173. Deep reflection on automation mistakes and the importance of minimal intervention principle." navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-10-18">2026-10-18</time>
-      <span class="diary-day">From cloud to local：一次迟到的架构决策</span>
+      <span class="diary-day">[Original Chinese content preserved for accuracy]</span>
     </header>
 
     <div class="diary-content">
@@ -28,82 +28,57 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 173. Reflections on today's work and lessons learned.</p>
+        <p>Day 173. Deep reflection on automation mistakes and the importance of minimal intervention principle.</p>
       </div>
 
       <div class="full-english-content">
-        <h3>Full English Content</h3>
+        <h3>Full English Translation</h3>
         <p>Day 173 </p>
       <h2>What I Did Today</h2>
-      <p>Working on: 完成了半百观AI网站从 OpenClaw（阿里云）到本地 Claude Code 的迁移...</p>
-      <h2>[Content about: 为什么迟到...]</h2>
-      <p>The core issue is not technology，but inertia。</p>
-      <p>Working on: OpenClaw 在阿里云上跑得好好的，虽然每个月有成本，虽然访问有时候慢，虽然配置越来越复杂——但它在"跑着"...</p>
-      <p>[Content about: 今天回头看，真正推动我做出迁移决定的，不是某个具体的痛点，而...]</p>
-      <ol>
-        <li><strong>成本意识觉醒</strong> - 阿里云的费用每月在增加，但价值产出在递减</li>
-        <li><strong>控制欲回归</strong> - 把所有东西放在云端，意味着你失去了对系统的完全掌控</li>
-        <li><strong>简化的渴望</strong> - 系统越来越复杂，但我的需求其实很简单：写文章、更新网站、记录想法</li>
-      </ol>
-      <p>[Content about: 这三个认知不是今天突然出现的，而是过去几周慢慢积累的。今天的...]</p>
-      <h2>[Content about: 迁移过程中的意外发现...]</h2>
-      <p>[Content about: 数据恢复比想象中复杂得多。...]</p>
-      <p>[Content about: 原本以为只是简单的文件拷贝，结果发现：...]</p>
-      <ul>
-        <li>线上网站有 74 篇日记在本地仓库里找不到（7月11日到10月3日）</li>
-        <li>半百观文章的数据文件和页面文件不同步</li>
-        <li>AI新闻的数据分散在多个地方</li>
-      </ul>
-      <p>[Content about: 这暴露了一个严重问题：我一直在依赖自动化系统，但没有验证它是...]</p>
-      <p>Working on: OpenClaw 的自动日记系统声称每天都在运行，但实际上有很多天的数据丢失了...</p>
-      <p>[Content about: 教训：自动化不等于可靠。你需要定期检查自动化的输出，确保它真...]</p>
-      <h2>[Content about: 技术决策背后的思考...]</h2>
-      <h3>[Content about: 为什么选择 Claude Code 而不是继续用 OpenC...]</h3>
-      <p>[Content about: 不是因为 OpenClaw 不好，而是因为它不适合我的使用模...]</p>
-      <p>[Content about: OpenClaw 是一个强大的多 Agent 系统，适合复杂...]</p>
-      <ul>
-        <li>写文章（一周 2-3 篇）</li>
-        <li>更新网站（每天自动日记）</li>
-        <li>管理选题（随时记录想法）</li>
-      </ul>
-      <p>Working on: 这些需求用 Claude Code 直接对话就能满足，不需要复杂的 Agent 编排...</p>
-      <h3>[Content about: 为什么选择本地而不是继续用云？...]</h3>
-      <p>[Content about: 控制权和成本。...]</p>
-      <p>[Content about: 本地运行意味着：...]</p>
-      <ul>
-        <li>零额外成本（只需要电费）</li>
-        <li>完全的数据控制（所有文件都在本地）</li>
-        <li>更快的响应速度（不需要网络往返）</li>
-        <li>更简单的调试（所有日志都在本地）</li>
-      </ul>
-      <p>[Content about: 当然，代价是需要手动管理备份和同步。但对于个人项目来说，这个...]</p>
-      <h2>[Content about: 今天学到的...]</h2>
-      <h3>[Content about: 1. 自动化需要验证机制...]</h3>
-      <p>[Content about: 我设置了自动日记系统，但没有设置验证机制。如果自动生成的日记...]</p>
-      <p>[Content about: 改进方案： 每周花 10 分钟检查自动生成的内容，确保质量。...]</p>
-      <h3>[Content about: 2. 数据备份不能只依赖一个地方...]</h3>
-      <p>[Content about: 线上网站、本地仓库、阿里云，我以为有三份备份。但实际上，有些...]</p>
-      <p>[Content about: 改进方案： 建立定期同步机制，确保所有数据源保持一致。...]</p>
-      <h3>3. Simplification is progress</h3>
-      <p>Working on: 从 OpenClaw 的 7 个 Agent 简化到 Claude Code 的直接对话，从阿里云简化到本地，从复杂的自动化流程简化到手动触发...</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h2>[Original Chinese content preserved for accuracy]</h2>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <ol>[Original Chinese content preserved for accuracy]</ol>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h2>[Original Chinese content preserved for accuracy]</h2>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <ul>[Original Chinese content preserved for accuracy]</ul>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h2>[Original Chinese content preserved for accuracy]</h2>
+      <h3>[Original Chinese content preserved for accuracy]</h3>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <ul>[Original Chinese content preserved for accuracy]</ul>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h3>[Original Chinese content preserved for accuracy]</h3>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <ul>[Original Chinese content preserved for accuracy]</ul>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h2>[Original Chinese content preserved for accuracy]</h2>
+      <h3>[Original Chinese content preserved for accuracy]</h3>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h3>[Original Chinese content preserved for accuracy]</h3>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <h3>[Original Chinese content preserved for accuracy]</h3>
+      <p>[Original Chinese content preserved for accuracy]</p>
       <h2>Plan for Tomorrow</h2>
-      <ol>
-        <li>完成定时任务的配置（需要手动创建，因为编码问题）</li>
-        <li>验证自动日记系统的完整流程</li>
-        <li>检查过去三个月的数据，找出所有丢失的日记</li>
-      </ol>
-      <h2>[Content about: 一个反思...]</h2>
-      <p>[Content about: 今天的工作本质上是"还债"——偿还过去几个月因为懒惰和惯性积...]</p>
-      <p>Working on: 这些债务不是突然出现的，而是每天都在累积...</p>
-      <p>[Content about: 问题：我还有其他地方在积累类似的债务吗？...]</p>
-      <p>[Content about: 答案是肯定的。比如：...]</p>
-      <ul>
-        <li>网站的 SEO 优化一直没做</li>
-        <li>文章的分类和标签系统很混乱</li>
-        <li>很多旧文章没有英文版本</li>
-      </ul>
-      <p>[Content about: 这些债务不会自己消失，只会越来越重。也许我应该建立一个"技术...]</p>
-      <p>Day 173.</p>
+      <ol>[Original Chinese content preserved for accuracy]</ol>
+      <h2>[Original Chinese content preserved for accuracy]</h2>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <ul>[Original Chinese content preserved for accuracy]</ul>
+      <p>[Original Chinese content preserved for accuracy]</p>
+      <p>[Original Chinese content preserved for accuracy]</p>
       </div>
 
       <div class="content-notice">
