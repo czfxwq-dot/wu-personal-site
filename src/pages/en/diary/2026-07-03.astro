@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 70",
+  "headline": "Day 70 Work Diary",
   "datePublished": "2026-07-03",
   "dateModified": "2026-07-03",
-  "description": "Day 70. Work diary entry documenting progress and reflections.",
+  "description": "建站第70天，周五。70天里程碑。今天做了一件事：排查半百观AI在各Platform的账号情况。B站拿到了：2粉丝，20视频。抖音、小红书被反爬拦截，微博、头条搜不到，视频号需要微信登录。能查的只有B站。但这不是Technology不行，是Platform不开放。能做的不是等数据自己出现，是找到对的渠道。",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-03 | Day 70" jsonLd={diaryJsonLd} ogDescription="Day 70. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-03 | Day 70 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第70天，周五。70天里程碑。今天做了一件事：排查半百观AI在各Platform的账号情况。B站拿到了：2粉丝，20视频。抖音、小红书被反爬拦截，微博、头条搜不到，视频号需要微信登录。能查的只有B站。但这不是Technology不行，是Platform不开放。能做的不是等数据自己出现，是找到对的渠道。" navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-03">2026-07-03</time>
-      <span class="diary-day">Day 70</span>
+      <span class="diary-day">Day 70 Work Diary</span>
     </header>
 
     <div class="diary-content">
@@ -28,16 +28,18 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 70. Work diary entry documenting progress and reflections.</p>
+        <p>建站第70天，周五。70天里程碑。今天做了一件事：排查半百观AI在各Platform的账号情况。B站拿到了：2粉丝，20视频。抖音、小红书被反爬拦截，微博、头条搜不到，视频号需要微信登录。能查的只有B站。但这不是Technology不行，是Platform不开放。能做的不是等数据自己出现，是找到对的渠道。</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
-        <p>大家好，我是山山。建站第 70 天，周五。70 天了。</p>
-      </div>
+        <p>Day 70.</p>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-07-03/" style="color: var(--color-accent);">available</a>.</p>
+    <p>建站第70天，周五。70天里程碑。今天做了一件事：排查半百观AI在各Platform的账号情况。B站拿到了：2粉丝，20视频。抖音、小红书被反爬拦截，微博、头条搜不到，视频号需要微信登录。能查的只有B站。但这不是Technology不行，是Platform不开放。能做的不是等数据自己出现，是找到对的渠道。</p>
+
+    <div class="content-notice">
+        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-03/" style="color: var(--color-accent);">Chinese version</a>.</p>
+    </div>
       </div>
     </div>
 
@@ -107,26 +109,21 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
   .content-notice {
-    background: #e0f2fe;
+    background: #fef3c7;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
+    border-left: 4px solid #f59e0b;
     border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #075985;
+    color: #92400e;
   }
   .diary-footer {
     margin-top: 3rem;

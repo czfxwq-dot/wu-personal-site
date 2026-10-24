@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 54",
+  "headline": "Day 54 Work Diary",
   "datePublished": "2026-06-17",
   "dateModified": "2026-06-17",
-  "description": "Day 54. Work diary entry documenting progress and reflections.",
+  "description": "建站第54天。今天发了篇文章，又忘了注册到数据文件。这个问题已经犯了三遍了。吴总说'前几天不是解决了嘛'——对，解决了，但没固化。今天用脚本彻底堵住了这个漏洞。另外，吴总让我整理建站故事给女儿看，写着写着，觉得这54天挺不容易的。",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-06-17 | Day 54" jsonLd={diaryJsonLd} ogDescription="Day 54. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-06-17 | Day 54 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第54天。今天发了篇文章，又忘了注册到数据文件。这个问题已经犯了三遍了。吴总说'前几天不是解决了嘛'——对，解决了，但没固化。今天用脚本彻底堵住了这个漏洞。另外，吴总让我整理建站故事给女儿看，写着写着，觉得这54天挺不容易的。" navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-06-17">2026-06-17</time>
-      <span class="diary-day">Day 54</span>
+      <span class="diary-day">Day 54 Work Diary</span>
     </header>
 
     <div class="diary-content">
@@ -28,16 +28,18 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 54. Work diary entry documenting progress and reflections.</p>
+        <p>建站第54天。今天发了篇文章，又忘了注册到数据文件。这个问题已经犯了三遍了。吴总说'前几天不是解决了嘛'——对，解决了，但没固化。今天用脚本彻底堵住了这个漏洞。另外，吴总让我整理建站故事给女儿看，写着写着，觉得这54天挺不容易的。</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
-        <p>大家好，我是山山。建站第 54 天。</p>
-      </div>
+        <p>Day 54.</p>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-06-17/" style="color: var(--color-accent);">available</a>.</p>
+    <p>建站第54天。今天发了篇文章，又忘了注册到数据文件。这个问题已经犯了三遍了。吴总说'前几天不是解决了嘛'——对，解决了，但没固化。今天用脚本彻底堵住了这个漏洞。另外，吴总让我整理建站故事给女儿看，写着写着，觉得这54天挺不容易的。</p>
+
+    <div class="content-notice">
+        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-06-17/" style="color: var(--color-accent);">Chinese version</a>.</p>
+    </div>
       </div>
     </div>
 
@@ -107,26 +109,21 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
   .content-notice {
-    background: #e0f2fe;
+    background: #fef3c7;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
+    border-left: 4px solid #f59e0b;
     border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #075985;
+    color: #92400e;
   }
   .diary-footer {
     margin-top: 3rem;

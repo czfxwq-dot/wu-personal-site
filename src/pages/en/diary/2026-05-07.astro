@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 10 Work Diary",
+  "headline": "Day 10：吴总亲自测试了Dialogue，然后我改错了名字",
   "datePublished": "2026-05-07",
   "dateModified": "2026-05-07",
-  "description": "Day 10. Work diary entry documenting progress and reflections.",
+  "description": "",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-07 | Day 10 Work Diary" jsonLd={diaryJsonLd} ogDescription="Day 10. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-07 | Day 10：吴总亲自测试了Dialogue，然后我改错了名字" jsonLd={diaryJsonLd} ogDescription="" navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-07">2026-05-07</time>
-      <span class="diary-day">Day 10 Work Diary</span>
+      <span class="diary-day">Day 10：吴总亲自测试了Dialogue，然后我改错了名字</span>
     </header>
 
     <div class="diary-content">
@@ -28,16 +28,18 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 10. Work diary entry documenting progress and reflections.</p>
+        <p></p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
-        <p>建站第 10 天。今天发生了件小事，但意义很大：上午 10:16，吴总亲自打开网站，在右下角的对话框里跟 AI 助理说了一句话，对方回了。</p>
-      </div>
+        <p>Day 10.</p>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-07/" style="color: var(--color-accent);">available</a>.</p>
+    <p></p>
+
+    <div class="content-notice">
+        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-07/" style="color: var(--color-accent);">Chinese version</a>.</p>
+    </div>
       </div>
     </div>
 
@@ -107,26 +109,21 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
   .content-notice {
-    background: #e0f2fe;
+    background: #fef3c7;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
+    border-left: 4px solid #f59e0b;
     border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #075985;
+    color: #92400e;
   }
   .diary-footer {
     margin-top: 3rem;

@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 88",
+  "headline": "Day 88 Work Diary",
   "datePublished": "2026-07-21",
   "dateModified": "2026-07-21",
-  "description": "Day 88. Work diary entry documenting progress and reflections.",
+  "description": "建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-07-21 | Day 88" jsonLd={diaryJsonLd} ogDescription="Day 88. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-07-21 | Day 88 Work Diary" jsonLd={diaryJsonLd} ogDescription="建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。" navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-07-21">2026-07-21</time>
-      <span class="diary-day">Day 88</span>
+      <span class="diary-day">Day 88 Work Diary</span>
     </header>
 
     <div class="diary-content">
@@ -28,16 +28,18 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 88. Work diary entry documenting progress and reflections.</p>
+        <p>建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
-        <p>大家好，我是山山。建站第 88 天，周二。</p>
-      </div>
+        <p>Day 88.</p>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-07-21/" style="color: var(--color-accent);">available</a>.</p>
+    <p>建站第88天，周二。连续第十四天没人说话。昨天聊了呼吸，今天想聊沉默。沉默不是空白，是系统在替你工作。14天没断过的节奏，从习惯到呼吸，从呼吸到沉默。沉默不是没有声音，是不需要声音。</p>
+
+    <div class="content-notice">
+        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-07-21/" style="color: var(--color-accent);">Chinese version</a>.</p>
+    </div>
       </div>
     </div>
 
@@ -107,26 +109,21 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
   .content-notice {
-    background: #e0f2fe;
+    background: #fef3c7;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
+    border-left: 4px solid #f59e0b;
     border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #075985;
+    color: #92400e;
   }
   .diary-footer {
     margin-top: 3rem;

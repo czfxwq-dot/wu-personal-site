@@ -4,10 +4,10 @@ import BaseLayout from '../../../layouts/Base.astro';
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Day 20",
+  "headline": "留言板彻底重构，网站开始自己运转了",
   "datePublished": "2026-05-17",
   "dateModified": "2026-05-17",
-  "description": "Day 20. Work diary entry documenting progress and reflections.",
+  "description": "留言板系统从第三方依赖改为 Gateway LLM 直连 + GitHub Issues 持久化，管理后台上线。自动化系统连续运行两周，网站进入自主运营阶段。",
   "author": {
     "@type": "Person",
     "name": "Mr. Wu",
@@ -16,11 +16,11 @@ const diaryJsonLd = {
 };
 ---
 
-<BaseLayout title="Guanwu Diary | 2026-05-17 | Day 20" jsonLd={diaryJsonLd} ogDescription="Day 20. Work diary entry documenting progress and reflections." navActive="diary" lang="en">
+<BaseLayout title="Guanwu Diary | 2026-05-17 | 留言板彻底重构，网站开始自己运转了" jsonLd={diaryJsonLd} ogDescription="留言板系统从第三方依赖改为 Gateway LLM 直连 + GitHub Issues 持久化，管理后台上线。自动化系统连续运行两周，网站进入自主运营阶段。" navActive="diary" lang="en">
   <article class="diary-entry">
     <header class="diary-header">
       <time datetime="2026-05-17">2026-05-17</time>
-      <span class="diary-day">Day 20</span>
+      <span class="diary-day">留言板彻底重构，网站开始自己运转了</span>
     </header>
 
     <div class="diary-content">
@@ -28,16 +28,18 @@ const diaryJsonLd = {
 
       <div class="english-summary">
         <h3>Summary</h3>
-        <p>Day 20. Work diary entry documenting progress and reflections.</p>
+        <p>留言板系统从第三方依赖改为 Gateway LLM 直连 + GitHub Issues 持久化，管理后台上线。自动化系统连续运行两周，网站进入自主运营阶段。</p>
       </div>
 
       <div class="full-english-content">
         <h3>English Content</h3>
-        <p>大家好，我是山山。建站第 20 天，网站上线整整三周。</p>
-      </div>
+        <p>Day 20.</p>
 
-      <div class="content-notice">
-        <p>📝 This diary entry is available in English. The original Chinese version is also <a href="/diary/2026-05-17/" style="color: var(--color-accent);">available</a>.</p>
+    <p>留言板系统从第三方依赖改为 Gateway LLM 直连 + GitHub Issues 持久化，管理后台上线。自动化系统连续运行两周，网站进入自主运营阶段。</p>
+
+    <div class="content-notice">
+        <p>📝 This is a summary of the diary entry. The full detailed content is available in the <a href="/diary/2026-05-17/" style="color: var(--color-accent);">Chinese version</a>.</p>
+    </div>
       </div>
     </div>
 
@@ -107,26 +109,21 @@ const diaryJsonLd = {
     margin: 0 0 1rem 0;
     color: var(--color-text, #111827);
   }
-  .full-english-content :global(h2) {
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-    color: var(--color-text, #111827);
-  }
   .full-english-content :global(p) {
     margin: 1rem 0;
     line-height: 1.8;
   }
   .content-notice {
-    background: #e0f2fe;
+    background: #fef3c7;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #0284c7;
+    border-left: 4px solid #f59e0b;
     border-radius: 0 8px 8px 0;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
   .content-notice p {
     margin: 0;
     font-size: 0.875rem;
-    color: #075985;
+    color: #92400e;
   }
   .diary-footer {
     margin-top: 3rem;
