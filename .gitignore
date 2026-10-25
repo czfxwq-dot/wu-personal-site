@@ -9,4 +9,5 @@ dist/
 .wrangler/
 tmp/
 .astro/
+docs/
 src/data/guestbook.json

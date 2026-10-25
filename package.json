@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && npx pagefind --source docs",
+    "build": "astro build && npx pagefind --site docs",
     "preview": "astro preview",
     "check:data": "node scripts/sync-data.mjs check",
     "fix:data": "node scripts/sync-data.mjs fix",
