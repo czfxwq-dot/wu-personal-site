@@ -14,6 +14,19 @@ const diariesCollection = defineCollection({
   }),
 });
 
+const articlesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.union([z.string(), z.null()]).transform(s => s || ''),
+    date: z.union([z.string(), z.date()]).transform(d => typeof d === 'string' ? d : d.toISOString().split('T')[0]),
+    tag: z.union([z.string(), z.null()]).transform(t => t || ''),
+    author: z.union([z.string(), z.null()]).transform(a => a || '吴总'),
+    summary: z.union([z.string(), z.null()]).transform(s => s || ''),
+  }),
+});
+
 export const collections = {
   'diaries': diariesCollection,
+  'articles': articlesCollection,
 };

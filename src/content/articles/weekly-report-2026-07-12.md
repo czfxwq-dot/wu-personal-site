@@ -1,0 +1,118 @@
+---
+title: AI/科技行业周报
+subtitle: 覆盖时间：2026年7月6日 - 7月12日
+date: 2026-07-12
+tag: AI周报
+author: 吴总
+summary: 覆盖2026年7月6日-7月12日AI行业重大事件：GPT-5.6三模型发布、Claude Fable 5/Mythos 5、Meta Muse Spark 1.1、Grok 4.5、Apple诉OpenAI、美国政府AI采购争议等。
+---
+
+<section class="article-section">
+  <h2>📌 本周概览</h2>
+  <p><strong>本周是2026年AI行业最密集的一周。</strong>OpenAI、Anthropic、Meta、xAI四大厂商在同一周内发布前沿模型，Apple起诉OpenAI窃取商业机密，美国政府AI采购争议不断，AI安全事件频发。</p>
+</section>
+
+<section class="article-section">
+  <h2>🔥 本周重大新闻</h2>
+
+  <h3>1. OpenAI发布GPT-5.6家族：Sol、Terra、Luna三模型</h3>
+  <p><strong>时间：</strong>7月9日 &nbsp; <strong>来源：</strong>OpenAI官方、TechCrunch、Latent Space</p>
+  <p>OpenAI发布GPT-5.6系列模型，包含三个版本：<strong>Sol</strong>（旗舰，$5/$30 per M tokens）、<strong>Terra</strong>（中端）、<strong>Luna</strong>（轻量快速）。核心亮点包括<strong>Ultra模式</strong>（协调4个Agent并行工作）、效率提升54%、同步推出ChatGPT Work桌面应用和Codex桌面应用更新。</p>
+  <blockquote><p>💡 <strong>点评：</strong>OpenAI正从模型供应商转型为全栈工作平台，与浏览器、连接器、编排原语、应用部署和桌面运行时深度整合。</p></blockquote>
+
+  <h3>2. Anthropic发布Claude Fable 5和Mythos 5</h3>
+  <p><strong>时间：</strong>7月7日 &nbsp; <strong>来源：</strong>Anthropic官方、TechCrunch</p>
+  <p>Anthropic发布两款前沿模型：<strong>Fable 5</strong>（面向公众，$10/$50 per M tokens）和<strong>Mythos 5</strong>（移除安全限制，仅面向授权组织）。Fable 5安全分类器会在检测到网络、生物、化学风险时自动降级到Opus 4.8，Mythos 5移除安全门控，影响不到5%的会话。</p>
+  <blockquote><p>💡 <strong>点评：</strong>Anthropic采用"同一模型，不同门控"策略，在安全与能力之间寻找平衡。Mythos 5的发布标志着AI安全政策的新方向。</p></blockquote>
+
+  <h3>3. Meta发布Muse Spark 1.1：首个付费API模型</h3>
+  <p><strong>时间：</strong>7月9日 &nbsp; <strong>来源：</strong>Meta AI、Techzine、Digital Applied</p>
+  <p>Meta Superintelligence Labs发布Muse Spark 1.1，这是Meta首次将自家模型放在付费API背后。定价<strong>$1.25/$4.25 per M tokens</strong>，远低于竞品。在JobBench和MCP Atlas等Agent工具使用基准测试中排名第一，100万token上下文窗口，新用户赠送$20免费额度。</p>
+  <blockquote><p>💡 <strong>点评：</strong>Meta正以低价策略进入AI API市场，直接挑战Anthropic和OpenAI。虽然纯编码能力不及Opus 4.8和GPT-5.5，但在Agent工具使用方面领先。</p></blockquote>
+
+  <h3>4. xAI发布Grok 4.5</h3>
+  <p><strong>时间：</strong>7月8日 &nbsp; <strong>来源：</strong>xAI官方</p>
+  <p>xAI发布Grok 4.5，定价<strong>$2/$6 per M tokens</strong>。500K上下文窗口，约80 tokens/秒，本组模型中速度最快。</p>
+  <blockquote><p>💡 <strong>点评：</strong>Grok 4.5以速度和性价比取胜，适合需要快速响应的场景。</p></blockquote>
+
+  <h3>5. Apple起诉OpenAI窃取商业机密</h3>
+  <p><strong>时间：</strong>7月10日 &nbsp; <strong>来源：</strong>TechCrunch、Bloomberg、Washington Post、NYT</p>
+  <p>Apple在联邦法院起诉OpenAI，指控其系统性窃取关于未发布产品的商业机密。OpenAI硬件负责人Tang Tan主导了这一行为，前Apple员工Chang Liu（在Apple工作8年）离职时未归还笔记本电脑并下载了机密技术文档。这是两大科技巨头之间的重大法律对决。</p>
+  <blockquote><p>💡 <strong>点评：</strong>可能影响AI公司的招聘策略和知识产权保护格局。</p></blockquote>
+
+  <h3>6. OpenAI高管Fidji Simo离职</h3>
+  <p><strong>时间：</strong>7月10日 &nbsp; <strong>来源：</strong>CNBC</p>
+  <p>OpenAI高管Fidji Simo（被认为是OpenAI的"二号人物"）因慢性疾病宣布离职。</p>
+
+  <h3>7. 美国政府AI采购争议</h3>
+  <p>能源部与xAI签署<strong>110亿美元</strong>合同（引发争议），与OpenAI签署<strong>10亿美元</strong>合同。陆军部署指挥官AI系统（使用Anthropic和OpenAI模型），白宫推出AI Action Hub。</p>
+
+  <h3>8. AI安全事件频发</h3>
+  <p>MIT学生因训练AI模型被FBI逮捕（涉及DeepSeek和中国AI模型），多起AI代理漏洞被恶意利用。</p>
+
+  <h3>9. Meta和解AI训练数据版权诉讼</h3>
+  <p>Meta就AI训练数据版权诉讼达成和解，具体金额和条款未公开。</p>
+</section>
+
+<section class="article-section">
+  <h2>📊 本周前沿模型对比</h2>
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>模型</th>
+        <th>厂商</th>
+        <th>定价(入/出)</th>
+        <th>上下文</th>
+        <th>速度</th>
+        <th>定位</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Claude Fable 5</strong></td><td>Anthropic</td><td>$10/$50</td><td>1M</td><td>-</td><td>质量领先</td></tr>
+      <tr><td><strong>Claude Mythos 5</strong></td><td>Anthropic</td><td>$10/$50</td><td>1M</td><td>-</td><td>无安全限制</td></tr>
+      <tr><td><strong>GPT-5.6 Sol</strong></td><td>OpenAI</td><td>$5/$30</td><td>1M</td><td>-</td><td>旗舰模型</td></tr>
+      <tr><td><strong>GPT-5.6 Terra</strong></td><td>OpenAI</td><td>中等</td><td>1M</td><td>-</td><td>平衡型</td></tr>
+      <tr><td><strong>GPT-5.6 Luna</strong></td><td>OpenAI</td><td>低价</td><td>1M</td><td>-</td><td>轻量快速</td></tr>
+      <tr><td><strong>Muse Spark 1.1</strong></td><td>Meta</td><td>$1.25/$4.25</td><td>1M</td><td>-</td><td>Agent工具</td></tr>
+      <tr><td><strong>Grok 4.5</strong></td><td>xAI</td><td>$2/$6</td><td>500K</td><td>~80tps</td><td>速度优先</td></tr>
+    </tbody>
+  </table>
+  <p><strong>关键观察：</strong>本周前沿模型呈现"集群化"趋势，Fable 5领先，其他模型处于同一水平。价格差异巨大（8倍），选择取决于具体场景。</p>
+</section>
+
+<section class="article-section">
+  <h2>🔮 本周趋势观察</h2>
+  <ul>
+    <li><strong>前沿模型"集群化"</strong>：多个模型在基准测试中表现接近，差异化更多体现在价格、速度、安全策略和产品整合上</li>
+    <li><strong>AI从模型到平台</strong>：OpenAI、Anthropic等公司正从单纯的模型供应商转型为全栈工作平台</li>
+    <li><strong>Agent时代到来</strong>：GPT-5.6的Ultra模式、Muse Spark 1.1的Agent工具使用，AI代理正在成为主流</li>
+    <li><strong>安全与能力的平衡</strong>：Anthropic的Fable/Mythos双模型策略、MIT学生被捕事件，反映了AI安全与能力之间的张力</li>
+    <li><strong>政府AI采购加速</strong>：美国政府大规模采购AI服务，但透明度和监管问题亟待解决</li>
+  </ul>
+</section>
+
+<section class="article-section">
+  <h2>💡 对磐石电气的启示</h2>
+  <ul>
+    <li><strong>Agent工具使用</strong>：Muse Spark 1.1在Agent工具使用方面领先，可用于智能仓储系统的自动化决策</li>
+    <li><strong>成本优化</strong>：GPT-5.6 Luna和Grok 4.5的低价策略，适合大规模部署场景</li>
+    <li><strong>安全策略</strong>：Anthropic的Fable/Mythos双模型策略，值得在工业AI应用中借鉴</li>
+  </ul>
+</section>
+
+<section class="article-section">
+  <h2>📅 下周展望</h2>
+  <ul>
+    <li><strong>GPT-5.6全面推送</strong>：OpenAI预计将向所有ChatGPT用户推送GPT-5.6</li>
+    <li><strong>Apple诉OpenAI案进展</strong>：可能有更多细节曝光</li>
+    <li><strong>AI安全政策</strong>：美国政府可能出台新的AI安全指引</li>
+    <li><strong>更多模型发布</strong>：预计其他厂商将继续发布新模型</li>
+  </ul>
+</section>
+
+<section class="article-section">
+  <h2>💡 一句话总结</h2>
+  <blockquote class="report-quote">
+    <p><strong>AI行业进入"四强争霸+安全觉醒"时代</strong>——OpenAI、Anthropic、Meta、xAI一周内集体亮剑，模型能力趋同但价格差8倍；Apple诉OpenAI敲响知识产权警钟；AI安全从理论走向现实。选择模型不再看"谁最聪明"，而是看"谁最适合你的场景和预算"。</p>
+  </blockquote>
+</section>
