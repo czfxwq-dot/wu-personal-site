@@ -23,7 +23,6 @@ export interface DailyNewsSummary {
 }
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
-,
 {
   "date": "2026-10-24",
   "title": "AI新闻 | 拿到2亿美金融资，Today AI回答了Personal A...",
@@ -101,7 +100,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     }
   ],
   "comment": "技术进步带来机遇，也带来挑战。"
-}{
+},
+{
   "date": "2026-10-23",
   "title": "AI新闻 | 36氪首发丨金属3D打印企业完成数千万元融资，已交付商业航天...",
   "titleEn": "AI News | 2026-10-23",

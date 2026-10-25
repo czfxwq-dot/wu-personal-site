@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const diaries = await getCollection('diaries');
+  return diaries.map((diary) => ({
+    params: { date: diary.slug },
+    props: { diary },
+  }));
+}
+
+const { diary } = Astro.props;
+const { Content } = await diary.render();
+
+const dayNames = ['日', '一', '二', '三', '四', '五', '六'];
+const diaryDate = new Date(diary.data.date + 'T00:00:00+08:00');
+const dayName = dayNames[diaryDate.getDay()];
+
+const title = diary.data.title || diary.data.date;
+const summary = diary.data.summary || '';
+const category = diary.data.category || '';
+const dayNum = diary.data.dayNum || 0;
+
+// 查找前后篇
+const allDiaries = await getCollection('diaries');
+const sortedDiaries = allDiaries.sort((a, b) => b.data.date.localeCompare(a.data.date));
+const currentIndex = sortedDiaries.findIndex((d) => d.slug === diary.slug);
+const prevDiary = currentIndex < sortedDiaries.length - 1 ? sortedDiaries[currentIndex + 1] : null;
+const nextDiary = currentIndex > 0 ? sortedDiaries[currentIndex - 1] : null;
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": `观吾日记 | ${diary.data.date}`,
+  "description": summary,
+  "datePublished": diary.data.date,
+  "dateModified": diary.data.date,
+  "author": {
+    "@type": "Person",
+    "name": "吴总",
+    "alternateName": "观吾"
+  },
+  "url": `https://ban-bai.com/diary/${diary.data.date}/`
+};
+---
+
+<BaseLayout title={`观吾日记 | ${diary.data.date} — ${title}`} jsonLd={diaryJsonLd} ogDescription={summary} navActive="diary">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime={diary.data.date}>{diary.data.date}</time>
+      <span class="diary-day">周{dayName}</span>
+      {category && <span class="diary-category">{category}</span>}
+    </header>
+
+    <div class="diary-content">
+      <h1>Day {dayNum}：{title}</h1>
+      <Content />
+    </div>
+
+    <footer class="diary-footer">
+      <div class="diary-nav">
+        {prevDiary ? (
+          <a href={`/diary/${prevDiary.data.date}/`} class="prev">← {prevDiary.data.date}</a>
+        ) : (
+          <span class="disabled">← 第一篇</span>
+        )}
+        <a href="/diary/" class="back">← 所有日记</a>
+        {nextDiary ? (
+          <a href={`/diary/${nextDiary.data.date}/`} class="next">{nextDiary.data.date} →</a>
+        ) : (
+          <span class="disabled">最新一篇 →</span>
+        )}
+      </div>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .diary-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .diary-header time {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .diary-day {
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+  .diary-category {
+    font-size: 12px;
+    padding: 2px 8px;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 4px;
+  }
+  .diary-content h1 {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    margin-bottom: 32px;
+    line-height: 1.4;
+  }
+  .diary-content :global(h2) {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    margin: 32px 0 16px;
+  }
+  .diary-content :global(p) {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 16px;
+  }
+  .diary-content :global(ul),
+  .diary-content :global(ol) {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  .diary-content :global(li) {
+    margin-bottom: 8px;
+    line-height: 1.8;
+  }
+  .diary-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+  }
+  .diary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .diary-nav a,
+  .diary-nav span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .diary-nav a:hover {
+    color: var(--color-text);
+  }
+  .diary-nav .disabled {
+    opacity: 0.4;
+  }
+</style>
