@@ -53,11 +53,17 @@ const diaryJsonLd = {
     <div class="diary-content">
       <h2>{title}</h2>
 
-      <p class="diary-summary">{summary}</p>
+      {diary.contentEn ? (
+        <div set:html={diary.contentEn} />
+      ) : (
+        <>
+          <p class="diary-summary">{summary}</p>
 
-      <div class="content-notice">
-        <p>📝 This is an English summary of the diary entry. The full detailed content is available in <a href={`/diary/${diary.date}/`} style="color: var(--color-accent);">Chinese version</a>.</p>
-      </div>
+          <div class="content-notice">
+            <p>📝 This is an English summary of the diary entry. The full detailed content is available in <a href={`/diary/${diary.date}/`} style="color: var(--color-accent);">Chinese version</a>.</p>
+          </div>
+        </>
+      )}
     </div>
 
     <footer class="diary-footer">

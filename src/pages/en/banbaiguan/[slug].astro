@@ -49,12 +49,18 @@ const articleJsonLd = {
     </header>
 
     <div class="article-content">
-      <div class="content-notice">
-        <p>📝 Full article content is available in Chinese. English translation of the body will be added soon.</p>
-      </div>
+      {article.contentEn ? (
+        <div set:html={article.contentEn} />
+      ) : (
+        <>
+          <div class="content-notice">
+            <p>📝 Full article content is available in Chinese. English translation of the body will be added soon.</p>
+          </div>
 
-      <p class="article-lead"><em>The full article is written in Chinese. Here's a summary:</em></p>
-      <p>{excerpt}</p>
+          <p class="article-lead"><em>The full article is written in Chinese. Here's a summary:</em></p>
+          <p>{excerpt}</p>
+        </>
+      )}
     </div>
 
     <footer class="article-footer-nav">
