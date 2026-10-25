@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+
+const diaryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "稳定推进",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
+  "description": "今天完成了 10 次提交，持续推进项目进展。",
+  "author": {
+    "@type": "Person",
+    "name": "观吾",
+    "alternateName": "吴总"
+  }
+};
+---
+
+<BaseLayout title="观吾日记 | 2026-10-25 | 稳定推进" jsonLd={diaryJsonLd} ogDescription="今天完成了 10 次提交，持续推进项目进展。" navActive="diary">
+  <article class="diary-entry">
+    <header class="diary-header">
+      <time datetime="2026-10-25">2026-10-25</time>
+      <span class="diary-day">稳定推进</span>
+    </header>
+
+    <div class="diary-content">
+
+      <p>建站第 180 天。</p>
+
+      <h2>今日工作</h2>
+
+      <p>更新了 4 篇日记，发布了 2 篇半百观文章，更新了 1 个文档。</p>
+
+      <h2>关键提交</h2>
+
+      <ul>
+      <li>新增：添加29个日记和3个文章的英文翻译（15.5%进度）</li>
+      <li>新增：添加英文版完整内容支持（示例5个日记+3个文章）</li>
+      <li>修复：清理：删除临时修复脚本</li>
+      <li>修复：修复日记标题：从日期改为实际标题</li>
+      </ul>
+
+      <h2>今日反思</h2>
+
+      <p><strong>积少成多，聚沙成塔。</strong></p>
+
+      <h2>明日计划</h2>
+
+      <p>继续保持稳定的开发节奏，关注内容质量和技术改进。</p>
+
+    </div>
+
+    <footer class="diary-footer">
+      <nav class="diary-nav">
+        <a href="/diary/" class="nav-back">← 返回日记列表</a>
+      </nav>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .diary-entry {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+  }
+  time {
+    color: var(--text-secondary, #6b7280);
+    font-size: 0.9rem;
+  }
+  .diary-day {
+    display: inline-block;
+    background: var(--bg-secondary, #f3f4f6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  .diary-content {
+    line-height: 1.8;
+  }
+  .diary-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .diary-content p {
+    margin: 1rem 0;
+  }
+  .diary-content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  .diary-content li {
+    margin: 0.5rem 0;
+  }
+  .diary-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+  .nav-back {
+    color: var(--primary-color, #3b82f6);
+    text-decoration: none;
+  }
+  .nav-back:hover {
+    text-decoration: underline;
+  }
+</style>
