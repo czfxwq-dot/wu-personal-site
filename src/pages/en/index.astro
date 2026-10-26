@@ -31,6 +31,12 @@ const homeJsonLd = {
 const latest = diaries[0];
 const latestSummary = dailyNewsSummaries[0];
 const latestArticle = articles[0];
+
+function truncate(str: string, maxLen: number): string {
+  if (!str) return '';
+  if (str.length <= maxLen) return str;
+  return str.slice(0, maxLen) + '…';
+}
 ---
 
 <BaseLayout jsonLd={homeJsonLd} navActive="home" lang="en">
@@ -68,6 +74,39 @@ const latestArticle = articles[0];
     </div>
   </section>
 
+  <!-- Entry Section -->
+  <section class="entry-section">
+    <div class="container">
+      <div class="section-subtitle">What would you like to explore?</div>
+      <div class="entry-cards">
+        <a href="/en/diary/" class="entry-card entry-learn">
+          <span class="entry-icon">🛠️</span>
+          <div class="entry-info">
+            <h3>Learn AI Tools</h3>
+            <p>Read daily work diaries with real practices</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+        <a href="/en/about/" class="entry-card entry-business">
+          <span class="entry-icon">🏭</span>
+          <div class="entry-info">
+            <h3>Enterprise AI Solutions</h3>
+            <p>Discover MonolithIoT solutions for your business</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+        <a href="/en/banbaiguan/" class="entry-card entry-story">
+          <span class="entry-icon">📖</span>
+          <div class="entry-info">
+            <h3>See How I Use AI</h3>
+            <p>BanbaiGuan AI articles + AI news + full timeline</p>
+          </div>
+          <span class="entry-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Content Grid -->
   <section class="content-grid">
     <div class="container">
@@ -95,7 +134,7 @@ const latestArticle = articles[0];
           </div>
           <div class="card-date">{latestSummary.date} · {latestSummary.newsItems.length} items</div>
           <h3 class="card-heading">{latestSummary.titleEn}</h3>
-          <p class="card-excerpt">{latestSummary.summaryEn}</p>
+          <p class="card-excerpt">{truncate(latestSummary.summaryEn, 120)}</p>
           <div class="card-comment">
             <span class="comment-icon">💡</span>
             {latestSummary.commentEn}
@@ -116,12 +155,41 @@ const latestArticle = articles[0];
     </div>
   </section>
 
-  <!-- AI Projects -->
+  <!-- Live AI Projects -->
   <section class="page-section">
     <div class="container">
-      <div class="section-title">AI Projects</div>
-      <div class="placeholder-card">
-        <p>Coming soon <span class="placeholder-dots">· · ·</span></p>
+      <div class="section-title">Live AI Projects</div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <span class="project-icon">🦞</span>
+          <h3>Shanshan AI Assistant</h3>
+          <p>Gateway LLM-based intelligent dialogue system supporting visitor interaction, knowledge base queries, and content recommendations</p>
+          <span class="project-status status-live">● Live</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📰</span>
+          <h3>Automated Content System</h3>
+          <p>AI news auto-collected, summarized, and deployed daily at 07:00; one-click Feishu publishing to website</p>
+          <span class="project-status status-live">● Live</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📓</span>
+          <h3>Work Diary System</h3>
+          <p>Auto-generated daily work diaries at 22:00, documenting site progress, lessons learned, and technical decisions</p>
+          <span class="project-status status-live">● Live</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">📊</span>
+          <h3>AI News System</h3>
+          <p>Multi-source RSS + domestic search engine collection, auto-summarization, commentary, and site publishing</p>
+          <span class="project-status status-live">● Live</span>
+        </div>
+        <div class="project-card">
+          <span class="project-icon">🔧</span>
+          <h3>SKILL-A/B Content Production</h3>
+          <p>Dual workflow for topic decisions + writing execution, 7-question scoring + 18-item self-check for high-quality articles</p>
+          <span class="project-status status-live">● Live</span>
+        </div>
       </div>
     </div>
   </section>

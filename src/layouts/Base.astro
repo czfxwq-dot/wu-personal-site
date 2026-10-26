@@ -46,7 +46,7 @@ const langCode = lang === 'en' ? 'en' : 'zh-CN';
 const ogLocale = lang === 'en' ? 'en_US' : 'zh_CN';
 const baseUrl = 'https://www.ban-bai.com';
 const canonicalUrl = `${baseUrl}${pathname}`;
-const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace('/en', '/')}` : `${baseUrl}/en${pathname === '/' ? '' : pathname}`;
+const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace(/^\/en/, '') || '/'}` : `${baseUrl}/en${pathname === '/' ? '' : pathname}`;
 
 // Google Analytics Measurement ID
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
