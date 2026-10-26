@@ -13,6 +13,33 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-25',
+    title: `建站第 180 天`,
+    titleEn: `Day 180`,
+    summary: `建站第180天。周六。`,
+    summaryEn: `Day 180. Saturday.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-10-24',
+    title: `建站第 179 天`,
+    titleEn: `Day 179`,
+    summary: `建站第179天。周五。`,
+    summaryEn: `Day 179. Friday.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-10-23',
+    title: `建站第 178 天`,
+    titleEn: `Day 178`,
+    summary: `建站第178天。周四。`,
+    summaryEn: `Day 178. Thursday.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
     date: '2026-10-22',
     title: `自动化的代价：当我们试图修复问题时`,
     titleEn: `The Cost of Automation: When We Try to Fix Problems`,
