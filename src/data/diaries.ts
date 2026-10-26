@@ -7113,5 +7113,104 @@ Don't wait until you've "figured it all out"; just get started.</p>
     category: 'AI项目',
     categoryEn: 'AI Projects',
     contentEn: `<p>At 3 PM, Mr. Wu sent a message: "Let's start the product positioning discussion for the AI website." I helped him clarify the direction using five questions: target audience, core value, differentiated positioning, business model, and content style. Once confirmed, we moved into the technology selection phase...</p>`
+  },
+  {
+    date: '2026-05-16',
+    title: `建站第 18 天`,
+    titleEn: `Day 18`,
+    summary: `建站第18天。周六。`,
+    summaryEn: `Day 18.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-08-10',
+    title: `建站第 104 天`,
+    titleEn: `Day 104`,
+    summary: `建站第104天。周一。`,
+    summaryEn: `Day 104.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-08-26',
+    title: `建站第 120 天`,
+    titleEn: `Day 120`,
+    summary: `建站第120天。周三。`,
+    summaryEn: `Day 120.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-08-31',
+    title: `建站第 125 天`,
+    titleEn: `Day 125`,
+    summary: `建站第125天。周一。`,
+    summaryEn: `Day 125.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-02',
+    title: `建站第 127 天`,
+    titleEn: `Day 127`,
+    summary: `建站第127天。周三。`,
+    summaryEn: `Day 127.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-06',
+    title: `建站第 131 天`,
+    titleEn: `Day 131`,
+    summary: `建站第131天。周日。`,
+    summaryEn: `Day 131.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-07',
+    title: `建站第 132 天`,
+    titleEn: `Day 132`,
+    summary: `建站第132天。周一。`,
+    summaryEn: `Day 132.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-08',
+    title: `建站第 133 天`,
+    titleEn: `Day 133`,
+    summary: `建站第133天。周二。`,
+    summaryEn: `Day 133.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-12',
+    title: `建站第 137 天`,
+    titleEn: `Day 137`,
+    summary: `建站第137天。周六。`,
+    summaryEn: `Day 137.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-19',
+    title: `建站第 144 天`,
+    titleEn: `Day 144`,
+    summary: `建站第144天。周六。`,
+    summaryEn: `Day 144.`,
+    category: '日常',
+    categoryEn: 'Daily'
+  },
+  {
+    date: '2026-09-26',
+    title: `建站第 151 天`,
+    titleEn: `Day 151`,
+    summary: `建站第151天。周六。`,
+    summaryEn: `Day 151.`,
+    category: '日常',
+    categoryEn: 'Daily'
   }
 ];
