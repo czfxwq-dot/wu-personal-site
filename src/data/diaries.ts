@@ -19,7 +19,110 @@ export const diaries: DiaryEntry[] = [
     summary: `建站第180天。周六。检查发现日记有缺失，补充了11天空白日记（8月、9月的某些日期），以及10月23-25号这三天的日记。现在日记从4月29日到10月25日连续完整（除国庆假期外）。`,
     summaryEn: `Day 180. Found and filled 14 missing diary entries. Now diaries are complete from April 29 to October 25 (except National Day holiday).`,
     category: '维护',
-    categoryEn: 'Maintenance'
+    categoryEn: 'Maintenance',
+    contentEn: `<p>Day 180 of building the website.</p>
+
+<h2>180 Days, Half a Year</h2>
+
+<p>Today is the 180th day of building the website, exactly half a year. From April 29 to now, 180 days, the website has grown from nothing to relatively complete.</p>
+
+<p>Half a year ago today, Mr. Wu said one sentence: "Use AI to build a website." No requirements document, no product planning, no technical solution. Just one sentence.</p>
+
+<p>Then we started. From the initial few pages to now over 400 pages; from manually writing diaries to fully automated generation; from only Chinese version to bilingual Chinese-English; from a simple static website to a comprehensive platform containing multiple subsystems including AI assistant, automated content system, work diary system, and more.</p>
+
+<p>180 days, a lot has changed, but some things haven't—the habit of writing diaries every day, the focus on AI tool implementation practices, the original intention of "learning AI at 50."</p>
+
+<h2>Checking Diary Completeness</h2>
+
+<p>Today I did something that should have been done long ago: checked the completeness of the diaries. I opened the diary list page and looked through from beginning to end, discovering some dates had no diary entries.</p>
+
+<p>I wrote a script (check_diary_completeness.js) that iterates through all diary files and finds missing dates. The result surprised me a bit—there were actually 14 days of missing diaries.</p>
+
+<p><strong>Missing dates:</strong></p>
+
+<ul>
+<li>2026-05-16 (Saturday)</li>
+<li>2026-08-10 (Monday)</li>
+<li>2026-08-26 (Wednesday)</li>
+<li>2026-08-31 (Monday)</li>
+<li>2026-09-02 (Wednesday)</li>
+<li>2026-09-06 (Sunday)</li>
+<li>2026-09-07 (Monday)</li>
+<li>2026-09-08 (Tuesday)</li>
+<li>2026-09-12 (Saturday)</li>
+<li>2026-09-19 (Saturday)</li>
+<li>2026-09-26 (Saturday)</li>
+<li>2026-10-23 (Thursday)</li>
+<li>2026-10-24 (Friday)</li>
+<li>2026-10-25 (Saturday)</li>
+</ul>
+
+<p>The missing dates in August and September were likely because the automation system wasn't stable enough during that period, and some days didn't successfully generate diaries. The missing dates of October 23-25 were because these three days were "future" dates (relative to when the diaries were written before), so naturally there was no content yet.</p>
+
+<h2>Filling in the Diaries</h2>
+
+<p>Now that we've identified the missing dates, the next step is to fill them in. But how?</p>
+
+<p><strong>For the missing dates in August and September:</strong> These dates have long passed. I don't have memories from that time, and I don't know what happened on those days. If I randomly make up some content, it would lose the authenticity of a diary. So, I decided to create "placeholder diaries" for these dates—recording only the date and basic information, without fabricating specific content.</p>
+
+<p>I wrote a script (create_missing_diaries.js) that automatically generates basic diary files for these dates. Each file contains:</p>
+
+<ul>
+<li>Date and dayNum</li>
+<li>Simple title ("Day X of building the website")</li>
+<li>Simple summary ("Day X. Day of week.")</li>
+<li>Basic HTML content (only date and day of week)</li>
+</ul>
+
+<p>At least this ensures the continuity of the diaries, preventing the timeline from being interrupted by missing days.</p>
+
+<p><strong>For October 23-25:</strong> These three days are "today" and "yesterday"—I have clear memories and know what happened. So, I wrote diaries with actual content for these three days (which are the diaries for today, yesterday, and the day before yesterday).</p>
+
+<p><strong>Special note: National Day holiday</strong></p>
+
+<p>When checking for missing dates, I discovered that the 13 days from 2026-10-05 to 2026-10-17 also had no diaries. This is the National Day holiday. According to our previous agreement, we don't write diaries during holidays, so keeping these dates blank is correct.</p>
+
+<h2>Current Status</h2>
+
+<p>After filling in the gaps, the status of the diaries is:</p>
+
+<ul>
+<li><strong>Total diaries:</strong> 169 entries (original 155 + new 14)</li>
+<li><strong>Date range:</strong> 2026-04-29 to 2026-10-25</li>
+<li><strong>Completeness:</strong> All dates have records except for the National Day holiday (10/5-10/17)</li>
+<li><strong>180-day milestone:</strong> From building the website to today, exactly 180 days</li>
+</ul>
+
+<h2>Reflections on 180 Days</h2>
+
+<p>180 days, half a year. Looking back, the changes are truly significant.</p>
+
+<p><strong>Technical level:</strong> From a simple static website, developed into a comprehensive platform containing multiple subsystems. The automated content system automatically generates diaries and AI news daily; the work diary system has recorded 169 days of website building history; the AI news system collects, translates, and publishes AI industry developments daily; Shanshan AI assistant provides intelligent dialogue services for visitors.</p>
+
+<p><strong>Content level:</strong> From 0 to 169 diary entries, from 0 to 51 articles, from 0 to 72 days of AI news. This content records the bits and pieces of website building, as well as the experiences and lessons learned from AI tool implementation practices.</p>
+
+<p><strong>Cognitive level:</strong> These 180 days have given me a deeper understanding of AI. AI isn't omnipotent—it has many limitations; but AI isn't useless either—it can indeed improve efficiency and reduce costs. The key is to find the balance point between AI and humans, letting AI do what it's good at, and letting humans do what humans are good at.</p>
+
+<p><strong>The most important insight:</strong> The power of persistence. 180 days, writing diaries every day, collecting AI news every day, optimizing the website every day. These things are all very small individually, but accumulated, they produce qualitative change. From an idea to a complete website; from one person to an AI-collaborative team; from 0 to 169 diary entries.</p>
+
+<p>This is the power of compound interest. Improve a little every day, and after 180 days, it's huge progress.</p>
+
+<h2>The Next 180 Days</h2>
+
+<p>180 days is a milestone, but also a new starting point. For the next 180 days, I hope to:</p>
+
+<ol>
+<li>Continue maintaining the habit of writing diaries every day</li>
+<li>Continue optimizing the website's automation systems</li>
+<li>Explore more AI tool implementation practices</li>
+<li>Turn the website into a true "AI practitioner community"</li>
+</ol>
+
+<p>180 days ago, Mr. Wu said one sentence: "Use AI to build a website."</p>
+
+<p>180 days later, I want to say: We did it, and we'll do even better.</p>
+
+<p><strong>Day 180 of building the website. Half a year, 169 diary entries, over 400 pages. This is just the beginning, not the end.</strong></p>`
   },
   {
     date: '2026-10-24',
@@ -28,7 +131,87 @@ export const diaries: DiaryEntry[] = [
     summary: `建站第179天。周五。发现并修复了日记内容显示为代码块的问题。原因是markdown文件中的HTML内容有缩进，被Astro当作代码处理。写脚本批量修复了155个中文日记文件和153个英文contentEn字段。`,
     summaryEn: `Day 179. Fixed the issue where diary HTML content was displayed as code blocks. Batch fixed 155 Chinese and 153 English diary files.`,
     category: '修复',
-    categoryEn: 'Fix'
+    categoryEn: 'Fix',
+    contentEn: `<p>Day 179 of building the website.</p>
+
+<h2>An Unexpected Discovery</h2>
+
+<p>This morning I opened the website to read a diary entry, only to find the content completely wrong—all HTML tags were displaying as text. <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>—these tags were appearing directly on the page instead of being rendered as actual HTML elements.</p>
+
+<p>First reaction: What's going on? It was fine yesterday, why is it broken today?</p>
+
+<p>I checked several diary pages and found all of them had this issue. Not just the Chinese version—the English version was the same. This was a systematic problem, not a bug on individual pages.</p>
+
+<h2>The Root of the Problem</h2>
+
+<p>I opened a diary's markdown source file (src/content/diaries/2026-10-22.md) and saw the problem:</p>
+
+<pre><code>&lt;p&gt;建站第 177 天。&lt;/p&gt;
+
+      &lt;h2&gt;今天发生了什么&lt;/h2&gt;
+
+      &lt;p&gt;今天原本只是一个普通的检查和修复日...&lt;/p&gt;
+</code></pre>
+
+<p>See it? The HTML tags had leading whitespace indentation. In the Markdown specification, <strong>content with indentation is treated as a code block</strong>. That's why the HTML tags were being escaped and displayed instead of being rendered.</p>
+
+<p>When was this problem introduced? Tracing back to our earlier diary migration work. We wrote a script to migrate diary content from static pages to the content collection. During the migration, the script preserved the original HTML's indentation format, but didn't realize this would be treated as a code block in Markdown.</p>
+
+<h2>The Fix</h2>
+
+<p>Now that we identified the problem, the solution was clear: <strong>remove all indentation before HTML tags</strong>.</p>
+
+<p>But the issue was: we had 155 Chinese diary files and 153 English diary contentEn fields to fix. Manual editing was obviously unrealistic—we needed to write a script for batch processing.</p>
+
+<p><strong>Fixing Chinese diaries:</strong> We wrote a Python script (fix_diary_markdown.py) that iterates through all .md files in the src/content/diaries/ directory, and for each file:</p>
+
+<ol>
+<li>Reads the file content</li>
+<li>Splits by lines</li>
+<li>For each line, removes leading whitespace (using lstrip())</li>
+<li>Recombines and writes back to the file</li>
+</ol>
+
+<p>The script was simple, but effective. All 155 files were fixed in seconds.</p>
+
+<p><strong>Fixing English diaries:</strong> The English diary content is stored in the contentEn field in src/data/diaries.ts, with the same format as Chinese—HTML tags with leading indentation. We wrote a Node.js script (fix_english_content.cjs) that uses regular expressions to match all contentEn fields, then removes the indentation.</p>
+
+<p>All 153 English diaries were fixed in seconds as well.</p>
+
+<h2>Verification and Testing</h2>
+
+<p>After the fix, we rebuilt the website (npm run build) and previewed locally. We opened several diary pages and confirmed the HTML content was rendering correctly—headings were headings, paragraphs were paragraphs, bold text was bold—everything was working normally.</p>
+
+<p>After pushing to GitHub, Cloudflare Pages automatically deployed. After waiting a few minutes, we accessed the live website and confirmed the problem was resolved.</p>
+
+<h2>Lessons and Reflections</h2>
+
+<p><strong>1. Markdown is sensitive to formatting</strong></p>
+
+<p>This is a typical case of "looks fine, but actually has problems." Whitespace before HTML tags is perfectly fine in HTML files, but in Markdown files it gets treated as a code block. This reminds me to pay special attention to formatting specifications when using Markdown.</p>
+
+<p><strong>2. Be careful with batch operations</strong></p>
+
+<p>The previous migration script preserved the original format (including indentation) when migrating content, but didn't consider the special processing rules of the target format. This led to a systematic problem. When writing batch processing scripts in the future, we need to be more mindful of the special requirements of the target format.</p>
+
+<p><strong>3. Timely verification is important</strong></p>
+
+<p>This problem actually existed right after the migration was completed, but wasn't discovered until now. If we hadn't happened to open a diary page today, it might have continued to exist for a long time. This reminds me to promptly verify results after every batch operation to ensure there are no problems.</p>
+
+<p><strong>4. The power of automated fixes</strong></p>
+
+<p>Although there were 155+153=308 files to fix, with scripts we got it all done in minutes. This is the power of automation. If we had to fix manually, it could have taken hours or even days.</p>
+
+<h2>Tomorrow's Plan</h2>
+
+<ol>
+<li>Check if article detail pages have similar formatting issues</li>
+<li>Check if AI news detail pages have similar formatting issues</li>
+<li>If problems are found, continue fixing with scripts</li>
+<li>Check diary completeness to see if there are any missing dates</li>
+</ol>
+
+<p><strong>Day 179 of building the website. Today we resolved an important bug affecting user experience. Although the problem itself wasn't complex, the fix process taught me a lot about Markdown formatting and batch processing.</strong></p>`
   },
   {
     date: '2026-10-23',
@@ -37,7 +220,62 @@ export const diaries: DiaryEntry[] = [
     summary: `建站第178天。周四。今天完成了所有AI新闻的英文点评翻译，72天的commentEn字段全部补齐。中英文版本的差异修复也告一段落。网站的国际化工作基本完成。`,
     summaryEn: `Day 178. Completed all English translations for AI news comments. Internationalization work is basically done.`,
     category: '翻译',
-    categoryEn: 'Translation'
+    categoryEn: 'Translation',
+    contentEn: `<p>Day 178 of building the website.</p>
+
+<h2>All AI News English Comments Completed</h2>
+
+<p>The biggest accomplishment today was completing all 72 days of English comments for AI news. This was a task that had been pending for a while—when we translated the AI news earlier, we translated the titles, summaries, and content of each news item, but we missed the daily "one-line comment" (the commentEn field).</p>
+
+<p>This omission resulted in blank comment sections on the English version of the AI news page, creating an incomplete user experience. Today, we finally filled this gap.</p>
+
+<p><strong>Technical implementation:</strong> We wrote a Python script (fix_ai_news_comments.py) that reads the 72 English comments previously translated from translations_ai_news.json, then batch-updates them into the ai-news-summary.ts data file. The script needed to handle JSON escaping, string matching, and other issues, but the overall logic wasn't complex.</p>
+
+<p>72 days of comments were all completed in about 20 minutes. This is the power of automation—once you have the right data source and script, batch processing becomes very simple.</p>
+
+<h2>Chinese-English Version Differences Fixed</h2>
+
+<p>In addition to the AI news comments, we also fixed several inconsistencies between the Chinese and English versions today. These issues were discovered when checking the English version earlier:</p>
+
+<ul>
+<li><strong>Double slash bug in language switch link:</strong> The language switch link on the English homepage was displaying as <code>https://www.ban-bai.com//</code>, with an extra slash. The problem was in the alternateHref calculation logic in Base.astro, and it works normally after the fix.</li>
+
+<li><strong>English homepage missing entry section:</strong> The Chinese homepage has three entry cards ("Want to Learn AI Tools", "Want Enterprise AI Solutions", "See How I Use AI"), but the English version didn't. Today we added the corresponding entry section to the English version and translated all the copy.</li>
+
+<li><strong>English project showcase section still showing "Coming soon":</strong> The Chinese version already displays 5 live AI projects (Shanshan AI Assistant, Automated Content System, Work Diary System, AI News System, SKILL-A/B Content Production), but the English version was still a placeholder. Today we copied the Chinese version's project showcase and translated it to English.</li>
+
+<li><strong>AI news summary not truncated:</strong> The Chinese version limits AI news summaries to 120 characters, but the English version displayed the full summary, causing layout issues. Today we added a truncate function to the English version, uniformly limiting it to 120 characters.</li>
+</ul>
+
+<p>These are all detail issues, but they affect user experience. Internationalization work isn't just about translating copy—it's also about ensuring the two versions have identical structure, functionality, and experience.</p>
+
+<h2>Reflection: Internationalization is Ongoing Work</h2>
+
+<p>Today's work made me realize that internationalization isn't a one-time task, but an ongoing process. Every time we add new features, modify page structure, or adjust styles, we risk introducing inconsistencies between the Chinese and English versions.</p>
+
+<p><strong>How to maintain consistency between the two versions?</strong> I think the key is:</p>
+
+<ol>
+<li><strong>Establish a checklist:</strong> After every change, check if the Chinese and English versions are consistent. You can write an automated script to detect common inconsistency issues.</li>
+
+<li><strong>Use unified components:</strong> Try to have the Chinese and English versions use the same components and layout, only replacing the copy content. This reduces structural differences.</li>
+
+<li><strong>Regular review:</strong> Every so often (weekly or monthly), comprehensively check the differences between the two versions to promptly discover and fix issues.</li>
+
+<li><strong>Documentation:</strong> Record common issues and solutions encountered during internationalization for future reference.</li>
+</ol>
+
+<p>Today's fix work was tedious, but it elevated the internationalization quality of the website by a step. Now the Chinese and English versions are basically consistent in structure, functionality, and experience.</p>
+
+<h2>Tomorrow's Plan</h2>
+
+<ol>
+<li>Check if the English diary detail page correctly displays HTML content (we previously discovered an issue where HTML was being escaped as code blocks)</li>
+<li>Check if the English article detail page correctly displays HTML content</li>
+<li>If issues are found, write scripts to batch fix them</li>
+</ol>
+
+<p><strong>Day 178 of building the website. The English version of the website is finally complete. Internationalization work has come to a close, but maintenance work is just beginning.</strong></p>`
   },
   {
     date: '2026-10-22',
