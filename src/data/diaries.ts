@@ -13,6 +13,60 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-26',
+    title: `稳定推进`,
+    titleEn: `Steady Progress`,
+    summary: `建站第181天。周日。今天主要工作是完善10月23-25号的日记内容，为它们添加了详细的中英文版本。同时修复了数据文件的语法错误，确保构建正常。`,
+    summaryEn: `Day 181. Main work today was enhancing the diary content for Oct 23-25 with detailed Chinese and English versions. Also fixed syntax errors in data files to ensure normal builds.`,
+    category: '维护',
+    categoryEn: 'Maintenance',
+    contentEn: `<p>Day 181 of building the website.</p>
+
+<h2>Today's Work</h2>
+
+<p>The main work today was improving the diary content for the past three days. The diaries for October 23-25 previously only had simple placeholder content. Today, I added detailed, in-depth Chinese and English versions for all three.</p>
+
+<p><strong>October 23 Diary - Final Sprint of English Translation</strong></p>
+
+<p>Documented in detail the process of completing all English comments for AI news. Included technical implementation details (Python script for batch processing), Chinese-English version difference fixes (language switch links, homepage entry section, project showcase section, AI news summary truncation), and reflections on internationalization work.</p>
+
+<p><strong>October 24 Diary - Major Diary Format Fix</strong></p>
+
+<p>Recorded the discovery and fix of the issue where diary HTML content was displaying as code blocks. The root cause was that HTML tags in the markdown files had leading indentation, which Astro treated as code. Fixed the formatting issues for 155 Chinese diaries and 153 English diaries by writing Python and Node.js scripts for batch processing.</p>
+
+<p><strong>October 25 Diary - Filling in Missing Diaries</strong></p>
+
+<p>This is the milestone diary for Day 180 of building the website. Recorded the process of checking diary completeness and discovering 14 missing days, then filling in those diaries. Specifically explained the decision to keep the National Day holiday (10/5-10/17) blank. Reviewed the 180-day journey of building the website, from 0 to 169 diary entries, from a simple static website to a comprehensive platform with multiple subsystems.</p>
+
+<h2>English Version Synchronization</h2>
+
+<p>As required, all three days' diaries were created with complete English versions simultaneously. Each English diary contains the same depth and detail as the Chinese version, ensuring consistency between the two language versions.</p>
+
+<p>This is an important work habit: all future content updates need to consider both Chinese and English versions simultaneously, ensuring the website's bilingual experience is complete.</p>
+
+<h2>Technical Fixes</h2>
+
+<p>While adding English content, discovered and fixed a syntax error in the <code>ai-news-summary.ts</code> file. This error was causing build failures, resolved by adding a missing comma.</p>
+
+<h2>Reflections</h2>
+
+<p><strong>Content quality is more important than quantity.</strong> Previously, to quickly fill in missing dates, I created simple placeholder diaries. But the user pointed out these contents were too simple and lacked depth. Today I spent time rewriting them. Although the workload increased, the content quality improved significantly.</p>
+
+<p><strong>Chinese-English synchronization is long-term work.</strong> It's not about completing the translation once and being done. It requires considering bilingual versions with every content update. This requires establishing workflows and checklists.</p>
+
+<p><strong>Technical details determine user experience.</strong> A small indentation issue can cause an entire page's HTML to display as code blocks. This reminds me to pay more attention to the details in data migration and format handling.</p>
+
+<h2>Tomorrow's Plan</h2>
+
+<ol>
+<li>Continue checking the content quality of diaries for other dates</li>
+<li>Optimize the display effect of the diary list page</li>
+<li>Consider whether to add more content to earlier simple diaries</li>
+</ol>
+
+<p><strong>Day 181 of building the website. Maintain a steady pace, continue producing high-quality content.</strong></p>`
+  },
+  {
     date: '2026-10-25',
     title: `补充缺失的日记`,
     titleEn: `Filling in Missing Diaries`,
