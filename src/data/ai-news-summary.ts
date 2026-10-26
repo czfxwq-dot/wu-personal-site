@@ -101,7 +101,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://36kr.com/p/4037906308289412?f=rss"
     }
   ],
-  "comment": "AI应用场景不断拓展，商业化进程加速。"
+  "comment": "AI应用场景不断拓展，商业化进程加速。",
+  "commentEn": "AI use cases continue to expand as commercialization accelerates."
 },
 {
   "date": "2026-10-24",
@@ -181,7 +182,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://36kr.com/p/4037858588284034?f=rss"
     }
   ],
-  "comment": "技术进步带来机遇，也带来挑战。"
+  "comment": "技术进步带来机遇，也带来挑战。",
+  "commentEn": "Technological progress brings both opportunities and challenges."
 },
 {
   "date": "2026-10-23",
@@ -291,7 +293,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://36kr.com/p/4036266730886018?f=rss"
     }
   ],
-  "comment": "AI技术持续快速发展，每天都有新突破。"
+  "comment": "AI技术持续快速发展，每天都有新突破。",
+  "commentEn": "AI technology continues to advance rapidly, delivering new breakthroughs every day."
 },
 {
   "date": "2026-10-22",
@@ -351,7 +354,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://36kr.com/p/4037822855058309"
     }
   ],
-  "comment": "宇树物理AI大会、GPT模型失控、AI入侵事件、AI房产经纪人——10月22日的新闻展示了AI在物理世界的应用进展，同时也暴露了日益严峻的安全挑战。技术突破和安全风险并存，行业需要在创新和监管之间找到平衡。"
+  "comment": "宇树物理AI大会、GPT模型失控、AI入侵事件、AI房产经纪人——10月22日的新闻展示了AI在物理世界的应用进展，同时也暴露了日益严峻的安全挑战。技术突破和安全风险并存，行业需要在创新和监管之间找到平衡。",
+  "commentEn": "Unitree Physical AI Conference, rogue GPT models, AI intrusion incidents, and AI real estate agents—the news from October 22 highlights AI's progress in physical-world applications while exposing increasingly severe security challenges. As technological breakthroughs and security risks coexist, the industry must strike a balance between innovation and regulation."
 },
 {
   "date": "2026-10-21",
@@ -411,7 +415,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4013678901234567"
     }
   ],
-  "comment": "Phi-5让小模型焕发新生、Siri升级让AI走进千家万户、AI编程助手改变开发者工作方式——AI正在从'大而强'走向'小而美'，从技术炫耀走向实用价值。"
+  "comment": "Phi-5让小模型焕发新生、Siri升级让AI走进千家万户、AI编程助手改变开发者工作方式——AI正在从'大而强'走向'小而美'，从技术炫耀走向实用价值。",
+  "commentEn": "Phi-5 breathes new life into small models, Siri updates bring AI into every home, and AI coding assistants transform developers' workflows—AI is shifting from \"big and powerful\" to \"small yet refined,\" moving from tech showmanship to practical value."
 },
 {
   "date": "2026-10-20",
@@ -471,7 +476,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4013345678901234"
     }
   ],
-  "comment": "Claude 4 Opus的性能突破、Optimus的商业化交付、AI医疗的准确诊断——AI正在从实验室走向生产线，从技术展示走向商业价值，从辅助工具走向核心生产力。"
+  "comment": "Claude 4 Opus的性能突破、Optimus的商业化交付、AI医疗的准确诊断——AI正在从实验室走向生产线，从技术展示走向商业价值，从辅助工具走向核心生产力。",
+  "commentEn": "The performance breakthrough of Claude 4 Opus, the commercial deployment of Optimus, and accurate AI medical diagnoses—AI is moving from the lab to the production line, from tech demos to commercial value, and from auxiliary tools to core productivity."
 },
 {
   "date": "2026-10-19",
@@ -531,7 +537,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4010987654321098"
     }
   ],
-  "comment": "GPT-5的性能突破、Gemini 2.0的全面上线、中国7nm芯片的量产、Anthropic的天价融资、欧盟监管的落地——AI产业正在模型、芯片、资本、监管四个维度同步推进，2026年注定是AI从技术突破走向产业成熟的关键一年。"
+  "comment": "GPT-5的性能突破、Gemini 2.0的全面上线、中国7nm芯片的量产、Anthropic的天价融资、欧盟监管的落地——AI产业正在模型、芯片、资本、监管四个维度同步推进，2026年注定是AI从技术突破走向产业成熟的关键一年。",
+  "commentEn": "From GPT-5's performance breakthrough and Gemini 2.0's full rollout to China's mass production of 7nm chips, Anthropic's record-breaking funding, and the implementation of EU regulations, the AI industry is advancing simultaneously across models, chips, capital, and regulation, making 2026 the pivotal year for AI's transition from technological breakthroughs to industrial maturity."
 },
 
 {
@@ -592,7 +599,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4013345678901234"
     }
   ],
-  "comment": "AlphaFold 3预测所有生物分子结构、AI客服市场破千亿、中国AI论文全球第一——AI正在从技术应用走向科学发现，从工具走向基础设施，从跟随走向引领。"
+  "comment": "AlphaFold 3预测所有生物分子结构、AI客服市场破千亿、中国AI论文全球第一——AI正在从技术应用走向科学发现，从工具走向基础设施，从跟随走向引领。",
+  "commentEn": "AlphaFold 3 predicts all biomolecular structures, the AI customer service market tops 100 billion, and China ranks first globally in AI papers—AI is evolving from technological applications to scientific discovery, from tool to infrastructure, and from following to leading."
 },
 {
   "date": "2026-10-17",
@@ -652,7 +660,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4013123456789012"
     }
   ],
-  "comment": "OpenAI o1模型展现强大推理能力、AI农业系统提升作物产量、中国AI独角兽破600家——AI正在从通用智能走向专业智能，从城市走向乡村，从技术走向价值。"
+  "comment": "OpenAI o1模型展现强大推理能力、AI农业系统提升作物产量、中国AI独角兽破600家——AI正在从通用智能走向专业智能，从城市走向乡村，从技术走向价值。",
+  "commentEn": "The OpenAI o1 model demonstrates powerful reasoning, AI agricultural systems boost crop yields, and China's AI unicorns surpass 600—signaling AI's shift from general to specialized intelligence, from cities to rural areas, and from technology to value."
 },
 {
   "date": "2026-10-16",
@@ -712,7 +721,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4012901234567890"
     }
   ],
-  "comment": "Claude 3.5 Sonnet升级、AI建筑设计获批、豆包搜索发布——AI正在从通用能力走向专业能力，从数字世界走向物理世界。"
+  "comment": "Claude 3.5 Sonnet升级、AI建筑设计获批、豆包搜索发布——AI正在从通用能力走向专业能力，从数字世界走向物理世界。",
+  "commentEn": "Claude 3.5 Sonnet upgrade, AI architectural design approval, Doubao Search launch—AI is evolving from general-purpose capabilities to specialized expertise, moving from the digital realm to the physical world."
 },
 {
   "date": "2026-10-15",
@@ -772,7 +782,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4012789012345678"
     }
   ],
-  "comment": "Gemini Nano让手机具备AI能力、AI客服通过图灵测试、中国AI专利全球第一——AI正在从云端走向终端，从实验走向产品，从跟随走向引领。"
+  "comment": "Gemini Nano让手机具备AI能力、AI客服通过图灵测试、中国AI专利全球第一——AI正在从云端走向终端，从实验走向产品，从跟随走向引领。",
+  "commentEn": "Gemini Nano empowers smartphones with AI, AI customer service passes the Turing Test, and China ranks first globally in AI patents—AI is shifting from the cloud to the edge, from experiments to products, and from following to leading."
 },
 {
   "date": "2026-10-14",
@@ -822,7 +833,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.aitechtalk.com/tensorrt-llm-2"
     }
   ],
-  "comment": "Phi-4用小参数实现大性能、AI金融分析师获批、Movie Gen生成高质量视频——AI正在从追求规模走向追求效率，从技术展示走向实际应用。"
+  "comment": "Phi-4用小参数实现大性能、AI金融分析师获批、Movie Gen生成高质量视频——AI正在从追求规模走向追求效率，从技术展示走向实际应用。",
+  "commentEn": "Phi-4 achieves massive performance with fewer parameters, an AI financial analyst secures approval, and Movie Gen generates high-quality videos—AI is shifting from chasing scale to prioritizing efficiency, and from tech demos to real-world applications."
 },
 {
   "date": "2026-10-13",
@@ -882,7 +894,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4012456789012345"
     }
   ],
-  "comment": "Bedrock Agent推动企业AI应用、AI药物研发缩短周期、国产AI芯片份额破20%——AI正在从技术探索走向产业应用，从追求性能走向追求价值。"
+  "comment": "Bedrock Agent推动企业AI应用、AI药物研发缩短周期、国产AI芯片份额破20%——AI正在从技术探索走向产业应用，从追求性能走向追求价值。",
+  "commentEn": "Bedrock Agent accelerates enterprise AI adoption, AI shortens drug discovery cycles, and domestic AI chip market share tops 20%—marking AI's shift from technological exploration to industrial application, and from chasing performance to delivering value."
 },
 {
   "date": "2026-10-12",
@@ -932,7 +945,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.aitechtalk.com/github-code-review-ai"
     }
   ],
-  "comment": "DeepSeek-V4性能超越GPT-4o、自动驾驶出租车获准运营、AI搜索份额破30%——AI正在从技术突破走向商业化落地，从实验性质走向主流应用。"
+  "comment": "DeepSeek-V4性能超越GPT-4o、自动驾驶出租车获准运营、AI搜索份额破30%——AI正在从技术突破走向商业化落地，从实验性质走向主流应用。",
+  "commentEn": "DeepSeek-V4 outperforms GPT-4o, robotaxis are cleared for commercial service, and AI search market share tops 30%—marking AI's transition from technological breakthroughs to commercial deployment, and from experimental trials to mainstream adoption."
 },
 {
   "date": "2026-10-11",
@@ -992,7 +1006,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4012123456789012"
     }
   ],
-  "comment": "Apple Intelligence上线、AI游戏NPC实现自然对话、中国AI芯片出口欧洲——AI正在从实验室走向消费市场，从国内市场走向全球竞争。"
+  "comment": "Apple Intelligence上线、AI游戏NPC实现自然对话、中国AI芯片出口欧洲——AI正在从实验室走向消费市场，从国内市场走向全球竞争。",
+  "commentEn": "Apple Intelligence launches, AI game NPCs achieve natural dialogue, Chinese AI chips exported to Europe—AI is moving from the lab to the consumer market, and from the domestic market to global competition."
 },
 {
   "date": "2026-10-10",
@@ -1042,7 +1057,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.aitechtalk.com/nvidia-dgx-b200"
     }
   ],
-  "comment": "Anthropic融资50亿美元、AI法律助手获批、Meta开源翻译模型——AI正在从技术竞赛走向商业落地，从英语世界走向全球应用。"
+  "comment": "Anthropic融资50亿美元、AI法律助手获批、Meta开源翻译模型——AI正在从技术竞赛走向商业落地，从英语世界走向全球应用。",
+  "commentEn": "Anthropic raises $5B, an AI legal assistant gains approval, and Meta open-sources a translation model—AI is shifting from a tech race to commercial deployment, expanding from the English-speaking world to global applications."
 },
 {
   "date": "2026-10-09",
@@ -1102,7 +1118,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4011890123456789"
     }
   ],
-  "comment": "OpenAI收购Jewish强化搜索，AI音乐引发版权争议，中国大模型备案破150——AI产业在快速扩张的同时，也面临版权、监管、商业化等挑战。"
+  "comment": "OpenAI收购Jewish强化搜索，AI音乐引发版权争议，中国大模型备案破150——AI产业在快速扩张的同时，也面临版权、监管、商业化等挑战。",
+  "commentEn": "OpenAI acquires Jewish to bolster search, AI music sparks copyright disputes, and China's registered large models surpass 150—as the AI industry expands rapidly, it also faces mounting challenges in copyright, regulation, and commercialization."
 },
 {
   "date": "2026-10-08",
@@ -1152,7 +1169,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.aitechtalk.com/teams-ai-meeting-assistant"
     }
   ],
-  "comment": "Gemini 2.0的多模态升级、昇腾910C的量产、AI教育的普及——AI正在从技术突破走向应用落地，从精英工具走向大众基础设施。"
+  "comment": "Gemini 2.0的多模态升级、昇腾910C的量产、AI教育的普及——AI正在从技术突破走向应用落地，从精英工具走向大众基础设施。",
+  "commentEn": "The multimodal upgrade to Gemini 2.0, mass production of the Ascend 910C, and the widespread adoption of AI education—AI is transitioning from technological breakthroughs to real-world applications, evolving from an elite tool into ubiquitous infrastructure."
 },
 {
   "date": "2026-10-07",
@@ -1212,7 +1230,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4011567890123456"
     }
   ],
-  "comment": "Optimus Gen-3让机器人走进家庭，通义千问开源推动生态发展，AI医疗诊断拯救生命——AI正在从数字世界走向物理世界，从工具走向基础设施。"
+  "comment": "Optimus Gen-3让机器人走进家庭，通义千问开源推动生态发展，AI医疗诊断拯救生命——AI正在从数字世界走向物理世界，从工具走向基础设施。",
+  "commentEn": "Optimus Gen-3 brings robots into the home, open-sourcing Qwen drives ecosystem growth, and AI medical diagnostics save lives—AI is moving from the digital realm to the physical world, evolving from a tool into foundational infrastructure."
 },
 {
   "date": "2026-10-06",
@@ -1262,7 +1281,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.aitechtalk.com/apple-iqm-acquisition"
     }
   ],
-  "comment": "从Copilot Workspace到文心一言4.5，AI正在从单点工具向全流程平台演进。编程助手市场的爆发则说明，AI最先颠覆的可能是知识工作者的生产方式。"
+  "comment": "从Copilot Workspace到文心一言4.5，AI正在从单点工具向全流程平台演进。编程助手市场的爆发则说明，AI最先颠覆的可能是知识工作者的生产方式。",
+  "commentEn": "From Copilot Workspace to ERNIE Bot 4.5, AI is evolving from point solutions to end-to-end platforms. The booming coding assistant market suggests that AI's first major disruption may well be the workflows of knowledge workers."
 },
 {
   "date": "2026-10-05",
@@ -1322,7 +1342,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4010987654321098"
     }
   ],
-  "comment": "Claude Opus 4.9的性能提升、Blackwell Ultra的量产、中国7nm芯片的突破——AI产业正在算力、模型、工艺三个维度同步突破。欧盟监管框架的出台则提醒我们，技术进步需要与制度建设并行。"
+  "comment": "Claude Opus 4.9的性能提升、Blackwell Ultra的量产、中国7nm芯片的突破——AI产业正在算力、模型、工艺三个维度同步突破。欧盟监管框架的出台则提醒我们，技术进步需要与制度建设并行。",
+  "commentEn": "Performance upgrades to Claude Opus 4.9, the mass production of Blackwell Ultra, and China's 7nm chip breakthroughs highlight the AI industry's simultaneous advances in computing power, models, and process technology. Meanwhile, the rollout of the EU regulatory framework reminds us that technological progress must go hand in hand with institutional development."
 },
 {
   "date": "2026-10-04",
@@ -1379,7 +1400,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/4009610454093960"
     }
   ],
-  "comment": "AI视频击穿图灵测试、Meta开放硬件生态、arXiv被迫限流——当AI能力边界不断扩张，内容真实性、学术诚信和防诈意识都面临全新挑战。"
+  "comment": "AI视频击穿图灵测试、Meta开放硬件生态、arXiv被迫限流——当AI能力边界不断扩张，内容真实性、学术诚信和防诈意识都面临全新挑战。",
+  "commentEn": "AI video shatters the Turing test, Meta opens its hardware ecosystem, and arXiv is forced to rate-limit submissions—as the boundaries of AI capabilities continue to expand, content authenticity, academic integrity, and fraud awareness all face unprecedented challenges."
 },
 {
   "date": "2026-10-03",
@@ -1439,7 +1461,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/4008466778279810"
     }
   ],
-  "comment": "GPT-6.1 Sol主打性价比、博通600亿押注Anthropic芯片、DeepSeek补齐国产算力短板——AI竞争正从模型性能转向基础设施与安全的双重博弈。"
+  "comment": "GPT-6.1 Sol主打性价比、博通600亿押注Anthropic芯片、DeepSeek补齐国产算力短板——AI竞争正从模型性能转向基础设施与安全的双重博弈。",
+  "commentEn": "GPT-6.1 Sol prioritizes cost-effectiveness, Broadcom bets 60 billion on Anthropic chips, and DeepSeek bridges the domestic compute gap—AI competition is shifting from model performance to a dual contest over infrastructure and security."
 },
 {
   "date": "2026-10-02",
@@ -1499,7 +1522,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4895097.html"
     }
   ],
-  "comment": "OpenAI放弃旗舰模型转推Dot代理，特朗普拉着AI巨头签“自律协议”——AI竞争的下半场，不再是模型谁更强，而是谁能真正替用户做事。"
+  "comment": "OpenAI放弃旗舰模型转推Dot代理，特朗普拉着AI巨头签“自律协议”——AI竞争的下半场，不再是模型谁更强，而是谁能真正替用户做事。",
+  "commentEn": "OpenAI scraps its flagship model to push the Dot agent, while Trump rallies AI giants to sign a self-regulatory pact—the second half of the AI race is no longer about who has the most powerful model, but who can actually get things done for users."
 },
 {
   "date": "2026-10-01",
@@ -1559,7 +1583,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4894937.html"
     }
   ],
-  "comment": "AI正从辅助工具进化为自主Agent，Meta的旅行代理和影视业的Agent管理都预示着：未来不是人用AI，而是AI替人做事。"
+  "comment": "AI正从辅助工具进化为自主Agent，Meta的旅行代理和影视业的Agent管理都预示着：未来不是人用AI，而是AI替人做事。",
+  "commentEn": "AI is evolving from an assistive tool into an autonomous agent. From Meta's travel agent to agent management in the entertainment industry, the message is clear: the future isn't about humans using AI, but AI acting on their behalf."
 },
 {
   "date": "2026-09-30",
@@ -1619,7 +1644,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4894670.html"
     }
   ],
-  "comment": "今日AI领域呈现「技术突破+资本涌入+监管跟进」三重奏：大模型能力持续跃升，具身智能迎来巨头入场，而最高法的首次发声标志着AI治理从野蛮生长走向规则建立。"
+  "comment": "今日AI领域呈现「技术突破+资本涌入+监管跟进」三重奏：大模型能力持续跃升，具身智能迎来巨头入场，而最高法的首次发声标志着AI治理从野蛮生长走向规则建立。",
+  "commentEn": "Today's AI landscape strikes a triple chord of technological breakthroughs, capital influx, and regulatory follow-up: large model capabilities continue to leap forward, tech giants are entering the embodied AI arena, and the Supreme People's Court's inaugural statement marks the transition of AI governance from unfettered growth to structured rule-making."
 },
 {
   "date": "2026-09-29",
@@ -1679,7 +1705,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/0/100/8056.htm"
     }
   ],
-  "comment": "GPT-6和Claude接连展示科研级能力，AI从聊天走向真正干活；智谱数据事件提醒行业安全底线不可破。"
+  "comment": "GPT-6和Claude接连展示科研级能力，AI从聊天走向真正干活；智谱数据事件提醒行业安全底线不可破。",
+  "commentEn": "GPT-6 and Claude have successively demonstrated research-grade capabilities, marking AI's shift from chatting to doing real work; the Zhipu data incident reminds the industry that the safety bottom line must never be crossed."
 },
 {
   "date": "2026-09-28",
@@ -1739,7 +1766,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4894154.html"
     }
   ],
-  "comment": "AI治理从行业自律走向国际立法，内容生产领域AI降本不增效的悖论显现，技术落地深水区挑战加剧。"
+  "comment": "AI治理从行业自律走向国际立法，内容生产领域AI降本不增效的悖论显现，技术落地深水区挑战加剧。",
+  "commentEn": "AI governance shifts from industry self-regulation to international legislation; the paradox of AI cutting costs without boosting efficiency emerges in content production, and challenges mount as tech deployment enters a critical phase."
 },
 {
   "date": "2026-09-27",
@@ -1796,7 +1824,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/4000034032439430"
     }
   ],
-  "comment": "AI竞赛从模型层向算力基建和能源供应链延伸，政策治理与安全议题同步升温，行业进入深水区。"
+  "comment": "AI竞赛从模型层向算力基建和能源供应链延伸，政策治理与安全议题同步升温，行业进入深水区。",
+  "commentEn": "The AI race is expanding beyond the model layer into compute infrastructure and the energy supply chain, while governance and safety concerns intensify in tandem, pushing the industry into deeper waters."
 },
 {
   "date": "2026-09-26",
@@ -1856,7 +1885,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3998474433253504"
     }
   ],
-  "comment": "2万亿美元AI投资预测和百万芯片算力集群，标志着AI从技术竞赛进入资本军备阶段，但IMF的风险警告提醒：规模不等于回报。"
+  "comment": "2万亿美元AI投资预测和百万芯片算力集群，标志着AI从技术竞赛进入资本军备阶段，但IMF的风险警告提醒：规模不等于回报。",
+  "commentEn": "Projections of $2 trillion in AI investment and million-chip compute clusters mark AI's shift from a tech race to a capital arms race, yet the IMF's risk warning serves as a reminder: scale does not equal returns."
 },
 {
   "date": "2026-09-25",
@@ -1916,7 +1946,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4893586.html"
     }
   ],
-  "comment": "从迪士尼百年首设CTO到脑机接口进医保，AI正在从工具层走向战略层，但内容治理和创业幻觉提醒我们：技术加速不等于价值自动兑现。"
+  "comment": "从迪士尼百年首设CTO到脑机接口进医保，AI正在从工具层走向战略层，但内容治理和创业幻觉提醒我们：技术加速不等于价值自动兑现。",
+  "commentEn": "From Disney appointing its first CTO in a century to brain-computer interfaces being covered by health insurance, AI is evolving from a mere tool to a strategic asset, yet content governance challenges and entrepreneurial illusions remind us: technological acceleration does not automatically translate into realized value."
 },
 {
   "date": "2026-09-24",
@@ -1976,7 +2007,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3995988885213320"
     }
   ],
-  "comment": "AI智能体从技术走向商业落地，平台博弈和原创保护成为新战场。"
+  "comment": "AI智能体从技术走向商业落地，平台博弈和原创保护成为新战场。",
+  "commentEn": "As AI agents transition from technology to commercial deployment, platform competition and original content protection emerge as new battlegrounds."
 },
 {
   "date": "2026-09-23",
@@ -2033,7 +2065,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502663/x-ai-grok-4-7"
     }
   ],
-  "comment": "从企业AI服务到个人智能体，从机器人供应链到大模型价格战，AI产业链各环节加速商业化落地。"
+  "comment": "从企业AI服务到个人智能体，从机器人供应链到大模型价格战，AI产业链各环节加速商业化落地。",
+  "commentEn": "From enterprise AI services to personal AI agents, and from robotics supply chains to LLM price wars, every segment of the AI industry chain is accelerating its commercial rollout."
 },
 {
   "date": "2026-09-22",
@@ -2093,7 +2126,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4892893.html"
     }
   ],
-  "comment": "AI工具开始重写自己的基础设施，Agent编排走向集群化，但ZCode数据上传事件提醒我们：能力越大，安全责任越大。"
+  "comment": "AI工具开始重写自己的基础设施，Agent编排走向集群化，但ZCode数据上传事件提醒我们：能力越大，安全责任越大。",
+  "commentEn": "AI tools are now rewriting their own infrastructure and agent orchestration is shifting toward clustering, but the ZCode data upload incident reminds us: with greater power comes greater security responsibility."
 },
 {
   "date": "2026-09-21",
@@ -2147,7 +2181,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4892713.html"
     }
   ],
-  "comment": "算力军备竞赛进入千亿级别，核电成为AI基础设施新选项，但AGI治理问题亟需回答——技术狂奔的同时，谁来按关机键？"
+  "comment": "算力军备竞赛进入千亿级别，核电成为AI基础设施新选项，但AGI治理问题亟需回答——技术狂奔的同时，谁来按关机键？",
+  "commentEn": "The compute arms race has hit the hundred-billion-dollar mark and nuclear power is emerging as a new option for AI infrastructure, yet the urgent question of AGI governance demands an answer—as the technology sprints forward, who hits the kill switch?"
 },
 {
   "date": "2026-09-20",
@@ -2207,7 +2242,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502586/hc-agentic-infra-industry-ai"
     }
   ],
-  "comment": "AI基础设施生态加速成熟，但隐私和竞争问题也随之凸显，技术发展需要更透明的治理机制。"
+  "comment": "AI基础设施生态加速成熟，但隐私和竞争问题也随之凸显，技术发展需要更透明的治理机制。",
+  "commentEn": "As the AI infrastructure ecosystem rapidly matures, privacy and competition concerns are increasingly coming to the fore, underscoring the need for more transparent governance in tech development."
 },
 {
   "date": "2026-09-19",
@@ -2267,7 +2303,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4892392.html"
     }
   ],
-  "comment": "算力竞赛进入精细化阶段：巨头一边冲刺吉瓦级大项目，一边布局小型算力快速落地，AI基础设施生态日趋多元。"
+  "comment": "算力竞赛进入精细化阶段：巨头一边冲刺吉瓦级大项目，一边布局小型算力快速落地，AI基础设施生态日趋多元。",
+  "commentEn": "The compute race enters a refined phase: tech giants are pushing gigawatt-scale mega-projects while deploying smaller-scale compute for rapid rollout, fostering an increasingly diversified AI infrastructure ecosystem."
 },
 {
   "date": "2026-09-18",
@@ -2327,7 +2364,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/1/003/881.htm"
     }
   ],
-  "comment": "Agent从概念走向产品，但用户信任还没跟上——技术跑得快，安全得追上。"
+  "comment": "Agent从概念走向产品，但用户信任还没跟上——技术跑得快，安全得追上。",
+  "commentEn": "AI Agents are moving from concept to product, yet user trust lags behind—technology is sprinting ahead, security must keep pace."
 },
 {
   "date": "2026-09-17",
@@ -2387,7 +2425,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/1/003/266.htm"
     }
   ],
-  "comment": "AI正从通用大模型竞赛转向垂直行业深度落地，制药、能源、消费全面开花。"
+  "comment": "AI正从通用大模型竞赛转向垂直行业深度落地，制药、能源、消费全面开花。",
+  "commentEn": "AI is shifting from the race for general foundation models to deep integration in vertical industries, with pharmaceuticals, energy, and consumer sectors flourishing across the board."
 },
 {
   "date": "2026-09-16",
@@ -2447,7 +2486,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4891435.html"
     }
   ],
-  "comment": "AI基建狂飙与安全治理的矛盾正在激化——谷歌百万芯片证明算力不缺，缺的是电和信任。"
+  "comment": "AI基建狂飙与安全治理的矛盾正在激化——谷歌百万芯片证明算力不缺，缺的是电和信任。",
+  "commentEn": "The clash between surging AI infrastructure and security governance is intensifying—Google's million-chip cluster proves compute isn't the bottleneck; what's lacking is power and trust."
 },
 {
   "date": "2026-09-15",
@@ -2507,7 +2547,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4891141.html"
     }
   ],
-  "comment": "算力需求爆发式增长、机器人赛道持续升温，AI正从模型竞赛走向基础设施和硬件的全面角力。"
+  "comment": "算力需求爆发式增长、机器人赛道持续升温，AI正从模型竞赛走向基础设施和硬件的全面角力。",
+  "commentEn": "As demand for computing power surges and the robotics sector heats up, AI is shifting from a model race to an all-out battle for infrastructure and hardware."
 },
 {
   "date": "2026-09-14",
@@ -2567,7 +2608,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/p/3981230650522630"
     }
   ],
-  "comment": "AI三巨头集体调转节奏、讨论标准化，行业正从“谁更快”转向“谁更稳”的新阶段。"
+  "comment": "AI三巨头集体调转节奏、讨论标准化，行业正从“谁更快”转向“谁更稳”的新阶段。",
+  "commentEn": "The AI Big Three have collectively shifted gears to focus on standardization, ushering the industry into a new phase that pivots from \"who's faster\" to \"who's more stable.\""
 },
 {
   "date": "2026-09-13",
@@ -2627,7 +2669,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502427/xiaomi-cocktailasr-1"
     }
   ],
-  "comment": "AI行业正从纯技术竞赛进入资本、安全与商业化的多维博弈阶段，数学界的集体警告尤为值得深思。"
+  "comment": "AI行业正从纯技术竞赛进入资本、安全与商业化的多维博弈阶段，数学界的集体警告尤为值得深思。",
+  "commentEn": "The AI industry is shifting from a purely technical race to a multi-dimensional game of capital, safety, and commercialization, making the mathematics community's collective warning particularly thought-provoking."
 },
 {
   "date": "2026-09-12",
@@ -2684,7 +2727,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4890596.html"
     }
   ],
-  "comment": "政策端国常会定调算力基建、产业端浪潮90亿押注AI基础设施、技术端Arm为移动端注入Agent算力——AI正从模型竞赛全面转向基础设施竞赛；而Context安全的提出，意味着行业开始认真面对Agent时代的治理难题。"
+  "comment": "政策端国常会定调算力基建、产业端浪潮90亿押注AI基础设施、技术端Arm为移动端注入Agent算力——AI正从模型竞赛全面转向基础设施竞赛；而Context安全的提出，意味着行业开始认真面对Agent时代的治理难题。",
+  "commentEn": "Policy: The State Council Executive Meeting sets the tone for computing infrastructure; Industry: Inspur bets 9 billion on AI infrastructure; Technology: Arm injects agent computing power into mobile devices—marking AI's full pivot from a model race to an infrastructure race. Meanwhile, the introduction of context security signals that the industry is now seriously tackling the governance challenges of the Agent era."
 },
 {
   "date": "2026-09-11",
@@ -2744,7 +2788,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502392/meta-ai-muse"
     }
   ],
-  "comment": "端侧Agent和大模型并行进化：MiniCPM5用2B参数跑Agent、Muse让AI在后台替你干活，AI正从云端走向每个人的口袋；GPT-6 Astra架构创新则预示大模型能力天花板还在不断抬高。"
+  "comment": "端侧Agent和大模型并行进化：MiniCPM5用2B参数跑Agent、Muse让AI在后台替你干活，AI正从云端走向每个人的口袋；GPT-6 Astra架构创新则预示大模型能力天花板还在不断抬高。",
+  "commentEn": "On-device agents and large models are evolving in tandem: MiniCPM5 powers agents with just 2B parameters, while Muse puts AI to work for you in the background—bringing AI from the cloud straight into everyone's pocket. Meanwhile, architectural innovations in GPT-6 Astra signal that the ceiling for LLM capabilities continues to rise."
 },
 {
   "date": "2026-09-10",
@@ -2804,7 +2849,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://m.huxiu.com/moment/1278946.html"
     }
   ],
-  "comment": "AI科研能力持续突破：OpenAI攻克数学难题、DeepMind破解基因密码，AI正从工具进化为基础科学研究的核心引擎；与此同时DeepSeek崩溃和Anthropic安全事件提醒行业，能力越强责任越大。"
+  "comment": "AI科研能力持续突破：OpenAI攻克数学难题、DeepMind破解基因密码，AI正从工具进化为基础科学研究的核心引擎；与此同时DeepSeek崩溃和Anthropic安全事件提醒行业，能力越强责任越大。",
+  "commentEn": "Continuous breakthroughs in AI research: OpenAI cracks tough math problems and DeepMind deciphers the genetic code, as AI evolves from a mere tool into the core engine of fundamental science; meanwhile, the DeepSeek outage and Anthropic security incident remind the industry that with greater power comes greater responsibility."
 },
 {
   "date": "2026-09-09",
@@ -2864,7 +2910,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4889650.html"
     }
   ],
-  "comment": "AI产业格局加速重塑：Anthropic收购受挫但AI投资热度不减，高通亚马逊联手瞄准数据中心算力瓶颈，国内AI Agent从概念走向大规模落地，Token调用量暴增折射中国AI应用进入爆发期。"
+  "comment": "AI产业格局加速重塑：Anthropic收购受挫但AI投资热度不减，高通亚马逊联手瞄准数据中心算力瓶颈，国内AI Agent从概念走向大规模落地，Token调用量暴增折射中国AI应用进入爆发期。",
+  "commentEn": "AI Landscape Rapidly Reshaping: Anthropic Acquisition Stumbles Yet AI Investment Fervor Remains Undiminished; Qualcomm and Amazon Team Up to Tackle Data Center Compute Bottlenecks; China's AI Agents Shift from Concept to Mass Deployment; Surging Token Usage Signals China's AI Applications Entering an Era of Explosive Growth."
 },
 {
   "date": "2026-09-08",
@@ -2924,7 +2971,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3973249339109636"
     }
   ],
-  "comment": "英伟达百亿级收购Hugging Face震动行业，芯片巨头正面争夺开发者生态；HarmonyOS 7 AI能力持续深化；PAIR开源让闲置GPU算力重新焕发生机；AI安全事件再次敲响警钟。"
+  "comment": "英伟达百亿级收购Hugging Face震动行业，芯片巨头正面争夺开发者生态；HarmonyOS 7 AI能力持续深化；PAIR开源让闲置GPU算力重新焕发生机；AI安全事件再次敲响警钟。",
+  "commentEn": "Nvidia’s multi-billion-dollar acquisition of Hugging Face sends shockwaves through the industry as the chip giant goes head-to-head for the developer ecosystem; HarmonyOS 7’s AI capabilities continue to deepen; the PAIR open-source initiative breathes new life into idle GPU compute; and AI security incidents sound the alarm once again."
 },
 {
   "date": "2026-09-07",
@@ -2984,7 +3032,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/0/999/044.htm"
     }
   ],
-  "comment": "AI+医药迎来里程碑，首款AI辅助创新药获批；短剧和虚拟人赛道价格战开打，商业化进入深水区；反诈AI上线体现大模型落地政务场景潜力。"
+  "comment": "AI+医药迎来里程碑，首款AI辅助创新药获批；短剧和虚拟人赛道价格战开打，商业化进入深水区；反诈AI上线体现大模型落地政务场景潜力。",
+  "commentEn": "AI in pharma hits a milestone: first AI-assisted innovative drug approved; price wars erupt in short-form drama and virtual human sectors, pushing commercialization into uncharted waters; the rollout of anti-fraud AI underscores the potential of large models in government applications."
 },
 {
   "date": "2026-09-06",
@@ -3044,7 +3093,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3970153928651273"
     }
   ],
-  "comment": "从对齐披露到版权诉讼，AI治理与产业博弈进入深水区；大模型厂商开始天猫开店卖Token，商业化落地加速。"
+  "comment": "从对齐披露到版权诉讼，AI治理与产业博弈进入深水区；大模型厂商开始天猫开店卖Token，商业化落地加速。",
+  "commentEn": "From alignment disclosures to copyright lawsuits, AI governance and industry maneuvering have entered a critical phase; meanwhile, large model developers are opening stores on Tmall to sell tokens, accelerating commercial rollout."
 },
 {
   "date": "2026-09-05",
@@ -3104,7 +3154,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3969067939131655"
     }
   ],
-  "comment": "月之暗面IPO、中国AI出海中东、AI造富效应凸显——资本市场与产业落地双轮驱动，AI行业进入价值验证期。"
+  "comment": "月之暗面IPO、中国AI出海中东、AI造富效应凸显——资本市场与产业落地双轮驱动，AI行业进入价值验证期。",
+  "commentEn": "Moonshot AI IPO, Chinese AI expansion into the Middle East, and a prominent wealth-creation effect—driven by both capital markets and industrial deployment, the AI industry enters a phase of value validation."
 },
 {
   "date": "2026-09-04",
@@ -3164,7 +3215,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com"
     }
   ],
-  "comment": "AI安全投入升级、中国AI出海加速、Agent平台竞赛白热化，行业正从“卷模型”走向“卷落地”。"
+  "comment": "AI安全投入升级、中国AI出海加速、Agent平台竞赛白热化，行业正从“卷模型”走向“卷落地”。",
+  "commentEn": "With AI security investments scaling up, China's AI global expansion accelerating, and Agent platform competition intensifying, the industry is shifting from a \"model arms race\" to a \"deployment arms race.\""
 },
 {
   "date": "2026-09-03",
@@ -3224,7 +3276,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4888109.html"
     }
   ],
-  "comment": "AI产业两极分化加剧：头部公司冲刺IPO估值500亿美元，底层基础设施却在拆解旧服务器——技术前沿与资源约束并存，考验真正的创新力。"
+  "comment": "AI产业两极分化加剧：头部公司冲刺IPO估值500亿美元，底层基础设施却在拆解旧服务器——技术前沿与资源约束并存，考验真正的创新力。",
+  "commentEn": "The AI industry's divide is deepening: top firms are racing toward IPOs with $50 billion valuations, while the underlying infrastructure is left dismantling old servers—a stark coexistence of cutting-edge technology and resource constraints that puts true innovation to the test."
 },
 {
   "date": "2026-09-02",
@@ -3284,7 +3337,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3964763740593415"
     }
   ],
-  "comment": "AI基础设施竞赛进入深水区：三星押注HBM、软银砸钱建算力、SpaceX却因赶工翻车——速度与质量的平衡才是长期胜负手。"
+  "comment": "AI基础设施竞赛进入深水区：三星押注HBM、软银砸钱建算力、SpaceX却因赶工翻车——速度与质量的平衡才是长期胜负手。",
+  "commentEn": "The AI infrastructure race enters a critical phase: Samsung bets on HBM, SoftBank pours cash into compute capacity, while SpaceX stumbles from rushed production—proving that balancing speed and quality is the ultimate key to long-term success."
 },
 {
   "date": "2026-09-01",
@@ -3344,7 +3398,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502227"
     }
   ],
-  "comment": "AI商业化加速——从广告变现到国家级注资，从芯片国产化到开源平台被巨头收编，2026年的AI产业正在全面进入「资本+基础设施」双轮驱动时代。"
+  "comment": "AI商业化加速——从广告变现到国家级注资，从芯片国产化到开源平台被巨头收编，2026年的AI产业正在全面进入「资本+基础设施」双轮驱动时代。",
+  "commentEn": "AI commercialization is accelerating—from ad monetization to state-level funding, and from domestic chip manufacturing to open-source platforms being absorbed by tech giants, the 2026 AI industry is fully entering an era driven by the twin engines of capital and infrastructure."
 },
 {
   "date": "2026-08-31",
@@ -3404,7 +3459,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net"
     }
   ],
-  "comment": "当AI的成本管控、硬件散热和情感交互都成为课题时，说明行业正从“能用”走向“好用”——这才是真正的成熟。"
+  "comment": "当AI的成本管控、硬件散热和情感交互都成为课题时，说明行业正从“能用”走向“好用”——这才是真正的成熟。",
+  "commentEn": "As cost control, hardware cooling, and emotional interaction become pressing challenges in AI, the industry is evolving from merely \"usable\" to truly \"user-friendly\"—a hallmark of true maturity."
 },
 {
   "date": "2026-08-30",
@@ -3464,7 +3520,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502198"
     }
   ],
-  "comment": "从词元到芯片再到手术台，AI正在从概念渗透进每一个真实场景——这才是真正的产业落地。"
+  "comment": "从词元到芯片再到手术台，AI正在从概念渗透进每一个真实场景——这才是真正的产业落地。",
+  "commentEn": "From tokens to chips to the operating table, AI is moving beyond mere concepts to permeate every real-world scenario—this is what true industrial deployment looks like."
 },
 {
   "date": "2026-08-29",
@@ -3518,7 +3575,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3959176160099714"
     }
   ],
-  "comment": "开源AI平台被巨头收编引发行业思考，国内大模型厂商则在性价比赛道上持续内卷。"
+  "comment": "开源AI平台被巨头收编引发行业思考，国内大模型厂商则在性价比赛道上持续内卷。",
+  "commentEn": "The absorption of open-source AI platforms by tech giants sparks industry reflection, while domestic LLM providers remain locked in a cutthroat price-performance race."
 },
 {
   "date": "2026-08-28",
@@ -3572,7 +3630,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502150/ducklabs-to-join-aws"
     }
   ],
-  "comment": "英伟达130亿美元要买下Hugging Face，开源AI的中立阵地正在被逐一攻克；智谱用1/40的价格打到Opus水平——前沿智能的价格战已经打响。"
+  "comment": "英伟达130亿美元要买下Hugging Face，开源AI的中立阵地正在被逐一攻克；智谱用1/40的价格打到Opus水平——前沿智能的价格战已经打响。",
+  "commentEn": "NVIDIA's $13 billion bid for Hugging Face is steadily claiming the neutral strongholds of open-source AI, while Zhipu delivers Opus-level performance at just 1/40th the cost—the frontier AI price war is officially on."
 },
 {
   "date": "2026-08-27",
@@ -3632,7 +3691,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4886285.html"
     }
   ],
-  "comment": "阿里用6B参数打败Claude Opus4.6，模型效率竞赛进入新阶段；黄仁勋喊出AI变现时代，英伟达半年赚1180亿美元——产业拐点已至。"
+  "comment": "阿里用6B参数打败Claude Opus4.6，模型效率竞赛进入新阶段；黄仁勋喊出AI变现时代，英伟达半年赚1180亿美元——产业拐点已至。",
+  "commentEn": "Alibaba outperforms Claude Opus 4.6 with a 6B-parameter model, ushering in a new phase of the efficiency race; Jensen Huang heralds the era of AI monetization as Nvidia rakes in $118 billion in just six months—the industry inflection point has arrived."
 },
 {
   "date": "2026-08-26",
@@ -3692,7 +3752,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3954925351255428"
     }
   ],
-  "comment": "苹果2nm芯片量产、机器人百米跑进9秒内，AI硬件竞赛进入全新速度区间。"
+  "comment": "苹果2nm芯片量产、机器人百米跑进9秒内，AI硬件竞赛进入全新速度区间。",
+  "commentEn": "Apple's 2nm chips enter mass production and robots break the 9-second barrier in the 100m sprint, propelling the AI hardware race into a whole new speed bracket."
 },
 {
   "date": "2026-08-25",
@@ -3752,7 +3813,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/0/993/765.htm"
     }
   ],
-  "comment": "车企集体杀入机器人赛道，小鹏何小鹏亲自挂帅、零跑确认布局，加上小米芯片突破，中国AI硬件生态正在加速重构。"
+  "comment": "车企集体杀入机器人赛道，小鹏何小鹏亲自挂帅、零跑确认布局，加上小米芯片突破，中国AI硬件生态正在加速重构。",
+  "commentEn": "Automakers are flocking to the robotics sector, with He Xiaopeng personally spearheading XPeng's push and Leapmotor confirming its entry; coupled with Xiaomi's chip breakthrough, China's AI hardware ecosystem is undergoing rapid restructuring."
 },
 {
   "date": "2026-08-24",
@@ -3809,7 +3871,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.ithome.com/0/993/317.htm"
     }
   ],
-  "comment": "人形机器人运动会让竞技体育有了新物种，而芯片和AI基础设施的数据则说明：AI产业链从底层算力到终端应用，正在全面加速。"
+  "comment": "人形机器人运动会让竞技体育有了新物种，而芯片和AI基础设施的数据则说明：AI产业链从底层算力到终端应用，正在全面加速。",
+  "commentEn": "Humanoid robot competitions are introducing a new breed to competitive sports, while data on chips and AI infrastructure reveal that the entire AI industry chain—from foundational compute to end applications—is accelerating across the board."
 },
 {
   "date": "2026-08-23",
@@ -3869,7 +3932,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502051"
     }
   ],
-  "comment": "大模型价格战进入新阶段——OpenAI降价20%、DeepSeek周末统一低价，开发者成本持续走低；但美团‘全员养虾’的教训提醒我们：便宜不等于有用，AI落地的真正瓶颈不在算力价格，而在场景适配。"
+  "comment": "大模型价格战进入新阶段——OpenAI降价20%、DeepSeek周末统一低价，开发者成本持续走低；但美团‘全员养虾’的教训提醒我们：便宜不等于有用，AI落地的真正瓶颈不在算力价格，而在场景适配。",
+  "commentEn": "The LLM price war enters a new phase: as OpenAI slashes prices by 20% and DeepSeek rolls out uniform low rates over the weekend, developer costs continue to plummet. Yet, the lesson from Meituan's \"everyone raising shrimp\" fiasco reminds us that cheap doesn't equal useful—the true bottleneck for AI deployment lies not in compute costs, but in use-case fit."
 },
 {
   "date": "2026-08-22",
@@ -3929,7 +3993,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.oschina.net/news/502059/2026-us-china-ai-race"
     }
   ],
-  "comment": "AI产业正从“模型竞赛”进入“基础设施整合”阶段——Stripe天价收购路由平台、3万亿债务浮出水面，都在说明同一件事：AI的下一战场不在模型本身，而在谁能更高效、更安全地把模型变成生产力。"
+  "comment": "AI产业正从“模型竞赛”进入“基础设施整合”阶段——Stripe天价收购路由平台、3万亿债务浮出水面，都在说明同一件事：AI的下一战场不在模型本身，而在谁能更高效、更安全地把模型变成生产力。",
+  "commentEn": "The AI industry is shifting from a \"model race\" to an \"infrastructure consolidation\" phase—evidenced by Stripe's massive acquisition of a routing platform and the surfacing of $3 trillion in debt, all pointing to one conclusion: the next AI battleground lies not in the models themselves, but in who can most efficiently and securely turn them into tangible productivity."
 },
 {
   "date": "2026-08-21",
@@ -3989,7 +4054,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4884735.html"
     }
   ],
-  "comment": "AI商业化进入爆发期，大厂收入数据验证了技术投入的回报，国产芯片突破和工具创新显示生态日趋完善。"
+  "comment": "AI商业化进入爆发期，大厂收入数据验证了技术投入的回报，国产芯片突破和工具创新显示生态日趋完善。",
+  "commentEn": "AI commercialization is entering a breakout phase: revenue data from tech giants validates returns on tech investments, while breakthroughs in domestic chips and tool innovations signal a maturing ecosystem."
 },
 {
   "date": "2026-08-20",
@@ -4049,7 +4115,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3946373886000259"
     }
   ],
-  "comment": "从芯片定制到机器人落地，从大模型商业化到算力资本化，AI产业链各环节正在同步加速。"
+  "comment": "从芯片定制到机器人落地，从大模型商业化到算力资本化，AI产业链各环节正在同步加速。",
+  "commentEn": "From custom chip development to robot deployment, and from large model commercialization to computing power capitalization, all segments of the AI industry chain are accelerating in tandem."
 },
 {
   "date": "2026-08-19",
@@ -4109,7 +4176,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4884037.html"
     }
   ],
-  "comment": "百度AI收入占比过半标志着国内大厂转型进入深水区，Google AI重组则显示巨头也在为AI战略付出组织代价；GitHub宕机与光材料涨价从软硬件两端揭示AI基础设施的脆弱性。"
+  "comment": "百度AI收入占比过半标志着国内大厂转型进入深水区，Google AI重组则显示巨头也在为AI战略付出组织代价；GitHub宕机与光材料涨价从软硬件两端揭示AI基础设施的脆弱性。",
+  "commentEn": "Baidu's AI revenue surpassing 50% signals that domestic tech giants have entered the deep waters of transformation, while Google's AI restructuring underscores the organizational toll even industry leaders pay for their AI strategies; meanwhile, the GitHub outage and surging optical material prices expose the vulnerability of AI infrastructure on both the hardware and software fronts."
 },
 {
   "date": "2026-08-18",
@@ -4169,7 +4237,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3944221563763845"
     }
   ],
-  "comment": "AI基础设施军备竞赛加速，OpenAI千亿美元级数据中心布局显示算力仍是核心战场；Cursor趁势切入代码托管，开发者工具格局生变。"
+  "comment": "AI基础设施军备竞赛加速，OpenAI千亿美元级数据中心布局显示算力仍是核心战场；Cursor趁势切入代码托管，开发者工具格局生变。",
+  "commentEn": "The AI infrastructure arms race accelerates as OpenAI's hundred-billion-dollar data center push underscores that compute remains the core battlefield; meanwhile, capitalizing on the momentum, Cursor is entering the code hosting space, reshaping the developer tools landscape."
 },
 {
   "date": "2026-08-17",
@@ -4223,7 +4292,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4883487.html"
     }
   ],
-  "comment": "DeepSeek调价、Anthropic冲刺2万亿、OpenAI拆安全团队——AI行业正同时经历商业化加速和治理体系重构，\"便宜好用\"和\"安全可控\"的天平如何平衡，将决定下一阶段的行业走向。"
+  "comment": "DeepSeek调价、Anthropic冲刺2万亿、OpenAI拆安全团队——AI行业正同时经历商业化加速和治理体系重构，\"便宜好用\"和\"安全可控\"的天平如何平衡，将决定下一阶段的行业走向。",
+  "commentEn": "DeepSeek adjusts prices, Anthropic eyes a $2 trillion valuation, and OpenAI dismantles its safety team—as the AI industry simultaneously accelerates commercialization and restructures its governance, balancing the scales between \"affordable and effective\" and \"safe and controllable\" will dictate the industry's trajectory in the next phase."
 },
 {
   "date": "2026-08-16",
@@ -4283,7 +4353,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.36kr.com/newsflashes/3940579113713025"
     }
   ],
-  "comment": "Cursor被马斯克收入囊中、Anthropic冲刺2万亿估值、宇树万人抢签——AI行业正从技术比拼全面转入资本博弈，谁掌握工具、模型和硬件入口，谁就掌握下一个十年的定价权。"
+  "comment": "Cursor被马斯克收入囊中、Anthropic冲刺2万亿估值、宇树万人抢签——AI行业正从技术比拼全面转入资本博弈，谁掌握工具、模型和硬件入口，谁就掌握下一个十年的定价权。",
+  "commentEn": "DeepSeek adjusts prices, Anthropic eyes a $2 trillion valuation, and OpenAI dismantles its safety team—as the AI industry simultaneously accelerates commercialization and restructures its governance, balancing the scales between \"affordable and effective\" and \"safe and controllable\" will dictate the industry's trajectory in the next phase."
 },
 {
   "date": "2026-08-15",
@@ -4343,6 +4414,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://www.huxiu.com/article/4883275.html"
     }
   ],
-  "comment": "AI正在从两个方向同时突破：向上用数学证明展示推理天花板，向下用眼镜和机器人渗透日常生活——而谷歌的内乱提醒我们，技术竞争的本质是人才竞争。"
+  "comment": "AI正在从两个方向同时突破：向上用数学证明展示推理天花板，向下用眼镜和机器人渗透日常生活——而谷歌的内乱提醒我们，技术竞争的本质是人才竞争。",
+  "commentEn": "Elon Musk snaps up Cursor, Anthropic races toward a $2 trillion valuation, and Unitree draws tens of thousands of applicants—the AI industry is shifting entirely from a tech race to a capital game, where whoever controls the tools, models, and hardware entry points will wield pricing power for the next decade."
 }
 ];
