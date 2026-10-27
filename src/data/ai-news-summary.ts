@@ -26,7 +26,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-10-26",
   "title": "AI新闻 | 这场年轻人的咖啡局，聊聊「咖啡+AI」可以长出什么？",
-  "summary": "城市节奏越快，咖啡越像年轻人的“日常开关”。白天靠咖啡续命，周末咖啡店是见面、拍照、遛猫、带娃、逛市；如果你有一个具体业务问题，想看看AI或具身智能能不能帮上忙，可以把问题带来，和技术团队坐下来聊聊。 ；80+场商业大咖对话、2000平米展区、数百家企业现场对接、年轻创业者和OPC嗨翻全场、具身智能产业；文 | 海若镜 并购交易时常惊心动魄，故事却多隐秘。等过了保密期，能与人说时，历史的色彩往往已经泛黄；作者｜黄楠 采访 | 黄楠 邱晓芬 编辑｜袁斯来 今年春天，FA何紫洋办公室里，地区招商团队成了常客。",
+  "titleEn": "AI News | This Young People's Coffee Gathering: What Can 'Coffee + AI' Grow Into?",
+  "summary": "城市节奏越快，咖啡越像年轻人的'日常开关'。白天靠咖啡续命，周末咖啡店是见面、拍照、遛猫、带娃、逛市；如果你有一个具体业务问题，想看看AI或具身智能能不能帮上忙，可以把问题带来，和技术团队坐下来聊聊。 ；80+场商业大咖对话、2000平米展区、数百家企业现场对接、年轻创业者和OPC嗨翻全场、具身智能产业；文 | 海若镜 并购交易时常惊心动魄，故事却多隐秘。等过了保密期，能与人说时，历史的色彩往往已经泛黄；作者｜黄楠 采访 | 黄楠 邱晓芬 编辑｜袁斯来 今年春天，FA何紫洋办公室里，地区招商团队成了常客。",
+  "summaryEn": "The faster the city pace, the more coffee becomes young people's 'daily switch'. Relying on coffee to survive during the day, coffee shops on weekends are for meeting, taking photos, walking cats, bringing kids, and browsing markets; if you have a specific business problem and want to see if AI or embodied intelligence can help, bring your question and sit down with the technical team. 80+ business leader dialogues, 2000 square meters of exhibition space, hundreds of enterprises on-site matchmaking, young entrepreneurs and OPC enjoying the scene, embodied intelligence industry; Text | Hai Ruojing M&A transactions are often thrilling, yet stories are mostly hidden. After the confidentiality period passes, when it's time to talk with people, the colors of history have often faded; Author | Huang Nan Interview | Huang Nan Qiu Xiaofen Editor | Yuan Silai This spring, in FA He Ziyang's office, regional investment promotion teams became frequent visitors.",
   "newsItems": [
     {
       "title": "这场年轻人的咖啡局，聊聊「咖啡+AI」可以长出什么？",
