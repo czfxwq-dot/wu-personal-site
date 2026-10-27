@@ -32,62 +32,85 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   "newsItems": [
     {
       "title": "这场年轻人的咖啡局，聊聊「咖啡+AI」可以长出什么？",
+      "titleEn": "This Coffee Meetup for Young Minds: Let's Chat About What New Possibilities Can Blossom from \"Coffee + AI\"",
       "summary": "城市节奏越快，咖啡越像年轻人的“日常开关”。白天靠咖啡续命，周末咖啡店是见面、拍照、遛猫、带娃、逛市集的空间。 “日咖夜酒”“奶茶咖啡化”之外，咖啡消费还在长出更多新组合：咖啡+烘焙、咖啡+宠物、咖啡+博物馆、咖啡+市集、咖啡+文创。有人用9.9元完成日常摄入，也有人愿意为一杯手冲排半小时队。 咖啡越来越日常，但年轻人对咖啡的期待并不日常。精致的线上内容决定他们走进哪家店，线下场景的消费体验决定他",
+      "summaryEn": "The faster the pace of city life, the more coffee serves as the \"daily on-switch\" for young people. They rely on coffee to survive the workday, while on weekends, coffee shops transform into spaces for meeting up, taking photos, walking cats, bringing the kids, and browsing markets. Beyond the \"coffee by day, cocktails by night\" and \"coffee-ification of milk tea\" trends, coffee consumption is sprouting more novel combinations: coffee plus baking, coffee plus pets, coffee plus museums, coffee plus markets, and coffee plus cultural and creative products. Some get their daily caffeine fix for just 9.9 yuan, while others are willing to wait in line for half an hour for a single cup of pour-over. Coffee is becoming increasingly part of the everyday routine, yet young people's expectations of it are anything but ordinary. Highly curated online content dictates which store they walk into, while the in-person consumption experience determines their...",
       "source": "36氪",
       "category": "AI动态",
+      "categoryEn": "AI News",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4042455475475586?f=rss"
     },
     {
       "title": "有个业务问题，想找技术伙伴聊聊？WISE2026「世界咖啡·产业对接」征集需求中",
+      "titleEn": "Got a business challenge and looking to connect with a tech partner? WISE2026 \"World Café: Industry Matchmaking\" – Now Accepting Matchmaking Requests!",
       "summary": "如果你有一个具体业务问题，想看看AI或具身智能能不能帮上忙，可以把问题带来，和技术团队坐下来聊聊。 有些技术问题，找懂行的人一起拆开看看 你大概有过这种时候。 公司里总有那么一个环节，明显不顺。可能是客服，工单越堆越多，人手排不开；可能是质检，常年靠人眼盯着，慢，还容易漏；可能是仓库，搬运全靠排班，旺季一忙就打架；也可能是门店，导览、服务这类活儿，人手总是紧巴巴的。 你清楚哪里有问题。你也刷到过不",
+      "summaryEn": "If you have a specific business challenge and want to see whether AI or embodied AI can help, bring it along and sit down with our tech team for a chat. When it comes to certain technical hurdles, you just need to bring in the right experts and break the problem down together. You’ve probably been there. There’s always that one part of your operation that’s clearly running rough. Maybe it’s customer service, with tickets piling up and not enough hands to cover the shifts; maybe it’s quality control, relying on the human eye year in and year out—slow and prone to oversights; maybe it’s the warehouse, where material handling relies entirely on rigid scheduling, leading to chaos during the peak season; or perhaps it’s the retail stores, where tasks like guiding and assisting customers always leave you short-staffed. You know exactly where the problems lie. And you’ve probably come across...",
       "source": "36氪",
       "category": "AI动态",
       "url": "https://36kr.com/p/4042414899270790?f=rss"
     },
     {
       "title": "抢先速通三天新玩法，早鸟特惠倒计时！丨WISE2026",
+      "titleEn": "Be the first to dive into the new 3-day experience! Early Bird Special: The Countdown Is On! | WISE2026",
       "summary": "80+场商业大咖对话、2000平米展区、数百家企业现场对接、年轻创业者和OPC嗨翻全场、具身智能产业联盟官宣成立…… WISE2026商业之王·请以我的名字呼唤我，2026年11月26-28日在北京亦庄·通明湖会展中心正式开启。 200+核心演讲嘉宾，500+产业一线关键节点人物，这三天除了听会还有什么值得期待？三天时间，80+场商业大咖对话、2000平米展区、数百家企业现场对接、年轻创业者和OP",
+      "summaryEn": "Over 80 dialogues with business titans, a 2,000-square-meter exhibition area, on-site matchmaking for hundreds of enterprises, young entrepreneurs and OPC bringing the house down, and the official launch of the Embodied AI Industry Alliance... WISE2026 King of Business: Call Me by My Name officially kicks off from November 26 to 28, 2026, at the Tongming Lake Convention and Exhibition Center in Yizhuang, Beijing. Featuring over 200 core keynote speakers and more than 500 key frontline industry figures, what else is there to look forward to during these three days besides attending the sessions? Over the course of three days, enjoy 80+ dialogues with business titans, explore a 2,000-square-meter exhibition area, connect on-site with hundreds of enterprises, and experience young entrepreneurs and OPC...",
       "source": "36氪",
       "category": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4042411060794502?f=rss"
     },
     {
       "title": "对话单伟建：好CEO发大财，坏CEO请走开",
+      "titleEn": "In Conversation with Shan Weijian: Good CEOs Make a Fortune, Bad CEOs Should Step Aside",
       "summary": "文 | 海若镜 并购交易时常惊心动魄，故事却多隐秘。等过了保密期，能与人说时，历史的色彩往往已经泛黄，许多细节也随时间散失。单伟建把亲历的几笔交易写了下来，并购中的冲突、妥协与进取，终于不再模糊，回归为有名有姓、你来我往的故事。 2004年底，单伟建主导的深圳发展银行收购案，剩下临门一脚时，团队却发现了一笔高达15亿元的可疑贷款：钱几乎刚发放，就成了坏账。当时深发展的账面净资本仅40多亿元，这笔贷",
+      "summaryEn": "By Hai Ruojing | Mergers and acquisitions are often thrilling, yet the stories behind them remain largely hidden. By the time the confidentiality period expires and the tales can finally be told, the colors of history have often faded, and many details have been lost to time. Shan Weijian has put into writing several deals he personally navigated. The conflicts, compromises, and bold maneuvers of these M&A transactions are no longer blurred abstractions; they have been brought back to life as vivid narratives with real names and faces, capturing every back-and-forth of the negotiations. In late 2004, during the acquisition of Shenzhen Development Bank led by Shan Weijian, just as the deal was in the final stretch, his team uncovered a suspicious loan totaling 1.5 billion yuan—the funds had barely been disbursed before turning into bad debt. At the time, Shenzhen Development Bank's book net capital stood at just over 4 billion yuan, and this loan...",
       "source": "36氪",
       "category": "AI动态",
       "url": "https://36kr.com/p/4032472602120835?f=rss"
     },
     {
       "title": "具身智能狂潮背后的国资们：抢项目、抬上轿、跟着文件猜未来",
+      "titleEn": "State Capital Behind the Embodied AI Frenzy: Snapping Up Projects, Pumping the Hype, and Divining the Future from Policy Documents",
       "summary": "作者｜黄楠 采访 | 黄楠 邱晓芬 编辑｜袁斯来 今年春天，FA何紫洋办公室里，地区招商团队成了常客。 她就职于一家服务硬科技赛道的财务顾问机构，日常工作就是帮具身初创公司对接投资机构。最忙的一天，她接待了天津、深圳、成都、厦门四波政府团队，其中大多是区级招商中心人员，也有地级市的负责人。 有些“跟随型城市”的招商团队直接告诉她：“我们也找不到什么方向，政策说啥我们就弄啥。”其中不乏一些地方团队的",
+      "summaryEn": "Author: Huang Nan | Interviewers: Huang Nan, Qiu Xiaofen | Editor: Yuan Silai. This spring, regional investment promotion teams have become regular visitors to the office of He Ziyang, an FA. She works at a financial advisory firm specializing in the hard tech sector, where her day-to-day job is to connect embodied AI startups with investment firms. On her busiest day, she hosted four government delegations from Tianjin, Shenzhen, Chengdu, and Xiamen. Most of the visitors were staff from district-level investment promotion centers, along with officials from prefecture-level cities. Some investment promotion teams from so-called \"follower cities\" told her bluntly, \"We haven't been able to find a clear direction ourselves; we just do whatever the policy dictates.\" ...and there was no shortage of local teams...",
       "source": "36氪",
       "category": "AI治理",
+      "categoryEn": "AI Governance",
       "url": "https://36kr.com/p/4036882782573449?f=rss"
     },
     {
       "title": "上海交大教授创业，瞄准太空制造，「今控科技」完成数千万元天使轮融资｜36氪首发",
+      "titleEn": "SJTU Professor Launches Startup Targeting Space Manufacturing; Jinkong Technology Closes Tens of Millions of RMB in Angel Round Funding | 36Kr Exclusive",
       "summary": "商业航天的下一站，可能不只是将更多卫星送入太空，而是让机器人在太空真正“干起活来”。 随着低轨卫星互联网、太空算力平台和商业空间站加速发展，越来越多的高价值设备部署在轨道上。谁来完成设备维护、模块更换、精密装配，乃至未来的太空制造，正成为新的产业命题。 在地面，这些工作已大量由工业机器人承担，但微重力、强辐照和极端温差的太空环境，对机器人可靠控制、精细操作和自主决策提出了更高要求。 36氪获悉，近",
+      "summaryEn": "The next frontier for commercial space may not simply be launching more satellites into orbit, but rather putting robots to real \"work\" in space. With the rapid advancement of low Earth orbit satellite internet, space computing platforms, and commercial space stations, an increasing number of high-value assets are being deployed in orbit. The question of who will handle equipment maintenance, module replacement, precision assembly, and even future space-based manufacturing has emerged as a new industrial imperative. On Earth, such tasks are already largely handled by industrial robots. However, the space environment—characterized by microgravity, intense radiation, and extreme temperature fluctuations—imposes far more stringent demands on robots in terms of reliable control, precision manipulation, and autonomous decision-making. 36Kr has learned that recently...",
       "source": "36氪",
       "category": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://36kr.com/p/4042095201620869?f=rss"
     },
     {
       "title": "AI圈最神秘的一家公司，终于公开了它的“豪赌”",
+      "titleEn": "The AI World's Most Mysterious Company Has Finally Unveiled Its High-Stakes Gamble",
       "summary": "文｜邓咏仪 编辑｜张雨忻 Vivix到底在做什么？这是过去一年多以来，AI圈对这家神秘公司的最大好奇。 Vivix给外界的印象大致是：明星创业者刘宇，从算法、产品到品牌，所有业务线一直在激进招人，公司估值在一年里飞涨至13.2亿美元，背后站满了背景华丽的投资人们。 但很少有人能说清楚这家公司到底在做什么。有人说，这是一个不做模型的纯AI产品公司，要做“下一个时代的抖音”，所以才频频推出如7vers",
       "source": "36氪",
       "category": "大模型",
+      "categoryEn": "Large Models",
+      "categoryEn": "Large Model",
       "url": "https://36kr.com/p/4026922691236484?f=rss"
     },
     {
       "title": "8点1氪丨金价连日大跌，深圳水贝被挤爆；开售仅两天，苹果iPhone Duo破发；德明利：前三季度净利润87.46亿元 同比增长32399.91%",
+      "titleEn": "8:01 Kr | Gold Prices Plunge for Consecutive Days, Shenzhen's Shuibei Market Swarmed by Buyers; Just Two Days After Going on Sale, Apple iPhone Duo Drops Below Retail Price; Demingli: Net Profit for First Three Quarters Hits 8.746 Billion Yuan, Up 32,399.91% YoY",
       "summary": "今日热点导览 DeepSeek、MiniMax，完成AI模型出海登记 企业微信回应部分账号发色情链接 31省份去年平均工资出炉 张雪在家乡刷新吉尼斯纪录 存储芯片龙头德明利，前三季度净利同比增长32399.91% TOP 3 大新闻 金价大跌，深圳水贝被挤爆 受国际金价下跌影响，10月24日，深圳水贝迎来人流。网友纷纷发帖称：“买黄金的人比菜市场的都多”“今天水贝市场免费领鸡蛋了吗”。据央视财经，",
+      "summaryEn": "Today's Hot Topics: DeepSeek and MiniMax Complete Registration for the Overseas Rollout of AI Models; WeCom Responds to Reports of Accounts Sharing Pornographic Links; Average Wages Released for 31 Provinces for Last Year; Zhang Xue Sets a New Guinness World Record in Her Hometown; Memory Chip Leader Demingli Reports a 32,399.91% YoY Surge in Net Profit for the First Three Quarters. TOP 3 MAJOR STORIES: Gold Prices Plunge, Shenzhen's Shuibei Market Packed to the Brim. Driven by the drop in international gold prices, Shenzhen's Shuibei district saw a massive surge in foot traffic on October 24. Netizens flocked to social media to post: \"There are more people buying gold here than shopping at a wet market!\" and \"Is the Shuibei market giving away free eggs today?\" According to CCTV Finance...",
       "source": "36氪",
       "category": "大模型",
       "url": "https://36kr.com/p/4041951412343942?f=rss"
     },
     {
       "title": "一颗AI毫米波雷达，千里科技在补哪一环",
+      "titleEn": "An AI mmWave Radar: Which Missing Link Is Qianli Technology Filling?",
       "summary": "10月23日，千里科技发布了一颗AI毫米波雷达。在公开信息范围内，这是首个在雷达内部集成10 TOPS算力NPU的方案，雷达自身就能完成目标检测和分类，同时支持边缘侧、卫星与兼容三种工作模式。 这不是一次单纯的产品线扩充。 过去两年，智驾行业的竞争集中在模型上，谁的端到端更强，谁的数据闭环转得更快。但当模型的能力开始受限于传感器给到的原始信息，竞争就会往上游走一层，走到硬件。 这颗雷达要回答的问题",
       "source": "36氪",
       "category": "大模型",
@@ -95,13 +118,16 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "吉大刘春宝孵化，00后团队创业仿生灵巧脸，拿下数千万融资丨36氪首发",
+      "titleEn": "Incubated by Liu Chunbao of Jilin University, Post-00s Team's Bionic Dexterous Face Startup Secures Tens of Millions in Funding | 36Kr Exclusive",
       "summary": "图源/企业 本文约3500字，建议阅读9分钟 作者丨欧雪 编辑丨袁斯来 硬氪获悉，仿生灵巧脸与情感交互技术公司——杭州灵颜科技有限公司（下称“灵颜科技”）近期已完成数千万元种子轮及种子+轮融资。种子轮投资人包括盈动资本、浙江火炬中心，种子+轮投资人包括毅达资本、梅花创投、领甪资本，老股东盈动资本继续追加投资。领甪资本担任本轮及后续轮次财务顾问。资金将主要用于产品迭代、核心零部件研发、算法平台建设以",
+      "summaryEn": "Image source: Company. This article is approximately 3,500 words; estimated reading time: 9 minutes. Author: Ou Xue | Editor: Yuan Silai. Hard Kr has learned that Hangzhou Lingyan Technology Co., Ltd. (hereinafter \"Lingyan Technology\"), a company specializing in bionic dexterous faces and emotional interaction technology, has recently closed a seed and seed-plus funding round totaling tens of millions of RMB. Investors in the seed round include Yingdong Capital and Zhejiang Torch Center, while the seed-plus round saw participation from Yida Capital, Meihua Ventures, and Linglu Capital, with existing shareholder Yingdong Capital making a follow-on investment. Linglu Capital served as the financial advisor for this and subsequent funding rounds. The funds will be primarily allocated to product iteration, R&D of core components, algorithm platform development, and...",
       "source": "36氪",
       "category": "AI应用",
       "url": "https://36kr.com/p/4040083368629381?f=rss"
     }
   ],
-  "comment": "大模型竞争日趋激烈，创新层出不穷。"
+  "comment": "大模型竞争日趋激烈，创新层出不穷。",
+  "commentEn": "Large model competition is becoming increasingly fierce, with innovations emerging one after another."
 },
 {
   "date": "2026-10-25",
