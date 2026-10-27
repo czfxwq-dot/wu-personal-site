@@ -143,15 +143,21 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "一颗AI毫米波雷达，千里科技在补哪一环",
       "summary": "10月23日，千里科技发布了一颗AI毫米波雷达。在公开信息范围内，这是首个在雷达内部集成10 TOPS算力NPU的方案，雷达自身就能完成目标检测和分类，同时支持边缘侧、卫星与兼容三种工作模式。 这不是一次单纯的产品线扩充。 过去两年，智驾行业的竞争集中在模型上，谁的端到端更强，谁的数据闭环转得更快。但当模型的能力开始受限于传感器给到的原始信息，竞争就会往上游走一层，走到硬件。 这颗雷达要回答的问题",
+      "titleEn": "An AI Millimeter-Wave Radar: Which Missing Link is Qianli Technology Filling?",
+      "summaryEn": "On October 23, Qianli Technology unveiled an AI millimeter-wave radar. According to publicly available information, this is the first solution to integrate a 10-TOPS NPU directly into the radar, enabling the device itself to perform object detection and classification while supporting three operating modes: edge, satellite, and compatible. This is no mere expansion of a product line. Over the past two years, competition in the autonomous driving industry has centered on models—who has the stronger end-to-end capabilities and whose data closed-loop runs faster. However, once model capabilities become constrained by the raw data provided by sensors, the competition shifts one layer upstream, right to the hardware. The question this radar seeks to answer...",
       "source": "36氪",
       "category": "大模型",
+      "categoryEn": "Large Model",
       "url": "https://36kr.com/p/4040807584863111?f=rss"
     },
     {
       "title": "吉大刘春宝孵化，00后团队创业仿生灵巧脸，拿下数千万融资丨36氪首发",
       "summary": "图源/企业 本文约3500字，建议阅读9分钟 作者丨欧雪 编辑丨袁斯来 硬氪获悉，仿生灵巧脸与情感交互技术公司——杭州灵颜科技有限公司（下称“灵颜科技”）近期已完成数千万元种子轮及种子+轮融资。种子轮投资人包括盈动资本、浙江火炬中心，种子+轮投资人包括毅达资本、梅花创投、领甪资本，老股东盈动资本继续追加投资。领甪资本担任本轮及后续轮次财务顾问。资金将主要用于产品迭代、核心零部件研发、算法平台建设以",
+      "titleEn": "Incubated by Liu Chunbao of Jilin University, a Gen Z startup develops bionic dexterous hands, securing tens of millions in funding | 36Kr Exclusive",
+      "summaryEn": "Image source: Company. This article is approximately 3,500 words; recommended reading time: 9 minutes. Author | Ou Xue, Editor | Yuan Silai. Hard Kr has learned that Hangzhou Lingyan Technology Co., Ltd. (hereinafter \"Lingyan Technology\"), a company specializing in bionic expressive faces and emotional interaction technology, has recently completed its seed and Seed+ funding rounds, raising tens of millions of RMB in total. Investors in the seed round include EverSpark Ventures and the Zhejiang Torch Center, while investors in the Seed+ round include Ecapital, Meihua Venture Capital, and Linglu Capital, with existing shareholder EverSpark Ventures making a follow-on investment. Linglu Capital is serving as the financial advisor for this round and subsequent rounds. The funds will be primarily used for product iteration, R&D of core components, and the development of an algorithm platform to...",
       "source": "36氪",
       "category": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4040083368629381?f=rss"
     },
     {
@@ -266,57 +272,81 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "拿到2亿美金融资，Today AI回答了Personal AI的十个核心问题",
       "summary": "文｜邓咏仪 编辑｜张雨忻 近一个月，包括Muse、Instinct在内的Personal AI产品引起全球轰动，成为最受关注的AI创业赛道。其中，Muse上线22天就突破500万次下载——ChatGPT当年花了56天才达到这一数字——难得地为AI应用赛道争了一口气。 一家AI公司Today AI也许比Muse探索得更早。创始人齐俊元曾创办Teambition，之后在阿里、字节等大厂负责过各类产品。",
+      "titleEn": "Having Secured $200 Million in Funding, Today AI Answers the 10 Core Questions of Personal AI",
+      "summaryEn": "By Deng Yongyi | Edited by Zhang Yuxin Over the past month, Personal AI products such as Muse and Instinct have taken the world by storm, emerging as the most closely watched sector in AI startups. Notably, Muse surpassed 5 million downloads just 22 days after launch—a milestone that took ChatGPT 56 days to reach—bringing a rare boost of pride to the AI application space. An AI company, Today AI, may have been exploring this space even earlier than Muse. Its founder, Qi Junyuan, previously founded Teambition and later went on to lead various products at tech giants such as Alibaba and ByteDance.",
       "source": "36氪",
       "category": "大模型",
+      "categoryEn": "Large Model",
       "url": "https://36kr.com/p/4039749830120583?f=rss"
     },
     {
       "title": "独家｜字节AI应用再整合：小云雀并入即梦",
       "summary": "文｜邓咏仪 编辑｜张雨忻 《智能涌现》从知情人士处获悉，近期剪映内部完成了一次业务整合，AI短剧创作平台小云雀并入智能创作平台即梦，产品仍保留独立入口。 我们了解到，此次调整主要是资源整合，目前即梦已经接入了小云雀短剧相关能力。调整后，小云雀的运营由即梦运营和市场负责人陈欣然负责，产品团队没有变化。 剪映这一轮业务整合的原因主要是增长空间受限，以及需要聚焦资源。一位前剪映人士告诉《智能涌现》，即梦",
+      "titleEn": "Exclusive | ByteDance Further Consolidates AI Apps: Xiaoyunque Merged into Jimeng",
+      "summaryEn": "By Deng Yongyi | Edited by Zhang Yuxin. *Emerging Intelligence* has learned from informed sources that JianYing recently completed an internal business restructuring, integrating Xiaoyunque, its AI short drama creation platform, into Jimeng, its intelligent creation platform, while maintaining a standalone entry point for the product. We understand that this adjustment is primarily driven by resource integration, and Jimeng has already incorporated Xiaoyunque's short drama-related capabilities. Following the restructuring, Xiaoyunque's operations will be overseen by Chen Xinran, Head of Operations and Marketing at Jimeng, while the product team remains unchanged. The main reasons for this round of business integration at JianYing are constrained growth potential and the need to concentrate resources. A former JianYing insider told *Emerging Intelligence* that Jimeng...",
       "source": "36氪",
       "category": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4039677577122946?f=rss"
     },
     {
       "title": "高秉强连投三轮，深圳智能宠物硬件公司完成数千万Pre-A轮融资｜硬氪首发",
       "summary": "作者｜黄楠 编辑｜袁斯来 硬氪获悉，宠物智能硬件公司「橘猫宇宙」近日完成数千万元Pre-A轮融资，高秉强教授及旗下高锋耐心基金、前海创新投资（深圳）有限公司、常垒创投等持续加注。资金将主要用于技术创新、产品迭代、专利体系建设，和拓展全球线下渠道网络，并推进产线深度整合与量产交付。 此前，公司已连续完成两轮早期融资，投资方包括高秉强教授及旗下基金Brizan Ventures II期基金、高锋耐心基",
+      "titleEn": "Gao Bingqiang Backs Three Consecutive Rounds: Shenzhen Smart Pet Hardware Firm Closes Pre-A Round Raising Tens of Millions | HardKr Exclusive",
+      "summaryEn": "Author | Huang Nan, Editor | Yuan Silai. HardKr has learned that \"Orange Cat Universe,\" a pet smart hardware company, has recently completed a Pre-A funding round of tens of millions of yuan. Professor Bingqiang Gao and his Gaofeng Patient Capital Fund, Qianhai Innovation Investment (Shenzhen) Co., Ltd., Changlei Ventures, and other investors have continued to increase their investment. The funds will be primarily used for technological innovation, product iteration, the development of a patent system, and the expansion of global offline channel networks, as well as advancing the deep integration of production lines and mass production delivery. Previously, the company has consecutively completed two early-stage funding rounds, with investors including Professor Bingqiang Gao and his Brizan Ventures Fund II, Gaofeng Patient Capital",
       "source": "36氪",
       "category": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://36kr.com/p/4038149843178628?f=rss"
     },
     {
       "title": "9点1氪丨国内大模型均价涨至13元；原“死了么”APP公布收费标准，最高199元/年；寒武纪第三季度净利润14.04亿元，同比增长147.74%",
       "summary": "今日热点导览 微信紧急更新适配iPhoneDuo 证监会核准设立花旗证券中国公司 国际金价跌破4000，现货黄金创7月以来新低 人民币兑美元中间价报6.7180，上调15点 沃尔沃第三季度由盈转亏，将再砍2500个岗位 TOP3大新闻 国内大模型均价涨至13元 10月23日，中国信通院人工智能所联合发布《大模型词元服务性能监测报告（2026年）》。报告提出，经历了过去两年价格战后，2026年国内外",
+      "titleEn": "9 AM Tech Brief | Average price of domestic large models rises to 13 yuan; the original \"Are You Dead Yet?\" app announces its pricing, with fees up to 199 yuan per year; Cambricon reports a Q3 net profit of 1.404 billion yuan, up 147.74% year-on-year.",
+      "summaryEn": "Today's Headlines: WeChat Issues Urgent Update to Support iPhone Duo; CSRC Approves Establishment of Citi Securities China; International Gold Price Falls Below 4,000, Spot Gold Hits Lowest Level Since July; RMB/USD Central Parity Rate Set at 6.7180, Up 15 Points; Volvo Swings from Profit to Loss in Q3, to Cut Another 2,500 Jobs. Top 3 Headlines: Average Price of Domestic Large Models Rises to 13 Yuan. On October 23, the AI Institute of the China Academy of Information and Communications Technology jointly released the \"Large Model Token Service Performance Monitoring Report (2026).\" The report notes that, following the price wars of the past two years, in 2026, domestic and international...",
       "source": "36氪",
       "category": "大模型",
+      "categoryEn": "Large Model",
       "url": "https://36kr.com/p/4039177193411718?f=rss"
     },
     {
       "title": "三个月融两轮，要把遥感数据卖成“情报”，「瑞启深空」获超亿元天使+轮融资｜36氪首发",
       "summary": "36氪获悉，瑞启深空科技（苏州）有限公司（以下简称“瑞启深空”）近日完成超亿元天使+轮融资。本轮融资由东吴创新领投，苏创投、火炬电子、乾融资本、金雨茂物等机构跟投，资金将用于卫星研制与发射、地面系统搭建以及早期商业化交付。 瑞启深空成立于2026年3月，是一家以天基能力为底座、以AI为驱动的智能遥感星座公司，业务覆盖智能遥感数据服务、卫星研制和星座运营。 这是瑞启深空在三个月内完成的第二轮融资。加",
+      "titleEn": "Two Funding Rounds in Three Months: Turning Remote Sensing Data into \"Intelligence\" — Ruiqi Shengkong Secures Over 100 Million Yuan in Angel+ Round | 36Kr Exclusive",
+      "summaryEn": "36Kr has learned that Ruiqi Deep Space Technology (Suzhou) Co., Ltd. (hereinafter referred to as \"Ruiqi Deep Space\") recently completed an Angel+ funding round of over 100 million RMB. The round was led by Dongwu Innovation, with follow-on investments from Suzhou Venture Capital, Torch Electronics, Qianrong Capital, Jinyu Maowu, and other institutions. The funds will be allocated to satellite R&D and launches, ground system construction, and early-stage commercial delivery. Founded in March 2026, Ruiqi Deep Space is an intelligent remote sensing constellation company built on a foundation of space-based capabilities and driven by AI, with business operations spanning intelligent remote sensing data services, satellite R&D, and constellation management. This marks the second round of funding Ruiqi Deep Space has secured within three months.",
       "source": "36氪",
       "category": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4038309503997065?f=rss"
     },
     {
       "title": "科氪 | 2026可持续全球领导者大会，安顿白伟民谈健康数据的采集与验证",
       "summary": "10月22日，在2026可持续全球领导者大会“具身智能与未来产业”论坛上，安顿健康科技创始人白伟民披露了中医机器人研发的一组数据：项目投入1.3亿元，历经约两年半研发，采集300多家医院的数据，500多名中医师参与标注。这些具体投入，为理解健康领域的人工智能如何积累高质量数据提供了一个观察样本。 据白伟民介绍，安顿目前已采集20多万人的数据，并结合50多万份医案开展相关分析与训练。围绕“天回中医”",
+      "titleEn": "KeKr | 2026 Sustainable Global Leaders Summit: Bai Weimin of Andun on Health Data Collection and Validation",
+      "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" Forum of the 2026 Sustainable Global Leaders Conference, Bai Weimin, founder of Andun Health Technology, disclosed key figures regarding the development of a Traditional Chinese Medicine robot: the project required an investment of 130 million RMB and about two and a half years of R&D, during which data was collected from over 300 hospitals and more than 500 TCM practitioners participated in data annotation. These concrete investments offer a valuable case study for understanding how AI in the healthcare sector accumulates high-quality data. According to Bai, Andun has so far collected data from more than 200,000 individuals and integrated over 500,000 medical records to conduct relevant analysis and model training. Centered around \"Tianhui TCM\"...",
       "source": "36氪",
       "category": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4038041867146371?f=rss"
     },
     {
       "title": "科氪 | 荣耀亮相 CEIC：Magic9 领衔 AI 智能体手机 全场景 AI 生态加速落地",
       "summary": "10 月 23 日，消费电子创新大会（CEIC）在深圳福田举办，荣耀作为大会主要参展方，携以 Magic9 系列为代表的 AI 智能体手机产品及全场景 AI 终端生态亮相。荣耀 AI 首席科学家黄非博士在会上出席演讲，分享荣耀面向下一个十年的终端 AI 技术框架，加速 AI 智能体在消费终端的规模化落地。 作为行业首个搭载系统级 Agent Harness 商用架构的 AI 智能体手机，荣耀 Ma",
+      "titleEn": "KeKr | Honor Takes Center Stage at CEIC: Magic9 Leads AI Agent Smartphones, Accelerating the Rollout of the All-Scenario AI Ecosystem",
+      "summaryEn": "On October 23, the Consumer Electronics Innovation Conference (CEIC) was held in Futian, Shenzhen. As a key exhibitor, Honor showcased its AI agent smartphones, spearheaded by the Magic9 series, alongside its full-scenario AI device ecosystem. Dr. Huang Fei, Honor's Chief AI Scientist, delivered a speech at the event, sharing Honor's device-side AI technology framework for the next decade and outlining efforts to accelerate the large-scale deployment of AI agents on consumer devices. As the industry's first AI agent smartphone equipped with a system-level Agent Harness commercial architecture, Honor Ma...",
       "source": "36氪",
       "category": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4038044460520328?f=rss"
     },
     {
       "title": "“德杯”出海这步棋，下在虎牙转型的第三年",
       "summary": "文丨句号 编辑 | 果脯 10月17日晚，北京智慧电竞赛事中心，场馆外秋雨淅沥，而场馆内正在为胜者加冕。来自韩国赛区的BFX以3:1的比分战胜中国战队WE，夺得德玛西亚杯国际邀请赛冠军。 虎牙官方赛事图片 01 BFX蝉联“区王”，但赢家是虎牙？ 对于LPL来说，本土作战却没能留下象征冠军的银杯，这无疑是令人遗憾的；但对于赛事承办方虎牙来说，德杯帮助他们完成了一道关乎能力的证明题。 2023年，虎",
+      "titleEn": "This strategic move to take the Demacia Cup global comes in the third year of Huya's transformation.",
+      "summaryEn": "By Ju Hao | Edited by Guo Fu On the evening of October 17, at the Beijing Smart Esports Arena, autumn rain drizzled outside the venue, while inside, the champions were being crowned. BFX from the Korean region defeated the Chinese team WE with a score of 3:1, claiming the championship of the Demacia Cup International Invitational. Huya Official Esports Photo 01 BFX Defends \"Regional King\" Title, but Is Huya the Real Winner? For the LPL, playing on home soil yet failing to keep the silver trophy that symbolizes the championship is undoubtedly regrettable; but for the event organizer Huya, the Demacia Cup served as a testament to their capabilities. In 2023, Hu...",
       "source": "36氪",
       "category": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4037906308289412?f=rss"
     },
     {
@@ -1938,8 +1968,11 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "外交部发言人就人工智能问题答记者问",
       "summary": "外交部发言人回应美方用\"超级智能\"代替\"人工智能\"的表述，表示中方重视美方立场，中美元首会晤时就AI问题深入讨论，各方应结合技术发展加强交流。",
+      "titleEn": "Foreign Ministry Spokesperson Answers Questions from Journalists on Artificial Intelligence",
+      "summaryEn": "Responding to the U.S. use of the term \"superintelligence\" in place of \"artificial intelligence,\" the MFA Spokesperson stated that China attaches importance to the U.S. position. The two sides held in-depth discussions on AI issues during the China-U.S. summit, and all parties should enhance exchanges in light of technological advancements.",
       "source": "36氪",
       "category": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.36kr.com/newsflashes/4000094842769289"
     },
     {
@@ -2328,8 +2361,11 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "欢迎来到AGI时代，但关机键在哪里？",
       "summary": "虎嗅深度文章指出，2026年9月这一次\"AGI来了\"确实不同。OpenAI发布新模型后，AI能力跃升引发对AGI治理的深层思考：当AI系统越来越强大，谁来掌控\"关机键\"？",
+      "titleEn": "Welcome to the AGI era—but where's the off switch?",
+      "summaryEn": "An in-depth article by Huxiu points out that this time around, the September 2026 declaration that \"AGI is here\" is truly different. Following OpenAI's release of its new model, a dramatic leap in AI capabilities has sparked profound reflection on AGI governance: as AI systems grow ever more powerful, who will control the \"off switch\"?",
       "source": "虎嗅",
       "category": "AI治理",
+      "categoryEn": "AI Governance",
       "url": "https://www.huxiu.com/article/4892725.html"
     },
     {
@@ -3767,9 +3803,12 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "智谱开源GLM-5.3-Flash：320B参数对标Opus 4.8，定价仅1/40",
       "summary": "智谱正式上线并开源GLM-5.3-Flash（320B-A18B），320B总参数、18B激活参数，性能达到Claude Opus 4.8水平，定价仅为同类产品的1/40，挑战\"前沿智能=贵\"的行业认知。",
+      "titleEn": "Zhipu AI Open-Sources GLM-5.3-Flash: 320B-Parameter Model Rivals Opus 4.8 at Just 1/40th the Price",
+      "summaryEn": "Zhipu AI has officially launched and open-sourced GLM-5.3-Flash (320B-A18B), featuring 320B total parameters and 18B active parameters. Delivering performance on par with Claude Opus 4.8 and priced at just 1/40th that of comparable products, it directly challenges the industry perception that \"frontier intelligence = expensive.\"",
       "summaryEn": "Zhipu AI has officially launched and open-sourced GLM-5.3-Flash (320B-A18B), featuring 320B total parameters and 18B active parameters. Delivering performance on par with Claude Opus 4.8 and priced at just 1/40th that of comparable products, it directly challenges the industry perception that \"frontier intelligence = expensive.\"",
       "source": "开源中国",
       "category": "大模型",
+      "categoryEn": "Large Model",
       "url": "https://www.oschina.net/news/502144"
     },
     {
@@ -3999,8 +4038,11 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "38.15秒！天工队夺得第二届世界人形机器人运动会首金",
       "summary": "在第二届世界人形机器人运动会\"冰丝带\"比赛现场，天工队以38.15秒的成绩夺得400米大型组决赛首金。追风仔仔队、惊鸿动力队分别以39.45秒、39.66秒获得银铜牌。人形机器人运动竞技水平持续提升，展现中国机器人产业快速发展。",
+      "titleEn": "38.15 Seconds! Team Tiangong Clinches First Gold at the 2nd World Humanoid Robot Games",
+      "summaryEn": "At the \"Ice Ribbon\" venue of the 2nd World Humanoid Robot Games, the Tiangong Team clinched the first gold medal in the 400-meter Large-Size Category final with a time of 38.15 seconds. The Zhuifeng Zai Zai Team and the Jinghong Dynamics Team took home the silver and bronze medals with times of 39.45 seconds and 39.66 seconds, respectively. The steadily improving competitive standards in humanoid robot sports highlight the rapid development of China's robotics industry.",
       "source": "36氪",
       "category": "机器人",
+      "categoryEn": "Robot",
       "url": "https://www.36kr.com/newsflashes/3951859548896647"
     },
     {
