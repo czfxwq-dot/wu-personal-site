@@ -92,6 +92,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "AI圈最神秘的一家公司，终于公开了它的“豪赌”",
+      "titleEn": "The Most Enigmatic Company in the AI World Finally Unveils Its \"Big Bet\"",
       "titleEn": "The AI World's Most Mysterious Company Has Finally Unveiled Its High-Stakes Gamble",
       "summary": "文｜邓咏仪 编辑｜张雨忻 Vivix到底在做什么？这是过去一年多以来，AI圈对这家神秘公司的最大好奇。 Vivix给外界的印象大致是：明星创业者刘宇，从算法、产品到品牌，所有业务线一直在激进招人，公司估值在一年里飞涨至13.2亿美元，背后站满了背景华丽的投资人们。 但很少有人能说清楚这家公司到底在做什么。有人说，这是一个不做模型的纯AI产品公司，要做“下一个时代的抖音”，所以才频频推出如7vers",
       "source": "36氪",
@@ -111,6 +112,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "一颗AI毫米波雷达，千里科技在补哪一环",
+      "titleEn": "An AI Millimeter-Wave Radar: Which Missing Link is Qianli Technology Filling?",
       "titleEn": "AI mmWave Radar: Which Missing Link Is Qianli Technology Filling?",
       "titleEn": "An AI mmWave Radar: Which Missing Link Is Qianli Technology Filling?",
       "summary": "10月23日，千里科技发布了一颗AI毫米波雷达。在公开信息范围内，这是首个在雷达内部集成10 TOPS算力NPU的方案，雷达自身就能完成目标检测和分类，同时支持边缘侧、卫星与兼容三种工作模式。 这不是一次单纯的产品线扩充。 过去两年，智驾行业的竞争集中在模型上，谁的端到端更强，谁的数据闭环转得更快。但当模型的能力开始受限于传感器给到的原始信息，竞争就会往上游走一层，走到硬件。 这颗雷达要回答的问题",
@@ -154,6 +156,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "拿到2亿美金融资，Today AI回答了Personal AI的十个核心问题",
+      "titleEn": "Having Secured $200 Million in Funding, Today AI Answers the 10 Core Questions of Personal AI",
+      "titleEn": "Having Raised $200 Million in Funding, Today AI Answers Personal AI's Ten Core Questions",
       "titleEn": "After Securing $200 Million in Funding, Today AI Answers Ten Core Questions About Personal AI",
       "titleEn": "Fresh Off a $200 Million Funding Round, Today AI Answers the Ten Core Questions of Personal AI",
       "titleEn": "Today AI Raises $200M in Funding, Answers 10 Core Questions About Personal AI",
@@ -173,9 +177,11 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "高秉强连投三轮，深圳智能宠物硬件公司完成数千万Pre-A轮融资｜硬氪首发",
+      "titleEn": "Gao Bingqiang Backs Three Consecutive Rounds: Shenzhen Smart Pet Hardware Firm Closes Pre-A Round Raising Tens of Millions | HardKr Exclusive",
       "titleEn": "Gao Bingqiang Backs Shenzhen Smart Pet Hardware Startup for Third Consecutive Round as It Closes Pre-A Round Worth Tens of Millions of RMB | Exclusive to HardKr",
       "titleEn": "Gao Bingqiang Invests in Three Consecutive Rounds, Shenzhen Smart Pet Hardware Startup Closes Tens of Millions in Pre-A Funding | HardKr Exclusive",
       "summary": "作者｜黄楠 编辑｜袁斯来 硬氪获悉，宠物智能硬件公司「橘猫宇宙」近日完成数千万元Pre-A轮融资，高秉强教授及旗下高锋耐心基金、前海创新投资（深圳）有限公司、常垒创投等持续加注。资金将主要用于技术创新、产品迭代、专利体系建设，和拓展全球线下渠道网络，并推进产线深度整合与量产交付。 此前，公司已连续完成两轮早期融资，投资方包括高秉强教授及旗下基金Brizan Ventures II期基金、高锋耐心基",
+      "summaryEn": "Author | Huang Nan, Editor | Yuan Silai. HardKr has learned that \"Orange Cat Universe,\" a pet smart hardware company, has recently completed a Pre-A funding round of tens of millions of yuan. Professor Bingqiang Gao and his Gaofeng Patient Capital Fund, Qianhai Innovation Investment (Shenzhen) Co., Ltd., Changlei Ventures, and other investors have continued to increase their investment. The funds will be primarily used for technological innovation, product iteration, the development of a patent system, and the expansion of global offline channel networks, as well as advancing the deep integration of production lines and mass production delivery. Previously, the company has consecutively completed two early-stage funding rounds, with investors including Professor Bingqiang Gao and his Brizan Ventures Fund II, Gaofeng Patient Capital",
       "summaryEn": "By Huang Nan | Edited by Yuan Silai. HardKr has learned that smart pet hardware startup \"Orange Cat Universe\" recently closed a Pre-A funding round of tens of millions of RMB, with continued backing from Professor Bingqiang Gao and his Gaofeng Patient Capital, Qianhai Innovation Investment (Shenzhen) Co., Ltd., Changlei Venture Capital, and others. The funds will be primarily allocated to technological innovation, product iteration, patent portfolio development, and the expansion of its global offline channel network, as well as the deep integration of production lines and the ramp-up of mass production and delivery. Previously, the company successfully completed two consecutive early-stage funding rounds, with investors including Professor Bingqiang Gao and his Brizan Ventures Fund II, and Gaofeng Patient Capital.",
       "summaryEn": "Author | Huang Nan Editor | Yuan Silai HardKr has learned that pet smart hardware company \"Orange Cat Universe\" recently completed a Pre-A funding round of tens of millions of RMB, with continued investments from Professor Gao Bingqiang and his Gofeng Patient Capital, Qianhai Innovation Investment (Shenzhen) Co., Ltd., and Changlei Ventures. The funds will be primarily allocated to technological innovation, product iteration, building a patent system, and expanding its global offline channel network, as well as advancing the deep integration of production lines and mass production and delivery. Previously, the company had completed two consecutive early-stage funding rounds, with investors including Professor Gao Bingqiang and his funds, Brizan Ventures Phase II and Gofeng Patient...",
       "source": "36氪",
@@ -184,10 +190,12 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "9点1氪丨国内大模型均价涨至13元；原“死了么”APP公布收费标准，最高199元/年；寒武纪第三季度净利润14.04亿元，同比增长147.74%",
+      "titleEn": "9 AM Tech Brief | Average price of domestic large models rises to 13 yuan; the original \"Are You Dead Yet?\" app announces its pricing, with fees up to 199 yuan per year; Cambricon reports a Q3 net profit of 1.404 billion yuan, up 147.74% year-on-year.",
       "titleEn": "9 AM 36Kr | Average Price of Domestic Large Models Rises to 13 RMB; Original \"Are You Dead Yet?\" App Announces Pricing, Up to 199 RMB/Year; Cambricon Reports Q3 Net Profit of 1.404 Billion RMB, Up 147.74% YoY",
       "titleEn": "9AM 1Kr丨Average price of domestic large models rises to 13 yuan; the \"Am I Dead Yet\" app announces its fee structure, charging up to 199 yuan per year; Cambricon reports Q3 net profit of 1.404 billion yuan, a year-on-year increase of 147.74%.",
       "titleEn": "9 AM 1Kr | Average price of domestic large models rises to 13 yuan; original \"Dead Yet?\" app announces pricing structure, up to 199 yuan/year; Cambricon reports Q3 net profit of 1.404 billion yuan, up 147.74% year-on-year",
       "summary": "今日热点导览 微信紧急更新适配iPhoneDuo 证监会核准设立花旗证券中国公司 国际金价跌破4000，现货黄金创7月以来新低 人民币兑美元中间价报6.7180，上调15点 沃尔沃第三季度由盈转亏，将再砍2500个岗位 TOP3大新闻 国内大模型均价涨至13元 10月23日，中国信通院人工智能所联合发布《大模型词元服务性能监测报告（2026年）》。报告提出，经历了过去两年价格战后，2026年国内外",
+      "summaryEn": "Today's Headlines: WeChat Issues Urgent Update to Support iPhone Duo; CSRC Approves Establishment of Citi Securities China; International Gold Price Falls Below 4,000, Spot Gold Hits Lowest Level Since July; RMB/USD Central Parity Rate Set at 6.7180, Up 15 Points; Volvo Swings from Profit to Loss in Q3, to Cut Another 2,500 Jobs. Top 3 Headlines: Average Price of Domestic Large Models Rises to 13 Yuan. On October 23, the AI Institute of the China Academy of Information and Communications Technology jointly released the \"Large Model Token Service Performance Monitoring Report (2026).\" The report notes that, following the price wars of the past two years, in 2026, domestic and international...",
       "summaryEn": "Today's Top Stories: WeChat rolls out urgent update to support iPhone Duo; CSRC approves establishment of Citigroup Securities China; international gold price falls below 4,000, with spot gold hitting its lowest level since July; central parity rate of the RMB against the USD set at 6.7180, up 15 points; Volvo swings to a loss in Q3 and announces another 2,500 job cuts. TOP 3 MAJOR NEWS: Average price of domestic large language models rises to 13 yuan. On October 23, the AI Institute of CAICT jointly released the \"Large Model Token Service Performance Monitoring Report (2026).\" The report notes that, after the price wars of the past two years, in 2026, both domestic and global...",
       "summaryEn": "Today's Top Stories: WeChat Issues Urgent Update for iPhone Duo Compatibility. CSRC Approves Establishment of Citigroup Securities China. International Gold Price Falls Below 4,000, Spot Gold Hits Lowest Level Since July. RMB/USD Central Parity Rate Set at 6.7180, Up 15 Basis Points. Volvo Swings from Profit to Loss in Q3, to Slash Another 2,500 Jobs. TOP 3 NEWS: Average Price of Domestic Large Models Rises to 13 Yuan. On October 23, the AI Institute of CAICT jointly released the Large Model Token Service Performance Monitoring Report (2026). The report notes that following the price wars of the past two years, in 2026, both domestic and international...",
       "summaryEn": "Today's Trending News: WeChat Issues Urgent Update to Support iPhone Duo; CSRC Approves Establishment of Citi Securities China; International Gold Price Drops Below 4,000, Spot Gold Hits Lowest Level Since July; USD/CNY Central Parity Rate Set at 6.7180, Up 15 Points; Volvo Swings from Profit to Loss in Q3, to Cut Another 2,500 Jobs. TOP 3 Major News: Average Price of Domestic Large Models Rises to 13 Yuan. On October 23, the AI Institute of the China Academy of Information and Communications Technology jointly released the *Large Model Token Service Performance Monitoring Report (2026)*. The report notes that, following the price wars of the past two years, in 2026, domestic and international...",
@@ -212,6 +220,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "titleEn": "KeKr | 2026 Sustainable Global Leaders Conference: Bai Weimin of Andon on Health Data Collection and Validation",
       "titleEn": "KeKe | 2026 Sustainable Global Leaders Conference: Bai Weimin of Andon on the Collection and Validation of Health Data",
       "summary": "10月22日，在2026可持续全球领导者大会“具身智能与未来产业”论坛上，安顿健康科技创始人白伟民披露了中医机器人研发的一组数据：项目投入1.3亿元，历经约两年半研发，采集300多家医院的数据，500多名中医师参与标注。这些具体投入，为理解健康领域的人工智能如何积累高质量数据提供了一个观察样本。 据白伟民介绍，安顿目前已采集20多万人的数据，并结合50多万份医案开展相关分析与训练。围绕“天回中医”",
+      "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" Forum of the 2026 Sustainable Global Leaders Conference, Bai Weimin, founder of Andun Health Technology, disclosed key figures regarding the development of a Traditional Chinese Medicine robot: the project required an investment of 130 million RMB and about two and a half years of R&D, during which data was collected from over 300 hospitals and more than 500 TCM practitioners participated in data annotation. These concrete investments offer a valuable case study for understanding how AI in the healthcare sector accumulates high-quality data. According to Bai, Andun has so far collected data from more than 200,000 individuals and integrated over 500,000 medical records to conduct relevant analysis and model training. Centered around \"Tianhui TCM\"...",
+      "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" forum during the 2026 Sustainable Global Leaders Summit, Bai Weimin, founder of Andun Health Technology, revealed key figures regarding the development of a Traditional Chinese Medicine robot: the project required an investment of 130 million RMB and approximately two and a half years of R&D, drawing on data from over 300 hospitals and involving more than 500 TCM practitioners in data annotation. These concrete investments offer a valuable case study for understanding how AI in the healthcare sector accumulates high-quality data. According to Bai, Andun has so far collected data from over 200,000 individuals and integrated it with more than 500,000 medical cases for relevant analysis and model training. Centered around \"Tianhui TCM\"",
       "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" Forum during the 2026 Sustainable Global Leaders Conference, Bai Weimin, founder of Andun Health Technology, disclosed key figures regarding the R&D of a TCM robot: the project has involved an investment of 130 million yuan and about two and a half years of research and development, with data collected from over 300 hospitals and more than 500 TCM practitioners enlisted for data annotation. These concrete investments offer a valuable case study for understanding how AI in the healthcare sector accumulates high-quality data. According to Bai, Andun has already collected data from more than 200,000 individuals and integrated it with over 500,000 medical case records to conduct relevant analysis and model training. Centered on \"Tianhui TCM\"",
       "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" Forum of the 2026 Sustainable Global Leaders Conference, Bai Weimin, founder of Andun Health Technology, disclosed a set of figures regarding the R&D of a Traditional Chinese Medicine robot: a total investment of 130 million RMB, approximately two and a half years of research and development, data collected from over 300 hospitals, and the participation of more than 500 TCM practitioners in data annotation. These concrete investments provide a valuable observational sample for understanding how AI in the healthcare sector accumulates high-quality data. According to Bai, Andun has now collected data on more than 200,000 individuals and combined it with over 500,000 medical records for relevant analysis and model training, all centered around \"Tianhui TCM\"...",
       "summaryEn": "On October 22, at the \"Embodied Intelligence and Future Industries\" Forum during the 2026 Sustainable Global Leaders Summit, Bai Weimin, founder of Andun Health Technology, revealed key figures regarding the development of a Traditional Chinese Medicine robot: the project has seen an investment of 130 million RMB, involved roughly two and a half years of R&D, gathered data from over 300 hospitals, and engaged more than 500 TCM practitioners in data annotation. These concrete investments offer a valuable case study for understanding how artificial intelligence in the healthcare sector accumulates high-quality data. According to Bai, Andun has already collected data from over 200,000 individuals, combining it with more than 500,000 medical cases to conduct relevant analysis and model training. Centered around \"Tianhui TCM\"...",
@@ -468,6 +478,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI安全",
+      "categoryEn": "AI Safety",
       "categoryEn": "AI安全",
       "url": "https://36kr.com/p/4037822855058307"
     },
@@ -2323,9 +2334,12 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "刷屏全球的AI新顶流Jev：一句话都不说，到底怎么玩？",
+      "titleEn": "Jev, the New Global AI Sensation Taking the Internet by Storm: Without Uttering a Single Word, How on Earth Does It Work?",
       "summary": "AI领域新顶流Jev刷屏全球，它并不说话。OpenAI研究员Diogo Almeida参与研发的这款模型，打破了大语言模型\"能写能聊\"的主流方向，展示了多模态交互的全新可能性。",
+      "summaryEn": "The newest sensation in the AI world, Jev, is taking the globe by storm, yet it doesn't say a word. Co-developed by OpenAI researcher Diogo Almeida, this model breaks away from the dominant paradigm of large language models that prioritize writing and chatting, unveiling entirely new possibilities for multimodal interaction.",
       "source": "虎嗅",
       "category": "AI产品",
+      "categoryEn": "AI Products",
       "url": "https://www.huxiu.com/article/4892713.html"
     }
   ],
@@ -2869,7 +2883,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "AI安全新范式：Context安全正在取代数据安全成为新焦点",
+      "titleEn": "A New Paradigm in AI Security: Context Security Is Replacing Data Security as the New Focus",
       "summary": "虎嗅报道指出，AI安全的边界正在从传统数据安全迁移到Context安全，AADP出现后Agent安全开始把\"能做\"和\"该做\"真正分开，权限体系面临全新挑战，Agent带来的安全问题远超传统计算机安全范畴。",
+      "summaryEn": "According to a report by Huxiu, the boundaries of AI security are shifting from traditional data security to context security. With the advent of AADP, agent security is now making a definitive distinction between \"what can be done\" and \"what should be done,\" posing entirely new challenges to authorization frameworks. Furthermore, the security issues introduced by agents extend far beyond the scope of traditional computer security.",
       "source": "虎嗅",
       "category": "AI安全",
       "url": "https://www.huxiu.com/article/4890596.html"
@@ -3690,9 +3706,12 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "腾讯混元发布Hy4 preview：7.7B参数、1M上下文，开源并接入游戏引擎",
+      "titleEn": "Tencent Hunyuan Releases Hy4 Preview: 7.7B Parameters, 1M Context, Open-Sourced and Integrated into Game Engines",
       "summary": "腾讯混元发布Hy4 preview，总参数7.7B，激活参数4.9B，上下文长度1M。模型已在HuggingFace、GitHub等平台开源。最大亮点是接入Unreal 5引擎，可通过纯对话生成射击游戏Demo，展示\"模型即agent\"的落地场景。",
+      "summaryEn": "Tencent Hunyuan has released the Hy4 preview, featuring 7.7B total parameters, 4.9B active parameters, and a context length of 1M tokens. The model has been open-sourced on platforms such as Hugging Face and GitHub. Its standout feature is its integration with Unreal Engine 5, which enables the generation of a shooter game demo purely through conversation, vividly demonstrating a real-world use case for the \"model-as-agent\" paradigm.",
       "source": "开源中国",
       "category": "AI大模型",
+      "categoryEn": "Large AI Models",
       "url": "https://www.oschina.net/news/502183"
     },
     {
@@ -3707,7 +3726,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "智谱开源GLM-5.3-Flash：320B模型达到Opus 4.8水平，定价仅1/40",
+      "titleEn": "Zhipu AI Open-Sources GLM-5.3-Flash: 320B Model Matches Opus 4.8 Performance, Priced at Just 1/40th the Cost",
       "summary": "智谱开源GLM-5.3-Flash（320B-A18B），在Artificial Analysis综合智能指数中拿到57分，与Claude Opus 4.8持平。定价为GLM-5.3的1/10，限时折扣内为1/20，是Opus 4.8的1/40，挑战\"前沿智能=昂贵\"的假设。",
+      "summaryEn": "Zhipu has open-sourced GLM-5.3-Flash (320B-A18B), which scores 57 on the Artificial Analysis aggregate intelligence index, on par with Claude Opus 4.8. Priced at 1/10th the cost of GLM-5.3—and just 1/20th during a limited-time discount—it comes in at 1/40th the price of Opus 4.8, challenging the assumption that \"frontier intelligence = expensive.\"",
       "source": "开源中国",
       "category": "AI大模型",
       "url": "https://www.oschina.net/news/502144"
@@ -3746,6 +3767,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "智谱开源GLM-5.3-Flash：320B参数对标Opus 4.8，定价仅1/40",
       "summary": "智谱正式上线并开源GLM-5.3-Flash（320B-A18B），320B总参数、18B激活参数，性能达到Claude Opus 4.8水平，定价仅为同类产品的1/40，挑战\"前沿智能=贵\"的行业认知。",
+      "summaryEn": "Zhipu AI has officially launched and open-sourced GLM-5.3-Flash (320B-A18B), featuring 320B total parameters and 18B active parameters. Delivering performance on par with Claude Opus 4.8 and priced at just 1/40th that of comparable products, it directly challenges the industry perception that \"frontier intelligence = expensive.\"",
       "source": "开源中国",
       "category": "大模型",
       "url": "https://www.oschina.net/news/502144"
@@ -3772,9 +3794,12 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "AWS收购DuckLabs：DuckDB开源数据库格局生变",
+      "titleEn": "AWS Acquires DuckLabs: The DuckDB Open-Source Database Landscape Shifts",
       "summary": "AWS宣布收购DuckDB背后的DuckLabs团队。DuckLabs在宣布收购同一篇文章中详细解释\"什么不会变\"，DuckDB将继续保持开源。这是继Red Hat、GitHub之后，又一家重要开源团队被巨头收编。",
+      "summaryEn": "AWS has announced the acquisition of DuckLabs, the team behind DuckDB. In the same article announcing the acquisition, DuckLabs detailed \"what won't change,\" confirming that DuckDB will remain open source. This marks yet another major open-source team to be absorbed by a tech giant, following in the footsteps of Red Hat and GitHub.",
       "source": "开源中国",
       "category": "开源",
+      "categoryEn": "Open Source",
       "url": "https://www.oschina.net/news/502150/ducklabs-to-join-aws"
     }
   ],
@@ -4397,7 +4422,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   "newsItems": [
     {
       "title": "DeepSeek V4全系列凌晨调价，中国AI定价走向成熟",
+      "titleEn": "DeepSeek Adjusts Pricing for Entire V4 Lineup Overnight, China's AI Pricing Matures",
       "summary": "8月17日零点，DeepSeek V4全系列新的峰谷价格正式生效。过去一年多中国模型不断压低前沿智能价格，在OpenRouter样本中中国模型Token份额已超过美国。分析认为DeepSeek涨价标志着中国正把\"智能\"变成一种工业品，AI定价策略走向成熟。",
+      "summaryEn": "At midnight on August 17, the new peak and off-peak pricing for the entire DeepSeek V4 lineup officially took effect. For over a year now, Chinese models have continuously driven down the price of frontier intelligence, and in the OpenRouter sample, the token share of Chinese models has already surpassed that of U.S. models. Analysts believe that DeepSeek's price hike signals that China is transforming \"intelligence\" into an industrial commodity, marking the maturation of AI pricing strategies.",
       "source": "虎嗅",
       "category": "大模型",
       "url": "https://www.huxiu.com/article/4883517.html"
