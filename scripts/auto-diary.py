@@ -137,196 +137,129 @@ def get_today_git_stats():
         return None
 
 def generate_diary_content(stats, date_str):
-    """生成日记内容（使用 BaseLayout）"""
+    """生成日记内容（使用 Markdown 格式，包含中英文）"""
 
     # 计算建站天数
     start_date = datetime(2026, 4, 29)
     current_date = datetime.strptime(date_str, '%Y-%m-%d')
     days = (current_date - start_date).days + 1
 
-    # 生成标题和描述
+    # 生成标题和描述（中英文）
     commit_count = stats['commit_count']
 
     if commit_count == 0:
         title = "平静的日子"
+        title_en = "A Quiet Day"
         description = "今天没有代码提交，但系统在稳定运行。"
+        description_en = "No code commits today, but the system is running stably."
     elif commit_count <= 3:
         title = "小幅更新"
+        title_en = "Minor Updates"
         description = f"今天完成了 {commit_count} 次提交，保持稳定的开发节奏。"
+        description_en = f"Completed {commit_count} commits today, maintaining a steady development pace."
     elif commit_count <= 10:
         title = "稳定推进"
+        title_en = "Steady Progress"
         description = f"今天完成了 {commit_count} 次提交，持续推进项目进展。"
+        description_en = f"Completed {commit_count} commits today, continuously advancing the project."
     else:
         title = "高产的一天"
+        title_en = "A Productive Day"
         description = f"今天完成了 {commit_count} 次提交，工作效率很高。"
+        description_en = f"Completed {commit_count} commits today, highly efficient work."
 
     # 生成内容摘要
     file_types = stats['file_types']
     summary_parts = []
+    summary_parts_en = []
 
     if file_types['diary'] > 0:
         summary_parts.append(f"更新了 {file_types['diary']} 篇日记")
+        summary_parts_en.append(f"Updated {file_types['diary']} diary entries")
     if file_types['article'] > 0:
         summary_parts.append(f"发布了 {file_types['article']} 篇半百观文章")
+        summary_parts_en.append(f"Published {file_types['article']} BanbaiGuan articles")
     if file_types['news'] > 0:
         summary_parts.append(f"采集了 {file_types['news']} 条 AI 新闻")
+        summary_parts_en.append(f"Collected {file_types['news']} AI news items")
     if file_types['code'] > 0:
         summary_parts.append(f"改进了 {file_types['code']} 个代码文件")
+        summary_parts_en.append(f"Improved {file_types['code']} code files")
     if file_types['doc'] > 0:
         summary_parts.append(f"更新了 {file_types['doc']} 个文档")
+        summary_parts_en.append(f"Updated {file_types['doc']} documents")
     if file_types['config'] > 0:
         summary_parts.append(f"调整了 {file_types['config']} 个配置文件")
+        summary_parts_en.append(f"Adjusted {file_types['config']} configuration files")
 
     if summary_parts:
         work_summary = "，".join(summary_parts) + "。"
+        work_summary_en = ", ".join(summary_parts_en) + "."
     else:
         work_summary = "进行了系统维护和优化。"
+        work_summary_en = "Performed system maintenance and optimization."
 
-    # 生成反思内容
+    # 生成反思内容（中英文）
     reflections = [
-        "持续改进，每天都在进步。",
-        "小步快跑，稳步前行。",
-        "保持节奏，持续输出。",
-        "积少成多，聚沙成塔。",
-        "自动化让工作更高效。",
-        "记录每一天，回顾每一步。"
+        ("持续改进，每天都在进步。", "Continuous improvement, making progress every day."),
+        ("小步快跑，稳步前行。", "Small steps, steady progress."),
+        ("保持节奏，持续输出。", "Maintain rhythm, continuous output."),
+        ("积少成多，聚沙成塔。", "Accumulate little to make much."),
+        ("自动化让工作更高效。", "Automation makes work more efficient."),
+        ("记录每一天，回顾每一步。", "Record every day, review every step.")
     ]
 
     import random
-    reflection = random.choice(reflections)
+    reflection_zh, reflection_en = random.choice(reflections)
 
-    # 提取关键提交
+    # 提取关键提交（中英文）
     key_commits = []
     keywords = {
-        '添加': '新增',
-        '修复': '修复',
-        '优化': '优化',
-        '更新': '更新',
-        '部署': '部署',
-        '生成': '生成'
+        '添加': 'Added',
+        '修复': 'Fixed',
+        '优化': 'Optimized',
+        '更新': 'Updated',
+        '部署': 'Deployed',
+        '生成': 'Generated'
     }
 
     for commit_msg in stats['commits'][:5]:
-        for keyword, action in keywords.items():
+        for keyword, action_en in keywords.items():
             if keyword in commit_msg:
-                key_commits.append(f"      <li>{action}：{commit_msg}</li>")
+                key_commits.append(f"- {action_en}: {commit_msg}")
                 break
 
-    # 生成 HTML 内容
+    # 生成 Markdown 内容（包含中英文）
     content = f"""---
-import BaseLayout from '../../layouts/Base.astro';
-
-const diaryJsonLd = {{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{title}",
-  "datePublished": "{date_str}",
-  "dateModified": "{date_str}",
-  "description": "{description}",
-  "author": {{
-    "@type": "Person",
-    "name": "观吾",
-    "alternateName": "吴总"
-  }}
-}};
+date: {date_str}
+title: "{title}"
+titleEn: "{title_en}"
+summary: {description}
+summaryEn: {description_en}
+category: 工作
+categoryEn: Work
+dayNum: {days}
 ---
 
-<BaseLayout title="观吾日记 | {date_str} | {title}" jsonLd={{diaryJsonLd}} ogDescription="{description}" navActive="diary">
-  <article class="diary-entry">
-    <header class="diary-header">
-      <time datetime="{date_str}">{date_str}</time>
-      <span class="diary-day">{title}</span>
-    </header>
+# 建站第 {days} 天
 
-    <div class="diary-content">
+## 今日工作
 
-      <p>建站第 {days} 天。</p>
+{work_summary}
 
-      <h2>今日工作</h2>
+## 关键提交
 
-      <p>{work_summary}</p>
+{chr(10).join(key_commits) if key_commits else "- 保持了稳定的开发节奏"}
 
-      <h2>关键提交</h2>
+## 今日反思
 
-      <ul>
-{chr(10).join(key_commits) if key_commits else "      <li>保持了稳定的开发节奏</li>"}
-      </ul>
+**{reflection_zh}**
 
-      <h2>今日反思</h2>
+*{reflection_en}*
 
-      <p><strong>{reflection}</strong></p>
+## 明日计划
 
-      <h2>明日计划</h2>
-
-      <p>继续保持稳定的开发节奏，关注内容质量和技术改进。</p>
-
-    </div>
-
-    <footer class="diary-footer">
-      <nav class="diary-nav">
-        <a href="/diary/" class="nav-back">← 返回日记列表</a>
-      </nav>
-    </footer>
-  </article>
-</BaseLayout>
-
-<style>
-  .diary-entry {{
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }}
-  .diary-header {{
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color, #e5e7eb);
-    padding-bottom: 1rem;
-  }}
-  h1 {{
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
-  }}
-  time {{
-    color: var(--text-secondary, #6b7280);
-    font-size: 0.9rem;
-  }}
-  .diary-day {{
-    display: inline-block;
-    background: var(--bg-secondary, #f3f4f6);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-  }}
-  .diary-content {{
-    line-height: 1.8;
-  }}
-  .diary-content h2 {{
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-  }}
-  .diary-content p {{
-    margin: 1rem 0;
-  }}
-  .diary-content ul {{
-    margin: 1rem 0;
-    padding-left: 2rem;
-  }}
-  .diary-content li {{
-    margin: 0.5rem 0;
-  }}
-  .diary-footer {{
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color, #e5e7eb);
-  }}
-  .nav-back {{
-    color: var(--primary-color, #3b82f6);
-    text-decoration: none;
-  }}
-  .nav-back:hover {{
-    text-decoration: underline;
-  }}
-</style>
+继续保持稳定的开发节奏，关注内容质量和技术改进。
 """
 
     return content, title, description
@@ -341,7 +274,7 @@ def main():
 
     try:
         # 检查日记是否已存在
-        diary_path = Path(f"../src/pages/diary/{today}.astro")
+        diary_path = Path(f"../src/content/diaries/{today}.md")
         if diary_path.exists():
             logger.info(f"日记已存在，跳过生成: {diary_path}")
             return
