@@ -13,9 +13,9 @@ const { diary } = Astro.props;
 
 const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const diaryDate = new Date(diary.date + 'T00:00:00+08:00');
-const dayName = dayNames[diaryDate.getDay()];
+const dayName = dayNames[diaryDate.getUTCDay()];
 const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const formattedDate = `${monthNames[diaryDate.getMonth()]} ${diaryDate.getDate()}, ${diaryDate.getFullYear()}`;
+const formattedDate = `${monthNames[diaryDate.getUTCMonth()]} ${diaryDate.getUTCDate()}, ${diaryDate.getUTCFullYear()}`;
 
 const title = diary.titleEn || diary.title;
 const summary = diary.summaryEn || diary.summary;
