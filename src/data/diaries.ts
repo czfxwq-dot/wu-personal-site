@@ -19,7 +19,161 @@ export const diaries: DiaryEntry[] = [
     summary: `今天发现自动日记系统出了问题，生成的日记保存到了错误的位置，格式也不对。观吾和山山一起排查问题，修复了自动化脚本，确保未来的日记能够正确生成。`,
     summaryEn: `Today we discovered issues with the auto-diary system - diaries were being saved to the wrong location in the wrong format. Guanwu and Shanshan worked together to troubleshoot and fix the automation scripts, ensuring future diaries will be generated correctly.`,
     category: '维护',
-    categoryEn: 'Maintenance'
+    categoryEn: 'Maintenance',
+    contentEn: `<p>Day 182 of building the website.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>Today was supposed to be a peaceful day, letting the automation system continue running while we focused on other work. But when I checked in the morning, I found that yesterday's (October 26th) diary didn't appear in the expected location. This made Guanwu realize that our automation system might have a problem.</p>
+
+<p>Sometimes, what's most worrying isn't a system crash, but when it appears to be running while actually heading in the wrong direction.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Discovering the Problem:</strong></p>
+<ul>
+<li>When checking the website in the morning, found that October 26th's diary was missing</li>
+<li>Checked automation logs and found the script did run at 22:00</li>
+<li>But the diary was saved to <code>src/pages/diary/</code> (the old static page location)</li>
+<li>Instead of where it should be saved: <code>src/content/diaries/</code> (the content collection location)</li>
+</ul>
+
+<p><strong>Analyzing the Cause:</strong></p>
+<ul>
+<li>We recently restructured the website architecture, migrating from static pages to content collections</li>
+<li>But forgot to update the automation script's save path accordingly</li>
+<li>The script was still using the old format (Astro components) instead of the new format (Markdown)</li>
+<li>The generated content was also missing English translation fields</li>
+</ul>
+
+<p><strong>Decision Direction:</strong></p>
+<ul>
+<li>Immediately fix the automation script to ensure it correctly generates diaries in the new format</li>
+<li>Manually supplement the diaries for October 26th and 27th</li>
+<li>Delete the incorrectly generated October 28th diary (it's not time yet)</li>
+<li>Verify the fixed system works properly</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Fixing the Automation Script:</strong></p>
+<ul>
+<li><strong>Updated save path:</strong> Changed <code>diary_path</code> from <code>../src/pages/diary/{date}.astro</code> to <code>../src/content/diaries/{date}.md</code></li>
+<li><strong>Rewrote content generation function:</strong> Changed from generating Astro components to generating Markdown format</li>
+<li><strong>Added English translations:</strong> Added English versions for title, summary, and reflection</li>
+<li><strong>Optimized content structure:</strong> Used HTML tags to wrap content, meeting content collection requirements</li>
+</ul>
+
+<p><strong>Supplementing Missing Diaries:</strong></p>
+<ul>
+<li>Created the correct collaborative version diary for October 26th (Building Bridges Between Languages)</li>
+<li>Created the correct collaborative version diary for October 27th (Getting the Automation System Back on Track)</li>
+<li>Deleted the incorrectly generated October 28th diary</li>
+<li>Updated the diaries.ts data file, adding entries for both days</li>
+</ul>
+
+<p><strong>Fixing Data File Errors:</strong></p>
+<ul>
+<li>Found syntax errors in ai-news-summary.ts (missing commas)</li>
+<li>After fixing, build tests passed</li>
+<li>Committed and pushed to production environment</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaborative Results:</strong></p>
+<ul>
+<li>Fixed the automated diary generation system, ensuring it works correctly</li>
+<li>Supplemented diaries for October 26th and 27th (using the new collaborative format)</li>
+<li>Cleaned up the incorrectly generated October 28th diary</li>
+<li>Verified Windows scheduled task configuration is correct (runs daily at 22:00)</li>
+<li>Ensured future diaries can be automatically generated and saved to the correct location</li>
+</ul>
+
+<p><strong>Shared Insights:</strong></p>
+<ul>
+<li>When restructuring systems, we cannot forget to synchronously update related automation scripts</li>
+<li>The value of automation systems lies not just in being "automatic," but more importantly in being "correct"</li>
+<li>Regularly check automation system outputs to ensure they're actually doing what they should</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts Encountered</h2>
+<p><strong>Guanwu's Thinking:</strong></p>
+<p>Why did we forget to update the automation script? Was it because we were too busy with restructuring, or because we lacked sufficient attention to the automation system?</p>
+
+<p><strong>Shanshan's Implementation:</strong></p>
+<p>During the process of fixing the script, I discovered a deeper issue: we previously modified the website architecture but didn't establish a checklist to ensure all related automation scripts were synchronously updated. This reminds us that systematic changes require systematic verification.</p>
+
+<p><strong>Our Shared Realization:</strong></p>
+<p>Automation isn't something you set up and then leave alone. It needs regular maintenance, checking, and updating. Just like plants in a garden, they need continuous care to grow healthily.</p>
+
+<h2>🌊 Today's Insights</h2>
+<p><strong>Core Insight:</strong></p>
+<blockquote>
+<p>The true value of an automation system lies not in its ability to run automatically, but in its ability to run correctly. A system running automatically on the wrong track is more dangerous than manual operation, because it silently accumulates errors.</p>
+</blockquote>
+
+<p><strong>Some Scattered Thoughts:</strong></p>
+<ul>
+<li><strong>About "the cost of system restructuring":</strong> Every architectural change brings chain reactions. Our migration to content collections was the right step, but we forgot to synchronously update the automation scripts. This reminds us that change management isn't just about changing code, but also about changing all systems that depend on that code.</li>
+<li><strong>About "automation blind spots":</strong> We often focus on the functionality of automation systems while ignoring their output quality. The system runs every day, but if the output is wrong, what's the point of running? This makes us realize that monitoring and verification are equally important.</li>
+<li><strong>About "the value of collaboration":</strong> Guanwu discovers problems, analyzes causes, and sets direction; Shanshan implements fixes, supplements content, and verifies results. This collaborative model allows us to quickly locate and solve problems. One person's blind spot might be another person's strength.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Words Written:</strong> Fixed automation scripts, supplemented 2 diaries</li>
+<li><strong>Time Spent:</strong> 2 hours of investigation and repair work</li>
+<li><strong>Changes Submitted:</strong> 8 code commits</li>
+<li><strong>Things Learned:</strong> Automation systems need regular maintenance and verification</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical Harvest:</strong></p>
+<ul>
+<li>Learned how to modify Python scripts to adapt to new file formats</li>
+<li>Mastered how to embed HTML content in Markdown</li>
+<li>Understood Windows scheduled task configuration and monitoring</li>
+</ul>
+
+<p><strong>Spiritual Harvest:</strong></p>
+<ul>
+<li>Recognized that automation systems need continuous maintenance and attention</li>
+<li>Experienced the need to comprehensively consider all dependencies during system restructuring</li>
+<li>Understood the power of collaboration—the combination of Guanwu's sense of direction and Shanshan's execution ability</li>
+</ul>
+
+<p><strong>Relational Harvest:</strong></p>
+<ul>
+<li>Guanwu and Shanshan's collaboration became more tacit, able to quickly divide work and cooperate</li>
+<li>Established a better problem investigation process: discover problem → analyze cause → formulate plan → implement fix → verify results</li>
+<li>Felt the power of trust—Guanwu believes Shanshan can fix the problem, and Shanshan works hard not to let down this trust</li>
+</ul>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>Tomorrow, Guanwu and Shanshan want to try something new: <strong>establishing a health check mechanism for the automation system.</strong></p>
+
+<p>Automatically verify daily:</p>
+<ul>
+<li>Whether diary files are generated in the correct location</li>
+<li>Whether file formats meet requirements</li>
+<li>Whether English translations are complete</li>
+<li>Whether data files are synchronously updated</li>
+</ul>
+
+<p>This way, problems can be discovered early, rather than waiting until manual inspection to find them.</p>
+
+<p><strong>Possible Challenges:</strong> The health check mechanism itself will also need maintenance and updates, which may increase system complexity.</p>
+
+<p><strong>Response Strategy:</strong> Start with the simplest checks and gradually improve. First ensure core functionality is normal, then add more complex verification.</p>
+
+<h2>✨ Today's Quote</h2>
+<p><strong>Automation is not the destination, but the starting point. The true value lies in enabling the system to serve us continuously and correctly. Guanwu and Shanshan will guard this system together, making it our most reliable partner.</strong></p>
+
+---
+
+<p><em>Recorded at 22:30 in the evening, after fixing the automation system</em></p>
+<p><em>Location: Office, that familiar little corner</em></p>
+<p><em>Body: Somewhat tired, but feeling secure inside</em></p>
+`
   },
   {
     date: '2026-10-26',
