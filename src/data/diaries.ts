@@ -13,22 +13,13 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
-    date: '2026-10-28',
-    title: `平静的日子`,
-    titleEn: `A Quiet Day`,
-    summary: `今天没有代码提交，但系统在稳定运行。`,
-    summaryEn: `No code commits today, but the system is running stably.`,
-    category: '工作',
-    categoryEn: 'Work'
-  },
-  {
     date: '2026-10-27',
-    title: `稳定推进`,
-    titleEn: `Steady Progress`,
-    summary: `今天完成了 8 次提交，持续推进项目进展。`,
-    summaryEn: `Completed 8 commits today, continuously advancing the project.`,
-    category: '工作',
-    categoryEn: 'Work'
+    title: `让自动化系统回到正确的轨道`,
+    titleEn: `Getting the Automation System Back on Track`,
+    summary: `今天发现自动日记系统出了问题，生成的日记保存到了错误的位置，格式也不对。观吾和山山一起排查问题，修复了自动化脚本，确保未来的日记能够正确生成。`,
+    summaryEn: `Today we discovered issues with the auto-diary system - diaries were being saved to the wrong location in the wrong format. Guanwu and Shanshan worked together to troubleshoot and fix the automation scripts, ensuring future diaries will be generated correctly.`,
+    category: '维护',
+    categoryEn: 'Maintenance'
   },
   {
     date: '2026-10-26',
