@@ -12,10 +12,12 @@ export function getStaticPaths() {
 const { diary } = Astro.props;
 
 const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const diaryDate = new Date(diary.date + 'T00:00:00+08:00');
-const dayName = dayNames[diaryDate.getUTCDay()];
+// 直接从日期字符串解析，避免时区问题
+const [year, month, day] = diary.date.split('-').map(Number);
+const diaryDate = new Date(year, month - 1, day);
+const dayName = dayNames[diaryDate.getDay()];
 const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const formattedDate = `${monthNames[diaryDate.getUTCMonth()]} ${diaryDate.getUTCDate()}, ${diaryDate.getUTCFullYear()}`;
+const formattedDate = `${monthNames[month - 1]} ${day}, ${year}`;
 
 const title = diary.titleEn || diary.title;
 const summary = diary.summaryEn || diary.summary;
