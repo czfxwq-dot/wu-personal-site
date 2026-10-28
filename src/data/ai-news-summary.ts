@@ -409,7 +409,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4037865194623878?f=rss"
     },
     {
@@ -419,7 +419,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI生成",
-      "categoryEn": "AI生成",
+      "categoryEn": "AI Generated",
       "url": "https://36kr.com/p/4037858588284034?f=rss"
     },
     {
@@ -429,7 +429,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://36kr.com/p/4037856792581256?f=rss"
     },
     {
@@ -439,7 +439,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI动态",
-      "categoryEn": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4037854039610505?f=rss"
     },
     {
@@ -449,7 +449,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://36kr.com/p/4037822855058307?f=rss"
     },
     {
@@ -459,7 +459,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI动态",
-      "categoryEn": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4037778327720835?f=rss"
     },
     {
@@ -469,7 +469,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI动态",
-      "categoryEn": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4033826598523783?f=rss"
     },
     {
@@ -479,7 +479,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://36kr.com/p/4037687068021637?f=rss"
     },
     {
@@ -489,7 +489,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI治理",
-      "categoryEn": "AI治理",
+      "categoryEn": "AI Governance",
       "url": "https://36kr.com/p/4036955299369864?f=rss"
     },
     {
@@ -499,7 +499,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI动态",
-      "categoryEn": "AI动态",
+      "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4036266730886018?f=rss"
     }
   ],
@@ -520,7 +520,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI机器人",
-      "categoryEn": "AI机器人",
+      "categoryEn": "AI Robots",
       "url": "https://36kr.com/p/4037854039610505"
     },
     {
@@ -530,7 +530,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://36kr.com/p/4037822855058307"
     },
     {
@@ -540,7 +540,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://36kr.com/p/4037822855058308"
     },
     {
@@ -550,7 +550,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://36kr.com/p/4037778327720835"
     },
     {
@@ -560,7 +560,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://36kr.com/p/4037822855058309"
     }
   ],
@@ -581,7 +581,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-21-microsoft-phi-5"
     },
     {
@@ -591,7 +591,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/p/4013567890123456"
     },
     {
@@ -601,7 +601,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.qbitai.com/2026/10/567890.html"
     },
     {
@@ -611,7 +611,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "AI科技评论",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.aitechtalk.com/china-ai-southeast-asia"
     },
     {
@@ -621,7 +621,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI伦理",
-      "categoryEn": "AI伦理",
+      "categoryEn": "AI Ethics",
       "url": "https://www.36kr.com/p/4013678901234567"
     }
   ],
@@ -642,7 +642,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-20-claude-4-opus"
     },
     {
@@ -652,7 +652,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI机器人",
-      "categoryEn": "AI机器人",
+      "categoryEn": "AI Robots",
       "url": "https://www.36kr.com/p/4013456789012345"
     },
     {
@@ -662,7 +662,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "AI医疗",
-      "categoryEn": "AI医疗",
+      "categoryEn": "AI Healthcare",
       "url": "https://www.qbitai.com/2026/10/456789.html"
     },
     {
@@ -672,7 +672,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "AI科技评论",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.aitechtalk.com/china-ai-chip-market"
     },
     {
@@ -682,7 +682,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.36kr.com/p/4013345678901234"
     }
   ],
@@ -703,7 +703,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/p/4010234567890123"
     },
     {
@@ -713,7 +713,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-19-gemini-2"
     },
     {
@@ -723,7 +723,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "量子位",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.qbitai.com/2026/10/123456.html"
     },
     {
@@ -733,7 +733,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI融资",
-      "categoryEn": "AI融资",
+      "categoryEn": "AI Funding",
       "url": "https://www.36kr.com/p/4011901234567890"
     },
     {
@@ -743,7 +743,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.36kr.com/p/4010987654321098"
     }
   ],
@@ -765,7 +765,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "AI科研",
-      "categoryEn": "AI科研",
+      "categoryEn": "AI Scientific Research",
       "url": "https://www.jiqizhixin.com/articles/2026-10-18-alphafold-3"
     },
     {
@@ -775,7 +775,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI客服",
-      "categoryEn": "AI客服",
+      "categoryEn": "AI Customer Service",
       "url": "https://www.36kr.com/p/4013234567890123"
     },
     {
@@ -785,7 +785,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "量子位",
       "category": "AI学术",
-      "categoryEn": "AI学术",
+      "categoryEn": "AI Academic",
       "url": "https://www.qbitai.com/2026/10/456789.html"
     },
     {
@@ -795,7 +795,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.aitechtalk.com/claude-tool-use"
     },
     {
@@ -805,7 +805,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/p/4013345678901234"
     }
   ],
@@ -826,7 +826,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-17-openai-o1"
     },
     {
@@ -836,7 +836,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI农业",
-      "categoryEn": "AI农业",
+      "categoryEn": "AI Agriculture",
       "url": "https://www.36kr.com/p/4013012345678901"
     },
     {
@@ -846,7 +846,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.qbitai.com/2026/10/345678.html"
     },
     {
@@ -856,7 +856,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "AI科技评论",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.aitechtalk.com/word-ai-writing"
     },
     {
@@ -866,7 +866,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI伦理",
-      "categoryEn": "AI伦理",
+      "categoryEn": "AI Ethics",
       "url": "https://www.36kr.com/p/4013123456789012"
     }
   ],
@@ -887,7 +887,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-16-claude-3-5-sonnet"
     },
     {
@@ -897,7 +897,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI建筑",
-      "categoryEn": "AI建筑",
+      "categoryEn": "AI Architecture",
       "url": "https://www.36kr.com/p/4012890123456789"
     },
     {
@@ -907,7 +907,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "AI搜索",
-      "categoryEn": "AI搜索",
+      "categoryEn": "AI Search",
       "url": "https://www.qbitai.com/2026/10/234567.html"
     },
     {
@@ -917,7 +917,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.aitechtalk.com/nvidia-quantum-2"
     },
     {
@@ -927,7 +927,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.36kr.com/p/4012901234567890"
     }
   ],
@@ -948,7 +948,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI移动",
-      "categoryEn": "AI移动",
+      "categoryEn": "AI Mobile",
       "url": "https://www.36kr.com/p/4012678901234567"
     },
     {
@@ -958,7 +958,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI客服",
-      "categoryEn": "AI客服",
+      "categoryEn": "AI Customer Service",
       "url": "https://www.jiqizhixin.com/articles/2026-10-15-ai-customer-service"
     },
     {
@@ -968,7 +968,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "量子位",
       "category": "AI专利",
-      "categoryEn": "AI专利",
+      "categoryEn": "AI Patents",
       "url": "https://www.qbitai.com/2026/10/123456.html"
     },
     {
@@ -978,7 +978,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI平台",
-      "categoryEn": "AI平台",
+      "categoryEn": "AI Platforms",
       "url": "https://www.aitechtalk.com/chatgpt-plugins"
     },
     {
@@ -988,7 +988,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/p/4012789012345678"
     }
   ],
@@ -1009,7 +1009,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "开源模型",
-      "categoryEn": "开源模型",
+      "categoryEn": "Open Source Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-14-microsoft-phi-4"
     },
     {
@@ -1019,7 +1019,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI金融",
-      "categoryEn": "AI金融",
+      "categoryEn": "AI Finance",
       "url": "https://www.36kr.com/p/4012567890123456"
     },
     {
@@ -1029,7 +1029,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "AI视频",
-      "categoryEn": "AI视频",
+      "categoryEn": "AI Video",
       "url": "https://www.qbitai.com/2026/10/012345.html"
     },
     {
@@ -1039,7 +1039,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.aitechtalk.com/tensorrt-llm-2"
     }
   ],
@@ -1060,7 +1060,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI平台",
-      "categoryEn": "AI平台",
+      "categoryEn": "AI Platforms",
       "url": "https://www.36kr.com/p/4012345678901234"
     },
     {
@@ -1070,7 +1070,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI医疗",
-      "categoryEn": "AI医疗",
+      "categoryEn": "AI Healthcare",
       "url": "https://www.jiqizhixin.com/articles/2026-10-13-ai-drug-discovery"
     },
     {
@@ -1080,7 +1080,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "量子位",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.qbitai.com/2026/10/901234.html"
     },
     {
@@ -1090,7 +1090,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.aitechtalk.com/gpt-4-vision"
     },
     {
@@ -1100,7 +1100,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI伦理",
-      "categoryEn": "AI伦理",
+      "categoryEn": "AI Ethics",
       "url": "https://www.36kr.com/p/4012456789012345"
     }
   ],
@@ -1121,7 +1121,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.qbitai.com/2026/10/890123.html"
     },
     {
@@ -1131,7 +1131,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI自动驾驶",
-      "categoryEn": "AI自动驾驶",
+      "categoryEn": "AI Autonomous Driving",
       "url": "https://www.jiqizhixin.com/articles/2026-10-12-autonomous-taxi"
     },
     {
@@ -1141,7 +1141,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI搜索",
-      "categoryEn": "AI搜索",
+      "categoryEn": "AI Search",
       "url": "https://www.36kr.com/p/4012234567890123"
     },
     {
@@ -1151,7 +1151,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.aitechtalk.com/github-code-review-ai"
     }
   ],
@@ -1172,7 +1172,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI消费电子",
-      "categoryEn": "AI消费电子",
+      "categoryEn": "AI Consumer Electronics",
       "url": "https://www.36kr.com/p/4012012345678901"
     },
     {
@@ -1182,7 +1182,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI游戏",
-      "categoryEn": "AI游戏",
+      "categoryEn": "AI Gaming",
       "url": "https://www.jiqizhixin.com/articles/2026-10-11-ai-game-npc"
     },
     {
@@ -1192,7 +1192,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "量子位",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.qbitai.com/2026/10/789012.html"
     },
     {
@@ -1202,7 +1202,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI企业",
-      "categoryEn": "AI企业",
+      "categoryEn": "AI Enterprises",
       "url": "https://www.aitechtalk.com/chatgpt-enterprise"
     },
     {
@@ -1212,7 +1212,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI人才",
-      "categoryEn": "AI人才",
+      "categoryEn": "AI Talent",
       "url": "https://www.36kr.com/p/4012123456789012"
     }
   ],
@@ -1233,7 +1233,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI融资",
-      "categoryEn": "AI融资",
+      "categoryEn": "AI Funding",
       "url": "https://www.36kr.com/p/4011901234567890"
     },
     {
@@ -1243,7 +1243,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI法律",
-      "categoryEn": "AI法律",
+      "categoryEn": "AI Law",
       "url": "https://www.jiqizhixin.com/articles/2026-10-10-ai-legal-assistant"
     },
     {
@@ -1253,7 +1253,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "开源模型",
-      "categoryEn": "开源模型",
+      "categoryEn": "Open Source Models",
       "url": "https://www.qbitai.com/2026/10/678901.html"
     },
     {
@@ -1263,7 +1263,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.aitechtalk.com/nvidia-dgx-b200"
     }
   ],
@@ -1284,7 +1284,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI并购",
-      "categoryEn": "AI并购",
+      "categoryEn": "AI M&A",
       "url": "https://www.36kr.com/p/4011789012345678"
     },
     {
@@ -1294,7 +1294,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI版权",
-      "categoryEn": "AI版权",
+      "categoryEn": "AI Copyright",
       "url": "https://www.jiqizhixin.com/articles/2026-10-09-ai-music-copyright"
     },
     {
@@ -1304,7 +1304,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "量子位",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.qbitai.com/2026/10/567890.html"
     },
     {
@@ -1314,7 +1314,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "AI电商",
-      "categoryEn": "AI电商",
+      "categoryEn": "AI E-commerce",
       "url": "https://www.aitechtalk.com/amazon-rufus"
     },
     {
@@ -1324,7 +1324,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.36kr.com/p/4011890123456789"
     }
   ],
@@ -1345,7 +1345,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "机器之心",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.jiqizhixin.com/articles/2026-10-08-gemini-2"
     },
     {
@@ -1355,7 +1355,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "量子位",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.qbitai.com/2026/10/456789.html"
     },
     {
@@ -1365,7 +1365,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI教育",
-      "categoryEn": "AI教育",
+      "categoryEn": "AI Education",
       "url": "https://www.36kr.com/p/4011678901234567"
     },
     {
@@ -1375,7 +1375,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "AI科技评论",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.aitechtalk.com/teams-ai-meeting-assistant"
     }
   ],
@@ -1396,7 +1396,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI机器人",
-      "categoryEn": "AI机器人",
+      "categoryEn": "AI Robots",
       "url": "https://www.36kr.com/p/4011456789012345"
     },
     {
@@ -1406,7 +1406,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "量子位",
       "category": "开源模型",
-      "categoryEn": "开源模型",
+      "categoryEn": "Open Source Models",
       "url": "https://www.qbitai.com/2026/10/345678.html"
     },
     {
@@ -1416,7 +1416,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI医疗",
-      "categoryEn": "AI医疗",
+      "categoryEn": "AI Healthcare",
       "url": "https://www.jiqizhixin.com/articles/2026-10-07-fda-cancer-ai"
     },
     {
@@ -1426,7 +1426,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.aitechtalk.com/bytedance-doubao-2"
     },
     {
@@ -1436,7 +1436,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.36kr.com/p/4011567890123456"
     }
   ],
@@ -1457,7 +1457,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.36kr.com/p/4011345678901234"
     },
     {
@@ -1467,7 +1467,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "量子位",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.qbitai.com/2026/10/234567.html"
     },
     {
@@ -1477,7 +1477,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "机器之心",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.jiqizhixin.com/articles/2026-10-06-copilot-50m"
     },
     {
@@ -1487,7 +1487,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "AI科技评论",
       "category": "AI并购",
-      "categoryEn": "AI并购",
+      "categoryEn": "AI M&A",
       "url": "https://www.aitechtalk.com/apple-iqm-acquisition"
     }
   ],
@@ -1508,7 +1508,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/p/4010234567890123"
     },
     {
@@ -1518,7 +1518,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "机器之心",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.jiqizhixin.com/articles/2026-10-05-nvidia-blackwell-ultra"
     },
     {
@@ -1528,7 +1528,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "量子位",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.qbitai.com/2026/10/123456.html"
     },
     {
@@ -1538,7 +1538,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "AI科技评论",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.aitechtalk.com/gpt-6-million-tokens"
     },
     {
@@ -1548,7 +1548,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.36kr.com/p/4010987654321098"
     }
   ],
@@ -1577,7 +1577,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/p/4009352273236101"
     },
     {
@@ -1587,7 +1587,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI学术",
-      "categoryEn": "AI学术",
+      "categoryEn": "AI Academic",
       "url": "https://www.36kr.com/p/4009647948746628"
     },
     {
@@ -1597,7 +1597,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI开源",
-      "categoryEn": "AI开源",
+      "categoryEn": "AI Open Source",
       "url": "https://www.36kr.com/p/4009510615027849"
     },
     {
@@ -1607,7 +1607,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.36kr.com/p/4009610454093960"
     }
   ],
@@ -1628,7 +1628,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.oschina.net/news/502831/openai-gpt-6-1-sol"
     },
     {
@@ -1638,7 +1638,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI融资",
-      "categoryEn": "AI融资",
+      "categoryEn": "AI Funding",
       "url": "https://www.36kr.com/newsflashes/4008270806782084"
     },
     {
@@ -1648,7 +1648,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.oschina.net/news/502814"
     },
     {
@@ -1658,7 +1658,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.oschina.net/news/502835/anthropic-research-glm-5-3-advanced-cyber-capabilities"
     },
     {
@@ -1668,7 +1668,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/4008466778279810"
     }
   ],
@@ -1689,7 +1689,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.huxiu.com/article/4895080.html"
     },
     {
@@ -1699,7 +1699,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.huxiu.com/article/4895071.html"
     },
     {
@@ -1709,7 +1709,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "虎嗅",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.huxiu.com/article/4895084.html"
     },
     {
@@ -1719,7 +1719,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "科技硬件",
-      "categoryEn": "科技硬件",
+      "categoryEn": "Tech Hardware",
       "url": "https://www.36kr.com/newsflashes/4006773478609029"
     },
     {
@@ -1729,7 +1729,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4895097.html"
     }
   ],
@@ -1750,7 +1750,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/4005852754694281"
     },
     {
@@ -1760,7 +1760,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/4005825383845763"
     },
     {
@@ -1770,7 +1770,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI行业",
-      "categoryEn": "AI行业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4894940.html"
     },
     {
@@ -1780,7 +1780,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI就业",
-      "categoryEn": "AI就业",
+      "categoryEn": "AI Employment",
       "url": "https://www.huxiu.com/article/4894913.html"
     },
     {
@@ -1790,7 +1790,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "智能驾驶",
-      "categoryEn": "智能驾驶",
+      "categoryEn": "Intelligent Driving",
       "url": "https://www.huxiu.com/article/4894937.html"
     }
   ],
@@ -1811,7 +1811,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/4004459316137858"
     },
     {
@@ -1821,7 +1821,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.oschina.net/news/502794/claude-sonnet-5-5"
     },
     {
@@ -1831,7 +1831,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "具身智能",
-      "categoryEn": "具身智能",
+      "categoryEn": "Embodied Intelligence",
       "url": "https://www.oschina.net/news/502790/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion"
     },
     {
@@ -1851,7 +1851,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "政策法规",
-      "categoryEn": "政策法规",
+      "categoryEn": "Policies & Regulations",
       "url": "https://www.huxiu.com/article/4894670.html"
     }
   ],
@@ -1872,7 +1872,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/p/4001548184506246"
     },
     {
@@ -1882,7 +1882,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI研究",
-      "categoryEn": "AI研究",
+      "categoryEn": "AI Research",
       "url": "https://www.36kr.com/p/4002778714328960"
     },
     {
@@ -1892,7 +1892,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.ithome.com/0/100/7727.htm"
     },
     {
@@ -1902,7 +1902,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI融资",
-      "categoryEn": "AI融资",
+      "categoryEn": "AI Funding",
       "url": "https://www.36kr.com/p/4001258625994626"
     },
     {
@@ -1912,7 +1912,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI人事",
-      "categoryEn": "AI人事",
+      "categoryEn": "AI Personnel",
       "url": "https://www.ithome.com/0/100/8056.htm"
     }
   ],
@@ -1933,7 +1933,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.36kr.com/newsflashes/4001316228272004"
     },
     {
@@ -1943,7 +1943,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.36kr.com/newsflashes/4001311699390594"
     },
     {
@@ -1953,7 +1953,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/4001191187173253"
     },
     {
@@ -1963,7 +1963,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4894155.html"
     },
     {
@@ -1973,7 +1973,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.huxiu.com/article/4894154.html"
     }
   ],
@@ -2004,7 +2004,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI算力",
-      "categoryEn": "AI算力",
+      "categoryEn": "AI Computing Power",
       "url": "https://www.36kr.com/newsflashes/3999708319895426"
     },
     {
@@ -2014,7 +2014,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI能源",
-      "categoryEn": "AI能源",
+      "categoryEn": "AI Energy",
       "url": "https://www.huxiu.com/article/4894068.html"
     },
     {
@@ -2024,7 +2024,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.huxiu.com/article/4894049.html"
     },
     {
@@ -2034,7 +2034,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.36kr.com/newsflashes/4000034032439430"
     }
   ],
@@ -2055,7 +2055,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.36kr.com/newsflashes/3998607176274049"
     },
     {
@@ -2065,7 +2065,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "AI算力",
-      "categoryEn": "AI算力",
+      "categoryEn": "AI Computing Power",
       "url": "https://www.36kr.com/newsflashes/3998521879810183"
     },
     {
@@ -2075,7 +2075,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/newsflashes/3998333280227202"
     },
     {
@@ -2085,7 +2085,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4893961.html"
     },
     {
@@ -2095,7 +2095,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "自动驾驶",
-      "categoryEn": "自动驾驶",
+      "categoryEn": "Autonomous Driving",
       "url": "https://www.36kr.com/newsflashes/3998474433253504"
     }
   ],
@@ -2116,7 +2116,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4893839.html"
     },
     {
@@ -2126,7 +2126,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI医疗",
-      "categoryEn": "AI医疗",
+      "categoryEn": "AI Healthcare",
       "url": "https://www.huxiu.com/article/4893868.html"
     },
     {
@@ -2136,7 +2136,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "AI机器人",
-      "categoryEn": "AI机器人",
+      "categoryEn": "AI Robots",
       "url": "https://www.huxiu.com/article/4893854.html"
     },
     {
@@ -2146,7 +2146,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI创业",
-      "categoryEn": "AI创业",
+      "categoryEn": "AI Startups",
       "url": "https://www.huxiu.com/article/4893886.html"
     },
     {
@@ -2156,7 +2156,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI治理",
-      "categoryEn": "AI治理",
+      "categoryEn": "AI Governance",
       "url": "https://www.huxiu.com/article/4893586.html"
     }
   ],
@@ -2177,7 +2177,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI治理",
-      "categoryEn": "AI治理",
+      "categoryEn": "AI Governance",
       "url": "https://www.36kr.com/newsflashes/3995923232657289"
     },
     {
@@ -2187,7 +2187,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4893589.html"
     },
     {
@@ -2197,7 +2197,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4893593.html"
     },
     {
@@ -2207,7 +2207,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/newsflashes/3995946059255686"
     },
     {
@@ -2217,7 +2217,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.36kr.com/newsflashes/3995988885213320"
     }
   ],
@@ -2238,7 +2238,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3994552310747271"
     },
     {
@@ -2256,7 +2256,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4893331.html"
     },
     {
@@ -2266,7 +2266,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI观察",
-      "categoryEn": "AI观察",
+      "categoryEn": "AI Insights",
       "url": "https://www.huxiu.com/article/4893332.html"
     },
     {
@@ -2276,7 +2276,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.oschina.net/news/502663/x-ai-grok-4-7"
     }
   ],
@@ -2297,7 +2297,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI工程",
-      "categoryEn": "AI工程",
+      "categoryEn": "AI Engineering",
       "url": "https://www.oschina.net/news/502646/ms-agentically-ports-copilot-runtime-to-rust-for-120k"
     },
     {
@@ -2307,7 +2307,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI编程",
-      "categoryEn": "AI编程",
+      "categoryEn": "AI Programming",
       "url": "https://www.oschina.net/news/502645/hw-codearts"
     },
     {
@@ -2317,7 +2317,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.oschina.net/news/502639/google-ax"
     },
     {
@@ -2327,7 +2327,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.huxiu.com/article/4893000.html"
     },
     {
@@ -2337,7 +2337,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI舆论",
-      "categoryEn": "AI舆论",
+      "categoryEn": "AI Public Opinion",
       "url": "https://www.huxiu.com/article/4892893.html"
     }
   ],
@@ -2358,7 +2358,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.36kr.com/newsflashes/3991482735016968"
     },
     {
@@ -2368,7 +2368,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3991399772371972"
     },
     {
@@ -2378,7 +2378,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.huxiu.com/article/4892690.html"
     },
     {
@@ -2419,7 +2419,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3990012778757129"
     },
     {
@@ -2429,7 +2429,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.36kr.com/newsflashes/3989953466940166"
     },
     {
@@ -2439,7 +2439,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.36kr.com/newsflashes/3989670755253248"
     },
     {
@@ -2449,7 +2449,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.oschina.net/news/502589"
     },
     {
@@ -2459,7 +2459,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.oschina.net/news/502586/hc-agentic-infra-industry-ai"
     }
   ],
@@ -2480,7 +2480,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3988896604453890"
     },
     {
@@ -2490,7 +2490,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI融资",
-      "categoryEn": "AI融资",
+      "categoryEn": "AI Funding",
       "url": "https://www.36kr.com/newsflashes/3988893203364866"
     },
     {
@@ -2500,7 +2500,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI开源",
-      "categoryEn": "AI开源",
+      "categoryEn": "AI Open Source",
       "url": "https://www.36kr.com/newsflashes/3988920115460873"
     },
     {
@@ -2510,7 +2510,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.huxiu.com/article/4892390.html"
     },
     {
@@ -2520,7 +2520,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4892392.html"
     }
   ],
@@ -2541,7 +2541,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "IT之家",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.ithome.com/1/003/831.htm"
     },
     {
@@ -2561,7 +2561,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "虎嗅",
       "category": "AI制药",
-      "categoryEn": "AI制药",
+      "categoryEn": "AI Pharmaceuticals",
       "url": "https://www.huxiu.com/article/4892135.html"
     },
     {
@@ -2581,7 +2581,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.ithome.com/1/003/881.htm"
     }
   ],
@@ -2602,7 +2602,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI制药",
-      "categoryEn": "AI制药",
+      "categoryEn": "AI Pharmaceuticals",
       "url": "https://www.36kr.com/newsflashes/3986065030789896"
     },
     {
@@ -2612,7 +2612,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/1/003/301.htm"
     },
     {
@@ -2622,7 +2622,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "虎嗅",
       "category": "AI制药",
-      "categoryEn": "AI制药",
+      "categoryEn": "AI Pharmaceuticals",
       "url": "https://www.huxiu.com/article/4891829.html"
     },
     {
@@ -2632,7 +2632,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI消费",
-      "categoryEn": "AI消费",
+      "categoryEn": "AI Consumer",
       "url": "https://www.ithome.com/1/003/288.htm"
     },
     {
@@ -2642,7 +2642,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "行业观点",
-      "categoryEn": "行业观点",
+      "categoryEn": "Industry Perspectives",
       "url": "https://www.ithome.com/1/003/266.htm"
     }
   ],
@@ -2663,7 +2663,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/1/002/828.htm"
     },
     {
@@ -2673,7 +2673,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.huxiu.com/article/4891450.html"
     },
     {
@@ -2683,7 +2683,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI投资",
-      "categoryEn": "AI投资",
+      "categoryEn": "AI Investment",
       "url": "https://www.ithome.com/1/002/764.htm"
     },
     {
@@ -2693,7 +2693,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.ithome.com/1/002/767.htm"
     },
     {
@@ -2703,7 +2703,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "半导体政策",
-      "categoryEn": "半导体政策",
+      "categoryEn": "Semiconductor Policy",
       "url": "https://www.huxiu.com/article/4891435.html"
     }
   ],
@@ -2724,7 +2724,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3983215064153091"
     },
     {
@@ -2734,7 +2734,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/1/002/300.htm"
     },
     {
@@ -2744,7 +2744,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.ithome.com/1/002/308.htm"
     },
     {
@@ -2754,7 +2754,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.huxiu.com/article/4891174.html"
     },
     {
@@ -2764,7 +2764,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "消费电子",
-      "categoryEn": "消费电子",
+      "categoryEn": "Consumer Electronics",
       "url": "https://www.huxiu.com/article/4891141.html"
     }
   ],
@@ -2785,7 +2785,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全与治理",
-      "categoryEn": "AI安全与治理",
+      "categoryEn": "AI Safety & Governance",
       "url": "https://www.36kr.com/p/3981130388929280"
     },
     {
@@ -2795,7 +2795,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "大模型动态",
-      "categoryEn": "大模型动态",
+      "categoryEn": "Large Model Dynamics",
       "url": "https://www.36kr.com/p/3981250979036163"
     },
     {
@@ -2805,7 +2805,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI安全与治理",
-      "categoryEn": "AI安全与治理",
+      "categoryEn": "AI Safety & Governance",
       "url": "https://www.huxiu.com/moment/1279942.html"
     },
     {
@@ -2815,7 +2815,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI安全与治理",
-      "categoryEn": "AI安全与治理",
+      "categoryEn": "AI Safety & Governance",
       "url": "https://www.huxiu.com/moment/1279937.html"
     },
     {
@@ -2825,7 +2825,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI开发工具",
-      "categoryEn": "AI开发工具",
+      "categoryEn": "AI Development Tools",
       "url": "https://www.36kr.com/p/3981230650522630"
     }
   ],
@@ -2846,7 +2846,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全与伦理",
-      "categoryEn": "AI安全与伦理",
+      "categoryEn": "AI Safety & Ethics",
       "url": "https://www.36kr.com/newsflashes/3979862818569223"
     },
     {
@@ -2856,7 +2856,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "大模型动态",
-      "categoryEn": "大模型动态",
+      "categoryEn": "Large Model Dynamics",
       "url": "https://www.huxiu.com/article/4890711.html"
     },
     {
@@ -2866,7 +2866,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "大模型动态",
-      "categoryEn": "大模型动态",
+      "categoryEn": "Large Model Dynamics",
       "url": "https://www.huxiu.com/article/4890703.html"
     },
     {
@@ -2876,7 +2876,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI开发工具",
-      "categoryEn": "AI开发工具",
+      "categoryEn": "AI Development Tools",
       "url": "https://www.oschina.net/news/502418"
     },
     {
@@ -2886,7 +2886,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "开源项目",
-      "categoryEn": "开源项目",
+      "categoryEn": "Open Source Projects",
       "url": "https://www.oschina.net/news/502427/xiaomi-cocktailasr-1"
     }
   ],
@@ -2907,7 +2907,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.36kr.com/newsflashes/3978912529005319"
     },
     {
@@ -2917,7 +2917,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI服务",
-      "categoryEn": "AI服务",
+      "categoryEn": "AI Services",
       "url": "https://www.36kr.com/newsflashes/3978941735091206"
     },
     {
@@ -2927,7 +2927,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3978913441889281"
     },
     {
@@ -2937,7 +2937,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.ithome.com/1/001/434.htm"
     },
     {
@@ -2968,7 +2968,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.oschina.net/news/502405/deepseek-v4-1-flash-ga"
     },
     {
@@ -2978,7 +2978,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.36kr.com/newsflashes/3977575664089857"
     },
     {
@@ -2988,7 +2988,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI技术",
-      "categoryEn": "AI技术",
+      "categoryEn": "AI Technology",
       "url": "https://www.oschina.net/news/502401/gpt-6-astra-looped-transformers-and"
     },
     {
@@ -2998,7 +2998,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.oschina.net/news/502393/openai-chatgpt-images-2-5"
     },
     {
@@ -3008,7 +3008,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.oschina.net/news/502392/meta-ai-muse"
     }
   ],
@@ -3029,7 +3029,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.36kr.com/p/3975317790273801"
     },
     {
@@ -3039,7 +3039,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI科研",
-      "categoryEn": "AI科研",
+      "categoryEn": "AI Scientific Research",
       "url": "https://www.36kr.com/p/3975337527587333"
     },
     {
@@ -3049,7 +3049,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI医疗",
-      "categoryEn": "AI医疗",
+      "categoryEn": "AI Healthcare",
       "url": "https://www.36kr.com/p/3975775944405513"
     },
     {
@@ -3059,7 +3059,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI服务",
-      "categoryEn": "AI服务",
+      "categoryEn": "AI Services",
       "url": "https://m.huxiu.com/moment/1278937.html"
     },
     {
@@ -3069,7 +3069,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://m.huxiu.com/moment/1278946.html"
     }
   ],
@@ -3090,7 +3090,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.36kr.com/newsflashes/3974749026939136"
     },
     {
@@ -3100,7 +3100,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/0/999/925.htm"
     },
     {
@@ -3110,7 +3110,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3974665286889987"
     },
     {
@@ -3120,7 +3120,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI办公",
-      "categoryEn": "AI办公",
+      "categoryEn": "AI Office",
       "url": "https://www.huxiu.com/article/4889610.html"
     },
     {
@@ -3130,7 +3130,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4889650.html"
     }
   ],
@@ -3151,7 +3151,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "虎嗅",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4889297.html"
     },
     {
@@ -3161,7 +3161,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "智能终端",
-      "categoryEn": "智能终端",
+      "categoryEn": "Smart Terminals",
       "url": "https://www.ithome.com/0/999/399.htm"
     },
     {
@@ -3171,7 +3171,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.oschina.net/news/502351/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx"
     },
     {
@@ -3181,7 +3181,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.oschina.net/news/502360"
     },
     {
@@ -3191,7 +3191,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "具身智能",
-      "categoryEn": "具身智能",
+      "categoryEn": "Embodied Intelligence",
       "url": "https://www.36kr.com/newsflashes/3973249339109636"
     }
   ],
@@ -3212,7 +3212,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI+医药",
-      "categoryEn": "AI+医药",
+      "categoryEn": "AI + Healthcare",
       "url": "https://www.36kr.com/newsflashes/3971599447650822"
     },
     {
@@ -3222,7 +3222,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI内容产业",
-      "categoryEn": "AI内容产业",
+      "categoryEn": "AI Content Industry",
       "url": "https://www.36kr.com/newsflashes/3971505282413060"
     },
     {
@@ -3232,7 +3232,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI商业化",
-      "categoryEn": "AI商业化",
+      "categoryEn": "AI Commercialization",
       "url": "https://www.36kr.com/newsflashes/3971423133970952"
     },
     {
@@ -3242,7 +3242,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3971552542683393"
     },
     {
@@ -3252,7 +3252,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "科技产业",
-      "categoryEn": "科技产业",
+      "categoryEn": "Tech Industry",
       "url": "https://www.ithome.com/0/999/044.htm"
     }
   ],
@@ -3273,7 +3273,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.36kr.com/newsflashes/3970189273248260"
     },
     {
@@ -3283,7 +3283,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.36kr.com/newsflashes/3970187296141832"
     },
     {
@@ -3293,7 +3293,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.36kr.com/newsflashes/3970039177359622"
     },
     {
@@ -3303,7 +3303,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.36kr.com/newsflashes/3970040744227336"
     },
     {
@@ -3313,7 +3313,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI商业化",
-      "categoryEn": "AI商业化",
+      "categoryEn": "AI Commercialization",
       "url": "https://www.36kr.com/newsflashes/3970153928651273"
     }
   ],
@@ -3334,7 +3334,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI商业化",
-      "categoryEn": "AI商业化",
+      "categoryEn": "AI Commercialization",
       "url": "https://www.36kr.com/newsflashes/3969015988957448"
     },
     {
@@ -3344,7 +3344,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.36kr.com/newsflashes/3969048191480320"
     },
     {
@@ -3354,7 +3354,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.36kr.com/newsflashes/3969070463906051"
     },
     {
@@ -3364,7 +3364,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.36kr.com/newsflashes/3969036678361347"
     },
     {
@@ -3374,7 +3374,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI政策",
-      "categoryEn": "AI政策",
+      "categoryEn": "AI Policy",
       "url": "https://www.36kr.com/newsflashes/3969067939131655"
     }
   ],
@@ -3395,7 +3395,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.ithome.com"
     },
     {
@@ -3405,7 +3405,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI模型",
-      "categoryEn": "AI模型",
+      "categoryEn": "AI Models",
       "url": "https://www.ithome.com"
     },
     {
@@ -3415,7 +3415,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com"
     },
     {
@@ -3425,7 +3425,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI监管",
-      "categoryEn": "AI监管",
+      "categoryEn": "AI Regulation",
       "url": "https://www.ithome.com"
     },
     {
@@ -3435,7 +3435,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI前沿技术",
-      "categoryEn": "AI前沿技术",
+      "categoryEn": "AI Cutting-edge Technology",
       "url": "https://www.huxiu.com"
     }
   ],
@@ -3456,7 +3456,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI商业化",
-      "categoryEn": "AI商业化",
+      "categoryEn": "AI Commercialization",
       "url": "https://www.huxiu.com/article/4888116.html"
     },
     {
@@ -3466,7 +3466,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI前沿技术",
-      "categoryEn": "AI前沿技术",
+      "categoryEn": "AI Cutting-edge Technology",
       "url": "https://www.oschina.net/news/502277/worldlabs-ai-atlas"
     },
     {
@@ -3476,7 +3476,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.36kr.com/newsflashes/3966237774929160"
     },
     {
@@ -3486,7 +3486,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/0/997/687.htm"
     },
     {
@@ -3496,7 +3496,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "虎嗅",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.huxiu.com/article/4888109.html"
     }
   ],
@@ -3517,7 +3517,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.36kr.com/newsflashes/3964764714949890"
     },
     {
@@ -3527,7 +3527,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/0/997/184.htm"
     },
     {
@@ -3537,7 +3537,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI服务器",
-      "categoryEn": "AI服务器",
+      "categoryEn": "AI Servers",
       "url": "https://www.ithome.com/0/997/191.htm"
     },
     {
@@ -3547,7 +3547,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3964826551541254"
     },
     {
@@ -3557,7 +3557,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3964763740593415"
     }
   ],
@@ -3578,7 +3578,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI商业化",
-      "categoryEn": "AI商业化",
+      "categoryEn": "AI Commercialization",
       "url": "https://www.ithome.com/0/996/653.htm"
     },
     {
@@ -3588,7 +3588,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI投融资",
-      "categoryEn": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
       "url": "https://www.ithome.com/0/996/663.htm"
     },
     {
@@ -3598,7 +3598,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.ithome.com/0/996/670.htm"
     },
     {
@@ -3608,7 +3608,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "IT之家",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.ithome.com/0/996/645.htm"
     },
     {
@@ -3618,7 +3618,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI开源生态",
-      "categoryEn": "AI开源生态",
+      "categoryEn": "AI Open Source Ecosystem",
       "url": "https://www.oschina.net/news/502227"
     }
   ],
@@ -3639,7 +3639,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI行业动态",
-      "categoryEn": "AI行业动态",
+      "categoryEn": "AI Industry Dynamics",
       "url": "https://www.ithome.com"
     },
     {
@@ -3649,7 +3649,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.oschina.net"
     },
     {
@@ -3659,7 +3659,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI硬件与基础设施",
-      "categoryEn": "AI硬件与基础设施",
+      "categoryEn": "AI Hardware & Infrastructure",
       "url": "https://www.ithome.com"
     },
     {
@@ -3669,7 +3669,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI基础设施",
-      "categoryEn": "AI基础设施",
+      "categoryEn": "AI Infrastructure",
       "url": "https://www.36kr.com"
     },
     {
@@ -3679,7 +3679,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.oschina.net"
     }
   ],
@@ -3700,7 +3700,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "政策与产业",
-      "categoryEn": "政策与产业",
+      "categoryEn": "Policy & Industry",
       "url": "https://www.36kr.com/newsflashes/3960187423735168"
     },
     {
@@ -3710,7 +3710,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "芯片与硬件",
-      "categoryEn": "芯片与硬件",
+      "categoryEn": "Chips & Hardware",
       "url": "https://www.36kr.com/newsflashes/3960031907315076"
     },
     {
@@ -3720,7 +3720,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI应用突破",
-      "categoryEn": "AI应用突破",
+      "categoryEn": "AI Application Breakthroughs",
       "url": "https://www.huxiu.com/article/4887022.html"
     },
     {
@@ -3730,7 +3730,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "AI产品与应用",
-      "categoryEn": "AI产品与应用",
+      "categoryEn": "AI Products & Applications",
       "url": "https://www.huxiu.com/article/4887069.html"
     },
     {
@@ -3740,7 +3740,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI生态与安全",
-      "categoryEn": "AI生态与安全",
+      "categoryEn": "AI Ecosystem & Safety",
       "url": "https://www.oschina.net/news/502198"
     }
   ],
@@ -3761,7 +3761,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI行业",
-      "categoryEn": "AI行业",
+      "categoryEn": "AI Industry",
       "url": "https://www.oschina.net/news/502149/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars"
     },
     {
@@ -3781,7 +3781,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI大模型",
-      "categoryEn": "AI大模型",
+      "categoryEn": "Large AI Models",
       "url": "https://www.oschina.net/news/502145/qwen3-8-flash-next"
     },
     {
@@ -3801,7 +3801,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/newsflashes/3959176160099714"
     }
   ],
@@ -3822,7 +3822,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.oschina.net/news/502149/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars"
     },
     {
@@ -3843,7 +3843,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.36kr.com/newsflashes/3957724701179272"
     },
     {
@@ -3853,7 +3853,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI算力",
-      "categoryEn": "AI算力",
+      "categoryEn": "AI Computing Power",
       "url": "https://www.36kr.com/newsflashes/3957725185129602"
     },
     {
@@ -3884,7 +3884,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3956345253084296"
     },
     {
@@ -3894,7 +3894,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.ithome.com/0/994/795.htm"
     },
     {
@@ -3904,7 +3904,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "开源中国",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.oschina.net/news/502134"
     },
     {
@@ -3914,7 +3914,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3956344328535427"
     },
     {
@@ -3924,7 +3924,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI前沿",
-      "categoryEn": "AI前沿",
+      "categoryEn": "AI Frontier",
       "url": "https://www.huxiu.com/article/4886285.html"
     }
   ],
@@ -3945,7 +3945,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "芯片",
-      "categoryEn": "芯片",
+      "categoryEn": "Chips",
       "url": "https://www.ithome.com/0/994/219.htm"
     },
     {
@@ -3955,7 +3955,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "芯片",
-      "categoryEn": "芯片",
+      "categoryEn": "Chips",
       "url": "https://www.ithome.com/0/994/220.htm"
     },
     {
@@ -3965,7 +3965,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3954906236059012"
     },
     {
@@ -3975,7 +3975,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3954926630599813"
     },
     {
@@ -3985,7 +3985,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "算力基础设施",
-      "categoryEn": "算力基础设施",
+      "categoryEn": "Computing Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3954925351255428"
     }
   ],
@@ -4006,7 +4006,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3953497990904964"
     },
     {
@@ -4016,7 +4016,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "芯片",
-      "categoryEn": "芯片",
+      "categoryEn": "Chips",
       "url": "https://www.ithome.com/0/993/733.htm"
     },
     {
@@ -4026,7 +4026,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3953509263703432"
     },
     {
@@ -4036,7 +4036,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "虎嗅",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.huxiu.com/article/4885439.html"
     },
     {
@@ -4046,7 +4046,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "智能硬件",
-      "categoryEn": "智能硬件",
+      "categoryEn": "Smart Hardware",
       "url": "https://www.ithome.com/0/993/765.htm"
     }
   ],
@@ -4077,7 +4077,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "芯片",
-      "categoryEn": "芯片",
+      "categoryEn": "Chips",
       "url": "https://www.ithome.com/0/993/294.htm"
     },
     {
@@ -4087,7 +4087,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.ithome.com/0/993/289.htm"
     },
     {
@@ -4097,7 +4097,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "36氪",
       "category": "芯片",
-      "categoryEn": "芯片",
+      "categoryEn": "Chips",
       "url": "https://www.36kr.com/newsflashes/3951759026027655"
     },
     {
@@ -4107,7 +4107,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "消费电子",
-      "categoryEn": "消费电子",
+      "categoryEn": "Consumer Electronics",
       "url": "https://www.ithome.com/0/993/317.htm"
     }
   ],
@@ -4128,7 +4128,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3950062675377280"
     },
     {
@@ -4138,7 +4138,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.ithome.com/0/993/095.htm"
     },
     {
@@ -4148,7 +4148,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.ithome.com/0/993/108.htm"
     },
     {
@@ -4158,7 +4158,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "自动驾驶",
-      "categoryEn": "自动驾驶",
+      "categoryEn": "Autonomous Driving",
       "url": "https://www.36kr.com/newsflashes/3950417977785729"
     },
     {
@@ -4168,7 +4168,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.oschina.net/news/502051"
     }
   ],
@@ -4189,7 +4189,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI商业",
-      "categoryEn": "AI商业",
+      "categoryEn": "AI Business",
       "url": "https://www.huxiu.com/article/4885069.html"
     },
     {
@@ -4199,7 +4199,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.oschina.net/news/502065"
     },
     {
@@ -4209,7 +4209,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.huxiu.com/article/4885033.html"
     },
     {
@@ -4219,7 +4219,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "AI工具",
-      "categoryEn": "AI工具",
+      "categoryEn": "AI Tools",
       "url": "https://www.oschina.net/news/502067/oomol-lab-open-connector"
     },
     {
@@ -4229,7 +4229,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "开源中国",
       "category": "AI产业",
-      "categoryEn": "AI产业",
+      "categoryEn": "AI Industry",
       "url": "https://www.oschina.net/news/502059/2026-us-china-ai-race"
     }
   ],
@@ -4250,7 +4250,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "business",
-      "categoryEn": "business",
+      "categoryEn": "Business",
       "url": "https://www.36kr.com/newsflashes/3947807144311944"
     },
     {
@@ -4260,7 +4260,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "enterprise",
-      "categoryEn": "enterprise",
+      "categoryEn": "Enterprise",
       "url": "https://www.ithome.com/0/992/397.htm"
     },
     {
@@ -4270,7 +4270,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Advances in AI chip technology are driving industry progress.",
       "source": "IT之家",
       "category": "hardware",
-      "categoryEn": "hardware",
+      "categoryEn": "Hardware",
       "url": "https://www.ithome.com/0/992/380.htm"
     },
     {
@@ -4280,7 +4280,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "tool",
-      "categoryEn": "tool",
+      "categoryEn": "Tool",
       "url": "https://www.oschina.net/news/502038/vercel-fx"
     },
     {
@@ -4290,7 +4290,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "research",
-      "categoryEn": "research",
+      "categoryEn": "Research",
       "url": "https://www.huxiu.com/article/4884735.html"
     }
   ],
@@ -4311,7 +4311,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI芯片",
-      "categoryEn": "AI芯片",
+      "categoryEn": "AI Chips",
       "url": "https://www.36kr.com/newsflashes/3946434931326089"
     },
     {
@@ -4321,7 +4321,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3946397274242436"
     },
     {
@@ -4331,7 +4331,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3946412741197186"
     },
     {
@@ -4341,7 +4341,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "AI应用",
-      "categoryEn": "AI应用",
+      "categoryEn": "AI Applications",
       "url": "https://www.36kr.com/newsflashes/3946405515410819"
     },
     {
@@ -4351,7 +4351,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI算力",
-      "categoryEn": "AI算力",
+      "categoryEn": "AI Computing Power",
       "url": "https://www.36kr.com/newsflashes/3946373886000259"
     }
   ],
@@ -4372,7 +4372,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.ithome.com/0/991/340.htm"
     },
     {
@@ -4382,7 +4382,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "行业动态",
-      "categoryEn": "行业动态",
+      "categoryEn": "Industry Dynamics",
       "url": "https://www.oschina.net/news/501977"
     },
     {
@@ -4392,7 +4392,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "开源中国",
       "category": "开发者工具",
-      "categoryEn": "开发者工具",
+      "categoryEn": "Developer Tools",
       "url": "https://www.oschina.net/news/501978/github-outage-disrupts-developers-worldwide"
     },
     {
@@ -4402,7 +4402,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.ithome.com/0/991/346.htm"
     },
     {
@@ -4412,7 +4412,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "算力基建",
-      "categoryEn": "算力基建",
+      "categoryEn": "Computing Infrastructure",
       "url": "https://www.huxiu.com/article/4884037.html"
     }
   ],
@@ -4433,7 +4433,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "基础设施",
-      "categoryEn": "基础设施",
+      "categoryEn": "Infrastructure",
       "url": "https://www.36kr.com/newsflashes/3943618684255368"
     },
     {
@@ -4443,7 +4443,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "开发者工具",
-      "categoryEn": "开发者工具",
+      "categoryEn": "Developer Tools",
       "url": "https://www.ithome.com/0/990/874.htm"
     },
     {
@@ -4453,7 +4453,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.ithome.com/0/990/812.htm"
     },
     {
@@ -4463,7 +4463,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A company has completed a funding round to support its AI development.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3944217400393088"
     },
     {
@@ -4473,7 +4473,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "行业动态",
-      "categoryEn": "行业动态",
+      "categoryEn": "Industry Dynamics",
       "url": "https://www.36kr.com/newsflashes/3944221563763845"
     }
   ],
@@ -4504,7 +4504,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "IT之家",
       "category": "产业",
-      "categoryEn": "产业",
+      "categoryEn": "Industry",
       "url": "https://www.ithome.com/0/990/373.htm"
     },
     {
@@ -4514,7 +4514,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI安全",
-      "categoryEn": "AI安全",
+      "categoryEn": "AI Safety",
       "url": "https://www.ithome.com/0/990/406.htm"
     },
     {
@@ -4524,7 +4524,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.ithome.com/0/990/389.htm"
     },
     {
@@ -4553,7 +4553,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "AI编程",
-      "categoryEn": "AI编程",
+      "categoryEn": "AI Programming",
       "url": "https://www.huxiu.com/article/4883385.html"
     },
     {
@@ -4563,7 +4563,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "产业",
-      "categoryEn": "产业",
+      "categoryEn": "Industry",
       "url": "https://www.huxiu.com/article/4883363.html"
     },
     {
@@ -4573,7 +4573,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3940284903701895"
     },
     {
@@ -4583,7 +4583,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.36kr.com/newsflashes/3940346809810055"
     },
     {
@@ -4593,7 +4593,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI算力",
-      "categoryEn": "AI算力",
+      "categoryEn": "AI Computing Power",
       "url": "https://www.36kr.com/newsflashes/3940579113713025"
     }
   ],
@@ -4614,7 +4614,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "IT之家",
       "category": "AI突破",
-      "categoryEn": "AI突破",
+      "categoryEn": "AI Breakthroughs",
       "url": "https://www.ithome.com/0/989/952.htm"
     },
     {
@@ -4624,7 +4624,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "机器人",
-      "categoryEn": "机器人",
+      "categoryEn": "Robotics",
       "url": "https://www.36kr.com/newsflashes/3939323205746051"
     },
     {
@@ -4634,7 +4634,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "36氪",
       "category": "AI硬件",
-      "categoryEn": "AI硬件",
+      "categoryEn": "AI Hardware",
       "url": "https://www.36kr.com/newsflashes/3939337442770306"
     },
     {
@@ -4644,7 +4644,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "A new AI product or model has been released to the market.",
       "source": "虎嗅",
       "category": "大模型",
-      "categoryEn": "大模型",
+      "categoryEn": "Large Models",
       "url": "https://www.huxiu.com/article/4883295.html"
     },
     {
@@ -4654,7 +4654,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "summaryEn": "Latest developments in the AI industry.",
       "source": "虎嗅",
       "category": "产业",
-      "categoryEn": "产业",
+      "categoryEn": "Industry",
       "url": "https://www.huxiu.com/article/4883275.html"
     }
   ],
