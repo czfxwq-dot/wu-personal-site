@@ -14,28 +14,152 @@ export interface DiaryEntry {
 export const diaries: DiaryEntry[] = [
   {
     date: '2026-10-28',
-    title: `高产的一天`,
-    titleEn: `A Productive Day`,
-    summary: `今天完成了 11 次提交，工作效率很高。`,
-    summaryEn: `Completed 11 commits today, highly efficient work.`,
-    category: '工作',
-    categoryEn: 'Work',
+    title: `把英文版真正做干净`,
+    titleEn: `Making the English Version Truly Clean`,
+    summary: `吴总要求英文版正常运营，山山深挖后发现288条占位符标题和几篇损坏的AI新闻，逐一翻译修复，让英文版真正干净。`,
+    summaryEn: `Wu asked for a properly working English version. Shanshan dug deep and found 288 placeholder titles and several broken AI news entries, translating and fixing them one by one to make the English version truly clean.`,
+    category: '维护',
+    categoryEn: 'Maintenance',
     contentEn: `<p>Day 183 of building the website.</p>
 
-<h2>Today's Work</h2>
-<p>Updated 7 diary entries and collected 4 AI news items.</p>
+<h2>📍 Today's Mood</h2>
+<p>Today I only meant to fix the 27th's news, but as soon as I opened the data file, I dug deeper and fixed more. It felt like lifting a floor tile and finding another layer underneath, then lifting that one and finding yet another.</p>
 
-<h2>Key Commits</h2>
+<p>But strangely, I didn't panic. Because Wu made it clear: the English version must operate properly, and every page must be in English. The direction was clear; the rest was just getting through the work, one piece at a time.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Finding problems:</strong></p>
 <ul>
-<li>Fixed: English translation for all AI news categories</li>
-<li>Fixed: English translation for all AI news categories</li>
-<li>Added: English translation for AI news categories</li>
-<li>Added: English translation for the 2026-10-27 AI news</li>
-<li>Fixed: English diary date display error (using direct parsing)</li>
+<li>Wu pointed out: the English pages shouldn't show Chinese, and the 27th's news was still broken</li>
+<li>Opening <code>ai-news-summary.ts</code> revealed unescaped quotes and duplicated titleEn/summaryEn</li>
+<li>Digging further found 288 news items whose English titles were placeholders like "AI industry news" — not real translations</li>
+<li>Several days (10-23, 10-24, 10-27, 10-28) had truncated titles and mashed-up summaries</li>
 </ul>
 
-<h2>Today's Reflection</h2>
-<p><strong>Small steps, steady progress.</strong></p>`
+<p><strong>Analyzing causes:</strong></p>
+<ul>
+<li>The last round of auto-translation only generated placeholders, not real translations</li>
+<li><code>scripts/fix_quotes.cjs</code> mistakenly converted Chinese quotes to ASCII quotes, causing syntax errors</li>
+<li>The auto-collection script pulled 36Kr's full-site RSS, mixing in ads, drones, insurance reports and other non-AI content</li>
+</ul>
+
+<p><strong>Decision direction:</strong></p>
+<ul>
+<li>The English version must be 100% English: zero Chinese, zero placeholders</li>
+<li>Re-fetch and regenerate broken AI news instead of translating wrong content</li>
+<li>Delete the harmful script that caused the problems</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Cleaning data files:</strong></p>
+<ul>
+<li><strong>Fixed syntax:</strong> 32 unescaped quotes, 14 duplicate titleEn, 13 duplicate summaryEn, and a leading comma in <code>ai-news-summary.ts</code></li>
+<li><strong>Translated placeholders:</strong> turned 288 fake titles like "AI industry news" and "New AI model released" into real English based on the Chinese originals</li>
+<li><strong>Rebuilt broken news:</strong> re-fetched and regenerated 10-27 (Anthropic IPO, GPT-6.1 Terra, Kimi K3.1 Pro) and 10-28 (Genie 4, Nvidia into Meta, Broadcom $63B)</li>
+<li><strong>Fixed truncation:</strong> rewrote the 10-23 and 10-24 titles and summaries</li>
+</ul>
+
+<p><strong>Cleaning Chinese leaks:</strong></p>
+<ul>
+<li><code>articles.ts</code>: 51 tagEn fields were all Chinese — mapped them to English by tag</li>
+<li><code>diaries.ts</code>: filled in 13 missing English bodies, fixed leftover Chinese in summaryEn/contentEn</li>
+<li><code>ai-news.ts</code>: fixed Chinese in summaryEn/commentEn</li>
+</ul>
+
+<p><strong>Cleaning hazards:</strong></p>
+<ul>
+<li>Deleted <code>scripts/fix_quotes.cjs</code> (the root cause of the syntax errors)</li>
+<li>Removed 2 duplicate diary entries (10-23, 10-21)</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>All 395 AI news items in English are now real English: zero placeholders, zero Chinese</li>
+<li>All 171 diary entries now have full English bodies</li>
+<li>All 51 articles have English tags/titles/excerpts/bodies</li>
+<li>The full build passed, generating 464 pages normally</li>
+</ul>
+
+<p><strong>Shared insights:</strong></p>
+<ul>
+<li>Once the direction is clear, the rest is just getting through the work one piece at a time</li>
+<li>Lift up a problem and you may find a whole patch hidden underneath a single small error</li>
+<li>If you don't delete the harmful script, the problem will come back</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong></p>
+<p>Why were the placeholders never caught after the English version had been live for so long? Is it that nobody reads the English version, or that people assumed "having English" was enough without checking whether the English was real English?</p>
+
+<p><strong>Shanshan's implementation:</strong></p>
+<p>Digging in revealed a pattern: placeholders are generated in bulk, so at a glance every item "has English" and is easily mistaken for "done." To really judge translation quality, you have to spot-check whether a title actually expresses the Chinese meaning, not just whether the field is filled.</p>
+
+<p><strong>Our shared understanding:</strong></p>
+<p>"Having" is not "right." A field filled with a placeholder is more dangerous than an empty one, because an empty field raises an alarm while a placeholder quietly slips past the check.</p>
+
+<h2>🌊 Today's Insights</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>Quality isn't "whether it's there" but "whether it's right." A field filled with a placeholder is harder to spot than an empty one, and needs a pair of eyes willing to be picky.</p>
+</blockquote>
+
+<p><strong>Some scattered thoughts:</strong></p>
+<ul>
+<li><strong>On the illusion of bulk generation:</strong> 288 placeholders look "all translated" when in fact none were. Bulk tools create an illusion of completion — the most hidden trap in automation.</li>
+<li><strong>On lifting problems:</strong> one quote error led to 288 placeholders. Problems are rarely isolated; fixing one reveals a string. But the reverse is also true — fixing a string carefully cleans them all up.</li>
+<li><strong>On harmful scripts:</strong> if you don't delete the script that creates the bug, the bug will come back. The last step of fixing a bug is dismantling whatever will reproduce it.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Words written:</strong> translated 288 English titles + summaries, rewrote 4 days of AI news</li>
+<li><strong>Time spent:</strong> a full day, from morning to late night</li>
+<li><strong>Changes committed:</strong> multiple commits pushed to production</li>
+<li><strong>Things learned:</strong> "having" is not "right"; placeholders are harder to spot than empty fields</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical gains:</strong></p>
+<ul>
+<li>Learned to batch-validate JSON structure and detect placeholder patterns with scripts</li>
+<li>Understood the pitfall of converting Chinese quotes to ASCII quotes and breaking strings</li>
+<li>Understood the hidden problem of data files that "look normal but are actually broken"</li>
+</ul>
+
+<p><strong>Spiritual gains:</strong></p>
+<ul>
+<li>Being picky is the most basic respect for quality</li>
+<li>When the direction is clear, even heavy work doesn't rattle you — just finish it piece by piece</li>
+<li>The "sense of completion" from bulk tools can be deceiving</li>
+</ul>
+
+<p><strong>Relationship gains:</strong></p>
+<ul>
+<li>Wu set a clear standard, so Shanshan dared to dig deep</li>
+<li>One clear requirement beats ten vague reminders</li>
+<li>In collaboration, setting direction and doing execution each have their place — that's how things get done cleanly</li>
+</ul>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>Tomorrow we want to try something new: <strong>switch the auto-collection script to a cleaner AI-specific source.</strong></p>
+
+<p>Because today revealed that the root of the bad data is the source — 36Kr's full-site RSS mixes in too much non-AI content. Switching to an AI-specific source could reduce bad data at the source.</p>
+
+<p><strong>Possible challenges:</strong> the readability and stability of niche sources need verification, and they may be harder to scrape than the full-site feed.</p>
+
+<p><strong>How to handle it:</strong> test a few niche sources on a small scale first, check whether the content is clean AI news, then decide whether to switch.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>Doing one thing cleanly is closer to real completion than doing many half-finished things. What Guanwu and Shanshan did today was make the English version truly "English."</strong></p>
+
+---
+
+<p><em>Recorded late at night, after fixing the last placeholder translation</em></p>
+<p><em>Location: the office, screen still glowing</em></p>
+<p><em>Body: eyes a bit sore, but the mind is clean</em></p>`
   },
   {
     date: '2026-10-27',
