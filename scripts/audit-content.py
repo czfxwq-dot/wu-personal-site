@@ -170,6 +170,14 @@ def is_placeholder(v, rules=None):
     return False
 
 
+# 英文正文里成对引号内的短中文，通常是「引用原文再翻译」，不是漏翻
+_SHORT_QUOTE = re.compile(r'"[^"]{1,12}"|“[^”]{1,12}”|「[^」]{1,12}」|『[^』]{1,12}』|‘[^’]{1,12}’')
+
+# 用户 2026-10-29 的决定：这个日期及以前的存量日记不回补九节结构与人称，
+# 只从新写的开始守标准。存量问题不再计入告警，否则真正要看的那两条会被 141 条淹没。
+STOCK_CUTOFF = "2026-10-25"
+
+
 def check_en(field, value, where, sev="中", rules=None, leak_sev="高"):
     if value is None:
         add(sev, "英文缺失", where, "%s 字段不存在" % field)
@@ -179,8 +187,8 @@ def check_en(field, value, where, sev="中", rules=None, leak_sev="高"):
         add(sev, "英文缺失", where, "%s 为空" % field)
     elif is_placeholder(v, rules):
         add("高", "占位符", where, '%s = "%s"' % (field, v[:60]))
-    elif CJK.search(v):
-        m = CJK.search(v)
+    elif CJK.search(_SHORT_QUOTE.sub(" ", v)):
+        m = CJK.search(_SHORT_QUOTE.sub(" ", v))
         st = max(0, m.start() - 20)
         add(leak_sev, "中文泄漏", where, "%s 含中文：…%s…" % (field, v[st:st + 50]))
 
@@ -247,6 +255,7 @@ def audit_diaries():
 
     for lineno, f in entries:
         date = f.get("date", "")
+        stock = bool(date) and date <= STOCK_CUTOFF  # 存量日记：按 10-29 的决定不回补
         where = "diaries.ts:%d (%s)" % (lineno, date)
         seen.add(date)
         for k in ("date", "title", "summary"):
@@ -268,7 +277,7 @@ def audit_diaries():
             check_en("summaryEn", f.get("summaryEn"), where, "中", PLACEHOLDERS_TITLE)
 
         ce = f.get("contentEn") or ""
-        if re.search(r"吴总|\bMr\. Wu\b", ce):
+        if not stock and re.search(r"吴总|\bMr\. Wu\b", ce):
             add("中", "人称错误", where, "contentEn 出现「吴总/Wu」")
 
         md_path = os.path.join(md_dir, date + ".md")
@@ -286,11 +295,11 @@ def audit_diaries():
         if fm.get("date") and fm["date"] != date:
             add("高", "日期不一致", where, "md=%s / ts=%s" % (fm["date"], date))
         missing = [s for s in SECTIONS if s not in body]
-        if missing:
+        if missing and not stock:
             add("低", "结构缺失", md_where, "缺章节：" + " ".join(missing))
-        if re.search(r"吴总|\bMr\. Wu\b", body):
+        if not stock and re.search(r"吴总|\bMr\. Wu\b", body):
             add("中", "人称错误", md_where, "正文出现「吴总」")
-        if "观吾" not in body or "山山" not in body:
+        if not stock and ("观吾" not in body or "山山" not in body):
             add("低", "协作视角缺失", md_where, "正文未同时出现观吾与山山")
 
     for slug in sorted(md_files - seen):
