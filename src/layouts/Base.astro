@@ -204,7 +204,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
         const tag = currentArticle?.tag || '';
         return (
           <div class="container" style="max-width: 680px; margin: 0 auto; padding: 0 20px;">
-            <RelatedArticles currentSlug={slug} currentTag={tag} />
+            <RelatedArticles currentSlug={slug} currentTag={tag} lang={lang} />
           </div>
         );
       })()}

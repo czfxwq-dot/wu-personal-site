@@ -4,9 +4,12 @@ interface Props {
   currentSlug: string;
   currentTag?: string;
   maxCount?: number;
+  lang?: 'zh' | 'en';
 }
 
-const { currentSlug, currentTag, maxCount = 3 } = Astro.props;
+const { currentSlug, currentTag, maxCount = 3, lang = 'zh' } = Astro.props;
+const isEn = lang === 'en';
+const basePath = isEn ? '/en/banbaiguan/' : '/banbaiguan/';
 
 // 导入文章数据
 import { articles } from '../data/articles';
@@ -28,15 +31,15 @@ const relatedArticles = articles
 
 {relatedArticles.length > 0 && (
   <div class="related-articles">
-    <h3 class="related-title">📚 相关文章</h3>
+    <h3 class="related-title">{isEn ? '📚 Related Articles' : '📚 相关文章'}</h3>
     <div class="related-list">
       {relatedArticles.map(article => (
-        <a href={`/banbaiguan/${article.slug}/`} class="related-item">
-          <div class="related-tag">{article.tag}</div>
-          <h4 class="related-item-title">{article.title}</h4>
-          <p class="related-item-excerpt">{article.excerpt}</p>
+        <a href={`${basePath}${article.slug}/`} class="related-item">
+          <div class="related-tag">{isEn ? (article.tagEn || article.tag) : article.tag}</div>
+          <h4 class="related-item-title">{isEn ? (article.titleEn || article.title) : article.title}</h4>
+          <p class="related-item-excerpt">{isEn ? (article.excerptEn || article.excerpt) : article.excerpt}</p>
           <time class="related-item-date" datetime={article.date}>
-            {new Date(article.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+            {new Date(article.date).toLocaleDateString(isEn ? 'en-US' : 'zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
           </time>
         </a>
       ))}
