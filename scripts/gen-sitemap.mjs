@@ -22,7 +22,7 @@ const DIST = process.argv[2] || 'docs';
 // 不该进 sitemap 的路径
 const EXCLUDE = [
   /^\/404\/?$/,                  // 错误页
-  /^\/guestbook\/admin\/?$/,     // 留言板管理视图
+  /(^|\/)admin\//,               // 各类后台/管理视图（/admin/survey/、/guestbook/admin/）
 ];
 
 function collect(dir, base = '') {
