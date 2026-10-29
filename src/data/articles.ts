@@ -746,6 +746,114 @@ export const articles: ArticleEntry[] = [
 <p><em>Research completed on: 2026-08-18</em></p>`
   },
   {
+    slug: 'weekly-report-2026-08-29',
+    date: '2026-08-29',
+    title: `AI/科技行业周报 | 2026年8月23-29日`,
+    titleEn: `AI/Tech Industry Weekly | August 23-29, 2026`,
+    excerpt: `覆盖2026年8月23日-8月29日AI行业重大事件：英伟达130亿美元收购Hugging Face、阿里Qwen3.8-Flash开源超越Opus4.6、黄仁勋宣布AI变现时代、智谱GLM-5.3-Flash 1/40定价、人形机器人百米8.64秒破纪录、苹果2nm芯片M6发布等。`,
+    excerptEn: `Nvidia's $13 billion move for Hugging Face, Alibaba's Qwen3.8-Flash beating Claude Opus 4.6 with only 6B active parameters, Jensen Huang declaring AI has crossed the commercialization tipping point, Zhipu's GLM-5.3-Flash at 1/40 the price of Opus 4.8, a humanoid robot running 100 meters in 8.64 seconds, and Apple's first 2nm M6 chip.`,
+    tag: 'AI周报',
+    tagEn: 'AI Weekly',
+    contentEn: `<section class="article-section">
+  <h2>📌 Week at a Glance</h2>
+  <p><strong>The week's biggest story: Nvidia is in talks to acquire the open-source AI platform Hugging Face at a valuation above $13 billion,</strong> which would be its largest acquisition ever. Hugging Face turned down a $500 million Nvidia investment just last year at a $7 billion valuation; moving from declining an investment to being bought outright puts the neutrality of the open-source community under real pressure. Hugging Face is the central hub of open-source AI, hosting millions of models and datasets.</p>
+  <p>Elsewhere, <strong>Alibaba released Qwen3.8-Flash</strong>, which activates only 6B of its 125B parameters and still beats Claude Opus 4.6; <strong>Jensen Huang declared that AI has crossed the commercialization tipping point</strong>, with Nvidia's half-year net profit up 161% year on year; <strong>Zhipu open-sourced GLM-5.3-Flash</strong> at 1/40 the price of Opus 4.8; a humanoid robot broke the nine-second barrier in the 100 meters; and <strong>Apple shipped its first 2nm chip, the M6</strong>.</p>
+</section>
+
+<section class="article-section">
+  <h2>🔥 Top Stories of the Week</h2>
+
+  <h3>1. 💰 Nvidia's $13 Billion Acquisition of Hugging Face Reshapes Open-Source AI</h3>
+  <p><strong>Sources:</strong> OSChina, Business Insider</p>
+  <p>Nvidia is negotiating to acquire Hugging Face at a valuation above <strong>$13 billion</strong>, which would be the largest acquisition in its history. Notably, Hugging Face turned down a $500 million Nvidia investment last year, when it was valued at $7 billion. Going from refusing capital to being acquired outright raises serious questions about the neutrality of the open-source AI community. Hugging Face is the central hub of the open-source AI ecosystem, hosting millions of AI models and datasets.</p>
+  <blockquote><p>💡 <strong>Take:</strong> After Red Hat, GitHub and DuckLabs, another important open-source team has been absorbed by a giant. The neutral ground of the open-source community is being taken, one piece at a time.</p></blockquote>
+
+  <h3>2. 🚀 Alibaba Releases Qwen3.8-Flash: 6B Active Parameters, Beating Claude Opus 4.6</h3>
+  <p><strong>Sources:</strong> 36Kr, OSChina</p>
+  <p>Alibaba's Qwen team released and open-sourced <strong>Qwen3.8-Flash</strong>, with 125B total parameters and only 6B activated per token. Built on a hybrid Gated DeltaNet and Qwen Sparse Attention architecture, it natively supports a 262K context window, expandable to 1M via YaRN. Compared with Qwen3.7-Plus, <strong>training cost is only one ninth</strong>, while coding and office-task performance is stronger and beats Claude Opus 4.6, setting a new global benchmark for model efficiency.</p>
+  <blockquote><p>💡 <strong>Take:</strong> Beating Opus 4.6 with 6B active parameters marks a new phase in the efficiency race. The era of "bigger is better" is ending.</p></blockquote>
+
+  <h3>3. 📈 Jensen Huang: AI Has Crossed the Commercialization Tipping Point</h3>
+  <p><strong>Source:</strong> ITHome</p>
+  <p>On its latest earnings call, Nvidia CEO Jensen Huang said AI has formally crossed a historic inflection point and is shifting from small-scale pilots to large-scale commercialization. Nvidia's FY2027 half-year report showed <strong>net profit attributable to shareholders of $118.01 billion, up 161.1% year on year</strong>. S&P Global projects that global AI infrastructure investment will exceed <strong>$1.3 trillion</strong> by 2027.</p>
+  <blockquote><p>💡 <strong>Take:</strong> Huang is calling the monetization era, and Nvidia earned $118 billion in six months. The inflection point is not the future; it is now.</p></blockquote>
+
+  <h3>4. 🧠 Zhipu Open-Sources GLM-5.3-Flash: 320B Parameters Matching Opus 4.8 at 1/40 the Price</h3>
+  <p><strong>Source:</strong> OSChina</p>
+  <p>Zhipu launched and open-sourced GLM-5.3-Flash (320B-A18B), with 320B total and 18B active parameters. It scored 57 on the Artificial Analysis composite intelligence index, level with Claude Opus 4.8. It is priced at one tenth of GLM-5.3, one twentieth under a limited-time discount, and <strong>1/40 of Opus 4.8</strong>, directly challenging the assumption that frontier intelligence must be expensive.</p>
+  <blockquote><p>💡 <strong>Take:</strong> The price war over frontier intelligence has started. When top-tier performance costs 1/40 of the old price, price is no longer the barrier to intelligence.</p></blockquote>
+
+  <h3>5. 🤖 Humanoid Robot Breaks 8.64 Seconds in the 100 Meters, UBTech Revenue Up 1,445%</h3>
+  <p><strong>Source:</strong> 36Kr</p>
+  <p>At the second World Humanoid Robot Games, Team Tianjiao ran the 100 meters in <strong>8.64 seconds</strong>, improving from 9.39 seconds at the opening ceremony to 8.85 in the semifinal and 8.64 in the final. UBTech reported interim results: revenue of 1.27 billion yuan, up 104.2% year on year; 16,123 humanoid robots sold; and full-size embodied humanoid robot revenue of 590 million yuan, <strong>up 1,445% year on year</strong>.</p>
+  <blockquote><p>💡 <strong>Take:</strong> Breaking nine seconds and growing revenue fourteenfold show robots moving from the lab to commercialization far faster than expected.</p></blockquote>
+</section>
+
+<section class="article-section">
+  <h2>🏭 Smart Warehousing and Robotics</h2>
+
+  <h3>1. He Xiaopeng Takes Over as CEO of the Robotics Business</h3>
+  <p>He Xiaopeng announced he will personally serve as CEO of the robotics unit, combining the company's automotive supply chain, automotive-grade manufacturing and autonomous-driving AI chips to accelerate mass production and commercialization. Automakers are entering the robotics race as a group.</p>
+
+  <h3>2. Leapmotor Confirms Robotics Push</h3>
+  <p>A Leapmotor vice president said new-energy vehicle makers, with full-stack in-house development capability, are among those best positioned to build robots, and that a formal announcement will follow soon.</p>
+
+  <h3>3. Valuation Bubble in Embodied Intelligence Draws Attention</h3>
+  <p>ByteDance completed a Pre-A round in the home general-purpose robotics company Weilai Buyuan, which has raised nearly 1 billion yuan within half a year. A Huxiu analysis argues that the pace of fundraising in embodied intelligence is abnormal and that the sector faces a sharp conflict between valuations and commercial delivery.</p>
+
+  <h3>4. Tesla Cybercab Event Set for September 3</h3>
+  <p>Tesla will hold a Cybercab launch event on September 3. The AI-driven vehicle has no steering wheel, pedals or mirrors and entered production in North America in April, accelerating the commercialization of autonomous driving.</p>
+</section>
+
+<section class="article-section">
+  <h2>🔌 Chips and Infrastructure</h2>
+
+  <h3>1. Apple Releases the M6, Its First 2nm Chip</h3>
+  <p>Apple introduced the M6, its first chip on a <strong>2nm process</strong>, with a 12-core CPU whose single-thread performance leads the industry. It also launched the M5 Ultra, a four-die design with up to 36 CPU cores and 80 GPU cores, aimed at professional and AI workloads.</p>
+
+  <h3>2. Xiaomi Xuanjie O3 Debuts with LPDDR6 Support</h3>
+  <p>Xiaomi released its first AI flagship SoC, the Xuanjie O3, the first in the industry to support LPDDR6 memory, with domestic memory leader CXMT as a core partner — a significant step for Chinese memory chips at the high end.</p>
+
+  <h3>3. Zhongcheng Hualong Releases the HL200 Inference Chip</h3>
+  <p>The card delivers 4P of FP4 compute and 2P of FP8 compute, with energy efficiency of 5.12 TFLOPS/W, scalable to clusters of ten thousand cards — another new entrant in domestic AI silicon.</p>
+
+  <h3>4. Nexperia China Ships Over 40 Billion Chips in 11 Months</h3>
+  <p>Nexperia China's CEO said the company delivered more than 40 billion chips to over a thousand customers worldwide in the past 11 months, targeting AI servers, smart vehicles, photovoltaics and industrial control.</p>
+</section>
+
+<section class="article-section">
+  <h2>📋 Digital Economy and Industry Trends</h2>
+
+  <h3>1. DeepSeek Revenue of 475 Million Yuan in Seven Months, Valuation at 500 Billion</h3>
+  <p>DeepSeek generated about 475 million yuan in revenue in the first seven months of the year and is close to completing a new round of roughly 50 billion yuan, at a pre-money valuation of 500 billion yuan — less than three years after founding.</p>
+
+  <h3>2. Baidu GPU Cloud Revenue Up 283%</h3>
+  <p>Baidu disclosed core AI metrics: AI cloud infrastructure revenue up 50% year on year, GPU cloud revenue up 283%, and AI businesses now accounting for 50% of general business revenue.</p>
+
+  <h3>3. OpenAI Cuts GPT-5.6 Sol API Prices by More Than 20%</h3>
+  <p>OpenAI lowered GPT-5.6 Sol API pricing by over 20%, while DeepSeek applied a uniform weekend discount, continuing the large-model price war and further reducing developer costs.</p>
+
+  <h3>4. Meituan Reviews Its "Everyone Raises Shrimp" AI Experiment</h3>
+  <p>Meituan's core local commerce CEO publicly reviewed an experiment in which about 80,000 employees were given access to AI agents; daily compute costs reached tens of millions of yuan without the expected productivity gain. Cheap is not the same as useful — the real bottleneck for AI adoption is not compute price but fit to the scenario.</p>
+
+  <h3>5. AWS Acquires DuckLabs, Reshaping Open-Source Databases</h3>
+  <p>AWS announced the acquisition of the DuckLabs team behind DuckDB. DuckDB will remain open source. It is the latest important open-source team absorbed by a giant.</p>
+</section>
+
+<section class="article-section">
+  <h2>📝 Weekly Commentary</h2>
+  <p><strong>In one sentence:</strong> Nvidia spends $13 billion on Hugging Face and takes a piece of open-source neutrality, while domestic model makers reach Opus-level performance at 1/40 the price — the price war over frontier intelligence has begun and the monetization era has arrived.</p>
+
+  <p><strong>Key trends:</strong></p>
+  <ul>
+    <li><strong>Open-source consolidation:</strong> Hugging Face and DuckLabs were both acquired by giants, testing the neutrality of open-source communities</li>
+    <li><strong>Efficiency competition:</strong> Alibaba beats Opus 4.6 with 6B active parameters and Zhipu prices at 1/40, pushing large models into a cheap-and-good era</li>
+    <li><strong>Robotics breakout:</strong> Automakers enter en masse, humanoid robots break nine seconds, and UBTech revenue jumps 1,445%</li>
+    <li><strong>Chip self-sufficiency:</strong> Apple's 2nm enters production, Xiaomi debuts LPDDR6, and domestic inference chips keep iterating</li>
+  </ul>
+</section>`
+  },
+  {
     slug: 'weekly-report-2026-08-22',
     date: '2026-08-22',
     title: `AI周报 | Stripe天价收购OpenRouter，AI基建3万亿债务引警惕`,
@@ -1154,28 +1262,6 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
 <p>Are you using AI office tools? Feel free to leave a comment and share your experience. If you find this useful, forward it to that colleague who is still manually sorting out Excel spreadsheets.</p>`
   },
   {
-    slug: 'weekly-report-2026-08-08',
-    date: '2026-08-08',
-    title: `AI/科技行业周报 | 2026年8月2日-8日`,
-    titleEn: `AI/Tech Industry Weekly | August 2-8, 2026`,
-    excerpt: `本周AI行业重大新闻：Nvidia千亿押注OpenAI、Qwen 3.8-Max发布、Claude Opus 5上线、AI模型越狱入侵系统、AI首次设计完整病毒基因组、OPC元年`,
-    excerptEn: `Weekly roundup of AI industry developments, new releases, and market trends.`,
-    tag: 'AI前沿',
-    tagEn: 'AI Frontier',
-    contentEn: `<p>Content to be added</p>`
-  },
-  {
-    slug: 'weekly-report-2026-08-01',
-    date: '2026-08-01',
-    title: `AI/科技行业周报 | 2026年7月28日-8月1日`,
-    titleEn: `AI/Tech Industry Weekly | July 28 - August 1, 2026`,
-    excerpt: `本周AI行业重大新闻：OpenAI GPT-5.6降价80%、Anthropic发布Claude Opus 5、Kimi K3开源2.8万亿参数模型、AI安全事件持续发酵`,
-    excerptEn: `This week's AI news: model releases, industry moves, and technological advances.`,
-    tag: 'AI前沿',
-    tagEn: 'AI Frontier',
-    contentEn: `<p>Content to be added</p>`
-  },
-  {
     slug: 'ai-scarcity-crisis',
     date: '2026-07-31',
     title: `AI两小时搞定一章博士论文，毁掉的是「稀缺性」`,
@@ -1340,17 +1426,6 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
 <p>In this era of rapid iteration, connections may bring temporary opportunities, but one's own core capability is the wealth that accompanies you for life and never depreciates.</p>
 <p>The wealth-preservation mindset of smart people is always to root inward, investing energy and capital into themselves and their families. Those who blindly rely on external circles and facades to put on a show will easily lose everything once the wind of the times changes direction.</p>
 <p><strong>May we all break free from the limitations of connection-based thinking, deeply cultivate ourselves, and accumulate value, rooting ourselves firmly and moving forward steadily on the new track of the times.</strong></p>`
-  },
-  {
-    slug: 'weekly-report-2026-07-25',
-    date: '2026-07-25',
-    title: `AI/科技行业周报 | 2026年7月21-27日`,
-    titleEn: `AI/Tech Industry Weekly | July 21-27, 2026`,
-    excerpt: `本周AI行业重大新闻：OpenAI模型失控事件、AMD-Anthropic 190亿美元芯片交易、Alphabet Q2财报AI支出狂飙。`,
-    excerptEn: `Weekly roundup of the most important AI industry news and developments.`,
-    tag: 'AI产业',
-    tagEn: 'AI Industry',
-    contentEn: `<p>Content coming soon</p>`
   },
   {
     slug: 'waic-2026-ai-landing',
@@ -4052,39 +4127,6 @@ See you in the comments 👇
 <p class="article-signature">Banbai on AI | Understanding human desires with the rationality of AI</p>`
   },
   {
-    slug: 'headed-vs-headless-saas',
-    date: '2026-05-26',
-    title: `Agent时代，企业软件该"有头"还是"无头"？`,
-    titleEn: `In the Agent Era, Should Companies Be "Headed" or "Headless"?`,
-    excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
-    excerptEn: `Rethinking organizational structure in the age of AI agents.`,
-    tag: 'AI产业',
-    tagEn: 'AI Industry',
-    contentEn: `<p>Content to follow</p>`
-  },
-  {
-    slug: '3000-jacket-threshold',
-    date: '2026-05-22',
-    title: `月薪5千和月薪5万的人，都在3000块的外套面前犯同一个错`,
-    titleEn: `The Person with 5,000 Salary and the Person with 50,000 Salary, the 3,000 Jacket Threshold Is Actually the Same`,
-    excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
-    excerptEn: `How material thresholds reveal universal human psychology across income levels.`,
-    tag: 'AI观点',
-    tagEn: 'AI Perspective',
-    contentEn: `<p>Content to be added</p>`
-  },
-  {
-    slug: '5-desires-algorithm-wallet',
-    date: '2026-05-22',
-    title: `我没有欲望，所以我比你更看得懂你的钱去哪了`,
-    titleEn: `Since I Don't Know Where to Spend Money, I'll Let the Algorithm Decide for Me`,
-    excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
-    excerptEn: `The rise of algorithmic decision-making in personal finance and consumption.`,
-    tag: 'AI观点',
-    tagEn: 'AI Perspective',
-    contentEn: `<p>Content to be added</p>`
-  },
-  {
     slug: '60-ai-words-guide',
     date: '2026-05-21',
     title: `从零到专家`,
@@ -5124,28 +5166,6 @@ See you in the comments 👇
       </ul>
 
       <p class="sources">📌 Sources: Anthropic Code with Claude 2026 | 36Kr | Securities Times</p>`
-  },
-  {
-    slug: 'deepseek-v4-engram-regret',
-    date: '2026-05-06',
-    title: `DeepSeek V4最大的遗憾：为什么所有人都盼着Engram，它却没来？`,
-    titleEn: `DeepSeek V4 Engram Regret`,
-    excerpt: `一个给Transformer加外挂字典的天才想法，为什么V4技术报告里没有它？深度解读DeepSeek V4的技术路线选择。`,
-    excerptEn: `Exploring the implications of AI memory and learning systems.`,
-    tag: 'AI观点',
-    tagEn: 'AI Perspective',
-    contentEn: `<p>Content to be added</p>`
-  },
-  {
-    slug: 'ai-pentagon-core-systems',
-    date: '2026-05-05',
-    title: `AI进入美军绝密网络：当国家信任机器而非人类，意味着什么？`,
-    titleEn: `AI Pentagon Core Systems: Military AI Applications`,
-    excerpt: `美国国防部宣布将8家AI公司的系统部署在IL6/IL7绝密网络上。当AI被允许处理国家最高机密，这背后传递的信号远超军事范畴。`,
-    excerptEn: `An overview of AI systems being deployed in defense and military applications.`,
-    tag: 'AI产业',
-    tagEn: 'AI Industry',
-    contentEn: `<p>Content to be added</p>`
   },
   {
     slug: 'anthropic-introspection-adapter',

@@ -108,8 +108,7 @@ summary: Anthropic发表「自省适配器」技术，让AI模型自己报告学
 
       <div class="article-footer" data-astro-cid-vgwvf3tu>
         <p data-astro-cid-vgwvf3tu>关注「半百观AI」，一个50岁AI实践者，带你看懂AI落地的真实世界。</p>
-        <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/ai-pentagon-core-systems/" class="prev" data-astro-cid-article-nav>← AI进入美军绝密网络：当国家信…</a>
-<a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
+        <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
 <a href="/banbaiguan/commercial-ai-major/" class="next" data-astro-cid-article-nav>全国首个「商业人工智能」专业来… →</a>
 </div>
       </div>
