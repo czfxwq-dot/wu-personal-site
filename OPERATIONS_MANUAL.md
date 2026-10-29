@@ -288,6 +288,8 @@ git push
 
 GitHub Actions 自动构建并部署到 Cloudflare Pages，约 36 秒完成。
 
+> **CI 里有内容体检关卡**：workflow 第一步跑 `python3 scripts/audit-content.py --quiet`，**只有「高」级问题会拦住部署**（中、低只打印不影响）。误报时在提交信息里加 `[skip-audit]` 可跳过这一步。本地想复现同样的判断，直接跑 `npm run audit:content -- --quiet` 看退出码。
+
 ### 3.3 本地开发预览
 
 ```bash
@@ -523,6 +525,7 @@ git push
 | `npm run build` | 构建到 docs/ |
 | `npm run preview` | 本地预览构建结果 |
 | `npm run check:data` | 检查数据同步状态 |
+| `npm run audit:content` | 内容体检：登记一致性/英文字段/空壳/日记规范/新闻质量；加 `-- --quiet` 只看高危，有高危返回码 1 |
 | `npm run fix:data` | 自动修复数据不一致 + 生成英文骨架 |
 | `npm run guard` | 部署前安全检查 |
 | `npm run deploy:cf` | 部署到 Cloudflare Pages |

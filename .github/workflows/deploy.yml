@@ -14,6 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 只让「高」级问题阻断构建；中低只打印，不拦。
+      # 误报时在提交信息里加 [skip-audit] 可跳过本步。
+      - name: 内容体检
+        if: "!contains(github.event.head_commit.message, '[skip-audit]')"
+        run: python3 scripts/audit-content.py --quiet
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
