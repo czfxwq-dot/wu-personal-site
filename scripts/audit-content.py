@@ -311,6 +311,8 @@ NEWS_PH_TITLE = [
 NEWS_PH_SUMMARY = [
     r"^a new ai (product|model) has been",
     r"^advances in ai chip technology",
+    r"^a company has (completed a funding round|secured funding)",
+    r"^the company (has )?(raised|announced) .{0,40}funding",
 ]
 
 
@@ -387,6 +389,18 @@ def audit_news():
     for t, ds in titles.items():
         if len(ds) > 1:
             add("低", "新闻重复", "ai-news-summary.ts", "「%s」出现在 %s" % (t[:40], "、".join(ds)))
+
+    # 同一段英文原样出现在多个日期：批量翻译时最容易把上一段带下来（2026-08-15/16 就是这样错的）
+    for field in ("titleEn", "summaryEn", "commentEn"):
+        seen = {}
+        for day in data:
+            v = re.sub(r"\s+", " ", (day.get(field) or "").strip()).lower()
+            if v:
+                seen.setdefault(v, []).append(day.get("date", "?"))
+        for v, ds in seen.items():
+            if len(ds) > 1:
+                add("中", "英文跨日期重复", "ai-news-summary.ts %s" % field,
+                    "%s 在多天完全相同：%s" % (field, "、".join(ds)))
 
 
 def audit_templates():

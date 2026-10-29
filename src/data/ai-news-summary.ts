@@ -531,7 +531,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "title": "博通筹措600亿美元为Anthropic芯片项目融资",
       "titleEn": "Broadcom Raises $60 Billion to Finance Anthropic Chip Project",
       "summary": "博通华尔街银团正筹集600亿美元新一轮AI芯片融资，为Anthropic芯片项目提供资金。这是AI芯片领域迄今最大规模的融资之一，显示资本市场对AI基础设施的持续看好，也反映Anthropic在算力竞争中的雄心。",
-      "summaryEn": "A company has completed a funding round to support its AI development.",
+      "summaryEn": "Broadcom's Wall Street syndicate is raising a new $60 billion round of AI chip financing to fund Anthropic's chip project. It is one of the largest financings in the AI chip sector to date, reflecting continued investor confidence in AI infrastructure and Anthropic's ambitions in the compute race.",
       "source": "36氪",
       "category": "AI融资",
       "categoryEn": "AI Funding",
@@ -653,7 +653,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "title": "GPU云服务商GMI获英伟达等投资方6.68亿美元融资",
       "titleEn": "GPU Cloud Provider GMI Secures $668 Million in Funding from Nvidia and Others",
       "summary": "成立五年的GMI Cloud完成6.68亿美元股权+债权融资，英伟达参与跟投。公司合同年化营收超6亿美元，表明英伟达仍在持续扶持新兴中小型云服务商。",
-      "summaryEn": "A company has completed a funding round to support its AI development.",
+      "summaryEn": "Five-year-old GMI Cloud has closed $668 million in combined equity and debt financing, with Nvidia joining as an investor. The company's annualized contracted revenue exceeds $600 million, showing Nvidia is still backing emerging mid-sized cloud providers.",
       "source": "36氪",
       "category": "AI基础设施",
       "categoryEn": "AI Infrastructure",
@@ -2798,7 +2798,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "title": "DeepSeek前七个月营收约4.75亿元，第二轮融资估值5000亿",
       "titleEn": "DeepSeek First 7 Months Revenue ~475 Million Yuan, Second Round Valued at 500 Billion Yuan",
       "summary": "据南华早报和The Information报道，DeepSeek今年前七个月营收约4.75亿元，正接近完成新一轮约500亿元人民币融资，投前估值5000亿元（约740亿美元），成立不到三年估值飙升。",
-      "summaryEn": "A company has completed a funding round to support its AI development.",
+      "summaryEn": "According to the South China Morning Post and The Information, DeepSeek posted revenue of about 475 million yuan in the first seven months of this year and is close to completing a new round of roughly 5 billion yuan in financing at a pre-money valuation of 500 billion yuan (about $74 billion) — a steep climb in less than three years.",
       "source": "开源中国",
       "category": "AI产业",
       "categoryEn": "AI Industry",
@@ -3497,7 +3497,7 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     }
   ],
   "comment": "Cursor被马斯克收入囊中、Anthropic冲刺2万亿估值、宇树万人抢签——AI行业正从技术比拼全面转入资本博弈，谁掌握工具、模型和硬件入口，谁就掌握下一个十年的定价权。",
-  "commentEn": "DeepSeek adjusts prices, Anthropic eyes a $2 trillion valuation, and OpenAI dismantles its safety team—as the AI industry simultaneously accelerates commercialization and restructures its governance, balancing the scales between \"affordable and effective\" and \"safe and controllable\" will dictate the industry's trajectory in the next phase."
+  "commentEn": "Cursor is now in Musk's hands, Anthropic races toward a $2 trillion valuation, and tens of thousands are competing for Unitree shares—the AI industry is shifting entirely from a tech race to a capital game, where whoever controls the tools, models, and hardware entry points will wield pricing power for the next decade."
 },
 {
   "date": "2026-08-15",
@@ -3558,6 +3558,6 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     }
   ],
   "comment": "AI正在从两个方向同时突破：向上用数学证明展示推理天花板，向下用眼镜和机器人渗透日常生活——而谷歌的内乱提醒我们，技术竞争的本质是人才竞争。",
-  "commentEn": "Elon Musk snaps up Cursor, Anthropic races toward a $2 trillion valuation, and Unitree draws tens of thousands of applicants—the AI industry is shifting entirely from a tech race to a capital game, where whoever controls the tools, models, and hardware entry points will wield pricing power for the next decade."
+  "commentEn": "AI is advancing on two fronts at once: upward, with mathematical proofs demonstrating the ceiling of reasoning; downward, with glasses and robots seeping into everyday life—and Google's internal turmoil reminds us that at bottom, technological competition is a contest for talent."
 }
 ];
