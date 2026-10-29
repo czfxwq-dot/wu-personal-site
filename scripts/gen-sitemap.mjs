@@ -22,6 +22,7 @@ const DIST = process.argv[2] || 'docs';
 // 不该进 sitemap 的路径
 const EXCLUDE = [
   /^\/404\/?$/,                  // 错误页
+  /^\/en\/404\/?$/,              // 英文错误页（仅供 404 中间件回源，不是可索引页面）
   /(^|\/)admin\//,               // 各类后台/管理视图（/admin/survey/、/guestbook/admin/）
 ];
 
