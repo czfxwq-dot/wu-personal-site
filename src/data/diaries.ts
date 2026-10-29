@@ -13,6 +13,31 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-28',
+    title: `高产的一天`,
+    titleEn: `A Productive Day`,
+    summary: `今天完成了 11 次提交，工作效率很高。`,
+    summaryEn: `Completed 11 commits today, highly efficient work.`,
+    category: '工作',
+    categoryEn: 'Work',
+    contentEn: `<p>Day 183 of building the website.</p>
+
+<h2>Today's Work</h2>
+<p>Updated 7 diary entries and collected 4 AI news items.</p>
+
+<h2>Key Commits</h2>
+<ul>
+<li>Fixed: English translation for all AI news categories</li>
+<li>Fixed: English translation for all AI news categories</li>
+<li>Added: English translation for AI news categories</li>
+<li>Added: English translation for the 2026-10-27 AI news</li>
+<li>Fixed: English diary date display error (using direct parsing)</li>
+</ul>
+
+<h2>Today's Reflection</h2>
+<p><strong>Small steps, steady progress.</strong></p>`
+  },
+  {
     date: '2026-10-27',
     title: `让自动化系统回到正确的轨道`,
     titleEn: `Getting the Automation System Back on Track`,
