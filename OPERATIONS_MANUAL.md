@@ -2,6 +2,11 @@
 
 > 本手册面向 AI Agent，包含个人网站的全部运营流程。阅读此手册即可接手日常维护、内容更新、故障排查。
 
+> **⚠️ 交接必读（先看这里）**：接手前，除了本手册，还必须读三份东西，否则会犯同样的错：
+> 1. `templates/diary-standards.md` — 日记写作标准（九节结构 + 观吾/山山协作视角）
+> 2. 本手册第 12 节「关键教训」— 之前踩过的坑
+> 3. 本手册第 13 节「人称与品牌」— 用户=观吾、AI=山山（写日记时）
+
 ---
 
 ## 1. 项目概况
@@ -9,10 +14,10 @@
 | 项目 | 详情 |
 |------|------|
 | 域名 | https://www.ban-bai.com |
-| 框架 | Astro 4.x（静态站点生成器） |
+| 框架 | Astro 4.x（静态站点生成器，内容集合 content collections） |
 | 部署 | GitHub Actions → Cloudflare Pages（push 即部署，约 36 秒） |
 | 仓库 | https://github.com/czfxwq-dot/wu-personal-site |
-| 分支 | master（生产） |
+| 分支 | main（生产） |
 | 语言 | 中文（默认）+ 英文（/en/ 镜像） |
 | 品牌 | 磐石电气（常州）有限公司 / MonolithIoT |
 | 定位 | 50岁企业家用AI把想法变成现实 |
@@ -32,35 +37,40 @@
 ```
 wu-personal-site/
 ├── src/
-│   ├── data/              # 所有数据文件（更新内容只需改这里）
-│   │   ├── articles.ts        # 文章注册表（半百观）
-│   │   ├── diaries.ts         # 日记注册表
-│   │   ├── ai-news-summary.ts # AI 新闻每日汇总
+│   ├── data/              # 数据注册表（列表页/英文详情页读这里）
+│   │   ├── articles.ts        # 文章注册表（半百观，含 contentEn）
+│   │   ├── diaries.ts         # 日记注册表（含 contentEn）
+│   │   ├── ai-news-summary.ts # AI 新闻每日汇总（当前在用）
 │   │   ├── ai-news.ts         # AI 新闻（旧格式，兼容用）
-│   │   └── guestbook.json     # 留言板数据
-│   ├── pages/             # 页面（路由 = 文件路径）
+│   │   └── survey-*.ts        # 调研问卷数据
+│   ├── content/          # 内容集合（Astro Content Collections，中文正文）
+│   │   ├── articles/         # 文章 markdown（中文全文）
+│   │   └── diaries/          # 日记 markdown（中文全文）
+│   ├── pages/             # 页面（动态路由读取内容集合）
 │   │   ├── index.astro        # 中文首页
-│   │   ├── banbaiguan/        # 半百观文章列表 + 详情页
-│   │   ├── diary/             # 日记列表 + 详情页
+│   │   ├── banbaiguan/[slug].astro   # 文章详情（读 content/articles）
+│   │   ├── diary/[date].astro        # 日记详情（读 content/diaries）
 │   │   ├── ai-news/           # AI 新闻列表
-│   │   ├── guestbook/         # 留言板
-│   │   ├── about/             # 关于页
-│   │   ├── api/guestbook.ts   # 留言板 API
-│   │   └── en/                # 英文镜像（与中文同结构）
+│   │   ├── about/  guestbook/ 等
+│   │   └── en/                # 英文镜像（列表读 data/*.ts 的 *En 字段）
 │   ├── components/        # 可复用组件
 │   ├── layouts/           # 页面模板（Base.astro）
 │   ├── i18n/              # 中英文 UI 文字字典
 │   └── styles/            # 全局样式
 ├── functions/           # Cloudflare Pages Functions（/api/chat）
 ├── scripts/             # 工具脚本
+│   ├── auto-diary.py        # 自动日记（v4.0，每天 22:00 定时）
+│   ├── auto-news.py         # 自动 AI 新闻采集（⚠️ 有已知问题，见第 12 节）
 │   ├── sync-data.mjs        # 数据同步检查 + 自动修复
-│   ├── pre-deploy-guard.sh  # 部署前安全检查
-│   └── update-tunnel-url.sh # 更新隧道 URL
-├── public/              # 静态资源（logo/二维码/SEO 文件）
-├── .github/workflows/deploy.yml  # CI/CD
+│   └── pre-deploy-guard.sh  # 部署前安全检查
+├── templates/           # 内容标准（写日记/文章前先读这里）
+│   ├── diary-standards.md       # 日记写作标准（九节 + 观吾/山山）
+│   ├── diary-quick-reference.md # 日记快速参考卡
+│   └── diary-template.md        # 日记模板
+├── public/              # 静态资源
+├── .github/workflows/deploy.yml  # CI/CD（push 到 main 自动部署）
 ├── astro.config.mjs     # Astro 配置
-├── package.json         # 依赖 + npm scripts
-└── wrangler.toml        # Cloudflare 配置
+└── package.json         # 依赖 + npm scripts
 ```
 
 ---
@@ -73,60 +83,51 @@ wu-personal-site/
 
 #### 步骤
 
-**Step 1：创建中文页面**
+**Step 1：创建中文 markdown（内容集合）**
 
-在 `src/pages/banbaiguan/` 下新建 `{slug}.astro`，复制已有文章页（如 `anthropic-introspection-adapter.astro`）作为模板。
+在 `src/content/articles/` 下新建 `{slug}.md`，frontmatter + HTML 正文：
 
-修改 frontmatter：
-```astro
+```markdown
 ---
-import BaseLayout from '../../layouts/Base.astro';
-import ArticleJsonLd from '../../components/ArticleJsonLd.astro';
-
-const title = '文章标题';
-const pubDate = '2026-05-14';  // 必须与 articles.ts 中的 date 一致
-const tag = 'AI前沿';          // 可选值：AI前沿 / AI产业 / AI安全
-const excerpt = '一句话摘要（100字以内）';
-
-// 英文翻译（可先留空，后续补充）
-const titleEn = '';
-const excerptEn = '';
-const tagEn = '';
+title: 文章标题
+subtitle: 文 / 半百观AI
+date: 2026-10-29
+tag: AI观点          # 可选：AI观点 / AI应用 / AI前沿 / AI产业 / AI趋势 / 深度分析 / AI思考
+author: 吴总
+summary: 一句话摘要（100字以内，也是 OG 描述）
 ---
+
+<p>正文……用 HTML 写，<strong>加粗</strong>、<h2>小标题</h2>、<hr /> 分隔线。</p>
 ```
 
-正文部分：用 HTML/Markdown 写文章内容。参考现有文章的排版风格。
+参考已有文章 `src/content/articles/*.md` 的排版（如 `100-wan-ai-zero-return.md`）。
 
 **Step 2：注册到数据文件**
 
-在 `src/data/articles.ts` 数组**开头**添加：
+在 `src/data/articles.ts` 数组**开头**添加（含英文 contentEn）：
+
 ```typescript
 {
-  slug: 'your-article-slug',    // 必须与文件名一致（不含 .astro）
-  date: '2026-05-14',           // 与 pubDate 一致
+  slug: 'your-article-slug',    // 必须与 markdown 文件名一致（不含 .md）
+  date: '2026-10-29',           // 与 markdown frontmatter 的 date 一致
   title: '文章标题',
   titleEn: 'English Title',
   excerpt: '一句话摘要',
   excerptEn: 'English summary',
-  tag: 'AI前沿',
-  tagEn: 'AI Frontier'
+  tag: 'AI观点',
+  tagEn: 'AI Perspective',
+  contentEn: `<p>英文全文……</p>`  // 英文正文（HTML）
 },
 ```
 
-**Step 3：创建英文页面（可选，可延后）**
+> 注意：中文正文在 markdown 里，英文正文在 `contentEn` 里。两处都要写，缺了英文详情页会是空的。
 
-运行自动修复：
-```bash
-npm run fix:data
-```
-
-这会自动在 `src/pages/en/banbaiguan/` 下创建带 TODO 标记的英文骨架页。后续只需替换内容。
-
-**Step 4：验证 + 部署**
+**Step 3：验证 + 部署**
 
 ```bash
-npm run check:data   # 检查数据一致性
-npm run deploy       # 构建 + 部署到 Cloudflare Pages
+npx tsc --noEmit src/data/articles.ts   # 语法检查
+npm run build                            # 构建（会生成 /banbaiguan/{slug}/ 和 /en/banbaiguan/{slug}/）
+git add . && git commit -m "feat: 新增文章《标题》" && git push
 ```
 
 ---
@@ -135,55 +136,58 @@ npm run deploy       # 构建 + 部署到 Cloudflare Pages
 
 **适用场景**：每日建站记录、项目进展记录。
 
+> **⚠️ 写日记前必读 `templates/diary-standards.md`！** 日记有严格标准：九节结构（📍今日心绪 → 🎯足迹 → 💭困惑 → 🌊感悟 → 📊痕迹 → 🎁礼物 → 🌅期待 → ✨一言 → 结尾），观吾（用户）和山山（AI）协作视角，中英双语，frontmatter 含 mood/energy。**人称固定：用户=观吾（Guanwu）、AI=山山（Shanshan），不写"吴总/Wu"**（这是写作视角，不是真实职务）。
+
 #### 步骤
 
-**Step 1：创建中文页面**
+**Step 1：创建中文 markdown**
 
-在 `src/pages/diary/` 下新建 `YYYY-MM-DD.astro`，复制已有日记页作为模板。
+在 `src/content/diaries/` 下新建 `YYYY-MM-DD.md`，frontmatter + HTML 正文：
 
-```astro
+```markdown
 ---
-import BaseLayout from '../../layouts/Base.astro';
-import ArticleJsonLd from '../../components/ArticleJsonLd.astro';
-
-const date = '2026-05-14';
-const title = '建站第XX天：今天做了什么';
-const summary = '一段话总结';
-const category = 'AI项目';
-
-// 英文翻译
-const titleEn = '';
-const summaryEn = '';
-const categoryEn = 'AI Projects';
+date: 2026-10-29
+title: "标题"
+titleEn: "English Title"
+summary: 中文摘要（50字以内）
+summaryEn: English summary
+category: 维护         # 可选：工作/学习/反思/协作/维护
+categoryEn: Maintenance
+dayNum: 184            # 建站天数
+mood: 8                # 心情评分 1-10
+energy: 7              # 精力评分 1-10
 ---
+
+<p>建站第 184 天。</p>
+
+<h2>📍 今日心绪</h2>
+...
+（九个章节全部要有，参考 templates/diary-standards.md 和 10-26/10-27 范例）
 ```
 
 **Step 2：注册到数据文件**
 
-在 `src/data/diaries.ts` 数组**开头**添加：
+在 `src/data/diaries.ts` 数组**开头**添加（含英文 contentEn）：
+
 ```typescript
 {
-  date: '2026-05-14',
-  title: '建站第XX天：今天做了什么',
-  titleEn: 'Day XX: What we did today',
-  summary: '一段话总结',
-  summaryEn: 'Brief English summary',
-  category: 'AI项目',
-  categoryEn: 'AI Projects'
+  date: '2026-10-29',
+  title: `标题`,
+  titleEn: `English Title`,
+  summary: `中文摘要`,
+  summaryEn: `English summary`,
+  category: '维护',
+  categoryEn: 'Maintenance',
+  contentEn: `<p>英文全文……</p>`   // 英文正文（HTML，九节结构也要有）
 },
 ```
 
-**Step 3：自动生成英文骨架**
+**Step 3：验证 + 部署**
 
 ```bash
-npm run fix:data
-```
-
-**Step 4：验证 + 部署**
-
-```bash
-npm run check:data
-npm run deploy
+npx tsc --noEmit src/data/diaries.ts   # 语法检查
+npm run build
+git add . && git commit -m "feat: 新增日记" && git push
 ```
 
 ---
@@ -232,7 +236,7 @@ npm run deploy
 
 ### 2.4 更新现有文章/日记内容
 
-直接修改对应的 `.astro` 文件，同时更新 `src/data/articles.ts` 或 `src/data/diaries.ts` 中的对应条目。部署即可。
+直接修改对应的 markdown 文件（`src/content/articles/{slug}.md` 或 `src/content/diaries/{date}.md`），同时更新 `src/data/articles.ts` 或 `src/data/diaries.ts` 中的对应条目（中文改 markdown，英文改 contentEn）。部署即可。
 
 ---
 
@@ -544,13 +548,59 @@ git push
 
 ---
 
-## 11. 关键约定
+## 11. 自动化脚本
 
-1. **新增文章/日记只改两个地方**：数据文件 + 页面文件。不需要改其他代码。
+### auto-diary.py（每天 22:00 自动生成日记）
+
+- 版本 **v4.0**，按 `templates/diary-standards.md` 生成九节格式 + mood/energy + 中英双语
+- 生成后**自动同步 `src/data/diaries.ts`**（含英文 contentEn）
+- 由 Windows 定时任务每天 22:00 触发；日志在 `scripts/logs/auto-diary-YYYY-MM.log`
+- **注意**：脚本只能根据 git 提交推断，生成的是"结构正确的草稿"；真正有温度的观吾/山山叙事，建议生成后由 AI 再润色一遍（可加一步"生成后提醒审阅"）
+
+### auto-news.py（AI 新闻采集）
+
+⚠️ **有已知问题，慎用**：
+- 抓的是 36 氪**全站 RSS**，会混入广告、无人机、保险报告等非 AI 内容
+- 生成的英文标题/摘要是占位符（如 "AI industry news"），不是真翻译
+- 每日摘要会把多条新闻开头硬拼成乱码
+- 建议改用 AI 垂类源（如 `rsshub.app/36kr/motif/ai`），生成后人工审一遍再发布
+
+### 其他脚本
+
+- `sync-data.mjs`：数据同步检查 + 自动修复
+- `pre-deploy-guard.sh`：部署前安全检查
+- `update-tunnel-url.sh`：更新 Chat Gateway 隧道 URL
+
+---
+
+## 12. 关键教训（之前踩过的坑）
+
+1. **修数据要全量扫同模式，不能只修被点名的一处。** 之前用户说"第344行有未转义引号"，实际全文件 32 处 + 288 条占位符 + 4 天坏新闻。先写脚本扫全量（重复字段 / 占位符 / 截断 / 中文泄漏 / 语法错误），一次扫干净。
+2. **"有"不等于"对"。** 占位符（如 titleEn 填 "AI industry news"）比空字段更危险——空字段会报错，占位符会安静地骗过检查。校验时抽查内容质量，不只是看字段有没有填。
+3. **追根因脚本。** 数据坏了，往往是因为生成数据的脚本有问题（auto-news.py 抓全站 RSS、旧版 auto-diary.py 只写 markdown 不登记 diaries.ts）。修完数据要把根因脚本一起修掉，否则问题会再来。
+4. **写日记先读标准。** 之前没读 `templates/diary-standards.md` 就写了占位 stub，还把人称写成"吴总"——都被纠正。标准和人称是硬约束。
+5. **中文引号转 ASCII 引号会破坏字符串。** 曾有个 `fix_quotes.cjs` 把 `“”` 转成 `"`，制造了 32 处语法错误（已删，别再用这类脚本）。
+
+---
+
+## 13. 人称与品牌
+
+- **用户真实身份**：吴总（磐石电气联合创始人），网站定位"50 岁企业家用 AI 把想法变成现实"。
+- **日记写作视角**：用户 = 观吾（Guanwu，思考者/决策者），AI = 山山（Shanshan，执行者）。**写日记时一律用观吾/山山，不用"吴总/Wu"**。
+- **文章/公众号**：署名"吴总"或"半百观AI"（对外品牌，不是日记视角）。
+- 品牌规范详见 `BRAND_SOP.md`。
+
+---
+
+## 14. 关键约定
+
+1. **新增文章/日记只改两个地方**：内容集合 markdown（`src/content/`）+ 数据文件（`src/data/`）。不需要改其他代码。
 2. **数据文件条目放数组开头**，最新的在最上面。
-3. **slug 必须与文件名一致**，否则构建成功但列表页找不到。
-4. **pubDate 必须与 articles.ts 中的 date 一致**。
-5. **所有 `*En` 字段可留空**，但字段名必须存在（接口定义了可选性）。
-6. **部署前必跑 `npm run check:data`**。
-7. **不要手动改 docs/ 目录**，这是构建输出，每次 build 会被清空重写。
-8. **Cloudflare Pages Functions（functions/）的变更需要 push 才生效**，本地 build 不包含这部分。
+3. **slug 必须与 markdown 文件名一致**（不含 .md），否则构建成功但列表页找不到。
+4. **markdown frontmatter 的 date 必须与数据文件里的 date 一致**。
+5. **英文全文放在数据文件的 `contentEn`**（不是 markdown 里）；中文全文放在 markdown 里。
+6. **写日记先读 `templates/diary-standards.md`**，人称用观吾/山山。
+7. **部署前必跑 `npx tsc --noEmit` 校验数据文件**（语法错误会导致构建失败）。
+8. **不要手动改 docs/ 目录**，这是构建输出，每次 build 会被清空重写。
+9. **Cloudflare Pages Functions（functions/）的变更需要 push 才生效**，本地 build 不包含这部分。
+10. **数据坏了先查根因脚本**（auto-news.py / auto-diary.py），别只修表面。
