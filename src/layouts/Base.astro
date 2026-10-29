@@ -211,7 +211,7 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     </main>
     {shouldShowShare && (
       <div class="container" style="max-width: 680px; margin: 0 auto; padding: 0 20px;">
-        <ShareButtons title={pageTitle} summary={ogDescription} />
+        <ShareButtons title={pageTitle} summary={ogDescription} lang={lang} />
       </div>
     )}
     <footer class="site-footer">

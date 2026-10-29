@@ -35,9 +35,7 @@ const articleJsonLd = {
 ---
 
 <BaseLayout title={`${title} — BanbaiGuan AI`} jsonLd={articleJsonLd} ogDescription={excerpt} navActive="banbaiguan" lang="en">
-  <script type="application/json" id="article-data">
-    {JSON.stringify(articles.map(a => ({ slug: a.slug, title: a.title, titleEn: a.titleEn })))}
-  </script>
+  <script type="application/json" id="article-data" set:html={JSON.stringify(articles.map(a => ({ slug: a.slug, title: a.title, titleEn: a.titleEn })))}></script>
   <article class="article-page">
     <header class="article-header">
       <div class="article-meta">
