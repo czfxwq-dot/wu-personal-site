@@ -9,6 +9,7 @@
   3. 正文空壳：中文正文极短或含"待补充"，英文正文明显短于中文
   4. 日记规范：frontmatter 必备字段、九节结构、观吾/山山人称
   5. 模板中文泄漏：英文页和组件里硬编码的中文文案
+  6. 新闻质量：占位英文、英文直接复制中文、疑似伪造链接、跨天重复、非 AI 内容
 
 用法：
   python scripts/audit-content.py          # 全部检查
@@ -296,6 +297,42 @@ def audit_diaries():
         add("高", "有正文无登记", "diaries/%s.md" % slug, "未注册到 diaries.ts，列表页看不到")
 
 
+# 新闻英文的占位句：旧生成脚本留下的套话，语法正常所以抓不出来，只能点名
+NEWS_PH_TITLE = [
+    r"^new product launched$",
+    r"^new ai chip breakthrough$",
+    r"^ai industry news$",
+    r"^robotics industry update$",
+    r"^.* industry update$",
+    r"^new model released$",
+    r"^research breakthrough$",
+    r"^new funding round$",
+]
+NEWS_PH_SUMMARY = [
+    r"^a new ai (product|model) has been",
+    r"^advances in ai chip technology",
+]
+
+
+def suspect_url(u):
+    """链接是编的？看结构就能认出来：连号数字、标题拼的 slug、123456 占位"""
+    if not u:
+        return "无链接"
+    if not u.startswith("http"):
+        return "链接格式异常"
+    if re.search(r"/articles/\d{4}-\d{2}-\d{2}-[a-z]", u):
+        return "日期+英文slug"
+    if re.search(r"/20\d\d/\d\d/[a-z0-9-]{6,}\.html", u):
+        return "日期目录+slug"
+    digits = "".join(re.findall(r"\d+", u))
+    seq = "012345678901234567890123456789"
+    for i in range(len(digits) - 4):
+        chunk = digits[i:i + 5]
+        if chunk in seq or chunk in seq[::-1]:
+            return "连号 " + chunk
+    return None
+
+
 def audit_news():
     path = os.path.join(ROOT, "src/data/ai-news-summary.ts")
     if not os.path.exists(path):
@@ -319,6 +356,10 @@ def audit_news():
                 add("高", "中文字段缺失", where, "%s 缺失" % k)
         for k in ("titleEn", "summaryEn", "commentEn"):
             check_en(k, day.get(k), where, "中")
+        for k, rules in (("titleEn", NEWS_PH_TITLE), ("summaryEn", NEWS_PH_SUMMARY)):
+            v = (day.get(k) or "").strip()
+            if any(re.match(p, v, re.I) for p in rules):
+                add("高", "新闻占位英文", where, '%s = "%s"' % (k, v[:50]))
         items = day.get("newsItems") or []
         if not items:
             add("高", "结构缺失", where, "newsItems 为空")
@@ -329,6 +370,17 @@ def audit_news():
                     add("高", "中文字段缺失", iw, "%s 缺失" % k)
             for k in ("titleEn", "summaryEn", "categoryEn"):
                 check_en(k, it.get(k), iw, "中")
+            for k, rules in (("titleEn", NEWS_PH_TITLE), ("summaryEn", NEWS_PH_SUMMARY)):
+                v = (it.get(k) or "").strip()
+                if any(re.match(p, v, re.I) for p in rules):
+                    add("高", "新闻占位英文", iw, '%s = "%s"' % (k, v[:50]))
+            if it.get("titleEn") and it.get("titleEn") == it.get("title"):
+                add("高", "英文复制中文", iw, "titleEn 与中文标题完全相同")
+            why = suspect_url((it.get("url") or "").strip())
+            if why == "无链接":
+                add("低", "新闻无链接", iw, (it.get("title") or "")[:30])
+            elif why:
+                add("高", "疑似伪造链接", iw, "%s：%s" % (why, (it.get("url") or "")[:70]))
             if it.get("title"):
                 titles.setdefault(it["title"], []).append(d)
 
