@@ -227,7 +227,7 @@ const allDates = diaries.map(d => d.date);
     });
 
     noResult.style.display = visible === 0 ? '' : 'none';
-    countEl.textContent = `共 ${visible} 篇`;
+    countEl.textContent = `${visible} entries`;
   }
 
   searchInput.addEventListener('input', filterDiaries);
