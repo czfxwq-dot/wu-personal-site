@@ -285,16 +285,6 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   "summaryEn": "Five key AI stories today: Unitree founder Wang Xingxing said at the 2026 World Physical AI Conference that physical AI will break through within two to three years and the world still doesn't value or believe in AI enough; an ex-OPPO veteran's AI travel glasses crowdfunded over $400,000, and a Li Auto AI-glasses leader started a children's hardware venture, keeping the AI glasses track hot; the AI real estate agent 'Yiju Xiaoxin' closed China's first second-hand home deal with a commission-free model; and AI security firm Chain Reaction raised a seed round to rewrite security pricing with token billing. AI is accelerating into real-world commercialization across glasses, hardware and real estate.",
   "newsItems": [
     {
-      "title": "36氪首发丨金属3D打印企业完成数千万元融资，已交付商业航天领域头部客户",
-      "titleEn": "36Kr Exclusive | Metal 3D Printing Firm Raises Tens of Millions, Serving Top Aerospace Clients",
-      "summary": "本文约2500字，建议阅读5分钟 作者|乔钰杰 编辑|袁斯来 硬氪获悉，增材制造结构件与专用材料供应商九河先进科学技术（北京）有限公司（以下简称\"九河公司\"）宣布完成数千万元Pre-A+轮融资。本轮融资由株洲北斗时空产业基金独家投资。 九河公司成立于2024年，以材料科学技术为核心，面向航空航天、核聚变、低空经济、人形机器人等高端制造领域，提供高性能增材制造（3D打印）结构件、专用材料及相关解决方",
-      "summaryEn": "Jiuhe Advanced Science and Technology (Beijing), a supplier of additively manufactured structural parts and specialized materials, announced a Pre-A+ round of tens of millions of RMB, exclusively invested by the Zhuzhou Beidou Spatiotemporal Industry Fund. Founded in 2024 and centered on materials science, Jiuhe provides high-performance 3D-printed structural parts and materials for aerospace, nuclear fusion, low-altitude economy, and humanoid robots.",
-      "source": "36氪",
-      "category": "AI应用",
-      "categoryEn": "AI Applications",
-      "url": "https://36kr.com/p/4037865194623878?f=rss"
-    },
-    {
       "title": "产品观察丨前OPPO老兵做了款AI旅行眼鏡，众筹超40万美元",
       "titleEn": "Product Review | Ex-OPPO Veteran Builds an AI Travel Glasses, Crowdfunding Tops $400K",
       "summary": "作者|邱晓芬 编辑|袁斯来 过去几年，AI眼镜称得上消费电子行业里最跌宕起伏的品类之一。 它最初沿着AR方向前进，显示、光波导和空间计算被视为通往下一代计算平台的必经之路，但重量、功耗、成本和量产难度很快构成现实约束。生成式AI兴起后，眼镜又被包装成\"随身Agent\"和\"全天候感知入口\"，甚至被赋予替代手机的想象。 如今，行业的几条路线仍在同时演进。Meta已经从无显示的拍摄类智能眼镜，进一步推出",
@@ -343,46 +333,6 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "category": "AI动态",
       "categoryEn": "AI Updates",
       "url": "https://36kr.com/p/4037778327720835?f=rss"
-    },
-    {
-      "title": "德国客户连买7000架无人机集群，这家深圳公司计划冲IPO",
-      "titleEn": "German Client Buys 7,000-Drone Cluster, This Shenzhen Company Eyes an IPO",
-      "summary": "无人机表演不新鲜。新鲜的是，一家深圳公司把它做成了标准化、少人工、强复购、低运营成本的集群系统。 把一场秀，做成一套系统 以前办一场几百架规模的无人机表演，通常要十几名工作人员逐架摆放、检查、回收，常常耗费几个小时。现在，大漠大的智能车载表演系统，可以在约60秒内完成展开布场。 让数千架无人机同时升空，并不是简单地增加飞机数量。单架无人机需要依靠飞控系统保持稳定，而大规模集群飞行还涉及定位导航、通",
-      "summaryEn": "Drone shows are nothing new, but a Shenzhen company has turned them into a standardized, low-labor, high-repurchase cluster system. Its intelligent vehicle-mounted performance system can complete deployment in about 60 seconds. Flying thousands of drones at once requires stable flight control plus positioning, navigation and coordination for large-scale swarms.",
-      "source": "36氪",
-      "category": "AI动态",
-      "categoryEn": "AI Updates",
-      "url": "https://36kr.com/p/4033826598523783?f=rss"
-    },
-    {
-      "title": "8点1氪丨iPhone Duo约八成应用未适配；DeepSeek据悉完成1000亿元融资；长实集团再发澄清公告：李嘉诚健康情况良好",
-      "titleEn": "8AM Brief | About 80% of Apps Not Yet Adapted to iPhone Duo; DeepSeek Said to Close 100 Billion Yuan Round; CK Asset Again Clarifies Li Ka-shing's Health",
-      "summary": "今日热点导览 宇树科技王兴兴：宇树G1机器人已经累计生产下线约1-2万台 奥迪官网发布首位中国籍总裁任命 央行10月22日开展了1730亿元隔夜逆回购操作 Meta因隐私及内容审核问题被判支付250亿美元罚款 三星工会提议放宽亏损芯片部门奖金扣罚规则 TOP 3 大新闻 iPhone Duo约八成应用未适配，微信回应iPhone Duo不适配 10月22日，话题\"iPhone Duo微信不适配\"登",
-      "summaryEn": "Today's briefing: Wang Xingxing says Unitree has produced roughly 10,000-20,000 G1 robots; Audi names its first Chinese president; the PBOC conducted a 173 billion yuan overnight reverse repo on Oct 22; Meta was ordered to pay a $25 billion fine over privacy and content moderation; Samsung's union proposed relaxing bonus clawbacks for its loss-making chip division. Top story: about 80% of apps are not yet adapted to iPhone Duo, with WeChat responding on Oct 22 to the topic of iPhone Duo incompatibility.",
-      "source": "36氪",
-      "category": "AI硬件",
-      "categoryEn": "AI Hardware",
-      "url": "https://36kr.com/p/4037687068021637?f=rss"
-    },
-    {
-      "title": "年攒2.54万元，超6成人配保险：00后正集体构建安全感｜00后安全感报告",
-      "titleEn": "Saving 25,400 Yuan a Year, Over 60% Insured: Gen Z Is Collectively Building Security | Gen Z Security Report",
-      "summary": "总被贴上\"及时行乐\"标签的00后们，真的是\"最有安全感\"的一代吗？ 他们重视体验，愿意为兴趣买单，但也同样要面对经济环境、就业形态、生活成本与社会保障衔接的变化。 从\"脆皮青年\"\"无效内卷\"再到\"课题分离\"\"存款焦虑\"，网络热词也映照着年轻人的不安。随之兴起的\"纯过日子\"思潮，也流露出不少00后放下攀比、回归安稳生活的愿望。 对他们而言，\"安全感\"不再只是一个情绪词，而是需要稳定构建的生活基石。要",
-      "summaryEn": "Often labeled 'live for the moment,' are Gen Z really the most secure generation? They value experiences and spend on interests, but also face shifts in the economy, employment, living costs and social security. Online buzzwords reflect their anxiety, and the rising 'just get by' mindset reveals a wish to give up comparison and return to a stable life.",
-      "source": "36氪",
-      "category": "AI治理",
-      "categoryEn": "AI Governance",
-      "url": "https://36kr.com/p/4036955299369864?f=rss"
-    },
-    {
-      "title": "8点1氪丨宝马离职补偿最高487万，员工争着离职挤爆系统；iPhone Duo全球限购，每位顾客限购2台；Meta第三季度营收646亿美元，同比增长26%",
-      "titleEn": "8 AM Kr | BMW Severance Up to 4.87M Yuan Crashes System; iPhone Duo Limited to 2 Per Customer; Meta Q3 Revenue $64.6B, Up 26% YoY",
-      "summary": "今日热点导览 段永平称会继续买入泡泡玛特 阿宽食品停牌，阿宽食品利润暴跌90% 联想拟筹集20亿美元贷款，低成本置换旧债 SK海力士完成40万亿韩元股票回购 马斯克呼吁善待人工智能：否则\"它们可能会报复\" TOP 3 大新闻 宝马员工争着离职挤崩系统，离职补偿金最高487万 据德国媒体《商报》（Handelsblatt）报道，宝马计划在2027年底前削减8000个白领岗位，并向数万名员工发送了\"远",
-      "summaryEn": "Top stories: Duan Yongping says he will keep buying Pop Mart; Akuan Food halts trading after profit plunges 90%; Lenovo plans a $2B loan to replace old debt; SK Hynix completes a 40 trillion won buyback; Musk urges treating AI well or 'they may retaliate.' BMW reportedly plans to cut 8,000 white-collar jobs by end of 2027 and sent generous severance offers, overwhelming its system.",
-      "source": "36氪",
-      "category": "AI动态",
-      "categoryEn": "AI Updates",
-      "url": "https://36kr.com/p/4036266730886018?f=rss"
     }
   ],
   "comment": "从物理AI到AI眼镜再到AI房产经纪人，AI正在从模型能力走向真实场景的商业落地。",
