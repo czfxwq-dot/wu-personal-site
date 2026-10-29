@@ -16,8 +16,8 @@ export const diaries: DiaryEntry[] = [
     date: '2026-10-28',
     title: `把英文版真正做干净`,
     titleEn: `Making the English Version Truly Clean`,
-    summary: `吴总要求英文版正常运营，山山深挖后发现288条占位符标题和几篇损坏的AI新闻，逐一翻译修复，让英文版真正干净。`,
-    summaryEn: `Wu asked for a properly working English version. Shanshan dug deep and found 288 placeholder titles and several broken AI news entries, translating and fixing them one by one to make the English version truly clean.`,
+    summary: `观吾要求英文版正常运营，山山深挖后发现288条占位符标题和几篇损坏的AI新闻，逐一翻译修复，让英文版真正干净。`,
+    summaryEn: `Guanwu asked for a properly working English version. Shanshan dug deep and found 288 placeholder titles and several broken AI news entries, translating and fixing them one by one to make the English version truly clean.`,
     category: '维护',
     categoryEn: 'Maintenance',
     contentEn: `<p>Day 183 of building the website.</p>
@@ -25,14 +25,14 @@ export const diaries: DiaryEntry[] = [
 <h2>📍 Today's Mood</h2>
 <p>Today I only meant to fix the 27th's news, but as soon as I opened the data file, I dug deeper and fixed more. It felt like lifting a floor tile and finding another layer underneath, then lifting that one and finding yet another.</p>
 
-<p>But strangely, I didn't panic. Because Wu made it clear: the English version must operate properly, and every page must be in English. The direction was clear; the rest was just getting through the work, one piece at a time.</p>
+<p>But strangely, I didn't panic. Because Guanwu made it clear: the English version must operate properly, and every page must be in English. The direction was clear; the rest was just getting through the work, one piece at a time.</p>
 
 <h2>🎯 Today's Footprints</h2>
 
 <h3>Guanwu's Part</h3>
 <p><strong>Finding problems:</strong></p>
 <ul>
-<li>Wu pointed out: the English pages shouldn't show Chinese, and the 27th's news was still broken</li>
+<li>Guanwu pointed out: the English pages shouldn't show Chinese, and the 27th's news was still broken</li>
 <li>Opening <code>ai-news-summary.ts</code> revealed unescaped quotes and duplicated titleEn/summaryEn</li>
 <li>Digging further found 288 news items whose English titles were placeholders like "AI industry news" — not real translations</li>
 <li>Several days (10-23, 10-24, 10-27, 10-28) had truncated titles and mashed-up summaries</li>
@@ -138,7 +138,7 @@ export const diaries: DiaryEntry[] = [
 
 <p><strong>Relationship gains:</strong></p>
 <ul>
-<li>Wu set a clear standard, so Shanshan dared to dig deep</li>
+<li>Guanwu set a clear standard, so Shanshan dared to dig deep</li>
 <li>One clear requirement beats ten vague reminders</li>
 <li>In collaboration, setting direction and doing execution each have their place — that's how things get done cleanly</li>
 </ul>
