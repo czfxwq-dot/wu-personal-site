@@ -24,6 +24,64 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-29",
+  "title": "AI新闻 | 谷歌Gemini 4 Carbon登顶但股价大跌 + 宇树红杉「杉宇·创计划」 + OpenAI买谷歌芯片 + Kimi接谷歌全家桶",
+  "titleEn": "AI News | Google Gemini 4 Carbon Tops Charts but Stock Plunges + Unitree-Sequoia Plan + OpenAI Buys Google Chips + Kimi Connects Google Apps",
+  "summary": "今日AI行业五大看点：谷歌发布Gemini 4 Carbon重新夺回模型智力榜第一，但Q3财报不及预期，盘后股价跌超10%、市值蒸发超3000亿美元；宇树将与红杉中国成立「杉宇·创计划」，OpenAI计划采购谷歌AI芯片以降低对英伟达的依赖；月之暗面Kimi接入谷歌Gmail、云端硬盘和日历；微软计划发债至少250亿美元投向AI基础设施建设；豆包工作向企业客户推出第三方模型服务，接入Kimi、GLM、DeepSeek等。",
+  "summaryEn": "Five key AI stories today: Google released Gemini 4 Carbon to reclaim the top of the model charts, but Q3 earnings missed, with the stock falling over 10% after hours and more than $300 billion in market value wiped out; Unitree will launch a joint plan with Sequoia China, while OpenAI plans to buy Google AI chips to reduce its Nvidia dependence; Moonshot's Kimi connected Google Gmail, Drive and Calendar; Microsoft plans to raise at least $25 billion for AI infrastructure; and Doubao Work introduced third-party model services including Kimi, GLM and DeepSeek.",
+  "newsItems": [
+    {
+      "title": "谷歌发布Gemini 4 Carbon登顶智力榜，但Q3财报不及预期，盘后股价跌超10%",
+      "titleEn": "Google Releases Gemini 4 Carbon to Top the Charts, but Q3 Misses, Stock Falls Over 10% After Hours",
+      "summary": "谷歌发布Gemini 4 Carbon，重新夺回模型智力榜第一；新季度云收入大涨103%，Gemini月活达10亿。但Q3财报不及预期，资本开支大幅增加、现金流连续两季为负，盘后股价跌超10%，市值蒸发超3000亿美元。",
+      "summaryEn": "Google released Gemini 4 Carbon, reclaiming the top of the model intelligence charts; cloud revenue surged 103% and Gemini hit 1 billion monthly users. But Q3 earnings missed, with capex rising sharply and cash flow negative for two straight quarters — the stock fell over 10% after hours, wiping out more than $300 billion in market value.",
+      "source": "36氪",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://eu.36kr.com/zh/p/4046614272119681"
+    },
+    {
+      "title": "宇树将与红杉中国成立「杉宇·创计划」，OpenAI计划采购谷歌AI芯片",
+      "titleEn": "Unitree to Launch Joint Plan with Sequoia China; OpenAI Plans to Buy Google AI Chips",
+      "summary": "宇树科技将与红杉中国成立「杉宇·创计划」，聚焦具身智能生态。同日消息，OpenAI计划采购谷歌AI芯片，以降低对英伟达的依赖、扩充算力供给。AI芯片与具身智能赛道持续升温。",
+      "summaryEn": "Unitree will launch the 'Shanyu Innovation Plan' with Sequoia China, focusing on the embodied intelligence ecosystem. Meanwhile, OpenAI plans to buy Google AI chips to reduce its Nvidia dependence and expand compute supply. The AI chip and embodied intelligence tracks keep heating up.",
+      "source": "界面新闻",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.jiemian.com/article/15257226.html"
+    },
+    {
+      "title": "月之暗面Kimi接入谷歌Gmail、云端硬盘和日历",
+      "titleEn": "Moonshot Kimi Connects Google Gmail, Drive and Calendar",
+      "summary": "月之暗面宣布Kimi接入谷歌Gmail、云端硬盘和日历，用户可直接在Kimi内读取和管理谷歌生态的邮件、文档与日程。这是国产大模型深化海外生态合作、拓展Agent能力边界的一步。",
+      "summaryEn": "Moonshot announced Kimi now connects Google Gmail, Drive and Calendar, letting users read and manage emails, documents and schedules within Kimi. It is a step for domestic LLMs to deepen overseas ecosystem cooperation and expand agent capabilities.",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications"
+    },
+    {
+      "title": "微软计划发债至少250亿美元，投向AI基础设施建设",
+      "titleEn": "Microsoft Plans to Raise at Least $25 Billion for AI Infrastructure",
+      "summary": "消息称微软计划通过美国债券发行筹资至少250亿美元，用于AI基础设施建设。AI巨头正通过大规模举债加码算力军备竞赛，资本开支持续攀升。",
+      "summaryEn": "Microsoft reportedly plans to raise at least $25 billion through US bond issuance to fund AI infrastructure. AI giants are using large-scale debt to fuel the compute arms race, with capex continuing to climb.",
+      "source": "IT之家",
+      "category": "算力",
+      "categoryEn": "Compute"
+    },
+    {
+      "title": "豆包工作向企业客户推出第三方模型服务，接入Kimi、GLM、DeepSeek",
+      "titleEn": "Doubao Work Offers Third-Party Model Services, Including Kimi, GLM and DeepSeek",
+      "summary": "豆包工作向企业客户推出第三方模型服务，可调用Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash等模型。AI办公平台从自有模型走向多模型聚合，企业可按需选择最优模型。",
+      "summaryEn": "Doubao Work launched third-party model services for enterprise customers, allowing calls to Kimi 3.1 Pro, GLM 5.3, DeepSeek V4.1 Flash and more. AI office platforms are moving from proprietary models to multi-model aggregation, letting enterprises choose the best model per task.",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications"
+    }
+  ],
+  "comment": "模型重回第一，但资本开支的账单也来了——谷歌的处境正是整个AI行业的缩影：性能狂奔，利润承压。",
+  "commentEn": "The model is back on top, but the capex bill has arrived — Google's situation mirrors the whole AI industry: performance sprinting, profits under pressure."
+},
+{
   "date": "2026-10-28",
   "title": "AI新闻 | 谷歌发布Genie 4世界模型 + 英伟达30亿美元入股Meta + 博通630亿支持Anthropic + DeepSeek千亿融资收官",
   "titleEn": "AI News | Google Genie 4 World Model + Nvidia's $3B Meta Stake + Broadcom's $63B for Anthropic + DeepSeek's 100B Yuan Round",
