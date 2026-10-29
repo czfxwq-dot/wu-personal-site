@@ -11,6 +11,8 @@ export const ui = {
     navGuestbook: '留言板',
     navSurvey: '调研',
     navAbout: '关于',
+    navSearch: '站内搜索',
+    themeToggle: '切换主题',
 
     // Hero
     heroEyebrow: 'AI 实践者 · 半百观AI主理人',
@@ -110,6 +112,8 @@ export const ui = {
     navGuestbook: 'Guestbook',
     navSurvey: 'Survey',
     navAbout: 'About',
+    navSearch: 'Search site',
+    themeToggle: 'Toggle dark mode',
 
     // Hero
     heroEyebrow: 'AI Practitioner · Founder at 50',

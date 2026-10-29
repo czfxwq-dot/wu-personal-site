@@ -43,7 +43,7 @@ const noteText = lang === 'en'
   : '本文所有引用均可追溯验证，拒绝 AI 幻觉。';
 ---
 
-<section class="platform-citations" data-platform={platform} aria-label="引用来源">
+<section class="platform-citations" data-platform={platform} aria-label={lang === 'en' ? 'Sources cited' : '引用来源'}>
   <h3 class="citations-title">{displayTitle}</h3>
 
   {showSummary && (

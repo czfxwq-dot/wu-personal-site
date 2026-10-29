@@ -457,9 +457,39 @@ def audit_templates():
                     add("低", "模板中文", "%s:%d" % (rel, n), st[:90])
 
 
+ATTR_RE = re.compile(r'\b(title|aria-label|placeholder|alt)\s*=\s*"([^"]*)"')
+
+
+def audit_attrs():
+    """属性里的中文（title / aria-label / placeholder / alt）。
+
+    audit_templates 只查文本节点，而且窗口里一出现 lang 就整片跳过——Base.astro 的
+    导航每个链接都带 lang 三元，同段的 title="站内搜索" 因此一直没报出来。
+    这里单独查属性：英文页（src/pages/en）里的中文属性算中危，
+    共享版式/组件里的算低危（可能只在中文页出现）。
+    """
+    for base in ("src/pages/en", "src/components", "src/layouts"):
+        for dirpath, _, files in os.walk(os.path.join(ROOT, base)):
+            for name in files:
+                if not name.endswith((".astro", ".tsx", ".jsx", ".ts")):
+                    continue
+                path = os.path.join(dirpath, name)
+                rel = os.path.relpath(path, ROOT).replace("\\", "/")
+                sev = "中" if base == "src/pages/en" else "低"
+                for n, line in enumerate(open(path, encoding="utf-8"), 1):
+                    st = line.strip()
+                    if not CJK.search(line) or st.startswith(("//", "*", "/*", "<!--")):
+                        continue
+                    # 不按「这行有没有 lang」跳过：ATTR_RE 只匹配字面量写法 attr="…"，
+                    # 写成表达式的 attr={lang === 'en' ? … : …} 本来就不会命中。
+                    for attr, val in ATTR_RE.findall(line):
+                        if CJK.search(val):
+                            add(sev, "属性中文", "%s:%d" % (rel, n), '%s="%s"' % (attr, val[:60]))
+
+
 # ---------------------------------------------------------------- 输出
 def main():
-    for fn in (audit_articles, audit_diaries, audit_news, audit_templates):
+    for fn in (audit_articles, audit_diaries, audit_news, audit_templates, audit_attrs):
         try:
             fn()
         except Exception as e:  # 单项失败不该让整体崩掉
