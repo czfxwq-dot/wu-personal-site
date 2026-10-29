@@ -13,17 +13,39 @@ const jsonLd = {
   <section class="not-found">
     <div class="container not-found-content">
       <div class="error-code">404</div>
-      <h1>页面不存在</h1>
-      <p class="not-found-text">
+      <h1 id="nf-title">页面不存在</h1>
+      <p class="not-found-text" id="nf-text">
         你访问的页面可能已被移动、删除，或链接已失效。
       </p>
       <div class="not-found-actions">
-        <a href="/" class="btn btn-primary">返回首页 <span class="btn-arrow">→</span></a>
-        <a href="/diary/" class="btn btn-ghost">查看工作日记</a>
+        <a href="/" class="btn btn-primary" id="nf-home">返回首页 <span class="btn-arrow">→</span></a>
+        <a href="/diary/" class="btn btn-ghost" id="nf-diary">查看工作日记</a>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script is:inline>
+  // Cloudflare Pages 对任何不存在的路径都回同一个 404.html，中英文站共用这一份。
+  // 这里按访问路径有没有 /en/ 前缀切成英文，免得英文访客撞见一屏中文。
+  (function () {
+    if (!/^\/en(\/|$)/.test(location.pathname)) return;
+    document.documentElement.lang = 'en';
+    document.title = '404 | Page Not Found — Guanwu';
+    function set(id, html) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    }
+    set('nf-title', 'Page not found');
+    set('nf-text', 'The page you requested may have been moved, deleted, or the link may be broken.');
+    set('nf-home', 'Back to home <span class="btn-arrow">→</span>');
+    set('nf-diary', 'Read the diary');
+    var home = document.getElementById('nf-home');
+    if (home) home.setAttribute('href', '/en/');
+    var diary = document.getElementById('nf-diary');
+    if (diary) diary.setAttribute('href', '/en/diary/');
+  })();
+</script>
 
 <style>
   .not-found {

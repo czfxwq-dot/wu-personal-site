@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && npx pagefind --site docs",
+    "build": "astro build && npx pagefind --site docs && node scripts/gen-sitemap.mjs",
     "preview": "astro preview",
     "check:data": "node scripts/sync-data.mjs check",
     "audit:content": "python scripts/audit-content.py",

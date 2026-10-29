@@ -437,7 +437,7 @@ git push
 | canonical | Base.astro | 每页唯一 canonical URL |
 | OG meta | Base.astro | Facebook/微信分享卡片预览 |
 | Twitter Card | Base.astro | Twitter 分享卡片预览 |
-| sitemap.xml | public/sitemap.xml | 站点地图 |
+| sitemap.xml | 构建时生成（`scripts/gen-sitemap.mjs`） | 站点地图，扫 `docs/` 产物自动生成，别再手改 |
 | robots.txt | public/robots.txt | 爬虫规则 |
 | 国内验证 | Base.astro | 神马/搜狗/360 站长验证 |
 | 腾讯验证 | public/tencent*.txt | 微信/企业微信验证文件 |
