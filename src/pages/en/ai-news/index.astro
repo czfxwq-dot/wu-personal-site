@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/Base.astro';
 import { dailyNewsSummaries } from '../../../data/ai-news-summary';
+import { sourceNameEn } from '../../../data/news-sources';
 import { t } from '../../../i18n/utils';
 
 const allCategories = ['LLM', 'Hardware', 'Industry', 'Investment', 'Policy', 'Research', 'Tools'];
@@ -55,7 +56,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     <div id="news-list">
       {dailyNewsSummaries.map((day) => (
         <div class="news-day" data-date={day.date}
-          data-search={`${day.titleEn || day.title} ${day.summaryEn || day.summary} ${day.commentEn || day.comment} ${day.newsItems.map(n => `${n.titleEn || n.title} ${n.summaryEn || n.summary} ${n.source}`).join(' ')}`.toLowerCase()}>
+          data-search={`${day.titleEn || day.title} ${day.summaryEn || day.summary} ${day.commentEn || day.comment} ${day.newsItems.map(n => `${n.titleEn || n.title} ${n.summaryEn || n.summary} ${sourceNameEn(n.source)}`).join(' ')}`.toLowerCase()}>
           <div class="news-day-header">
             <time datetime={day.date}>{day.date}</time>
             <span class="news-count">{day.newsItems.length} items</span>
@@ -67,13 +68,13 @@ const allDates = dailyNewsSummaries.map(d => d.date);
           <div class="news-items">
             {day.newsItems.map((item) => (
               <div class="news-item" data-category={item.categoryEn || item.category}
-                data-item-search={`${item.titleEn || item.title} ${item.summaryEn || item.summary} ${item.source}`.toLowerCase()}>
+                data-item-search={`${item.titleEn || item.title} ${item.summaryEn || item.summary} ${sourceNameEn(item.source)}`.toLowerCase()}>
                 <div class="news-item-header">
                   <span class="news-item-category" data-category={item.categoryEn || item.category}>{item.categoryEn || item.category}</span>
                   <h3>{item.titleEn || item.title}</h3>
                 </div>
                 <p class="news-item-text">{item.summaryEn || item.summary}</p>
-                <span class="news-item-source">{item.source}</span>
+                <span class="news-item-source">{sourceNameEn(item.source)}</span>
               </div>
             ))}
           </div>

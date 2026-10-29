@@ -390,6 +390,16 @@ def audit_news():
         if len(ds) > 1:
             add("低", "新闻重复", "ai-news-summary.ts", "「%s」出现在 %s" % (t[:40], "、".join(ds)))
 
+    # 英文页的来源名靠 src/data/news-sources.ts 的映射表；数据里出现新来源却没登记，
+    # 英文页就会冒出中文（「… at 24 frames per second. 36氪 Nvidia …」这类）
+    spath = os.path.join(ROOT, "src/data/news-sources.ts")
+    if os.path.exists(spath):
+        mapped = set(re.findall(r"^\s*'([^']+)'\s*:", open(spath, encoding="utf-8").read(), re.M))
+        used = {(it.get("source") or "").strip() for day in data for it in (day.get("newsItems") or [])}
+        for name in sorted(used - mapped - {""}):
+            add("中", "来源名未翻译", "src/data/news-sources.ts",
+                "「%s」没有英文名，英文新闻页会直接显示中文" % name)
+
     # 同一段英文原样出现在多个日期：批量翻译时最容易把上一段带下来（2026-08-15/16 就是这样错的）
     for field in ("titleEn", "summaryEn", "commentEn"):
         seen = {}
