@@ -14,6 +14,117 @@ export interface ArticleEntry {
 
 export const articles: ArticleEntry[] = [
   {
+    slug: '22-wan-ai-dramas',
+    date: '2026-10-29',
+    title: `22万部 AI 剧，只有1055部被人看见`,
+    titleEn: `220,000 AI Dramas, Only 1,055 Got Seen`,
+    excerpt: `上半年抖音上线二十二万一千九百部 AI 剧，一千零五十五部播放破亿。成本降了九成，胜率一分没动。我算了三笔账，又想起十年前的网约车补贴大战。`,
+    excerptEn: `In the first half of the year, Douyin launched 221,900 AI dramas; 1,055 surpassed 100 million plays. Cost fell 90%, but the win rate didn't budge. I did three calculations and thought back to the ride-hailing subsidy war a decade ago.`,
+    tag: 'AI观点',
+    tagEn: 'AI Perspective',
+    contentEn: `<p>One night last month, I was scrolling on my phone and came across a drama. The people on screen were moving their mouths, but the audio lagged half a beat behind, like voices through a fish tank. I thought my internet was glitching, so I backed out and reloaded — same thing. Only later did I realize it wasn't the internet. The drama was just like that.</p>
+
+<p>I watched one episode. Four minutes. I don't remember the plot, only that the protagonist's surname was Long and he kept going "hmph" at everything.</p>
+
+<p>The next day I looked into it and realized I had unwittingly taken part in something enormous: in the first half of this year, Douyin alone launched <strong>221,900</strong> such dramas.</p>
+
+<p>What does 221,900 mean? If I watched one a day without rest, it would take 608 years. Start in the Yongle era of the Ming Dynasty and watch through to today — that's exactly how long.</p>
+
+<p>I don't know whether to be proud of witnessing history or ashamed of only watching four minutes. Later I figured it out: neither matters. What matters is how many of those 220,000 got seen.</p>
+
+<p>The answer: 1,055. Zero point four eight percent.</p>
+
+<p>But I should be upfront: the bar for those 1,055 is "surpassing 100 million plays," not "someone watched to the end." A hundred million plays means the platform pushed it in front of 100 million people. How many actually sat through to minute four is another number, and nobody publishes it.</p>
+
+<p>So my title is a bit dishonest — more precisely it should be "got seen," not "got watched to the end." Being pushed in front of 100 million people already counts as success in this industry.</p>
+
+<p>Below I want to do three calculations.</p>
+
+<hr />
+
+<h2>1. The first account: money saved isn't profit, it's the ticket</h2>
+
+<p>First, costs. A live-action short drama costs 500,000 to 800,000 yuan. An AI-made animated drama costs 50,000 to 240,000. Down 60% to 90%. A friend in the business told me per-minute cost fell from four or five thousand last November to a few hundred now — if you're lucky, under a thousand.</p>
+
+<p>That's a good thing. Technological progress, at bottom, means letting people spend less. The printing press made books cheap, photography made portraits cheap — same logic.</p>
+
+<p>But cheapness has its own temperament. When I was a kid I couldn't afford books, so I read at a rental stall, one fen a book. Later books got genuinely cheap, and the rental stalls disappeared. Because once everyone can buy books, selling books stops being a good business.</p>
+
+<p>Same now. Cost dropping from 500,000 to 50,000 sounds like each producer saved 450,000. But think about it: that 450,000 you saved isn't your profit — it's the ticket price that lets everyone else walk in the door.</p>
+
+<p>Last year at this time, the people who could make animated dramas were a minority; 50,000 was a threshold. This year technology tore down the threshold, and everyone can get in. So the threshold moved — from "can you make it" to "will anyone watch it."</p>
+
+<p>And that move is brutal. Because the first threshold, money could cross; the second one, money can't.</p>
+
+<h2>2. The second account: the platform isn't handing out money, it's handing out rope</h2>
+
+<p>In August, Douyin launched 74,313 new AI short dramas in a single month. The same month last year? 655. Up 110 times.</p>
+
+<p>What does 110 times mean? What took a month last year takes three hours this year.</p>
+
+<p>Supply grew like that, but viewers didn't grow 110 times. People still have two eyes and twenty-four hours a day. So these dramas have to fight over the same thing: one person's patience.</p>
+
+<p>And they fight hard. In July, the median days a drama stayed on the charts was four; in June, six. More and more dramas, less and less time for each to live.</p>
+
+<p>That's when the platform stepped in. On October 19, Volcano Engine launched a "premium AI drama incentive plan," up to 200,000 yuan per drama. Sounds generous. But the rules say: each round, half is cash, the other half is equivalent vouchers — only redeemable for its own API tokens and creation tools.</p>
+
+<p>I don't understand business much, but I understand vouchers. A voucher means you have to come back. Your next drama still has to use its model, still has to air in its yard.</p>
+
+<p>Subsidies were never charity; they're rope. The rope isn't thick, but the direction is clear.</p>
+
+<h2>3. The third account: we think we're choosing dramas, but we're being chosen</h2>
+
+<p>There's one data point I stared at for a long time. Live-action short drama viewers are 61% to 68% female. AI animated drama viewers are 62% male, with 18-34 year-olds over 60%. The overlap in paying users between the two is only 38%.</p>
+
+<p>What does that mean? It means AI animated dramas aren't stealing live-action drama's lunch — they're opening new ground. The people on this ground never watched short dramas before.</p>
+
+<p>Opening new ground is good. Anyone in business knows: fighting over existing share hurts goodwill, growing the pie is worth discussing. So that market growing from 22 billion to 40 billion wasn't snatched from someone's bowl — it grew new.</p>
+
+<p>But I'm still a little uneasy. Because on this new ground, the dramas are fed by the algorithm, not found by you. You open the app, it pushes one; you finish, it pushes the next. You think you're choosing, but really it's testing. Testing until your patience runs out.</p>
+
+<p>In July, Hongguo's daily active users hit 168 million — more than iQIYI, Tencent Video, Youku and Mango TV combined. Four platforms together hold one era's attention; one platform holds another era's.</p>
+
+<p>I'm not saying that's bad. I'm just saying: when something becomes this easy, it's unlikely to be entirely a good thing.</p>
+
+<h2>4. Seventy-seven to one</h2>
+
+<p>Now for the number nobody wants to print on an investor deck.</p>
+
+<p>Of 221,900 dramas, 1,055 surpassed 100 million plays — 0.48%. The industry's accepted break-even line is 50 million plays; 2,886 crossed it — 1.3%. In other words, 98.7% of dramas can't recover their cost.</p>
+
+<p>On average, one drama in seventy-seven makes money. Seventy-seven to one. Harder than the civil-service exam, easier than the lottery — somewhere in between.</p>
+
+<p>The industry knows it too. In April, Hongguo removed 3,522 low-quality animated dramas in one week; by end of April, over 10,000 had been disposed of, for rough visuals, chaotic plots, and lowbrow sensationalism. On September 1, the "Micro-Short Drama Development Management Measures" took effect, drawing eleven red lines.</p>
+
+<p>On one side, 70,000 dramas produced a month; on the other, 10,000 cleaned up. This isn't contradiction — it's filtering. The sieve's holes are wide, but a sieve beats no sieve.</p>
+
+<h2>5. I've seen this before</h2>
+
+<p>I'm fifty. At this age there's one perk: I've seen the same story a few times.</p>
+
+<p>2015, the ride-hailing subsidy war. Both sides burned cash, drivers and riders were happy, and stories of "making 20,000 a month" spread everywhere. Then the merger came, the subsidies vanished, and many people realized they hadn't been driving — they'd been burning someone else's money.</p>
+
+<p>2016 to 2019, the official-account dividend. Anyone could write, and whatever you wrote got read. Three years later, the survivors were the people who were already good writers; the rest were cleaning out their drafts folders.</p>
+
+<p>2020 to 2021, livestream e-commerce. The year the threshold was lowest was the year the most people lost money. I know a guy who bought 300,000 yuan of inventory, livestreamed for four months, and ended up with a room full of laundry detergent.</p>
+
+<p>After three rounds, I saw one thing: <strong>the moment a tool tears down the threshold, competition immediately shifts to beyond the threshold. And what lies beyond the threshold is exactly what the tool can't give you.</strong></p>
+
+<p>In July, a man named Zhao Bin — online handle "Sixty-year-old Uncle Zhao" — sixty years old, nearly forty years in animation — posted a twenty-minute AI feature "Cyber Hero" on Bilibili. It got a huge response. Later Yuewen and Yihua Kaitian approached him and started formal development.</p>
+
+<p>He used the same tools as many of those 220,000. The difference isn't the tool. The difference is that he knows what's worth filming, and how to keep someone from leaving before minute twenty.</p>
+
+<p>So I'm not here to tell anyone to quit. The real-money opportunity exists, and that "one" in seventy-seven-to-one is real. I just want to make one thing clear: <strong>what got dismantled is production; what didn't get dismantled is being seen.</strong></p>
+
+<p>Among those 220,000, the 1,055 won not because they knew how to use the tool, but because they knew what was worth making.</p>
+
+<p>As for me, that night after four minutes I put the phone down. The next day, I picked it up again. That's not weak will. That's the most reliable thing about this industry — it never counts on you to remember, only to come back.</p>
+
+<hr />
+
+<p><em>Data sources: DataEye "2026 H1 AI Animated Drama Data Report," Huafu Securities' October 21, 2026 AI animated drama research report, "China Micro-Short Drama Development Report (2026)," and public media coverage.</em></p>`
+  },
+  {
     slug: 'ai-first-work-experience',
     date: '2026-10-22',
     title: `AI来了，年轻人怎么获得"第一份工作经验"？`,
