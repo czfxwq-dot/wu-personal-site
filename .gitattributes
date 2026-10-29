@@ -1,0 +1,13 @@
+# 统一行尾：仓库内一律 LF，避免 Windows 上出现整仓"已修改"的噪音
+* text=auto eol=lf
+
+# 二进制文件不做任何转换
+*.exe binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.webp binary

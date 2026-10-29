@@ -11,3 +11,5 @@ tmp/
 .astro/
 docs/
 src/data/guestbook.json
+__pycache__/
+*.pyc
