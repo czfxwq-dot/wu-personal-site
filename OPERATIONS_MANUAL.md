@@ -2,10 +2,23 @@
 
 > 本手册面向 AI Agent，包含个人网站的全部运营流程。阅读此手册即可接手日常维护、内容更新、故障排查。
 
-> **⚠️ 交接必读（先看这里）**：接手前，除了本手册，还必须读三份东西，否则会犯同样的错：
+> **⚠️ 交接必读（先看这里）**：接手前，先确认你在正确的文件夹里，再读三份东西，否则会犯同样的错。
+
+> **📍 项目位置（重要）**
+> - ✅ 正式项目绝对路径：`C:\Users\czfxw\Desktop\claude项目\wu-personal-site`
+> - ⚠️ **废弃副本，不要在那里改**：`C:\Users\czfxw\.openclaw\workspace\wu-personal-site`（旧数据，已不同步）、`C:\Users\czfxw\AppData\Roaming\Trae\...\wu-personal-site`（编辑器缓存）
+> - 改代码/数据之前，先 `pwd` 确认你在正式路径下。
+
+> **必读三份文件（相对路径，都在项目根目录往下找）**
 > 1. `templates/diary-standards.md` — 日记写作标准（九节结构 + 观吾/山山协作视角）
 > 2. 本手册第 12 节「关键教训」— 之前踩过的坑
 > 3. 本手册第 13 节「人称与品牌」— 用户=观吾、AI=山山（写日记时）
+
+> **核心目录速查**（都在 `wu-personal-site/` 根目录下）
+> - 内容正文（markdown）：`src/content/articles/`（文章）、`src/content/diaries/`（日记）
+> - 数据注册表（列表页/英文详情读这里）：`src/data/*.ts`
+> - 内容标准：`templates/`
+> - 自动化脚本：`scripts/`
 
 ---
 
