@@ -5277,8 +5277,7 @@ See you in the comments 👇
 
       <div class="article-footer" data-astro-cid-vgwvf3tu>
         <p data-astro-cid-vgwvf3tu>Follow "Banbai Guan AI," a 50-year-old AI practitioner, guiding you through the real world of AI implementation.</p>
-        <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/ai-pentagon-core-systems/" class="prev" data-astro-cid-article-nav>← AI Enters the US Military's Top-Secret Network: When National Infor…</a>
-<a href="/banbaiguan/" class="back" data-astro-cid-article-nav>Back to Article List</a>
+        <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/" class="back" data-astro-cid-article-nav>Back to Article List</a>
 <a href="/banbaiguan/commercial-ai-major/" class="next" data-astro-cid-article-nav>The Nation's First "Commercial AI" Major Is Here… →</a>
 </div>
       </div>`
