@@ -1,6 +1,6 @@
 # 自动推送：把「已提交但未推送」的提交推到 origin/main。
 # 只推提交，绝不碰工作区里未提交的改动——夜间生成的机械稿因此不会被推上线。
-# 由计划任务 BanbaiGuan-AutoPush 每 10 分钟调用一次。
+# 由计划任务 BanbaiGuan-AutoPush 调用（当前是今天 21:42 跑一次；也可手动右键运行）。
 
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location $repo
