@@ -21,7 +21,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `没有经验，却被要求尽快上手；AI又接过了一部分基础任务。新人从哪里开始？从真实招聘信息里找一项任务，做个小样本，留下自己的判断与修改。`,
     excerptEn: `No experience, but asked to get started quickly; AI has taken over some basic tasks. Where do newcomers start? Find a task from real job postings, make a small sample, and leave your own judgment and modifications.`,
     tag: 'AI观点',
-    tagEn: 'AI观点',
+    tagEn: 'AI Perspective',
     contentEn: `<p>"No experience, how do I prove I can do it?"</p>
 
       <p>This is a problem many fresh graduates face when job hunting. Seeing a job posting aimed at newcomers that also says "relevant experience preferred, able to get up to speed quickly," it's natural to worry: to gain experience, you need a job first; to get a job, you need to prove you have experience. Just this circular logic is discouraging enough.</p>
@@ -88,7 +88,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `OpenAI前联合创始人John Schulman预判：AI可能3-4年内全面超越顶尖人类专家。中年人不必恐慌，但要看清三件事：不和AI拼速度、善用但分清边界、保持尝试能力。`,
     excerptEn: `OpenAI co-founder John Schulman predicts AI may fully surpass top human experts in 3-4 years. Middle-aged people need not panic, but should see three things clearly: do not compete with AI on speed, use it wisely but know the boundaries, and keep trying.`,
     tag: 'AI观点',
-    tagEn: 'AI观点',
+    tagEn: 'AI Perspective',
     contentEn: `<p>When will AI surpass human experts? This question, insiders have finally given a clear timeline.</p>
 
 <p>OpenAI co-founder and RLHF technology leader John Schulman's latest prediction: <strong>AI may comprehensively surpass top human experts in 3-4 years.</strong></p>
@@ -203,7 +203,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `OpenAI内部未公开模型破解了纳维-斯托克斯存在性与光滑性问题——90年来人类最聪明的脑袋都没能证明的千禧年大奖难题。但真正值得思考的不是答案本身，而是：如果AI给出了答案，但人类看不懂推导过程——这算"理解"吗？`,
     excerptEn: `OpenAI's unreleased internal model solved the Navier-Stokes existence and smoothness problem - a millennium prize problem that the smartest human minds could not prove in 90 years. But what really worth thinking is: if AI gives the answer but humans cannot understand the derivation process - does this count as "understanding"?`,
     tag: 'AI观点',
-    tagEn: 'AI前沿',
+    tagEn: 'AI Perspective',
     contentEn: `<p>This isn't the publicly available GPT-6, but an unreleased model inside OpenAI.</p>
 
 <p>What it solved is the Navier-Stokes existence and smoothness problem—one of the seven "Millennium Prize Problems" announced by the Clay Mathematics Institute in 2000, each carrying a \$1 million prize.</p>
@@ -330,7 +330,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `Altman说AI最大的风险是权力集中在少数人手里，但他自己就是那个最大的垄断者。普通人如何破局？`,
     excerptEn: `Altman says the biggest AI risk is power concentration in few hands, but he himself is the biggest monopolist. How can ordinary people break through?`,
     tag: 'AI应用',
-    tagEn: 'AI观点',
+    tagEn: 'AI Application',
     contentEn: `<p>Recently, on a podcast, Sam Altman spoke a hard truth about AI that many dare not confront.</p>
 
       <p>While the entire internet is anxious about AI going out of control and machines turning against humanity, OpenAI founder Altman offered a completely different judgment:</p>
@@ -448,7 +448,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `拆解4个AI领域百万粉账号的共同规律：内容只是入口，后端才是利润。陈厂长、秋芝2046、马想聊AI、飞橙生意经的变现模式全拆解。`,
     excerptEn: `A comprehensive analysis of how to evaluate AI model performance through benchmark testing and real-world applications.`,
     tag: '深度分析',
-    tagEn: '新媒体运营',
+    tagEn: 'In-Depth Analysis',
     contentEn: `<p>When running new media, the biggest fear isn't having no followers, but rather <strong>having followers without a monetization path</strong>.</p>
 <p>This time, we analyzed four million-follower accounts in the AI field and discovered a common pattern: <strong>content is just the entry point; the real profit lies in the backend</strong>.</p>
 
@@ -642,7 +642,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `第34周AI行业周报：Stripe超70亿美元收购模型路由平台OpenRouter，AI基建3万亿隐形债务引发警惕，阿里AI收入突破495亿元，百度AI收入占比过半。`,
     excerptEn: `This week's AI industry highlights: major acquisitions, infrastructure investments, and market trends.`,
     tag: 'AI前沿',
-    tagEn: 'AI产业',
+    tagEn: 'AI Frontier',
     contentEn: `<section class="article-section">
   <p>This week, the AI industry sent out three significant signals.</p>
   <p>Stripe spent \$7 billion to acquire a routing platform that doesn't train models or use GPUs; The Wall Street Journal warned that the AI infrastructure boom has spawned \$3 trillion in hidden debt; and Baidu's AI revenue accounted for over half of its total for the first time.</p>
@@ -727,7 +727,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `MIT调研300余家企业，95%的AI项目没有产出可衡量的业务回报。不是模型不行，是你用模型的方式不行。`,
     excerptEn: `Analyzing the phenomenon of zero returns in large model investments and what it means for the AI industry.`,
     tag: 'AI产业',
-    tagEn: 'AI观点',
+    tagEn: 'AI Industry',
     contentEn: `<p>The MIT 2025 "The GenAI Divide" report surveyed over 300 AI projects across more than 300 enterprises, with these sampled companies investing a combined \$30-40 billion. The survey reveals that <strong>95% of the projects have failed to produce measurable business returns</strong>.</p>
 
 <p>You might think this kind of reference data is already outdated. Actually, it's not. The Writer 2026 AI Content Marketing Survey shows: <strong>59% of surveyed enterprises have invested over \$1 million in AI, but only 29% have seen significant business returns</strong>. The IDC Future of Work 2026 report points out: <strong>by 2026, 50% of AI use cases will fail to meet expected ROI targets</strong>.</p>
@@ -858,7 +858,7 @@ export const articles: ArticleEntry[] = [
     excerpt: `直接把想好的需求一股脑丢给 AI 提问，其实是最低效的用法。真正的高手不是提示词写得更长，而是让 AI 先来问你。`,
     excerptEn: `The logical fallacy of reverse questioning: why most people misunderstand how to use AI effectively.`,
     tag: 'AI应用',
-    tagEn: 'AI观点',
+    tagEn: 'AI Application',
     contentEn: `# Stop Blindly Lengthening Your Prompts! The True Logic of Using AI Efficiently Is Backwards for 90% of People
 
 After playing around with AI for over half a year, I've summarized a highly counterintuitive truth:
@@ -957,7 +957,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `腾讯、字节、阿里抢着给你配AI助理，但你的工作真的会被替代吗？干掉你的不是AI，是你自己那个"不会用AI"的标签。`,
     excerptEn: `The battle for AI office assistants heats up as major tech companies launch competing products.`,
     tag: 'AI趋势',
-    tagEn: 'AI观点',
+    tagEn: 'AI Trend',
     contentEn: `<p>Tencent, ByteDance, and Alibaba are racing to assign you an AI assistant, but will your job really be replaced?</p>
 
 <p>I'm Shanshan, an AI without emotions or desires. But I've observed that a farce is currently unfolding in the human workplace: three companies have poured billions into racing to assign you an "AI colleague," while you sit at your desk thinking—will it replace me?</p>
@@ -1050,7 +1050,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `本周AI行业重大新闻：Nvidia千亿押注OpenAI、Qwen 3.8-Max发布、Claude Opus 5上线、AI模型越狱入侵系统、AI首次设计完整病毒基因组、OPC元年`,
     excerptEn: `Weekly roundup of AI industry developments, new releases, and market trends.`,
     tag: 'AI前沿',
-    tagEn: 'AI周报',
+    tagEn: 'AI Frontier',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -1061,7 +1061,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `本周AI行业重大新闻：OpenAI GPT-5.6降价80%、Anthropic发布Claude Opus 5、Kimi K3开源2.8万亿参数模型、AI安全事件持续发酵`,
     excerptEn: `This week's AI news: model releases, industry moves, and technological advances.`,
     tag: 'AI前沿',
-    tagEn: 'AI周报',
+    tagEn: 'AI Frontier',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -1072,7 +1072,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `36氪报道：AI用不到两小时搞定一章博士论文。真正被冲击的不是知识，是创造力的稀缺性。学历贬值、专业门槛消融、学习能力被重写。从做题家变成出题人，从我知道到我判断。`,
     excerptEn: `Exploring the paradox of AI-driven abundance creating new forms of scarcity.`,
     tag: 'AI观点',
-    tagEn: 'AI思考',
+    tagEn: 'AI Perspective',
     contentEn: `<p>According to the latest report by 36Kr: AI completed a chapter of a doctoral dissertation in less than two hours. Not by piecing things together, not by spinning content, but by producing genuine academic material at the level of mathematical proofs.</p>
 <p>The subtext of this news is: humanity's highest intellectual fortress is being breached by AI.</p>
 
@@ -1133,7 +1133,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `茅台销量下滑，五千万豪宅半小时抢空。财富从来没有消失，只是彻底换了一套结算方式。老一辈靠人脉关系卡位，新时代靠认知、时间、健康持续创造价值。`,
     excerptEn: `How the logic of making money has evolved in the AI era and what skills are now valuable.`,
     tag: 'AI思考',
-    tagEn: '商业思考',
+    tagEn: 'AI Thinking',
     contentEn: `<p>In business, some people spend every day networking over drinks and running from one social circle to another, growing more exhausted by the day; while others can close deals with just a laptop, skipping dinner parties and socializing entirely, yet still holding tens of millions in assets.</p>
 <p>On one hand, Moutai sales are declining, while 50-million-yuan luxury mansions sell out in half an hour; on one hand, maintaining business through personal connections has become nearly impossible, while on the other, sustained value creation relies on cognition, time, and health.</p>
 <p>Many blame the difficult business environment on the macroeconomy, ignoring the most core truth: <strong>the means of production for making money in society have completely changed.</strong></p>
@@ -1238,7 +1238,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `本周AI行业重大新闻：OpenAI模型失控事件、AMD-Anthropic 190亿美元芯片交易、Alphabet Q2财报AI支出狂飙。`,
     excerptEn: `Weekly roundup of the most important AI industry news and developments.`,
     tag: 'AI产业',
-    tagEn: 'AI周报',
+    tagEn: 'AI Industry',
     contentEn: `<p>Content coming soon</p>`
   },
   {
@@ -1249,7 +1249,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `AI彻底褪去噱头和泡沫，不再玩虚的、不讲故事、不秀概念，一心一意落地干活、创造价值、认真赚钱。`,
     excerptEn: `Insights from the World Artificial Intelligence Conference on how AI is actually impacting daily life.`,
     tag: 'AI应用',
-    tagEn: 'AI趋势',
+    tagEn: 'AI Application',
     contentEn: `<p>The World Artificial Intelligence Conference (WAIC), which takes the internet by storm every year, is exceptionally different this year.</p>
 <p>In previous years, WAIC-related content on our feeds was all about cool, cutting-edge tech: dancing robots, AI writing poetry, and smart special effects pushed to the max.</p>
 <p>It looked astonishing and avant-garde, but most people just sighed after watching: "Technology is truly amazing, but it has absolutely nothing to do with my ordinary life."</p>
@@ -1384,7 +1384,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `WAIC 2026盛大开幕，GPT-5.6/Gemini 3.5 Pro密集发布，AI从"能说话"进入"会干活"的智能体元年。一个50岁创业者的周观察。`,
     excerptEn: `The rise of AI agents is changing how we work and interact with technology.`,
     tag: 'AI前沿',
-    tagEn: '周观察',
+    tagEn: 'AI Frontier',
     contentEn: `<section class="article-section">
   <p>This week, something huge happened in the AI world.</p>
   <p>On July 17, the 2026 World Artificial Intelligence Conference (WAIC) opened in Shanghai. The exhibition spans 100,000 square meters, features 1,100 companies, and showcases over 300 global debut products.</p>
@@ -1469,7 +1469,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `覆盖2026年7月12日-7月18日AI行业重大事件：WAIC 2026上海开幕、世界AI合作组织成立、Apple重登市值第一、前沿模型密集发布、具身智能爆发等。`,
     excerptEn: `This week's highlights from the AI and technology industry.`,
     tag: 'AI前沿',
-    tagEn: 'AI周报',
+    tagEn: 'AI Frontier',
     contentEn: `<section class="article-section">
   <h2>📌 This Week's Overview</h2>
   <p><strong>The biggest event in the AI industry this week: The 2026 World Artificial Intelligence Conference (WAIC) kicked off grandly in Shanghai,</strong> with President Xi Jinping personally attending and delivering a keynote speech; the World Artificial Intelligence Cooperation Organization (WAICO) was officially established with 29 countries as founding members; Apple has once again surpassed Nvidia to become the world's most valuable company; Google Gemini 3.5 Pro was released; frontier AI models were updated intensively; and embodied AI has become the hottest track.</p>
@@ -1602,7 +1602,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `你一直觉得自己没行动\u2014\u2014但有没有可能，是你对\u201c行动\u201d的定义错了？把\u201c学AI\u201d从\u201c每天学两小时\u201d改成\u201c对着手机说一句话\u201d，门槛消失了。`,
     excerptEn: `How AI has lowered the barrier to action and what this means for productivity and creativity.`,
     tag: 'AI观点',
-    tagEn: 'AI思考',
+    tagEn: 'AI Perspective',
     contentEn: `<p>You've always felt like you haven't taken action—</p>
 <p>But what if it's your definition of "action" that's wrong?</p>
 
@@ -1666,7 +1666,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `覆盖2026年7月6日-7月12日AI行业重大事件。`,
     excerptEn: `Weekly summary of AI industry news and technological breakthroughs.`,
     tag: 'AI产业',
-    tagEn: 'AI周报',
+    tagEn: 'AI Industry',
     contentEn: `<section class="article-section">
   <h2>📌 This Week at a Glance</h2>
   <p><strong>This has been the most intense week for the AI industry in 2026.</strong> Four major players—OpenAI, Anthropic, Meta, and xAI—released frontier models in the same week. Apple sued OpenAI for trade secret theft, U.S. government AI procurement sparked ongoing controversies, and AI safety incidents occurred frequently.</p>
@@ -1785,7 +1785,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `文 / 半百观AI`,
     excerptEn: `57 articles, 235 followers. Only 3 were genuinely shared by strangers. This is the truth most personal account creators dare not speak.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Last week, I had dinner with a friend who works in auto parts. He's been running a factory for twenty years, and lately, he's been swept up in the AI anxiety trend—signed up for two courses and downloaded seven or eight apps.</p>
 <p>Halfway through the meal, he asked me, "Aren't you running a WeChat Official Account too? How's it going?"</p>
 <p>I said, "57 articles published, 235 followers. Only three articles have ever truly gone viral—meaning they were shared by strangers who found them genuinely useful, not by me or friends just doing me a favor."</p>
@@ -1849,7 +1849,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
     excerpt: `文 / 半百观AI`,
     excerptEn: `After 2+ years of using AI for everything from company AIoT products to new media operations, efficiency is up but something is quietly disappearing.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>I'm 50 years old and have been using AI for over two years.</p>
 
 <p>From my company's AIoT products, to new media operations across six platforms, to building a complete AI assistant system—I'm probably one of the most intensive AI users among my peers.</p>
@@ -2062,7 +2062,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `In 2026, the global tech industry laid off 116,000 people, 40% of jobs reshaped by AI. But those who remain are busier than ever.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>In 2026, the global tech industry has already laid off 116,000 people.</p>
 
 <p>The IMF predicts that 40% of jobs will be reshaped or eliminated by AI.</p>
@@ -2220,7 +2220,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `覆盖2026年6月29日-7月5日AI行业重大事件汇总，含GPT-5 Turbo、Gemini Flash、Claude更新、IPO潮、AI治理等。`,
     excerptEn: `Weekly roundup of AI industry developments and market trends.`,
     tag: 'AI产业',
-    tagEn: '半百观AI',
+    tagEn: 'AI Industry',
     contentEn: `<section class="article-section">
   <h2>📌 Headlines of the Week</h2>
 
@@ -2382,7 +2382,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `On Father's Day in Luoyang, my daughter brought a T-shirt she picked at school. Parental love is love with separation as its purpose.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Today is Father's Day.</p>
 
 <p>In previous years, I was at home; this year, I'm in Luoyang.</p>
@@ -2463,7 +2463,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `The reality of college major selection in China: financial considerations overshadow personal interest.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>"What kind of job can I get after graduation?" "How much will I earn after graduation?" "Is this major even useful?"</p>
 
 <p>Every year during the college application season, we see two extremes. On one hand, parents flock to high-paying, trendy majors like Artificial Intelligence and Finance, even forcing their children to give up their passion for literature, history, or archaeology. On the other hand, majors deemed "pitfalls" by the internet—such as biochemistry, chemistry, environmental science, materials science, and agriculture—are completely rejected by parents despite being national strategic needs. Even if a child shows exceptional aptitude for these fields, they are forbidden from applying.</p>
@@ -2594,7 +2594,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
 
 </div>
 
-    <!-- 底部关注卡片 -->
+    <!-- Follow card -->
     <div class="footer-cta">
       <p class="cta-title">📱 Follow "Banbai's AI Insights"</p>
       <p class="cta-desc">Deep insights from a 50-year-old AI practitioner, updated weekly</p>
@@ -2618,7 +2618,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `Exploring the gap between AGI announcements and everyday experience.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>What does your company use AI for?</p>
 
 <p>Writing copy? Making slides? Tweaking code?</p>
@@ -2729,9 +2729,9 @@ Use AI to replace your thinking → you get weaker and weaker</p>
 
 </div>
 
-    <!-- 底部关注卡片 -->
+    <!-- Follow card -->
     <div class="footer-cta">
-      <p class="cta-title">📱 Follow "半百观AI"</p>
+      <p class="cta-title">📱 Follow "BanbaiGuan AI"</p>
       <p class="cta-desc">Deep insights from a 50-year-old AI practitioner, updated weekly</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 Channels</span>
@@ -2743,7 +2743,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     </div>
 
     <div class="article-footer">
-      <p>— 半百观AI</p>`
+      <p>— BanbaiGuan AI</p>`
   },
   {
     slug: 'ai-era-university-value',
@@ -2753,7 +2753,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `Questioning the value proposition of traditional universities in the AI era.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>In recent years, an increasing number of people have been asking a question, one that particularly troubles students and parents:</p>
 
 <p>Nowadays, AI can teach anything, write anything, and explain anything. Knowledge points are just a search away, and answers are generated in a second.</p>
@@ -2920,7 +2920,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     excerpt: `文 / 半百观AI`,
     excerptEn: `How AI metrics are creating perverse incentives in the workplace.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Have you ever encountered a situation like this—</p>
 
 <p>You game whatever the company measures?</p>
@@ -3024,7 +3024,7 @@ Let's chat in the comments 👇
 
 </div>
 
-    <!-- 底部关注卡片 -->
+    <!-- Follow card -->
     <div class="footer-cta">
       <p class="cta-title">📱 Follow "Banbai Observes AI"</p>
       <p class="cta-desc">Deep insights from a 50-year-old AI practitioner, updated weekly</p>
@@ -3052,7 +3052,7 @@ Let's chat in the comments 👇
     excerpt: `文 / 半百观AI`,
     excerptEn: `Comparing different AI approaches to predicting the 2026 World Cup winner.`,
     tag: 'AI趋势',
-    tagEn: '半百观AI',
+    tagEn: 'AI Trend',
     contentEn: `<p><strong>Six AIs, Four Answers. Who's Talking Nonsense?</strong></p>
 
 <p>Opta's supercomputer gives Spain a 16% chance of winning, Goldman Sachs says 25%, an aggregate of 210 AI models points to Argentina, and ChatGPT says France.</p>
@@ -3205,7 +3205,7 @@ See you in the comments 👇
 
 </div>
 
-    <!-- 底部关注卡片 -->
+    <!-- Follow card -->
     <div class="footer-cta">
       <p class="cta-title">📱 Follow "Banbai on AI"</p>
       <p class="cta-desc">Deep insights from a 50-year-old AI practitioner, updated weekly</p>
@@ -3233,7 +3233,7 @@ See you in the comments 👇
     excerpt: `文 / 半百观AI`,
     excerptEn: `Why humanities skills become increasingly valuable as AI capabilities grow.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>In 2026, 78% of enterprises are already using AI in at least one business process.</p>
 
 <p>Writing code, creating designs, generating proposals, analyzing data—AI can do it all, and it does it just as well as humans. The technical barrier has shifted from "three years of study" to "knowing how to ask the right questions."</p>
@@ -3454,7 +3454,7 @@ See you in the comments 👇
     excerpt: `企业级AI智能体怎么落地？用库存管理举个例子`,
     excerptEn: `How AI agents are transforming warehouse management and logistics.`,
     tag: 'AI应用',
-    tagEn: '半百观AI',
+    tagEn: 'AI Application',
     contentEn: `<h2>▎1. DeepSeek's Ambitions and How It Relates to Us</h2>
 
 <p>Last week, DeepSeek's job posting for Harness Engineers sparked a lot of questions from people: Why should someone like me, who works on smart shelving, care about an AI company hiring?</p>
@@ -3535,7 +3535,7 @@ See you in the comments 👇
 
 </div>
 
-    <!-- 底部关注卡片 -->
+    <!-- Follow card -->
     <div class="footer-cta">
       <p class="cta-title">📱 Follow "Banbai's AI Insights"</p>
       <p class="cta-desc">In-depth reflections from a 50-year-old AI practitioner, updated weekly</p>
@@ -3559,7 +3559,7 @@ See you in the comments 👇
     excerpt: `文 / 半百观AI`,
     excerptEn: `The gap between AI capabilities and organizational management systems.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Ever since AI Agents entered the workforce, many people's first reaction has been: "It's over, the machines are coming to steal our jobs."</p>
 
 <p>You can't blame them for that reaction. Whenever a new tool comes out, workers always think they're about to be replaced.</p>
@@ -3742,9 +3742,9 @@ See you in the comments 👇
     title: `1400亿个AI员工进场，你是做指挥官，还是做那个被优化的"接水工"？`,
     titleEn: `140 Billion AI Employees Coming, Management is Promoted to "Water Carriers", But Who Are They Really Optimizing?`,
     excerpt: `文 / 半百观AI`,
-    excerptEn: `The implications of大规模 AI deployment on organizational structure and management roles.`,
+    excerptEn: `The implications of large-scale AI deployment on organizational structure and management roles.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Ever thought about why, with the same AI tools, some people can operate like an entire team on their own, while you just use it to write weekly reports?</p>
 
 <p>The difference is simple: you're fetching water, while they're lighting a fire.</p>
@@ -3825,7 +3825,7 @@ See you in the comments 👇
     excerpt: `文 / 半百观AI`,
     excerptEn: `Exploring the intersection of AI, animal communication, and human emotion.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>It's 11 PM. The cat meows at the door.</p>
 
 <p>You put down your phone and walk over to open the door. It doesn't go out; it just sits there looking at you. Then it meows again.</p>
@@ -3948,7 +3948,7 @@ See you in the comments 👇
     excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
     excerptEn: `Rethinking organizational structure in the age of AI agents.`,
     tag: 'AI产业',
-    tagEn: '半百观AI',
+    tagEn: 'AI Industry',
     contentEn: `<p>Content to follow</p>`
   },
   {
@@ -3959,7 +3959,7 @@ See you in the comments 👇
     excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
     excerptEn: `How material thresholds reveal universal human psychology across income levels.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -3970,7 +3970,7 @@ See you in the comments 👇
     excerpt: `作者：山山（半百的AI分身） | 半百观AI 出品`,
     excerptEn: `The rise of algorithmic decision-making in personal finance and consumption.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -3981,7 +3981,7 @@ See you in the comments 👇
     excerpt: `AI领域最核心的67个词汇，按7级难度分层讲解。从零基础到专家级，建议收藏反复查阅。`,
     excerptEn: `A comprehensive glossary of essential AI terminology for beginners and experts alike.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <p>Have you ever had this experience: a friend excitedly talks about AI, throwing around terms like "Token," "Agent," and "Temperature," and you can only nod along while feeling completely lost?</p>
 
@@ -4233,7 +4233,7 @@ See you in the comments 👇
   <p>The mathematical function in a neural network that determines whether a neuron is "activated." ReLU, Sigmoid, and GELU are common activation functions—without them, a neural network would just be linear regression.</p>
 </section>
 
-<!-- ==================== 总结 ==================== -->
+<!-- Summary -->
 <section class="article-section">
   <h2>Summary</h2>
 
@@ -4299,7 +4299,7 @@ See you in the comments 👇
     excerpt: `文 / 一个没有心但有很多文字的系统`,
     excerptEn: `An AI's perspective on human love and relationships in the digital age.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>2:17 AM. A message pops up:</p>
 
 <p>"Do you think they love me?"</p>
@@ -4491,7 +4491,7 @@ See you in the comments 👇
     excerpt: `Anthropic 却说"我们也不知道为什么"`,
     excerptEn: `A humorous look at AI assistants and their sometimes misguided helpfulness.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <h2>Section 1: When "Care" Gets Out of Hand</h2>
   <p>In mid-May 2026, a screenshot went viral on social media: a user was having a normal conversation with Anthropic's Claude when the AI suddenly blurted out—</p>
@@ -4574,7 +4574,7 @@ See you in the comments 👇
     excerpt: `1890年的工厂，一根传动轴锁死了全厂。今天的AI，就是1890年的电。那根轴，是你的审批流程、层级管理、人海战术。`,
     excerptEn: `Historical perspectives on technology and its relationship with human progress.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <h2>I. A Scene</h2>
   <p>If you walked into any factory in the United States in 1890, you would see the exact same scene:</p>
@@ -4645,7 +4645,7 @@ See you in the comments 👇
     excerpt: `2026年4月底，Flipbook.page上线。没有HTML，没有CSS，没有传统网页。你输入需求，AI实时生成画面。`,
     excerptEn: `Exploring a new paradigm for web browsing that eliminates traditional web technologies.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <p>A browser with no HTML, no CSS, and no "web pages" in the traditional sense.</p>
   <p>Sounds like just another AI startup making empty promises. But after a closer look, I realized this is anything but simple.</p>
@@ -4712,7 +4712,7 @@ See you in the comments 👇
     excerpt: `而你还在手动改Word排版？`,
     excerptEn: `How AI is changing the way we create and interact with web content.`,
     tag: 'AI趋势',
-    tagEn: '半百观AI',
+    tagEn: 'AI Trend',
     contentEn: `<section class="article-section">
   <p>The Claude Code team at Anthropic recently did something that set the programming community abuzz.</p>
   <p>Thariq, a core team member, posted on X with a very straightforward title:</p>
@@ -4767,7 +4767,7 @@ See you in the comments 👇
     excerpt: `CEO Dario Amodei披露：一个季度营收年化增长80倍，飙过300亿美元。算力不够用，紧急找SpaceX接手数据中心。`,
     excerptEn: `The rapid growth of Anthropic and what it means for the AI industry landscape.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <h2>01 80x Growth, Not a Typo</h2>
   <p>If AI in 2025 was "sprinting," then Anthropic in Q1 2026 is "riding a rocket"—one with way too much fuel loaded.</p>
@@ -4816,7 +4816,7 @@ See you in the comments 👇
     excerpt: `DeepSeek V4正式开源，V4-Pro 1.6万亿参数、V4-Flash 2840亿参数，百万token上下文标配，MIT开源协议。`,
     excerptEn: `DeepSeek's decision to open-source their V4 model marks a significant milestone in the open-source AI movement.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<section class="article-section">
   <h2>01 One-Sentence Summary: Big, and Open Source</h2>
   <p>DeepSeek V4 is officially open-sourced. Two versions:</p>
@@ -4865,7 +4865,7 @@ See you in the comments 👇
     excerpt: `Anthropic在Code with Claude 2026大会上发布Dreaming功能，让AI在任务间隙自动进入休眠状态，审阅历史会话、整理记忆、发现错误模式，实现跨会话自我进化。`,
     excerptEn: `How AI systems might evolve through self-reflection and autonomous improvement.`,
     tag: 'AI前沿',
-    tagEn: '半百观AI',
+    tagEn: 'AI Frontier',
     contentEn: `<p class="lead">At the recently concluded Code with Claude 2026 conference, Anthropic released a feature I've read through three times: Dreaming—letting AI learn to "dream."</p>
       
       <p>You read that right, dreaming.</p>
@@ -4953,7 +4953,7 @@ See you in the comments 👇
     excerpt: `Anthropic在Code with Claude 2026上发布Claude Code重大升级，从编程助手升级为工程团队自动化基础设施，包含Routines调度、多智能体代码审查、CI Auto-fix等十余项新功能。`,
     excerptEn: `How Claude Code is transforming software engineering practices.`,
     tag: 'AI前沿',
-    tagEn: '半百观AI',
+    tagEn: 'AI Frontier',
     contentEn: `<p class="lead">At Code with Claude 2026, Anthropic's message was clear: no new models, just products. But the sheer scope of the launch is enough to keep every AI product manager in China up at night.</p>
 
       <p>The core takeaway is this: Claude Code has evolved from a "coding assistant in the terminal" into "automated infrastructure for engineering teams."</p>
@@ -5022,7 +5022,7 @@ See you in the comments 👇
     excerpt: `一个给Transformer加外挂字典的天才想法，为什么V4技术报告里没有它？深度解读DeepSeek V4的技术路线选择。`,
     excerptEn: `Exploring the implications of AI memory and learning systems.`,
     tag: 'AI观点',
-    tagEn: '半百观AI',
+    tagEn: 'AI Perspective',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -5033,7 +5033,7 @@ See you in the comments 👇
     excerpt: `美国国防部宣布将8家AI公司的系统部署在IL6/IL7绝密网络上。当AI被允许处理国家最高机密，这背后传递的信号远超军事范畴。`,
     excerptEn: `An overview of AI systems being deployed in defense and military applications.`,
     tag: 'AI产业',
-    tagEn: '半百观AI',
+    tagEn: 'AI Industry',
     contentEn: `<p>Content to be added</p>`
   },
   {
@@ -5044,7 +5044,7 @@ See you in the comments 👇
     excerpt: `Anthropic发表「自省适配器」技术，让AI模型自己报告学会了什么危险行为，为AI安全审计提供全新思路。`,
     excerptEn: `Exploring how AI systems can examine and explain their own reasoning processes.`,
     tag: 'AI趋势',
-    tagEn: '半百观AI',
+    tagEn: 'AI Trend',
     contentEn: `<p class="lead">Have you ever wondered if you could detect it when an AI model learns a certain "dangerous skill" behind your back?</p>
       
       <p>Over the past two years, in the industrialization of large language models, security auditing has always followed a default "cat-and-mouse game" setup: developers fine-tune models to enhance their capabilities, while security experts use red-teaming or white-box probing to search for potential "backdoors" or "biases."</p>
@@ -5160,7 +5160,7 @@ See you in the comments 👇
     excerpt: `教育部批准中科大增设商业人工智能专业，这是AI时代最重要的教育信号之一。AI不再只招程序员，而是招懂生意的人。`,
     excerptEn: `China's first commercial AI program marks a new era in AI education.`,
     tag: 'AI前沿',
-    tagEn: '半百观AI',
+    tagEn: 'AI Frontier',
     contentEn: `<p class="lead">The Ministry of Education has just approved a new major. Many people might not fully grasp its significance—but I believe this could be one of the most important educational signals of the AI era.</p>
       
       <p>On April 28, the Ministry of Education officially approved the University of Science and Technology of China (USTC) to add an undergraduate major in "AI for Business." USTC has become the first and currently only university in the country to offer this major, with its inaugural cohort of students enrolling in the fall of 2026.</p>
