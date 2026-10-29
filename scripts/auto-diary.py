@@ -373,11 +373,50 @@ def sync_diaries_ts(diary, date_str):
     return True
 
 
+def push_pending_commits():
+    """把「已提交但未推送」的改动推上去。
+
+    只推提交，工作区里未提交的改动（比如刚生成的机械稿）不会被带上线。
+    这条任务本来就在观吾这台 Windows 上、用他的账号跑，凭据是现成的，
+    所以夜间可以顺手把白天攒下的提交推掉，不需要人再点一次。
+    任何失败都只记日志，不中断日记生成。
+    """
+    repo = Path(__file__).resolve().parent.parent
+    try:
+        lock = repo / '.git' / 'index.lock'
+        if lock.exists() and lock.stat().st_size == 0:
+            lock.unlink()
+            logger.info("清理了残留的空 index.lock")
+
+        subprocess.run(['git', 'fetch', '--quiet', 'origin'], cwd=str(repo),
+                       timeout=90, capture_output=True)
+        r = subprocess.run(['git', 'rev-list', '--count', 'origin/main..HEAD'],
+                           cwd=str(repo), timeout=30, capture_output=True,
+                           text=True, encoding='utf-8', errors='replace')
+        ahead = int((r.stdout or '0').strip() or '0')
+        if ahead <= 0:
+            logger.info("没有待推送的提交")
+            return
+
+        p = subprocess.run(['git', 'push', 'origin', 'main'], cwd=str(repo),
+                           timeout=180, capture_output=True,
+                           text=True, encoding='utf-8', errors='replace')
+        if p.returncode == 0:
+            logger.info(f"已推送 {ahead} 个提交")
+        else:
+            logger.warning(f"推送失败（{ahead} 个待推）: {(p.stderr or '')[:300]}")
+    except Exception as e:
+        logger.warning(f"推送步骤出错，跳过: {e}")
+
+
 def main():
     today = datetime.now().strftime('%Y-%m-%d')
     logger.info("=" * 60)
     logger.info(f"自动日记生成器 v4.0 启动 - {today}")
     logger.info("=" * 60)
+
+    # 先推送白天攒下的提交，再生成今天的日记
+    push_pending_commits()
 
     try:
         md_path = Path(f"../src/content/diaries/{today}.md")
