@@ -11,6 +11,7 @@
 import subprocess
 import logging
 import random
+import json
 from datetime import datetime
 from pathlib import Path
 
@@ -184,10 +185,10 @@ def generate_diary(stats, date_str):
 
     content_zh = f"""---
 date: {date_str}
-title: "{title}"
-titleEn: "{title_en}"
-summary: {desc}
-summaryEn: {desc_en}
+title: {_yaml_str(title)}
+titleEn: {_yaml_str(title_en)}
+summary: {_yaml_str(desc)}
+summaryEn: {_yaml_str(desc_en)}
 category: 工作
 categoryEn: Work
 dayNum: {days}
@@ -339,6 +340,13 @@ energy: {energy}
 def _esc(s):
     """转义可能破坏 diaries.ts 反引号字符串的字符"""
     return s.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
+
+
+def _yaml_str(s):
+    """把字符串安全地写成 YAML 双引号标量。
+    摘要里出现「冒号+空格」「#」「引号」时，裸值会被 YAML 误解析（曾导致 CI 构建失败），
+    统一用 JSON 编码（JSON 字符串是合法的 YAML 双引号标量）。"""
+    return json.dumps(str(s), ensure_ascii=False)
 
 
 def sync_diaries_ts(diary, date_str):
