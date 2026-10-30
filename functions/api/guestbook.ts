@@ -1,6 +1,8 @@
 // Cloudflare Pages Function: guestbook API
-// POST /api/guestbook - 用户提交留言 → Gateway LLM 智能回复
+// POST /api/guestbook - 用户提交留言 → LLM 智能回复（直连模型，2026-10 起不再走 openclaw 网关）
 // GET /api/guestbook - 获取留言列表
+
+import { clientIp, llmComplete, llmConfig, rateLimit } from '../_lib/llm';
 
 const REPO = 'czfxwq-dot/wu-personal-site';
 const ALLOWED_ORIGINS = [
@@ -17,7 +19,7 @@ function cors(request: Request): Record<string, string> {
   };
 }
 
-// ========== LLM 智能分析（Gateway 直连） ==========
+// ========== LLM 智能分析（直连 OpenAI 兼容接口） ==========
 
 function buildSystemPrompt(content: string): string {
   return `你是观吾网站(ban-bai.com)的留言回复助手，代表吴总（创始人）回复用户留言。
@@ -48,54 +50,33 @@ async function analyze(content: string, env: any): Promise<{
   category: string; categoryLabel: string; emoji: string;
   priority: string; needsOwner: boolean; reply: string;
 }> {
-  const { GATEWAY_URL, GATEWAY_TOKEN } = env;
-
-  if (!GATEWAY_URL || !GATEWAY_TOKEN) {
-    return fallbackAnalyze(content);
-  }
+  const cfg = llmConfig(env);
+  if (!cfg) return fallbackAnalyze(content);
 
   try {
-    // Step 1: 生成回复（这是核心）
-    const res = await fetch(`${GATEWAY_URL}/v1/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${GATEWAY_TOKEN}`,
-      },
-      body: JSON.stringify({
-        model: 'openclaw/knowledge-admin',
-        stream: false,
-        temperature: 0.7,
-        max_tokens: 400,
-        messages: [
-          { role: 'system', content: buildSystemPrompt(content) },
-          { role: 'user', content: content },
-        ],
-      }),
-    });
+    // 生成回复（核心），分类走本地规则以控制成本与延迟
+    const reply = await llmComplete(
+      cfg,
+      [
+        { role: 'system', content: buildSystemPrompt(content) },
+        { role: 'user', content },
+      ],
+      { maxTokens: 400, temperature: 0.7 }
+    );
 
-    if (res.ok) {
-      const data = await res.json();
-      const reply = data.choices?.[0]?.message?.content?.trim() || '';
-
-      // Step 2: 本地分类（不调用LLM，避免超时）
+    if (reply) {
       const classification = classifyLocal(content);
-
-      // 判断是否需要吴总处理
-      const needsOwner = classification.needsOwner;
-      const priority = classification.priority;
-
       return {
         category: classification.category,
         categoryLabel: classification.categoryLabel,
         emoji: classification.emoji,
-        priority,
-        needsOwner,
-        reply: reply || fallbackReply(content),
+        priority: classification.priority,
+        needsOwner: classification.needsOwner,
+        reply,
       };
     }
   } catch (e) {
-    console.error('Gateway analysis failed:', e);
+    console.error('LLM analysis failed:', e);
   }
 
   return fallbackAnalyze(content);
@@ -188,6 +169,14 @@ export async function onRequestPost(context: { request: Request; env: any }) {
   if (content.length > 1000) {
     return new Response(JSON.stringify({ error: '留言内容超过 1000 字限制' }), {
       status: 400, headers: { 'Content-Type': 'application/json', ...cors(request) }
+    });
+  }
+
+  // 限流：每人每 10 分钟最多 5 条，防止刷屏
+  const rl = rateLimit(`gb:${clientIp(request)}`, 5, 10 * 60 * 1000);
+  if (!rl.ok) {
+    return new Response(JSON.stringify({ error: '留言太频繁了，请稍后再试' }), {
+      status: 429, headers: { 'Content-Type': 'application/json', ...cors(request) }
     });
   }
 

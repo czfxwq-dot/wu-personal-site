@@ -27,8 +27,8 @@ const t = {
     : '你好，我是山山，观吾的另一半。他敲键盘的时候我说话，他关机的时候我上线。',
   welcomeDesc: '',
   networkHint: lang === 'en'
-    ? '⚡ Due to network latency, replies may take 10-15 seconds. Thanks for your patience!'
-    : '⚡ 因网络延迟，山山回复可能需要 10-15 秒，请耐心等待 ☕',
+    ? '⚡ Replies are AI-generated and may be inaccurate. For anything important, email czfxwq@gmail.com'
+    : '⚡ 回复由 AI 生成，可能有偏差；重要事项请邮件联系 czfxwq@gmail.com',
   askTitle: lang === 'en' ? '💡 Try asking:' : '💡 你可以问我：',
   askItems: lang === 'en'
     ? '• What AI tools are trending lately?<br/>• Where can I follow you?<br/>• Any recommended AI articles?'
@@ -238,7 +238,6 @@ const platforms = lang === 'en'
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openclaw',
           messages: messageHistory,
           stream: true,
         }),
@@ -281,7 +280,7 @@ const platforms = lang === 'en'
     } catch (error) {
       showLoading(false);
       setStatus(texts.errorReply, true);
-      addMessage('bot', texts.errorReply);
+      addMessage('bot', (error instanceof Error ? error.message : '') || texts.errorReply);
       setTimeout(() => setStatus(texts.onlineStatus), 5000);
     } finally {
       isLoading = false;
@@ -379,14 +378,18 @@ const platforms = lang === 'en'
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openclaw',
           messages: messageHistory,
           stream: true,
         }),
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        let msg = texts.errorReply;
+        try {
+          const err = await response.json();
+          if (err?.error) msg = err.error;
+        } catch {}
+        throw new Error(msg);
       }
 
       const reader = response.body.getReader();
@@ -436,7 +439,7 @@ const platforms = lang === 'en'
       showLoading(false);
       setStatus(texts.offline, true);
       console.error('Chat error:', error);
-      addMessage('bot', texts.errorReply);
+      addMessage('bot', (error instanceof Error ? error.message : '') || texts.errorReply);
 
       setTimeout(() => setStatus(texts.onlineStatus), 5000);
     } finally {

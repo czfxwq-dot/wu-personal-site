@@ -368,37 +368,47 @@ npm run fix:data
 
 ### ChatWidget 后端
 
-`functions/api/chat.ts` 代理请求到 OpenClaw Gateway。
+`functions/api/chat.ts` 直连 OpenAI 兼容接口（默认 DeepSeek），**不再依赖 openclaw 网关和 cloudflared 隧道**（2026-10-30 重构）。
 
-| 环境变量 | 用途 |
-|---------|------|
-| `GATEWAY_URL` | OpenClaw Gateway 地址 |
-| `GATEWAY_TOKEN` | 访问令牌 |
+| 环境变量 | 必填 | 说明 |
+|---------|------|------|
+| `LLM_API_KEY` | ✅ | DeepSeek 的 API Key（也接受别名 `DEEPSEEK_API_KEY`） |
+| `LLM_BASE_URL` | — | 默认 `https://api.deepseek.com/v1` |
+| `LLM_MODEL` | — | 默认 `deepseek-chat` |
 
-**重要**：如果 Gateway URL 变更（cloudflared 隧道重建），运行 `scripts/update-tunnel-url.sh` 更新，并重新部署。
+换成通义千问/智谱等其它 OpenAI 兼容服务时，**只改这三个环境变量，不用改代码**。
+
+共用调用层在 `functions/_lib/llm.ts`（含限流）；留言板自动回复 `functions/api/guestbook.ts` 复用同一层。
+
+**人设与知识**：山山的系统提示词在 `chat.ts` 的 `BASE_PROMPT`；站内最新文章/新闻/日记来自构建时生成的 `/api/site-context.json`（`src/pages/api/site-context.json.ts`），每次部署自动更新，Function 侧缓存 30 分钟。
+
+**限流**：聊天 20 次/10 分钟/IP，留言 5 条/10 分钟/IP（单 isolate 内存计数，削峰用，非严格全局配额）。
 
 ---
 
 ## 6. API 维护
 
-### 6.1 /api/chat（聊天代理）
+### 6.1 /api/chat（聊天接口）
 
-- 文件：`functions/api/chat.ts`
+- 文件：`functions/api/chat.ts`（共用层 `functions/_lib/llm.ts`）
 - 运行时：Cloudflare Pages Function
-- 配置：环境变量在 Cloudflare Dashboard 设置
+- 配置：环境变量在 Cloudflare Dashboard → Pages → wu-personal-site → Settings → Environment variables
 
 **检查是否正常**：
-1. 在 Cloudflare Dashboard → Pages → wu-personal-site → Settings → Functions
-2. 确认 `GATEWAY_URL` 和 `GATEWAY_TOKEN` 值有效
-3. 在网站上打开聊天组件，发送测试消息
-
-**修复方法**：
+1. 命令行直接测接口：
 ```bash
-# 更新隧道 URL（如果 Gateway 换了地址）
-bash scripts/update-tunnel-url.sh
-git add functions/api/chat.ts
-git commit -m "fix: 更新 chat Gateway URL"
-git push
+curl -s -X POST https://www.ban-bai.com/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message":"你好"}' | head -5
+```
+正常会返回 `data: {"choices":[{"delta":{"content":"..."}}]}` 流；缺 Key 时返回「山山的模型服务还没配置」。
+2. 在网站上打开聊天组件，发一条测试消息
+
+**换模型 / 换服务商**：
+```bash
+# 只改 Cloudflare 环境变量即可，不用改代码
+# LLM_API_KEY / LLM_BASE_URL / LLM_MODEL
+# 改完不需要重新部署，下次请求即生效
 ```
 
 ### 6.2 /api/guestbook（留言板）
@@ -482,10 +492,12 @@ Cloudflare Pages 有缓存。解决方案：
 
 ### 8.3 聊天组件无法使用
 
-1. 检查 `functions/api/chat.ts` 中的 `GATEWAY_URL` 是否有效
-2. 在 Cloudflare Pages Functions 日志中查看错误
-3. 确认 OpenClaw Gateway 正在运行
-4. 运行 `bash scripts/update-tunnel-url.sh` 更新隧道 URL
+1. 用 `curl` 直接打 `/api/chat`（见 6.1），看返回的错误文案：
+   - 「山山的模型服务还没配置」→ Cloudflare 环境变量缺 `LLM_API_KEY`
+   - 「提问太频繁了」→ 限流触发，等几分钟或换个网络
+   - 「一时没接上话」→ 上游模型报错，去 Cloudflare Pages Functions 日志看 `LLM upstream error`（多半是 Key 失效或余额用完）
+2. 确认 `LLM_MODEL` 是服务商实际提供的模型名（DeepSeek 是 `deepseek-chat`）
+3. **注意**：openclaw 网关和 cloudflared 隧道已于 2026-10-30 彻底废弃，不要再按旧办法排查隧道地址
 
 ### 8.4 数据不一致（页面存在但未注册）
 
@@ -590,7 +602,7 @@ git push
 
 - `sync-data.mjs`：数据同步检查 + 自动修复
 - `pre-deploy-guard.sh`：部署前安全检查
-- `update-tunnel-url.sh`：更新 Chat Gateway 隧道 URL
+- `update-tunnel-url.sh`：**已废弃**（2026-10-30 起 chat 直连模型，不再需要隧道）。仅作历史记录保留，不要执行。
 
 ---
 
@@ -602,6 +614,7 @@ git push
 4. **写日记先读标准。** 之前没读 `templates/diary-standards.md` 就写了占位 stub，还把人称写成"吴总"——都被纠正。标准和人称是硬约束。
 5. **中文引号转 ASCII 引号会破坏字符串。** 曾有个 `fix_quotes.cjs` 把 `“”` 转成 `"`，制造了 32 处语法错误（已删，别再用这类脚本）。
 6. **假新闻会静静地躺在数据里。** 2026-10-05 至 10-21 有 17 天 79 条新闻是编造的：链接是连号数字或标题拼的 slug（`36kr.com/p/4012345678901234`、`jiqizhixin.com/articles/2026-10-19-gemini-2`），英文是 `New product launched` 这类占位符，正文写的还是过时产品。已于 2026-10-29 整段下架（`f86bd216`）。识别方法：真 36 氪是 `36kr.com/p/`+16 位随机数字，真 IT之家是 `/1/019/627.htm`；出现连号、`/articles/YYYY-MM-DD-英文slug`、`/YYYY/MM/123456.html` 基本就是生成的。**核对新闻先看链接结构，再看内容有没有具体人名、机构、数字。**
+7. **别把线上功能绑在"自己机器的临时地址"上。** 聊天机器人「山山」原来走 `openclaw 网关 + cloudflared 临时隧道（*.trycloudflare.com）`，隧道每次重启换地址，还专门写了 `update-tunnel-url.sh` 打补丁；openclaw 一停用，聊天和留言板自动回复同时静默失效，界面上只显示"连接失败"。**2026-10-30 改为 Cloudflare Function 直连模型 API**，不再依赖任何一台电脑开机。凡是"要有一台机器一直开着"的方案，作为个人网站的后端都属于负债。
 
 ---
 
