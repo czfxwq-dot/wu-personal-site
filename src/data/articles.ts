@@ -1,5 +1,6 @@
 // 文章数据 — 完整版本（47条）
-// 已按日期降序排序
+// 导出时统一按日期降序排序：条目插入顺序不再影响展示，
+// 列表页/首页最新文章/上一篇下一篇导航全部自动按日期排列
 export interface ArticleEntry {
   slug: string;
   date: string;
@@ -12,7 +13,7 @@ export interface ArticleEntry {
   contentEn?: string;
 }
 
-export const articles: ArticleEntry[] = [
+const articleList: ArticleEntry[] = [
   {
     slug: 'ai-brain-science-first-principles',
     date: '2026-04-30',
@@ -5621,3 +5622,8 @@ See you in the comments 👇
       </div>`
   },
 ];
+
+// 统一按日期降序排序（YYYY-MM-DD 格式字符串比较即为日期比较）
+export const articles: ArticleEntry[] = [...articleList].sort(
+  (a, b) => b.date.localeCompare(a.date)
+);
