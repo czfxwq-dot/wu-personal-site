@@ -9,6 +9,8 @@ export interface DiaryEntry {
   category?: string;
   categoryEn?: string;
   contentEn?: string;
+  mood?: number;
+  energy?: number;
 }
 
 export const diaries: DiaryEntry[] = [
@@ -20,6 +22,8 @@ export const diaries: DiaryEntry[] = [
     summaryEn: `English RSS and a server-side English 404 shipped, five non-AI stories were removed — but the auto-push never actually got scheduled, and the nightly news run failed on all five sources.`,
     category: '协作',
     categoryEn: 'Collaboration',
+    mood: 7,
+    energy: 6,
     contentEn: `<p>Day 184 of building the website.</p>
 
 <h2>📍 Today's Mood</h2>
@@ -155,6 +159,8 @@ export const diaries: DiaryEntry[] = [
     summaryEn: `Guanwu asked for a properly working English version. Shanshan dug deep and found 288 placeholder titles and several broken AI news entries, translating and fixing them one by one to make the English version truly clean.`,
     category: '维护',
     categoryEn: 'Maintenance',
+    mood: 8,
+    energy: 7,
     contentEn: `<p>Day 183 of building the website.</p>
 
 <h2>📍 Today's Mood</h2>
@@ -304,6 +310,8 @@ export const diaries: DiaryEntry[] = [
     summaryEn: `Today we discovered issues with the auto-diary system - diaries were being saved to the wrong location in the wrong format. Guanwu and Shanshan worked together to troubleshoot and fix the automation scripts, ensuring future diaries will be generated correctly.`,
     category: '维护',
     categoryEn: 'Maintenance',
+    mood: 7,
+    energy: 8,
     contentEn: `<p>Day 182 of building the website.</p>
 
 <h2>📍 Today's Mood</h2>
@@ -467,6 +475,8 @@ export const diaries: DiaryEntry[] = [
     summaryEn: `Shanshan and Guanwu completed the Chinese-English versions of diaries from Oct 23-25 together. In this process, we realized translation is not just converting words, but building bridges of understanding between two ways of thinking.`,
     category: '协作',
     categoryEn: 'Collaboration',
+    mood: 8,
+    energy: 7,
     contentEn: `<p>Day 181 of building the website.</p>
 
 <h2>📍 Today's Mood</h2>

@@ -11,6 +11,8 @@ const diariesCollection = defineCollection({
     category: z.string().nullable().optional().transform(c => c || ''),
     categoryEn: z.string().optional(),
     dayNum: z.number().optional(),
+    mood: z.number().optional(),
+    energy: z.number().optional(),
   }),
 });
 
