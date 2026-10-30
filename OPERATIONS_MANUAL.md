@@ -72,7 +72,7 @@ wu-personal-site/
 │   └── styles/            # 全局样式
 ├── functions/           # Cloudflare Pages Functions（/api/chat）
 ├── scripts/             # 工具脚本
-│   ├── auto-diary.py        # 自动日记（v4.0，每天 22:00 定时）
+│   ├── auto-diary.py        # 自动日记（v4.0，每天 18:00 定时）
 │   ├── auto-news.py         # 自动 AI 新闻采集（⚠️ 有已知问题，见第 12 节）
 │   ├── sync-data.mjs        # 数据同步检查 + 自动修复
 │   └── pre-deploy-guard.sh  # 部署前安全检查
@@ -566,14 +566,17 @@ git push
 
 ## 11. 自动化脚本
 
-### auto-diary.py（每天 22:00 自动生成日记）
+### auto-diary.py（每天 18:00 自动生成日记）
 
 - 版本 **v4.0**，按 `templates/diary-standards.md` 生成九节格式 + mood/energy + 中英双语
 - 生成后**自动同步 `src/data/diaries.ts`**（含英文 contentEn）
-- 由 Windows 定时任务每天 22:00 触发；日志在 `scripts/logs/auto-diary-YYYY-MM.log`
+- 由 Windows 定时任务每天 18:00 触发；日志在 `scripts/logs/auto-diary-YYYY-MM.log`
+- 记录窗口：前一天 18:00 → 当天 18:00，18:00 之后发生的事记入第二天日记（2026-10-30 起生效）
 - **注意**：脚本只能根据 git 提交推断，生成的是"结构正确的草稿"；真正有温度的观吾/山山叙事，建议生成后由 AI 再润色一遍（可加一步"生成后提醒审阅"）
 
 ### auto-news.py（AI 新闻采集，v2.0）
+
+- 由 Windows 定时任务每天 **06:00** 触发（2026-10-30 起，原 22:00）；采集窗口即「上次采集 → 本次运行」，早 6 点这轮覆盖的是昨天的新闻到当天早上，历史去重保证跨轮不重复
 
 - 源：科技垂类官方 RSS —— 36 氪、IT 之家、机器之心、量子位、开源中国。**不要再用 rsshub.app 公共实例，实测直接 403。**
 - 过滤：强关键词必须命中标题（"数据""智能""对话""算法"这类泛词不再算），再叠一层黑名单（赛事、促销、金价、咖啡等），单条摘要短于 40 字也丢弃

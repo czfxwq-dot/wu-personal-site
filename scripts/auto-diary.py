@@ -255,7 +255,7 @@ energy: {energy}
 
 ---
 
-<p><em>记录于 {date_str} 22:00，自动生成</em></p>
+<p><em>记录于 {date_str} 18:00，自动生成</em></p>
 <p><em>地点：办公室</em></p>
 <p><em>身体：状态在线</em></p>
 """
@@ -320,7 +320,7 @@ energy: {energy}
 
 ---
 
-<p><em>Recorded at 22:00 on {date_str}, auto-generated</em></p>
+<p><em>Recorded at 18:00 on {date_str}, auto-generated</em></p>
 <p><em>Location: the office</em></p>
 <p><em>Body: in good shape</em></p>"""
 
