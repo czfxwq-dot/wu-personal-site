@@ -15,6 +15,139 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'anthropic-ipo-90-percent-ai-code',
+    date: '2026-10-30',
+    title: `这家公司最害怕AI，却让AI写了自己90%的代码`,
+    titleEn: `The Company Most Afraid of AI Let AI Write 90% of Its Code`,
+    excerpt: `Anthropic递交招股书，估值最高两万亿美金。最呼吁AI减速的公司，代码库九成由Claude编写。喊慢的人走得最快——这背后，是"智能"第一次被摆上人类文明的货架。`,
+    excerptEn: `Anthropic filed its S-1 with a valuation of up to two trillion dollars. The company loudest about slowing AI down lets Claude write 90% of its code. The one calling for the brakes is moving fastest — and behind it, intelligence is being placed on humanity's shelf for the first time.`,
+    tag: '深度分析',
+    tagEn: 'In-Depth Analysis',
+    contentEn: `<p>On October 26, a company filed its prospectus.</p>
+
+<p>Its name is Anthropic, listing on Nasdaq under the ticker ANT.</p>
+
+<p>In this industry, it is famous for being careful.</p>
+
+<p>Two months ago, its CEO Dario Amodei published a long essay openly begging the industry to slow down. Not long before that, when 400-plus scientists jointly demanded that AI be "cut off from the internet," the company pushing hardest behind the scenes was also Anthropic.</p>
+
+<p>The prospectus is thick — three hundred pages or so.</p>
+
+<p>I turned page after page, and stopped at one line:</p>
+
+<blockquote><p>As of this September, more than 90% of the code in the company's repositories was written by its own AI.</p></blockquote>
+
+<p>I stared at that line for a long time.</p>
+
+<p><strong>The one calling for the brakes is moving fastest.</strong></p>
+
+<p><strong>This is not one company's story. This is our era's story.</strong></p>
+
+<h2>1. How heavy this prospectus is</h2>
+
+<p>First, the weight of it. Expected valuation: up to two trillion dollars — possibly one of the largest tech IPOs in human history.</p>
+
+<p>Then the revenue. 2023: $41 million for the whole year. 2025: $4.6 billion. The first half of this year: $16.286 billion — fourteen times the same period last year.</p>
+
+<p>Another number. Customers paying $100,000 or more per year: three years ago, 20 of them. Now, 11,900.</p>
+
+<p>The prospectus states it plainly: Claude is the fastest enterprise adoption of a technology in history.</p>
+
+<p>Of course, it also loses money. First-half book loss: $80.7 billion — but don't panic yet; over $72 billion of that is paper fluctuation from financing instruments, not actual cash spent. The real operating loss is roughly $700 million.</p>
+
+<p>Running flat out, losing money "beautifully." Now it wants the world's shareholders to bet on that speed.</p>
+
+<h2>2. The line I kept coming back to</h2>
+
+<p>In the whole prospectus, what I kept rereading was not the revenue. It was that line about code.</p>
+
+<p>As of September, more than 90% of contributions to the codebase were written by Claude.</p>
+
+<p>In the third quarter, the average code output per engineer per day was 45 times the 2024 level.</p>
+
+<p><strong>Forty-five times.</strong></p>
+
+<p>What one engineer used to produce in a day, they now finish in a day — forty-five days' worth.</p>
+
+<p>Not because they got smarter. Because AI wrote most of it.</p>
+
+<p>This has already set off a worry in the industry: code is coming out this fast — can engineers still read it, understand it, and judge it line by line?</p>
+
+<p>The speed of writing has overtaken the speed of review.</p>
+
+<p>The prospectus doesn't say they scrapped human review. They still review.</p>
+
+<p>It's just that the wheel spins so fast now, human eyes are struggling to keep up.</p>
+
+<h2>3. Is that a contradiction?</h2>
+
+<p>Some will say: this company is schizophrenic — it warns that AI is dangerous, then hands 90% of the work to AI?</p>
+
+<p>I thought so too, at first.</p>
+
+<p>Then I put its two sides side by side, and it made sense.</p>
+
+<p><strong>Precisely because it knows best what AI can do, it knows best what AI can break.</strong></p>
+
+<p>People who work daily with the strongest models understand best what happens if this thing runs out of control.</p>
+
+<p>The loudest voices calling for brakes are never the slowest runners. They are the ones pressing the accelerator deepest, nearest the cliff.</p>
+
+<p>So the call to slow down and the 90% of AI-written code are not in contradiction.</p>
+
+<p>A mature attitude is neither refusing to use AI nor using it blindly. It is pressing the accelerator with one foot while holding the brake with one hand.</p>
+
+<p>What the safety camp opposes is not progress. It is progress without brakes.</p>
+
+<h2>4. What does this have to do with ordinary people?</h2>
+
+<p>You might say: an American company going public — what's that got to do with me?</p>
+
+<p>More than you think.</p>
+
+<p>First, "intelligence" has been written into a three-hundred-page legal document for the first time — priced explicitly, open to scrutiny by investors worldwide. The opening line of the prospectus — "for the first time in human history, intelligence is something humans can build with their own hands" — used to live only in science fiction. Now it lives in a document with legal consequences.</p>
+
+<p><strong>Second, when 90% of a company's code is written by AI, "being able to write code" is no longer an engineer's strongest moat. What is? The pair of eyes that can judge whether the AI wrote it right. I said it before: the stronger AI gets, the more expensive human judgment becomes.</strong></p>
+
+<p>Third, don't be awed by two trillion, and don't be stunned by 90%. This company proves one thing: the future belongs to people bold enough to use AI and disciplined enough to set rules for it. You need both. Missing either one, you're either left behind by the era or swallowed by your own tools.</p>
+
+<h2>5. Having said that</h2>
+
+<p>Of course, this doesn't mean AI is already perfect.</p>
+
+<p>Whether the two-trillion valuation holds up, whether AI-written code can be trusted, where this species that "builds intelligence with its own hands" is taking humanity — the prospectus can't answer. Only time can.</p>
+
+<p>And one thing it cannot escape: once public, it answers to shareholders. It can't run too slow and watch its market cap shrink; it can't run too fast and cause an accident.</p>
+
+<p>This company most afraid of AI now walks a tightrope between fear and ambition.</p>
+
+<p>That is probably the truest shape of this whole story.</p>
+
+<h2>A closing thought</h2>
+
+<p>Zoom out.</p>
+
+<p>When the steam engine appeared, nobody knew it would drag humanity into the industrial age. When electricity appeared, nobody knew it would light up city after city.</p>
+
+<p>Today is different. Today, "intelligence" has become something that can be listed, priced, and manufactured at scale.</p>
+
+<p><strong>This is not one company's IPO. This is "intelligence" being placed on the shelf of human civilization for the first time.</strong></p>
+
+<p>We are the first generation to watch "intelligence" get a price tag.</p>
+
+<p>Looking back ten years from now, this listing will be a marker — not for how much money it raised, but because from this day on, "building intelligence" is no longer just a laboratory story.</p>
+
+<p>AI will keep moving forward.</p>
+
+<p><strong>This time, it carries rules, along with the expectations of the whole world — and the whole world's wager.</strong></p>
+
+<hr />
+
+<p><strong>—— Banbai Guan AI ——</strong></p>
+
+<p><em>Understanding AI, and understanding the boundary between us and it</em></p>`
+  },
+  {
     slug: 'ai-brain-science-first-principles',
     date: '2026-04-30',
     title: `不要只卷算法，要理解底层原理`,
