@@ -39,8 +39,14 @@ async function loadSiteContext(request: Request, env: any): Promise<string> {
   if (ctxCache && Date.now() - ctxCache.at < 30 * 60 * 1000) return ctxCache.text;
 
   try {
-    const url = new URL('/api/site-context.json', request.url).toString();
-    const res = env?.ASSETS ? await env.ASSETS.fetch(url) : await fetch(url);
+    const assetUrl = new URL('/api/site-context.json', request.url).toString();
+    let res: Response | null = null;
+    try {
+      res = env?.ASSETS ? await env.ASSETS.fetch(new Request(assetUrl)) : null;
+    } catch {
+      res = null;
+    }
+    if (!res || !res.ok) res = await fetch(assetUrl);
     if (!res.ok) return '';
     const data: any = await res.json();
 
