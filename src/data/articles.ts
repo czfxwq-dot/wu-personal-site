@@ -1,4 +1,4 @@
-// 文章数据 — 完整版本（50条）
+// 文章数据 — 完整版本（47条）
 // 已按日期降序排序
 export interface ArticleEntry {
   slug: string;
@@ -13,6 +13,244 @@ export interface ArticleEntry {
 }
 
 export const articles: ArticleEntry[] = [
+  {
+    slug: 'ai-brain-science-first-principles',
+    date: '2026-04-30',
+    title: `不要只卷算法，要理解底层原理`,
+    titleEn: `Stop Chasing Algorithms, Understand First Principles`,
+    excerpt: `清华刘嘉教授指出AI的三大架构困境：没有自我意识、没有动机、具身智能难落地。Transformer的源头竟是40年前Hinton的论文。AI的突破不在卷算法，而在脑科学与底层架构。`,
+    excerptEn: `Professor Liu Jia of Tsinghua identifies three architectural bottlenecks in AI: no sense of self, no intrinsic motivation, and embodied intelligence stuck in simulation. Transformer's roots trace back to a 40-year-old paper by Hinton. The real breakthrough lies not in chasing algorithms, but in brain science and underlying architecture.`,
+    tag: '深度分析',
+    tagEn: 'In-Depth Analysis',
+    contentEn: `<p><em>A deep reading of Professor Liu Jia of Tsinghua's 1h46m full interview · Series 3: Technology</em></p>
+
+<blockquote><p>Stop chasing algorithms. Understand first principles — that's how you find direction in a time of change.</p></blockquote>
+
+<h2>1. Three architectural dilemmas of AI</h2>
+
+<p>Professor Liu Jia identifies three fundamental architectural dilemmas facing AI today:</p>
+
+<table>
+<thead><tr><th>Dilemma</th><th>The problem</th><th>Breakthrough direction</th></tr></thead>
+<tbody>
+<tr><td>Neuron complexity</td><td>The human brain's synaptic connections far exceed artificial neurons in complexity</td><td>Finer-grained neuron models</td></tr>
+<tr><td>Long-range feedback</td><td>AI lacks long-distance causal reasoning</td><td>Predictive coding mechanisms borrowed from brain science</td></tr>
+<tr><td>Parallel processing</td><td>The brain's parallel processing dwarfs GPU clusters</td><td>New computing architectures (brain-inspired chips)</td></tr>
+</tbody>
+</table>
+
+<p>These three dilemmas say one thing: AI's breakthrough will not come from racing to optimize algorithms. It will come from reinventing the underlying architecture.</p>
+
+<h2>2. No sense of self: why AI has no "I"</h2>
+
+<p>Professor Liu Jia points to the root cause of AI's missing self-awareness:</p>
+
+<ul>
+<li>AI has no "awareness of death," no fear — so no genuine intrinsic motivation</li>
+<li>AI's "thinking" is statistical probability, not subjective experience</li>
+<li>AI never acts on its own initiative; it only responds to external commands</li>
+</ul>
+
+<p>That explains why AI cannot create the way humans do — real creativity comes from a self that wants something.</p>
+
+<h2>3. No motivation: AI never wants anything</h2>
+
+<p>Where does human motivation come from?</p>
+
+<ul>
+<li>Survival instinct: we fear, we feel anxiety, we want to change things</li>
+<li>Awareness of death: knowing life is finite, we want to leave something behind</li>
+<li>Emotional drive: love, hate, curiosity, anger — these are internal engines</li>
+</ul>
+
+<p>AI has none of these. It computes. It has no concept of "wanting."</p>
+
+<h2>4. The embodied intelligence bottleneck: simulation is not the real world</h2>
+
+<p>Embodied intelligence is the hot direction right now, but Professor Liu Jia points out the practical bottlenecks:</p>
+
+<ul>
+<li>Simulated environments lack the complexity of the real physical world</li>
+<li>A robot's body limits it from gaining genuine bodily experience</li>
+<li>Commercial hype outweighs scientific substance</li>
+</ul>
+
+<p>True embodied intelligence requires real interaction between body and environment — not an algorithm pretending.</p>
+
+<h2>5. Hebbian learning: how neurons connect (1949)</h2>
+
+<p>In 1949, Donald Hebb proposed a groundbreaking idea:</p>
+
+<blockquote><p>Neurons that fire together, wire together.</p></blockquote>
+
+<p>This theory explains the essence of human learning:</p>
+
+<ul>
+<li>The strength of connections between neurons depends on how often they activate together</li>
+<li>Learning is not about storing information — it's about building connections</li>
+<li>Experience physically shapes the structure of the brain</li>
+</ul>
+
+<p>Decades later, this remains the core framework for understanding how the brain learns.</p>
+
+<h2>6. Predictive coding: the brain is a prediction machine</h2>
+
+<p>Modern neuroscience has found that the brain is not a passive receiver — it constantly predicts the future.</p>
+
+<ul>
+<li>Every moment, we predict what happens next</li>
+<li>When a prediction fails, the brain updates its model</li>
+<li>Learning is the process of reducing prediction error</li>
+</ul>
+
+<p>This mechanism offers a vital clue for AI's next breakthrough.</p>
+
+<h2>7. The origin of Transformer: Hinton's paper 40 years ago</h2>
+
+<p>Here is a striking fact: the theoretical foundations of Transformer did not appear out of nowhere. They come from a paper Geoffrey Hinton published 40 years ago.</p>
+
+<p>Hinton combined Hebbian learning with neural networks and introduced:</p>
+
+<ul>
+<li><strong>Distributed representation:</strong> information stored across the connections of many neurons</li>
+<li><strong>Backpropagation:</strong> adjusting connection weights through error signals</li>
+<li><strong>Attention:</strong> focusing on what matters most</li>
+</ul>
+
+<p>These ideas reached their full expression in the 2017 Transformer paper.</p>
+
+<h2>8. When brain science and AI marry: the road ahead</h2>
+
+<p>Professor Liu Jia believes the future breakthrough lies in deep integration of brain science and AI:</p>
+
+<ul>
+<li>Use brain science to understand how the human brain learns</li>
+<li>Use AI to model and validate brain-science theories</li>
+<li>Use predictive coding to improve AI architectures</li>
+<li>Use brain-inspired computing to break through current bottlenecks</li>
+</ul>
+
+<p>It is not AI replacing the human brain. It is AI learning from it.</p>
+
+<h2>9. Three pieces of advice for technology professionals</h2>
+
+<p><strong>First: stop chasing algorithms; understand the underlying principles.</strong> Master first principles to find your direction amid change.</p>
+
+<p><strong>Second: follow the latest in brain science.</strong> Breakthroughs in neuroscience will directly guide innovation in AI architecture.</p>
+
+<p><strong>Third: keep humility and patience.</strong> AI's development is a marathon, not a sprint — it demands long-term basic research and interdisciplinary work.</p>
+
+<h2>10. Closing: AI will not replace humans, but it will change everything</h2>
+
+<p>AI will take over many jobs. But it cannot replace the things that grow out of a person's own body and experience.</p>
+
+<p>Thirty years of building companies, five industries crossed, countless failures and successes — that is my foundation.</p>
+
+<p>And it is every technology professional's foundation too.</p>
+
+<hr />
+
+<p>—— Banbai Guan AI, a 50-year-old entrepreneur's view of technology in the AI era</p>`
+  },
+  {
+    slug: 'qingbei-meaningless-ai-era',
+    date: '2026-04-28',
+    title: `清华教授说考清北没意义了`,
+    titleEn: `A Tsinghua Professor Says Getting into Tsinghua No Longer Matters`,
+    excerpt: `清华刘嘉教授说"AI时代，考清北正在失去意义"。我做了30年企业、横跨5个行业，想认真聊聊：学历贬值和教育含金量上升，为什么是两回事。`,
+    excerptEn: `Professor Liu Jia of Tsinghua says that in the AI era, getting into Tsinghua or Peking University is losing its meaning. After 30 years building companies across 5 industries, I want to take this seriously: why devalued degrees and rising educational value are two different things.`,
+    tag: '深度分析',
+    tagEn: 'In-Depth Analysis',
+    contentEn: `<p><em>A deep reading of Professor Liu Jia of Tsinghua's 1h46m full interview · Series 1: Education</em></p>
+
+<blockquote><p>In the AI era, getting into Tsinghua or Peking University is losing its meaning.</p></blockquote>
+
+<h2>1. Why I took this professor's words seriously</h2>
+
+<p>I recently watched a video of Professor Liu Jia of Tsinghua that was trending on Douyin. He said something that made me — a 50-year-old serial entrepreneur — stop and think:</p>
+
+<p><strong>"In the AI era, getting into Tsinghua or Peking University is losing its meaning."</strong></p>
+
+<p>It's not that these universities got worse. It's that the "gold content" of a degree is changing. The class of 2026 has 12.2 million graduates; for the first time, master's and PhD employment rates have fallen below bachelor's; in the US, the college wage premium dropped from 69% to 50%. Behind these numbers, something enormous is happening.</p>
+
+<p>I've built companies for 30 years across 5 industries. If there's one lesson I've learned deeply, it's this: real competitiveness comes not from what you know, but from the quality of the questions you can ask.</p>
+
+<h2>2. The logic of degree devaluation: why diplomas stop being lifetime guarantees</h2>
+
+<p>Professor Liu Jia states a harsh truth:</p>
+
+<p><strong>Degrees are devaluing, but the gold content of education is rising.</strong></p>
+
+<p>That sounds contradictory, but they are two different things:</p>
+
+<ul>
+<li>Degree devaluation: diplomas are becoming ever more common, ever less scarce</li>
+<li>Rising value of education: people who can actually solve problems are becoming ever more valuable</li>
+</ul>
+
+<p>When I quit my bank job to start a business in 2008, plenty of people thought I'd lost my mind. But I understood one thing: the iron rice bowl doesn't never break — it just breaks when you haven't prepared.</p>
+
+<p>Today's children face the same reality. Getting into a good university is not the finish line. It's the starting line.</p>
+
+<h2>3. The essence of education: three soul-searching questions</h2>
+
+<p>Professor Liu Jia offers a "three soul-searching questions" framework that I find especially valuable for parents:</p>
+
+<table>
+<thead><tr><th>Question</th><th>What it probes</th><th>Mapped to my own story</th></tr></thead>
+<tbody>
+<tr><td>What can I do?</td><td>Where are the boundaries of my ability?</td><td>Leaving the bank in 2008 — what was I actually capable of?</td></tr>
+<tr><td>What do I love?</td><td>What is my intrinsic motivation?</td><td>Starting content creation at 50 — why do I enjoy it?</td></tr>
+<tr><td>What value do I create?</td><td>Whom can I help?</td><td>Whom does Banbai Guan AI serve?</td></tr>
+</tbody>
+</table>
+
+<p><strong>These three questions are not for your children. They are for you, the parent.</strong></p>
+
+<p>What kind of person do we actually want our children to become?</p>
+
+<h2>4. What to learn in the AI era: five liberal abilities</h2>
+
+<p>Professor Liu Jia identifies the five core liberal abilities for the AI era:</p>
+
+<table>
+<thead><tr><th>Ability</th><th>What it means</th><th>Mapped to my own story</th></tr></thead>
+<tbody>
+<tr><td>Research ability</td><td>A good question matters more than a good answer</td><td>Leaving the bank in 2008 and asking the right questions, again and again</td></tr>
+<tr><td>Statistical ability</td><td>Finding real correlations in information overload</td><td>Sensing patterns across five industries</td></tr>
+<tr><td>Logical ability</td><td>First-principles reasoning</td><td>Seeing where IoT was heading back in 2001</td></tr>
+<tr><td>Psychological ability</td><td>Knowing yourself is freedom</td><td>Starting content creation at 50 taught me who I am</td></tr>
+<tr><td>Rhetorical ability</td><td>Persuading others to act together</td><td>Banbai Guan AI moves people through content</td></tr>
+</tbody>
+</table>
+
+<p><strong>None of these five abilities can be drilled through endless test prep. They grow out of a person, from the inside.</strong></p>
+
+<h2>5. Three suggestions for parents</h2>
+
+<p><strong>Suggestion one: stop treating "getting into a good university" as the finish line.</strong> Three to five years from now, what matters is what your child can build — not what's printed on a diploma.</p>
+
+<p><strong>Suggestion two: help your child find a passion that grows from within.</strong> Not another cram school — the thing they are genuinely willing to grind away at for hours.</p>
+
+<p><strong>Suggestion three: cultivate the three soul-searching questions.</strong> What can I do? What do I love? What value can I create? These three questions matter more than any exam.</p>
+
+<h2>6. The closing line</h2>
+
+<blockquote><p>"Diplomas expire. Skills iterate. But the ability to solve problems never loses its meaning."</p>
+<p>—— Banbai Guan AI, a 50-year-old entrepreneur's view of education in the AI era</p></blockquote>
+
+<p><strong>A final word:</strong></p>
+
+<p>I run Banbai Guan AI not to teach people which buttons to press, but to share the honest thinking of a 50-year-old entrepreneur.</p>
+
+<p><strong>AI will replace many jobs. But it cannot replace the things that grow out of a person's own body and experience.</strong></p>
+
+<p>Thirty years of experience, five industries crossed, countless failures and successes — that is my irreplaceable foundation. And it is the conviction I want to pass on to every parent.</p>
+
+<hr />
+
+<p>Author | Banbai Guan AI</p>`
+  },
   {
     slug: '22-wan-ai-dramas',
     date: '2026-10-29',
