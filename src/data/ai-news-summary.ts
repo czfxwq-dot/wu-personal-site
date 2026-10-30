@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-30",
+  "title": "AI新闻 | Mistral开源万亿参数Large 4 + 英伟达Cosmos 3让机器人先想再动 + 小鹏Robotaxi跑进广州全域 + Gemini聊天里直接改文档",
+  "titleEn": "AI News | Mistral Open-Sources 1T-Parameter Large 4 + Nvidia's Cosmos 3 Lets Robots Think Before They Move + XPeng Robotaxi Goes Citywide in Guangzhou + Gemini Edits Documents Inside the Chat",
+  "summary": "今日AI五条主线：法国Mistral开放1万亿参数的Large 4权重，编程类任务Token消耗比同级少47%，API同步降价；英伟达发布面向物理AI的开放世界模型Cosmos 3，把视觉推理、世界生成与动作预测压进同一个模型，同时开源语音模型Nemotron 3.5 Transcribe；小鹏Robotaxi「悠游」获批广州全域L4示范运营，走3000TOPS纯视觉、只卖方案不跑车队的轻资产路线；月之暗面把Kimi接入Gmail、云端硬盘和日历，K3.1 Pro全部权重定档11月4日开放；谷歌Gemini支持在聊天窗口里直接生成、预览、修改文档和PDF。",
+  "summaryEn": "Five threads ran through AI today. France's Mistral released the weights of its 1-trillion-parameter Large 4, which uses 47% fewer tokens per coding task than peers while cutting API prices. Nvidia shipped Cosmos 3, an open world model for physical AI that folds visual reasoning, world generation and action prediction into a single model, alongside an open speech model, Nemotron 3.5 Transcribe. XPeng's Robotaxi, branded Youyou, won approval to run L4 demonstration rides across all of Guangzhou on a 3000-TOPS pure-vision stack, selling solutions rather than operating fleets. Moonshot connected Kimi to Gmail, Drive and Calendar, and set November 4 as the date its K3.1 Pro weights go public. And Google now lets Gemini users create, preview and edit documents and PDFs without leaving the chat.",
+  "newsItems": [
+    {
+      "title": "Mistral开放Large 4权重：1万亿参数，编程Token消耗省47%",
+      "titleEn": "Mistral Opens Up Large 4: 1 Trillion Parameters, 47% Fewer Tokens per Coding Task",
+      "summary": "法国Mistral AI于当地时间10月29日开放旗舰模型Mistral Large 4（代号le Chonk）的权重：1万亿总参数、490亿激活参数（计入嵌入与输出层为520亿），原生多模态，在欧洲自有数据中心用3800块英伟达Grace Blackwell GPU从零训练。第三方评测中，其编程智能体指数得48%，与开源领先的GLM-5.3基本持平，但单任务平均Token消耗少47%；Terminal-Bench 4.0从预览版的28%升至41%。线上定价为输入每百万Token 0.7美元、缓存输入0.07美元、输出2.1美元。许可证为修改版MIT：自用、微调、常规商用免费，但做MaaS转售需另签授权。",
+      "summaryEn": "Mistral AI released the weights of its flagship Mistral Large 4 (codenamed le Chonk) on October 29 local time: 1 trillion total parameters with 49 billion active (52 billion counting embedding and output layers), natively multimodal, trained from scratch on 3,800 Nvidia Grace Blackwell GPUs in its own European data centers. It scores 48% on the Artificial Analysis coding agent index, roughly level with leading open model GLM-5.3, while consuming 47% fewer tokens per task; Terminal-Bench 4.0 rose from 28% in the preview to 41%. Online pricing is $0.70 per million input tokens, $0.07 for cached input and $2.10 for output. The license is a modified MIT: internal use, fine-tuning and ordinary commercial use are free, but reselling inference as a service requires a separate deal.",
+      "source": "腾讯新闻",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://news.qq.com/rain/a/20261030A08OR200"
+    },
+    {
+      "title": "英伟达开放Cosmos 3世界模型：让机器人在行动之前先想一遍",
+      "titleEn": "Nvidia Opens Cosmos 3 World Model: Letting Robots Think Before They Act",
+      "summary": "英伟达发布面向物理AI的开放世界基础模型Cosmos 3，用混合Transformer架构首次把视觉推理、世界生成与动作预测整合进同一个全模态模型，原生理解并生成文本、图像、视频、环境音和动作轨迹。模型分三档：Super（640亿参数）负责高保真世界建模，Nano（160亿）负责高效后训练，Edge（40亿）可直接跑在Jetson Thor、RTX显卡和DGX上做边缘实时推理。以开放权重（OpenMDW 1.1许可）发布，同时开放机器人、物理仿真、人体动作、自动驾驶与仓储等合成数据集。同日还开源Nemotron 3.5 Transcribe语音模型，支持40种语言转写、31种语言互译与8人说话人分离，并放出约84.4万小时、48语种的语音数据。",
+      "summaryEn": "Nvidia released Cosmos 3, an open world foundation model for physical AI that uses a hybrid Transformer to merge visual reasoning, world generation and action prediction into one omnimodal system capable of understanding and producing text, images, video, ambient audio and motion trajectories. It comes in three tiers: Super (64B parameters) for high-fidelity world modeling, Nano (16B) for efficient post-training, and Edge (4B) for real-time inference on Jetson Thor, RTX cards and DGX. Weights ship under the open OpenMDW 1.1 license, together with synthetic datasets covering robotics, physics simulation, human motion, autonomous driving and warehousing. Nvidia also open-sourced Nemotron 3.5 Transcribe, which handles 40 languages, translates 31 to and from English, separates up to eight speakers, and arrives with roughly 844,000 hours of speech data in 48 languages.",
+      "source": "搜狐科技",
+      "category": "具身智能",
+      "categoryEn": "Embodied AI",
+      "url": "https://www.sohu.com/a/1094739757_123039877"
+    },
+    {
+      "title": "小鹏Robotaxi「悠游」获批广州全域L4示范运营：3000TOPS纯视觉，卖方案不跑车队",
+      "titleEn": "XPeng's Youyou Robotaxi Cleared for Citywide L4 Rides in Guangzhou: 3000 TOPS of Pure Vision, Selling Solutions Not Fleets",
+      "summary": "10月26日，小鹏集团获批广州市智能网联汽车应用示范运营资格，旗下Robotaxi定名「小鹏悠游」，可在广州全域开展L4级载客示范运营，初期通过邀请码逐步开放。车型基于旗舰GX前装量产，搭载4颗自研图灵AI芯片、有效算力3000TOPS，走不依赖激光雷达和高精地图的纯视觉路线，是国内首款车企全栈自研、前装量产的L4 Robotaxi。何小鹏明确不做重资产出行公司：只输出整车平台、自动驾驶软件与AI能力，收益来自硬件销售、技术服务与佣金分成。同日，大众汽车集团（中国）在合肥获得L3级自动驾驶道路测试牌照。",
+      "summaryEn": "On October 26 XPeng won Guangzhou's smart-connected vehicle demonstration operating license, and its Robotaxi now has a name, Youyou. It can carry passengers in L4 demonstration service across the whole city, opening gradually by invitation code. The vehicle is built from the mass-production GX, carries four in-house Turing AI chips for 3,000 TOPS of effective compute, and relies on pure vision without lidar or high-definition maps, making it China's first factory-built, fully in-house L4 Robotaxi. Chairman He Xiaopeng is explicit that XPeng will not become an asset-heavy ride-hailing operator: it supplies the vehicle platform, autonomous driving software and AI capability, earning from hardware, technical services and revenue share. The same day, Volkswagen Group China secured an L3 road-test license in Hefei.",
+      "source": "腾讯新闻",
+      "category": "自动驾驶",
+      "categoryEn": "Autonomous Driving",
+      "url": "https://news.qq.com/rain/a/20261029A04ENC00"
+    },
+    {
+      "title": "Kimi接入Gmail、云端硬盘和日历，K3.1 Pro权重定档11月4日开放",
+      "titleEn": "Kimi Connects to Gmail, Drive and Calendar as K3.1 Pro Weights Get a November 4 Date",
+      "summary": "月之暗面10月29日在海外宣布，Kimi通过安全的OAuth授权接入谷歌Gmail、Google Drive和Google日历，用户可在Plugins页面启用，直接总结邮件往来、检索云端文件、规划每日行程。同期的Kimi K3.1 Pro是其最强开放权重模型：2.8万亿总参数、1040亿激活的MoE，100万token上下文，多模态，在Artificial Analysis智能指数上拿55分，仅次于Claude Opus 5.5的58分；API定价为输入每百万Token 2美元、输出10美元。官方确认全部权重将于2026年11月4日放出。",
+      "summaryEn": "Moonshot announced overseas on October 29 that Kimi now connects to Gmail, Google Drive and Google Calendar through secure OAuth authorization, enabled from the Plugins page, so users can summarize email threads, search cloud files and plan their day. Its K3.1 Pro is the company's strongest open-weight model: a 2.8-trillion-parameter MoE with 104 billion active, a 1-million-token context and multimodal input, scoring 55 on the Artificial Analysis intelligence index, behind only Claude Opus 5.5 at 58. API pricing is $2 per million input tokens and $10 per million output. Moonshot confirmed the full weights arrive on November 4, 2026.",
+      "source": "腾讯新闻",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://news.qq.com/rain/a/20261030A05EZ300"
+    },
+    {
+      "title": "Gemini升级：在聊天窗口里直接生成、预览、修改文档和PDF",
+      "titleEn": "Gemini Upgrade: Create, Preview and Edit Documents and PDFs Right in the Chat",
+      "summary": "谷歌10月30日宣布，Gemini用户可直接在应用内生成、预览并编辑PDF、Google文档、表格、幻灯片、Markdown、TXT与代码文件，不必再下载或跳转到别的工具。文档可全屏展开编辑，也可选中某段文字或整张表格向Gemini提问、要求改写，例如把一张刚生成的表格直接转成图表。PDF的预览与编辑同时支持网页端和移动端，其余格式目前仅限网页端，功能面向所有地区、所有语言的Gemini用户开放。谷歌今年早些时候已支持生成与下载文件，这次补上的是「生成—修改」闭环；Anthropic此前也在Claude中做了类似能力。",
+      "summaryEn": "Google said on October 30 that Gemini users can now create, preview and edit PDFs, Google Docs, Sheets, Slides, Markdown, TXT and code files inside the app without downloading anything or switching tools. Documents can be opened full-screen for direct editing, or users can highlight a passage or a whole table and ask Gemini to revise it — turning a freshly generated table into a chart, for instance. PDF preview and editing work on both web and mobile, while other formats are web-only for now; the feature is available to Gemini users in all regions and languages. Google added file generation and download earlier this year, and this update closes the generate-to-revise loop, following similar work by Anthropic inside Claude.",
+      "source": "凤凰网科技",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://original.ifeng.com/c/8xdNzqURAr3"
+    }
+  ],
+  "comment": "今天这五条新闻有一个共同的转向：模型不再比谁更大，而是比谁能被拿走、被装进自己的机器里。Mistral把1万亿参数挂上HuggingFace，英伟达把世界模型交给机器人团队，小鹏把L4打包成能卖到别的城市的方案，Kimi把20多亿人天天用的邮箱日历接进对话框。能力正在从「调用」变成「部署」——这才是中小企业真正用得上的那一步。",
+  "commentEn": "These five stories share one direction: the contest is no longer about who builds the biggest model, but about whose model can be taken away and run on your own machines. Mistral hangs a trillion parameters on HuggingFace, Nvidia hands its world model to robotics teams, XPeng packages L4 into something it can sell city to city, and Kimi wires the inbox and calendar billions of people already use into a chat box. Capability is shifting from something you call to something you deploy — and that is the step small and mid-sized companies can actually use."
+},
+{
   "date": "2026-10-29",
   "title": "AI新闻 | 谷歌Gemini 4 Carbon登顶但股价大跌 + 宇树红杉「杉宇·创计划」 + OpenAI买谷歌芯片 + Kimi接谷歌全家桶",
   "titleEn": "AI News | Google Gemini 4 Carbon Tops Charts but Stock Plunges + Unitree-Sequoia Plan + OpenAI Buys Google Chips + Kimi Connects Google Apps",
