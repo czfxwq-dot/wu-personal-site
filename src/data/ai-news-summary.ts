@@ -175,29 +175,32 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     {
       "title": "月之暗面Kimi接入谷歌Gmail、云端硬盘和日历",
       "titleEn": "Moonshot Kimi Connects Google Gmail, Drive and Calendar",
-      "summary": "月之暗面宣布Kimi接入谷歌Gmail、云端硬盘和日历，用户可直接在Kimi内读取和管理谷歌生态的邮件、文档与日程。这是国产大模型深化海外生态合作、拓展Agent能力边界的一步。",
-      "summaryEn": "Moonshot announced Kimi now connects Google Gmail, Drive and Calendar, letting users read and manage emails, documents and schedules within Kimi. It is a step for domestic LLMs to deepen overseas ecosystem cooperation and expand agent capabilities.",
+      "summary": "月之暗面 10 月 29 日在海外宣布，Kimi 已接入谷歌 Gmail、Google Drive 和日历，用户在 Plugins（插件）页面启用后，可直接总结邮件对话、查找云端文件、用日历规划每日行程，所有操作通过 OAuth 授权完成。",
+      "summaryEn": "Moonshot announced overseas on October 29 that Kimi now connects to Gmail, Google Drive and Calendar. After enabling the integration on the Plugins page, users can summarize email threads, search Drive files and plan their day from Calendar — all authorized through OAuth.",
       "source": "IT之家",
       "category": "AI应用",
-      "categoryEn": "AI Applications"
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/019/782.htm"
     },
     {
       "title": "微软计划发债至少250亿美元，投向AI基础设施建设",
       "titleEn": "Microsoft Plans to Raise at Least $25 Billion for AI Infrastructure",
-      "summary": "消息称微软计划通过美国债券发行筹资至少250亿美元，用于AI基础设施建设。AI巨头正通过大规模举债加码算力军备竞赛，资本开支持续攀升。",
-      "summaryEn": "Microsoft reportedly plans to raise at least $25 billion through US bond issuance to fund AI infrastructure. AI giants are using large-scale debt to fuel the compute arms race, with capex continuing to climb.",
+      "summary": "据彭博社报道，微软计划发行美国投资级债券，至少募资 250 亿美元（约 1670 亿元人民币），这是其时隔九年多首次开展此类发行。债券最多分 10 个期限档次，期限从 2 年到 40 年，富国银行、摩根大通、瑞银承销，募资用于一般企业用途及资本开支。",
+      "summaryEn": "Bloomberg reported that Microsoft plans to issue US investment-grade bonds to raise at least USD 25 billion — its first such sale in more than nine years. The offering is split into up to 10 tranches maturing in 2 to 40 years, underwritten by Wells Fargo, JPMorgan and UBS, with proceeds for general corporate purposes including capital expenditures.",
       "source": "IT之家",
       "category": "算力",
-      "categoryEn": "Compute"
+      "categoryEn": "Compute",
+      "url": "https://www.ithome.com/1/019/753.htm"
     },
     {
       "title": "豆包工作向企业客户推出第三方模型服务，接入Kimi、GLM、DeepSeek",
       "titleEn": "Doubao Work Offers Third-Party Model Services, Including Kimi, GLM and DeepSeek",
-      "summary": "豆包工作向企业客户推出第三方模型服务，可调用Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash等模型。AI办公平台从自有模型走向多模型聚合，企业可按需选择最优模型。",
-      "summaryEn": "Doubao Work launched third-party model services for enterprise customers, allowing calls to Kimi 3.1 Pro, GLM 5.3, DeepSeek V4.1 Flash and more. AI office platforms are moving from proprietary models to multi-model aggregation, letting enterprises choose the best model per task.",
+      "summary": "豆包工作 10 月 29 日宣布向企业客户开放第三方模型服务，首批接入 Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等系列模型。面向团队订阅版和企业订阅版默认开启，企业无需另行向模型厂商采购，按用量扣减既有 AI 点数，并可按成员、部门、群组划定可用范围。",
+      "summaryEn": "Doubao Work opened third-party model access to enterprise customers on October 29, starting with Kimi 3.1 Pro, GLM 5.3 and DeepSeek V4.1 Flash. It is on by default for team and enterprise subscriptions; customers do not need separate contracts with model vendors, usage draws down existing AI credits, and admins can scope availability by member, department or group.",
       "source": "IT之家",
       "category": "AI应用",
-      "categoryEn": "AI Applications"
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/019/733.htm"
     }
   ],
   "comment": "模型重回第一，但资本开支的账单也来了——谷歌的处境正是整个AI行业的缩影：性能狂奔，利润承压。",
