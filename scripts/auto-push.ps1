@@ -27,7 +27,7 @@ if (Test-Path $lock) {
 git fetch origin --quiet 2>$null | Out-Null
 $ahead = [int](git rev-list --count origin/main..HEAD 2>$null)
 if ($LASTEXITCODE -ne 0) { Write-Log '读取待推送数量失败，跳过本轮'; exit 0 }
-if ($ahead -le 0) { exit 0 }   # 没有待推送的提交，什么都不做，也不写日志
+if ($ahead -le 0) { Write-Log '检查完成：远端已是最新，无需推送'; exit 0 }
 
 $head = git log -1 --format='%h %s'
 $out = git push origin main 2>&1
