@@ -598,6 +598,15 @@ git push
 - 常用参数：`--dry-run` 只打印不落盘；`--date YYYY-MM-DD` 指定日期；`--limit N` 每天几条（默认 5）
 - 依赖：只用标准库，不需要 `feedparser`
 
+### auto-push.ps1（每天 22:30 兜底推送）
+
+- 由 Windows 定时任务 `BanbaiGuan-AutoPush` 每天 **22:30** 触发，开启了 `StartWhenAvailable`（关机错过会在开机后补跑）
+- 只推「已 commit 未 push」的提交，**绝不碰工作区里未提交的改动**——夜间生成的机械稿不会因此被意外推上线
+- 有待推送：推完记一行「已推送 N 个提交」；**无待推送也会记一行**「检查完成：远端已是最新，无需推送」，所以日志里每天必有一条，可据此核对是否执行
+- 日志：`scripts/logs/auto-push.log`（`scripts/logs/` 已被 gitignore，不进仓库）
+- 核对是否执行：看日志，或 `Get-ScheduledTaskInfo -TaskName BanbaiGuan-AutoPush` 看 `LastRunTime`/`LastTaskResult`
+- **脚本必须存成 UTF-8 带 BOM**：PowerShell 5.1 会把无 BOM 的中文注释按 GBK 解析，直接语法错误（曾因此连续多天失败，任务返回码 1、日志一个字都没有）
+
 ### 其他脚本
 
 - `sync-data.mjs`：数据同步检查 + 自动修复
