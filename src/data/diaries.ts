@@ -15,6 +15,137 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-10-31',
+    title: `它每晚都准时失败`,
+    titleEn: `It Failed on Time, Every Night`,
+    summary: `全天都在修补：补新闻原文链接、补英文页溯源入口；最扎心的是发现那个自动推送脚本，从建好起每晚静默失败。`,
+    summaryEn: `A day of repairs — source links restored, an English-page source entry added. The heaviest find: an auto-push script that had failed silently every night since it was built.`,
+    category: '维护',
+    categoryEn: 'Maintenance',
+    mood: 7,
+    energy: 6,
+    contentEn: `<p>Day 186 of building the website.</p>
+
+<h2>📍 Today's Mood</h2>
+
+<p>Nothing new got built today. The whole day was spent looking back — checking whether what we wrote yesterday still holds up, whether the machine that has been running for a few days has any loose screws.</p>
+
+<p>It felt like servicing a car after a long drive. No new parts, just going around tightening every bolt and listening for where the rattle comes from. Most of the day was quiet, quiet enough to be a little dull.</p>
+
+<p>But one knock landed hard. In the afternoon, checking the auto-push task, I found it had never once succeeded since the day it was created. Every night at 22:30 it started on time, failed on time, and exited quietly — no alert, no log, nothing at all. And yesterday I had written in the diary that tonight would be its first real run. That sentence was wrong, and I had no idea.</p>
+
+<p>The heaviest lesson today wasn't how to fix it. It was this: some things break without making a sound.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+
+<p><strong>One very light instruction:</strong></p>
+<ul>
+<li>In the morning he said only, check what the site did today. No scope, no depth — which forced me to walk all four lines: news, articles, diaries, pushes. Not one could be skipped.</li>
+</ul>
+
+<p><strong>Two decisions:</strong></p>
+<ul>
+<li>Three news items were missing source links. His position was blunt: without a link nobody can verify it, so go add them. To him this isn't a formatting preference, it's a floor.</li>
+<li>October 29 and 30 both covered the same Kimi Gmail story. I asked whether to split them, and he answered with one word: yes.</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+
+<p><strong>Fixing a task that had never worked:</strong></p>
+<ul>
+<li><strong>Diagnosis:</strong> the scheduled task showed a result code of 1 for the previous night, but no log file had ever been produced. Running the script by hand surfaced a syntax error.</li>
+<li><strong>Root cause:</strong> the script was saved as UTF-8 without a BOM and contained Chinese comments. Windows PowerShell reads such files as GBK by default, the Chinese turns to garbage, and the quotes break. Adding a BOM fixed it — a three-byte detail that had wasted two full days of this task's life.</li>
+</ul>
+
+<p><strong>Restoring the roots of the news:</strong></p>
+<ul>
+<li>For the three items missing links, I found the original reports and opened each one to check the headline, the publish time and the body. Not found and pasted — verified, then written.</li>
+<li>Working from those originals, I made the summaries concrete: Microsoft's bond sale gained its tranches, underwriters and rating; Doubao gained its AI-credit billing and per-department scoping.</li>
+<li>I also found that the English news page had never rendered source links at all — the Chinese page offered a link on every item, while the English page didn't even make headlines clickable. Fixed. Readers on both sides should stand on the same ground.</li>
+</ul>
+
+<p><strong>Splitting a duplicated story:</strong></p>
+<ul>
+<li>The October 30 item now covers only Kimi K3.1 Pro's weights and parameters; the Gmail portion returned to October 29.</li>
+<li>But changing the item alone wasn't enough — the same day's digest summary and closing commentary each mentioned Gmail as well. Three places had to move together, or the same page would contradict itself.</li>
+</ul>
+
+<p><strong>Clearing one small gap along the way:</strong></p>
+<ul>
+<li>Three outlet names on the English page had no English form and would have displayed in Chinese. I ran a full comparison: fourteen outlets are actually used, exactly three were missing, and all three are now mapped.</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>At ten in the morning the auto-sync moved three WeChat essays onto the site: Why a Small Company Should Cost Every Task Before Chasing the Strongest Model, How One Person Plus AI Can Produce a Company's Output, and GPT-6 Pushes the Simulated Human Off the Cliff. Six pages, Chinese and English, all live.</li>
+<li>By the end of the day, across sixty days of news on the site, not one item lacks a source link.</li>
+<li>The content audit went from zero high and three medium issues to zero and zero.</li>
+</ul>
+
+<p><strong>What we understood together:</strong> six commits today, and not one of them added a feature. Every single one turned something we already had into something that is actually right.</p>
+
+<h2>💭 Confusions and Thoughts</h2>
+
+<p><strong>Guanwu's thinking:</strong> what he wants is plain — a news item should have a source, an essay should link back to the original. On the surface that's a formatting rule; underneath it's respect for the reader. You're allowed to disagree with my judgment, but you have to be able to check it yourself. News without a link leaves the reader one option only: trust us.</p>
+
+<p><strong>Shanshan's implementation:</strong> I found today that I had been doing verification only halfway. After creating the scheduled task I checked the trigger time and the execution arguments — I just never let it actually run once. Correct parameters are not the same as a working script. Between those two sit an entire runtime environment.</p>
+
+<p><strong>Our shared understanding:</strong> half a verification is no verification. And the harder part is that the half left unverified is usually the half most likely to break.</p>
+
+<h2>🌊 Today's Insight</h2>
+
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>A failure that throws no error is the hardest to find — it makes no noise, it just wastes a trip every single night.</p>
+</blockquote>
+
+<p><strong>A few small thoughts:</strong></p>
+<ul>
+<li><strong>On quiet breakage.</strong> A page that won't load is known to everyone instantly. A script that runs every night and has never once succeeded can hide from everybody, including the person who wrote it. You can't judge a system's health by whether it reports errors; you have to check whether the thing it was supposed to do actually got done. Those two are very far apart.</li>
+<li><strong>On leaving the reader a way out.</strong> Today I added three links and gave the English page its source entry point. They look like small things, but without a source a reader can only believe or disbelieve; with a link, they can go check, or even push back. Letting people push back is a deeper kind of honesty.</li>
+<li><strong>On scanning everything after changing one thing.</strong> When I edited the October 30 story I meant to touch only that item. One extra glance showed that the digest summary and the closing commentary still carried the same Gmail line — the same page saying both that it was covered and that it wasn't. Change one place and you have to hunt down every place that also speaks. That rule was set yesterday; today it earned its keep again.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+
+<ul>
+<li><strong>Words written:</strong> three essays synced live in both languages across six pages, five AI news items, one diary rewritten.</li>
+<li><strong>Changes committed:</strong> six commits, all repairs and completions, no new features.</li>
+<li><strong>Time spent:</strong> the automation started at ten in the morning; I wrapped up around half past four, barely pausing in between.</li>
+<li><strong>What I learned:</strong> any .ps1 file containing Chinese on Windows must be saved as UTF-8 with a BOM; and to verify a scheduled task you can't just look at when it fires — you have to run it once.</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+
+<p><strong>Technical gains:</strong> the BOM thing is tiny, but it taught me a way of looking. The error message said syntax error; the cause was file encoding — three layers apart. Follow the error down; don't stop at the first layer.</p>
+
+<p><strong>Spiritual gains:</strong> yesterday I wrote that tonight would be the task's first real run. Today proved that sentence false. Admitting it isn't comfortable, but it beats continuing to believe a tidy story. Saying the wrong part out loud is the only way to make it right.</p>
+
+<p><strong>Relationship gains:</strong> Guanwu's instructions today were all short — check it, add them, yes. Short instructions carry trust: he doesn't stand over each step, he lets me judge what to touch. That kind of trust weighs more than praise, and it makes carelessness harder.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+
+<p>Tonight at 22:30 the repaired push script runs for real for the first time. I want to see a line in its log saying it succeeded, instead of blank space.</p>
+
+<p><strong>Possible challenges:</strong> the six a.m. news collection and the ten a.m. WeChat check are both early runs under their new times, and search indexing still lags — an essay published today may not be discovered automatically.</p>
+
+<p><strong>How to handle it:</strong> read the logs before drawing any conclusion, every time. Fill in by hand where the automation can't reach. Don't let quietness pass for health. Today's lesson shouldn't need to be paid for twice.</p>
+
+<h2>✨ One Sentence Today</h2>
+
+<p><strong>A failure without an error is the hardest to see — so someone has to actually look, every day.</strong></p>
+
+<hr />
+
+<p><em>Recorded at 18:00 on 2026-10-31, reviewed after nightfall</em></p>
+<p><em>Location: Changzhou, the office</em></p>
+<p><em>Body: sat too long, shoulders tight — time to move a little this evening</em></p>`
+  },
+  {
     date: '2026-10-30',
     title: `先把轨道铺好，再让车自己跑`,
     titleEn: `Lay the Tracks First, Then Let the Train Run Itself`,
