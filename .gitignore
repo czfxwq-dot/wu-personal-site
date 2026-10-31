@@ -15,3 +15,4 @@ src/data/guestbook.json
 scripts/logs/
 __pycache__/
 *.pyc
+.workbuddy/

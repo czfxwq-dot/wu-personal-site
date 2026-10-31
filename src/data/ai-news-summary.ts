@@ -34,7 +34,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "source": "IT之家",
       "category": "AI应用",
       "categoryEn": "AI Applications",
-      "url": "https://www.ithome.com/1/020/415.htm"
+      "url": "https://www.ithome.com/1/020/415.htm",
+      "titleEn": "The man who exposed \"the female Steve Jobs\" warns the AI boom may breed the next Theranos",
+      "summaryEn": "Tyler Shultz, who helped expose the fraud at US blood-testing company Theranos, warns that today's AI investment frenzy is creating the conditions for another Theranos-style deception."
     },
     {
       "title": "绝不为了 AI 而做 AI：苹果 CEO 特努斯产品宣言，AI 应隐身于体验",
@@ -42,7 +44,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "source": "IT之家",
       "category": "AI应用",
       "categoryEn": "AI Applications",
-      "url": "https://www.ithome.com/1/020/409.htm"
+      "url": "https://www.ithome.com/1/020/409.htm",
+      "titleEn": "Never build AI for AI's sake: Apple CEO Ternus says AI should disappear into the experience",
+      "summaryEn": "Wired published an interview with Apple CEO John Ternus on October 30, discussing where Apple's products go next and how AI fits into that direction."
     },
     {
       "title": "DeepSeek 千亿融资名单曝光，国资占比从 2% 跳到 27%",
@@ -50,7 +54,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "source": "开源中国",
       "category": "大模型",
       "categoryEn": "Large Models",
-      "url": "https://www.oschina.net/news/503318"
+      "url": "https://www.oschina.net/news/503318",
+      "titleEn": "DeepSeek's RMB 105.5B round: state capital rises from 2% to 27%",
+      "summaryEn": "DeepSeek's second round raised RMB 105.5 billion (about USD 15.8 billion). The Information obtained the list of nearly 30 investors: Tencent put in RMB 10 billion in each round; CATL and its chairman committed RMB 5 billion and then RMB 10 billion; chipmakers CXMT and SMIC also joined, with amounts undisclosed."
     },
     {
       "title": "这个 Agent 宿主把界面做成了纯文本，你想要什么形状自己让 Agent 改",
@@ -58,7 +64,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "source": "开源中国",
       "category": "大模型",
       "categoryEn": "Large Models",
-      "url": "https://www.oschina.net/news/503317/herdr-dev-agent-ide-runtime"
+      "url": "https://www.oschina.net/news/503317/herdr-dev-agent-ide-runtime",
+      "titleEn": "An agent host that turns its entire interface into plain text files",
+      "summaryEn": "Herdr describes itself as a native host for coding agents — Claude Code, Codex, or anything running in a terminal. Instead of teaching you a new IDE layout, it makes the whole interface plain text files that your agent can rewrite into whatever shape you want."
     },
     {
       "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
@@ -66,10 +74,15 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "source": "量子位",
       "category": "大模型",
       "categoryEn": "Large Models",
-      "url": "https://www.qbitai.com/2026/10/506743.html"
+      "url": "https://www.qbitai.com/2026/10/506743.html",
+      "titleEn": "NVIDIA and MIT release Open-H3-Regenerate-2K weights for video enhancement, up to 4K",
+      "summaryEn": "NVIDIA and an MIT team published model weights for Open-H3-Regenerate-2K, a video enhancement project built on MiniMax H3, on Hugging Face."
     }
   ],
-  "comment": "技术进步带来机遇，也带来挑战。"
+  "comment": "同一天里，一边是热闹估值下的造假警告，一边是「别为了 AI 而做 AI」的克制——热度和冷水同时到场，才是这个行业正常的样子。",
+  "titleEn": "AI Brief | The man who exposed \"the female Steve Jobs\" warns + never build AI for AI's sake + DeepSeek's billion-yuan funding list surfaces",
+  "summaryEn": "On October 31, Tyler Shultz — who helped expose the fraud at US blood-testing company Theranos — warned that the current AI investment frenzy is creating the conditions for the next Theranos-style scandal. Wired published an interview with Apple CEO John Ternus on October 30, covering where Apple's products are heading and how the company thinks about AI. And DeepSeek's second funding round closed at RMB 105.5 billion (about USD 15.8 billion); The Information obtained the investor list of nearly 30 backers, where the composition matters more than the headline number: Tencent and CATL remain the two anchors, with CXMT and SMIC also participating.",
+  "commentEn": "One day, one warning about fraud hiding inside a hot valuation cycle, and one reminder not to build AI for AI's sake. Both arrived at once, and that mix of heat and cold water is what a healthy industry looks like."
 },
 {
   "date": "2026-10-30",
