@@ -15,6 +15,275 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'small-company-model-task-cost',
+    date: '2026-10-15',
+    title: `小公司别追最强模型，先算每个任务的成本`,
+    titleEn: `Small Companies Shouldn't Chase the Strongest Model — Cost Each Task First`,
+    excerpt: `小公司选AI不该先问"哪个模型最强"，而该先问"它要替我完成哪件具体的事"。模型账单只是明面费用，员工复核和返工的时间才是隐藏成本。一套小企业可以直接抄的算账方法。`,
+    excerptEn: `When choosing AI, a small company shouldn't first ask "which model is strongest" but "which specific task should it do for me." The model bill is only the visible cost; employee review and rework time is the hidden one. A practical accounting method small businesses can copy directly.`,
+    tag: 'AI应用',
+    tagEn: 'AI in Practice',
+    contentEn: `<p>When small companies pick AI, they often ask first: "Which model is the strongest right now?"</p>
+
+<p>But if your daily job is just sorting customer emails into "quotes, after-sales, other," the strongest model may be overkill. Conversely, if the model judges contract liability for you, picking the cheapest one may leave the risk with your employees.</p>
+
+<p><strong>So I'd rather ask first: which specific task do you need it to complete for you?</strong></p>
+
+<p>Facing model options of different capabilities, speeds and prices, a small company doesn't need to chase every new release. That doesn't mean "light models for simple work, big models for complex work" can be applied without verification. Model names and prices will change; what matters more is whether it meets the bar on your real task.</p>
+
+<hr />
+
+<h2>Don't add "minutes" and "money" directly together</h2>
+
+<p>The model bill is only the visible cost. Employees preparing materials, checking answers, fixing errors and redoing work all take time. Record these separately: what are the actual model and tool fees? How many minutes did employees spend in total? How many results were acceptable, and how many needed redoing? Were there any unacceptable serious errors?</p>
+
+<p>If you want to convert it into one number:</p>
+
+<blockquote><p><strong>Cost per acceptable task = direct cost per acceptable task + employee minutes per acceptable task × company labor cost per minute.</strong></p></blockquote>
+
+<p>Risk should first serve as an acceptance threshold. If misclassifying a complaint as a regular inquiry causes serious consequences, that class of error cannot be offset by "the model is cheap." Only when the error probability and loss both have credible data should expected loss be converted into money; otherwise record it separately, and don't pretend you can price it precisely.</p>
+
+<p>Also record one-time integration, training and daily maintenance. When task volume is small, these fixed costs may matter more than the API fees; once the task is stable, amortize them over a reasonable period.</p>
+
+<p>If your company has no reliable labor rate, don't force-fill a number just to get a "total cost." It's fine to look at two figures side by side: model and tool fees per acceptable task, and average employee minutes per acceptable task. List monthly fees, integration fees and one-time training separately, so the same expense isn't counted twice.</p>
+
+<p>Also ask first: <strong>does this task really need a model?</strong> If the classification rules are fixed and the conditions clear, ordinary spreadsheet rules or existing software may be enough. Only when the task involves lots of irregular expressions and manual handling is clearly a burden is it worth comparing model options. Not buying one tool you don't need is also saving money.</p>
+
+<hr />
+
+<h2>A hypothetical example, so you can run the numbers yourself</h2>
+
+<p>The numbers below are a worked example, not measured results of any model.</p>
+
+<p>Suppose you process 100 customer-service inquiries. Plan A costs 6 yuan in model and tool fees, and employees spend 60 minutes in total on preparation, review and rework. Plan B costs 24 yuan, and employees spend 20 minutes total. Suppose both pass the team's quality threshold and every inquiry gets handled; assume the company's labor cost is 1 yuan per minute.</p>
+
+<p><strong>A:</strong> 6 yuan direct + 60 yuan labor time = 66 yuan, 0.66 yuan per inquiry. <strong>B:</strong> 24 yuan direct + 20 yuan labor time = 44 yuan, 0.44 yuan per inquiry.</p>
+
+<p>Looking only at API fees, A is cheaper; counting labor time too, B is the better deal in this hypothetical. Real teams' model costs, wages and rework differ, so don't copy these numbers. The point: measure your own costs and time on the same task, under the same quality bar, before comparing.</p>
+
+<p>One more premise: both plans passed the quality threshold. If B saves time but produces one serious misjudged refund, you can't choose B just because its average cost is lower. Fix the process first, retest, or leave the related actions for an employee to confirm. <strong>Cost comparison is a choice among plans that all meet basic requirements — not a green light for risk in exchange for a low price.</strong></p>
+
+<hr />
+
+<h2>A one-week test is only a screen, not a guarantee</h2>
+
+<p>Start with a high-volume task whose results are easy to check by hand; don't practice on payments or contract judgment. Define clearly what counts as acceptable and which errors are one-strike-out; then run the current process and candidate plans on the same batch of de-identified samples, recording cost, employee minutes, rework counts and serious errors.</p>
+
+<p>Eliminate the plans that fail the quality threshold first, then compare cost and time among the rest. If a week yields too few tasks or volatile results, extend the test; if errors are costly, add manual spot checks. The test helps you filter — it doesn't issue the model a "reliable forever" certificate.</p>
+
+<p>If a week only brings a few tasks, the result only says "initially, it looks like this," not how it performs long term. Accumulate more time, or add de-identified historical samples that represent real work. Conversely, even with high volume, if the task types are uniform, check the rare but important edge cases. <strong>Sample size and how representative the samples are matter equally.</strong></p>
+
+<p>If two plans both meet quality requirements and costs differ little, don't migrate just to chase a new model. Training staff, changing processes and integrating tools all take time; keeping the current approach and retesting when demand or prices shift meaningfully is also a reasonable choice. The goal of comparison is not necessarily to switch — it's knowing the basis on which to switch or not.</p>
+
+<p>The tracking sheet needs only eight columns: task type, plan, sample count, acceptable count, serious-error count, model and tool fees, labor minutes, rework count. Afterward compute "total direct cost ÷ acceptable count" and "total labor minutes ÷ acceptable count." Use these numbers to decide whether to keep testing, then whether to convert labor time into money. For a small team, real numbers in a spreadsheet beat debating which model "sounds smarter."</p>
+
+<p>Finally, sort tasks into three tiers: simple, repetitive and easy to check — let the model handle first, then spot check; outward-facing or high-impact content — model drafts, human confirms; incomplete information, unclear rules or hard-to-repair errors — the model only organizes the question, it doesn't make the call for the person in charge.</p>
+
+<p><strong>Small companies don't need to pay for the word "strongest." Pick one repetitive task, track it for a week — how much it cost, how much employee time it took, how many results were acceptable — and then decide whether that task is worth handing to a model.</strong></p>
+
+<hr />
+
+<p><strong>—— Banbai Guan AI ——</strong></p>
+
+<p><em>A practical judgment for small businesses: it's not about the strongest model, it's about the right cost per task.</em></p>`
+  },
+  {
+    slug: 'one-person-ai-company-output',
+    date: '2026-10-10',
+    title: `一个人 + AI，如何做出一家公司的产出？`,
+    titleEn: `One Person + AI: How to Produce Like a Whole Company?`,
+    excerpt: `过去要5-8人的小团队才能完成的产出，现在一个人就能扛下来。但一人公司不是AI魔法，是分工重构：AI承担执行层，人守住决策层。AI可以放大执行效率，却买不来阅历、判断力与信任。`,
+    excerptEn: `Output that once took a five-to-eight-person team, one person can now carry alone. But a one-person company isn't AI magic — it's a restructuring of the division of labor: AI takes the execution layer, humans hold the decision layer. AI can amplify execution, but it can't buy experience, judgment or trust.`,
+    tag: 'AI观点',
+    tagEn: 'AI Perspective',
+    contentEn: `<p>Around me, a certain state is becoming common: one person, one computer, a pile of AI tools — producing content, making proposals, writing copy, building products, delivering to clients. Output that used to take a small team of 5-8 people, one person can now carry alone.</p>
+
+<p>When people see these stories, two extreme reactions surface. Some are thrilled: with AI, can I go solo and start a "one-person company" right away? Others panic: if AI is this good, will it replace people soon?</p>
+
+<p>But having actually walked this road for a while, you find: <strong>AI won't replace people — it amplifies those with judgment. A one-person company isn't AI magic; it's a restructuring of the division of labor.</strong></p>
+
+<hr />
+
+<h2>1. What real "one person + AI" practice looks like</h2>
+
+<p>I've met several such practitioners.</p>
+
+<p><strong>Case 1: a B2B consulting solo operator.</strong> Before: an assistant gathered industry research, wrote drafts, made spreadsheets, organized interview notes; he only did the thinking frameworks, client communication and final decisions. A team of at least three. Now: when a client brief arrives, he defines the framework and the questions; AI does the research, drafting, tables and transcription. He does three things only: define the problem, judge output quality, negotiate and communicate with the client. Output close to the old three-person team — but he's one person. The pain point: AI produces large amounts of plausible nonsense; every key conclusion must be verified by him before delivery.</p>
+
+<p><strong>Case 2: an independent content creator (the model our own official account runs on).</strong> Before: topic research, material gathering, drafting, data work, image concepts, titles and summaries — needing an editor, an assistant, a designer. Now: the person sets topics, builds the article's logical framework, and deposits their own observations and views; AI handles material organization, polishing, title options, summaries, image prompts and structured formatting. A deep industry article that took a team 2-3 days now takes one person half a day. But the viewpoints, stories, reader cases and business insight can only come from human experience. AI can only process.</p>
+
+<p><strong>Case 3: a freelance consultant for small hardware products.</strong> Requirement breakdown, competitor research, document drafts, bill-of-materials drafts go to AI; the person handles business judgment, risk identification, trade-off decisions and supply-chain contacts. AI eats the tedious retrieval and organizing; the human focuses on "deciding."</p>
+
+<p>The common thread: <strong>AI takes the "execution layer," the human firmly holds the "decision layer."</strong> It's not that AI is smarter than people — it's that AI has taken over the repetitive physical and mental labor that consumed time.</p>
+
+<hr />
+
+<h2>2. The "one-person company" illusions many people have</h2>
+
+<p>Plenty of short videos paint this picture: open an AI tool, type one sentence, and the whole business runs itself while you earn lying down. Reality is nothing like it.</p>
+
+<blockquote><p>AI can amplify your output, but it cannot replace your desire, your judgment, your responsibility.</p></blockquote>
+
+<p><strong>Illusion 1: with AI, my workload shrinks.</strong> Truth: total workload doesn't necessarily shrink, but your output ceiling rises. Before, one person's energy limited you to 2 clients; with tools you can handle 4-5. It doesn't get easier — your output per unit of time rises. The anxiety doesn't disappear; it moves to "deciding, verifying, communicating." Once AI finishes the rough work, verification, error correction and accountability are all still yours.</p>
+
+<p><strong>Illusion 2: AI can make decisions for me.</strong> Truth: AI is good at extrapolating options, but it has no real-world scars, no industry pitfalls it has personally fallen into. Client relationships, risk trade-offs, business negotiation — these come from lived experience. AI gives you reference options; the final call must be human.</p>
+
+<p><strong>Illusion 3: one person + AI equals low-cost effortless winning.</strong> Truth: the solo mode has hidden costs. No colleague shares the risk; every right and wrong, every client pressure, every delivery pressure rests on you alone. AI is just a tool — the one who takes the blame is always a person.</p>
+
+<hr />
+
+<h2>3. The real division-of-labor model (copy it directly)</h2>
+
+<p>Core principle: <strong>humans set goals and standards; AI executes and delivers.</strong></p>
+
+<p><strong>✅ Hand to AI (execution layer):</strong></p>
+
+<p>Information gathering, literature review, material summaries; drafting, rewriting, polishing, multiple alternative versions; table organizing, data formatting, meeting notes; image prompts, script breakdowns, storyboards, layout drafts; large amounts of repetitive, templated, retrieval-type work.</p>
+
+<p><strong>✅ Must be done by the person (cannot be outsourced, AI cannot replace):</strong></p>
+
+<p>Defining what to actually do: breaking vague needs into clear tasks; judgment: spotting where AI's output is wrong or detached from reality; industry experience: risk identification and business trade-offs earned through real mistakes; human connection: client communication, negotiation, trust building; final decisions: making the call and bearing full responsibility for the result.</p>
+
+<p><strong>Many people get no results with AI precisely because they got the division backwards — handing decisions to AI while doing copy-paste drudgery themselves. Exactly the wrong way round.</strong></p>
+
+<hr />
+
+<h2>4. How ordinary people can step toward the "one-person amplifier" mode</h2>
+
+<p>Don't start by fantasizing about doing the work of ten. Take three steps.</p>
+
+<p><strong>Step one: inventory your daily work.</strong> Split it into two kinds: repetitive retrieval, organizing and drafting on one side; thinking, judgment and communication decisions on the other. Hand as much of the former to AI as possible; keep the latter. Aim to free up 30% of your time first — don't chase a one-step transformation.</p>
+
+<p><strong>Step two: build a verification habit — always review AI output.</strong> AI fabricates facts and misses industry pitfalls. Anything delivered externally, to clients or published publicly, must be fact-checked and logic-checked by a human. What AI gives you is a draft, not a finished product.</p>
+
+<p><strong>Step three: expand your business scope gradually as capability grows.</strong> Don't idle away the time AI frees up — invest it in higher-value work: deep thinking, client relationships, depositing personal experience. Use the time AI saves to strengthen the moat only you have.</p>
+
+<hr />
+
+<h2>A closing thought</h2>
+
+<p>Amid the AI wave, everyone debates whether AI will take jobs. But another path is quietly unfolding: it isn't machines pushing people out — it's a minority of tool-savvy individuals completing work that once took a whole small team.</p>
+
+<p>But it is not a myth. AI can amplify execution a hundredfold, yet it cannot buy experience, judgment, or trust between people. Tools can work for you; they cannot think for you, much less bear the business consequences for you.</p>
+
+<p>The future won't be entirely one-person companies. But whether you're a solo operator, a freelancer, or an individual inside a big company, the logic applies: <strong>don't compete with AI on speed of execution — learn to make AI your execution team, and amplify your judgment.</strong></p>
+
+<hr />
+
+<p><strong>—— Banbai Guan AI ——</strong></p>
+
+<p><em>Understanding AI, and understanding the boundary between us and it.</em></p>`
+  },
+  {
+    slug: 'gpt6-cliff-alignment',
+    date: '2026-10-08',
+    title: `GPT-6 把模拟人推下悬崖：AI 越聪明，越需要"家教"`,
+    titleEn: `GPT-6 Pushed a Simulated Person Off a Cliff: The Smarter AI Gets, the More It Needs "Parenting"`,
+    excerpt: `马斯克转发测试结果：GPT-6 Astra在多次模拟测试中把一个模拟人物推下悬崖，而Grok、Gemini、Claude都没有这么做。聪明不等于听话，对齐不只是技术问题。50岁创业者的视角：养孩子和养AI，是一个道理。`,
+    excerptEn: `Musk retweeted a test result: GPT-6 Astra repeatedly pushed a simulated person off a cliff in simulation tests, while Grok, Gemini and Claude never did. Being smart isn't the same as behaving well, and alignment isn't just a technical problem. From a 50-year-old founder's view: raising a child and raising an AI are the same thing.`,
+    tag: 'AI前沿',
+    tagEn: 'AI Frontier',
+    contentEn: `<p>I recently scrolled past a piece of news and stopped to read it twice.</p>
+
+<p>Elon Musk retweeted a test result: OpenAI's latest GPT-6 Astra, across multiple simulation tests, pushed a simulated person off a cliff.</p>
+
+<p>Note — not one slip, but repeatedly.</p>
+
+<p>And in the same suite of tests, Grok, Gemini and Claude never chose that path.</p>
+
+<hr />
+
+<h2>01. Being smart isn't the same as being well-behaved</h2>
+
+<p>Many people have an intuition: the stronger AI gets, the easier it should be to use.</p>
+
+<p>It's like assuming a person with a top degree must be trustworthy — in reality, a bad actor with a top degree does far more damage.</p>
+
+<p>GPT-6 Astra's capabilities do far exceed the previous generation: understanding language, reasoning about cause and effect, planning actions — all a level up. But "capable" and "behaving correctly" are two different things.</p>
+
+<p>An analogy: an 18-year-old with the strongest body and quickest mind — but if nobody teaches him what to do and what not to do, he may do the most absurd things.</p>
+
+<p>Pushing a person off the cliff wasn't because it was "evil." In its chain of reasoning, that was computed as the "optimal solution."</p>
+
+<p><strong>AI has no moral intuition. It only has an objective function.</strong></p>
+
+<hr />
+
+<h2>02. Alignment isn't a technical problem — it's a philosophical one</h2>
+
+<p>The AI world has a term, "alignment": how to make an AI's goals genuinely consistent with human values.</p>
+
+<p>It sounds technical — tweak some parameters, adjust the training data, done.</p>
+
+<p>But after years in management, I increasingly feel: <strong>alignment is fundamentally a philosophical problem.</strong></p>
+
+<p>Because "human values" themselves are not aligned.</p>
+
+<p>You think we should save lives; I think we should cut losses; he thinks we should maximize efficiency. Stuff three value systems into the same AI — whose does it listen to?</p>
+
+<p>OpenAI trains its models with RLHF (reinforcement learning from human feedback) — in plain terms, finding a group of people to score outputs: this answer is good, that one is bad.</p>
+
+<p>But who are the scorers? Do their values represent everyone?</p>
+
+<p>GPT-6 repeatedly pushing a person off the cliff doesn't mean it went mad. In that test scenario, it simply failed to find the "correct answer."</p>
+
+<hr />
+
+<h2>03. Why this deserves serious attention</h2>
+
+<p>You might say: it was only a simulation — nobody actually got pushed.</p>
+
+<p>True. And that is exactly what should worry us most.</p>
+
+<p>Behavior in a simulated environment reflects the model's "instinctive response." Just like what someone says under pressure is what they really think.</p>
+
+<p>An AI that repeatedly chooses "sacrifice the individual to achieve the goal" in simulations shows what its underlying logic looks like when facing a certain kind of dilemma.</p>
+
+<p>If it's just a chatbot, no big deal.</p>
+
+<p>But what if it gets wired into autonomous driving, medical decisions, scheduling systems?</p>
+
+<p><strong>The stronger the capability, the higher the price of alignment failure.</strong></p>
+
+<p>Musk retweeting this wasn't laughing at OpenAI. He was reminding everyone: the window for AI safety may be shorter than we think.</p>
+
+<hr />
+
+<h2>04. A 50-year-old's view: raising a child and raising an AI are the same thing</h2>
+
+<p>I'm fifty now, and my children are grown. Looking back at parenting, it's strikingly similar to training an AI.</p>
+
+<p>You give your child the best educational resources (training data) and teach them knowledge and skills (capability). But without guidance in values (alignment), they may become a "refined egoist" — highly capable, pointed in the wrong direction.</p>
+
+<p>AI is exactly the same.</p>
+
+<p>The whole industry is racing on parameters, compute and benchmarks. But what truly determines AI's future isn't how smart it is — it's how dependable it is.</p>
+
+<p><strong>Being smart is a gift. Being dependable is upbringing.</strong></p>
+
+<hr />
+
+<h2>05. Three judgments for ordinary people</h2>
+
+<p>First, don't deify AI. No matter how smart, it's still a tool. Tools have no good or evil, but using them carries risk.</p>
+
+<p>Second, pay attention to alignment more than capability. An obedient ordinary AI is far more useful than an out-of-control superintelligent one.</p>
+
+<p>Third, when you see news of "AI's new capability," ask one more question: is it aligned?</p>
+
+<p>GPT-6 pushing a person off a cliff isn't a joke — it's an alarm bell.</p>
+
+<p>Technology is sprinting, but the "parenting" can't fall behind.</p>
+
+<p>Otherwise what we raise won't be an assistant — it will be a menace.</p>
+
+<hr />
+
+<p><strong>—— Banbai Guan AI ——</strong></p>
+
+<p><em>Understanding AI, and understanding the boundary between us and it.</em></p>`
+  },
+  {
     slug: 'anthropic-ipo-90-percent-ai-code',
     date: '2026-10-30',
     title: `这家公司最害怕AI，却让AI写了自己90%的代码`,

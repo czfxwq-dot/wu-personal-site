@@ -24,6 +24,54 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-10-31",
+  "title": "AI新闻 | 揭露“女版乔布斯”骗局的人警告 + 绝不为了 AI 而做 AI + DeepSeek 千亿融资名单曝光",
+  "summary": "北京时间 10 月 31 日，曾参与揭露美国血液检测公司 Theranos 造假丑闻的泰勒 · 舒尔茨（Tyler Shultz）近日警告称，AI 投资热潮正在为下一个类似 Theranos 的骗局创造条件；《连线》（Wired）昨日（10 月 30 日）发布博文，采访了苹果现任首席执行官约翰 · 特努斯（John Ternus），并围绕着苹果公司产品未来发展方向、AI 领域发展等内容展开讨论；DeepSeek 第二轮融资拿下了 1055 亿元人民币，约 158 亿美元。The Information 拿到了出资名单，近 30 家投资者——比金额更有意思的是名单的构成变化。 腾讯和宁德时代仍是两大主力。腾讯两轮各出 100 亿；宁德时代及其董事长两轮分别出 50 亿和 100 亿。长鑫存储和中芯国际这两家芯片厂商也在里面，金额未披露。互联网...。",
+  "newsItems": [
+    {
+      "title": "揭露“女版乔布斯”骗局的人警告：AI 热潮或催生下一个 Theranos",
+      "summary": "北京时间 10 月 31 日，曾参与揭露美国血液检测公司 Theranos 造假丑闻的泰勒 · 舒尔茨（Tyler Shultz）近日警告称，AI 投资热潮正在为下一个类似 Theranos 的骗局创造条件。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/020/415.htm"
+    },
+    {
+      "title": "绝不为了 AI 而做 AI：苹果 CEO 特努斯产品宣言，AI 应隐身于体验",
+      "summary": "《连线》（Wired）昨日（10 月 30 日）发布博文，采访了苹果现任首席执行官约翰 · 特努斯（John Ternus），并围绕着苹果公司产品未来发展方向、AI 领域发展等内容展开讨论。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/020/409.htm"
+    },
+    {
+      "title": "DeepSeek 千亿融资名单曝光，国资占比从 2% 跳到 27%",
+      "summary": "DeepSeek 第二轮融资拿下了 1055 亿元人民币，约 158 亿美元。The Information 拿到了出资名单，近 30 家投资者——比金额更有意思的是名单的构成变化。 腾讯和宁德时代仍是两大主力。腾讯两轮各出 100 亿；宁德时代及其董事长两轮分别出 50 亿和 100 亿。长鑫存储和中芯国际这两家芯片厂商也在里面，金额未披露。互联网...",
+      "source": "开源中国",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.oschina.net/news/503318"
+    },
+    {
+      "title": "这个 Agent 宿主把界面做成了纯文本，你想要什么形状自己让 Agent 改",
+      "summary": "Herdr 的自我介绍里有一句话很吸睛：\"每一处界面都是你 agent 能改的文件。\" 它是一个给 coding agent 用的原生宿主——Claude Code、Codex、以及任何在终端里跑的 agent 都能住进去。想法是反过来的：不是让你去学一套新的 IDE 布局，而是把整个界面做成纯文本文件，你要什么形状，让 agent 自己改。 具体做法简单到…",
+      "source": "开源中国",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.oschina.net/news/503317/herdr-dev-agent-ide-runtime"
+    },
+    {
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "summary": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+      "source": "量子位",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.qbitai.com/2026/10/506743.html"
+    }
+  ],
+  "comment": "技术进步带来机遇，也带来挑战。"
+},
+{
   "date": "2026-10-30",
   "title": "AI新闻 | Mistral开源万亿参数Large 4 + 英伟达Cosmos 3让机器人先想再动 + 小鹏Robotaxi跑进广州全域 + Gemini聊天里直接改文档",
   "titleEn": "AI News | Mistral Open-Sources 1T-Parameter Large 4 + Nvidia's Cosmos 3 Lets Robots Think Before They Move + XPeng Robotaxi Goes Citywide in Guangzhou + Gemini Edits Documents Inside the Chat",
