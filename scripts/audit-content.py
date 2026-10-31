@@ -333,7 +333,9 @@ def suspect_url(u):
         return "链接格式异常"
     if re.search(r"/articles/\d{4}-\d{2}-\d{2}-[a-z]", u):
         return "日期+英文slug"
-    if re.search(r"/20\d\d/\d\d/[a-z0-9-]{6,}\.html", u):
+    # 伪造链接的 slug 几乎都是字母开头的标题拼接；纯数字 ID（如量子位 /2026/10/506743.html）
+    # 是正规文章 ID，不应误报，因此要求 slug 以字母开头
+    if re.search(r"/20\d\d/\d\d/[a-z][a-z0-9-]{5,}\.html", u):
         return "日期目录+slug"
     digits = "".join(re.findall(r"\d+", u))
     seq = "012345678901234567890123456789"
