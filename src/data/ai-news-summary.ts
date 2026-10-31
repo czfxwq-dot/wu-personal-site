@@ -88,8 +88,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
   "date": "2026-10-30",
   "title": "AI新闻 | Mistral开源万亿参数Large 4 + 英伟达Cosmos 3让机器人先想再动 + 小鹏Robotaxi跑进广州全域 + Gemini聊天里直接改文档",
   "titleEn": "AI News | Mistral Open-Sources 1T-Parameter Large 4 + Nvidia's Cosmos 3 Lets Robots Think Before They Move + XPeng Robotaxi Goes Citywide in Guangzhou + Gemini Edits Documents Inside the Chat",
-  "summary": "今日AI五条主线：法国Mistral开放1万亿参数的Large 4权重，编程类任务Token消耗比同级少47%，API同步降价；英伟达发布面向物理AI的开放世界模型Cosmos 3，把视觉推理、世界生成与动作预测压进同一个模型，同时开源语音模型Nemotron 3.5 Transcribe；小鹏Robotaxi「悠游」获批广州全域L4示范运营，走3000TOPS纯视觉、只卖方案不跑车队的轻资产路线；月之暗面把Kimi接入Gmail、云端硬盘和日历，K3.1 Pro全部权重定档11月4日开放；谷歌Gemini支持在聊天窗口里直接生成、预览、修改文档和PDF。",
-  "summaryEn": "Five threads ran through AI today. France's Mistral released the weights of its 1-trillion-parameter Large 4, which uses 47% fewer tokens per coding task than peers while cutting API prices. Nvidia shipped Cosmos 3, an open world model for physical AI that folds visual reasoning, world generation and action prediction into a single model, alongside an open speech model, Nemotron 3.5 Transcribe. XPeng's Robotaxi, branded Youyou, won approval to run L4 demonstration rides across all of Guangzhou on a 3000-TOPS pure-vision stack, selling solutions rather than operating fleets. Moonshot connected Kimi to Gmail, Drive and Calendar, and set November 4 as the date its K3.1 Pro weights go public. And Google now lets Gemini users create, preview and edit documents and PDFs without leaving the chat.",
+  "summary": "今日AI五条主线：法国Mistral开放1万亿参数的Large 4权重，编程类任务Token消耗比同级少47%，API同步降价；英伟达发布面向物理AI的开放世界模型Cosmos 3，把视觉推理、世界生成与动作预测压进同一个模型，同时开源语音模型Nemotron 3.5 Transcribe；小鹏Robotaxi「悠游」获批广州全域L4示范运营，走3000TOPS纯视觉、只卖方案不跑车队的轻资产路线；月之暗面确认Kimi K3.1 Pro全部权重将于11月4日开放，2.8万亿总参数、智能指数55分；谷歌Gemini支持在聊天窗口里直接生成、预览、修改文档和PDF。",
+  "summaryEn": "Five threads ran through AI today. France's Mistral released the weights of its 1-trillion-parameter Large 4, which uses 47% fewer tokens per coding task than peers while cutting API prices. Nvidia shipped Cosmos 3, an open world model for physical AI that folds visual reasoning, world generation and action prediction into a single model, alongside an open speech model, Nemotron 3.5 Transcribe. XPeng's Robotaxi, branded Youyou, won approval to run L4 demonstration rides across all of Guangzhou on a 3000-TOPS pure-vision stack, selling solutions rather than operating fleets. Moonshot set November 4 as the date its K3.1 Pro weights go public: 2.8 trillion total parameters and a score of 55 on the intelligence index. And Google now lets Gemini users create, preview and edit documents and PDFs without leaving the chat.",
   "newsItems": [
     {
       "title": "Mistral开放Large 4权重：1万亿参数，编程Token消耗省47%",
@@ -122,10 +122,10 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://news.qq.com/rain/a/20261029A04ENC00"
     },
     {
-      "title": "Kimi接入Gmail、云端硬盘和日历，K3.1 Pro权重定档11月4日开放",
-      "titleEn": "Kimi Connects to Gmail, Drive and Calendar as K3.1 Pro Weights Get a November 4 Date",
-      "summary": "月之暗面10月29日在海外宣布，Kimi通过安全的OAuth授权接入谷歌Gmail、Google Drive和Google日历，用户可在Plugins页面启用，直接总结邮件往来、检索云端文件、规划每日行程。同期的Kimi K3.1 Pro是其最强开放权重模型：2.8万亿总参数、1040亿激活的MoE，100万token上下文，多模态，在Artificial Analysis智能指数上拿55分，仅次于Claude Opus 5.5的58分；API定价为输入每百万Token 2美元、输出10美元。官方确认全部权重将于2026年11月4日放出。",
-      "summaryEn": "Moonshot announced overseas on October 29 that Kimi now connects to Gmail, Google Drive and Google Calendar through secure OAuth authorization, enabled from the Plugins page, so users can summarize email threads, search cloud files and plan their day. Its K3.1 Pro is the company's strongest open-weight model: a 2.8-trillion-parameter MoE with 104 billion active, a 1-million-token context and multimodal input, scoring 55 on the Artificial Analysis intelligence index, behind only Claude Opus 5.5 at 58. API pricing is $2 per million input tokens and $10 per million output. Moonshot confirmed the full weights arrive on November 4, 2026.",
+      "title": "Kimi K3.1 Pro 全部权重定档11月4日开放：2.8万亿参数，智能指数55分",
+      "titleEn": "Kimi K3.1 Pro Weights Land on November 4: 2.8 Trillion Parameters, 55 on the Intelligence Index",
+      "summary": "月之暗面确认 Kimi K3.1 Pro 的全部权重将于 2026 年 11 月 4 日开放。这是其最强开放权重模型：2.8 万亿总参数、1040 亿激活的 MoE 架构，100 万 token 上下文，支持多模态输入；在 Artificial Analysis 智能指数上拿到 55 分，仅次于 Claude Opus 5.5 的 58 分。API 定价为输入每百万 token 2 美元、输出 10 美元。",
+      "summaryEn": "Moonshot confirmed that the full weights of Kimi K3.1 Pro arrive on November 4, 2026. It is the company's strongest open-weight model: a 2.8-trillion-parameter MoE with 104 billion active, a 1-million-token context and multimodal input. It scores 55 on the Artificial Analysis intelligence index, behind only Claude Opus 5.5 at 58. API pricing is $2 per million input tokens and $10 per million output.",
       "source": "腾讯新闻",
       "category": "AI应用",
       "categoryEn": "AI Applications",
@@ -142,8 +142,8 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
       "url": "https://original.ifeng.com/c/8xdNzqURAr3"
     }
   ],
-  "comment": "今天这五条新闻有一个共同的转向：模型不再比谁更大，而是比谁能被拿走、被装进自己的机器里。Mistral把1万亿参数挂上HuggingFace，英伟达把世界模型交给机器人团队，小鹏把L4打包成能卖到别的城市的方案，Kimi把20多亿人天天用的邮箱日历接进对话框。能力正在从「调用」变成「部署」——这才是中小企业真正用得上的那一步。",
-  "commentEn": "These five stories share one direction: the contest is no longer about who builds the biggest model, but about whose model can be taken away and run on your own machines. Mistral hangs a trillion parameters on HuggingFace, Nvidia hands its world model to robotics teams, XPeng packages L4 into something it can sell city to city, and Kimi wires the inbox and calendar billions of people already use into a chat box. Capability is shifting from something you call to something you deploy — and that is the step small and mid-sized companies can actually use."
+  "comment": "今天这五条新闻有一个共同的转向：模型不再比谁更大，而是比谁能被拿走、被装进自己的机器里。Mistral把1万亿参数挂上HuggingFace，英伟达把世界模型交给机器人团队，小鹏把L4打包成能卖到别的城市的方案，Kimi把最强模型的全部权重定在11月4日交出去。能力正在从「调用」变成「部署」——这才是中小企业真正用得上的那一步。",
+  "commentEn": "These five stories share one direction: the contest is no longer about who builds the biggest model, but about whose model can be taken away and run on your own machines. Mistral hangs a trillion parameters on HuggingFace, Nvidia hands its world model to robotics teams, XPeng packages L4 into something it can sell city to city, and Kimi sets a date to hand over the full weights of its strongest model. Capability is shifting from something you call to something you deploy — and that is the step small and mid-sized companies can actually use."
 },
 {
   "date": "2026-10-29",

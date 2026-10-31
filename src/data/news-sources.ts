@@ -19,6 +19,9 @@ export const SOURCE_NAMES_EN: Record<string, string> = {
   '钛媒体': 'TMTPost',
   '东方财富': 'East Money',
   '澎湃': 'The Paper',
+  '搜狐科技': 'Sohu Tech',
+  '凤凰网科技': 'iFeng Tech',
+  '界面新闻': 'Jiemian News',
 };
 
 /** 取来源名的英文写法；没有映射时回退原名。 */
