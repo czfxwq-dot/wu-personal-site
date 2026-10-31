@@ -33,6 +33,21 @@ logger = logging.getLogger(__name__)
 START_DATE = datetime(2026, 4, 29)
 
 
+def _count_today_news_items(today):
+    """从 ai-news-summary.ts 读今天实际收录了几条新闻（不再靠提交信息猜）"""
+    p = Path(__file__).parent.parent / 'src/data/ai-news-summary.ts'
+    try:
+        s = p.read_text(encoding='utf-8')
+        arr = json.loads(s[s.index('= [') + 2: s.rindex('];') + 1])
+        for d in arr:
+            if d.get('date') == today:
+                return len(d.get('newsItems', []))
+        return 0
+    except Exception as e:
+        logger.warning(f"读取今日新闻条数失败: {e}")
+        return 0
+
+
 def get_today_git_stats():
     """获取今天的 git 提交与文件类型统计"""
     today = datetime.now().strftime('%Y-%m-%d')
@@ -48,24 +63,30 @@ def get_today_git_stats():
         commits = result.stdout.strip().split('\n') if result.stdout.strip() else []
         logger.info(f"找到 {len(commits)} 次提交")
 
-        file_types = {
-            'diary': 0, 'article': 0, 'news': 0, 'code': 0, 'doc': 0, 'config': 0
-        }
+        # 按真实改动的文件统计（不再按提交信息里的关键词猜——那样会凭空编数字：
+        # 说明里带「新闻」两个字就算一条新闻，带「文章」就算一篇文章，与实际完全不符）
+        files_result = subprocess.run(
+            ['git', 'log', '--since', f'{today} 00:00', '--until', f'{today} 23:59',
+             '--name-only', '--pretty=format:', '--no-merges'],
+            capture_output=True, text=True, encoding='utf-8', cwd='..'
+        )
+        changed = [f.strip() for f in files_result.stdout.splitlines() if f.strip()]
+        changed_unique = sorted(set(changed))
+        logger.info(f"今日改动文件 {len(changed_unique)} 个")
 
-        for msg in commits:
-            m = msg.lower()
-            if '日记' in m or 'diary' in m:
-                file_types['diary'] += 1
-            elif '半百观' in m or '文章' in m or 'article' in m:
-                file_types['article'] += 1
-            elif '新闻' in m or 'news' in m:
-                file_types['news'] += 1
-            elif any(x in m for x in ['.py', '.js', '.ts', '代码', 'code']):
-                file_types['code'] += 1
-            elif any(x in m for x in ['.md', '文档', 'doc']):
-                file_types['doc'] += 1
-            elif any(x in m for x in ['.json', '.yml', '.sh', '.bat', '配置', 'config']):
-                file_types['config'] += 1
+        def _count(pred):
+            return len([f for f in changed_unique if pred(f)])
+
+        file_types = {
+            'diary': _count(lambda f: f.startswith('src/content/diaries/') and f.endswith('.md')),
+            'article': _count(lambda f: f.startswith('src/content/articles/') and f.endswith('.md')),
+            'news': _count_today_news_items(today),
+            'code': _count(lambda f: f.startswith(('functions/', 'scripts/', 'src/pages/', 'src/components/', 'src/layouts/'))
+                           and f.endswith(('.py', '.ts', '.tsx', '.js', '.astro', '.mjs'))),
+            'doc': _count(lambda f: f.endswith('.md') and not f.startswith(('src/content/', 'docs/'))),
+            'config': _count(lambda f: f.endswith(('.json', '.yml', '.yaml', '.toml', '.sh', '.ps1')) or f == '.gitignore'),
+        }
+        logger.info(f"文件统计: {file_types}")
 
         return {'commit_count': len(commits), 'commits': commits, 'file_types': file_types}
     except Exception as e:
