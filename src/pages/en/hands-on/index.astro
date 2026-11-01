@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+import { articles } from '../../../data/articles';
+
+const handsOn = articles.filter(a => a.tag === 'AI应用' || a.tag === '深度分析');
+const usable = handsOn.filter(a => a.tag === 'AI应用');
+const deeper = handsOn.filter(a => a.tag === '深度分析');
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Copy it and use it: AI in practice | Guanwu",
+  "description": "Articles you can act on today: how to prompt, how to cost a task, how to land AI in a real business",
+  "url": "https://ban-bai.com/en/hands-on/",
+  "author": { "@type": "Person", "name": "Mr. Wu", "alternateName": "Guanwu" }
+};
+
+function cut(s: string, n: number): string {
+  if (!s) return '';
+  return s.length <= n ? s : s.slice(0, n) + '…';
+}
+---
+
+<BaseLayout
+  title="Copy it and use it: AI in practice | Guanwu"
+  lang="en"
+  jsonLd={jsonLd}
+  ogDescription="No trend talk, just method: how to prompt, how to cost a task, how to land AI in a specific business"
+  navActive="banbaiguan"
+>
+  <section class="page-section">
+    <h1>Copy it and use it</h1>
+    <p class="subtitle">
+      Out of {articles.length} pieces, these {handsOn.length} aren't about trends — they give you a method.
+      Steps, costs and the mistakes are written out, so you can use them right away.
+    </p>
+
+    <div class="ho-block">
+      <div class="ho-head">
+        <h2>Take it and use it</h2>
+        <span class="ho-count">{usable.length} pieces</span>
+      </div>
+      <p class="ho-desc">Concrete moves: let the AI question you first, cost a task properly, push an agent into a real workflow.</p>
+      <div class="ho-list">
+        {usable.map((a) => (
+          <a href={`/en/banbaiguan/${a.slug}/`} class="ho-item">
+            <div class="ho-meta">
+              <span class="ho-date">{a.date}</span>
+              <span class="ho-tag">{a.tagEn || a.tag}</span>
+            </div>
+            <h3>{a.titleEn || a.title}</h3>
+            <p>{cut(a.excerptEn || a.excerpt, 110)}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="ho-block">
+      <div class="ho-head">
+        <h2>Look one layer deeper</h2>
+        <span class="ho-count">{deeper.length} pieces</span>
+      </div>
+      <p class="ho-desc">The economics behind the decision: who is making money, where the architecture is stuck, which claims the media got wrong.</p>
+      <div class="ho-list">
+        {deeper.map((a) => (
+          <a href={`/en/banbaiguan/${a.slug}/`} class="ho-item">
+            <div class="ho-meta">
+              <span class="ho-date">{a.date}</span>
+              <span class="ho-tag">{a.tagEn || a.tag}</span>
+            </div>
+            <h3>{a.titleEn || a.title}</h3>
+            <p>{cut(a.excerptEn || a.excerpt, 110)}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="ho-foot">
+      <p>The remaining {articles.length - handsOn.length} pieces are opinion and industry observation — all in the archive.</p>
+      <a href="/en/banbaiguan/" class="btn btn-primary">Read all {articles.length} <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ho-block { margin: 40px 0; }
+  .ho-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .ho-head h2 { font-size: 19px; margin: 0; color: var(--color-text); }
+  .ho-count { font-size: 12px; color: var(--color-gold); }
+  .ho-desc { font-size: 13.5px; color: var(--color-text-tertiary); margin: 0 0 12px; }
+  .ho-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .ho-item {
+    display: block; padding: 18px 20px; background: var(--color-surface);
+    border: 1px solid var(--color-border-light); border-radius: var(--radius-lg);
+    text-decoration: none; transition: border-color 0.2s, transform 0.15s;
+  }
+  .ho-item:hover { border-color: var(--color-gold); transform: translateY(-2px); }
+  .ho-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ho-date { font-size: 12px; color: var(--color-text-tertiary); }
+  .ho-tag { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: rgba(200, 164, 92, 0.12); color: var(--color-gold); }
+  .ho-item h3 { font-size: 16px; font-weight: 600; color: var(--color-text); margin: 0 0 8px; line-height: 1.5; }
+  .ho-item:hover h3 { color: var(--color-accent); }
+  .ho-item p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
+  .ho-foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border-light); text-align: center; }
+  .ho-foot p { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 16px; }
+
+  @media (max-width: 768px) {
+    .ho-list { grid-template-columns: 1fr; }
+  }
+</style>

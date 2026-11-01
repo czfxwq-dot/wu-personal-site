@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import { articles } from '../../data/articles';
+import { diaries } from '../../data/diaries';
+
+const projectsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "正在运行的 AI 实践 | 观吾",
+  "description": "三个自己搭起来、每天在跑的系统：站内 AI 助理、内容自动化、写作流水线",
+  "url": "https://ban-bai.com/projects/",
+  "author": { "@type": "Person", "name": "吴总", "alternateName": "观吾" }
+};
+
+const stats = {
+  articles: articles.length,
+  diaries: diaries.length,
+};
+---
+
+<BaseLayout
+  title="正在运行的三个 AI 系统 | 观吾"
+  jsonLd={projectsJsonLd}
+  ogDescription="不是演示，是每天在跑的：站内 AI 助理、内容自动化、写作流水线，附可验证的数字和踩过的坑"
+  navActive="home"
+>
+  <section class="page-section">
+    <h1>正在运行的三个 AI 系统</h1>
+    <p class="subtitle">
+      这里没有"即将上线"。三套东西每天都在跑，下面写清它解决什么问题、现在什么数字、坑在哪。
+    </p>
+
+    <div class="proj-nav">
+      <a href="#shanshan">01 山山 AI 助理</a>
+      <a href="#automation">02 内容自动化</a>
+      <a href="#pipeline">03 写作流水线</a>
+    </div>
+
+    <article class="proj" id="shanshan">
+      <div class="proj-head">
+        <span class="proj-icon">🦞</span>
+        <div>
+          <h2>山山 AI 助理</h2>
+          <p class="proj-oneline">网站右下角那个能回答问题的助手，也是留言板的自动回复</p>
+        </div>
+      </div>
+
+      <div class="proj-grid">
+        <div>
+          <h3>它解决什么</h3>
+          <p>访客懒得翻 51 篇文章找答案。山山能读到最新的文章、新闻和日记摘要再回答，等于把整站变成了可对话的索引；留言板没人值守时也由它先回一句。</p>
+        </div>
+        <div>
+          <h3>怎么做的</h3>
+          <p>前端悬浮组件 → <code>/api/chat</code>（Cloudflare Pages Function）→ 直连 DeepSeek 的 OpenAI 兼容接口，SSE 流式返回。构建时另生成一份 <code>site-context.json</code>（最新 8 篇文章 / 5 条新闻 / 5 篇日记），Function 侧读取并缓存 30 分钟。</p>
+        </div>
+        <div>
+          <h3>现在的数字</h3>
+          <ul class="proj-stats">
+            <li><strong>20 次</strong> / 10 分钟，单 IP 限流</li>
+            <li><strong>8 / 5 / 5</strong> 篇上下文注入</li>
+            <li><strong>0 台</strong>自有服务器常驻</li>
+          </ul>
+        </div>
+        <div>
+          <h3>踩过的坑</h3>
+          <p>最早把模型挂在自家电脑的临时隧道上（openclaw + trycloudflare），电脑一关、隧道一重启地址就换，线上直接不可用。教训写进了手册：<strong>别把线上功能绑在自己机器的临时地址上</strong>。现在换模型厂商只改一个环境变量。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="automation">
+      <div class="proj-head">
+        <span class="proj-icon">📰</span>
+        <div>
+          <h2>内容自动化</h2>
+          <p class="proj-oneline">三个计划任务：早上采新闻、傍晚生草稿、夜里兜底推送</p>
+        </div>
+      </div>
+
+      <div class="proj-grid">
+        <div>
+          <h3>它解决什么</h3>
+          <p>每天写东西不现实，但每天什么都不写，站就死了。于是把"找料"和"排版"交给机器，把"判断"留给自己。</p>
+        </div>
+        <div>
+          <h3>怎么做的</h3>
+          <p>Windows 计划任务三个：<strong>06:00</strong> 抓 RSS 并去重成 5 条新闻；<strong>18:00</strong> 按 git 提交记录生成日记草稿；<strong>22:30</strong> 把已提交未推送的内容兜底推上线。新闻脚本带失败重试、合集/厂商稿过滤、历史相似度去重。</p>
+        </div>
+        <div>
+          <h3>现在的数字</h3>
+          <ul class="proj-stats">
+            <li><strong>6 个</strong>可用信源，每日 5 条</li>
+            <li><strong>{stats.diaries} 篇</strong>日记，每天 18:00</li>
+            <li><strong>30–60 秒</strong>从推送到上线</li>
+          </ul>
+        </div>
+        <div>
+          <h3>踩过的坑</h3>
+          <p>36氪、机器之心的 RSS 早已反爬封禁，一直返回 HTML 反爬页而不是 XML——所以信源是实测筛过的。另外脚本<strong>只产草稿、不自动上线</strong>：机械稿直接发布过一次，读者一眼看得出，之后加了「18:00 出草稿 → 人工/审稿重写 → 再提交」的闸门。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="pipeline">
+      <div class="proj-head">
+        <span class="proj-icon">✍️</span>
+        <div>
+          <h2>写作流水线</h2>
+          <p class="proj-oneline">{stats.articles} 篇长文都是这条流程出来的，中英双语</p>
+        </div>
+      </div>
+
+      <div class="proj-grid">
+        <div>
+          <h3>它解决什么</h3>
+          <p>写长文最难的不是写，是决定"这篇值不值得写"。选题拍脑袋，写完才发现没人关心，是最贵的浪费。</p>
+        </div>
+        <div>
+          <h3>怎么做的</h3>
+          <p>两道工序：<strong>选题</strong>用 7 个问题打分（有没有真实经验、读者能不能拿走动作、有没有反常识点…），过线才写；<strong>写作</strong>走 18 项自检清单（事实来源、数字口径、标题是否过度承诺…）。英文不是机翻，是按英文读者的表达习惯重写一遍。</p>
+        </div>
+        <div>
+          <h3>现在的数字</h3>
+          <ul class="proj-stats">
+            <li><strong>{stats.articles} 篇</strong>长文，全部中英双语</li>
+            <li><strong>高 0 中 0</strong>上线前内容体检</li>
+            <li><strong>18 项</strong>自检，逐条过</li>
+          </ul>
+        </div>
+        <div>
+          <h3>踩过的坑</h3>
+          <p>链接必须逐条打开核实标题和时间——曾有 79 条假新闻混进站里，是看链接结构才发现的，随后全站下架。数字口径同理：写"节省 47% token"之前，得先确认它是官方实测还是媒体转述。</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="proj-foot">
+      <p>想知道这些系统在某一天具体出了什么岔子？都在工作日记里，按天记，不修饰。</p>
+      <a href="/diary/" class="btn btn-primary">看工作日记 <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .proj-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 24px 0 40px;
+  }
+  .proj-nav a {
+    font-size: 13px;
+    padding: 6px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .proj-nav a:hover {
+    border-color: var(--color-gold);
+    color: var(--color-accent);
+  }
+
+  .proj {
+    padding: 32px 0;
+    border-top: 1px solid var(--color-border-light);
+    scroll-margin-top: 90px;
+  }
+  .proj:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  .proj-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .proj-icon {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .proj-head h2 {
+    font-size: 22px;
+    margin: 0 0 6px;
+    color: var(--color-text);
+  }
+  .proj-oneline {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .proj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 32px;
+  }
+  .proj-grid h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin: 0 0 8px;
+    letter-spacing: 0.02em;
+  }
+  .proj-grid p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0;
+  }
+  .proj-grid code {
+    font-size: 12.5px;
+    background: var(--color-bg-alt);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+  .proj-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .proj-stats li {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.9;
+  }
+  .proj-stats strong {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .proj-foot {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border-light);
+    text-align: center;
+  }
+  .proj-foot p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: 768px) {
+    .proj-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  }
+</style>

@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import { articles } from '../../data/articles';
+
+const handsOn = articles.filter(a => a.tag === 'AI应用' || a.tag === '深度分析');
+const usable = handsOn.filter(a => a.tag === 'AI应用');
+const deeper = handsOn.filter(a => a.tag === '深度分析');
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "上手就能用 | 观吾",
+  "description": "能直接照着做的 AI 实操文章合集：怎么提问、怎么算成本、怎么落到业务里",
+  "url": "https://ban-bai.com/hands-on/",
+  "author": { "@type": "Person", "name": "吴总", "alternateName": "观吾" }
+};
+
+function cut(s: string, n: number): string {
+  if (!s) return '';
+  return s.length <= n ? s : s.slice(0, n) + '…';
+}
+---
+
+<BaseLayout
+  title="上手就能用：AI 实操文章合集 | 观吾"
+  jsonLd={jsonLd}
+  ogDescription="不聊趋势，只给做法：怎么提问、怎么算成本、怎么把 AI 落到具体业务里"
+  navActive="banbaiguan"
+>
+  <section class="page-section">
+    <h1>上手就能用</h1>
+    <p class="subtitle">
+      全站 {articles.length} 篇长文里，挑出 {handsOn.length} 篇不是"聊趋势"而是"给做法"的。
+      每篇都写清步骤、成本和踩过的坑，看完能直接用。
+    </p>
+
+    <div class="ho-block">
+      <div class="ho-head">
+        <h2>第一类 · 拿去就用</h2>
+        <span class="ho-count">{usable.length} 篇</span>
+      </div>
+      <p class="ho-desc">具体的用法：怎么让 AI 先问你、怎么算一笔账、怎么把智能体塞进业务流程。</p>
+      <div class="ho-list">
+        {usable.map((a) => (
+          <a href={`/banbaiguan/${a.slug}/`} class="ho-item">
+            <div class="ho-meta">
+              <span class="ho-date">{a.date}</span>
+              <span class="ho-tag">{a.tag}</span>
+            </div>
+            <h3>{a.title}</h3>
+            <p>{cut(a.excerpt, 84)}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="ho-block">
+      <div class="ho-head">
+        <h2>第二类 · 看深一层</h2>
+        <span class="ho-count">{deeper.length} 篇</span>
+      </div>
+      <p class="ho-desc">决策背后的账：谁在赚钱、底层卡在哪、哪些判断是被媒体带偏的。</p>
+      <div class="ho-list">
+        {deeper.map((a) => (
+          <a href={`/banbaiguan/${a.slug}/`} class="ho-item">
+            <div class="ho-meta">
+              <span class="ho-date">{a.date}</span>
+              <span class="ho-tag">{a.tag}</span>
+            </div>
+            <h3>{a.title}</h3>
+            <p>{cut(a.excerpt, 84)}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="ho-foot">
+      <p>剩下的 {articles.length - handsOn.length} 篇是观点和行业观察，在文章列表里。</p>
+      <a href="/banbaiguan/" class="btn btn-primary">看全部 {articles.length} 篇 <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ho-block {
+    margin: 40px 0;
+  }
+  .ho-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .ho-head h2 {
+    font-size: 19px;
+    margin: 0;
+    color: var(--color-text);
+  }
+  .ho-count {
+    font-size: 12px;
+    color: var(--color-gold);
+  }
+  .ho-desc {
+    font-size: 13.5px;
+    color: var(--color-text-tertiary);
+    margin: 0 0 12px;
+  }
+  .ho-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .ho-item {
+    display: block;
+    padding: 18px 20px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .ho-item:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+  }
+  .ho-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ho-date {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+  }
+  .ho-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: rgba(200, 164, 92, 0.12);
+    color: var(--color-gold);
+  }
+  .ho-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 8px;
+    line-height: 1.5;
+  }
+  .ho-item:hover h3 {
+    color: var(--color-accent);
+  }
+  .ho-item p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .ho-foot {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border-light);
+    text-align: center;
+  }
+  .ho-foot p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: 768px) {
+    .ho-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

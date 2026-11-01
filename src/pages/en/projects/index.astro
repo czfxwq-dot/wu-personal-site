@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../../layouts/Base.astro';
+import { articles } from '../../../data/articles';
+import { diaries } from '../../../data/diaries';
+
+const projectsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Three AI systems running in production | Guanwu",
+  "description": "A site assistant, a content automation stack, and a writing pipeline — with real numbers and the mistakes made along the way",
+  "url": "https://ban-bai.com/en/projects/",
+  "author": { "@type": "Person", "name": "Mr. Wu", "alternateName": "Guanwu" }
+};
+
+const stats = { articles: articles.length, diaries: diaries.length };
+---
+
+<BaseLayout
+  title="Three AI systems running in production | Guanwu"
+  lang="en"
+  jsonLd={projectsJsonLd}
+  ogDescription="Not demos — three systems that run every day: a site assistant, content automation, and a writing pipeline"
+  navActive="home"
+>
+  <section class="page-section">
+    <h1>Three AI systems running in production</h1>
+    <p class="subtitle">
+      No "coming soon" here. All three run daily. Below: the problem each solves, the numbers it produces today, and where it broke.
+    </p>
+
+    <div class="proj-nav">
+      <a href="#shanshan">01 Site assistant</a>
+      <a href="#automation">02 Content automation</a>
+      <a href="#pipeline">03 Writing pipeline</a>
+    </div>
+
+    <article class="proj" id="shanshan">
+      <div class="proj-head">
+        <span class="proj-icon">🦞</span>
+        <div>
+          <h2>Shanshan, the site assistant</h2>
+          <p class="proj-oneline">The chat widget in the corner — and the auto-reply on the guestbook</p>
+        </div>
+      </div>
+      <div class="proj-grid">
+        <div>
+          <h3>Problem</h3>
+          <p>Visitors won't dig through {stats.articles} articles to find an answer. The assistant reads the latest articles, news and diary entries before replying, which turns the site into a searchable conversation.</p>
+        </div>
+        <div>
+          <h3>How it works</h3>
+          <p>Widget → <code>/api/chat</code> (Cloudflare Pages Function) → DeepSeek's OpenAI-compatible endpoint, streamed over SSE. A build-time <code>site-context.json</code> carries the latest 8 articles, 5 news items and 5 diary entries, cached for 30 minutes.</p>
+        </div>
+        <div>
+          <h3>Numbers</h3>
+          <ul class="proj-stats">
+            <li><strong>20 req</strong> / 10 min per IP</li>
+            <li><strong>8 / 5 / 5</strong> items of context</li>
+            <li><strong>0 servers</strong> kept running</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Where it broke</h3>
+          <p>The first version hung the model off a temporary tunnel on my own PC. When the machine slept or the tunnel restarted, the URL changed and the site went dead. Lesson: never bind a production feature to a temporary address on your own machine.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="automation">
+      <div class="proj-head">
+        <span class="proj-icon">📰</span>
+        <div>
+          <h2>Content automation</h2>
+          <p class="proj-oneline">Three scheduled jobs: news at dawn, diary draft at dusk, push at night</p>
+        </div>
+      </div>
+      <div class="proj-grid">
+        <div>
+          <h3>Problem</h3>
+          <p>Writing every day isn't realistic, but writing nothing kills a site. So machines handle sourcing and formatting; judgement stays with me.</p>
+        </div>
+        <div>
+          <h3>How it works</h3>
+          <p><strong>06:00</strong> pull RSS, dedupe, keep 5 items. <strong>18:00</strong> generate a diary draft from git history. <strong>22:30</strong> push anything committed but not yet deployed. The news script retries failures, filters roundups and vendor posts, and skips near-duplicates.</p>
+        </div>
+        <div>
+          <h3>Numbers</h3>
+          <ul class="proj-stats">
+            <li><strong>6 sources</strong>, 5 items a day</li>
+            <li><strong>{stats.diaries} entries</strong>, daily at 18:00</li>
+            <li><strong>30–60s</strong> push to live</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Where it broke</h3>
+          <p>Several big Chinese tech feeds now serve anti-scraping HTML instead of RSS — the source list was validated by testing, not by trusting the docs. Also, the script produces drafts only: one machine-written entry went live untouched and readers could tell. A human review gate came next.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="pipeline">
+      <div class="proj-head">
+        <span class="proj-icon">✍️</span>
+        <div>
+          <h2>Writing pipeline</h2>
+          <p class="proj-oneline">All {stats.articles} long-form pieces came out of this, in two languages</p>
+        </div>
+      </div>
+      <div class="proj-grid">
+        <div>
+          <h3>Problem</h3>
+          <p>The hard part isn't writing — it's deciding whether a piece is worth writing. Picking topics on instinct is the most expensive mistake there is.</p>
+        </div>
+        <div>
+          <h3>How it works</h3>
+          <p>Two gates. <strong>Topic selection</strong> scores seven questions (real experience? an action the reader can take? a counterintuitive point?). <strong>Drafting</strong> runs an 18-point checklist (sources, number definitions, headlines that don't overpromise). English isn't machine-translated; it's rewritten for English readers.</p>
+        </div>
+        <div>
+          <h3>Numbers</h3>
+          <ul class="proj-stats">
+            <li><strong>{stats.articles} pieces</strong>, all bilingual</li>
+            <li><strong>0 high / 0 medium</strong> issues at pre-publish audit</li>
+            <li><strong>18 checks</strong>, every time</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Where it broke</h3>
+          <p>Every link has to be opened and verified for title and date. Seventy-nine fabricated news items once slipped in and were caught only by inspecting URL structure; all were pulled. Same for numbers: before writing "47% fewer tokens," confirm whether it's a vendor measurement or a media paraphrase.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="proj-foot">
+      <p>Want to see what went wrong on a specific day? It's all in the work diary, written daily, unpolished.</p>
+      <a href="/en/diary/" class="btn btn-primary">Read the work diary <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .proj-nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0 40px; }
+  .proj-nav a {
+    font-size: 13px; padding: 6px 14px; border: 1px solid var(--color-border);
+    border-radius: 20px; text-decoration: none; color: var(--color-text-secondary);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .proj-nav a:hover { border-color: var(--color-gold); color: var(--color-accent); }
+
+  .proj { padding: 32px 0; border-top: 1px solid var(--color-border-light); scroll-margin-top: 90px; }
+  .proj:first-of-type { border-top: none; padding-top: 0; }
+  .proj-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+  .proj-icon { font-size: 28px; line-height: 1.2; }
+  .proj-head h2 { font-size: 22px; margin: 0 0 6px; color: var(--color-text); }
+  .proj-oneline { font-size: 14px; color: var(--color-text-secondary); margin: 0; }
+
+  .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 32px; }
+  .proj-grid h3 { font-size: 13px; font-weight: 600; color: var(--color-gold); margin: 0 0 8px; letter-spacing: 0.02em; }
+  .proj-grid p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.75; margin: 0; }
+  .proj-grid code { font-size: 12.5px; background: var(--color-bg-alt); padding: 1px 5px; border-radius: 4px; }
+  .proj-stats { list-style: none; padding: 0; margin: 0; }
+  .proj-stats li { font-size: 14px; color: var(--color-text-secondary); line-height: 1.9; }
+  .proj-stats strong { font-weight: 600; color: var(--color-accent); }
+
+  .proj-foot { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--color-border-light); text-align: center; }
+  .proj-foot p { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 16px; }
+
+  @media (max-width: 768px) {
+    .proj-grid { grid-template-columns: 1fr; gap: 18px; }
+  }
+</style>
