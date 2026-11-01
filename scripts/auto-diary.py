@@ -12,7 +12,7 @@ import subprocess
 import logging
 import random
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # 配置日志
@@ -48,14 +48,29 @@ def _count_today_news_items(today):
         return 0
 
 
+def diary_window():
+    """记录窗口：前一天 18:00 → 当天 18:00（见 templates/diary-standards.md 第 0 节）。
+
+    2026-11-01 修：之前用「当天 00:00 → 23:59」，导致前一天 18:00 之后做的提交
+    两边都不算——当天日记不取（还没到），前一天日记已生成，永久丢失。
+    10-31 22:59 和 23:00 的两次提交就是这样漏掉的。
+    """
+    now = datetime.now()
+    today_0 = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    start = today_0 - timedelta(hours=6)          # 前一天 18:00
+    end = today_0.replace(hour=18)                 # 当天 18:00
+    return start.strftime('%Y-%m-%d %H:%M'), end.strftime('%Y-%m-%d %H:%M')
+
+
 def get_today_git_stats():
-    """获取今天的 git 提交与文件类型统计"""
+    """获取记录窗口内的 git 提交与文件类型统计"""
     today = datetime.now().strftime('%Y-%m-%d')
-    logger.info(f"开始获取 {today} 的 git 统计信息")
+    win_start, win_end = diary_window()
+    logger.info(f"开始获取 {today} 的 git 统计信息（窗口 {win_start} → {win_end}）")
 
     try:
         result = subprocess.run(
-            ['git', 'log', '--since', f'{today} 00:00', '--until', f'{today} 23:59',
+            ['git', 'log', '--since', win_start, '--until', win_end,
              '--pretty=format:%s', '--no-merges'],
             capture_output=True, text=True, encoding='utf-8', cwd='..'
         )
@@ -66,7 +81,7 @@ def get_today_git_stats():
         # 按真实改动的文件统计（不再按提交信息里的关键词猜——那样会凭空编数字：
         # 说明里带「新闻」两个字就算一条新闻，带「文章」就算一篇文章，与实际完全不符）
         files_result = subprocess.run(
-            ['git', 'log', '--since', f'{today} 00:00', '--until', f'{today} 23:59',
+            ['git', 'log', '--since', win_start, '--until', win_end,
              '--name-only', '--pretty=format:', '--no-merges'],
             capture_output=True, text=True, encoding='utf-8', cwd='..'
         )
