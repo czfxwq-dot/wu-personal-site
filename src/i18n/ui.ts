@@ -5,6 +5,8 @@ export const ui = {
     // Navigation
     siteName: '观吾',
     navHome: '首页',
+    navProjects: '作品',
+    navHandsOn: '实战',
     navDiary: '日记',
     navAiNews: 'AI新闻',
     navBanbaiguan: '半百观',
@@ -106,6 +108,8 @@ export const ui = {
     // Navigation
     siteName: 'Guanwu',
     navHome: 'Home',
+    navProjects: 'Projects',
+    navHandsOn: 'Hands-on',
     navDiary: 'Diary',
     navAiNews: 'AI News',
     navBanbaiguan: 'BanbaiGuan',

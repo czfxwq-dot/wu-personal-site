@@ -184,6 +184,8 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
         <a href={lang === 'en' ? '/en/' : '/'} class="site-brand">{siteName}</a>
         <nav class="site-nav">
           <a href={lang === 'en' ? '/en/' : '/'} class:list={[navActive === 'home' && 'active']}>{t('navHome', lang)}</a>
+          <a href={lang === 'en' ? '/en/projects/' : '/projects/'} class:list={[navActive === 'projects' && 'active']}>{t('navProjects', lang)}</a>
+          <a href={lang === 'en' ? '/en/hands-on/' : '/hands-on/'} class:list={[navActive === 'hands-on' && 'active']}>{t('navHandsOn', lang)}</a>
           <a href={lang === 'en' ? '/en/diary/' : '/diary/'} class:list={[navActive === 'diary' && 'active']}>{t('navDiary', lang)}</a>
           <a href={lang === 'en' ? '/en/ai-news/' : '/ai-news/'} class:list={[navActive === 'ai-news' && 'active']}>{t('navAiNews', lang)}</a>
           <a href={lang === 'en' ? '/en/banbaiguan/' : '/banbaiguan/'} class:list={[navActive === 'banbaiguan' && 'active']}>{t('navBanbaiguan', lang)}</a>
