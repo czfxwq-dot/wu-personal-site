@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "@astrojs/sitemap": "^2.0.2",
     "astro": "^4.16.0",
     "zod": "^3.25.76"
   },
