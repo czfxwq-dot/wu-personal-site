@@ -48,8 +48,9 @@ const baseUrl = 'https://ban-bai.com';
 const canonicalUrl = `${baseUrl}${pathname}`;
 const alternateHref = lang === 'en' ? `${baseUrl}${pathname.replace(/^\/en/, '') || '/'}` : `${baseUrl}/en${pathname === '/' ? '' : pathname}`;
 
-// Google Analytics Measurement ID
+// 访问统计：主用 Cloudflare Web Analytics，GA4 备选（国内读者基本加载不到 gtag，默认不开）
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
+const cfBeacon = import.meta.env.PUBLIC_CF_BEACON_TOKEN || '';
 
 // 全局 JSON-Ld（WebSite + Organization + Person + Blog）
 const globalJsonLd = [
@@ -161,16 +162,19 @@ const allJsonLd = Array.isArray(jsonLd) ? [...globalJsonLd, ...jsonLd] : [...glo
     {allJsonLd.map((item) => (
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
+    {cfBeacon && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: cfBeacon })}
+      ></script>
+    )}
     {gaId && (
       <>
-        <!-- Google tag (gtag.js) -->
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '{gaId}');
-        </script>
+        <!-- Google tag (gtag.js) — 备选，国内读者通常加载不到，默认不启用 -->
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`}></script>
       </>
     )}
   </head>

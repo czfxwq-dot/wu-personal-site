@@ -30,6 +30,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # 访问统计：CF beacon 为主，GA4 为备选（缺 secret 时自动跳过，不影响构建）
+          PUBLIC_CF_BEACON_TOKEN: ${{ secrets.CF_BEACON_TOKEN }}
+          PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy docs --project-name wu-personal-site --branch master --commit-dirty=true
