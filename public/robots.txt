@@ -1,3 +1,9 @@
+# ⚠️ 本文件线上会被 Cloudflare 改写：CF 会在最前面自动插入一段「Managed content」，
+# 其中已把 Baiduspider / Bytespider / GPTBot / ClaudeBot / CCBot 等设为 Disallow: /，
+# 与下方我们自己写的 Allow 直接矛盾（2026-11-01 实测确认）。
+# 要让百度、抖音、AI 爬虫真的能抓，需在 Cloudflare 面板关掉 Managed robots.txt / AI Crawl Control。
+# 只改这个文件不管用——本地看着是允许，线上依旧是禁止。
+
 # 允许所有爬虫访问
 User-agent: *
 Allow: /

@@ -237,9 +237,6 @@ function truncate(str: string, maxLen: number): string {
       if (chatPanel) {
         chatPanel.classList.remove('hidden');
         setTimeout(() => chatInput && chatInput.focus(), 200);
-      } else {
-        const inlineChat = document.querySelector('.chat-inline');
-        if (inlineChat) inlineChat.scrollIntoView({ behavior: 'smooth' });
       }
     });
   })();
@@ -295,150 +292,6 @@ function truncate(str: string, maxLen: number): string {
   }
   .btn-primary:hover .btn-arrow {
     transform: translateX(4px);
-  }
-
-  /* 内联聊天区块 */
-  .chat-inline {
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
-    border-radius: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 32px 24px;
-  }
-
-  .chat-inline-subtitle {
-    text-align: center;
-    color: var(--color-text-tertiary, #6b7280);
-    font-size: 14px;
-    margin-top: -8px;
-    margin-bottom: 20px;
-  }
-
-  .chat-inline-box {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    overflow: hidden;
-  }
-
-  .chat-inline-messages {
-    padding: 16px;
-    max-height: 300px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .chat-msg {
-    display: flex;
-    gap: 8px;
-    max-width: 85%;
-    animation: msgIn 0.3s ease;
-  }
-
-  @keyframes msgIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .chat-msg.user {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-  }
-
-  .chat-msg.bot {
-    align-self: flex-start;
-  }
-
-  .msg-avatar {
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
-  .msg-bubble {
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
-  }
-
-  .chat-msg.bot .msg-bubble {
-    background: #f3f4f6;
-    border-top-left-radius: 4px;
-  }
-
-  .chat-msg.user .msg-bubble {
-    background: #4f46e5;
-    color: white;
-    border-top-right-radius: 4px;
-  }
-
-  .chat-inline-input {
-    display: flex;
-    gap: 8px;
-    padding: 12px;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  .chat-inline-input input {
-    flex: 1;
-    padding: 10px 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
-    font-family: inherit;
-  }
-
-  .chat-inline-input input:focus {
-    border-color: #4f46e5;
-  }
-
-  .chat-inline-input button {
-    padding: 10px 20px;
-    background: #4f46e5;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-    font-family: inherit;
-  }
-
-  .chat-inline-input button:hover {
-    background: #4338ca;
-  }
-
-  .chat-inline-input button:disabled {
-    background: #a5b4fc;
-    cursor: not-allowed;
-  }
-
-  .typing-indicator {
-    display: flex;
-    gap: 4px;
-    padding: 8px 0;
-  }
-
-  .typing-indicator span {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #9ca3af;
-    animation: typingDot 1.4s infinite;
-  }
-
-  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
-  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-
-  @keyframes typingDot {
-    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
-    30% { opacity: 1; transform: translateY(-4px); }
   }
 
   /* 三类入口 */
@@ -498,15 +351,6 @@ function truncate(str: string, maxLen: number): string {
   }
   .entry-card:hover .entry-arrow {
     transform: translateX(4px);
-  }
-
-  /* 精选更新 — 精简摘要 */
-  .card-excerpt {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   /* 正在运行的 AI 实践 */
