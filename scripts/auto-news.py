@@ -28,8 +28,10 @@ import argparse
 import http.client
 import json
 import logging
+import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -58,18 +60,22 @@ logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------- 配置
 
-REQUEST_TIMEOUT = 15
+REQUEST_TIMEOUT = 25
 USER_AGENT = 'Mozilla/5.0 (compatible; ban-bai-news/2.0; +https://www.ban-bai.com)'
 
 # 源清单：科技垂类官方 RSS。rsshub.app 公共实例实测直接 403，别再用。
 # 全站 feed 不是问题——噪音拦截靠下面的标题级过滤，不靠源本身干净。
 # 单个源失败不影响其它源，失败会写进日志。
+#
+# 已失效（2026-11-01 实测，返回 text/html 反爬验证页而不是 XML，属长期封禁，别再放回来）：
+#   36氪 https://36kr.com/feed      机器之心 https://www.jiqizhixin.com/rss
 RSS_FEEDS = [
-    ('36氪', 'https://36kr.com/feed'),
     ('IT之家', 'https://www.ithome.com/rss/'),
-    ('机器之心', 'https://www.jiqizhixin.com/rss'),
     ('量子位', 'https://www.qbitai.com/feed'),
     ('开源中国', 'https://www.oschina.net/news/rss'),
+    ('雷锋网', 'https://www.leiphone.com/feed'),
+    ('极客公园', 'https://www.geekpark.net/rss'),
+    ('InfoQ', 'https://www.infoq.cn/feed'),
 ]
 
 # 强关键词：命中标题才算 AI 新闻
@@ -88,12 +94,16 @@ BLOCK_RE = re.compile(
     r'德杯|电竞|LPL|KPL|夺冠|赛事|季后赛|球赛|世界杯|'
     r'金价|房价|股价|股市|保险|招聘会|招聘|'
     r'咖啡|奶茶|早鸟|特惠|门票|优惠|扫码|抽奖|福利|双十一|双11|'
-    r'报名|评选|直播预告|开奖'
+    r'报名|评选|直播预告|开奖|'
+    # 厂商稿与活动报道：雷锋网这类内容多，标题通常是「XX 如何让 AI 走进业务」「N 位嘉宾判断」
+    r'如何让|怎么让|嘉宾|圆桌|专访|对谈|实录|闭门|沙龙|'
+    # 厂商自家产品的更新贴，不是新闻（开源中国常出这种「本周更新：上线 XX 模块」）
+    r'本周更新|产品更新|更新日志|版本更新说明'
 )
 
 # 分类：只输出这套规范值，别再让 category 长出 130 种写法
 CATEGORY_RULES = [
-    ('AI安全', 'AI Safety', r'安全|对齐|越狱|漏洞|攻击|监管|合规|伦理|隐私|版权|法令|禁止|法规|政策'),
+    ('AI安全', 'AI Safety', r'安全|对齐|越狱|漏洞|攻击|监管|合规|伦理|隐私|法令|禁止|法规|政策'),
     ('AI芯片', 'AI Chips', r'芯片|GPU|TPU|HBM|算力|半导体|晶圆|制程'),
     ('机器人', 'Robotics', r'机器人|具身|人形|机械臂|灵巧手'),
     ('大模型', 'Large Models', r'大模型|语言模型|基础模型|推理模型|GPT|Claude|Gemini|LLM|Qwen|DeepSeek|Kimi|通义|文心|混元|豆包|智谱|MiniMax'),
@@ -104,23 +114,20 @@ CATEGORY_RULES = [
 ]
 DEFAULT_CATEGORY = ('AI动态', 'AI Updates')
 
-COMMENTS = [
-    'AI 技术持续快速发展，每天都有新突破。',
-    '人工智能正在深刻改变各行各业的格局。',
-    '大模型竞争日趋激烈，创新层出不穷。',
-    'AI 应用场景不断拓展，商业化进程加速。',
-    '技术进步带来机遇，也带来挑战。',
-]
+# 点评以前是 6 句固定套话按日期哈希轮转，每天必然产出空话（2026-11-01 废弃）。
+# 现在：_llm_enrich() 调 DeepSeek 生成有观点的点评 + 全套英文；没 key 或调用失败时
+# 用 _fallback_comment() 拼一句事实索引，虽然机械，但不会再说“竞争日趋激烈”。
 
 # ---------------------------------------------------------------- 工具函数
 
 TAG_STRIP_RE = re.compile(r'<[^>]+>')
 ENTITY_RE = re.compile(r'&[^;\s]{1,10};')
+ZERO_WIDTH_RE = re.compile(r'[\u200b\u200c\u200d\u2060\ufeff]')
 SPACE_RE = re.compile(r'\s+')
 
 
 def clean_html(text):
-    """去标签、去实体、压空白"""
+    """去标签、去实体、去零宽字符、压空白"""
     if not text:
         return ''
     text = TAG_STRIP_RE.sub('', text)
@@ -128,6 +135,8 @@ def clean_html(text):
                 .replace('&quot;', '"').replace('&#39;', "'")
                 .replace('&lt;', '<').replace('&gt;', '>'))
     text = ENTITY_RE.sub('', text)
+    # 极客公园等源的 HTML 里夹着零宽空格/零宽连接符，粘到摘要里会变成看不见的乱码
+    text = ZERO_WIDTH_RE.sub('', text)
     return SPACE_RE.sub(' ', text).strip()
 
 
@@ -218,30 +227,42 @@ def parse_feed(raw, source):
     return entries
 
 
-def fetch_ai_news():
+def _err_brief(exc):
+    """把异常压成一行，日志里好看"""
+    if isinstance(exc, urllib.error.HTTPError):
+        return f'HTTP {exc.code}'
+    if isinstance(exc, urllib.error.URLError):
+        return f'网络失败 {exc.reason}'
+    if isinstance(exc, ET.ParseError):
+        return f'XML 解析失败 {exc}'
+    if isinstance(exc, (ConnectionError, TimeoutError, http.client.HTTPException)):
+        return f'连接中断 {type(exc).__name__}'
+    return f'{type(exc).__name__}: {exc}'
+
+
+def fetch_ai_news(retry=1):
+    """逐个源抓取。单个源失败重试一次——源端偶发 502 很常见，重试基本能救回来；
+    重试后仍失败就跳过，绝不影响其它源。"""
     news, ok, failed = [], 0, 0
     logger.info(f"开始采集 {len(RSS_FEEDS)} 个 AI 垂类源")
     for source, url in RSS_FEEDS:
-        try:
-            entries = parse_feed(http_get(url), source)
-            logger.info(f"  {source}: 取到 {len(entries)} 条")
-            news.extend(entries)
-            ok += 1
-        except urllib.error.HTTPError as e:
-            logger.warning(f"  {source}: HTTP {e.code}（{url}）")
+        entries, last = None, None
+        for attempt in range(retry + 1):
+            try:
+                entries = parse_feed(http_get(url), source)
+                break
+            except Exception as e:  # noqa: BLE001 - 单源失败不能影响整体
+                last = e
+                if attempt < retry:
+                    logger.warning(f"  {source}: 第 {attempt + 1} 次失败（{_err_brief(e)}），2 秒后重试")
+                    time.sleep(2)
+        if entries is None:
+            logger.warning(f"  {source}: {_err_brief(last)}（{url}）")
             failed += 1
-        except urllib.error.URLError as e:
-            logger.warning(f"  {source}: 网络失败 {e.reason}（{url}）")
-            failed += 1
-        except (ConnectionError, TimeoutError, http.client.HTTPException) as e:
-            logger.warning(f"  {source}: 连接中断 {type(e).__name__}（{url}）")
-            failed += 1
-        except ET.ParseError as e:
-            logger.warning(f"  {source}: XML 解析失败 {e}（{url}）")
-            failed += 1
-        except Exception as e:  # noqa: BLE001 - 单源失败不能影响整体
-            logger.error(f"  {source}: 未知错误 {e}", exc_info=True)
-            failed += 1
+            continue
+        logger.info(f"  {source}: 取到 {len(entries)} 条")
+        news.extend(entries)
+        ok += 1
     logger.info(f"采集结束：成功 {ok} 源，失败 {failed} 源，原始 {len(news)} 条")
     return news
 
@@ -252,12 +273,22 @@ def is_ai_title(title):
     return bool(STRONG_RE.search(title)) or bool(AI_RE.search(title))
 
 
+def is_roundup_title(title):
+    """合集型标题：一家源把几条新闻塞进同一个标题（极客公园那种「A；B；C」早报）。
+    这种条目既不能当单条新闻用，摘要也会把三件事揉在一起，直接丢掉。"""
+    parts = [s for s in re.split(r'[；;]', title) if len(s.strip()) >= 6]
+    return len(parts) >= 2
+
+
 def filter_noise(entries):
     kept, dropped = [], []
     for e in entries:
         title = e['title']
         if not is_ai_title(title):
             dropped.append(('非AI标题', title))
+            continue
+        if is_roundup_title(title):
+            dropped.append(('合集标题', title))
             continue
         if BLOCK_RE.search(title):
             dropped.append(('黑名单', title))
@@ -357,22 +388,120 @@ def categorize(title, summary):
     return (best[1], best[2]) if best else DEFAULT_CATEGORY
 
 
-def _headline(title):
+def _headline(title, limit=24):
     """一句话标题：去来源尾巴、切在第一个逗号处、超长加省略号"""
     t = SUFFIX_RE.sub('', title).strip()
     head = re.split(r'[，,：:｜|]', t)[0].strip()
     if len(head) >= 8:
         t = head
-    if len(t) > 20:
-        t = t[:20] + '…'
+    if len(t) > limit:
+        t = t[:limit] + '…'
     return t
+
+
+LLM_MODEL = 'deepseek-chat'
+LLM_URL = 'https://api.deepseek.com/v1/chat/completions'
+
+
+def _llm_key():
+    """DeepSeek key：优先环境变量，其次桌面 deepseek-key.txt / 仓库 .dev.vars（用户放 key 的位置）"""
+    for name in ('DEEPSEEK_API_KEY', 'LLM_API_KEY'):
+        v = os.environ.get(name, '').strip()
+        if v.startswith('sk-'):
+            return v
+    for p in (Path.home() / 'Desktop' / 'deepseek-key.txt', ROOT / '.dev.vars'):
+        try:
+            if not p.exists():
+                continue
+            for line in p.read_text(encoding='utf-8', errors='ignore').splitlines():
+                line = line.strip().strip('"\'')
+                if line.startswith('sk-'):
+                    return line
+                k, _, val = line.partition('=')
+                val = val.strip().strip('"\'')
+                if k.strip() in ('DEEPSEEK_API_KEY', 'LLM_API_KEY') and val.startswith('sk-'):
+                    return val
+        except OSError:
+            continue
+    return None
+
+
+def _llm_enrich(chosen, date_str):
+    """一次调用产出：中文点评 + 点评英文 + 日报标题/摘要英文 + 每条新闻英文。无 key 或失败返回 None。"""
+    key = _llm_key()
+    if not key:
+        return None
+
+    payload_items = [
+        {'i': n, 'title': e['title'],
+         'summary': first_sentence(e['summary'], limit=300), 'source': e['source']}
+        for n, e in enumerate(chosen)
+    ]
+    prompt = (
+        '你是中文科技媒体的编辑，读者是 50 岁左右的中小企业经营者。下面是今天的 AI 新闻。\n'
+        '请完成三件事，只输出 JSON，不要解释、不要代码块标记：\n'
+        '1. title：一句中文标题，格式严格为 "AI新闻 | A + B + C"，A/B/C 是三条最重要的新闻，'
+        '每条压成 10-16 个字的短语，必须有具体信息（公司名、产品名或数字），不要用省略号，不要照搬原标题。\n'
+        '2. comment：用一句中文点评这批新闻，要有判断和观点，看得出它们之间的联系或趋势；'
+        '禁止“技术快速发展”“竞争日趋激烈”“创新层出不穷”这类空话；不超过 80 字。\n'
+        '3. 英文版：commentEn、titleEn（形如 "AI News | ... + ... + ..."）、'
+        'summaryEn（把前三条概述成 2-3 句英文）、items（数量与输入相同的数组，每项含 titleEn、summaryEn）。\n'
+        '英文用 re-express（重新表达），不要逐字直译；人名机构名用通行英文写法。\n'
+        'JSON 结构：{"title":"","comment":"","commentEn":"","titleEn":"","summaryEn":"","items":[{"titleEn":"","summaryEn":""}]}\n\n'
+        f'日期：{date_str}\n新闻：{json.dumps(payload_items, ensure_ascii=False)}'
+    )
+    body = json.dumps({
+        'model': LLM_MODEL,
+        'messages': [
+            {'role': 'system', 'content': '你输出严格合法的 JSON，不含任何额外文字。'},
+            {'role': 'user', 'content': prompt},
+        ],
+        'temperature': 0.7,
+        'response_format': {'type': 'json_object'},
+    }).encode('utf-8')
+    req = urllib.request.Request(LLM_URL, data=body, method='POST', headers={
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {key}',
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=90) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+        parsed = json.loads(data['choices'][0]['message']['content'])
+    except Exception as exc:
+        logger.warning(f'LLM 生成失败，回退到事实型点评：{exc}')
+        return None
+
+    if not isinstance(parsed, dict) or not str(parsed.get('comment', '')).strip():
+        logger.warning('LLM 返回内容不完整，回退到事实型点评')
+        return None
+    logger.info(f'LLM 已生成点评与英文：{str(parsed["comment"])[:40]}')
+    return parsed
+
+
+def _fallback_comment(chosen):
+    """无 LLM 时的兜底：点出今天落在哪些方向、头条是什么。
+    不假装有观点，但句子完整、不截成半句，也不再是“竞争日趋激烈”那种套话。"""
+    cats = []
+    for e in chosen:
+        zh, _ = categorize(e['title'], e['summary'])
+        if zh not in cats:
+            cats.append(zh)
+    head = re.split(r'[，,：:｜|；;]', SUFFIX_RE.sub('', chosen[0]['title']))[0].strip()
+    if len(head) > 36:
+        head = head[:36] + '…'
+    return f"今天 {len(chosen)} 条，方向：{'、'.join(cats[:4])}；头条是{head}。"
 
 
 def build_summary(chosen, date_str):
     if not chosen:
         return None
 
+    llm = _llm_enrich(chosen, date_str)
     title = 'AI新闻 | ' + ' + '.join(_headline(e['title']) for e in chosen[:3])
+    # 模型给的标题更像人写的，但得兜住格式跑偏的情况
+    llm_title = str((llm or {}).get('title', '')).strip()
+    if llm_title.startswith('AI新闻') and 12 <= len(llm_title) <= 70:
+        title = llm_title
 
     body_bits = []
     for e in chosen[:3]:
@@ -381,27 +510,40 @@ def build_summary(chosen, date_str):
             body_bits.append(s)
     summary = '；'.join(body_bits) + '。'
 
-    comment = COMMENTS[sum(ord(c) for c in date_str) % len(COMMENTS)]
+    comment = (llm or {}).get('comment') or _fallback_comment(chosen)
 
     items = []
-    for e in chosen:
+    for n, e in enumerate(chosen):
         zh, en = categorize(e['title'], e['summary'])
-        items.append({
+        item = {
             'title': e['title'],
             'summary': first_sentence(e['summary'], limit=180),
             'source': e['source'],
             'category': zh,
             'categoryEn': en,
             'url': e['url'],
-        })
+        }
+        if llm:
+            extra = (llm.get('items') or [])
+            pair = extra[n] if n < len(extra) and isinstance(extra[n], dict) else {}
+            for k, v in (('titleEn', pair.get('titleEn')), ('summaryEn', pair.get('summaryEn'))):
+                if isinstance(v, str) and v.strip():
+                    item[k] = v.strip()
+        items.append(item)
 
-    return {
+    entry = {
         'date': date_str,
         'title': title,
         'summary': summary,
         'newsItems': items,
         'comment': comment,
     }
+    if llm:
+        for k in ('titleEn', 'summaryEn', 'commentEn'):
+            v = llm.get(k)
+            if isinstance(v, str) and v.strip():
+                entry[k] = v.strip()
+    return entry
 
 
 def write_entry(path, text, start, entry):
@@ -473,8 +615,12 @@ def main():
     if not write_entry(DATA_FILE, text, start, entry):
         return 1
 
-    logger.info('提醒：titleEn / summaryEn 留空了，英文页会回退显示中文。'
-                '要发英文版请手工补翻译（把中文复制过去算占位符，别这么干）。')
+    if entry.get('summaryEn'):
+        logger.info(f"英文由 DeepSeek 生成；点评：{entry['comment'][:50]}")
+    else:
+        logger.info('未配置 DeepSeek key 或调用失败：英文留空（英文页回退显示中文），'
+                    '点评用事实型兜底。把 sk- 开头的 key 写进桌面 deepseek-key.txt '
+                    '或环境变量 DEEPSEEK_API_KEY 即可自动开启。')
     logger.info('完成。')
     return 0
 
