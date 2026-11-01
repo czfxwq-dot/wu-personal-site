@@ -9,11 +9,11 @@ const homeJsonLd = {
   "@type": "WebPage",
   "name": "Guanwu | 50-Year-Old Using AI to Get Things Done",
   "description": "50-year-old entrepreneur uses AI to turn ideas into reality — co-founder of MonolithIoT, sharing AI tool practices, AIoT solutions, and digital smart inventory management",
-  "url": "https://banbai.ai/en/",
+  "url": "https://ban-bai.com/en/",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Guanwu",
-    "url": "https://banbai.ai"
+    "url": "https://ban-bai.com"
   },
   "about": {
     "@type": "Person",
@@ -30,7 +30,9 @@ const homeJsonLd = {
 
 const latest = diaries[0];
 const latestSummary = dailyNewsSummaries[0];
-const latestArticle = articles[0];
+
+// Hands-on pieces: things you can copy directly (tooling + method breakdowns)
+const handsOn = articles.filter(a => a.tag === 'AI应用' || a.tag === '深度分析');
 
 function truncate(str: string, maxLen: number): string {
   if (!str) return '';
@@ -64,8 +66,15 @@ function truncate(str: string, maxLen: number): string {
         <span style="font-size: 14px; color: var(--color-text-tertiary);">AI tool practices · Digital smart inventory management · My honest 50-year-old AI learning journey</span>
       </p>
       <div class="hero-actions">
-        <a href="/en/diary/" class="btn btn-primary">Read My Diary <span class="btn-arrow">→</span></a>
-        <a href="/en/about/" class="btn btn-ghost">Learn More</a>
+        <a href="/en/banbaiguan/" class="btn btn-primary">Read {articles.length} field-tested articles <span class="btn-arrow">→</span></a>
+        <a href="/en/about/" class="btn btn-ghost">Who I am</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat"><strong>{articles.length}</strong> long-form pieces</span>
+        <span class="hero-stat-dot"></span>
+        <span class="hero-stat"><strong>{diaries.length}</strong> work diary entries</span>
+        <span class="hero-stat-dot"></span>
+        <span class="hero-stat"><strong>3</strong> self-built automations</span>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -79,27 +88,27 @@ function truncate(str: string, maxLen: number): string {
     <div class="container">
       <div class="section-subtitle">What would you like to explore?</div>
       <div class="entry-cards">
-        <a href="/en/diary/" class="entry-card entry-learn">
+        <a href="/en/hands-on/" class="entry-card entry-learn">
           <span class="entry-icon">🛠️</span>
           <div class="entry-info">
-            <h3>Learn AI Tools</h3>
-            <p>Read daily work diaries with real practices</p>
+            <h3>Copy it and use it</h3>
+            <p>{handsOn.length} hands-on breakdowns: from setup to automation</p>
           </div>
           <span class="entry-arrow">→</span>
         </a>
-        <a href="/en/about/" class="entry-card entry-business">
-          <span class="entry-icon">🏭</span>
+        <a href="/en/projects/" class="entry-card entry-business">
+          <span class="entry-icon">🏗️</span>
           <div class="entry-info">
-            <h3>Enterprise AI Solutions</h3>
-            <p>Discover MonolithIoT solutions for your business</p>
+            <h3>See what I've actually shipped</h3>
+            <p>3 systems, each with a number you can verify</p>
           </div>
           <span class="entry-arrow">→</span>
         </a>
         <a href="/en/banbaiguan/" class="entry-card entry-story">
           <span class="entry-icon">📖</span>
           <div class="entry-info">
-            <h3>See How I Use AI</h3>
-            <p>BanbaiGuan AI articles + AI news + full timeline</p>
+            <h3>Read my judgement</h3>
+            <p>{articles.length} long-form pieces + daily AI news</p>
           </div>
           <span class="entry-arrow">→</span>
         </a>
@@ -107,49 +116,33 @@ function truncate(str: string, maxLen: number): string {
     </div>
   </section>
 
-  <!-- Content Grid -->
+  <!-- Latest three: hand over the finished work -->
   <section class="content-grid">
     <div class="container">
       <div class="grid-header">
-        <div class="section-title">Latest Updates</div>
-        <a href="/en/diary/" class="section-more">View Full Timeline <span class="arrow">→</span></a>
+        <div class="section-title">Latest three</div>
+        <a href="/en/banbaiguan/" class="section-more">All {articles.length} <span class="arrow">→</span></a>
       </div>
-      <div class="grid-cards">
-        <!-- Latest Diary -->
-        <a href="/en/diary/" class="grid-card card-diary">
-          <div class="card-label">
-            <span class="label-icon">📓</span>
-            <span class="label-text">Diary</span>
-          </div>
-          <div class="card-date">{latest.date}</div>
-          <h3 class="card-heading">{latest.titleEn}</h3>
-          <p class="card-excerpt">{latest.summaryEn}</p>
+      <div class="latest-list">
+        {articles.slice(0, 3).map((a) => (
+          <a href={`/en/banbaiguan/${a.slug}/`} class="latest-item">
+            <div class="latest-meta">
+              <span class="latest-tag">{a.tagEn || a.tag}</span>
+              <span class="latest-date">{a.date}</span>
+            </div>
+            <h3 class="latest-title">{a.titleEn || a.title}</h3>
+            <p class="latest-excerpt">{truncate(a.excerptEn || a.excerpt, 110)}</p>
+          </a>
+        ))}
+      </div>
+      <div class="latest-side">
+        <a href="/en/diary/" class="side-link">
+          <span class="side-label">Latest diary</span>
+          <span class="side-text">{latest.date} · {latest.titleEn}</span>
         </a>
-
-        <!-- AI News -->
-        <a href="/en/ai-news/" class="grid-card card-news">
-          <div class="card-label">
-            <span class="label-icon">📡</span>
-            <span class="label-text">AI News</span>
-          </div>
-          <div class="card-date">{latestSummary.date} · {latestSummary.newsItems.length} items</div>
-          <h3 class="card-heading">{latestSummary.titleEn}</h3>
-          <p class="card-excerpt">{truncate(latestSummary.summaryEn, 120)}</p>
-          <div class="card-comment">
-            <span class="comment-icon">💡</span>
-            {latestSummary.commentEn}
-          </div>
-        </a>
-
-        <!-- BanbaiGuan -->
-        <a href="/en/banbaiguan/" class="grid-card card-article">
-          <div class="card-label">
-            <span class="label-icon">🎯</span>
-            <span class="label-text">BanbaiGuan AI</span>
-          </div>
-          <div class="card-date">{latestArticle.date} · {articles.length} articles</div>
-          <h3 class="card-heading">{latestArticle.titleEn}</h3>
-          <p class="card-excerpt">{latestArticle.excerptEn}</p>
+        <a href="/en/ai-news/" class="side-link">
+          <span class="side-label">Latest AI news</span>
+          <span class="side-text">{latestSummary.date} · {latestSummary.newsItems.length} items</span>
         </a>
       </div>
     </div>
@@ -158,60 +151,48 @@ function truncate(str: string, maxLen: number): string {
   <!-- Live AI Projects -->
   <section class="page-section">
     <div class="container">
-      <div class="section-title">Live AI Projects</div>
+      <div class="section-title">Running in production</div>
       <div class="projects-grid">
-        <div class="project-card">
+        <a href="/en/projects/#shanshan" class="project-card">
           <span class="project-icon">🦞</span>
           <h3>Shanshan AI Assistant</h3>
-          <p>Gateway LLM-based intelligent dialogue system supporting visitor interaction, knowledge base queries, and content recommendations</p>
+          <p>On-site chat that reads the latest articles, news and diary entries before answering; the guestbook auto-reply runs on it too</p>
+          <p class="project-num">DeepSeek direct · rate limit 20 / 10 min</p>
           <span class="project-status status-live">● Live</span>
-        </div>
-        <div class="project-card">
+        </a>
+        <a href="/en/projects/#automation" class="project-card">
           <span class="project-icon">📰</span>
-          <h3>Automated Content System</h3>
-          <p>AI news auto-collected, summarized, and deployed daily at 07:00; one-click Feishu publishing to website</p>
+          <h3>Content automation</h3>
+          <p>Three scheduled jobs: news at dawn, diary draft at dusk, deployment as a safety net at night</p>
+          <p class="project-num">6 sources · 5 items a day · 30–60s to deploy</p>
           <span class="project-status status-live">● Live</span>
-        </div>
-        <div class="project-card">
-          <span class="project-icon">📓</span>
-          <h3>Work Diary System</h3>
-          <p>Auto-generated daily work diaries at 22:00, documenting site progress, lessons learned, and technical decisions</p>
+        </a>
+        <a href="/en/projects/#pipeline" class="project-card">
+          <span class="project-icon">✍️</span>
+          <h3>Writing pipeline</h3>
+          <p>Topic scoring plus an 18-point drafting checklist — it produced every long-form piece here</p>
+          <p class="project-num">{articles.length} pieces came out of it</p>
           <span class="project-status status-live">● Live</span>
-        </div>
-        <div class="project-card">
-          <span class="project-icon">📊</span>
-          <h3>AI News System</h3>
-          <p>Multi-source RSS + domestic search engine collection, auto-summarization, commentary, and site publishing</p>
-          <span class="project-status status-live">● Live</span>
-        </div>
-        <div class="project-card">
-          <span class="project-icon">🔧</span>
-          <h3>SKILL-A/B Content Production</h3>
-          <p>Dual workflow for topic decisions + writing execution, 7-question scoring + 18-item self-check for high-quality articles</p>
-          <span class="project-status status-live">● Live</span>
-        </div>
+        </a>
+      </div>
+      <div class="projects-more">
+        <a href="/en/projects/" class="section-more">How these three were built <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
 
-  <!-- About Company -->
-  <section class="page-section">
+  <!-- About Company: compressed to one strip -->
+  <section class="company-strip-section">
     <div class="container">
-      <div class="section-title">About the Company</div>
-      <div class="company-card">
-        <div class="company-badge">National High-Tech Enterprise</div>
-        <h2>MonolithIoT (Changzhou) Co., Ltd.</h2>
-        <p class="company-desc">An AI scenario solutions provider. Built on three core technologies: multi-sensor fusion, AI-powered storage middleware, and multimodal algorithms — digitizing the entire industrial chain.</p>
-        <div class="company-clients">
-          <span class="client-label">Trusted by</span>
-          <span class="client-name">State Grid</span>
-          <span class="client-name">Huawei</span>
-          <span class="client-name">SF Express</span>
-          <span class="client-name">DHL</span>
+      <div class="company-strip">
+        <div class="company-strip-main">
+          <span class="company-badge">National High-Tech Enterprise</span>
+          <h2>MonolithIoT (Changzhou) Co., Ltd.</h2>
+          <p>AI scenario solutions: multi-sensor fusion, AI storage middleware, multimodal algorithms. Trusted by State Grid, Huawei, SF Express and DHL.</p>
         </div>
-        <div class="company-actions">
-          <a href="/en/about/" class="link-arrow">Learn More</a>
-          <a href="https://www.monolithiot.com" class="link-arrow" target="_blank" rel="noopener">Visit Company Site →</a>
+        <div class="company-strip-actions">
+          <a href="/en/about/" class="link-arrow">Learn more</a>
+          <a href="https://www.monolithiot.com" class="link-arrow" target="_blank" rel="noopener">Company site →</a>
         </div>
       </div>
     </div>
@@ -252,4 +233,62 @@ function truncate(str: string, maxLen: number): string {
 
   .btn-arrow { transition: transform 0.2s; }
   .btn-primary:hover .btn-arrow { transform: translateX(4px); }
+
+  .hero-stats {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    margin-top: 28px; opacity: 0;
+    animation: fadeInUp 0.8s ease forwards; animation-delay: 0.8s;
+  }
+  .hero-stat { font-size: 13px; color: var(--color-text-secondary); }
+  .hero-stat strong { font-weight: 600; font-size: 15px; color: var(--color-accent); margin-right: 2px; }
+  .hero-stat-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--color-gold); }
+
+  .latest-list { display: flex; flex-direction: column; }
+  .latest-item {
+    display: block; padding: 18px 0; text-decoration: none;
+    border-top: 1px solid var(--color-border-light);
+    transition: padding-left 0.2s ease;
+  }
+  .latest-item:first-child { border-top: none; }
+  .latest-item:hover { padding-left: 8px; }
+  .latest-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .latest-tag {
+    font-size: 11px; padding: 2px 8px; border-radius: 20px;
+    background: rgba(200, 164, 92, 0.12); color: var(--color-gold); font-weight: 500;
+  }
+  .latest-date { font-size: 12px; color: var(--color-text-tertiary); }
+  .latest-title { font-size: 17px; font-weight: 600; color: var(--color-text); margin: 0 0 6px; line-height: 1.45; }
+  .latest-item:hover .latest-title { color: var(--color-accent); }
+  .latest-excerpt { font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
+  .latest-side {
+    display: flex; gap: 20px; flex-wrap: wrap; margin-top: 18px;
+    padding-top: 16px; border-top: 1px dashed var(--color-border);
+  }
+  .side-link { display: flex; align-items: baseline; gap: 8px; text-decoration: none; font-size: 13px; }
+  .side-label { color: var(--color-text-tertiary); font-size: 12px; }
+  .side-text { color: var(--color-text-secondary); }
+  .side-link:hover .side-text { color: var(--color-accent); }
+
+  a.project-card { display: block; text-decoration: none; }
+  .project-num {
+    font-size: 12.5px !important; color: var(--color-gold) !important;
+    margin: 0 0 12px !important; letter-spacing: 0.01em;
+  }
+  .projects-more { margin-top: 20px; text-align: right; }
+
+  .company-strip-section { padding: 40px 0 56px; }
+  .company-strip {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 20px 24px; background: var(--color-surface);
+    border: 1px solid var(--color-border-light); border-left: 3px solid var(--color-gold);
+    border-radius: var(--radius-lg);
+  }
+  .company-strip h2 { font-size: 17px; margin: 6px 0; color: var(--color-text); }
+  .company-strip p { font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.6; max-width: 640px; }
+  .company-strip-actions { display: flex; gap: 16px; flex-shrink: 0; }
+
+  @media (max-width: 768px) {
+    .company-strip { flex-direction: column; align-items: flex-start; }
+    .projects-more { text-align: left; }
+  }
 </style>
