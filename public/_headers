@@ -1,0 +1,10 @@
+# 让 HTML 也能被边缘缓存，压掉每次回源的 TTFB
+# 线上实测：默认 max-age=0 + must-revalidate → cf-cache-status: DYNAMIC，TTFB 1.2s+
+# 这里给 10 分钟边缘缓存；部署后最多有 10 分钟可能读到旧页，可接受。
+# 想回滚：删掉本文件重新部署即可。
+/*
+  Cache-Control: public, max-age=0, s-maxage=600, stale-while-revalidate=86400
+
+# 动态接口绝不能被缓存
+/api/*
+  Cache-Control: no-store
