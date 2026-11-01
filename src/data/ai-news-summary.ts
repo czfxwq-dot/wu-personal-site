@@ -24,6 +24,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-01",
+  "title": "AI新闻 | Mistral 万亿参数开源 + DeepSeek 提出 Super-agent 架构 + AI 假学生骗走 2 亿美元",
+  "titleEn": "AI News | Mistral open-sources a trillion-parameter model + DeepSeek's Super-agent architecture + AI fake students skim $200 million",
+  "summary": "10 月 29 日，Mistral 把旗舰模型 Large 4 的权重放上 Hugging Face：约 1 万亿总参数、490 亿激活、原生多模态，编码智能体指数 48% 与 GLM-5.3 基本打平，每个任务却少用 47% 的 token；DeepSeek Harness 团队同期发布《Super-agent 设计探索》，提出 Router 与 Worker 双层架构，目标是让 Agent 更自主地推进长链路任务；美国司法部 10 月 31 日通报“Operation Ghostbusters”行动，AI 伪造身份骗取学生贷款规模达 2 亿美元；此外 Roblox 披露平台内 AI 游戏已超 7 万款，前 100 名作品八成以上借助 AI 开发。",
+  "summaryEn": "On October 29 Mistral published the weights of its flagship Large 4 on Hugging Face: roughly 1 trillion total parameters with about 49 billion active, natively multimodal, scoring 48% on the coding agent index — level with GLM-5.3 while using 47% fewer tokens per task. Around the same time the DeepSeek Harness team published a Super-agent design note proposing a two-layer Router and Worker architecture so agents can push through longer task chains on their own. The US Justice Department said on October 31 that its Operation Ghostbusters uncovered $200 million in student-loan fraud carried out with AI-faked identities. Roblox separately disclosed that more than 70,000 AI-generated games now exist on its platform, with over 80% of the top 100 built with AI assistance.",
+  "newsItems": [
+    {
+      "title": "Roblox 平台 AI 游戏突破 7 万款，排名前 100 作品超 80% 使用 AI 辅助开发",
+      "titleEn": "AI-made games on Roblox pass 70,000, with over 80% of the top 100 built with AI assistance",
+      "summary": "Roblox 在 2026 财年第三季度报告中透露，该平台内使用 Build 创建的 AI 游戏总数已超过 7 万款。",
+      "summaryEn": "In its fiscal 2026 third-quarter report, Roblox disclosed that more than 70,000 AI-generated games have been created on the platform using its Build tools.",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/020/651.htm"
+    },
+    {
+      "title": "被 AI 假学生薅了 2 亿美元贷款羊毛，美国司法部紧急调查",
+      "titleEn": "Fake AI students skim $200 million in student loans, prompting a US Justice Department probe",
+      "summary": "美国司法部（DOJ）于当地时间 10 月 31 日公布了“Operation Ghostbusters”行动的结果，该行动主要是调查广泛的学生贷款欺诈行为。",
+      "summaryEn": "The US Department of Justice on October 31 announced the results of Operation Ghostbusters, an action targeting widespread student-loan fraud.",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/020/649.htm"
+    },
+    {
+      "title": "好莱坞最缺的答案，被这家 10 亿美元估值的 AI 影视独角兽写进了片单",
+      "titleEn": "A $1 billion AI film unicorn has written Hollywood's missing answer into its slate",
+      "summary": "创立 4 年，估值站上 10 亿美元——资本市场定价的不是一部电影，而是一套内容生产基础设施。",
+      "summaryEn": "Four years old and valued at $1 billion: what the market is pricing here is not a film but a content-production infrastructure.",
+      "source": "量子位",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.qbitai.com/2026/10/506747.html"
+    },
+    {
+      "title": "DeepSeek 提出 Super-agent 架构：Router 与 Worker 双层设计，探索更自主的 Agent 系统",
+      "titleEn": "DeepSeek proposes a Super-agent architecture with a two-layer Router and Worker design",
+      "summary": "DeepSeek Harness 团队发布《Super-agent 设计探索：迈向更自主的 Agent 系统》，提出面向工程实践的 Router 与 Worker 双层架构，重点在于让 Agent 系统能更自主地推进长链路任务。",
+      "summaryEn": "The DeepSeek Harness team published a design note titled Super-agent: towards a more autonomous agent system, laying out an engineering-oriented two-layer Router and Worker architecture aimed at letting agents push through longer task chains on their own.",
+      "source": "IT之家",
+      "category": "AI Agent",
+      "categoryEn": "AI Agent",
+      "url": "https://www.ithome.com/1/020/615.htm"
+    },
+    {
+      "title": "万亿参数 Mistral Large 4 开源权重：编码追平 GLM-5.3，token 少用 47%",
+      "titleEn": "Mistral open-sources the 1-trillion-parameter Large 4: coding on par with GLM-5.3 using 47% fewer tokens",
+      "summary": "Mistral 于 10 月 29 日把旗舰模型 Mistral Large 4（代号 Le Chonk）的权重放上 Hugging Face：约 1 万亿总参数、490 亿激活、原生多模态，修改版 MIT 许可允许商用与微调，唯独对外转售 API 需另签授权。官方称其在编码智能体指数拿到 48%，与 GLM-5.3 基本打平，每个任务少用 47% 的 token。",
+      "summaryEn": "On October 29 Mistral published the weights of its flagship Large 4 (nicknamed Le Chonk) on Hugging Face: roughly 1 trillion total parameters with about 49 billion active, natively multimodal, under a modified MIT licence that permits commercial use and fine-tuning while requiring a separate deal to resell it as an API. Mistral reports 48% on the coding agent index, effectively level with GLM-5.3 while using 47% fewer tokens per task.",
+      "source": "开源中国",
+      "category": "开源",
+      "categoryEn": "Open Source",
+      "url": "https://www.oschina.net/news/503310/mistral-large-4-oss"
+    }
+  ],
+  "comment": "两条线在同一天交汇：Mistral 把万亿参数的权重散给全世界，DeepSeek 则在琢磨 Agent 怎么自己把长活儿干完。前者是把能力放出去，后者是把能力用到底——而那省下来的 47% token，最后都会落到某家公司的账本上。",
+  "commentEn": "Two threads converged on the same day: Mistral handed a trillion-parameter model to the world, while DeepSeek worked out how agents can finish long jobs on their own. One spreads capability outward, the other drives it all the way through — and the 47% of tokens saved along the way ends up on somebody's balance sheet."
+},
+{
   "date": "2026-10-31",
   "title": "AI新闻 | 揭露“女版乔布斯”骗局的人警告 + 绝不为了 AI 而做 AI + DeepSeek 千亿融资名单曝光",
   "summary": "北京时间 10 月 31 日，曾参与揭露美国血液检测公司 Theranos 造假丑闻的泰勒 · 舒尔茨（Tyler Shultz）近日警告称，AI 投资热潮正在为下一个类似 Theranos 的骗局创造条件；《连线》（Wired）昨日（10 月 30 日）发布博文，采访了苹果现任首席执行官约翰 · 特努斯（John Ternus），并围绕着苹果公司产品未来发展方向、AI 领域发展等内容展开讨论；DeepSeek 第二轮融资拿下了 1055 亿元人民币，约 158 亿美元。The Information 拿到了出资名单，近 30 家投资者——比金额更有意思的是名单的构成变化。 腾讯和宁德时代仍是两大主力。腾讯两轮各出 100 亿；宁德时代及其董事长两轮分别出 50 亿和 100 亿。长鑫存储和中芯国际这两家芯片厂商也在里面，金额未披露。互联网...。",
