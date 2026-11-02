@@ -30,6 +30,7 @@ import json
 import logging
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -571,6 +572,49 @@ def write_entry(path, text, start, entry):
 
 # ---------------------------------------------------------------- 主流程
 
+def publish_today(entry):
+    """数据写入后立刻 commit + push，当天新闻 06:05 就上线，不用等 22:30。
+
+    只 add ai-news-summary.ts 这一个文件，不碰工作区其他改动。
+    push 失败只记日志不抛错：commit 已落在本地，22:30 的 auto-push
+    （它只推「已提交未推送」的提交）会兜底推掉。
+    """
+    rel = str(DATA_FILE.relative_to(ROOT))
+
+    def run(args, timeout):
+        return subprocess.run(['git'] + args, cwd=str(ROOT), timeout=timeout,
+                              capture_output=True, text=True,
+                              encoding='utf-8', errors='replace')
+
+    try:
+        lock = ROOT / '.git' / 'index.lock'
+        if lock.exists() and lock.stat().st_size == 0:
+            lock.unlink()
+            logger.info('清理了残留的空 index.lock')
+
+        if run(['diff', '--quiet', '--', rel], 30).returncode == 0:
+            logger.info('数据文件与 HEAD 一致，无需提交')
+            return
+
+        run(['add', '--', rel], 30)
+        n = len(entry.get('newsItems', []))
+        msg = f"news: {entry['date']} AI 日报（{n} 条，06:00 自动采集+发布）"
+        c = run(['commit', '-m', msg], 60)
+        if c.returncode != 0:
+            logger.warning(f'提交失败: {(c.stderr or c.stdout or "")[:300]}')
+            return
+
+        run(['fetch', '--quiet', 'origin'], 90)
+        p = run(['push', 'origin', 'main'], 180)
+        if p.returncode == 0:
+            logger.info('已提交并推送，Cloudflare Pages 部署中，当天新闻即时上线')
+        else:
+            logger.warning(f'推送失败（提交已在本地，22:30 auto-push 兜底）: '
+                           f'{(p.stderr or "")[:300]}')
+    except Exception as e:
+        logger.warning(f'发布步骤出错，跳过: {e}')
+
+
 def main():
     parser = argparse.ArgumentParser(description='采集 AI 新闻并写入 ai-news-summary.ts')
     parser.add_argument('--dry-run', action='store_true', help='只抓取和过滤，打印结果，不写文件')
@@ -622,6 +666,7 @@ def main():
                     '点评用事实型兜底。把 sk- 开头的 key 写进桌面 deepseek-key.txt '
                     '或环境变量 DEEPSEEK_API_KEY 即可自动开启。')
     logger.info('完成。')
+    publish_today(entry)
     return 0
 
 
