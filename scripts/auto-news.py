@@ -405,7 +405,19 @@ LLM_URL = 'https://api.deepseek.com/v1/chat/completions'
 
 
 def _llm_key():
-    """DeepSeek key：优先环境变量，其次桌面 deepseek-key.txt / 仓库 .dev.vars（用户放 key 的位置）"""
+    """DeepSeek key 读取顺序：
+    1. Windows 凭据管理器（keyring，服务名 deepseek / 用户名 api_key）——推荐，DPAPI 加密
+    2. 环境变量 DEEPSEEK_API_KEY / LLM_API_KEY
+    3. 桌面 deepseek-key.txt / 仓库 .dev.vars（明文兜底，不推荐）
+    存 key 命令：python -c "import keyring; keyring.set_password('deepseek', 'api_key', 'sk-xxx')"
+    """
+    try:
+        import keyring
+        v = (keyring.get_password('deepseek', 'api_key') or '').strip()
+        if v.startswith('sk-'):
+            return v
+    except Exception:
+        pass  # keyring 未安装或后端不可用，静默降级到下一来源
     for name in ('DEEPSEEK_API_KEY', 'LLM_API_KEY'):
         v = os.environ.get(name, '').strip()
         if v.startswith('sk-'):
@@ -663,8 +675,9 @@ def main():
         logger.info(f"英文由 DeepSeek 生成；点评：{entry['comment'][:50]}")
     else:
         logger.info('未配置 DeepSeek key 或调用失败：英文留空（英文页回退显示中文），'
-                    '点评用事实型兜底。把 sk- 开头的 key 写进桌面 deepseek-key.txt '
-                    '或环境变量 DEEPSEEK_API_KEY 即可自动开启。')
+                    '点评用事实型兜底。推荐把 sk- 开头的 key 存进 Windows 凭据管理器：'
+                    'python -c "import keyring; keyring.set_password(\'deepseek\', \'api_key\', \'sk-xxx\')"；'
+                    '也可用环境变量 DEEPSEEK_API_KEY 或桌面 deepseek-key.txt。')
     logger.info('完成。')
     publish_today(entry)
     return 0
