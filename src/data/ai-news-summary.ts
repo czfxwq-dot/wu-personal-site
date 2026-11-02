@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-03",
+  "title": "AI新闻 | Anthropic营收暴涨11倍冲刺IPO + 奥尔特曼内存言论遭马斯克声讨 + UJCMS 13.2.1上线AI自动翻译",
+  "summary": "Anthropic PBC 披露，截至 9 月 30 日的第三季度营收接近 170 亿美元（IT之家注：现汇率约合 1,132.35 亿元人民币），同比暴涨 11 倍，市场对这家 AI 实验室有望创下纪录的 IPO 预期进一步升温；萨姆 · 奥尔特曼近期关于内存的言论引发越来越多人反对，埃隆 · 马斯克也加入了这场声讨；UJCMS 支持多语言网站，可支持多种语言网站，语言数量不受限制。支持发布一种语言的文章后，可以使用 AI 或百度翻译、有道翻译自动翻译其它语言的文章；同时支持文章批量翻译。文章修改后，同样可以同步翻译至不同语言网站。如发现翻译有不恰当之处，可以手动修改。 本次更新新增会员投稿，会员可在会员中心提交文章，经...。",
+  "newsItems": [
+    {
+      "title": "Anthropic 第三季度营收 170 亿美元同比暴涨 11 倍，冲刺史上最大 IPO",
+      "summary": "Anthropic PBC 披露，截至 9 月 30 日的第三季度营收接近 170 亿美元（IT之家注：现汇率约合 1,132.35 亿元人民币），同比暴涨 11 倍，市场对这家 AI 实验室有望创下纪录的 IPO 预期进一步升温。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/021/277.htm",
+      "titleEn": "Anthropic Posts $17B Quarterly Revenue, Up 11x, as Record IPO Looms",
+      "summaryEn": "Anthropic said revenue for the quarter ended September 30 reached nearly $17 billion, an elevenfold increase year over year, strengthening market expectations for what could be the largest AI IPO to date."
+    },
+    {
+      "title": "OpenAI CEO 奥尔特曼称个人电脑浪费内存遭全网声讨，马斯克也来补刀",
+      "summary": "萨姆 · 奥尔特曼近期关于内存的言论引发越来越多人反对，埃隆 · 马斯克也加入了这场声讨。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/021/274.htm",
+      "titleEn": "Altman's Memory Comments Spark Backlash, With Musk Piling On",
+      "summaryEn": "Sam Altman's recent remarks about memory usage in personal computers have drawn growing pushback, and Elon Musk has now joined the criticism."
+    },
+    {
+      "title": "UJCMS 13.2.1 发布，多语言网站 AI 自动翻译",
+      "summary": "UJCMS 支持多语言网站，可支持多种语言网站，语言数量不受限制。支持发布一种语言的文章后，可以使用 AI 或百度翻译、有道翻译自动翻译其它语言的文章；同时支持文章批量翻译。文章修改后，同样可以同步翻译至不同语言网站。如发现翻译有不恰当之处，可以手动修改。 本次更新新增会员投稿，会员可在会员中心提交文章，经...",
+      "source": "开源中国",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.oschina.net/news/503350",
+      "titleEn": "UJCMS 13.2.1 Ships With AI Auto-Translation for Multilingual Sites",
+      "summaryEn": "The open-source CMS UJCMS released version 13.2.1, letting publishers auto-translate articles into unlimited languages via AI or Baidu and Youdao translation, with batch translation and manual corrections; this update also adds member submissions."
+    },
+    {
+      "title": "90 后北大副教授董豪：启元机器人，正在勇闯具身终局",
+      "summary": "做具身，不能一上来什么都干，也不能什么都不干。 作者丨齐铖湧 编辑丨岑 峰 董豪是具身行业里一个十足的非典型选手。大多数人对他的印象，停在 29 岁便是北大博导的年轻学者身份，以及最近任职启元机器人首席科学家、带队攻坚家用具身智能的产业标签。但很少有人知道，他读博之前曾有过一段三年创业最终折戟的经历，住过工厂的八人间宿舍；更少有人知道，智元刚创立时，他就是最…",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/ai/1mfsMzxNwaTmqZ7e.html",
+      "titleEn": "Peking University's Dong Hao Takes Embodied AI Toward the Home Stretch",
+      "summaryEn": "Dong Hao, a Peking University associate professor and chief scientist at Qiyuan Robotics, argues embodied AI firms must pick their battles, and proposes HIL-UMI and related methods to escape the prohibitive cost of post-training on tens of thousands of real machines."
+    },
+    {
+      "title": "产业资本继续押注具身：斯坦福双子星创办的黑马公司 RoboScience 机器科学，宣布完成 A2 轮融资",
+      "summary": "具身智能的资本筛选标准，正在从\"讲得动人\"转向\"兑现得动\"。 作者丨齐铖湧 编辑丨岑 峰 AI 科技评论获悉，11 月 2 日，RoboScience 机器科学完成 A2 轮融资。据悉，本轮由琥珀资本、鸿瑞达投资、上海半导体产投 联合领投，360 战投、爽资本、国联民生资本、金鼎资本及多家上市公司平台跟投，融资金额达到了数亿元。这意味着，这家 2025 年 …",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/ai/GqrJT2vlPFBxElDY.html",
+      "titleEn": "RoboScience, Founded by a Stanford Pair, Closes A2 Round",
+      "summaryEn": "Embodied AI startup RoboScience, operating since March 2025, raised hundreds of millions of yuan in an A2 round led by Amber Capital, Hongruida Investment and Shanghai Semiconductor Industry Investment, its fifth funding round as investors shift from compelling pitches to proven delivery."
+    }
+  ],
+  "comment": "一边是Anthropic靠企业付费把营收做到170亿美元，一边是奥尔特曼在硬件常识上翻车——AI的钱正从模型能力转向真实交付；具身智能融资收紧也印证同一件事：讲故事的窗口关了，能算清成本的人才能拿到钱。",
+  "titleEn": "AI News | Anthropic's 11x Revenue Surge Toward Record IPO + Altman's Memory Remark Draws Musk's Mockery + UJCMS 13.2.1 Adds AI Auto-Translation",
+  "summaryEn": "Anthropic reported roughly $17 billion in third-quarter revenue, an elevenfold jump year over year, fueling expectations of a landmark IPO. Sam Altman drew widespread criticism, joined by Elon Musk, over his remarks about PC memory waste. Meanwhile open-source CMS UJCMS shipped version 13.2.1 with AI-powered automatic translation for multilingual sites.",
+  "commentEn": "While Anthropic turns enterprise spending into a $17 billion quarter, Altman gets mocked for a basic hardware take. The money is shifting from model demos to real delivery, and tighter embodied-AI funding says the same: the storytelling window has closed, and only those who can count costs will get paid."
+},
+{
   "date": "2026-11-02",
   "title": "AI新闻 | OpenAI、谷歌、微软和 Anthropic … + 海贝推出 HiBy R6III SE 便携 Hi… + 拾趣 (Magpie) v0.1.19 发布",
   "titleEn": "AI News | OpenAI, Google, Microsoft and Anthropic back a scraping opt-out standard + HiBy launches the R6III SE player + Magpie v0.1.19 released",
