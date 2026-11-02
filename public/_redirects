@@ -1,7 +1,3 @@
-# 百度站点验证文件：Pages 默认把 .html 308 跳到无后缀路径，百度只认原始 .html 文件名，
-# 这里用 200 重写让该路径原样返回文件内容（不跳转）
-/baidu_verify_codeva-7kEwHwdUhM.html  /baidu_verify_codeva-7kEwHwdUhM  200
-
 # 已下架的空壳文章（无正文）→ 301 跳回文章列表
 /banbaiguan/3000-jacket-threshold/ /banbaiguan/ 301
 /banbaiguan/5-desires-algorithm-wallet/ /banbaiguan/ 301
