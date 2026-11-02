@@ -1,8 +1,7 @@
-# ⚠️ 本文件线上会被 Cloudflare 改写：CF 会在最前面自动插入一段「Managed content」，
-# 其中已把 Baiduspider / Bytespider / GPTBot / ClaudeBot / CCBot 等设为 Disallow: /，
-# 与下方我们自己写的 Allow 直接矛盾（2026-11-01 实测确认）。
-# 要让百度、抖音、AI 爬虫真的能抓，需在 Cloudflare 面板关掉 Managed robots.txt / AI Crawl Control。
-# 只改这个文件不管用——本地看着是允许，线上依旧是禁止。
+# 2026-11-02：CF 面板的爬虫拦截已全部解除（逐爬虫开关关掉 + 托管 robots.txt 关闭），
+# 本文件现在是线上唯一生效的 robots.txt，已实测与线上输出一致。
+# ⚠️ 防复发：若线上再次出现「BEGIN Cloudflare Managed content」块，
+# 说明面板里 AI Crawl Control 的逐爬虫开关或托管 robots.txt 被重新打开了，去面板关掉即可。
 
 # 允许所有爬虫访问
 User-agent: *
