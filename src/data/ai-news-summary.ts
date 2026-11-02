@@ -28,11 +28,15 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
   "date": "2026-11-02",
   "title": "AI新闻 | OpenAI、谷歌、微软和 Anthropic … + 海贝推出 HiBy R6III SE 便携 Hi… + 拾趣 (Magpie) v0.1.19 发布",
+  "titleEn": "AI News | OpenAI, Google, Microsoft and Anthropic back a scraping opt-out standard + HiBy launches the R6III SE player + Magpie v0.1.19 released",
   "summary": "OpenAI、谷歌、微软以及 Anthropic 近日宣布将采用一项新标准，内容发布方可以借助该标准选择拒绝 AI 抓取自家网站内容；海贝宣布推出一款 HiBy R6III SE 便携 Hi-Fi 播放器，定价为 1798 元；拾趣 (Magpie) v0.1.19 发布，AI 更智能，内容识别更精准 拾趣 (Magpie)是一款跨平台沉浸式自定义AI 划词工具 划选或双击，浮动条随即弹出：翻译、解释、总结实时呈现；复制、搜索、写入 Obsidian、预填日历，结果直接落地。",
+  "summaryEn": "OpenAI, Google, Microsoft and Anthropic have announced they will adopt a new standard that lets publishers opt out of having their content scraped for AI training; HiBy has launched the R6III SE portable Hi-Fi player, priced at 1,798 yuan; and Magpie v0.1.19 is out with smarter AI and sharper content recognition. Magpie is a cross-platform AI text-selection tool: select or double-click text and a floating bar pops up with translation, explanation and summarisation in real time, while copy, search, writing into Obsidian or prefilling a calendar land the results directly where you need them.",
   "newsItems": [
     {
       "title": "OpenAI、谷歌、微软和 Anthropic 联手推行 AI 数据抓取退出标准",
+      "titleEn": "OpenAI, Google, Microsoft and Anthropic jointly back an AI data-scraping opt-out standard",
       "summary": "OpenAI、谷歌、微软以及 Anthropic 近日宣布将采用一项新标准，内容发布方可以借助该标准选择拒绝 AI 抓取自家网站内容。",
+      "summaryEn": "OpenAI, Google, Microsoft and Anthropic have announced they will adopt a new standard that lets publishers choose to opt out of AI scraping of their own content.",
       "source": "IT之家",
       "category": "AI应用",
       "categoryEn": "AI Applications",
@@ -40,7 +44,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "海贝推出 HiBy R6III SE 便携 Hi-Fi 播放器：4 颗 CS43198 DAC 芯片，1798 元",
+      "titleEn": "HiBy launches the R6III SE portable Hi-Fi player: four CS43198 DAC chips, priced at 1,798 yuan",
       "summary": "海贝宣布推出一款 HiBy R6III SE 便携 Hi-Fi 播放器，定价为 1798 元。",
+      "summaryEn": "HiBy has announced the R6III SE portable Hi-Fi player, priced at 1,798 yuan.",
       "source": "IT之家",
       "category": "AI芯片",
       "categoryEn": "AI Chips",
@@ -48,7 +54,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "拾趣 (Magpie) v0.1.19 发布，AI 更智能，内容识别更精准",
+      "titleEn": "Magpie v0.1.19 released: smarter AI, sharper content recognition",
       "summary": "拾趣 (Magpie) v0.1.19 发布，AI 更智能，内容识别更精准 拾趣 (Magpie)是一款跨平台沉浸式自定义AI 划词工具 划选或双击，浮动条随即弹出：翻译、解释、总结实时呈现；复制、搜索、写入 Obsidian、预填日历，结果直接落地。",
+      "summaryEn": "Magpie v0.1.19 ships with smarter AI and more accurate content recognition. Magpie is a cross-platform immersive AI text-selection tool: select or double-click and a floating bar appears with translation, explanation and summarisation in real time; copy, search, writing into Obsidian or prefilling a calendar put the results straight where you need them.",
       "source": "开源中国",
       "category": "AI应用",
       "categoryEn": "AI Applications",
@@ -56,7 +64,9 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "个人灵光 2.0 实测：个人 AI 助理的机会和门槛｜AI 上新",
+      "titleEn": "Personal Spark 2.0 tested: the openings and barriers for personal AI assistants | New AI Products",
       "summary": "作者｜汤一涛 编辑｜靖宇 10 月 21 日的 Meta 财报会上，扎克伯格披露了一组关于个人智能体 Muse 的关键数据：超过 1000 万人设置了 Muse，购物是 Muse 最常见的用途，超过四分之一的用户在用它买东西，平均客单价超过200 美元；上线第一周，Muse 交易量便超出了预期，Meta 不得不与支付合作伙伴 Stripe 一起临时上调了信用…",
+      "summaryEn": "On the October 21 Meta earnings call, Zuckerberg shared key figures about the personal agent Muse: more than 10 million people have set it up, shopping is its most common use, over a quarter of users buy things with it, and the average order value tops $200. In its first week Muse transactions exceeded expectations, and Meta had to temporarily raise credit limits together with payments partner Stripe…",
       "source": "极客公园",
       "category": "AI应用",
       "categoryEn": "AI Applications",
@@ -64,14 +74,17 @@ export const dailyNewsSummaries: DailyNewsSummary[] = [
     },
     {
       "title": "DeepSeek，怎么就变成了一条「大肥鱼」",
+      "titleEn": "How did DeepSeek turn into a 'big fat fish'?",
       "summary": "作者｜Moonshot 编辑｜靖宇 最近，B 站评论区闹起了「鱼灾」。 先是有人开了个「Claude 大小姐在运营」的账号，让 AI 负责选题、制作和运营。第二天，「DeepSeek 鲸鱼娘在运营」跟着上线，第一条视频播放量就超过了 200 万。 由于目前 DeepSeek 暂无生图功能，该账号形象还是由 GPT 绘制的。｜图源：Bilibili 网友纷纷效…",
+      "summaryEn": "Bilibili's comment sections have lately been awash with 'fish'. First came an account presented as run by 'Miss Claude', with AI handling topic selection, production and operations. The next day a 'DeepSeek whale-girl is running this account' channel followed, and its first video passed 2 million views. Since DeepSeek cannot generate images yet, the character's look was drawn by GPT.",
       "source": "极客公园",
       "category": "大模型",
       "categoryEn": "Large Models",
       "url": "http://www.geekpark.net/news/373248"
     }
   ],
-  "comment": "今天 5 条，方向：AI应用、AI芯片、大模型；头条是OpenAI、谷歌、微软和 Anthropic 联手推行 AI 数据抓取…。"
+  "comment": "今天 5 条，方向：AI应用、AI芯片、大模型；头条是OpenAI、谷歌、微软和 Anthropic 联手推行 AI 数据抓取…。",
+  "commentEn": "Five items today, spanning AI applications, AI chips and large models; the headline is OpenAI, Google, Microsoft and Anthropic jointly backing the AI data-scraping opt-out standard…."
 },
 {
   "date": "2026-11-01",
