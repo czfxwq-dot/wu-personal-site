@@ -1,3 +1,5 @@
+// 本文件由 scripts/auto-news.py 每日 06:00 自动采集、写入并提交推送。
+// 手动新增条目可以，但新条目总是被插在数组开头；改旧条目请当天完成。
 // AI新闻汇总数据 — 每天一条汇总型，包含多条新闻整合
 // 格式：date, title(汇总标题), summary(汇总摘要), newsItems(具体新闻列表), comment(一句话点评)
 export interface NewsItem {
