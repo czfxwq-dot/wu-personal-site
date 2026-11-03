@@ -79,6 +79,14 @@ RSS_FEEDS = [
     ('InfoQ', 'https://www.infoq.cn/feed'),
 ]
 
+# 源健康阈值（E011）：单源失败必须被看见，不能再「悄悄从 6 个源变成 5 个源」。
+# 成功率低于 HEALTH_MIN_RATE，或 KEY_SOURCES 里任一源失败 → 判定降级：
+# 写 NEEDS_ATTENTION.txt 标记文件 + 退出码 2，让计划任务的 Result 能被一眼看出。
+HEALTH_MIN_RATE = 0.8
+KEY_SOURCES = ('IT之家', '量子位')  # 关键源：漏了会明显影响当天质量
+ATTENTION_FILE = LOG_DIR / 'NEEDS_ATTENTION.txt'
+HEALTH_JSONL = LOG_DIR / 'source-health.jsonl'
+
 # 强关键词：命中标题才算 AI 新闻
 STRONG_RE = re.compile(
     r'人工智能|大模型|语言模型|多模态|生成式|AIGC|AGI|具身|智能体|机器人|算力|'
@@ -182,6 +190,37 @@ def _local(tag):
     return tag.split('}')[-1].lower()
 
 
+# XML 1.0 不允许的控制字符：源端偶尔把二进制垃圾塞进 CDATA，expat 会直接罢工
+INVALID_XML_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f]')
+XML_DECL_RE = re.compile(r'^\s*<\?xml[^>]*\?>')
+
+
+def _decode_lenient(raw):
+    """坏字节不抛异常：先试 UTF-8，再试 GB18030，最后替换掉解不了的部分。
+    雷锋网 2026-11-02 就是吐了半截多字节字符，导致整源被丢弃。"""
+    for enc in ('utf-8', 'gb18030'):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode('utf-8', errors='replace')
+
+
+def _salvage_feed(text):
+    """把「抓到一半」的 feed 救回来：切到最后一个完整条目，补上闭合标签。
+    只在解析失败时兜底，正常源走不到这里。"""
+    if '<item' in text:
+        tag, tail = 'item', '</channel></rss>'
+    elif '<entry' in text:
+        tag, tail = 'entry', '</feed>'
+    else:
+        return ''
+    end = text.rfind(f'</{tag}>')
+    if end == -1:
+        return ''
+    return text[:end + len(tag) + 3] + tail
+
+
 def _child_text(el, names):
     for child in el:
         if _local(child.tag) in names:
@@ -194,8 +233,28 @@ def _child_text(el, names):
 
 
 def parse_feed(raw, source):
-    """兼容 RSS 2.0 和 Atom，不依赖 feedparser"""
-    root = ET.fromstring(raw)
+    """兼容 RSS 2.0 和 Atom，不依赖 feedparser。
+
+    返回 (entries, repaired)。源端坏包有两类，都会让 ET 直接抛 ParseError：
+      · 坏字节（半截 UTF-8 / 控制字符）→ 容错解码后重解析
+      · 抓到一半（响应被截断）→ 切到最后一个完整条目再补闭合标签
+    修好了就把 repaired 标记回传，让源健康表能看出「这个源吐过坏包」。
+    """
+    repaired = False
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError as first_err:
+        text = INVALID_XML_RE.sub('', XML_DECL_RE.sub('', _decode_lenient(raw)))
+        try:
+            root = ET.fromstring(text)
+            repaired = True
+        except ET.ParseError:
+            salvaged = _salvage_feed(text)
+            if not salvaged:
+                raise first_err from None
+            root = ET.fromstring(salvaged)
+            repaired = True
+
     items = [e for e in root.iter() if _local(e.tag) == 'item']
     if not items:
         items = [e for e in root.iter() if _local(e.tag) == 'entry']
@@ -225,7 +284,7 @@ def parse_feed(raw, source):
                 'source': source,
                 'published': published,
             })
-    return entries
+    return entries, repaired
 
 
 def _err_brief(exc):
@@ -241,31 +300,113 @@ def _err_brief(exc):
     return f'{type(exc).__name__}: {exc}'
 
 
-def fetch_ai_news(retry=1):
-    """逐个源抓取。单个源失败重试一次——源端偶发 502 很常见，重试基本能救回来；
-    重试后仍失败就跳过，绝不影响其它源。"""
-    news, ok, failed = [], 0, 0
+def fetch_ai_news(retry=2):
+    """逐个源抓取，返回 (news, health)。health 就是源健康表的原始数据。
+
+    重试 2 次（最多 3 次尝试）：雷锋网实测 502 很密——2026-11-03 20:50 连测两次，
+    第一次就是 502，第二次才 200。只重试一次等于一半概率白丢一个源。
+    重试后仍失败就跳过，绝不影响其它源。但失败**必须被记录**（E011）：源少了不能
+    被日志里的一行 WARNING 带过去，收尾要出健康表。
+    """
+    news, health = [], []
     logger.info(f"开始采集 {len(RSS_FEEDS)} 个 AI 垂类源")
     for source, url in RSS_FEEDS:
-        entries, last = None, None
+        started = time.time()
+        entries, last, attempts, repaired = None, None, 0, False
         for attempt in range(retry + 1):
+            attempts = attempt + 1
             try:
-                entries = parse_feed(http_get(url), source)
+                entries, repaired = parse_feed(http_get(url), source)
                 break
             except Exception as e:  # noqa: BLE001 - 单源失败不能影响整体
                 last = e
                 if attempt < retry:
                     logger.warning(f"  {source}: 第 {attempt + 1} 次失败（{_err_brief(e)}），2 秒后重试")
                     time.sleep(2)
+        elapsed = round(time.time() - started, 1)
+        record = {
+            'source': source,
+            'url': url,
+            'ok': entries is not None,
+            'count': len(entries) if entries is not None else 0,
+            'seconds': elapsed,
+            'attempts': attempts,
+            'repaired': repaired,
+            'error': '' if entries is not None else _err_brief(last),
+        }
+        health.append(record)
         if entries is None:
-            logger.warning(f"  {source}: {_err_brief(last)}（{url}）")
-            failed += 1
+            logger.warning(f"  {source}: {record['error']}（{url}）")
             continue
-        logger.info(f"  {source}: 取到 {len(entries)} 条")
+        suffix = '（修复坏包后解析成功）' if repaired else ''
+        logger.info(f"  {source}: 取到 {len(entries)} 条{suffix}")
         news.extend(entries)
-        ok += 1
-    logger.info(f"采集结束：成功 {ok} 源，失败 {failed} 源，原始 {len(news)} 条")
-    return news
+    return news, health
+
+
+def _src_width(text, width):
+    """按显示宽度补空格：中文按 2 列算，否则健康表在终端里会歪"""
+    shown = sum(2 if ord(ch) > 0x2E80 else 1 for ch in text)
+    return text + ' ' * max(1, width - shown)
+
+
+def report_source_health(health):
+    """打印源健康表、追加一条 JSONL 供事后看趋势，并在降级时落 NEEDS_ATTENTION 标记。
+    返回 True 表示降级（调用方决定退出码）。"""
+    total = len(health)
+    ok = sum(1 for h in health if h['ok'])
+    rate = ok / total if total else 0.0
+    failed = [h for h in health if not h['ok']]
+    key_failed = [h['source'] for h in failed if h['source'] in KEY_SOURCES]
+    repaired = [h['source'] for h in health if h.get('repaired')]
+
+    logger.info('源健康表：')
+    logger.info(f"  {_src_width('源', 10)}{_src_width('状态', 8)}{'条数':>5}{'耗时':>8}  备注")
+    for h in health:
+        status = 'OK' if h['ok'] else 'FAIL'
+        note = h['error'] or ('修复坏包' if h.get('repaired') else '')
+        if h['ok'] and h['attempts'] > 1:
+            note = f"第 {h['attempts']} 次才成功" + (f"；{note}" if note else '')
+        logger.info(f"  {_src_width(h['source'], 10)}{_src_width(status, 8)}"
+                    f"{h['count']:>5}{h['seconds']:>7.1f}s  {note}")
+    logger.info(f"汇总：成功 {ok}/{total} 源（{rate:.0%}）"
+                + (f"；失败：{'、'.join(h['source'] for h in failed)}" if failed else '')
+                + (f"；坏包已修复：{'、'.join(repaired)}" if repaired else ''))
+
+    degraded = rate < HEALTH_MIN_RATE or bool(key_failed)
+    try:
+        with HEALTH_JSONL.open('a', encoding='utf-8') as fh:
+            fh.write(json.dumps({
+                'run_at': datetime.now().isoformat(timespec='seconds'),
+                'ok': ok, 'total': total, 'rate': round(rate, 3),
+                'degraded': degraded, 'sources': health,
+            }, ensure_ascii=False) + '\n')
+    except OSError as e:
+        logger.warning(f'健康快照写入失败：{e}')
+
+    if degraded:
+        reason = []
+        if rate < HEALTH_MIN_RATE:
+            reason.append(f'成功率 {rate:.0%} 低于阈值 {HEALTH_MIN_RATE:.0%}')
+        if key_failed:
+            reason.append(f"关键源失败：{'、'.join(key_failed)}")
+        detail = '；'.join(reason)
+        logger.error(f'源健康降级：{detail}')
+        try:
+            ATTENTION_FILE.write_text(
+                f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} 源健康降级：{detail}\n'
+                + ''.join(f"  {h['source']}: {h['error']}\n" for h in failed),
+                encoding='utf-8')
+            logger.error(f'已写标记文件 {ATTENTION_FILE.relative_to(ROOT)}（下次健康时自动清除）')
+        except OSError as e:
+            logger.warning(f'标记文件写入失败：{e}')
+    elif ATTENTION_FILE.exists():
+        try:
+            ATTENTION_FILE.unlink()
+            logger.info('源健康恢复正常，已清除 NEEDS_ATTENTION 标记')
+        except OSError as e:
+            logger.warning(f'标记文件清除失败：{e}')
+    return degraded
 
 
 # ---------------------------------------------------------------- 过滤与去重
@@ -660,7 +801,8 @@ def main():
         logger.info(f"{today} 已有汇总，本次跳过（要覆盖请先手动删掉那天的条目）")
         return 0
 
-    raw = fetch_ai_news()
+    raw, health = fetch_ai_news()
+    degraded = report_source_health(health)
     if not raw:
         logger.warning('所有源都没取到内容，退出')
         return 1
@@ -681,7 +823,7 @@ def main():
     if args.dry_run:
         logger.info('dry-run，不写文件。完整条目：')
         print(json.dumps(entry, ensure_ascii=False, indent=2))
-        return 0
+        return 2 if degraded else 0
 
     if not write_entry(DATA_FILE, text, start, entry):
         return 1
@@ -695,7 +837,9 @@ def main():
                     '也可用环境变量 DEEPSEEK_API_KEY 或桌面 deepseek-key.txt。')
     logger.info('完成。')
     publish_today(entry)
-    return 0
+    if degraded:
+        logger.error('注意：本次源健康降级，退出码 2（计划任务的 Result 会显示失败）')
+    return 2 if degraded else 0
 
 
 if __name__ == '__main__':
