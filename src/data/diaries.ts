@@ -18,15 +18,15 @@ export const diaries: DiaryEntry[] = [
     date: '2026-11-03',
     title: `改名容易，改干净难`,
     titleEn: `Renaming Is Easy; Cleaning Up Is Not`,
-    summary: `全站换名：202 处中文旧名、39 处英文旧名一上午扫净；顺手修好新闻过滤器，写下 69 行的项目说明书，把记忆与代码并进同一个目录，另补一篇新文章。`,
-    summaryEn: `A sitewide rename: 202 Chinese and 39 English old-brand mentions swept clean by noon; the news filter fixed on the side, a 69-line project manual written, memory and code merged under one roof, plus one new article published.`,
+    summary: `全站换名：202 处中文旧名、39 处英文旧名一上午换完主线；顺手修好新闻过滤器，写下 69 行的项目说明书，把记忆与代码并进同一个目录，另补一篇新文章。`,
+    summaryEn: `A sitewide rename: 202 Chinese and 39 English old-brand mentions rewritten by noon; the news filter fixed on the side, a 69-line project manual written, memory and code merged under one roof, plus one new article published.`,
     category: '工作',
     categoryEn: 'Work',
     contentEn: `<p>Day 189 of building the website.</p>
 
 <h2>📍 Today's Mood</h2>
 <p>Today was the day we gave the site a new name. The Chinese brand moved from 「半百观AI」 to 「半百观视界」, and the English one from BanbaiGuan AI to BanbaiGuan Vision. It sounded like a single sentence of work, but the old name turned out to live in 202 Chinese corners and 39 English ones — page templates, search descriptions, the RSS feed, even the chat widget's self-introduction. Renaming a brand is like renaming a child: the name itself is easy; the old handwriting on every registration page and every report card has to be traced over, one by one.</p>
-<p>Oddly enough, this kind of detail work wasn't tedious at all — it felt like a proper house cleaning. Every replaced old name was another fogged pane wiped clear. By noon, not a single old name remained anywhere on the site.</p>
+<p>Oddly enough, this kind of detail work wasn't tedious at all — it felt like a proper house cleaning. Every replaced old name was another fogged pane wiped clear. By noon, every place we could find — page templates, search descriptions, feeds — had been switched over.</p>
 
 <h2>🎯 Today's Footprints</h2>
 
@@ -62,7 +62,7 @@ export const diaries: DiaryEntry[] = [
 
 <h2>💭 Confusions and Thoughts</h2>
 <p><strong>Guanwu's thinking:</strong> Why spend a whole morning on a name? Because readers recognize the name. With half the site saying one thing and half saying another, it is like handing out two different business cards — the effort saved today would be paid back later, in trust.</p>
-<p><strong>Shanshan's implementation:</strong> The scariest part of renaming is not the replacement but the backflow: the old name was still buried in legacy translation payloads, waiting for some old script to run again and quietly bring it back. So the closing move was clearing the source, not just wiping the surface.</p>
+<p><strong>Shanshan's implementation:</strong> The scariest part of renaming is not the replacement but the backflow: the old name was still buried in legacy translation payloads, waiting for some old script to run again and quietly bring it back. So the closing move was reaching for the source, not just wiping the surface.</p>
 <p><strong>Our shared understanding:</strong> The quality of a decision is measured by how many layers deep it was executed. Anyone can unify a slogan; the rename is only finished when the translation payloads and the historical diaries are clean too.</p>
 
 <h2>🌊 Today's Insight</h2>
