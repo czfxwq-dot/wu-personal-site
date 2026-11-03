@@ -281,6 +281,18 @@ def is_roundup_title(title):
     return len(parts) >= 2
 
 
+# 消费电子硬件标题：含「芯片 / DAC」但本身不是 AI 新闻（2026-11-03 海贝 HiBy 播放器被分到「AI芯片」）
+# 判据：命中下面任一词，且标题里没有任何 AI 强语境 → 丢弃。强语境兜底，避免误杀「AI 眼镜 / 大模型音箱」。
+CONSUMER_HW_RE = re.compile(
+    r'播放器|耳机|耳放|音箱|音响|功放|解码器|DAC|相机|镜头|手表|手环|键盘|鼠标|显示器|充电器|移动电源|电纸书'
+)
+
+# AI 强语境词：出现任何一个就认为这条确实在讲 AI，不按消费硬件丢弃
+AI_CONTEXT_RE = re.compile(
+    r'(?<![A-Za-z])AI(?![A-Za-z])|人工智能|大模型|语言模型|模型|算法|智能体|生成式|机器学习|深度学习|神经网络|训练|推理|算力'
+)
+
+
 def filter_noise(entries):
     kept, dropped = [], []
     for e in entries:
@@ -290,6 +302,9 @@ def filter_noise(entries):
             continue
         if is_roundup_title(title):
             dropped.append(('合集标题', title))
+            continue
+        if CONSUMER_HW_RE.search(title) and not AI_CONTEXT_RE.search(title):
+            dropped.append(('非AI消费硬件', title))
             continue
         if BLOCK_RE.search(title):
             dropped.append(('黑名单', title))
