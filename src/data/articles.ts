@@ -6069,7 +6069,7 @@ See you in the comments 👇
       
       <p>Such talent will be even scarcer than pure technical talent over the next 3 to 5 years.</p>
 
-      <h2>V. Banbai Guan's Take</h2>
+      <h2>V. BanbaiGuan's Take</h2>
       
       <p>The emergence of the country's first undergraduate major in "Business AI" sends a clear signal:</p>
       
