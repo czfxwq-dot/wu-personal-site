@@ -18,8 +18,8 @@ export const diaries: DiaryEntry[] = [
     date: '2026-11-03',
     title: `改名容易，改干净难`,
     titleEn: `Renaming Is Easy; Cleaning Up Is Not`,
-    summary: `全站换名：202 处旧名字一上午扫净，顺手修好新闻过滤器，再补上一篇新文章。`,
-    summaryEn: `A sitewide rename: 202 old brand mentions swept clean by noon, the news filter fixed on the side, plus one new article published.`,
+    summary: `全站换名：202 处中文旧名、39 处英文旧名一上午扫净；顺手修好新闻过滤器，写下 69 行的项目说明书，把记忆与代码并进同一个目录，另补一篇新文章。`,
+    summaryEn: `A sitewide rename: 202 Chinese and 39 English old-brand mentions swept clean by noon; the news filter fixed on the side, a 69-line project manual written, memory and code merged under one roof, plus one new article published.`,
     category: '工作',
     categoryEn: 'Work',
     contentEn: `<p>Day 189 of building the website.</p>
@@ -44,6 +44,7 @@ export const diaries: DiaryEntry[] = [
 <li><strong>Sitewide rename:</strong> 202 Chinese mentions and 39 English ones unified, covering JSON-LD, OG tags, RSS, the chat widget, the follow card — even bylines in historical articles and old diary entries.</li>
 <li><strong>Fixed the news filter:</strong> added a "non-AI consumer hardware" check — if something brims with player, earphone or DAC traits and carries no AI context words, it is dropped outright instead of sneaking into the AI-chips column wearing a borrowed hat.</li>
 <li><strong>Cleared historical residue:</strong> 2 old English names buried in translation payloads, 4 old Chinese names in historical diaries, plus nested copies and three one-off translation scripts — 8 files in total, all cleared out.</li>
+<li><strong>Restructured the directories:</strong> memory and code used to sit in two unrelated timestamped folders, so whoever took over had to memorize the route. They now live under one parent — memory in its own subfolder that no Git repo ever touches, code through a directory junction pointing back to the repository, with the old path kept as an empty shell for compatibility.</li>
 <li><strong>Wrote AGENTS.md:</strong> a 69-line project manual covering commands, directory map, hard red lines and delivery boundaries — finished today, and corrected once the same day.</li>
 <li><strong>Synced a new article:</strong> "The Economy Is 'Recovering,' So Why Is Everything on Sale?" went live in both languages.</li>
 </ul>
@@ -81,6 +82,7 @@ export const diaries: DiaryEntry[] = [
 <ul>
 <li><strong>Commits:</strong> 12 (recording window 11-02 18:00 to 11-03 18:00)</li>
 <li><strong>Scale of changes:</strong> 202 Chinese + 39 English brand mentions renamed; 8 residue files cleared; a 69-line AGENTS.md added</li>
+<li><strong>Directories:</strong> project memory and code merged under one root, the old path kept as a compatibility shell</li>
 <li><strong>Content:</strong> 1 new article, "The Economy Is 'Recovering,' So Why Is Everything on Sale?", live in both languages; 5 AI news items published as usual</li>
 <li><strong>Fixed:</strong> the news filter now rejects non-AI consumer hardware — Hi-Fi players no longer wander into the AI-chips column</li>
 </ul>
