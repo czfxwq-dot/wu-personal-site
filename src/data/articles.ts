@@ -3643,7 +3643,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
 
     <!-- Follow card -->
     <div class="footer-cta">
-      <p class="cta-title">📱 Follow "BanbaiGuan AI"</p>
+      <p class="cta-title">📱 Follow "BanbaiGuan Vision"</p>
       <p class="cta-desc">Deep insights from a 50-year-old AI practitioner, updated weekly</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 Channels</span>
@@ -3655,7 +3655,7 @@ Use AI to replace your thinking → you get weaker and weaker</p>
     </div>
 
     <div class="article-footer">
-      <p>— BanbaiGuan AI</p>`
+      <p>— BanbaiGuan Vision</p>`
   },
   {
     slug: 'ai-era-university-value',
@@ -5803,7 +5803,7 @@ See you in the comments 👇
 
       <blockquote>"Future enterprise competitiveness isn't about how many AI tools you have, but to what extent you let AI evolve."</blockquote>
 
-      <p class="quote-source">— BanbaiGuan AI</p>
+      <p class="quote-source">— BanbaiGuan Vision</p>
 
       <h2>💡 Action Suggestions</h2>
 

@@ -90,7 +90,7 @@ export const ui = {
     // ArticleJsonLd
     sectionDiary: '工作日记',
     sectionAiNews: 'AI 新闻',
-    sectionBanbaiguan: '半百观 AI',
+    sectionBanbaiguan: '半百观视界',
 
     // Citations
     citationsTitle: '参考资料',
@@ -122,7 +122,7 @@ export const ui = {
     // Hero
     heroEyebrow: 'AI Practitioner · Founder at 50',
     heroTitle: 'At 50, I use AI to turn ideas into reality',
-    heroSubtitle: 'Co-founder of MonolithIoT · AIoT Practitioner · BanbaiGuan AI',
+    heroSubtitle: 'Co-founder of MonolithIoT · AIoT Practitioner · BanbaiGuan Vision',
     heroDescription1: 'This is not a typical personal website.',
     heroDescription2: 'My AI assistant and I built it from scratch, together.',
     heroDescriptionSub: 'AI tool practices · Smart inventory management · My honest 50-year-old AI learning journey',
@@ -136,12 +136,12 @@ export const ui = {
     sectionAiProjects: 'AI Projects',
     sectionCompany: 'About the Company',
     sectionFollow: 'Follow Us',
-    sectionFollowSubtitle: 'Search "BanbaiGuan AI" on all platforms to find us',
+    sectionFollowSubtitle: 'Search "BanbaiGuan Vision" on all platforms to find us',
 
     // Card labels
     cardDiary: 'Diary',
     cardAiNews: 'AI News',
-    cardArticle: 'BanbaiGuan AI',
+    cardArticle: 'BanbaiGuan Vision',
 
     // Company
     companyBadge: 'National High-Tech Enterprise',
@@ -155,14 +155,14 @@ export const ui = {
     footerBrand: 'Guanwu',
     footerSubtitle: 'Co-founder of MonolithIoT · AIoT Practitioner',
     footerCompanySite: 'Company Website',
-    footerQrHint: 'Follow "BanbaiGuan AI"',
+    footerQrHint: 'Follow "BanbaiGuan Vision"',
     footerQrGzh: 'WeChat',
     footerQrDy: 'Video Account',
     footerCopy: '2026 Guanwu · ban-bai.com',
     footerCredit: 'This site was built and maintained by an AI assistant',
 
     // FollowUsCard
-    followTitle: 'Follow "BanbaiGuan AI"',
+    followTitle: 'Follow "BanbaiGuan Vision"',
     followSubtitle: "A 50-year-old's honest take on AI tool adoption",
     followPlatforms: [
       { icon: '💬', name: 'WeChat Official Account' },
@@ -178,7 +178,7 @@ export const ui = {
     // ChatWidget
     chatTitle: 'Shanshan AI Assistant',
     chatStatus: 'Online',
-    chatGreeting1: 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan AI',
+    chatGreeting1: 'Hi! I\'m Shanshan, the AI assistant for BanbaiGuan Vision',
     chatGreeting2: 'I can help you with the latest AI news, tool recommendations, and our social media accounts.',
     chatGreeting3: 'You can ask me:',
     chatGreeting4: 'What AI tools are trending lately?',
@@ -193,7 +193,7 @@ export const ui = {
     // ArticleJsonLd
     sectionDiary: 'Diary',
     sectionAiNews: 'AI News',
-    sectionBanbaiguan: 'BanbaiGuan AI',
+    sectionBanbaiguan: 'BanbaiGuan Vision',
 
     // Citations
     citationsTitle: 'References',

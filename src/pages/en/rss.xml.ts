@@ -41,7 +41,7 @@ export const GET: APIRoute = async (context) => {
 
   return rss({
     title: 'Guanwu | A 50-Year-Old Getting Things Done with AI',
-    description: 'AI in practice — BanbaiGuan AI. Notes from a 50-year-old entrepreneur.',
+    description: 'AI in practice — BanbaiGuan Vision. Notes from a 50-year-old entrepreneur.',
     site: context.site?.toString() || 'https://ban-bai.com',
     items: latestItems.map((item) => ({
       title: item.title,

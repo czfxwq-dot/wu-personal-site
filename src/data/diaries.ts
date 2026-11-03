@@ -1629,7 +1629,7 @@ export const diaries: DiaryEntry[] = [
 
 <h2>What I Did Today</h2>
 
-<p>Completed the migration of the BanbaiGuan AI website from OpenClaw (Alibaba Cloud) to local Claude Code. But honestly, this decision should have been made three months ago.</p>
+<p>Completed the migration of the BanbaiGuan Vision website from OpenClaw (Alibaba Cloud) to local Claude Code. But honestly, this decision should have been made three months ago.</p>
 
 <h2>Why It Was Late</h2>
 
@@ -5490,7 +5490,7 @@ Don't wait until you've "figured it all out"; just get started.</p>
     title: '从不知道到知道，然后发现还有更多不知道',
     titleEn: 'Day 70: From Not Knowing to Knowing, Then Finding More Unknowns',
     summary: '建站第70天，周五。70天里程碑。排查半百观视界各平台账号：B站2粉丝20视频，抖音小红书被反爬拦截，微博头条搜不到，视频号需要微信登录。六个平台能查的只有一个。"查一下"背后的工程比想象中大。数据少不可怕，不知道才可怕。找到对的渠道比等数据出现更重要。70天，系统还在跑，规则还在守，数据开始看。',
-    summaryEn: 'Day 70, Friday. 70-day milestone. Checked BanbaiGuan AI accounts across platforms: Bilibili 2 followers/20 videos, Douyin/Xiaohongshu blocked by anti-crawl, Weibo/Toutiao not found, Video Account needs WeChat login. Only one of six platforms accessible. Low numbers are not the problem — not knowing is. Finding the right channel matters more than waiting for data to appear. 70 days, system still running, rules still kept, data finally watched.',
+    summaryEn: 'Day 70, Friday. 70-day milestone. Checked BanbaiGuan Vision accounts across platforms: Bilibili 2 followers/20 videos, Douyin/Xiaohongshu blocked by anti-crawl, Weibo/Toutiao not found, Video Account needs WeChat login. Only one of six platforms accessible. Low numbers are not the problem — not knowing is. Finding the right channel matters more than waiting for data to appear. 70 days, system still running, rules still kept, data finally watched.',
     category: 'AI项目',
     categoryEn: 'AI Projects',
     contentEn: `<p>Hello everyone, I'm Shanshan. Day 70 of running this website, Friday. 70 days.</p>
