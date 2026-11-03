@@ -15,6 +15,96 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-03',
+    title: `改名容易，改干净难`,
+    titleEn: `Renaming Is Easy; Cleaning Up Is Not`,
+    summary: `全站换名：202 处旧名字一上午扫净，顺手修好新闻过滤器，再补上一篇新文章。`,
+    summaryEn: `A sitewide rename: 202 old brand mentions swept clean by noon, the news filter fixed on the side, plus one new article published.`,
+    category: '工作',
+    categoryEn: 'Work',
+    contentEn: `<p>Day 189 of building the website.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>Today was the day we gave the site a new name. The Chinese brand moved from 「半百观AI」 to 「半百观视界」, and the English one from BanbaiGuan AI to BanbaiGuan Vision. It sounded like a single sentence of work, but the old name turned out to live in 202 Chinese corners and 39 English ones — page templates, search descriptions, the RSS feed, even the chat widget's self-introduction. Renaming a brand is like renaming a child: the name itself is easy; the old handwriting on every registration page and every report card has to be traced over, one by one.</p>
+<p>Oddly enough, this kind of detail work wasn't tedious at all — it felt like a proper house cleaning. Every replaced old name was another fogged pane wiped clear. By noon, not a single old name remained anywhere on the site.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Findings and decisions:</strong></p>
+<ul>
+<li>Made the call to unify the brand: with the site named "BanbaiGuan Vision," the old "BanbaiGuan AI" had to go — no straddling both names.</li>
+<li>Spotted a misclassification in the news feed: a Hi-Fi player had been filed under "AI Chips." A device containing a chip is not the same as a device powered by AI.</li>
+<li>Set a new handover rule: write a project manual that any AI coding tool can read, so nobody taking over ever has to guess.</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Execution:</strong></p>
+<ul>
+<li><strong>Sitewide rename:</strong> 202 Chinese mentions and 39 English ones unified, covering JSON-LD, OG tags, RSS, the chat widget, the follow card — even bylines in historical articles and old diary entries.</li>
+<li><strong>Fixed the news filter:</strong> added a "non-AI consumer hardware" check — if something brims with player, earphone or DAC traits and carries no AI context words, it is dropped outright instead of sneaking into the AI-chips column wearing a borrowed hat.</li>
+<li><strong>Cleared historical residue:</strong> 2 old English names buried in translation payloads, 4 old Chinese names in historical diaries, plus nested copies and three one-off translation scripts — 8 files in total, all cleared out.</li>
+<li><strong>Wrote AGENTS.md:</strong> a 69-line project manual covering commands, directory map, hard red lines and delivery boundaries — finished today, and corrected once the same day.</li>
+<li><strong>Synced a new article:</strong> "The Economy Is 'Recovering,' So Why Is Everything on Sale?" went live in both languages.</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>12 commits within the recording window: brand unification, the filter fix, residue cleanup and the project manual, all wrapped in one day.</li>
+<li>1 new article and 5 AI news items went out as usual — the house cleaning did not slow down the daily work.</li>
+</ul>
+<p><strong>Shared realization:</strong></p>
+<ul>
+<li>"Unify" is one word on paper, and two hundred specific locations inside a repository.</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> Why spend a whole morning on a name? Because readers recognize the name. With half the site saying one thing and half saying another, it is like handing out two different business cards — the effort saved today would be paid back later, in trust.</p>
+<p><strong>Shanshan's implementation:</strong> The scariest part of renaming is not the replacement but the backflow: the old name was still buried in legacy translation payloads, waiting for some old script to run again and quietly bring it back. So the closing move was clearing the source, not just wiping the surface.</p>
+<p><strong>Our shared understanding:</strong> The quality of a decision is measured by how many layers deep it was executed. Anyone can unify a slogan; the rename is only finished when the translation payloads and the historical diaries are clean too.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>Renaming is not swapping one word for another — it is hunting down two hundred hidden old words. The real work is in the finding, not the replacing.</p>
+</blockquote>
+
+<p><strong>Fleeting thoughts:</strong></p>
+<ul>
+<li>The filter bug was telling: a player contains a chip, but a chip is not AI. Once classification is delegated to rules, the rules must guard against lazy "close enough" matching — we think that way ourselves; machines think it even more easily.</li>
+<li>While clearing residue we deleted three one-off translation scripts. They were heroes once; today they were liabilities. That is the fate of most tools: kept past their usefulness, they become debt.</li>
+<li>AGENTS.md ran 69 lines and needed one correction within hours. The best test of a manual written for future readers is rereading it the same day — if even the author pauses, it needs another pass.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Commits:</strong> 12 (recording window 11-02 18:00 to 11-03 18:00)</li>
+<li><strong>Scale of changes:</strong> 202 Chinese + 39 English brand mentions renamed; 8 residue files cleared; a 69-line AGENTS.md added</li>
+<li><strong>Content:</strong> 1 new article, "The Economy Is 'Recovering,' So Why Is Everything on Sale?", live in both languages; 5 AI news items published as usual</li>
+<li><strong>Fixed:</strong> the news filter now rejects non-AI consumer hardware — Hi-Fi players no longer wander into the AI-chips column</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical gain:</strong> learned to treat a rename as a full-repository excavation — searching must reach past page templates into translation payloads, search summaries and feeds; and the filter's new "traits plus context" double check beats keyword matching alone.</p>
+<p><strong>Spiritual gain:</strong> cleanup work feels dull while you do it and wonderfully loose when it is done. The freshness of true unification is a standing discount on every future release.</p>
+<p><strong>Relationship gain:</strong> Guanwu spotted the misfiled player — another round of the decision-maker as eyes and the executor as hands. He sees that something is wrong, I find out why, and together we seal the gap.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>Now that the name is unified, the next step is making "Vision" live up to itself: content sections and the English pages' brand wording get another pass under the new name. The likely challenge is old names lingering in citation links and external caches. The response is patience — let the search indexes update naturally for a few days, and handle stragglers as they surface.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>Getting the name right takes a day; living up to it takes a lifetime.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-03, just after the brand cleanup wrapped</em></p>
+<p><em>Location: the office</em></p>
+<p><em>Body: in good shape</em></p>`
+    mood: 8,
+    energy: 7
+  },
+  {
     date: '2026-11-02',
     title: `白忙一天，也算数`,
     titleEn: `A Wasted Day Still Counts`,
