@@ -168,7 +168,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p><strong>—— Banbai Guan AI ——</strong></p>
+<p><strong>—— BanbaiGuan Vision ——</strong></p>
 
 <p><em>A practical judgment for small businesses: it's not about the strongest model, it's about the right cost per task.</em></p>`
   },
@@ -255,7 +255,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p><strong>—— Banbai Guan AI ——</strong></p>
+<p><strong>—— BanbaiGuan Vision ——</strong></p>
 
 <p><em>Understanding AI, and understanding the boundary between us and it.</em></p>`
   },
@@ -364,7 +364,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p><strong>—— Banbai Guan AI ——</strong></p>
+<p><strong>—— BanbaiGuan Vision ——</strong></p>
 
 <p><em>Understanding AI, and understanding the boundary between us and it.</em></p>`
   },
@@ -497,7 +497,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p><strong>—— Banbai Guan AI ——</strong></p>
+<p><strong>—— BanbaiGuan Vision ——</strong></p>
 
 <p><em>Understanding AI, and understanding the boundary between us and it</em></p>`
   },
@@ -638,7 +638,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p>—— Banbai Guan AI, a 50-year-old entrepreneur's view of technology in the AI era</p>`
+<p>—— BanbaiGuan Vision, a 50-year-old entrepreneur's view of technology in the AI era</p>`
   },
   {
     slug: 'qingbei-meaningless-ai-era',
@@ -689,7 +689,7 @@ const articleList: ArticleEntry[] = [
 <tbody>
 <tr><td>What can I do?</td><td>Where are the boundaries of my ability?</td><td>Leaving the bank in 2008 — what was I actually capable of?</td></tr>
 <tr><td>What do I love?</td><td>What is my intrinsic motivation?</td><td>Starting content creation at 50 — why do I enjoy it?</td></tr>
-<tr><td>What value do I create?</td><td>Whom can I help?</td><td>Whom does Banbai Guan AI serve?</td></tr>
+<tr><td>What value do I create?</td><td>Whom can I help?</td><td>Whom does BanbaiGuan Vision serve?</td></tr>
 </tbody>
 </table>
 
@@ -708,7 +708,7 @@ const articleList: ArticleEntry[] = [
 <tr><td>Statistical ability</td><td>Finding real correlations in information overload</td><td>Sensing patterns across five industries</td></tr>
 <tr><td>Logical ability</td><td>First-principles reasoning</td><td>Seeing where IoT was heading back in 2001</td></tr>
 <tr><td>Psychological ability</td><td>Knowing yourself is freedom</td><td>Starting content creation at 50 taught me who I am</td></tr>
-<tr><td>Rhetorical ability</td><td>Persuading others to act together</td><td>Banbai Guan AI moves people through content</td></tr>
+<tr><td>Rhetorical ability</td><td>Persuading others to act together</td><td>BanbaiGuan Vision moves people through content</td></tr>
 </tbody>
 </table>
 
@@ -725,11 +725,11 @@ const articleList: ArticleEntry[] = [
 <h2>6. The closing line</h2>
 
 <blockquote><p>"Diplomas expire. Skills iterate. But the ability to solve problems never loses its meaning."</p>
-<p>—— Banbai Guan AI, a 50-year-old entrepreneur's view of education in the AI era</p></blockquote>
+<p>—— BanbaiGuan Vision, a 50-year-old entrepreneur's view of education in the AI era</p></blockquote>
 
 <p><strong>A final word:</strong></p>
 
-<p>I run Banbai Guan AI not to teach people which buttons to press, but to share the honest thinking of a 50-year-old entrepreneur.</p>
+<p>I run BanbaiGuan Vision not to teach people which buttons to press, but to share the honest thinking of a 50-year-old entrepreneur.</p>
 
 <p><strong>AI will replace many jobs. But it cannot replace the things that grow out of a person's own body and experience.</strong></p>
 
@@ -737,7 +737,7 @@ const articleList: ArticleEntry[] = [
 
 <hr />
 
-<p>Author | Banbai Guan AI</p>`
+<p>Author | BanbaiGuan Vision</p>`
   },
   {
     slug: '22-wan-ai-dramas',
@@ -2567,7 +2567,7 @@ Starting now, try to change your usage habits: stop dumping all your thoughts at
 
 <hr />
 
-<p><em>Follow [Banbai Guan AI]</em><br />
+<p><em>Follow [BanbaiGuan Vision]</em><br />
 <em>It's not about teaching 50-year-olds how to use AI, it's about helping them find a reason to use it</em></p>`
   },
   {
@@ -6002,7 +6002,7 @@ See you in the comments 👇
       ]} />
 
       <div class="article-footer" data-astro-cid-vgwvf3tu>
-        <p data-astro-cid-vgwvf3tu>Follow "Banbai Guan AI," a 50-year-old AI practitioner, guiding you through the real world of AI implementation.</p>
+        <p data-astro-cid-vgwvf3tu>Follow "BanbaiGuan Vision," a 50-year-old AI practitioner, guiding you through the real world of AI implementation.</p>
         <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/" class="back" data-astro-cid-article-nav>Back to Article List</a>
 <a href="/banbaiguan/commercial-ai-major/" class="next" data-astro-cid-article-nav>The Nation's First "Commercial AI" Major Is Here… →</a>
 </div>
@@ -6101,7 +6101,7 @@ See you in the comments 👇
       ]} />
 
       <div class="article-footer" data-astro-cid-vgwvf3tu>
-        <p data-astro-cid-vgwvf3tu>Follow "Banbai Guan AI," a 50-year-old AI practitioner guiding you through the real world of AI implementation.</p>
+        <p data-astro-cid-vgwvf3tu>Follow "BanbaiGuan Vision," a 50-year-old AI practitioner guiding you through the real world of AI implementation.</p>
         <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/anthropic-introspection-adapter/" class="prev" data-astro-cid-article-nav>← AI Finally Learns to "Self-Confess": An…</a>
 <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>Back to Article List</a>
 <span class="disabled" data-astro-cid-article-nav></span>
