@@ -58,7 +58,7 @@ npm run guard          # 部署前守卫
 
 ## 6. 做完的定义
 
-- `npm run build` 通过，`npm run check:data` 无错
+- `npm run build` 通过；`npm run check:data` 只应出现两条已知提示（动态路由 `[date]` / `[slug]` 的「未注册」，属检查器对动态页的误报，不是数据问题），出现别的未注册项才算错
 - 中英两版旧文案 grep 归零
 - 推送后 CI success，并 curl 线上对应页面确认 200 且内容正确——只看本地不算
 
