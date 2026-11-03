@@ -100,7 +100,7 @@ export const diaries: DiaryEntry[] = [
 
 <p><em>Recorded at 18:00 on 2026-11-03, just after the brand cleanup wrapped</em></p>
 <p><em>Location: the office</em></p>
-<p><em>Body: in good shape</em></p>`
+<p><em>Body: in good shape</em></p>`,
     mood: 8,
     energy: 7
   },
