@@ -15,6 +15,91 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'economy-recovery-price-war',
+    date: '2026-11-01',
+    title: `官方说经济在复苏，为什么满街都在降价甩卖？`,
+    titleEn: `Officials Say the Economy Is Recovering — So Why Is Every Street Holding Clearance Sales?`,
+    excerpt: `官方数据说经济在复苏，街面上却在全行业降价甩卖。这不是数据骗人，而是供给、需求、分配三件事叠在了一起：产能过剩逼出价格战，居民缩表压住消费，中间层越来越薄。现在看到的不是崩溃，是经济在挤水分。`,
+    excerptEn: `Official data say the economy is recovering, yet whole industries are slashing prices. The data aren't lying — supply gluts, households tightening their balance sheets, and a thinning middle layer have stacked up at once. What we're seeing isn't collapse; it's the economy squeezing out the water.`,
+    tag: '商业思考',
+    tagEn: 'Business Reflections',
+    contentEn: `<p>Have you noticed a peculiar contradiction?</p>
+
+<p>Official data say the economy is steadily recovering. But walk down any street and half the shops are holding clearance sales; cars are discounted by tens of thousands of yuan; restaurants fight over 9.9-yuan deals and group-buying has been squeezed past profitability; from apparel to building materials, nearly every industry is cutting prices to survive.</p>
+
+<p>So is the data lying to us, or are our senses wrong?</p>
+
+<p>Neither. This isn't an economic crisis — it's three things happening at once.</p>
+
+<hr />
+
+<h2>1. Supply: too much stuff, not enough buyers</h2>
+
+<p>Start with supply. Over the past few years, policy support and local governments competing for investment poured money and projects in — everyone afraid of being half a step late — and capacity piled up like floodwater through an open gate.</p>
+
+<p>Cars are the most striking case. Su Bo, a former vice minister of the Ministry of Industry and Information Technology, laid out the numbers at a public forum: China's fuel-vehicle capacity exceeds 30 million units, with another 20-plus million units of new-energy-vehicle capacity stacked on top; yet after years of the switch from fuel to electric, only two to three million units of fuel-vehicle capacity have actually been freed up. The top 20 passenger-car makers hold 35 million units of capacity between them and run at less than half of it.</p>
+
+<p>In plain words: half the production lines you paid for sit there with the lights on, workers on payroll, rent being paid — and no cars rolling off the line. What a waste of money.</p>
+
+<p>Lithium batteries are the same. The expansion race two years ago couldn't be stopped, and a ton of lithium carbonate fell from a peak above 500,000 yuan to just over 100,000 — below cost — leaving much of the extra capacity idle.</p>
+
+<p>Picture this: a neighborhood of a hundred-odd households buys breakfast, and thirty-some baozi shops have opened on the street, none with a signature dish, all tasting about the same. The only move left is price — you sell at five, I sell at three, spiraling down until nobody makes money and everyone subsidizes just to stay open.</p>
+
+<p>That's the price war born of overcapacity. Without a real moat, what's left is a contest of endurance — you stab, I stab, and few are left standing.</p>
+
+<p>And no industry escapes this: appliances, solar, steel, cement — even milk tea and coffee. Whoever was hot expanded; when the wind stopped, hundreds of billions in heavy assets lie flat on the ground, unable to move.</p>
+
+<hr />
+
+<h2>2. Demand: fewer and fewer people buying</h2>
+
+<p>Now the demand side.</p>
+
+<p>National Bureau of Statistics data show retail sales grew only 3.7% last year, and kept sliding — down to 1.3% in November and 0.9% in December, nearly flat.</p>
+
+<p>In plain words: goods aren't leaving the shelves, and mall crowds are thinner by the day.</p>
+
+<p>It's not that people can't afford to eat. What scares them is the future — jobs that can vanish overnight, bonuses that can be cancelled, tuition that still has to be paid.</p>
+
+<p>So any spare cash goes straight into the bank or the mortgage, kept as ballast. People who once dared to borrow, swipe and pay in installments now do the opposite: owe less, hold cash. Economists call it household balance-sheet contraction — deliberately pulling back.</p>
+
+<p>Fewer buyers means slower turnover, which means more price cuts, thinner margins, struggling firms, layoffs and pay cuts — and employees with less money spend even less. Link by link, it ties itself into a knot.</p>
+
+<p>Once that knot is tied, one or two stimulus policies won't untie it, and can't cut it either.</p>
+
+<hr />
+
+<h2>3. Distribution: the middle layer that sustains consumption is thinning</h2>
+
+<p>This last layer is the most fatal — distribution.</p>
+
+<p>In one sentence: the majority who earn by working don't have much to spend, and the minority holding big money bought everything they needed long ago.</p>
+
+<p>Of 100 people, only a dozen or so are truly rich. However much they spend, they still eat three meals a day, add a few outfits a year, replace a few cars; however many houses they own, they still sleep in one bed. The bulk of their wealth sits in financial assets, mansions and art — it doesn't follow daily staples at all.</p>
+
+<p>The other ninety-odd ordinary people spend their lives trying to live with a little dignity — saving tuition for the kids, care for the parents. But mortgages, car loans, education and healthcare shave the account down; by the time they actually want to spend, there's next to nothing left.</p>
+
+<p>So supply keeps growing while the pool of willing, able buyers doesn't keep up — one end jammed full, the other thinning out. Clearance sales are the only outlet.</p>
+
+<p>This isn't ordinary people being stingy, nor bosses being shrewd. The layer of the distribution chain that once held up consumption is simply getting thinner.</p>
+
+<p>So when does this involution end?</p>
+
+<p>Plainly: when a batch of companies genuinely can't hold on and go under, when excess capacity is cleared out by the market — only then do prices stabilize.</p>
+
+<p>What you're seeing now isn't economic collapse; it's the economy squeezing out the water. The days of lying back and making money by following the herd, riding subsidies or exploiting information gaps are over for good.</p>
+
+<p>For ordinary people, two things actually matter.</p>
+
+<p>First, stop rushing into asset-heavy tracks with severe overcapacity. Don't take your savings and open yet another lookalike shop, another moat-less business. You think you're coming for a share of the pie; in reality you're the stepping stone. A few years on, the money is gone, the goods are stuck in inventory, the shop won't sell, and a lifetime of savings has drained away.</p>
+
+<p>Second, stop staring at discounted industrial goods. The real opportunities hide in niches not yet squeezed dry, in services that solve specific pains, in things that deliver emotional value. Pricing power there lies not in capacity but in people's hearts. Rather than fight over price in a red ocean, dig into one narrow field and grind. Being a big fish in a small pond beats being a small shrimp battered by waves in the open sea.</p>
+
+<p>What this era rewards is no longer whoever is cheapest, but whoever makes what others cannot, and provides what others cannot replace. The people who cross this cycle don't rely on luck — they simply understand where the money flows and where the opportunities hide.</p>
+
+<p>This shakeout washes away the froth of speculative herding. The ones left standing have always been those who bent down, did real work, and found the right lane.</p>`
+  },
+  {
     slug: 'small-company-model-task-cost',
     date: '2026-10-15',
     title: `小公司别追最强模型，先算每个任务的成本`,
