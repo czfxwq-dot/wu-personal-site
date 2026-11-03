@@ -1,6 +1,6 @@
 ---
 title: 用了两年AI，我劝你别把大脑外包
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-07-07
 tag: AI思考
 author: 吴总

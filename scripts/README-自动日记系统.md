@@ -1,4 +1,4 @@
-# 半百观AI 自动日记系统
+# 半百观视界 自动日记系统
 
 ## 📋 系统概述
 
@@ -33,7 +33,7 @@ scripts/
 
 1. 按 `Win+R`，输入 `taskschd.msc`，回车
 2. 点击右侧"创建基本任务"
-3. 名称：`半百观AI自动日记`
+3. 名称：`半百观视界自动日记`
 4. 触发器：每天 22:00
 5. 操作：启动程序
 6. 程序：`C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat`
@@ -82,7 +82,7 @@ $trigger = New-ScheduledTaskTrigger -Daily -At 22:00  # 改为你想要的时间
 ### 禁用自动日记
 
 1. 打开任务计划程序（`taskschd.msc`）
-2. 找到"半百观AI自动日记"
+2. 找到"半百观视界自动日记"
 3. 右键选择"禁用"或删除
 
 ---

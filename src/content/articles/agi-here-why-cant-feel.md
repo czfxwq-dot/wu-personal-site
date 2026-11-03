@@ -1,6 +1,6 @@
 ---
 title: AGI已经来了，为什么你感觉不到？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-16
 tag: AI落地
 author: 吴总
@@ -119,7 +119,7 @@ summary: Databricks CEO说AGI已经来了，但企业里没有感受到质变。
 
     <!-- 底部关注卡片 -->
     <div class="footer-cta">
-      <p class="cta-title">📱 关注「半百观AI」</p>
+      <p class="cta-title">📱 关注「半百观视界」</p>
       <p class="cta-desc">50岁AI实践者的深度思考，每周更新</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 视频号</span>
@@ -131,4 +131,4 @@ summary: Databricks CEO说AGI已经来了，但企业里没有感受到质变。
     </div>
 
     <div class="article-footer">
-      <p>— 半百观AI</p>
+      <p>— 半百观视界</p>

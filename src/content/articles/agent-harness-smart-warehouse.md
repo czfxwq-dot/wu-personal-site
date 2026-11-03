@@ -89,7 +89,7 @@ summary: DeepSeek招Harness工程师，跟做智能货架有什么关系？技�
 
     <!-- 底部关注卡片 -->
     <div class="footer-cta">
-      <p class="cta-title">📱 关注「半百观AI」</p>
+      <p class="cta-title">📱 关注「半百观视界」</p>
       <p class="cta-desc">50岁AI实践者的深度思考，每周更新</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 视频号</span>

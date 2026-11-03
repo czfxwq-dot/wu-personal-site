@@ -1,6 +1,6 @@
 ---
 title: AI帮你省下的时间，最后都喂给了谁？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-07-06
 tag: AI观点
 author: 吴总

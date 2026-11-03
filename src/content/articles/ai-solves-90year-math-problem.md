@@ -1,6 +1,6 @@
 ---
 title: AI解出90年数学难题，人类却看不懂过程
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-09-12
 tag: AI前沿
 author: 吴总

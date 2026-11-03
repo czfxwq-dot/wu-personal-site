@@ -1,6 +1,6 @@
 ---
 title: 小公司别追最强模型，先算每个任务的成本
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-10-15
 tag: AI应用
 author: 吴总
@@ -69,6 +69,6 @@ summary: 小公司选AI不该先问"哪个模型最强"，而该先问"它要替
 
 <hr />
 
-<p><strong>—— 半百观AI ——</strong></p>
+<p><strong>—— 半百观视界 ——</strong></p>
 
 <p><em>小企业实用判断：不是模型越强越好，而是任务成本合适。</em></p>

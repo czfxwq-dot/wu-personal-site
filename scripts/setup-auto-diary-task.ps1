@@ -1,10 +1,10 @@
-# 半百观AI 自动日记定时任务安装脚本
+# 半百观视界 自动日记定时任务安装脚本
 
-$taskName = "半百观AI自动日记"
+$taskName = "半百观视界自动日记"
 $scriptPath = "C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat"
 
 Write-Host "========================================"
-Write-Host "半百观AI 自动日记定时任务安装"
+Write-Host "半百观视界 自动日记定时任务安装"
 Write-Host "========================================"
 Write-Host ""
 
@@ -32,12 +32,12 @@ try {
     $action = New-ScheduledTaskAction -Execute $scriptPath
     $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
     
-    Register-ScheduledTask -TaskName $taskName -Trigger $trigger -Action $action -Settings $settings -Description "每天22:00自动生成半百观AI网站日记" -RunLevel Highest | Out-Null
+    Register-ScheduledTask -TaskName $taskName -Trigger $trigger -Action $action -Settings $settings -Description "每天22:00自动生成半百观视界网站日记" -RunLevel Highest | Out-Null
     
     Write-Host "定时任务创建成功！"
     Write-Host ""
     Write-Host "任务详情："
-    Write-Host "  名称：半百观AI自动日记"
+    Write-Host "  名称：半百观视界自动日记"
     Write-Host "  时间：每天 22:00"
     Write-Host "  脚本：$scriptPath"
     Write-Host ""

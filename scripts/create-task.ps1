@@ -1,7 +1,7 @@
 # 创建定时任务
 $taskName = 'BanbaiGuan-AutoDiary'
 $scriptPath = 'C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat'
-$description = '每天22:00自动生成半百观AI网站日记'
+$description = '每天22:00自动生成半百观视界网站日记'
 
 # 删除已存在的任务
 Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -ErrorAction SilentlyContinue

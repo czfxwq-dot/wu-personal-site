@@ -263,7 +263,7 @@ const doc = new Document({
       default: new Header({
         children: [new Paragraph({
           alignment: AlignmentType.RIGHT,
-          children: [new TextRun({ text: '半百观AI | AI/科技行业周报', font: "Arial", size: 18, color: "999999" })]
+          children: [new TextRun({ text: '半百观视界 | AI/科技行业周报', font: "Arial", size: 18, color: "999999" })]
         })]
       })
     },

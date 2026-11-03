@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>半百观AI - 50岁学AI的第一课</title>
+<title>半百观视界 - 50岁学AI的第一课</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0f;color:#fff;font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;overflow:hidden;width:1920px;height:1080px}
@@ -56,7 +56,7 @@ body{background:#0a0a0f;color:#fff;font-family:"PingFang SC","Microsoft YaHei","
 <body>
 <div class="presentation">
 <div class="slide s1" data-start="0" data-hint="🎙️ 50岁玩AI，我发现90%的人都卡在这一步">
-  <div class="logo">半百观AI</div>
+  <div class="logo">半百观视界</div>
   <div class="hook">50岁玩AI，我发现<span class="hl">90%的人</span><br>都卡在这一步</div>
   <div class="sub">— 老吴的AI探索日记 —</div>
 </div>
@@ -85,7 +85,7 @@ body{background:#0a0a0f;color:#fff;font-family:"PingFang SC","Microsoft YaHei","
   </ul>
 </div>
 <div class="slide s5" data-start="55" data-hint="🎙️ 我是老吴，50岁开始玩AI，关注我，一起探索">
-  <div class="logo">半百观AI</div>
+  <div class="logo">半百观视界</div>
   <div class="tagline">50岁，从零开始，和AI一起成长</div>
   <div class="cta">👇 评论区告诉我你遇到的AI问题</div>
 </div>
@@ -102,7 +102,7 @@ body{background:#0a0a0f;color:#fff;font-family:"PingFang SC","Microsoft YaHei","
 <script>
 var slides=document.querySelectorAll('.slide'),prog=document.getElementById('progress'),tm=document.getElementById('timer'),ht=document.getElementById('hint'),kw=document.getElementById('kw'),pb=document.getElementById('playBtn');
 var cur=0,on=false,el=0,lt=0,dur=60,raf;
-var kws=[[1,'半百观AI'],[5,'三大坑'],[8,'工具太多'],[11,'没人带路'],[17,'实操演示'],[25,'3分钟'],[35,'提示词'],[42,'角色'],[47,'框架'],[52,'细节'],[57,'关注我']];
+var kws=[[1,'半百观视界'],[5,'三大坑'],[8,'工具太多'],[11,'没人带路'],[17,'实操演示'],[25,'3分钟'],[35,'提示词'],[42,'角色'],[47,'框架'],[52,'细节'],[57,'关注我']];
 function show(i){slides.forEach(function(s,j){s.classList.toggle('active',j===i)});cur=i;ht.textContent=slides[i].dataset.hint||'';ht.classList.add('visible')}
 function tick(){var n=performance.now();if(on)el+=(n-lt)/1000;lt=n;prog.style.width=Math.min(el/dur*100,100)+'%';var m=Math.floor(el/60),s=Math.floor(el%60);tm.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s+' / 01:00';if(on){for(var i=slides.length-1;i>=0;i--){if(el>=parseFloat(slides[i].dataset.start)){if(cur!==i)show(i);break}}var ak=null;for(var k=0;k<kws.length;k++){if(el>=kws[k][0]&&el<kws[k][0]+1.5)ak=kws[k][1]}if(ak){kw.textContent=ak;kw.classList.add('show')}else{kw.classList.remove('show')}if(el>=dur){on=false;pb.textContent='▶ 重新播放';pb.classList.remove('playing')}}raf=requestAnimationFrame(tick)}
 function toggle(){if(on){on=false;pb.textContent='▶ 继续播放';pb.classList.remove('playing')}else{if(el>=dur)el=0;on=true;lt=performance.now();pb.textContent='⏸ 暂停';pb.classList.add('playing')}}

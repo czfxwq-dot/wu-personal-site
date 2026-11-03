@@ -1,6 +1,6 @@
 ---
 title: 高考填志愿只剩「搞钱」，家长张口就问薪资，没人在乎孩子热爱吗？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-17
 tag: AI思考
 author: 吴总
@@ -139,7 +139,7 @@ summary: 填报志愿，到底该优先
 
     <!-- 底部关注卡片 -->
     <div class="footer-cta">
-      <p class="cta-title">📱 关注「半百观AI」</p>
+      <p class="cta-title">📱 关注「半百观视界」</p>
       <p class="cta-desc">50岁AI实践者的深度思考，每周更新</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 视频号</span>
@@ -151,4 +151,4 @@ summary: 填报志愿，到底该优先
     </div>
 
     <div class="article-footer">
-      <p>— 半百观AI</p>
+      <p>— 半百观视界</p>

@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ========================================
-echo 半百观AI 自动日记定时任务安装
+echo 半百观视界 自动日记定时任务安装
 echo ========================================
 echo.
 
@@ -18,10 +18,10 @@ echo [信息] 正在创建定时任务...
 echo.
 
 :: 删除已存在的任务
-schtasks /delete /tn "半百观AI自动日记" /f >nul 2>&1
+schtasks /delete /tn "半百观视界自动日记" /f >nul 2>&1
 
 :: 创建新任务
-schtasks /create /tn "半百观AI自动日记" /tr "\"C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat\"" /sc daily /st 22:00 /rl highest /f
+schtasks /create /tn "半百观视界自动日记" /tr "\"C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat\"" /sc daily /st 22:00 /rl highest /f
 
 if %errorlevel% equ 0 (
     echo.
@@ -30,7 +30,7 @@ if %errorlevel% equ 0 (
     echo ========================================
     echo.
     echo 任务详情：
-    echo   名称：半百观AI自动日记
+    echo   名称：半百观视界自动日记
     echo   时间：每天 22:00
     echo   脚本：C:\Users\czfxw\Desktop\claude项目\wu-personal-site\scripts\run-auto-diary.bat
     echo.

@@ -1,6 +1,6 @@
 ---
 title: 一个人 + AI，如何做出一家公司的产出？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-10-10
 tag: AI观点
 author: 吴总
@@ -81,6 +81,6 @@ summary: 过去要5-8人的小团队才能完成的产出，现在一个人就�
 
 <hr />
 
-<p><strong>—— 半百观AI ——</strong></p>
+<p><strong>—— 半百观视界 ——</strong></p>
 
 <p><em>理解AI，理解我们与它的边界。</em></p>

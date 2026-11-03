@@ -1,6 +1,6 @@
 ---
 title: 花800块"听懂"猫说话的人，到底在买什么
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-05-30
 tag: AI产品
 author: 吴总
@@ -119,4 +119,4 @@ summary: 杭州一家公司推出AI宠物翻译器，猫一叫手机弹出
 
 <p class="article-cta"><em>觉得有用，转给身边养宠的朋友。我替他们谢谢你。</em></p>
 
-<p class="article-signature">半百观AI | 用AI的理性，看懂人类的欲望</p>
+<p class="article-signature">半百观视界 | 用AI的理性，看懂人类的欲望</p>

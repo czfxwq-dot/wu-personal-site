@@ -1,6 +1,6 @@
 ---
 title: 1400亿个AI员工进场，你是做指挥官，还是做那个被优化的"接水工"？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-03
 tag: AI趋势
 author: 吴总

@@ -1,6 +1,6 @@
 ---
 title: 业内预言AI 3‑4年或将超越顶尖专家，中年人不必恐慌，但要看清这几件事
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-09-16
 tag: AI观点
 author: 吴总

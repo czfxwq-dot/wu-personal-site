@@ -26,7 +26,7 @@ function buildSystemPrompt(content: string): string {
 
 ## 网站背景
 观吾是吴总的个人品牌网站，有两大板块：
-1. 半百观AI（个人IP）：
+1. 半百观视界（个人IP）：
    - AI新闻：聚合36氪、少数派等权威科技媒体的RSS，AI翻译标题摘要，链接跳转原文
    - 日记：吴总的AI实践思考和工作经验
    - 定位：50岁视角看AI，AI工具落地实践
@@ -124,7 +124,7 @@ function fallbackReply(content: string): string {
     return '观吾的AI新闻栏目聚合了36氪、少数派等权威科技媒体的RSS内容，标题和摘要由AI自动翻译生成，链接会跳转原文。翻译偶尔可能有偏差，建议以原文为准。我们也在持续优化翻译质量，欢迎发现错误时留言告知！';
   }
   if (text.includes('干什么') || text.includes('做什么') || text.includes('有什么用') || text.includes('什么意思')) {
-    return '观吾是吴总的个人品牌网站，包含两大板块：「半百观AI」分享AI工具落地实践（含AI新闻和日记），以及公司业务——数字化智能库存管理AIoT解决方案（智能货架、无人仓库等）。欢迎了解更多！';
+    return '观吾是吴总的个人品牌网站，包含两大板块：「半百观视界」分享AI工具落地实践（含AI新闻和日记），以及公司业务——数字化智能库存管理AIoT解决方案（智能货架、无人仓库等）。欢迎了解更多！';
   }
   if (text.includes('合作') || text.includes('商务') || text.includes('渠道') || text.includes('产品') || text.includes('货架')) {
     return '感谢你的关注！请邮件联系 czfxwq@gmail.com，我们会安排专人对接。';

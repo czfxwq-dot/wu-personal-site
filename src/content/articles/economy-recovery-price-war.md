@@ -1,6 +1,6 @@
 ---
 title: 官方说经济在复苏，为什么满街都在降价甩卖？
-subtitle: 文 / 半百视界
+subtitle: 文 / 半百观视界
 date: 2026-11-01
 tag: 商业思考
 author: 吴总

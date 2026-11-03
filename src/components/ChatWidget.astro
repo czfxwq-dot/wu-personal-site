@@ -12,7 +12,7 @@ const { lang = 'zh' } = Astro.props as Props;
 
 const t = {
   title: lang === 'en' ? 'Shanshan' : '山山',
-  status: lang === 'en' ? 'Online' : '半百观AI · 在线',
+  status: lang === 'en' ? 'Online' : '半百观视界 · 在线',
   toggleLabel: lang === 'en' ? 'Chat with Shanshan' : '打开山山对话',
   toggleTitle: lang === 'en' ? 'Chat with Shanshan' : '和山山对话',
   closeLabel: lang === 'en' ? 'Close chat' : '关闭对话',
@@ -37,18 +37,18 @@ const t = {
   qaFollow: lang === 'en' ? 'Follow Us' : '关注我们',
   qaArticles: lang === 'en' ? 'Articles' : '最新文章',
   qaGuestbook: lang === 'en' ? 'Guestbook' : '留言板',
-  followTitle: lang === 'en' ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇',
-  followFooter: lang === 'en' ? 'Search "半百观AI" on all platforms to find us ✨' : '全平台搜索"半百观AI"即可找到我们 ✨',
+  followTitle: lang === 'en' ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观视界</strong>，获取最新 AI 实践分享 👇',
+  followFooter: lang === 'en' ? 'Search "半百观视界" on all platforms to find us ✨' : '全平台搜索"半百观视界"即可找到我们 ✨',
   thinking: lang === 'en' ? 'Thinking...' : '思考中...',
   offline: lang === 'en' ? 'Disconnected' : '连接失败',
   errorReply: lang === 'en' ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。',
-  onlineStatus: lang === 'en' ? 'Online' : '半百观AI · 在线',
+  onlineStatus: lang === 'en' ? 'Online' : '半百观视界 · 在线',
   newsPrompt: lang === 'en'
     ? 'Please briefly introduce today\'s top 3 AI news highlights.'
     : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。',
   articlesPrompt: lang === 'en'
     ? 'Please recommend 3 latest articles from BanbaiGuan AI.'
-    : '请推荐 3 篇半百观AI 的最新文章。',
+    : '请推荐 3 篇半百观视界 的最新文章。',
 };
 
 const platforms = lang === 'en'
@@ -172,14 +172,14 @@ const platforms = lang === 'en'
           { name: 'B 站', icon: '📺' },
           { name: '小红书', icon: '📕' },
         ],
-    followTitle: isEn ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观AI</strong>，获取最新 AI 实践分享 👇',
-    followFooter: isEn ? 'Search "半百观AI" on all platforms to find us ✨' : '全平台搜索"半百观AI"即可找到我们 ✨',
-    brandShort: isEn ? 'BanbaiGuan AI' : '半百观AI',
-    onlineStatus: isEn ? 'Online' : '半百观AI · 在线',
+    followTitle: isEn ? 'Follow <strong>BanbaiGuan AI</strong> for the latest AI tips 👇' : '关注<strong>半百观视界</strong>，获取最新 AI 实践分享 👇',
+    followFooter: isEn ? 'Search "半百观视界" on all platforms to find us ✨' : '全平台搜索"半百观视界"即可找到我们 ✨',
+    brandShort: isEn ? 'BanbaiGuan AI' : '半百观视界',
+    onlineStatus: isEn ? 'Online' : '半百观视界 · 在线',
     thinking: isEn ? 'Thinking...' : '思考中...',
     errorReply: isEn ? 'Sorry, Shanshan is temporarily unavailable. Please try again later.' : '抱歉，山山暂时无法回复。请稍后再试。',
     newsPrompt: isEn ? 'Please briefly introduce today\'s top 3 AI news highlights.' : '请简要介绍今天最值得关注的 3 条 AI 热点新闻。',
-    articlesPrompt: isEn ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观AI 的最新文章。',
+    articlesPrompt: isEn ? 'Please recommend 3 latest articles from BanbaiGuan AI.' : '请推荐 3 篇半百观视界 的最新文章。',
   };
 
   let isOpen = false;

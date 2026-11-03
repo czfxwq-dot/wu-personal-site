@@ -1,6 +1,6 @@
 ---
 title: AI两小时搞定一章博士论文，毁掉的是「稀缺性」
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-07-31
 tag: AI思考
 author: 吴总

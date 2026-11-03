@@ -17,9 +17,9 @@ export const ui = {
     themeToggle: '切换主题',
 
     // Hero
-    heroEyebrow: 'AI 实践者 · 半百观AI主理人',
+    heroEyebrow: 'AI 实践者 · 半百观视界主理人',
     heroTitle: '50岁，用AI把想法变成现实',
-    heroSubtitle: '磐石电气联合创始人 · AIoT实践者 · 半百观AI主理人',
+    heroSubtitle: '磐石电气联合创始人 · AIoT实践者 · 半百观视界主理人',
     heroDescription1: '这不是一个普通的个人网站。',
     heroDescription2: '它是我和我的AI助理一起，从0到1建造出来的。',
     heroDescriptionSub: '分享AI工具落地实践 · 数字化智能库存管理 · 50岁学AI的真实故事',
@@ -33,12 +33,12 @@ export const ui = {
     sectionAiProjects: 'AI 项目',
     sectionCompany: '关于公司',
     sectionFollow: '关注我们',
-    sectionFollowSubtitle: '在各平台搜索「半百观AI」即可找到我们',
+    sectionFollowSubtitle: '在各平台搜索「半百观视界」即可找到我们',
 
     // Card labels
     cardDiary: '工作日记',
     cardAiNews: 'AI 新闻',
-    cardArticle: '半百观AI',
+    cardArticle: '半百观视界',
 
     // Company
     companyBadge: '国家级高新技术企业',
@@ -52,14 +52,14 @@ export const ui = {
     footerBrand: '观吾',
     footerSubtitle: '磐石电气联合创始人 · AIoT实践者',
     footerCompanySite: '公司业务官网',
-    footerQrHint: '扫码关注「半百观AI」',
+    footerQrHint: '扫码关注「半百观视界」',
     footerQrGzh: '公众号',
     footerQrDy: '视频号',
     footerCopy: '2026 观吾 · ban-bai.com',
     footerCredit: '这个网站由AI助理开发并维护',
 
     // FollowUsCard
-    followTitle: '关注「半百观AI」',
+    followTitle: '关注「半百观视界」',
     followSubtitle: '50岁视角看AI工具落地实践',
     followPlatforms: [
       { icon: '💬', name: '微信公众号' },
@@ -70,12 +70,12 @@ export const ui = {
       { icon: '📺', name: 'B 站' },
       { icon: '📕', name: '小红书' },
     ],
-    followSearch: '也可在今日头条 · B站 · 西瓜视频 搜索「半百观AI」',
+    followSearch: '也可在今日头条 · B站 · 西瓜视频 搜索「半百观视界」',
 
     // ChatWidget
     chatTitle: '山山 AI 助理',
-    chatStatus: '半百观AI · 在线',
-    chatGreeting1: '你好！我是山山，半百观AI 的智能助理',
+    chatStatus: '半百观视界 · 在线',
+    chatGreeting1: '你好！我是山山，半百观视界 的智能助理',
     chatGreeting2: '我可以帮你了解最新的 AI 资讯、工具推荐，也可以带你关注我们的各平台账号。',
     chatGreeting3: '你可以问我：',
     chatGreeting4: '最近有什么好用的 AI 工具？',
@@ -173,7 +173,7 @@ export const ui = {
       { icon: '📺', name: 'Bilibili' },
       { icon: '📕', name: 'Xiaohongshu' },
     ],
-    followSearch: 'Or search "半百观AI" on Bilibili · Xigua Video · Toutiao',
+    followSearch: 'Or search "半百观视界" on Bilibili · Xigua Video · Toutiao',
 
     // ChatWidget
     chatTitle: 'Shanshan AI Assistant',

@@ -1,4 +1,4 @@
-# 半百观AI 定时任务一键安装脚本
+# 半百观视界 定时任务一键安装脚本
 # 运行方式：右键此文件 → 使用 PowerShell 运行（需要管理员权限）
 
 # 检查管理员权限
@@ -11,7 +11,7 @@ if (-not $isAdmin) {
 }
 
 Write-Host "=====================================" -ForegroundColor Cyan
-Write-Host "半百观AI 定时任务安装" -ForegroundColor Cyan
+Write-Host "半百观视界 定时任务安装" -ForegroundColor Cyan
 Write-Host "=====================================" -ForegroundColor Cyan
 Write-Host ""
 

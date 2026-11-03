@@ -1,6 +1,6 @@
 ---
 title: 对标账号深度分析：4个百万粉AI博主的变现密码
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-08-24
 tag: 新媒体运营
 author: 吴总

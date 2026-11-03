@@ -65,7 +65,7 @@ summary: Anthropic在Code with Claude 2026大会上发布Dreaming功能，让AI�
 
       <blockquote>"未来企业的竞争力，不在于你有多少AI工具，而在于你让AI进化到什么程度。"</blockquote>
 
-      <p class="quote-source">—— 半百观AI</p>
+      <p class="quote-source">—— 半百观视界</p>
 
       <h2>💡 行动建议</h2>
 

@@ -1,6 +1,6 @@
 ---
 title: 赚钱逻辑彻底迭代：旧人脉落幕，新核心能力为王
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-07-28
 tag: 商业思考
 author: 吴总

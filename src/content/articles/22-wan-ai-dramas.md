@@ -1,6 +1,6 @@
 ---
 title: 22万部 AI 剧，只有1055部被人看见
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-10-29
 tag: AI观点
 author: 吴总

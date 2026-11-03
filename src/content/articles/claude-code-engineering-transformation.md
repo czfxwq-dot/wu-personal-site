@@ -55,7 +55,7 @@ summary: Anthropic在Code with Claude 2026上发布Claude Code重大升级，从
 
       <blockquote>"当编码的门槛降到自然语言水平，技术管理者和一线工程师之间的鸿沟，会被AI填平。"</blockquote>
 
-      <p class="quote-source">—— 半百观AI</p>
+      <p class="quote-source">—— 半百观视界</p>
 
       <h2>💡 行动建议</h2>
 

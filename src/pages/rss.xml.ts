@@ -42,7 +42,7 @@ export const GET: APIRoute = async (context) => {
 
   return rss({
     title: '观吾 | 50岁用AI做实事',
-    description: 'AI工具落地实践 · 半百观AI · 吴总的工作日记与思考',
+    description: 'AI工具落地实践 · 半百观视界 · 吴总的工作日记与思考',
     site: context.site?.toString() || 'https://ban-bai.com',
     items: latestItems.map((item) => ({
       title: item.title,

@@ -77,8 +77,8 @@ with open('src/data/articles.ts', 'w', encoding='utf-8') as f:
         excerpt = entry.get('excerpt', '').replace('`', '\\`')
         f.write(f"    excerpt: `{excerpt}`,\n")
         f.write(f"    excerptEn: `{excerpt}`,\n")
-        f.write(f"    tag: '{entry.get('tag', '半百观AI')}',\n")
-        f.write(f"    tagEn: '{entry.get('tag', '半百观AI')}'\n")
+        f.write(f"    tag: '{entry.get('tag', '半百观视界')}',\n")
+        f.write(f"    tagEn: '{entry.get('tag', '半百观视界')}'\n")
         f.write('  },\n')
 
     f.write('];\n')

@@ -85,7 +85,7 @@ def extract_from_astro(filepath):
         excerpt = excerpt[:197] + "..."
 
     # 提取标签
-    tag = "半百观AI"
+    tag = "半百观视界"
     tag_patterns = [
         r"const tag = '([^']+)'",
         r"const category = '([^']+)'",

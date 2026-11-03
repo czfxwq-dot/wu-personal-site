@@ -1,6 +1,6 @@
 ---
 title: 2026 WAIC大火刷屏！终于看懂：AI不再炫技，正在悄悄改变普通人的生活和收入
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-07-22
 tag: AI趋势
 author: 吴总

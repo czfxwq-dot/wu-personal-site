@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# 半百观AI 网站自动部署脚本
+# 半百观视界 网站自动部署脚本
 # 功能：build → git commit → git push → 自动部署到 Vercel via GitHub Actions
 
 set -e  # 遇错即停
 
-echo "🚀 开始部署半百观AI网站..."
+echo "🚀 开始部署半百观视界网站..."
 echo ""
 
 # 进入网站目录

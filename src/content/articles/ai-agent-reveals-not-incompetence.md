@@ -1,6 +1,6 @@
 ---
 title: AI来了，最先藏不住的，不是能力差的人
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-06
 tag: AI观点
 author: 吴总

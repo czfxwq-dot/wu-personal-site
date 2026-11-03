@@ -1,6 +1,6 @@
 ---
 title: AI时代最荒谬的事：员工让AI干废活，就为了冲KPI
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-13
 tag: AI观点
 author: 吴总
@@ -112,7 +112,7 @@ summary: 亚马逊员工让AI刷无意义任务冲排行榜，Meta全员30天烧
 
     <!-- 底部关注卡片 -->
     <div class="footer-cta">
-      <p class="cta-title">📱 关注「半百观AI」</p>
+      <p class="cta-title">📱 关注「半百观视界」</p>
       <p class="cta-desc">50岁AI实践者的深度思考，每周更新</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 视频号</span>
@@ -128,4 +128,4 @@ summary: 亚马逊员工让AI刷无意义任务冲排行榜，Meta全员30天烧
     </div>
 
     <div class="article-footer">
-      <p>— 半百观AI</p>
+      <p>— 半百观视界</p>

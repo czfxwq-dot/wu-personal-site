@@ -1,6 +1,6 @@
 ---
 title: 这家公司最害怕AI，却让AI写了自己90%的代码
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-10-30
 tag: 深度分析
 author: 吴总
@@ -129,6 +129,6 @@ summary: Anthropic递交招股书，估值最高两万亿美金。最呼吁AI减
 
 <hr />
 
-<p><strong>—— 半百观AI ——</strong></p>
+<p><strong>—— 半百观视界 ——</strong></p>
 
 <p><em>读懂AI，也读懂我们与它的边界</em></p>

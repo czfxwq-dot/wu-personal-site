@@ -91,7 +91,7 @@ summary: 教育部批准中科大增设商业人工智能专业，这是AI时代
       ]} />
 
       <div class="article-footer" data-astro-cid-vgwvf3tu>
-        <p data-astro-cid-vgwvf3tu>关注「半百观AI」，一个50岁AI实践者，带你看懂AI落地的真实世界。</p>
+        <p data-astro-cid-vgwvf3tu>关注「半百观视界」，一个50岁AI实践者，带你看懂AI落地的真实世界。</p>
         <div class="article-nav" data-astro-cid-article-nav><a href="/banbaiguan/anthropic-introspection-adapter/" class="prev" data-astro-cid-article-nav>← AI终于学会「自我坦白」：An…</a>
 <a href="/banbaiguan/" class="back" data-astro-cid-article-nav>返回文章列表</a>
 <span class="disabled" data-astro-cid-article-nav></span>

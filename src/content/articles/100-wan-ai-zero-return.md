@@ -1,6 +1,6 @@
 ---
 title: 花了100万搞AI，回报是零，问题出在哪？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-08-18
 tag: AI观点
 author: 吴总

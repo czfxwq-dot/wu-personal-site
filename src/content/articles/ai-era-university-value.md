@@ -1,6 +1,6 @@
 ---
 title: AI遍地开花，普通大学还有读下去的必要吗？
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-16
 tag: AI思考
 author: 吴总
@@ -151,7 +151,7 @@ summary: AI什么都能教、什么都能写，那大学还有必要读吗？AI�
 
     <!-- 底部关注卡片 -->
     <div class="footer-cta">
-      <p class="cta-title">📱 关注「半百观AI」</p>
+      <p class="cta-title">📱 关注「半百观视界」</p>
       <p class="cta-desc">50岁AI实践者的深度思考，每周更新</p>
       <div class="cta-platforms">
         <span class="cta-badge">📺 视频号</span>
@@ -163,4 +163,4 @@ summary: AI什么都能教、什么都能写，那大学还有必要读吗？AI�
     </div>
 
     <div class="article-footer">
-      <p>— 半百观AI</p>
+      <p>— 半百观视界</p>

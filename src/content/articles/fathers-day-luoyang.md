@@ -1,6 +1,6 @@
 ---
 title: 父亲节，洛阳听雨
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-06-21
 tag: 随笔
 author: 吴总

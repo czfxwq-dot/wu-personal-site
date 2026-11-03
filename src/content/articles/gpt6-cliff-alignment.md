@@ -1,6 +1,6 @@
 ---
 title: GPT-6 把模拟人推下悬崖：AI 越聪明，越需要"家教"
-subtitle: 文 / 半百观AI
+subtitle: 文 / 半百观视界
 date: 2026-10-08
 tag: AI前沿
 author: 吴总
@@ -103,6 +103,6 @@ summary: 马斯克转发测试结果：GPT-6 Astra在多次模拟测试中把一
 
 <hr />
 
-<p><strong>—— 半百观AI ——</strong></p>
+<p><strong>—— 半百观视界 ——</strong></p>
 
 <p><em>理解AI，理解我们与它的边界。</em></p>
