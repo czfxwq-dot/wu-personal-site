@@ -12,6 +12,7 @@ export const SOURCE_NAMES_EN: Record<string, string> = {
   'IT之家': 'IT Home',
   '开源中国': 'OSChina',
   '极客公园': 'GeekPark',
+  '雷锋网': 'Leiphone',
   '机器之心': 'Synced',
   '量子位': 'QbitAI',
   '财联社': 'Cailian Press',
