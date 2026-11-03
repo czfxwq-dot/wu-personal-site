@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-04",
+  "title": "AI新闻 | 苹果开放Siri跨应用技能 + 百度Apollo World世界模型 + 蚂蚁灵波机器人通用大脑亮相乌镇",
+  "summary": "科技媒体 9to5Mac 今天（11 月 4 日）发布博文，报道称苹果宣布向第三方开发者开放 Siri AI 的全新“应用技能”（App Skills），让应用能够指导 Siri 执行更复杂的多步骤任务；科技媒体 MacRumors 今天（11 月 4 日）发布博文，报道称在今天推送的 iOS 27.3 首个 Beta 开发者预览版中，苹果公司进一步扩展 Siri AI 在应用内及跨应用执行任务的能力；“世界模型，重点不是渲染的画质是否好看，而是模拟器是否能忠实还原现实物理规律和行为的因果”。",
+  "newsItems": [
+    {
+      "title": "Siri AI 将实现跨 App 办事：苹果开放“应用技能”，一句话串联多个应用任务",
+      "summary": "科技媒体 9to5Mac 今天（11 月 4 日）发布博文，报道称苹果宣布向第三方开发者开放 Siri AI 的全新“应用技能”（App Skills），让应用能够指导 Siri 执行更复杂的多步骤任务。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/021/869.htm",
+      "titleEn": "Apple Opens Siri App Skills for Multi-App Tasks",
+      "summaryEn": "Apple is letting third-party developers teach Siri to carry out complex, multi-step tasks across apps through a new App Skills framework."
+    },
+    {
+      "title": "苹果 iOS 27.3 扩展 Siri AI：支持繁体中文、覆盖 15 款 App 操作，能管理文件 / 定时发送信息等",
+      "summary": "科技媒体 MacRumors 今天（11 月 4 日）发布博文，报道称在今天推送的 iOS 27.3 首个 Beta 开发者预览版中，苹果公司进一步扩展 Siri AI 在应用内及跨应用执行任务的能力。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/021/866.htm",
+      "titleEn": "iOS 27.3 Beta Adds Traditional Chinese and 15-App Control to Siri",
+      "summaryEn": "The first iOS 27.3 developer beta extends Siri's in-app and cross-app abilities, adding Traditional Chinese support and file management or scheduled messaging across 15 apps."
+    },
+    {
+      "title": "AI教AI开车！百度Apollo World世界模型叩开无人驾驶产业“AGI时刻”",
+      "summary": "“世界模型，重点不是渲染的画质是否好看，而是模拟器是否能忠实还原现实物理规律和行为的因果”。",
+      "source": "雷锋网",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.leiphone.com/category/industrynews/NVxn28w1vAG2qbFy.html",
+      "titleEn": "Baidu's Apollo World Lets AI Train AI for Driving",
+      "summaryEn": "Baidu argues the value of a world model lies not in rendering quality but in faithfully reproducing physical laws and behavioral causality for autonomous driving simulation."
+    },
+    {
+      "title": "中国开源走向物理世界，蚂蚁灵波携机器人通用大脑亮相乌镇",
+      "summary": "11月2日至5日，2026年世界互联网大会乌镇峰会在浙江乌镇举行，本届峰会的主题为“开源开放 共建共享——携手构建网络空间命运共同体”。",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/industrynews/ADcxxdwtaojQvzhp.html",
+      "titleEn": "Ant Lingbo Brings Open-Source Robot Brain to Wuzhen",
+      "summaryEn": "At the 2026 World Internet Conference in Wuzhen, Ant's Lingbo team presented a general-purpose robot brain, signaling Chinese open source reaching into the physical world."
+    },
+    {
+      "title": "AI 训练 AI！百度首次披露 Apollo World 世界模型，让无人驾驶突破“不可能三角”",
+      "summary": "“世界模型，重点不是渲染的画质是否好看，而是模拟器是否能忠实还原现实物理规律和行为的因果”。",
+      "source": "开源中国",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://www.oschina.net/news/503374",
+      "titleEn": "Baidu Details Apollo World to Break the Driving Trilemma",
+      "summaryEn": "Baidu disclosed its Apollo World model, aiming to let AI train AI and overcome the trade-offs among safety, cost and scale in autonomous driving."
+    }
+  ],
+  "comment": "苹果把Siri从语音助手改造为跨应用执行层，百度用世界模型让AI训练AI，蚂蚁把开源延伸到机器人身体——三者共同指向AI从屏幕走向真实任务执行。",
+  "titleEn": "AI News | Apple Opens Siri App Skills + Baidu Apollo World Model + Ant Lingbo Robot Brain at Wuzhen",
+  "summaryEn": "Apple opened Siri's new App Skills to third-party developers and expanded in-app and cross-app task handling in the first iOS 27.3 beta. Baidu unveiled its Apollo World model, which uses simulation grounded in physical causality to train autonomous driving. Ant's Lingbo team showed a general-purpose robot brain at the Wuzhen summit, marking open source's move into the physical world.",
+  "commentEn": "Apple is turning Siri from a voice assistant into a cross-app execution layer, Baidu is using world models to let AI train AI, and Ant is pushing open source into robot bodies. All three point to AI moving from screens toward real-world task execution."
+},
+{
   "date": "2026-11-03",
   "title": "AI新闻 | Anthropic营收暴涨11倍冲刺IPO + 奥尔特曼内存言论遭马斯克声讨 + UJCMS 13.2.1上线AI自动翻译",
   "summary": "Anthropic PBC 披露，截至 9 月 30 日的第三季度营收接近 170 亿美元（IT之家注：现汇率约合 1,132.35 亿元人民币），同比暴涨 11 倍，市场对这家 AI 实验室有望创下纪录的 IPO 预期进一步升温；萨姆 · 奥尔特曼近期关于内存的言论引发越来越多人反对，埃隆 · 马斯克也加入了这场声讨；UJCMS 支持多语言网站，可支持多种语言网站，语言数量不受限制。支持发布一种语言的文章后，可以使用 AI 或百度翻译、有道翻译自动翻译其它语言的文章；同时支持文章批量翻译。文章修改后，同样可以同步翻译至不同语言网站。如发现翻译有不恰当之处，可以手动修改。 本次更新新增会员投稿，会员可在会员中心提交文章，经...。",
