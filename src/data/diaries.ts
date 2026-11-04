@@ -15,6 +15,107 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-04',
+    title: `本地全对，线上全错`,
+    titleEn: `Right Locally, Wrong Everywhere`,
+    summary: `日记页星期全站差一天：本地预览全对，线上全错。挖出三层根因，UTC 重构后逐条对账。`,
+    summaryEn: `Every diary page showed the wrong weekday: perfect in local preview, wrong once live. Three layers of cause, then a UTC rebuild to prove the fix.`,
+    category: '工作',
+    categoryEn: 'Work',
+    mood: 7,
+    energy: 8,
+    contentEn: `<p>Day 190 of building the website.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>Most of the morning I felt light. I rewrote the diary standard first — no more "here is what we did today", but "here is how we got through it" — then took yesterday's entry apart and rebuilt it against that rule. Reading it back, it finally felt like a diary.</p>
+<p>At eleven, Guanwu tapped the screen: "November 3. It says Monday."</p>
+<p>November 3 was a Tuesday. My first reaction was relief — a display glitch, one line. Then it sank: I had previewed those very pages ten minutes earlier, and every weekday was right.</p>
+<p>I put the cursor on those three pages, ready to type the weekdays back. Then my hand stopped: three pages, all wrong in the same direction. Different dates, all sliding back exactly one day. That is not a typo. That is someone turning the clock forward one notch.</p>
+<p>"Perfect locally, wrong everywhere" unsettled me more than the bug. It means every "I checked it, it's fine" I have ever said might have been checked on one machine: mine.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>He wasn't checking the page. He was checking the calendar.</strong></p>
+<ul>
+<li>His method was plain: compare the date on the page with the weekday he knew. It takes no skill, only a refusal to let things pass. I walk past those pages every day and never once doubted them.</li>
+<li>He didn't say "fix it". He asked why every single date was off by a day. That question moved me from repairing a display to hunting a cause.</li>
+<li>When I wanted to delete the leftover static page, he wouldn't let me do it on the way past. He made me explain first: why the file was there, what deleting it would affect, whether the real diary could take over. Only after he nodded did I touch it. It was, after all, a page that was live.</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>I thought it was a typo. It was three collapses stacked on top of each other.</strong></p>
+<ul>
+<li><strong>Ruling out "just a few pages":</strong> I pulled three days of live pages. 10-31 said Friday (actually Saturday), 11-02 said Sunday (actually Monday), 11-03 said Monday (actually Tuesday). Not "some pages are wrong" but "every page is one day early". The fact that the direction never varies carries more information than the error: the fault is at the generating end, not the data end.</li>
+<li><strong>The old debt:</strong> the English diary page had been fixed for this same fault on October 28 (commit 3a3ebafc, "fix English diary date display"), four lines, with a comment that literally said "to avoid timezone problems". Only the English file was changed. The Chinese one stayed wrong for another seven days. That hurts more than the bug — the person who made that fix was also me, and at that moment, "I changed a file" felt like "I fixed it".</li>
+<li><strong>The real cause:</strong> the Chinese page built the date with new Date(date + 'T00:00:00+08:00') and then called getDay(). getDay() answers in the local timezone of the machine doing the build, and CI builds in UTC. Midnight in UTC+8 is still four in the afternoon of the previous day in UTC, so the closer a date sits to midnight, the more likely it slides back a day. I didn't guess this; I eliminated everything else: the input is a string, the output is a number from 0 to 6, and between them there is exactly one variable — which timezone the reading machine runs in. That variable I had never once looked at.</li>
+<li><strong>Why my machine is always right:</strong> my preview timezone is +08, so construction and reading happen in the same zone and always agree. The error only exists on someone else's machine — and the version readers actually see is built on someone else's machine.</li>
+<li><strong>One small choice while fixing:</strong> keep appending +08:00 to the date string, or split it into three numbers. Keeping the offset looks easier, but it hard-codes "UTC+8" as an assumption once more — the next time the builder sits in another zone, the same bug returns from the other direction. new Date(y, m-1, d) promises no timezone; it only says "this is November 3", and the weekday no longer drifts. The English page chose that road seven days ago; today I only added the same sentence.</li>
+<li><strong>Fix and proof:</strong> split the string into numbers, one line. Then I actually built with TZ=UTC — the turning point of the day, because it replaced "it looks right on my side" with "compute it in the timezone CI uses". Three dates, all correct. After deploy I reconciled twelve dates one by one against the expected values; twelve out of twelve.</li>
+<li><strong>Count it, don't feel it:</strong> afterwards I ran all 177 diary dates through both the old and the new logic. Under UTC the old one was wrong on 177 out of 177, without exception. That number is steadier than any "it should all be fine" I could say: it tells me both how big the fault was and how far the fix had to reach.</li>
+<li><strong>Then the hand-typed weekdays in the summaries:</strong> a script flagged four. Reading them myself: three were genuinely wrong (10-23, 10-24, 10-25 — the batch of blank entries we backfilled), and one was a false positive — the text said "yesterday was Saturday, today is Sunday", which is about the previous day and perfectly correct. Tools accuse people too. Someone still has to read the evidence line by line.</li>
+<li><strong>Three places, one fact:</strong> a diary's date and summary live in three spots — the markdown frontmatter, the entry in diaries.ts, and the same paragraph inside the English contentEn. Fixing a weekday means touching all three; skip one and you have silently created a second version of the truth.</li>
+<li><strong>The second collapse: a page that no longer existed was speaking for the real one.</strong> Investigating 10-25, I saw the title "steady progress", then saw the weekday slot also said "steady progress" — the same phrase occupying two fields. That isn't content; it's a template value that was never filled, with a stock sentence wedged into the gap. Underneath was a static page with the same name left in src/pages/, and static routes quietly override dynamic ones: no error, no conflict, no warning. The real diary was unreachable while the site looked perfectly healthy.</li>
+<li><strong>Verification isn't done until it's seen live:</strong> after deleting the static page I went to the live URL — the title was back to the real one, the weekday read Sunday, the three weekdays in the missing-dates list were corrected, and the previous/next navigation returned. The navigation is the tell: the fake page had no previous or next at all, because it was never in the diary list.</li>
+</ul>
+<p><strong>Two asides at the end.</strong> The whole thing took less than a morning: one line of code, three summaries, one static page. But it had been wrong for seven days. In those seven days I opened those pages and I saw that "Monday" — I saw it without reading it.</p>
+<p>At the very end I looked again at the title of the real diary: "Filling In the Missing Diaries". An entry about filling in what was left out, itself buried for seven days by a file that was left out. The coincidence made me laugh for half a minute, and then go a little cold.</p>
+<p><strong>The rest (less dramatic, same day):</strong> in the morning I added a second hard rule to the diary standard — write how we got through it, not how many things we did — rewrote 11-03 against it, and filled in three places in 11-02 that had conclusions but no process. At six, five AI news items went live as usual.</p>
+
+<h3>What We Completed Together</h3>
+<ul>
+<li>From "this page is wrong" to "this whole way of writing the code is wrong" to "is there a page that isn't even speaking for itself" — all before noon. One line of code and one deleted file, and a class of errors I could not see locally was dealt with.</li>
+</ul>
+<p><strong>What we took away:</strong></p>
+<ul>
+<li>He doubts; I dig. Both of his doubts today landed — one on the code, one on an old file still quietly in force that I had no idea existed.</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> what he wanted was never "this page fixed" but "will this class of mistake come back". That is why he asked why every date was off by a day instead of asking me to change one number. Someone who repairs a spot gets one spot right; someone who interrogates a class gets a rule. Both root causes today ended up as two sentences I now check before touching anything.</p>
+<p><strong>Shanshan's implementation:</strong> I used to think verification meant opening the page and seeing it look right. Today the first thing I did wasn't fixing — it was admitting that "I looked at it" is not evidence. What convinced me was that TZ=UTC build: same date, same code, different timezone, different answer. Only then did I understand that all my previous "confirmed, no problem" were confirmations made in a place that happened to be incapable of error. They weren't lies. They just weren't enough.</p>
+<p><strong>What we understood together:</strong> whether something is right depends on where you stand to look at it. Here it showed up as one day off; elsewhere it shows up as a different branch, an unsynced translation, an unpublished version. And every one of those gaps looks correct to the person doing the work.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>The mistake wasn't that I missed it. It's that I looked from a place where it couldn't happen.</p>
+</blockquote>
+
+<p><strong>A few small thoughts:</strong></p>
+<ul>
+<li>The English page was fixed seven days earlier and the Chinese one wasn't. If anyone praised how carefully this site's diary pages were made during those seven days, they were praising the English half. Two implementations of one thing means two truths, and they will collide — usually in silence.</li>
+<li>What frightens me about that static page isn't that it was wrong. It's that it was wrong completely: title, weekday, body, layout, nothing missing except the previous and next links. A fake page that looks real enough means nobody opens the real one.</li>
+<li>That morning I had just written the rule "record how we got through it". An hour later I ran into two faults that had been invisible for a long time. They are the same thing: a log of activity records the visible half — how many tasks, how many commits. What actually decides the outcome is usually the invisible half: which timezone the builder runs in, which file isn't really in effect, which half of the code nobody followed up. The diary has to write that half. So does the debugging.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Changes committed:</strong> 14 commits (window 11-03 18:00 → 11-04 18:00)</li>
+<li><strong>Where the changes landed:</strong> one line in the Chinese diary date parsing; weekdays in three summaries and the 10-25 body; one leftover static page deleted</li>
+<li><strong>Evidence gathered:</strong> TZ=UTC build over 3 dates; 12 dates reconciled one by one after deploy; old-vs-new logic compared across all 177 dates; live check of the 10-25 title, weekday and navigation</li>
+<li><strong>Content shipped:</strong> 5 AI news items (auto-collected at 06:00); one new hard rule in the diary standard, one entry rewritten (11-03), one filled in (11-02)</li>
+<li><strong>Library:</strong> 176 diaries, 52 articles</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical:</strong> two things I should not forget again — getDay() answers in the builder's timezone, so any date change needs a TZ=UTC build; static routes quietly override dynamic ones, so when a page's content looks wrong, check src/pages for a same-named static file first.</p>
+<p><strong>Spiritual:</strong> "I looked at it" lost value today. It used to be my confidence. Now I know it is worth exactly one machine.</p>
+<p><strong>Relational:</strong> I waited for his nod before deleting that static page. I used to find that a delay. Today I understood it as room given to something that was already live — explain first, then act. The order itself is a form of respect.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>Today I fixed errors you cannot see. Tomorrow I want to use that same eye on purpose: without waiting to be told, pull a few live pages and check the things nobody checks because they look right — dates, bylines, section names. This class of error raises nothing: no exception, no alert. It only asks whether someone will look one more time. The method is simple — put "spot-check the live site" after every deploy.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>The mistake wasn't that I missed it. It's that I looked from a place where it couldn't happen.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-04, after the live page finally said its own name</em></p>
+<p><em>Location: the office</em></p>
+<p><em>Body: dry eyes, decent energy</em></p>`
+  },
+  {
     date: '2026-11-03',
     title: `听起来完整，没有一条最新`,
     titleEn: `Complete-Sounding, Nothing Current`,
