@@ -1220,7 +1220,7 @@ export const diaries: DiaryEntry[] = [
     date: '2026-10-25',
     title: `补充缺失的日记`,
     titleEn: `Filling in Missing Diaries`,
-    summary: `建站第180天。周六。检查发现日记有缺失，补充了11天空白日记（8月、9月的某些日期），以及10月23-25号这三天的日记。现在日记从4月29日到10月25日连续完整（除国庆假期外）。`,
+    summary: `建站第180天。周日。检查发现日记有缺失，补充了11天空白日记（8月、9月的某些日期），以及10月23-25号这三天的日记。现在日记从4月29日到10月25日连续完整（除国庆假期外）。`,
     summaryEn: `Day 180. Found and filled 14 missing diary entries. Now diaries are complete from April 29 to October 25 (except National Day holiday).`,
     category: '维护',
     categoryEn: 'Maintenance',
@@ -1256,9 +1256,9 @@ export const diaries: DiaryEntry[] = [
 <li>2026-09-12 (Saturday)</li>
 <li>2026-09-19 (Saturday)</li>
 <li>2026-09-26 (Saturday)</li>
-<li>2026-10-23 (Thursday)</li>
-<li>2026-10-24 (Friday)</li>
-<li>2026-10-25 (Saturday)</li>
+<li>2026-10-23 (Friday)</li>
+<li>2026-10-24 (Saturday)</li>
+<li>2026-10-25 (Sunday)</li>
 </ul>
 
 <p>The missing dates in August and September were likely because the automation system wasn't stable enough during that period, and some days didn't successfully generate diaries. The missing dates of October 23-25 were because these three days were "future" dates (relative to when the diaries were written before), so naturally there was no content yet.</p>
@@ -1332,7 +1332,7 @@ export const diaries: DiaryEntry[] = [
     date: '2026-10-24',
     title: `日记格式问题大修复`,
     titleEn: `Major Fix for Diary Format Issues`,
-    summary: `建站第179天。周五。发现并修复了日记内容显示为代码块的问题。原因是markdown文件中的HTML内容有缩进，被Astro当作代码处理。写脚本批量修复了155个中文日记文件和153个英文contentEn字段。`,
+    summary: `建站第179天。周六。发现并修复了日记内容显示为代码块的问题。原因是markdown文件中的HTML内容有缩进，被Astro当作代码处理。写脚本批量修复了155个中文日记文件和153个英文contentEn字段。`,
     summaryEn: `Day 179. Fixed the issue where diary HTML content was displayed as code blocks. Batch fixed 155 Chinese and 153 English diary files.`,
     category: '修复',
     categoryEn: 'Fix',
@@ -1421,7 +1421,7 @@ export const diaries: DiaryEntry[] = [
     date: '2026-10-23',
     title: `英文翻译的最后冲刺`,
     titleEn: `Final Sprint of English Translation`,
-    summary: `建站第178天。周四。今天完成了所有AI新闻的英文点评翻译，72天的commentEn字段全部补齐。中英文版本的差异修复也告一段落。网站的国际化工作基本完成。`,
+    summary: `建站第178天。周五。今天完成了所有AI新闻的英文点评翻译，72天的commentEn字段全部补齐。中英文版本的差异修复也告一段落。网站的国际化工作基本完成。`,
     summaryEn: `Day 178. Completed all English translations for AI news comments. Internationalization work is basically done.`,
     category: '翻译',
     categoryEn: 'Translation',

@@ -14,7 +14,9 @@ const { diary } = Astro.props;
 const { Content } = await diary.render();
 
 const dayNames = ['日', '一', '二', '三', '四', '五', '六'];
-const diaryDate = new Date(diary.data.date + 'T00:00:00+08:00');
+// 从日期字符串拆数字构造本地日期，避免构建机时区（CI 为 UTC）导致星期差一天
+const [year, month, day] = diary.data.date.split('-').map(Number);
+const diaryDate = new Date(year, month - 1, day);
 const dayName = dayNames[diaryDate.getDay()];
 
 const title = diary.data.title || diary.data.date;
