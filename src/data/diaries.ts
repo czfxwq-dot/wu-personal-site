@@ -92,10 +92,10 @@ export const diaries: DiaryEntry[] = [
 <h2>📊 Today's Traces</h2>
 <ul>
 <li><strong>Changes committed:</strong> 14 commits (window 11-03 18:00 → 11-04 18:00)</li>
-<li><strong>Where the changes landed:</strong> one line in the Chinese diary date parsing; weekdays in three summaries and the 10-25 body; one leftover static page deleted</li>
+<li><strong>Where the changes landed:</strong> one logic change in the Chinese diary date parsing (4 lines); weekdays in three summaries and the 10-25 body; one leftover static page deleted</li>
 <li><strong>Evidence gathered:</strong> TZ=UTC build over 3 dates; 12 dates reconciled one by one after deploy; old-vs-new logic compared across all 177 dates; live check of the 10-25 title, weekday and navigation</li>
 <li><strong>Content shipped:</strong> 5 AI news items (auto-collected at 06:00); one new hard rule in the diary standard, one entry rewritten (11-03), one filled in (11-02)</li>
-<li><strong>Library:</strong> 176 diaries, 52 articles</li>
+<li><strong>Library:</strong> 177 diaries, 52 articles</li>
 </ul>
 
 <h2>🎁 Today's Gifts</h2>
