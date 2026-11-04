@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-05",
+  "title": "AI新闻 | 独家 | 腾讯前高级研究员获数千万投资，锚定物理… + 连续 2 小时 40 分钟纯代码生成 66 秒动… + 陶哲轩警告：人类把思考交给 AI，危险可能很快到…",
+  "summary": "力合资本、合肥创新投等机构投资，Lux 系列视触觉传感器已实现规模化交付。作者丨董子博编辑丨张贤雷峰网·鲸犀独家获悉，触觉智能企业“灵感机器人”新近完成数千万元天使轮融资，投资方包括力合资本、合肥创新投等机构，治臻咨询担任财务顾问。雷峰网·鲸犀了解到，公司创始人、CEO 张雅展博士毕业于港科大机器人专业，曾是腾讯资深 AI 研究员，主导过大规模数据管线及 A；北京时间 11 月 4 日消息，Anthropic 尚未正式发布的下一代旗舰模型 Claude Fable 5.5 近日在海外开发者社区引发关注；北京时间 11 月 4 日，菲尔兹奖得主、著名数学家陶哲轩（Terence Tao）近日对人类日益依赖人工智能发出警告。",
+  "newsItems": [
+    {
+      "title": "独家 | 腾讯前高级研究员获数千万投资，锚定物理AI接触智能",
+      "summary": "力合资本、合肥创新投等机构投资，Lux 系列视触觉传感器已实现规模化交付。作者丨董子博编辑丨张贤雷峰网·鲸犀独家获悉，触觉智能企业“灵感机器人”新近完成数千万元天使轮融资，投资方包括力合资本、合肥创新投等机构，治臻咨询担任财务顾问。雷峰网·鲸犀了解到，公司创始人、CEO 张雅展博士毕业于港科大机器人专业，曾是腾讯资深 AI 研究员，主导过大规模数据管线及 A…",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/industrynews/30nTa8g0yzQmZGys.html",
+      "titleEn": "Ex-Tencent researcher's tactile AI startup Linggan Robotics lands tens of millions in angel funding",
+      "summaryEn": "Linggan Robotics, founded by a former Tencent senior AI researcher, raised a tens-of-millions-yuan angel round from Lihe Capital and Hefei Innovation Investment. Its Lux series visuotactile sensors are already shipping at scale, built on a proprietary dense force-field approach."
+    },
+    {
+      "title": "连续 2 小时 40 分钟纯代码生成 66 秒动画，Anthropic 新旗舰 Fable 5.5 实测曝光",
+      "summary": "北京时间 11 月 4 日消息，Anthropic 尚未正式发布的下一代旗舰模型 Claude Fable 5.5 近日在海外开发者社区引发关注。",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/022/468.htm",
+      "titleEn": "Anthropic's Claude Fable 5.5 runs 2h40m of code generation for a 66-second animation",
+      "summaryEn": "The unreleased flagship model drew attention in overseas developer circles after a test session in which it generated code continuously for two hours and forty minutes to produce a 66-second animation."
+    },
+    {
+      "title": "陶哲轩警告：人类把思考交给 AI，危险可能很快到来",
+      "summary": "北京时间 11 月 4 日，菲尔兹奖得主、著名数学家陶哲轩（Terence Tao）近日对人类日益依赖人工智能发出警告。",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/022/440.htm",
+      "titleEn": "Terence Tao warns of near-term danger as people hand thinking to AI",
+      "summaryEn": "The Fields Medalist and mathematician cautioned that growing reliance on AI for reasoning could bring risks sooner than expected."
+    },
+    {
+      "title": "虎鲸文娱“鲸锐AI”平台正式上线，AI视频单分钟成本节省30%以上",
+      "summary": "11月4日，虎鲸文娱集团打造的行业首个AI影视制作与管理平台“鲸锐AI”正式上线。鲸锐AI平台聚焦AI视频制作过程精准可控、银幕级质感成片交付、成本可管理三大目标，集成了市面上50余个主流AI视频生成模型与10余个自研模型，无限画布支持千级节点、百人实时协同创作。通过鲸锐AI平台的精准控制和流程优化，AI视频单分钟成本较传统AI生成方式可节省30%以上。即日…",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/industrynews/vxZxNvbxdDFhYp55.html",
+      "titleEn": "Orca Entertainment's Jingrui AI platform goes live, cutting AI video cost per minute by over 30%",
+      "summaryEn": "The film and TV group launched what it calls the industry's first AI production and management platform, bundling 50-plus third-party video models with 10 in-house ones. It claims per-minute cost savings above 30% and opens registration to all creators with unlimited team seats."
+    },
+    {
+      "title": "仓颉语言原生 Coding Agent：cjh，一个文件就是整个开发团队",
+      "summary": "项目地址 GitHub: https://github.com/yangyongzhen/cjh 它是什么 cjh 是一个用华为仓颉语言从零实现的交互式编码代理（coding agent harness）。",
+      "source": "开源中国",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.oschina.net/news/503393",
+      "titleEn": "cjh: a native coding agent written from scratch in Huawei's Cangjie language",
+      "summaryEn": "The open-source project on GitHub is an interactive coding-agent harness built entirely in Cangjie, pitched as letting a single file stand in for an entire development team."
+    }
+  ],
+  "comment": "触觉、长时程编码、AI 影视降本，说明 AI 正从会说话走向动手干活；陶哲轩的警告并非唱衰，而是提醒企业别把判断力也外包出去。",
+  "titleEn": "AI News | Linggan Robotics raises tens of millions for tactile AI + Claude Fable 5.5 codes 2h40m straight + Terence Tao warns on outsourcing thought",
+  "summaryEn": "A Tsinghua-trained ex-Tencent researcher's tactile-sensor startup, Linggan Robotics, closed a tens-of-millions angel round. Anthropic's unreleased Claude Fable 5.5 was spotted generating code for nearly three hours to produce a 66-second animation. Meanwhile, Fields Medalist Terence Tao cautioned that handing human reasoning over to AI carries near-term risk.",
+  "commentEn": "Tactile sensing, hours-long coding runs and cheaper AI video all point the same way: AI is moving from talking to doing. Tao's warning is less about doom than about keeping human judgment in-house as tools take over execution."
+},
+{
   "date": "2026-11-04",
   "title": "AI新闻 | 苹果开放Siri跨应用技能 + 百度Apollo World世界模型 + 蚂蚁灵波机器人通用大脑亮相乌镇",
   "summary": "科技媒体 9to5Mac 今天（11 月 4 日）发布博文，报道称苹果宣布向第三方开发者开放 Siri AI 的全新“应用技能”（App Skills），让应用能够指导 Siri 执行更复杂的多步骤任务；科技媒体 MacRumors 今天（11 月 4 日）发布博文，报道称在今天推送的 iOS 27.3 首个 Beta 开发者预览版中，苹果公司进一步扩展 Siri AI 在应用内及跨应用执行任务的能力；“世界模型，重点不是渲染的画质是否好看，而是模拟器是否能忠实还原现实物理规律和行为的因果”。",
