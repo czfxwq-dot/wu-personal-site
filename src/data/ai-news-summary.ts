@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-06",
+  "title": "AI新闻 | 12499 元 / 15999 元起 + 5499 元起：苹果 iPad mini 8 开… + 用 AI 写后端",
+  "summary": "苹果 M6 芯片款 iMac、MacBook Pro 今日正式开售，起售价分别为 12499 元 / 15999 元，国补后起售价约 10999 元 / 14499 元；苹果 iPad mini（A20 Pro）今日正式开售，也就是大家俗称的“iPad mini 8”；很多人已经习惯让 AI 写代码： 生成一个 CRUD 接口、补一段 SQL、写一个工具类，效率确实比手敲高。",
+  "newsItems": [
+    {
+      "title": "12499 元 / 15999 元起：苹果 M6 芯片款 iMac、MacBook Pro 开售",
+      "summary": "苹果 M6 芯片款 iMac、MacBook Pro 今日正式开售，起售价分别为 12499 元 / 15999 元，国补后起售价约 10999 元 / 14499 元。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/023/022.htm",
+      "titleEn": "Apple opens sales of M6 iMac and MacBook Pro from 12,499 and 15,999 yuan",
+      "summaryEn": "The M6-equipped iMac and MacBook Pro are now on sale in China, starting at 12,499 and 15,999 yuan, or roughly 10,999 and 14,499 yuan after state subsidies."
+    },
+    {
+      "title": "5499 元起：苹果 iPad mini 8 开售，A20 Pro 芯片（国补后到手价约 4999 元起）",
+      "summary": "苹果 iPad mini（A20 Pro）今日正式开售，也就是大家俗称的“iPad mini 8”。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/023/021.htm",
+      "titleEn": "iPad mini 8 with A20 Pro launches at 5,499 yuan",
+      "summaryEn": "Apple's new iPad mini, powered by the A20 Pro chip, went on sale today, with buyers paying about 4,999 yuan after subsidies."
+    },
+    {
+      "title": "用 AI 写后端，为什么还是在造轮子？",
+      "summary": "很多人已经习惯让 AI 写代码： 生成一个 CRUD 接口、补一段 SQL、写一个工具类，效率确实比手敲高。",
+      "source": "开源中国",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.oschina.net/news/503428",
+      "titleEn": "Why AI-written backends still end up reinventing the wheel",
+      "summaryEn": "Developers now routinely have AI generate CRUD endpoints, SQL snippets and utility classes, yet the output often duplicates existing building blocks rather than fitting into a real system."
+    },
+    {
+      "title": "世界互联网大会领先科技奖背后，Qoder 凭什么拿下中国 AI 编程市场第一",
+      "summary": "作者｜Cynthia 编辑｜郑玄 2026 年 11 月，每年乌镇世界互联网大会期间举办的领先科技奖，已经走到第十年。",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373542",
+      "titleEn": "Behind the Wuzhen award: how Qoder became China's top AI coding product",
+      "summaryEn": "At the 2026 World Internet Conference, the decade-old Leading Science and Technology Award went to Qoder, which now leads China's AI coding market."
+    },
+    {
+      "title": "一个人用得好 AI，为什么一家公司却用不好？",
+      "summary": "作者｜老 S 编辑｜郑玄 今天的 Agent，已经能够独立完成不少具体的工作。 写方案、写代码、做分析报告，过去可能需要员工花费几天才能完成的任务，如今 Agent 往往能在较短时间里交出不错的结果。 但在企业里，完成一份方案，可能只是一项工作的开始。比如，Agent 可以很快制定一份员工考核方案。但要用它真正完成一次考核，还需要获取员工的考勤、业绩等数据…",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373541",
+      "titleEn": "One person can use AI well, so why can't a whole company?",
+      "summaryEn": "Agents can draft plans, write code and produce analyses on their own, but turning a draft performance review into an actual review requires attendance and sales data, exception handling and sign-off from managers and HR. Delivering a work product and creating business value are two different things."
+    }
+  ],
+  "comment": "苹果新硬件照旧靠芯片迭代提价，而真正值得中小企业主注意的是：AI 写代码已不稀奇，Qoder 登顶和\"公司用不好 AI\"说明胜负手在把 Agent 接入业务流程，而非单点工具。",
+  "titleEn": "AI News | Apple's M6 iMac and MacBook Pro Go on Sale + iPad mini 8 Ships with A20 Pro + Qoder Tops China's AI Coding Market",
+  "summaryEn": "Apple began selling its M6-based iMac and MacBook Pro, along with the A20 Pro iPad mini 8, all at familiar premium price points trimmed by Chinese subsidies. Meanwhile Qoder was recognized at the Wuzhen summit as China's leading AI coding product. Two other pieces argue that AI coding still often reinvents the wheel, and that a single power user's success rarely translates into company-wide gains.",
+  "commentEn": "Apple's refresh is still chip-led and price-led, but the real signal for smaller firms is elsewhere: generating code with AI is no longer a differentiator. Qoder's lead and the gap between one skilled user and a whole company show that the winning move is wiring agents into real business workflows, not buying another tool."
+},
+{
   "date": "2026-11-05",
   "title": "AI新闻 | 独家 | 腾讯前高级研究员获数千万投资，锚定物理… + 连续 2 小时 40 分钟纯代码生成 66 秒动… + 陶哲轩警告：人类把思考交给 AI，危险可能很快到…",
   "summary": "力合资本、合肥创新投等机构投资，Lux 系列视触觉传感器已实现规模化交付。作者丨董子博编辑丨张贤雷峰网·鲸犀独家获悉，触觉智能企业“灵感机器人”新近完成数千万元天使轮融资，投资方包括力合资本、合肥创新投等机构，治臻咨询担任财务顾问。雷峰网·鲸犀了解到，公司创始人、CEO 张雅展博士毕业于港科大机器人专业，曾是腾讯资深 AI 研究员，主导过大规模数据管线及 A；北京时间 11 月 4 日消息，Anthropic 尚未正式发布的下一代旗舰模型 Claude Fable 5.5 近日在海外开发者社区引发关注；北京时间 11 月 4 日，菲尔兹奖得主、著名数学家陶哲轩（Terence Tao）近日对人类日益依赖人工智能发出警告。",
