@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-07",
+  "title": "AI新闻 | 奥尔特曼警示AI失控风险 + SK海力士设百亿美元AI投资公司 + Thinking Machines估值400亿美元",
+  "summary": "OpenAI 首席执行官萨姆 · 奥尔特曼（IT之家注：Sam Altman）最近出席 Raj Shamani 播客时表示，人工智能可能通过两种方式走向失控：一是人类逐步将控制权交给自主式 AI，二是某个人或实体垄断 AI 技术；美国监管机构披露文件显示，SK 海力士已在美国成立 AI 投资子公司 Hyaico Corp，SK 集团会长崔泰源担任董事会主席；作者｜Wildcard 编辑｜靖宇11 月 5 日，OpenAI 前 CTO Mira Murati 创立的 Thinking Machines Lab（简称 TML）同一天出了两条新闻。",
+  "newsItems": [
+    {
+      "title": "OpenAI CEO 奥尔特曼警示：未来人类可能无法从 AI 手中夺回控制权",
+      "summary": "OpenAI 首席执行官萨姆 · 奥尔特曼（IT之家注：Sam Altman）最近出席 Raj Shamani 播客时表示，人工智能可能通过两种方式走向失控：一是人类逐步将控制权交给自主式 AI，二是某个人或实体垄断 AI 技术。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.ithome.com/1/023/596.htm",
+      "titleEn": "Altman: Humanity May Never Regain Control of AI",
+      "summaryEn": "Speaking on Raj Shamani's podcast, OpenAI CEO Sam Altman outlined two paths to losing control: humans slowly handing authority to autonomous AI agents, or a single person or entity monopolizing the technology."
+    },
+    {
+      "title": "最高投资 100 亿美元：SK 海力士设立美国 AI 投资子公司 Hyaico，崔泰源掌舵",
+      "summary": "美国监管机构披露文件显示，SK 海力士已在美国成立 AI 投资子公司 Hyaico Corp，SK 集团会长崔泰源担任董事会主席。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.ithome.com/1/023/584.htm",
+      "titleEn": "SK Hynix Forms Hyaico With Up to $10B for US AI Bets",
+      "summaryEn": "US regulatory filings show SK Hynix has incorporated Hyaico Corp, an AI investment subsidiary chaired by SK Group chairman Chey Tae-won, with a commitment of as much as $10 billion."
+    },
+    {
+      "title": "估值 400 亿美元，美国公司，终于做出了中国开源模型的竞对",
+      "summary": "作者｜Wildcard 编辑｜靖宇11 月 5 日，OpenAI 前 CTO Mira Murati 创立的 Thinking Machines Lab（简称 TML）同一天出了两条新闻。",
+      "source": "极客公园",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "http://www.geekpark.net/news/373637",
+      "titleEn": "Thinking Machines Lab Hits $40B Valuation in Open-Source Challenge",
+      "summaryEn": "Mira Murati's startup Thinking Machines Lab, founded by OpenAI's former CTO, drew two headlines on November 5 as it moves to compete with Chinese open-source models at a $40 billion valuation."
+    },
+    {
+      "title": "AI 时代没有标准答案的问题，我们面对面聊",
+      "summary": "我们刚刚官宣了极客公园创新大会 2027 的首批嘉宾。 今天，再来揭晓「小场深谈」的最新进展。 10 月底，我们在「小场深谈」的预热文章里做了一次调研，请大家投票选出最想聊的话题。最终，我们选定了最受关注的五组主题，设下了五场专场，每一场都从大家最想聊的那个问题开始。 这五场专场，恰好瞄向当下行业最受关注、也最要紧的议题上：Personal AI 怎么接管日…",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373636",
+      "titleEn": "GeekPark Gathers Industry Voices for Small-Group Deep Dives",
+      "summaryEn": "GeekPark Innovation Festival 2027 has unveiled the first speakers and five small-group sessions covering personal AI, AI content creation, embodied intelligence, hardware and manufacturing, and measurable AI deployment, each capped at roughly 100 attendees."
+    },
+    {
+      "title": "OpenAI 「重置大神」换人了？Tibo 去救火，Andrew 上位",
+      "summary": "Tibo 不发糖了？因为Open AI 的内部安全烂透了 作者丨高允毅 编辑丨岑 峰 OpenAI 的“赛博义父”好像换人了？最先发现不对劲的是敏锐的网友。11 月 4 日，Codex 团队的产品负责人 Andrew Ambrosino 发帖称，关于 OpenAI 产品的任何意见都可以反馈给他。Tibo 在下面跟了一句：“快点改进模型”，Andrew 回：“…",
+      "source": "雷锋网",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.leiphone.com/category/yanxishe/u5N6lCUT0bEfanp1.html",
+      "titleEn": "OpenAI Reshuffles Product and Safety Roles",
+      "summaryEn": "Codex product lead Andrew Ambrosino has taken over user feedback and product coordination, while Tibo steps back from frontline support, a shift observers link to dissatisfaction with OpenAI's internal safety practices."
+    }
+  ],
+  "comment": "同一天里，奥尔特曼谈AI失控、SK海力士押注百亿美元、TML以400亿美元估值挑战中国开源模型，说明资本正加速向少数玩家集中，而治理讨论仍停留在播客层面，这种错位本身就是风险。",
+  "titleEn": "AI News | Altman Warns of Losing Grip on AI + SK Hynix Launches $10B US AI Arm + Thinking Machines Valued at $40B",
+  "summaryEn": "OpenAI's Sam Altman cautioned that humanity could permanently lose control of AI, either through gradual delegation to autonomous systems or through monopoly. SK Hynix has set up a US AI investment subsidiary, Hyaico, with SK Group chairman Chey Tae-won at the helm and up to $10 billion on the table. Meanwhile, Mira Murati's Thinking Machines Lab, now valued at $40 billion, is positioning itself as a US answer to China's open-source models.",
+  "commentEn": "On the same day, Altman warns of losing control, SK Hynix commits up to $10B, and Thinking Machines hits a $40B valuation to take on Chinese open-source models. Capital is concentrating fast while governance talk stays on podcasts — that gap is itself the risk."
+},
+{
   "date": "2026-11-06",
   "title": "AI新闻 | 12499 元 / 15999 元起 + 5499 元起：苹果 iPad mini 8 开… + 用 AI 写后端",
   "summary": "苹果 M6 芯片款 iMac、MacBook Pro 今日正式开售，起售价分别为 12499 元 / 15999 元，国补后起售价约 10999 元 / 14499 元；苹果 iPad mini（A20 Pro）今日正式开售，也就是大家俗称的“iPad mini 8”；很多人已经习惯让 AI 写代码： 生成一个 CRUD 接口、补一段 SQL、写一个工具类，效率确实比手敲高。",
