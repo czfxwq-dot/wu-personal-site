@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-08",
+  "title": "AI新闻 | 酷派推首款阔直板手机999元起 + Claude Max额度虚标诉讼未驳回 + 博世用豆包工作提效工程师",
+  "summary": "安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 今日正式开售。其中，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 ；美国联邦治安法官谢文辉（Alex Tse）裁定，Anthropic 必须继续应对 Claude Max 套餐使用额度涉嫌误导消费者的主要指控；头图来源：豆包工作 客户在群里抛出一个问题，到工程师真正坐下来分析故障，中间隔着多少工作。",
+  "newsItems": [
+    {
+      "title": "安卓阵营首款阔直板手机酷派 COOL X Wide 今日开售：999~1399 元，搭载联发科曦力 G99 芯片 + 720p 屏幕",
+      "summary": "安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 今日正式开售。其中，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 …",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/023/829.htm",
+      "titleEn": "Coolpad Cool X Wide goes on sale: first wide-slab Android phone, 999-1399 yuan",
+      "summaryEn": "Coolpad's Cool X Wide, billed as the first wide-slab Android handset, is now selling at 999 yuan for 8GB+128GB up to 1399 yuan for 12GB+256GB. It pairs a 6.38-inch 16:10 720x1158 90Hz screen with a MediaTek Helio G99, up to 12GB of LPDDR4X RAM, 256GB UFS 2.2 storage, microSD expansion and a 50MP rear camera."
+    },
+    {
+      "title": "Claude Max 订阅套餐使用额度被指“虚标”，Anthropic 辩词未获法官采纳",
+      "summary": "美国联邦治安法官谢文辉（Alex Tse）裁定，Anthropic 必须继续应对 Claude Max 套餐使用额度涉嫌误导消费者的主要指控。",
+      "source": "IT之家",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.ithome.com/1/023/824.htm",
+      "titleEn": "Judge lets Claude Max quota mislabeling suit against Anthropic proceed",
+      "summaryEn": "US Magistrate Judge Alex Tse ruled that Anthropic must continue defending the central claims in a lawsuit alleging that Claude Max subscription usage limits mislead consumers, rejecting the company's arguments for dismissal."
+    },
+    {
+      "title": "博世用豆包工作：让工程师少搬信息，多解问题",
+      "summary": "头图来源：豆包工作 客户在群里抛出一个问题，到工程师真正坐下来分析故障，中间隔着多少工作？",
+      "source": "极客公园",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "http://www.geekpark.net/news/373643",
+      "titleEn": "Bosch puts Doubao to work so engineers chase less information",
+      "summaryEn": "Bosch is using ByteDance's Doubao at work to shorten the path between a customer raising an issue in a group chat and an engineer actually sitting down to analyze the fault, cutting the information-shuffling in between."
+    },
+    {
+      "title": "办公提效之后，企业级 Agent 开始对经营结果负责",
+      "summary": "头图来源：腾讯云 过去一年，智能体是 AI 行业最受关注的方向之一。 从查资料、写文档到处理日常办公事务，桌面办公智能体完成了第一轮普及，办公提效的价值已经成为行业共识。但当 AI 进一步走向企业核心业务，搭出一个智能体不难，难的是让它真正跑进业务流程，适配复杂的系统、权限与规则，持续产出可量化的经营价值。 在腾讯云副总裁吴永坚看来，未来企业级智能体的核心赛…",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373642",
+      "titleEn": "Enterprise agents move from office efficiency to owning business results",
+      "summaryEn": "After a first wave of desktop agents that look things up and draft documents, the industry is pushing agents into core business processes. Tencent Cloud's Wu Yongjian says conversational office agents and service-operations agents will run as two long-term tracks, with an enterprise platform needed to connect systems, manage permissions and deliver measurable value."
+    },
+    {
+      "title": "百图生科与11家伙伴战略合作，AI生物计算覆盖医药研发及农业育种",
+      "summary": "活动焦点：· 百图生科主办、港投公司支持的第三届峰会2026年11月6日开幕，汇聚约300名科研、产业及投资界代表，探讨人工智能与生命科学的融合发展· 百图生科InnoHub分别与大学、科企及投资机构合作，以AI生物计算聚焦乳癌及中医药研究、农业育种、研发与产业配套，包括与香港大学推进「乳腺癌虚拟细胞大模型」项目，以及与香港浸会大学筹建「AI中医药联合实验室…",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/industrynews/X7HwwQTEXJhiVVzK.html",
+      "titleEn": "BioMap teams with 11 partners to extend AI biotech into drugs and crops",
+      "summaryEn": "BioMap held its third summit in Hong Kong with about 300 researchers, industry figures and investors, signing InnoHub partnerships with universities, tech firms and investors. Projects include a breast-cancer virtual cell model with the University of Hong Kong and an AI traditional Chinese medicine lab with Hong Kong Baptist University, reaching into Japan, Singapore and Belt and Road markets."
+    }
+  ],
+  "comment": "酷派用720p阔屏手机试水形态差异，说明硬件端仍在低价找卖点；而Anthropic被诉额度虚标、博世把豆包塞进工程师流程、腾讯云谈Agent对经营结果负责，指向同一件事：AI的信任与价值必须可量化、可追责。",
+  "titleEn": "AI News | Coolpad's first wide-slab phone from 999 yuan + Claude Max quota lawsuit survives + Bosch uses Doubao to cut engineer busywork",
+  "summaryEn": "Coolpad launched the Cool X Wide, the first wide-slab Android phone, starting at 999 yuan with a MediaTek Helio G99 and a 720p display. A US magistrate judge ruled that Anthropic must still face core claims that Claude Max usage quotas mislead subscribers. Bosch is deploying ByteDance's Doubao at work so engineers spend less time chasing information and more time solving faults, while Tencent Cloud argues enterprise agents must soon answer for business results.",
+  "commentEn": "Coolpad is testing a wide-screen form factor at a budget price, but the real signal is elsewhere: a judge letting the Claude Max quota suit proceed, Bosch routing engineers through Doubao, and Tencent Cloud pitching agents that own business outcomes all point to the same demand: AI must be measurable and accountable, not just impressive."
+},
+{
   "date": "2026-11-07",
   "title": "AI新闻 | 奥尔特曼警示AI失控风险 + SK海力士设百亿美元AI投资公司 + Thinking Machines估值400亿美元",
   "summary": "OpenAI 首席执行官萨姆 · 奥尔特曼（IT之家注：Sam Altman）最近出席 Raj Shamani 播客时表示，人工智能可能通过两种方式走向失控：一是人类逐步将控制权交给自主式 AI，二是某个人或实体垄断 AI 技术；美国监管机构披露文件显示，SK 海力士已在美国成立 AI 投资子公司 Hyaico Corp，SK 集团会长崔泰源担任董事会主席；作者｜Wildcard 编辑｜靖宇11 月 5 日，OpenAI 前 CTO Mira Murati 创立的 Thinking Machines Lab（简称 TML）同一天出了两条新闻。",
