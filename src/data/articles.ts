@@ -15,6 +15,109 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'pure-living-not-lying-flat',
+    date: '2026-11-04',
+    title: `纯过日子不是躺平，是把命从"更快"手里抢回来`,
+    titleEn: `Pure Living Isn't Lying Flat — It's Taking Your Life Back from "Faster"`,
+    excerpt: `AI 帮我们把每件事都变快了，可忙完一整天，时间并没有多出来。这不是"我AI用得还不够熟"，而是"时间贫困"：省下的每一分钟，都被"更快"重新承包了。效率是手段不是目的——纯过日子不是躺平，是把生命的主权，从"更快"手里一样一样拿回来。`,
+    excerptEn: `AI makes everything faster, yet after a full day you have no more time than before. The problem isn't that you haven't mastered the tools — it's time poverty: every minute you save gets re-contracted out to "faster." Efficiency is a means, not an end. Pure living isn't lying flat; it's taking the sovereignty of your life back from "faster," one piece at a time.`,
+    tag: 'AI思考',
+    tagEn: 'AI Reflections',
+    contentEn: `<p>The tools save you every minute — and when you look back, not one of those minutes landed anywhere.</p>
+
+<p>That isn't a complaint. It's something happening to all of us.</p>
+
+<hr />
+
+<h2>1. We are entering "time poverty"</h2>
+
+<p>You learned to use AI for weekly reports, email, slides — a draft in thirty seconds.</p>
+
+<p>But by quitting time the work hasn't shrunk, it has grown — there's always a "one more revision," a "let's refine it a bit further."</p>
+
+<p>Shows at 1.5x speed, books via AI summaries, meals via delivery — even life has been put on fast-forward. The tools made everything faster, yet after a whole day of running, no extra time appeared.</p>
+
+<p>This is time poverty: not a lack of time, but every stretch of it filled, and not one stretch truly yours.</p>
+
+<p>But is blaming it on "I haven't mastered AI well enough" really right? Then how does it actually happen?</p>
+
+<hr />
+
+<h2>2. The common explanation doesn't explain it</h2>
+
+<p>Many people do put this on their own account: am I just inefficient, not as good at AI as others, and that's why time runs short? The implication being — learn the tools a bit better and the time will be freed.</p>
+
+<p>There's something to that, but it can't explain a counterexample: if saving time were the goal, the smoother the tools, the more idle people should become.</p>
+
+<p>Reality is the opposite — look at the person who uses AI best, and they're usually the busiest.</p>
+
+<hr />
+
+<h2>3. Where does the saved time go?</h2>
+
+<p>In a survey of 6,000 people, respondents said on average that AI saves them 11 hours a week — but only 13% reported any real improvement in their company's performance.</p>
+
+<p>The saved time didn't turn into free time. So where did it go?</p>
+
+<p>A operations manager in Hangzhou used AI to make a 15-second video: a 1 a.m. office, a pop-up reading "revision note #17," takeout boxes stacked 32 centimeters high behind him. He shot it with AI, and the AI started assigning him new work too — 187 late nights, 42 drafts, three bouts of temporary blindness, all of it fed into the model. Every minute saved, he said, became the next round of notes, the next revision, the next "it could still be better."</p>
+
+<p>You might think that's an outlier. But economics has the Jevons paradox: the more coal a steam engine saves, the more coal gets used — because greater efficiency invites demands for more output. Applied to people: the more time AI saves, the more we stuff into the same minute.</p>
+
+<p>You save the queue, and in goes a new notification; you save the research, and in goes a new anxiety; you save the waiting — and with it, the anticipation.</p>
+
+<p>So where does the saved time go? It doesn't vanish. It gets re-contracted out to "faster."</p>
+
+<p>And if we hold onto it ourselves, can we keep it? — When efficiency becomes the only yardstick, every saved minute is expected to be traded for "more." So the real question isn't "how much time can AI save," but "what is the saved time for."</p>
+
+<hr />
+
+<h2>4. Efficiency is a means, not an end</h2>
+
+<p>The question worth asking was never "how much time can AI save," but "what do we do with the time it saves."</p>
+
+<p>AI can replicate surfaces — images, lines, scenes, generated in a second. What it can't replicate: the heat and cold your body has felt, the memories that slowly fermented through long waits — the things that make up "you having lived."</p>
+
+<p>When everything can be generated quickly, firsthand experience becomes the rarest luxury — because it can't be mass-produced by an algorithm, and no one can take it from you.</p>
+
+<p>This isn't only my judgment. Some parents pulled kids out of early-education classes to go plant vegetables; some refuse short video and write postcards by hand. In the past 30 days, engagement on the #pure living# topic rose 893%. They aren't being nostalgic — they've tasted something AI can't give: the moment of having lived it yourself.</p>
+
+<hr />
+
+<h2>5. The boundary: we are not against AI</h2>
+
+<p>Reading this, you may misunderstand: is this telling me not to use AI? No.</p>
+
+<p>AI is for racing toward the future, for unlimited acceleration — what should be handed to it, hand over. What we oppose is letting efficiency define life in reverse — letting "fast" become the measure of everything, and "slow" become shameful.</p>
+
+<p>Tools are for saving time, not for defining whether life is well lived.</p>
+
+<p>But the question remains: having run so long inside the rules of "faster," can ordinary people really stop?</p>
+
+<hr />
+
+<h2>6. What it means for ordinary people</h2>
+
+<p>So "pure living" isn't a return to the past, and it isn't lying flat — it's taking the sovereignty of life back from "faster," one piece at a time.</p>
+
+<p>It doesn't mean you stop using AI, stop working, retreat to the countryside. It only means that inside the rules of "the faster the better," you keep one patch of ground the algorithm can't reach: working with your own hands alongside the elders, waiting for a pot of soup to simmer, smelling the smoke of a real kitchen, accumulating a pile of private memories no one can copy and no one can take.</p>
+
+<p>None of that is fast. But precisely those slow things give you back control of your time — instead of being controlled by "faster."</p>
+
+<p>I'd even be so greedy as to want my child to have a childhood like that too.</p>
+
+<hr />
+
+<h2>Closing</h2>
+
+<p>Efficiency, to AI. Days, back to people.</p>
+
+<p>We slow down not because we can't keep up with the times, but because we want to take our lives back from "faster" — and simply, seriously, live.</p>
+
+<p>When was the last time you truly slowed down and gave the time back to yourself? Tell me in the comments — I read every one.</p>
+
+<p>And if "faster" is chasing you too, forward this to the person you most want to let rest for a moment.</p>`,
+  },
+  {
     slug: 'economy-recovery-price-war',
     date: '2026-11-01',
     title: `官方说经济在复苏，为什么满街都在降价甩卖？`,
