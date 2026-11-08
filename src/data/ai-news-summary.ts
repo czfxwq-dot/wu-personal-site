@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-09",
+  "title": "AI新闻 | 苹果Siri团队动荡CEO催改 + 腾讯Agent不止WorkBuddy + 高通押注终端侧智能体",
+  "summary": "彭博社记者马克 · 古尔曼在今晚更新的《Power On》时事通讯中爆料，曾主导 Vision Pro 头显开发、同时负责新版 Siri AI 项目的迈克 · 罗克韦尔，仍在认真考虑离开现有岗位；彭博社记者马克 · 古尔曼在今天（8 日）晚间更新的《Power On》时事通讯中披露，苹果新任 CEO 约翰 · 特努斯敦促软件工程主管克雷格 · 费德里吉加快 AI 业务发展，采取更大胆的策略，目标是将 Siri 升级为能够自主替用户完成任务的 AI 智能体；大家对腾讯Agent的认识，还不够完整。 作者丨胡敏 编辑丨刘伟 今年上半年，但凡聊腾讯 AI，那必然会聊到 Workbuddy，这个产品在前三季度彻彻底底出圈了。它在某种程度上，也改变了市场对于腾讯 AI 的看法。但如果只看到WorkBuddy，那么大家对于腾讯 Agent 的认识，可能还是不完整的。腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在。",
+  "newsItems": [
+    {
+      "title": "古尔曼称苹果 Siri AI 团队或迎大调整，工程副总裁罗克韦尔考虑明年走人",
+      "summary": "彭博社记者马克 · 古尔曼在今晚更新的《Power On》时事通讯中爆料，曾主导 Vision Pro 头显开发、同时负责新版 Siri AI 项目的迈克 · 罗克韦尔，仍在认真考虑离开现有岗位。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/024/014.htm",
+      "titleEn": "Gurman: Apple's Siri AI Team Faces Shake-Up as VP Rockwell Mulls Exit Next Year",
+      "summaryEn": "Bloomberg's Mark Gurman reports that Mike Rockwell, who led Vision Pro and now oversees the new Siri AI effort, is still seriously weighing a departure from his current role."
+    },
+    {
+      "title": "古尔曼称苹果 CEO 特努斯“上任三把火”，敦促软件主管费德里吉大胆搞 AI",
+      "summary": "彭博社记者马克 · 古尔曼在今天（8 日）晚间更新的《Power On》时事通讯中披露，苹果新任 CEO 约翰 · 特努斯敦促软件工程主管克雷格 · 费德里吉加快 AI 业务发展，采取更大胆的策略，目标是将 Siri 升级为能够自主替用户完成任务的 AI 智能体。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/024/013.htm",
+      "titleEn": "Gurman: New Apple CEO Ternus Urges Software Chief Federighi to Go Bolder on AI",
+      "summaryEn": "According to Gurman's Power On newsletter, Apple's incoming CEO John Ternus is pushing software engineering head Craig Federighi to accelerate AI work, aiming to turn Siri into an agent that can complete tasks on users' behalf."
+    },
+    {
+      "title": "腾讯的 Agent 布局，不止 WorkBuddy",
+      "summary": "大家对腾讯Agent的认识，还不够完整。 作者丨胡敏 编辑丨刘伟 今年上半年，但凡聊腾讯 AI，那必然会聊到 Workbuddy，这个产品在前三季度彻彻底底出圈了。它在某种程度上，也改变了市场对于腾讯 AI 的看法。但如果只看到WorkBuddy，那么大家对于腾讯 Agent 的认识，可能还是不完整的。腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在…",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/industrynews/oxR5pn9S7tI1IfF5.html",
+      "titleEn": "Tencent's Agent Strategy Extends Well Beyond WorkBuddy",
+      "summaryEn": "WorkBuddy made Tencent a talking point in AI this year, but the company's agent lineup is broader. SVP Dowson Tong argues the real bottleneck is not model strength but fragmented connections to business systems and enterprise data."
+    },
+    {
+      "title": "为什么「陪伴」，注定是 Personal AI 的核心",
+      "summary": "作者｜宇航猿 编辑｜靖宇 最近这一波 Personal AI 实在太火了，我也注册了一个 Muse 体验了一下。",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373653",
+      "titleEn": "Why Companionship Is Destined to Sit at the Core of Personal AI",
+      "summaryEn": "The Personal AI wave keeps drawing newcomers, and a hands-on test of Muse suggests companionship, not task automation, may be the defining draw of these products."
+    },
+    {
+      "title": "终端侧AI：从单点应用走向智能体体验",
+      "summary": "发言人：高通公司AI产品技术中国区负责人 万卫星2026年11月7日，上海 终端侧AI发展到了什么阶段？",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/chips/aOKsujJpdDvRKj5S.html",
+      "titleEn": "On-Device AI Moves From Point Apps to Agent Experiences",
+      "summaryEn": "Speaking in Shanghai, Qualcomm's China AI product lead Wan Weixing laid out how on-device AI is evolving from isolated applications toward integrated agent experiences."
+    }
+  ],
+  "comment": "苹果在换帅与换脑之间摇摆，腾讯在打通工作流断点，高通把智能体塞进终端——三件事指向同一件事：AI竞争的胜负手正从模型参数转向组织执行力与落地通道。",
+  "titleEn": "AI News | Apple's Siri Shake-Up as CEO Pushes AI + Tencent's Agent Bet Beyond WorkBuddy + Qualcomm's On-Device Agent Vision",
+  "summaryEn": "Apple is facing turbulence in its Siri AI ranks, with engineering VP Mike Rockwell weighing an exit, while new CEO John Ternus presses software chief Craig Federighi to move faster and bolder on AI. Tencent is signaling that its agent strategy runs well beyond WorkBuddy, framing the real obstacle as disconnected business systems and data rather than weak models. Qualcomm, meanwhile, argues on-device AI is graduating from standalone apps into full agent experiences.",
+  "commentEn": "Apple is wavering between new leadership and a new brain, Tencent is plugging the gaps in enterprise workflows, and Qualcomm is pushing agents onto devices. All three point the same way: the decisive edge in AI is shifting from model parameters to organizational execution and last-mile delivery."
+},
+{
   "date": "2026-11-08",
   "title": "AI新闻 | 酷派推首款阔直板手机999元起 + Claude Max额度虚标诉讼未驳回 + 博世用豆包工作提效工程师",
   "summary": "安卓阵营首款阔直板手机，也是酷派首款阔直板手机 Cool X Wide 今日正式开售。其中，8GB+128GB 版本 999 元，8GB+256GB 版本 1199 元，12GB+256GB 版本 1399 元。这款新机搭载 6.38 英寸 16:10 屏幕，仅 720x1158 分辨率，还支持 90Hz 刷新率；有鎏白、岩黑、嫣红三种配色可选，机身尺寸为 ；美国联邦治安法官谢文辉（Alex Tse）裁定，Anthropic 必须继续应对 Claude Max 套餐使用额度涉嫌误导消费者的主要指控；头图来源：豆包工作 客户在群里抛出一个问题，到工程师真正坐下来分析故障，中间隔着多少工作。",
