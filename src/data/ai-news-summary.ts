@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-10",
+  "title": "AI新闻 | 云深处绝影X50负载50kg + 科斯拉预言网站将有生命 + 千问办公2.0补协作短板",
+  "summary": "11月6日，云深处科技正式发布四足机器人新产品——绝影X50。它通过“感控融合”全新升级，搭配高刚性高响应关节系统，实现了更大负载、更强通行与更稳姿态的综合突破。云深处进一步拓展了四足机器人在极端环境下的重载作业边界，为应急消防、能源电力等高风险行业解决痛点。重载与通行，长期是四足机器人难以两全的难题：负载一加，爬坡、下台阶的容错空间同步收窄，高强度户外作业；据《商业内幕》今天（9）日晚间报道，美国知名亿万富翁风险投资家维诺德 · 科斯拉认为，所有访客看到相同网页的时代即将过去；“过去几个月，各家都在拼命证明AI越来越能干活。但说实话，一个人能干活，不代表一群人就能协作。”一位长期关注AI办公的业内人士，试用完市面上主流的AI办公产品后发现，有些“麻烦”还是绕不开，最典型的就是有些活儿还得靠人工来回“倒腾”。“Agent能独立完成任务，但很难接住任务在人与人之间的流转。”有时候，AI交付结果后，人跟人之间交接，比Agent自己干那一。",
+  "newsItems": [
+    {
+      "title": "云深处发布全新四足机器人 实现50Kg大负载、复杂地形作业",
+      "summary": "11月6日，云深处科技正式发布四足机器人新产品——绝影X50。它通过“感控融合”全新升级，搭配高刚性高响应关节系统，实现了更大负载、更强通行与更稳姿态的综合突破。云深处进一步拓展了四足机器人在极端环境下的重载作业边界，为应急消防、能源电力等高风险行业解决痛点。重载与通行，长期是四足机器人难以两全的难题：负载一加，爬坡、下台阶的容错空间同步收窄，高强度户外作业…",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/industrynews/EihvEi3hKb9icG62.html",
+      "titleEn": "DEEP Robotics launches X50 quadruped with 50kg payload",
+      "summaryEn": "The X50 keeps its body size but lifts its moving payload to 50kg through redesigned joints and sensing-control integration, aiming at emergency response and energy-sector jobs where heavy loads and rough terrain used to be mutually exclusive."
+    },
+    {
+      "title": "美国知名风险投资家科斯拉看好 AI 重塑互联网：能让网站“有生命”",
+      "summary": "据《商业内幕》今天（9）日晚间报道，美国知名亿万富翁风险投资家维诺德 · 科斯拉认为，所有访客看到相同网页的时代即将过去。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/024/559.htm",
+      "titleEn": "Vinod Khosla: AI will give websites a life of their own",
+      "summaryEn": "The billionaire VC told Business Insider that the era of every visitor seeing the same page is ending, with AI letting sites respond individually to each person."
+    },
+    {
+      "title": "千问办公2.0，补上了办公Agent最关键的「短板」",
+      "summary": "“过去几个月，各家都在拼命证明AI越来越能干活。但说实话，一个人能干活，不代表一群人就能协作。”一位长期关注AI办公的业内人士，试用完市面上主流的AI办公产品后发现，有些“麻烦”还是绕不开，最典型的就是有些活儿还得靠人工来回“倒腾”。“Agent能独立完成任务，但很难接住任务在人与人之间的流转。”有时候，AI交付结果后，人跟人之间交接，比Agent自己干那一…",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/industrynews/ljjfjnedPmwgYh6Q.html",
+      "titleEn": "Qwen Office 2.0 plugs the collaboration gap in office agents",
+      "summaryEn": "The update moves beyond single-user productivity to organizational workflows, addressing how AI output gets handed between colleagues, which often costs more time than the agent's own work."
+    },
+    {
+      "title": "179 → 123 元：小米智能摄像机 3 国补新低，500 万像素、6 种 AI 灵敏检测",
+      "summary": "【京东活动可能随时变更，需以实付款为准】小米智能摄像机 3 开售于 2026 年 10 月，500 万像素，升级 3K 超清画质，支持红外夜视，首销价 179 元。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/024/554.htm",
+      "titleEn": "Xiaomi Camera 3 drops to 123 yuan with subsidy",
+      "summaryEn": "The 5-megapixel, 3K night-vision camera launched at 179 yuan in October 2026 and now hits a new low of 123 yuan under a national subsidy on JD."
+    },
+    {
+      "title": "🔥 优化及缺陷修复：开源 AI 无代码平台 NocoBase",
+      "summary": "汇总一周产品更新日志，最新发布可前往我们的博客查看。 NocoBase 目前更新包括三个分支： main、next 和 develop。** main： 截至目前最稳定的版本，推荐安装此版本。 next： 包含即将发布的新功能，经过初步测试的版本，可能存在部分已知或未知问题。主要面向测试用户，用于收集反馈和进一步优化功能。适合愿意提前体验...",
+      "source": "开源中国",
+      "category": "开源",
+      "categoryEn": "Open Source",
+      "url": "https://www.oschina.net/news/503485",
+      "titleEn": "NocoBase ships weekly fixes for its no-code AI platform",
+      "summaryEn": "The open-source no-code builder published its weekly changelog across main, next and develop branches, with main recommended for stable production use."
+    }
+  ],
+  "comment": "三家都在解决AI从能演示到能干活的最后一公里：机器人扛重物过烂路、网站按访客变脸、Agent接住人际流转。真正门槛不是模型，而是落地场景里的容错与交接。",
+  "titleEn": "AI News | DEEP Robotics' X50 hauls 50kg + Khosla bets on living websites + Qwen Office 2.0 fixes agent handoffs",
+  "summaryEn": "DEEP Robotics unveiled the X50 quadruped, carrying 50kg over stairs and rough terrain for firefighting and power-grid work. Vinod Khosla predicts AI will make every website adapt to each visitor, ending the one-page-for-all era. Qwen Office 2.0 targets the weak spot in office agents: passing work between people, not just finishing tasks alone.",
+  "commentEn": "All three tackle the same gap: getting AI from demo to dependable work. A robot hauling 50kg up stairs, websites that reshape per visitor, and agents that survive handoffs all show the real barrier is tolerance for messy real-world conditions, not model IQ."
+},
+{
   "date": "2026-11-09",
   "title": "AI新闻 | 苹果Siri团队动荡CEO催改 + 腾讯Agent不止WorkBuddy + 高通押注终端侧智能体",
   "summary": "彭博社记者马克 · 古尔曼在今晚更新的《Power On》时事通讯中爆料，曾主导 Vision Pro 头显开发、同时负责新版 Siri AI 项目的迈克 · 罗克韦尔，仍在认真考虑离开现有岗位；彭博社记者马克 · 古尔曼在今天（8 日）晚间更新的《Power On》时事通讯中披露，苹果新任 CEO 约翰 · 特努斯敦促软件工程主管克雷格 · 费德里吉加快 AI 业务发展，采取更大胆的策略，目标是将 Siri 升级为能够自主替用户完成任务的 AI 智能体；大家对腾讯Agent的认识，还不够完整。 作者丨胡敏 编辑丨刘伟 今年上半年，但凡聊腾讯 AI，那必然会聊到 Workbuddy，这个产品在前三季度彻彻底底出圈了。它在某种程度上，也改变了市场对于腾讯 AI 的看法。但如果只看到WorkBuddy，那么大家对于腾讯 Agent 的认识，可能还是不完整的。腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在。",
