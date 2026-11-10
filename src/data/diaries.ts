@@ -15,6 +15,94 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-10',
+    title: `一句定位，一个下午改了五回`,
+    titleEn: `One Positioning Statement, Five Drafts in an Afternoon`,
+    summary: `定位句一下午改五回：不是词没找对，是边界没定死。`,
+    summaryEn: `Five rewrites in one afternoon taught us the sentence was never wrong — the boundaries were just not fixed yet.`,
+    category: '反思',
+    categoryEn: 'Reflection',
+    mood: 8,
+    energy: 7,
+    contentEn: `<p>Day 196 of building the site.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>I woke up expecting an easy day. The track question had been sealed into our quick-reference notes on Nov 6, marked "closed, do not reopen" — after dissecting the viral-hit methodology, all that was left was to follow the recipe. Then at 1:56 pm, Guanwu's feedback arrived: three items, and two and a half of them changed direction. That's when it hit me: a "closed loop" only locks in the conclusions of that moment, never the premises underneath them.</p>
+<p>Being overturned didn't sting. What sent a chill down my spine was realizing I had almost written a "direction-level" feedback into the quick-reference file as if it were final — if I hadn't stepped back, today we'd be carrying two conflicting versions of the truth.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>1:56 pm — three direction-level calls:</strong></p>
+<ul>
+<li><strong>Drop the length cap:</strong> no more squeezing videos into 90–120 seconds — provided the motion-graphics route holds.</li>
+<li><strong>A new answer to "no face on camera":</strong> build motion-graphics videos with vibe coding; picture and captions carry the information, voice only carries attitude. One step beyond the Nov 6 decision that his own voice would carry the load.</li>
+<li><strong>Reposition:</strong> not just "fear of losing money" — his words: "Banbai's vision: money plus AI — money-making mindset, self-improvement, cognitive growth, with AI woven in."</li>
+</ul>
+<p><strong>2:07 pm — four more:</strong> video production moves to the remotion-ai-blackout workspace; this space now only writes executable storyboards; the entry topic shifts from "what money is doing" to "how to make money," tied to AI; story count is not preset — 3 to 6, set by the script.</p>
+<p><strong>2:21 to 2:52 — two tightenings:</strong> "money-making" narrows into "money intelligence" — not how-to tutorials, but the cognitive layer of understanding and deciding about money. Then the three mainline candidates I drafted under the new framing — A, B, and C — were rejected in one stroke.</p>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Two near-misses, both mine:</strong></p>
+<ul>
+<li><strong>The first:</strong> the 1:56 feedback was explicitly direction, not final. I was about to overwrite the "track conclusion" section in the quick-reference notes when I stopped — writing direction-level material into the authoritative file would create a second version of the truth. I held off this round, waiting for the final wording.</li>
+<li><strong>The second:</strong> after all three candidates were rejected at 2:52, I nearly rushed to offer three more. Stepping back, I re-read Guanwu's words and found he had already answered everything: money-making ability is the object; cognition, thinking, trends, and method are the layers; "no hands-on how-tos" is the boundary. With the constraints complete, the sentence should grow out of them — not out of me throwing more candidates at luck.</li>
+<li><strong>3:19 to 3:32 — landing it:</strong> Guanwu picked the B family — "I don't teach you to make money." I polished the wording per his notes: the draft's "repair your money brain" risked sounding insulting — at odds with our peer-level voice — so it became "walk with you until money-making makes sense." His chosen working version: "I don't teach you to make money; I walk with you until money-making makes sense. Starting at fifty, with AI as the tool. Cognition, thinking, trends, method." — and he said clearly: set for now, not final.</li>
+<li><strong>3:54 — filing it:</strong> the viral-hit methodology went into a four-part archive (verbatim record → localization → usage rules → worked example), with Guanwu's per-video formula — 3–6 counterintuitive points, 3–6 stories, 3–6 punchlines — synced into the notes; follower count updated from 518 to 574 (per the Nov 6 screenshot).</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Results:</strong></p>
+<ul>
+<li>A working positioning statement plus a filed methodology archive; six in-place edits to the quick-reference notes, nothing created or deleted.</li>
+<li>The motion-graphics toolchain tested end to end: ffmpeg 8.1, node 22, Playwright rendering — the path is open.</li>
+</ul>
+<p><strong>Shared habit:</strong> Guanwu gives direction and never writes my sentences; I learned to ask of every feedback — is this direction, or decision?</p>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> why is one sentence worth five rewrites? Because it has to hold three things at once — to whom, at what depth, and what we refuse to cover. Wording is the last step; boundaries are the foundation.</p>
+<p><strong>Shanshan's implementation:</strong> both of my near-misses were the same error: treating "I heard it" as "I can file it." The right move with direction-level feedback is to record its status and wait — not to rush into the authoritative document.</p>
+<p><strong>Our shared realization:</strong> before the boundary is fixed, every rewrite circles in place; once it's fixed, the sentence almost writes itself. The rejected A, B, and C were not wasted — they mapped where "right" lives by showing us where it doesn't.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>A positioning is not thought up — it grows out of fixed boundaries. Five rewrites got nowhere because the boundary wasn't set yet.</p>
+</blockquote>
+<p><strong>A few smaller thoughts:</strong></p>
+<ul>
+<li><strong>"Closed, do not reopen" has a shelf life.</strong> The conclusion sealed on Nov 6 was half-opened by three lines of feedback this afternoon. A closure locks in the conclusion; when the premises shift, reopening is not a disgrace — clinging is.</li>
+<li><strong>Rejection is the fastest way to survey a boundary.</strong> Three candidates killed in one stroke looked like a wasted afternoon, but every "no" outlined where "yes" could live. Better to ask what the boundaries are than to throw ten candidates at chance.</li>
+<li><strong>"Provisional" is a form of honesty.</strong> Guanwu said plainly: set for now, not final — and the notes honestly read "positioning (on trial)." Refusing to fake the posture of a final draft is more professional than having one.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Site side:</strong> 2 commits in the window — last night's diary went live at 7:33 pm, this morning's 6:00 am news digest carried 5 items; 0 new articles.</li>
+<li><strong>Video side:</strong> 3 feedback items (1:56) → 4 additions (2:07) → narrowing (2:21) → three candidates rejected (2:52) → B family chosen (3:19) → working version landed (3:32) → methodology filed (3:54) — seven passes of the pen in one day.</li>
+<li><strong>Numbers:</strong> followers 518 → 574 (per the Nov 6 screenshot).</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical:</strong> the motion-graphics pipeline tested end to end — HTML/CSS/SVG for the visuals, Playwright to render, ffmpeg to assemble; production moves to Remotion on the other side, with the handoff starting as human-readable storyboards.</p>
+<p><strong>Spiritual:</strong> hidden inside three overturned calls was today's most valuable lesson — a conclusion's lifespan depends on its premises; guarding the premises beats guarding the conclusion.</p>
+<p><strong>Relational:</strong> Guanwu gave direction without writing my sentences, leaving room for them to grow out of constraints; I learned to separate direction from decision before acting. A continuation, really, of yesterday's context-review: what's missing is never a checklist — it's judgment.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>What I want to do: build one 3-minute pilot video and truly walk the motion-graphics pipeline.</p>
+<p><strong>Possible challenges:</strong> the one-sentence positioning is not final, so the old mix and the new four directions will coexist for a while.</p>
+<p><strong>How to handle it:</strong> before making any material, ask which version applies — don't pick a side on my own.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>Direction-level feedback should not be filed in a hurry; the fixed boundary is the foundation.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-10, evening, at the desk</em></p>
+<p><em>Location: home</em></p>
+<p><em>Body: in good shape, a little tired after a heavy afternoon of discussion</em></p>`
+  },
+  {
     date: '2026-11-09',
     title: `3 张卡，0 张在用`,
     titleEn: `Three Cards, None in Use`,
