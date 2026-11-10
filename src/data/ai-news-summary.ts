@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-11",
+  "title": "AI新闻 | AMD霄龙嵌入式9006发布 + MiniMax开源H3-Image生图 + Anthropic推Fable 5.2",
+  "summary": "AMD 今天（11 月 11 日）发布霄龙（EPYC）嵌入式 9006 系列 SP7 处理器，基于 Zen 6 架构，最高可达 256 核 512 线程，率先在嵌入式平台落地 PCIe Gen6、CXL3.1，搭配 16 通道 DDR5/MRDIMM 内存、7 年产品生命周期；今天（10 日）深夜，MiniMax 宣布，MiniMax H3-Image 正式发布并开放权重；作者｜Cynthia 编辑｜郑玄 传说，光明之神巴德尔梦见自己将死，于是，巴德尔的母亲弗丽嘉遍走世间，令万物立下了绝不伤害他的誓言。",
+  "newsItems": [
+    {
+      "title": "嵌入式 x86 算力天花板：AMD 霄龙嵌入式 9006 系列 SP7 处理器发布，吞吐量飙升 1.8 倍",
+      "summary": "AMD 今天（11 月 11 日）发布霄龙（EPYC）嵌入式 9006 系列 SP7 处理器，基于 Zen 6 架构，最高可达 256 核 512 线程，率先在嵌入式平台落地 PCIe Gen6、CXL3.1，搭配 16 通道 DDR5/MRDIMM 内存、7 年产品生命周期。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/025/195.htm",
+      "titleEn": "AMD EPYC Embedded 9006 SP7: 256 Cores, 1.8x Throughput",
+      "summaryEn": "AMD launched EPYC Embedded 9006 SP7 processors built on Zen 6, offering up to 256 cores and 512 threads, PCIe Gen6, CXL 3.1, 16-channel DDR5/MRDIMM memory, and a 7-year lifecycle."
+    },
+    {
+      "title": "MiniMax 开源 H3-Image 生图模型，10 秒就能生成一张 4K 图像",
+      "summary": "今天（10 日）深夜，MiniMax 宣布，MiniMax H3-Image 正式发布并开放权重。",
+      "source": "IT之家",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.ithome.com/1/025/191.htm",
+      "titleEn": "MiniMax Open-Sources H3-Image for 10-Second 4K Generation",
+      "summaryEn": "MiniMax released H3-Image with open weights, enabling 4K image generation in about 10 seconds, lowering the barrier for high-resolution AI imaging."
+    },
+    {
+      "title": "千问办公押注 Team Agent，企业 AI 的流水线时刻真的来了",
+      "summary": "作者｜Cynthia 编辑｜郑玄 传说，光明之神巴德尔梦见自己将死，于是，巴德尔的母亲弗丽嘉遍走世间，令万物立下了绝不伤害他的誓言。",
+      "source": "极客公园",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "http://www.geekpark.net/news/373760",
+      "titleEn": "Qwen Office Bets on Team Agent for Enterprise AI Pipelines",
+      "summaryEn": "Qwen Office is pushing Team Agent as the next step for enterprise AI, aiming to turn isolated tools into connected workflows that operate like an assembly line."
+    },
+    {
+      "title": "Anthropic 发布 Fable 5.2 与 Mythos 5.2，声称“8 天写出一个能开机的操作系统”",
+      "summary": "Anthropic 在 11 月 9 日发布了 Claude Fable 5.2 和 Claude Mythos 5.2。",
+      "source": "开源中国",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.oschina.net/news/503499/claude-fable-and-mythos-5-2",
+      "titleEn": "Anthropic Ships Fable 5.2 and Mythos 5.2, Claims 8-Day OS Build",
+      "summaryEn": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, touting the ability to write a bootable operating system in eight days, signaling rapid gains in agentic coding."
+    },
+    {
+      "title": "qOntology 本体工程平台开源版 v1.1.0 发布：AI 辅助建模、知识图谱多视图！企业本体 FDE 的超强工具！",
+      "summary": "qOntology 本体工程平台开源版 v1.1.0 围绕本体工程中的知识整理、模型维护与图谱探索进行更新，重点增强 AI 辅助建模和知识图谱多视图能力，同时补充项目版本管理、约束规则配置，并对本体应用及基础管理页面进行调整。",
+      "source": "开源中国",
+      "category": "开源",
+      "categoryEn": "Open Source",
+      "url": "https://www.oschina.net/news/503498",
+      "titleEn": "qOntology v1.1.0 Adds AI-Assisted Modeling and Multi-View Graphs",
+      "summaryEn": "The open-source qOntology platform updated to v1.1.0 with AI-assisted ontology modeling, multi-view knowledge graphs, version management, and constraint rule configuration."
+    }
+  ],
+  "comment": "算力、模型、智能体三线并进：AMD把256核塞进嵌入式，MiniMax让4K生图降到10秒，Anthropic用8天造OS证明智能体流水线可行。企业AI的门槛正从‘买不买’变成‘怎么接’。",
+  "titleEn": "AI News | AMD EPYC Embedded 9006 Launches + MiniMax Open-Sources H3-Image + Anthropic Debuts Fable 5.2",
+  "summaryEn": "AMD unveiled EPYC Embedded 9006 SP7 processors with up to 256 cores and PCIe Gen6 support. MiniMax released H3-Image, an open-weight model that generates 4K images in 10 seconds. Anthropic launched Claude Fable 5.2 and Mythos 5.2, claiming they can build a bootable OS in eight days.",
+  "commentEn": "Compute, models and agents are advancing on three fronts: AMD packs 256 cores into embedded, MiniMax cuts 4K image generation to 10 seconds, and Anthropic's 8-day OS proves agent pipelines work. For enterprises, the AI question shifts from whether to adopt to how to integrate."
+},
+{
   "date": "2026-11-10",
   "title": "AI新闻 | 云深处绝影X50负载50kg + 科斯拉预言网站将有生命 + 千问办公2.0补协作短板",
   "summary": "11月6日，云深处科技正式发布四足机器人新产品——绝影X50。它通过“感控融合”全新升级，搭配高刚性高响应关节系统，实现了更大负载、更强通行与更稳姿态的综合突破。云深处进一步拓展了四足机器人在极端环境下的重载作业边界，为应急消防、能源电力等高风险行业解决痛点。重载与通行，长期是四足机器人难以两全的难题：负载一加，爬坡、下台阶的容错空间同步收窄，高强度户外作业；据《商业内幕》今天（9）日晚间报道，美国知名亿万富翁风险投资家维诺德 · 科斯拉认为，所有访客看到相同网页的时代即将过去；“过去几个月，各家都在拼命证明AI越来越能干活。但说实话，一个人能干活，不代表一群人就能协作。”一位长期关注AI办公的业内人士，试用完市面上主流的AI办公产品后发现，有些“麻烦”还是绕不开，最典型的就是有些活儿还得靠人工来回“倒腾”。“Agent能独立完成任务，但很难接住任务在人与人之间的流转。”有时候，AI交付结果后，人跟人之间交接，比Agent自己干那一。",
