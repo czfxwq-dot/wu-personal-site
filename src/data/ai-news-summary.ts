@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-12",
+  "title": "AI新闻 | Adobe实验照片转3D场景 + DeepL推语音翻译Aure暂缺中文 + 文心5.5 Flash预览2800亿参数",
+  "summary": "每年举办的 Adobe MAX 大会上，Adobe 展示的最令人印象深刻的技术之一，往往是那些仍处于实验阶段、尚未正式推出的创新功能；当地时间 11 月 11 日，DeepL 推出语音 AI 翻译模型 Aure，官方称这是其迄今最具动态感、表现最逼真的语音 AI（Voice AI）模型，不过该模型暂不支持中文；一个美食创作者想把镜头从餐桌全景慢慢推到一碗面上。这个动作不难，难的是他没有第二个人帮他推，也没有空间在桌上架一条滑轨。最后他切了一个固定机位，画面清楚，但缺少呼吸感。这张桌子，是今天很多内容创作的真实现场。产品测评、美食、美妆、直播、带货，大量拍摄都发生在几平方米之内。设备其实已经不差：手机能拍4K，口袋云台能稳住画面，相机的画质早已溢出大多数人的需求。可。",
+  "newsItems": [
+    {
+      "title": "Adobe 公布四项 AI 实验项目：照片秒变 3D 场景，还能通过聊天设计 AI 角色",
+      "summary": "每年举办的 Adobe MAX 大会上，Adobe 展示的最令人印象深刻的技术之一，往往是那些仍处于实验阶段、尚未正式推出的创新功能。",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/025/815.htm",
+      "titleEn": "Adobe Unveils Four Experimental AI Projects, from Photo-to-3D to Chat-Based Character Design",
+      "summaryEn": "At its annual MAX conference, Adobe demoed four still-experimental features, among them converting a single photo into a 3D scene and creating AI characters conversationally. As usual, the most striking demos are the ones not yet shipping."
+    },
+    {
+      "title": "DeepL 推出旗下最逼真语音 AI 翻译模型 Aure，实时复现说话者语气起伏、情绪流转等",
+      "summary": "当地时间 11 月 11 日，DeepL 推出语音 AI 翻译模型 Aure，官方称这是其迄今最具动态感、表现最逼真的语音 AI（Voice AI）模型，不过该模型暂不支持中文。",
+      "source": "IT之家",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://www.ithome.com/1/025/810.htm",
+      "titleEn": "DeepL Launches Aure, Its Most Expressive Voice Translation Model",
+      "summaryEn": "DeepL introduced Aure on November 11, calling it its most dynamic and lifelike voice AI model, able to reproduce a speaker's intonation and emotional shifts in real time. Chinese is not supported at launch."
+    },
+    {
+      "title": "和大疆抢食，这家公司做了台桌面摄影机器人",
+      "summary": "一个美食创作者想把镜头从餐桌全景慢慢推到一碗面上。这个动作不难，难的是他没有第二个人帮他推，也没有空间在桌上架一条滑轨。最后他切了一个固定机位，画面清楚，但缺少呼吸感。这张桌子，是今天很多内容创作的真实现场。产品测评、美食、美妆、直播、带货，大量拍摄都发生在几平方米之内。设备其实已经不差：手机能拍4K，口袋云台能稳住画面，相机的画质早已溢出大多数人的需求。可…",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/weiwu/7us3N77Jwt0jzWda.html",
+      "titleEn": "A Startup Takes On DJI with a Desktop Camera Robot",
+      "summaryEn": "Yueqian Innovation built a desktop robotic camera that automates push-in, pull-out and orbiting moves that once required a trained operator or a slider rig. It targets the cramped shooting spaces of food, beauty and livestream creators."
+    },
+    {
+      "title": "当美国无法建设数据中心，会对 AI 产生怎样的冲击",
+      "summary": "作者｜Techno 之王 编辑｜靖宇 2026 年 11 月 4 日，美国中期选举结果落定后的第二天上午，OpenAI 的高管们坐到了一起。",
+      "source": "极客公园",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "http://www.geekpark.net/news/373816",
+      "titleEn": "What Happens to AI If America Cannot Build Data Centers",
+      "summaryEn": "The piece examines the strain on US AI ambitions when data center construction stalls, framed around OpenAI executives meeting the day after the 2026 midterms. Compute capacity, not model quality, may set the pace."
+    },
+    {
+      "title": "文心 5.5 Flash Preview发布！编程、3D 建模、知识工作、内容创作等全面升级",
+      "summary": "11月11日，百度最新基础模型文心 5.5 Flash Preview正式发布。文心 5.5 Flash Preview总参数量达 2800 亿，每个 Token 激活 140 亿参数，支持最长 100 万 Token 的上下文，在编程、3D 建模、知识工作、内容创作等方面表现突出。目前在Terminal-Bench、AutomationBench等多项基准…",
+      "source": "雷锋网",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.leiphone.com/category/industrynews/sqz0hf4DoTPX5mqI.html",
+      "titleEn": "Baidu Releases ERNIE 5.5 Flash Preview with 280 Billion Parameters",
+      "summaryEn": "Baidu's new base model packs 280 billion total parameters with 14 billion activated per token and a context window of up to one million tokens. It targets coding, 3D modeling, knowledge work and content creation, posting competitive scores on Terminal-Bench and AutomationBench."
+    }
+  ],
+  "comment": "三家都在把AI塞进具体工作流：Adobe管创意、DeepL管跨语言沟通、百度管写代码建模。真正卡住落地的不是模型能力，而是数据中心和算力这些基础设施，美国建不动机房，才是这轮AI最现实的瓶颈。",
+  "titleEn": "AI News | Adobe Turns Photos into 3D Scenes + DeepL Launches Voice Model Aure + Baidu's ERNIE 5.5 Flash Preview",
+  "summaryEn": "At Adobe MAX, Adobe showed four experimental projects, including turning a photo into a 3D scene and designing AI characters through chat. DeepL unveiled Aure, its most lifelike voice translation model to date, though Chinese is not yet supported. Baidu released ERNIE 5.5 Flash Preview with 280 billion total parameters, a 1M-token context window, and strong coding and 3D modeling performance.",
+  "commentEn": "All three vendors are pushing AI into concrete workflows: Adobe for creative work, DeepL for cross-language communication, Baidu for coding and modeling. What actually limits adoption isn't model capability but infrastructure—if the US cannot build data centers fast enough, that is the real bottleneck for this AI cycle."
+},
+{
   "date": "2026-11-11",
   "title": "AI新闻 | AMD霄龙嵌入式9006发布 + MiniMax开源H3-Image生图 + Anthropic推Fable 5.2",
   "summary": "AMD 今天（11 月 11 日）发布霄龙（EPYC）嵌入式 9006 系列 SP7 处理器，基于 Zen 6 架构，最高可达 256 核 512 线程，率先在嵌入式平台落地 PCIe Gen6、CXL3.1，搭配 16 通道 DDR5/MRDIMM 内存、7 年产品生命周期；今天（10 日）深夜，MiniMax 宣布，MiniMax H3-Image 正式发布并开放权重；作者｜Cynthia 编辑｜郑玄 传说，光明之神巴德尔梦见自己将死，于是，巴德尔的母亲弗丽嘉遍走世间，令万物立下了绝不伤害他的誓言。",
