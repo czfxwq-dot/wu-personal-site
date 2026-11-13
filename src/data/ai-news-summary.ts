@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-14",
+  "title": "AI新闻 | OpenAI推ChatGPT Wallet支付 + 华为麒麟9050九核16线程 + 中金蚂蚁共探AI财富管理",
+  "summary": "八年研究，两个落地系统，超六万GitHub Stars。 作者丨李秋悦 编辑丨吴 彤 一支女团跳舞，镜头不必再听导演安排，观众甚至能看到拍摄时不存在的机位。传统MV拍摄，摄影机架在哪里，观众看到的就是哪个角度。现在用多台摄像机同时记录舞者动作，再重建出一个三维动态场景，镜头可以任意调换位置；从队形正面绕到侧面，穿过舞者之间，甚至换一个从未真正架设过的机位，重；OpenAI 今天（13 日）宣布推出支付功能 ChatGPT Wallet，让旗下 dot AI 智能体代替用户购物；华为麒麟官方公众号继续揭秘首款「逻辑折叠」技术 τ 芯片 —— 麒麟 9050 系列更多配置信息，新一代灵犀 CPU 详情已公开。",
+  "newsItems": [
+    {
+      "title": "浙大彭思达：从元宇宙到具身智能，一个三维视觉研究者的八年 | 世界模型50人",
+      "summary": "八年研究，两个落地系统，超六万GitHub Stars。 作者丨李秋悦 编辑丨吴 彤 一支女团跳舞，镜头不必再听导演安排，观众甚至能看到拍摄时不存在的机位。传统MV拍摄，摄影机架在哪里，观众看到的就是哪个角度。现在用多台摄像机同时记录舞者动作，再重建出一个三维动态场景，镜头可以任意调换位置；从队形正面绕到侧面，穿过舞者之间，甚至换一个从未真正架设过的机位，重…",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/ai/lpK3LQWqmpZP8jcG.html",
+      "titleEn": "Zhejiang University's Peng Sida: eight years from the metaverse to embodied AI",
+      "summaryEn": "Peng Sida has spent eight years on 3D vision, shipping two production systems and drawing more than 60,000 GitHub stars. His 4D Gaussian Splatting work was showcased by SM Entertainment founder Lee Soo-man at the debut of the girl group A2O LITE, letting cameras fly to angles that were never actually filmed."
+    },
+    {
+      "title": "让智能体帮你购物，OpenAI 推出支付功能 ChatGPT Wallet",
+      "summary": "OpenAI 今天（13 日）宣布推出支付功能 ChatGPT Wallet，让旗下 dot AI 智能体代替用户购物。",
+      "source": "IT之家",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.ithome.com/1/026/994.htm",
+      "titleEn": "OpenAI adds payments with ChatGPT Wallet",
+      "summaryEn": "OpenAI introduced ChatGPT Wallet, a payment feature that lets its dot AI agent buy things for users. It turns the assistant from a recommender into a party that can actually complete a transaction."
+    },
+    {
+      "title": "华为麒麟 9050 系列芯片新一代灵犀 CPU 详细信息公开：9 核 16 线程并行调度，支持内存压缩加速",
+      "summary": "华为麒麟官方公众号继续揭秘首款「逻辑折叠」技术 τ 芯片 —— 麒麟 9050 系列更多配置信息，新一代灵犀 CPU 详情已公开。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/026/993.htm",
+      "titleEn": "Huawei Kirin 9050 details surface: nine-core Lingxi CPU, 16 threads",
+      "summaryEn": "Huawei's Kirin team disclosed more specs for the Kirin 9050 series, its first chip using 'logic folding' technology. The new Lingxi CPU runs nine cores and 16 threads with parallel scheduling and supports memory compression acceleration."
+    },
+    {
+      "title": "通用代码生成器光船，特默尔尝鲜版二，人工智能设置项目会话",
+      "summary": "通用代码生成器光船，特默尔尝鲜版二，人工智能设置项目会话 通用代码生成器光船已发布1.1.0特默尔尝鲜版二。",
+      "source": "开源中国",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.oschina.net/news/503572",
+      "titleEn": "Guangchuan code generator ships Temer preview 2 with AI project sessions",
+      "summaryEn": "The open-source Guangchuan general-purpose code generator released version 1.1.0 Temer Preview 2. The update adds AI-driven project session setup for generating code."
+    },
+    {
+      "title": "中金公司与蚂蚁集团达成战略合作 共探AI赋能财富管理",
+      "summary": "11月13日，中国国际金融股份有限公司（简称“中金公司”）与蚂蚁科技集团股份有限公司（简称“蚂蚁集团”）签署战略合作协议。",
+      "source": "雷锋网",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.leiphone.com/category/industrynews/U7WtbV9kyb90UuZ0.html",
+      "titleEn": "CICC and Ant Group sign strategic AI wealth-management pact",
+      "summaryEn": "China International Capital Corporation and Ant Group signed a strategic cooperation agreement on November 13. The two will jointly explore how AI can be applied to wealth management."
+    }
+  ],
+  "comment": "三件事指向同一件事：AI正从模型层下沉到交易、芯片和资金流这些真正赚钱的地方。谁掌握支付入口、算力底座和金融场景，谁就拿走下一轮利润。",
+  "titleEn": "AI News | OpenAI launches ChatGPT Wallet payments + Huawei Kirin 9050 goes 9-core/16-thread + CICC and Ant team up on AI wealth management",
+  "summaryEn": "OpenAI rolled out ChatGPT Wallet, letting its dot AI agent shop and pay on a user's behalf. Huawei detailed its Kirin 9050 chip, built on a new 'logic folding' design with a nine-core, 16-thread Lingxi CPU. CICC and Ant Group signed a strategic pact to explore AI-driven wealth management.",
+  "commentEn": "All three point the same way: AI is moving from model demos into the places where money actually changes hands — payments, silicon and asset management. Whoever owns the checkout, the compute base and the financial scenario takes the next round of profit."
+},
+{
   "date": "2026-11-12",
   "title": "AI新闻 | Adobe实验照片转3D场景 + DeepL推语音翻译Aure暂缺中文 + 文心5.5 Flash预览2800亿参数",
   "summary": "每年举办的 Adobe MAX 大会上，Adobe 展示的最令人印象深刻的技术之一，往往是那些仍处于实验阶段、尚未正式推出的创新功能；当地时间 11 月 11 日，DeepL 推出语音 AI 翻译模型 Aure，官方称这是其迄今最具动态感、表现最逼真的语音 AI（Voice AI）模型，不过该模型暂不支持中文；一个美食创作者想把镜头从餐桌全景慢慢推到一碗面上。这个动作不难，难的是他没有第二个人帮他推，也没有空间在桌上架一条滑轨。最后他切了一个固定机位，画面清楚，但缺少呼吸感。这张桌子，是今天很多内容创作的真实现场。产品测评、美食、美妆、直播、带货，大量拍摄都发生在几平方米之内。设备其实已经不差：手机能拍4K，口袋云台能稳住画面，相机的画质早已溢出大多数人的需求。可。",
