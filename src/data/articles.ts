@@ -83,9 +83,7 @@ const articleList: ArticleEntry[] = [
 
 <p>What they attack is a person. What they want is a thing.</p>
 
-<p>Everyone assumes he is lazy, timid, not good enough to change jobs. He may be the exact opposite — not someone who does not want it, but someone who dares not want it.</p>
-
-<p>Everyone assumes he is lazy, timid, incapable of changing jobs. He may be the exact opposite: he knows too clearly what he wants, and exactly what it will cost him.</p>
+<p>Everyone assumes he is lazy, timid, not good enough to change jobs. He may be the exact opposite: not someone who does not want it, but someone who dares not want it — he knows too clearly what he wants, and exactly what it will cost him.</p>
 
 <p>To be respected, you have to disagree with someone to their face — and you may be overruled, may be quietly marked down for it.</p>
 
