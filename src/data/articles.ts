@@ -284,7 +284,7 @@ const articleList: ArticleEntry[] = [
 
 <p>For decades this society over-rewarded youth. Whoever reacted fastest, had the most stamina, could do three days of work in one, took the edge. So plenty of people start counting the days the moment they pass thirty-five.</p>
 
-<p><img src="/images/articles/old-timers-spring/fig1.jpg" alt="配图" /></p>
+<p><img src="/images/articles/old-timers-spring/fig1.jpg" alt="Illustration" /></p>
 
 <h2>2. Speed is getting cheap. Something else is getting expensive.</h2>
 
@@ -306,7 +306,7 @@ const articleList: ArticleEntry[] = [
 
 <p>Honestly: past forty you are slower than you were twenty years ago. All-nighters don't work anymore, your reactions are half a beat behind. But the part that slowed down is exactly the part that's depreciating now — and that unnameable thing in you, having lived through cycles, knowing what not to touch, knowing who is lying, is being repriced.</p>
 
-<p><img src="/images/articles/old-timers-spring/fig2.jpg" alt="配图" /></p>
+<p><img src="/images/articles/old-timers-spring/fig2.jpg" alt="Illustration" /></p>
 
 <h2>3. AI doesn't replace you. It amplifies you.</h2>
 
@@ -352,7 +352,7 @@ const articleList: ArticleEntry[] = [
 
 <p>Later he was asking a different question: after all these years, how much have I actually understood?</p>
 
-<p><img src="/images/articles/old-timers-spring/fig3.jpg" alt="配图" /></p>
+<p><img src="/images/articles/old-timers-spring/fig3.jpg" alt="Illustration" /></p>
 
 <p>If you really have lived through cycles, stepped in the holes, got it wrong and pulled it back, and you know what's worth doing and what must not be touched — then forty or fifty may not be the age you start falling behind. It may be the age your experience starts getting repriced.</p>
 
