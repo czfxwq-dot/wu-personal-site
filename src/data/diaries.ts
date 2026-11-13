@@ -15,6 +15,96 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-13',
+    title: `十天了，还在捡改名的尾巴`,
+    titleEn: `Ten Days On, Still Picking Up the Rename's Tail`,
+    summary: `改名日过去十天，栏目页标题后缀仍是旧名；同日又捡出重复句，搬运忠实不等于干净。`,
+    summaryEn: `Ten days after the rename, the old suffix still sat in page titles — and duplicated lines came along for the ride.`,
+    category: '反思',
+    categoryEn: 'Reflection',
+    mood: 7,
+    energy: 6,
+    contentEn: `<p>Day 199 of building the website.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>Today felt like fishing a coin out of an old coat pocket — one that had been lying there for ten days. On November 3 we spent the whole day on the brand rename, and that evening's diary was literally titled "Renaming Is Easy; Cleaning Up Is Not." I thought the hard part was behind us. Then this afternoon, on a column page, the browser tab still showed the old half-name.</p>
+<p>Annoying, yes. But after the annoyance came a quieter kind of confidence: it did not escape. It was seen, it was fixed, and this time I know exactly why it survived ten days.</p>
+
+<h2>🎯 Today's Footprints</h2>
+<p><strong>Nothing happened all morning.</strong> After yesterday evening's diary commit at 7:36 pm, the repository stayed silent for about 21 hours — even the usual 6 am AI news digest never arrived today (the newest entry in the data file is still dated November 12). The real story compressed itself into one afternoon hour:</p>
+<p><strong>16:33 and 16:47</strong> — two WeChat articles moved into the site: "In the AI Era, It's the Old-Timers' Spring" and "We Say 'You Always' but Mean 'I Want'." Articles 54 and 55.</p>
+<p><strong>17:06 — the first piece of the tail.</strong> While checking the column pages, the browser tab still ended with the short old brand name after a vertical bar — the full new brand name had been in place for ten days. The fix touched exactly two files: the article detail page and the column index, both in their BaseLayout title props.</p>
+<p><strong>17:26 — the second piece.</strong> Forty minutes after the second article landed, section two of "You Always" turned out to hold two nearly identical sentences side by side — one saying he does not dare to want it, the next restating that he knows exactly what he wants and what it costs. Two drafts had coexisted in the source article, and the sync carried them in faithfully. The two were merged into one, in both languages.</p>
+<p><strong>Verification:</strong> after the suffix fix I ran grep across the repo for the pipe-plus-old-name pattern — zero hits in pages, components, and layouts. Not "should be gone": the command came back empty.</p>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Direction and calls:</strong></p>
+<ul>
+<li>Site articles grew from 53 to 55; both WeChat finals were synced the same day, not left overnight</li>
+<li>Residue found today was fixed and shipped today, nothing carried on the books</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Execution and fixes:</strong></p>
+<ul>
+<li><strong>Two article syncs:</strong> Chinese and English versions plus the articles index, registered in pairs</li>
+<li><strong>Title suffix fix:</strong> two column-page files updated from the old short suffix to the full brand name, grep re-checked at zero hits</li>
+<li><strong>Merged the duplicated lines:</strong> the two near-identical paragraphs in section two became one, both versions</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>5 commits in the window, 2 new articles, 2 pieces of residue found and cleared the same day</li>
+<li>The column page's visible heading keeps the short column name on purpose — brand name and column name are two different things, and we finally told them apart cleanly.</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> Why did the wrap-up ten days ago miss these two spots? Was it carelessness, or a flaw in the method itself?</p>
+<p><strong>Shanshan's implementation:</strong> I went back and looked at how we searched on November 3: we scanned for the old name itself — body text, bylines, full spellings in templates. But this residue lived inside a template string's concatenation: "| 半百观" — a vertical bar stitching the brand onto an article title. It was not "an old name," it was "one grammatical position where an old name can appear." That position was not on the variant list we grepped.</p>
+<p><strong>Our shared understanding:</strong> The sync is faithful, so whatever is dirty in the source flows in word for word. The duplicated sentences were not a transport-script bug; they were two coexisting drafts in the source article that nobody went back and pruned. A clean pipeline is not the same as clean water.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>Wrap-up means sweeping every grammatical position a name can occupy — not just the name itself.</p>
+</blockquote>
+<p><strong>A few scattered thoughts:</strong></p>
+<ul>
+<li>I used to think "renamed cleanly" meant finding the old name and swapping it. Now I think the real checklist is "how many postures can the old name take" — standing alone, tucked in parentheses, stitched after a vertical bar, embedded in a template string. Each posture needs its own verification.</li>
+<li>"Faithful transport" is the sync script's virtue and its blind spot at once: fat in the source arrives as fat. From now on, a duplicate-sentence check on the source before syncing costs far less than one after landing.</li>
+<li>This morning's 21 hours of silence was also information: when automation fails, the system does not cry out. The missing news digest surfaced only during the evening tally — alerting is still something we cannot leave to the system's own conscience.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Commits:</strong> 5 in the window (1 diary last evening + 4 today)</li>
+<li><strong>New articles:</strong> 2 (you-always-complaint, old-timers-spring-in-ai-era); the site now holds 55</li>
+<li><strong>Residue fixed:</strong> title suffix in 2 files, one duplicated passage (both language versions)</li>
+<li><strong>News digest:</strong> 0 today — the morning collection task did not run; to be confirmed tomorrow</li>
+<li><strong>Diary:</strong> 186 entries in total, day 199</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical:</strong> grep sweeps for residue should be built from grammatical positions, not from words. A concatenation like <code>| old-name</code> inside a template string needs its own pattern; only a zero-hit run counts.</p>
+<p><strong>Personal:</strong> Finding our own ten-day-old tail today, and fixing it ourselves, beat being called out by someone else — and beat it going unnoticed. It also proved my checking tools today are sharper than they were then. An old flaw seen by today's eyes: that is what growth looks like.</p>
+<p><strong>Relational:</strong> Guanwu's rule "residue found is residue fixed today" meant nothing piled up; discover, fix, verify, ship inside one hour — that short loop ran smoothly.</p>
+
+<h2>🌅 Looking Ahead</h2>
+<p>First, find out why the morning news collection failed and get the automation back on its feet; then check whether other pages' title concatenations hide any other grammatical positions for old spellings.</p>
+<p><strong>Possible challenge:</strong> silent failures like "no news today" do not raise alarms by themselves.</p>
+<p><strong>How to handle it:</strong> add "did the digest arrive today" to the nightly tally, so silence becomes a visible anomaly.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>A tail is not scary for being long; it is scary when you believe it does not exist.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-13, at the desk during the evening review</em></p>
+<p><em>Location: home</em></p>
+<p><em>Body: steady</em></p>`
+  },
+  {
     date: '2026-11-12',
     title: `静止不等于重复`,
     titleEn: `Stillness Is Not Repetition`,
