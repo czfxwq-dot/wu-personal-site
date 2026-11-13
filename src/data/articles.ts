@@ -15,6 +15,241 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'you-always-complaint',
+    date: '2026-11-10',
+    title: `我们说的都是“你总是”，心里想的是“我想要”`,
+    titleEn: `We Say "You Always", What We Mean Is "I Want"`,
+    excerpt: `老陈给领导打了一段话，打到一半全删了，转头跟朋友骂了半小时。抱怨真正卡住的不是音量，是句子的类型——它要的是对方认错，不是对方做一件事。把“你总是”翻译成“我想要、我愤怒、我害怕”，那封没寄出去的信才有收件人。`,
+    excerptEn: `Lao Chen typed three lines to his boss, deleted them halfway through, then spent half an hour complaining to a friend. What blocks a complaint is not volume — it is the type of sentence. A complaint asks the other person to admit fault, not to do something. Translate "you always" into "I want, I am angry, I am afraid", and the letter that was never sent finally has an address.`,
+    tag: '深度分析',
+    tagEn: 'In-Depth Analysis',
+    contentEn: `<p>Why do we turn even "I want" into an accusation before we can say it?</p>
+
+<p>Lao Chen once sent me a screenshot.</p>
+
+<p>Three lines he had typed into the message box with his boss. Halfway through, he deleted all of them.</p>
+
+<p>Then he sent the screenshot to me with one line: tell me, is this guy sick or what.</p>
+
+<p>Those three lines never left his phone.</p>
+
+<p>During the day he answers "got it" in the group chat. At ten at night he calls me and curses for half an hour: the boss holds meetings all day, so the work all piles up after hours; six o’clock is supposedly when you can leave, but whoever leaves first gets marked "bad attitude"; one @ on the weekend and two days of plans are gone.</p>
+
+<p>You probably know someone like this. Or maybe you are this person.</p>
+
+<p>If you are, let me say one thing first: this is not you being oversensitive.</p>
+
+<p>Leaving work early stopped being a time long ago. It is a "theoretically". You are at the dinner table, but you are in the group chat; you are home, but your head is still in the meeting room.</p>
+
+<p>It is not that you have no temper. You spend it in the safest places — private chats, stairwells, the dinner table — only on people you trust.</p>
+
+<p>After the rant you know perfectly well nothing will change. You rant anyway, because not ranting feels worse.</p>
+
+<p>Start with some numbers. In a March 2026 survey by China Youth Daily, 77.5% of respondents said the line between work and life has already blurred, 52.5% still answer work messages after hours, and 65.0% feel their life has been "invaded" by work.</p>
+
+<p>So this piece is not about how to refuse overtime. That has real costs, and no amount of "be brave" solves it. I want to do something else: take the anger you have been carrying for months without being able to name it, and explain where it comes from and why it keeps circling in place.</p>
+
+<p>I prefer to read a complaint as a sentence delivered to the wrong address: it began as a request and came out as an indictment.</p>
+
+<p>There is a popular line: what is the point of complaining. It is not wrong, but it is too fast — so fast that before you work out what hurts, you are already convicted of "all talk, no action".</p>
+
+<p>I would rather start with a dumber question: where do you say these things?</p>
+
+<p>What blocks a complaint is not volume. It is the type of sentence. It asks the other person to admit fault, not to do a thing.</p>
+
+<p>"You always do this" leaves the other person only one move: defend, counterattack, drag up old history — because what they hear is "you are a bad person". "Could you cook on Wednesday" can be agreed to, can be refused, but at least it is a question that can be answered.</p>
+
+<p>Admitting fault is cheap: just nod. Doing it is expensive: it requires actually changing. That is why a complaint stays exactly where it is — it is demanding an answer that costs nothing.</p>
+
+<p><img src="/images/articles/you-always-complaint/fig1.jpg" alt="Illustration" /></p>
+
+<h2>1. Complaints come in two kinds: a distress signal and a painkiller</h2>
+
+<p>Before sorting them, accept one premise: most complaints are useless not because they are untrue, but because they were said to someone who will not change anything.</p>
+
+<p>That distinction matters more than anything else here.</p>
+
+<p>Signal complaints: something really is unreasonable, and you say it so that it can be handled. Overtime with no boundary, promises that do not hold, a division of labor that is never fair — saying these is necessary, even responsible.</p>
+
+<p>Numbing complaints: the same thing said thirty times, said every time, moved every time. You feel a little lighter, then you go back to where you were.</p>
+
+<p>The test is not tone. It is what follows: after you said it, did you do one small thing that made the situation different?</p>
+
+<p>If yes, it is a signal. If no, it is a painkiller.</p>
+
+<p>Pain relief is not a sin. People sometimes do need to breathe first. But if you have taken the same painkiller for three years and the illness is still there, it is worth asking which pain you were actually treating.</p>
+
+<h2>2. Why the loudest complainers usually move the least</h2>
+
+<p>What they attack is a person. What they want is a thing.</p>
+
+<p>Everyone assumes he is lazy, timid, not good enough to change jobs. He may be the exact opposite — not someone who does not want it, but someone who dares not want it.</p>
+
+<p>Everyone assumes he is lazy, timid, incapable of changing jobs. He may be the exact opposite: he knows too clearly what he wants, and exactly what it will cost him.</p>
+
+<p>To be respected, you have to disagree with someone to their face — and you may be overruled, may be quietly marked down for it.</p>
+
+<p>To get fairness, you have to fight for it — and you may lose, and burn the relationship doing it.</p>
+
+<p>To leave, you first have to admit that three years were partly wasted.</p>
+
+<p>All three point to the same cost: admitting you have a need, and living with the consequences.</p>
+
+<p>The cost of complaining is close to zero. It does not require facing the person, does not require bearing any result, and it buys you a table full of people agreeing with you.</p>
+
+<p>So complaining is usually not a lack of ability. It is "too good a deal".</p>
+
+<p>In psychology, Jung described something similar with the "shadow": the part of us we refuse to admit and push down hardest is the part we can see most clearly in other people.</p>
+
+<p>You complain that a colleague is selfish, that a partner is inconsiderate, that a friend is cold. Stop for a moment: do you allow even a little of that word in yourself?</p>
+
+<p>Not that you really are selfish. It means the thing you dare not want, the anger you dare not admit, got pushed down — and now you see it with unusual clarity in someone else.</p>
+
+<p>Jung called this projection. In plain words: the more specific your complaint, the more specific that thing is inside you.</p>
+
+<h2>3. A complaint is a letter that was never mailed</h2>
+
+<p>If a complaint really were one sentence, it would originally look like this:</p>
+
+<p>I want ____.</p>
+
+<p>I am angry that ____.</p>
+
+<p>I am afraid that ____.</p>
+
+<p>Three blanks, and not one of them can be skipped. Miss any one, and the sentence cannot be mailed; it can only loop inside your mouth.</p>
+
+<p>Take the most common case: a wife complaining to friends that her husband does no housework.</p>
+
+<p>What she meant to write might be: "I want you to see that I am tired too. I am angry that you treat my effort as the default. I am afraid that if I say it, you will think I am petty."</p>
+
+<p>What she actually said was: "How can he be like this."</p>
+
+<p>Another one: an employee who does not dare speak up in a meeting, then goes and curses the company.</p>
+
+<p>The original: "I want to be given real responsibility. I am angry that my credit gets taken. I am afraid that speaking up will get me quietly punished."</p>
+
+<p>What came out was still: "How can this company be like this."</p>
+
+<p>Notice: not one of those three sentences attacks anyone. All three are about "I".</p>
+
+<p>And "how can they be like this" does not mention "I" even once.</p>
+
+<p>That is why complaining makes you angrier the longer it runs: you are using the third person to talk about a first-person matter.</p>
+
+<p><img src="/images/articles/you-always-complaint/fig2.jpg" alt="Illustration" /></p>
+
+<p>I have seen too many moments like this: hands shaking with anger, mouth saying "forget it, forget it"; then half an hour to a friend, and the more you talk the more wronged you feel.</p>
+
+<p>You are not angry at him. You are angry at the version of you who did not dare open his mouth.</p>
+
+<p>Anger with no outlet turns into complaint. A complaint is anger’s stand-in: since you dare not be angry at the person, you are angry at him in front of the whole world.</p>
+
+<h2>4. You are not oversensitive. You told the wrong person.</h2>
+
+<p>Everyone alive wears masks: good employee, good partner, sensible person, emotionally stable adult.</p>
+
+<p>The mask itself is not the problem. It keeps you from losing it in the meeting room, from wounding people at home.</p>
+
+<p>The problem is that once you wear it long enough, you forget you still have a face.</p>
+
+<p>Tired, and you say "it is fine". Wronged, and you say "whatever works". Wanting something, and you say "up to you". Each of those sentences is light. Together they are heavy.</p>
+
+<p>Heavy to what point? Heavy enough that one day something tiny makes you explode; or heavy enough that you start repeating the same complaint, eight hundred times and still going.</p>
+
+<p>That is not you being oversensitive. That is simply the only place you still have a voice left: the complaint.</p>
+
+<p>In his later work Jung spoke of the "self" — roughly, that a person has a tendency to live himself out whole. It sounds abstract, but in daily life it is very concrete:</p>
+
+<p>The part you pushed down does not disappear. It comes back for you in another form. It may be a breakdown that makes no sense, or a complaint that will not stop.</p>
+
+<p>A complaint is not a disease, it is a crack. What shows through the crack is the part of yourself you have kept un-lived for a very long time.</p>
+
+<h2>5. If I stop complaining, what do I have to carry?</h2>
+
+<p>It is not a pleasant question, but it is the most valuable sentence in this piece.</p>
+
+<p>Complaining buys you something. That is why it will not leave.</p>
+
+<p>Sympathy: you are the victim, everyone is on your side.</p>
+
+<p>Exemption: it is not that I did not try, it is that this place is rotten.</p>
+
+<p>Delay: once things improve, then I will move.</p>
+
+<p>All three are real returns. No one keeps doing something with zero return for long.</p>
+
+<p>So "stop complaining" is nearly useless advice. You are not failing to see that you should stop; you are not yet ready to give up those three things.</p>
+
+<p>The real question is this: if I stop complaining, what do I have to carry?</p>
+
+<p>The answer: carrying the fact that I may actually have to ask once, and may not get it.</p>
+
+<p>That is where most people get stuck. A complaint is a bomb shelter you build for yourself. A bomb shelter solves nothing, but it lets you stop hearing the shelling for a while.</p>
+
+<p>The moment you take the headphones off, the shelling comes back.</p>
+
+<h2>6. But let us be clear: not every complaint should be psychologized</h2>
+
+<p>I have to stop here, or this piece turns into a different kind of violence.</p>
+
+<p>Some complaints are not about you at all.</p>
+
+<p>Wages held back, promises broken again and again, a division of labor unfair for years, being quietly punished, having your credit taken — these are not "you dare not ask". These are a broken environment. Explaining them as your psychological homework asks the person to blame themselves a second time.</p>
+
+<p>Psychology has limits. It is good for asking "why do I keep stopping in the same place". It is not good for excusing a bad environment.</p>
+
+<p>So the order should be: first decide whether this thing needs to be handled, then decide why I have not handled it.</p>
+
+<p>If it is the first, what you need is action, evidence, boundaries, and if necessary, leaving.</p>
+
+<p>If it is the second, what you need is the courage to say the sentence out loud.</p>
+
+<p>Most people’s predicament is both at once: the environment really is bad, and I really do not dare move. So complaining becomes the only safe position — no need to admit the environment is temporarily unsolvable, and no need to admit I am afraid.</p>
+
+<h2>7. Three steps, but do not expect three steps to cure it</h2>
+
+<p>Step one: change "who does he think he is" into "I hope".</p>
+
+<p>You do not have to say it to their face. Fill in those three blanks on paper first. If you cannot write them, that means you have not even dared to work out what you want — which is itself the answer.</p>
+
+<p>Step two: find one specific person and say one specific need.</p>
+
+<p>Not "the whole world". One person. No principles, one concrete thing: "I cooked three times this week. I would like you to do the dishes." Concrete enough to be agreed to, and concrete enough to be refused.</p>
+
+<p>Step three: allow yourself to carry the risk of being refused.</p>
+
+<p>This is the hardest step and the only one that works. Because the essence of a need is not "I want". It is "I am willing to carry the possibility of being refused for it".</p>
+
+<p>People who dare not ask are not without desire. They just will not pay that price.</p>
+
+<h2>Finally</h2>
+
+<p>Later I asked the man from the beginning: "What is it you actually want?"</p>
+
+<p>He thought for a long time, then said: "I am afraid that if I bring it up, I will not be able to stay."</p>
+
+<p>You see, he is not lazy. He is afraid. Every complaint he makes is a respectable way of phrasing that one sentence: I am afraid.</p>
+
+<p>So next time you want to complain, do not rush to scold yourself for "starting again".</p>
+
+<p>Pause three seconds and ask it one question: who was this sentence originally addressed to?</p>
+
+<p>If the answer is a specific person, you owe yourself one conversation.</p>
+
+<p>If the answer is "I do not know", you owe yourself one moment of honesty.</p>
+
+<p>A complaint is a cough. Coughing it out is not a bad thing; it is the body telling you something is wrong.</p>
+
+<p>But a cough cannot cure the illness. Coughing and never getting it checked is the real delay.</p>
+
+<p>Your most recent complaint — translated into "I want ____, I am angry that ____, I am afraid that ____" — what would it be? Leave one line in the comments. It might be the first time you see clearly what you want.</p>
+
+<p><img src="/images/articles/you-always-complaint/fig3.jpg" alt="Illustration" /></p>
+
+<p>A complaint is a cough: it tells you something is wrong, but it cannot cure it. The real question is not "how can they be like this", but "why do I not dare to ask".</p>`,
+  },
+  {
     slug: 'old-timers-spring-in-ai-era',
     date: '2026-11-08',
     title: `AI 时代，老登的春天来了`,
