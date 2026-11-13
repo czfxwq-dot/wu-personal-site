@@ -15,6 +15,127 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'old-timers-spring-in-ai-era',
+    date: '2026-11-08',
+    title: `AI 时代，老登的春天来了`,
+    titleEn: `In the AI Era, the Old Timer's Spring Has Come`,
+    excerpt: `四十三岁那年，一个猎头电话让他发现自己不值钱了。可 AI 出来以后，贬值最快的恰恰是"快"，被重新定价的是"敢替结果负责"的判断力。把二十年的判断写成三十七条交给 AI，四五十岁也许才刚开始。`,
+    excerptEn: `At forty-three, one headhunter's call convinced him he was worthless. Then AI arrived: what's depreciating fastest is speed, and what's being repriced is judgment — the willingness to answer for the outcome. Write twenty years of judgment into thirty-seven rules, hand them to AI, and forty or fifty may be the beginning rather than the end.`,
+    tag: 'AI观点',
+    tagEn: 'AI Perspective',
+    contentEn: `<p>He was forty-three the year he found out he was no longer worth anything.</p>
+
+<p>That day a headhunter called. They talked for seven or eight minutes, and then the question came from nowhere: how old are you now?</p>
+
+<p>Forty-three, he said.</p>
+
+<p>There was a pause on the line. This role — the client caps it at forty.</p>
+
+<p>Then the follow-up: sorry about that. It's mainly that their team is young.</p>
+
+<p>He hung up and called me, and said the one line I still remember: it isn't that I can't do the work. It's that I suddenly don't know what I'm worth.</p>
+
+<h2>1. "A young team" is a price quote</h2>
+
+<p>This isn't one man's bad luck. China News Service wrote about a thirty-eight-year-old who sent a hundred and nineteen résumés in six months, landed three interview invitations — and was asked in one of them whether he could compete with colleagues born after 1995.</p>
+
+<p>Zhaopin's numbers are blunter: past thirty-five, it takes forty-two applications on average to buy one interview. At twenty-five, eight will do.</p>
+
+<p>So that "young team" from the headhunter was really a quote.</p>
+
+<p>What's interesting is that the price has moved again in the past two years.</p>
+
+<p>Garry Tan, president of Y Combinator — the Silicon Valley accelerator behind Airbnb and Stripe — puts it this way: founders in their forties and fifties, with taste and judgment, are becoming the next generation of unicorn founders. Because with AI agents, they can have dozens or hundreds of software workers on the floor at any hour.</p>
+
+<p>It sounds like consolation. It's a price signal.</p>
+
+<p>For decades this society over-rewarded youth. Whoever reacted fastest, had the most stamina, could do three days of work in one, took the edge. So plenty of people start counting the days the moment they pass thirty-five.</p>
+
+<p><img src="/images/articles/old-timers-spring/fig1.jpg" alt="配图" /></p>
+
+<h2>2. Speed is getting cheap. Something else is getting expensive.</h2>
+
+<p>Since AI arrived, the thing that used to be worth the most — speed — is getting cheap, fast. Code, research, analysis: it's quicker than you, and it doesn't sleep or ask for a salary. You're fast; it's faster. A young person with AI is just as fast.</p>
+
+<p>So speed is no longer the barrier. The barrier moved — from how fast you run to where you're running.</p>
+
+<p>What's starting to get expensive is judgment.</p>
+
+<p>Judgment isn't having more information. Information is the cheapest thing on earth now. Judgment is being willing to answer for the result.</p>
+
+<p>It can hand you ten options, a pile of data, a risk list. But it doesn't know how much is left in your account, where next month's payroll comes from. It doesn't know that taking this order means the shop floor works overtime for three months straight. And it never has to sit across a meeting table, look you in the eye, and answer "why." It finishes the task and hands it over. You carry what happens next.</p>
+
+<p>And young people? They carry consequences too — on that point there's no difference. The difference is weight. They haven't carried a payroll that feeds thirty people. They haven't sat at month-end working out whether wages can actually be paid.</p>
+
+<p>The weight of responsibility can only be bought with time and money.</p>
+
+<p>That old machine — repair it or replace it? This number on the report is wrong — a bookkeeping slip, or something underneath? Can this person hold that position or not? None of these come with standard answers. Someone who has actually run an operation for ten or twenty years has seen more, and usually smells it earlier. However clever a young person is, they cannot compress the thickness of time.</p>
+
+<p>Honestly: past forty you are slower than you were twenty years ago. All-nighters don't work anymore, your reactions are half a beat behind. But the part that slowed down is exactly the part that's depreciating now — and that unnameable thing in you, having lived through cycles, knowing what not to touch, knowing who is lying, is being repriced.</p>
+
+<p><img src="/images/articles/old-timers-spring/fig2.jpg" alt="配图" /></p>
+
+<h2>3. AI doesn't replace you. It amplifies you.</h2>
+
+<p>But the point isn't being priced. It's whether you have an interface that lets all that experience actually run.</p>
+
+<p>In recent years I've watched two kinds of people use AI.</p>
+
+<p>One treats it as a search engine. "Write me a plan," they say. Out comes something balanced and bland, they glance at it, close it, and conclude: AI is overrated.</p>
+
+<p>The other is in their forties or fifties, and asks like this: we can't take this order if gross margin is under fifteen percent — give me three options on that premise, and mark the worst case in each. What comes back can be used directly.</p>
+
+<p>The difference isn't the tool. It's whether those twenty years made it into the question.</p>
+
+<p>What you've done decides what you ask. If you've never lost money, you won't think to ask about the worst case. If a client has never stiffed you, you won't think to ask about payment milestones. AI won't come up with these on its own. It only answers the question you asked.</p>
+
+<p>So old experience doesn't take effect automatically. It first has to become a sentence AI can understand: a premise, a standard, a red line that says start over if this is crossed.</p>
+
+<p>My own practice comes down to three things.</p>
+
+<p>First, write the criteria down. Not "be reliable," but: gross margin under fifteen percent, payment terms beyond ninety days, this client was late twice last year — hit any one and we don't take it.</p>
+
+<p>Second, treat AI as an apprentice, not a teacher. Let it run ten options against my standard and I pick one; don't ask it to tell me who's right.</p>
+
+<p>Third, I only do the last twenty percent. It runs the first eighty. The last twenty — which number is wrong, which sentence can't be said this way, whether this person can be trusted with the job — I look at that myself.</p>
+
+<p>That twenty percent is my price.</p>
+
+<p>A master craftsman can't take on three apprentices in a day. A master craftsman who knows AI can review thirty proposals in a day, because all thirty were run against his rules.</p>
+
+<h2>4. He wrote thirty-seven rules down and handed them to AI</h2>
+
+<p>After that call he stopped applying to jobs that cap at forty.</p>
+
+<p>He wrote down the judgments he'd made over twenty years, one by one: what kind of order not to take, what kind of person not to put in that seat, which numbers on a report are fake. Thirty-seven of them.</p>
+
+<p>Then he handed those thirty-seven rules to AI.</p>
+
+<p>Three months later, working alone, he was producing more proposals than his old department had. The owner of a small company hired him as a consultant, at a fee higher than his old salary.</p>
+
+<p>He was stunned himself.</p>
+
+<p>He used to worry about one thing: can I still be faster than young people?</p>
+
+<p>Later he was asking a different question: after all these years, how much have I actually understood?</p>
+
+<p><img src="/images/articles/old-timers-spring/fig3.jpg" alt="配图" /></p>
+
+<p>If you really have lived through cycles, stepped in the holes, got it wrong and pulled it back, and you know what's worth doing and what must not be touched — then forty or fifty may not be the age you start falling behind. It may be the age your experience starts getting repriced.</p>
+
+<p>And repriced by your own hand.</p>
+
+<p>AI does not lack hands. It lacks someone willing to sign for the result.</p>
+
+<p>The old timer's spring doesn't arrive in the AI era. It's survived into being.</p>
+
+<p>I'm Banbai Guan Shijie — here to help you see the AI era clearly.</p>
+
+<p>Tell me in the comments: has age ever been held against you? At what number?</p>
+
+<p>Forward this to someone you think hasn't wasted a single year.</p>`
+  },
+  {
     slug: 'pure-living-not-lying-flat',
     date: '2026-11-04',
     title: `纯过日子不是躺平，是把命从"更快"手里抢回来`,
