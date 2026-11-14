@@ -36,7 +36,7 @@ import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -70,13 +70,28 @@ USER_AGENT = 'Mozilla/5.0 (compatible; ban-bai-news/2.0; +https://www.ban-bai.co
 #
 # 已失效（2026-11-01 实测，返回 text/html 反爬验证页而不是 XML，属长期封禁，别再放回来）：
 #   36氪 https://36kr.com/feed      机器之心 https://www.jiqizhixin.com/rss
+# 2026-11-14 增补产业源：栏目定位从「AI 技术」往「AI 产业/人物/大公司」挪，
+# 光靠科技垂类不够——黄仁勋辞任这种事，科技媒体只是转载，首发和持续跟进在财经。
+# 元组第三项是解析器类型：
+#   'rss'        = 标准 RSS/Atom
+#   'sina_roll'  = 新浪滚动新闻 JSON 接口（见 parse_sina_roll）
+#   'wallstcn'   = 华尔街见闻内容 JSON 接口（见 parse_wallstcn）
+# 实测记录（2026-11-14 09:20）：
+#   财新 https://www.caixin.com/rss/            → 302，付费墙，无公开 feed
+#   第一财经 /api/ajax/getlistbycid?cid=48      → 200 可用但内容停在 10-29，摘要字段为空，暂不接
+#   界面 /rss/1.xml、36氪 /feed-newsflash        → 404 / 反爬验证页
+#   虎嗅 /rss/0.xml、rsshub.app                  → 连接失败
 RSS_FEEDS = [
-    ('IT之家', 'https://www.ithome.com/rss/'),
-    ('量子位', 'https://www.qbitai.com/feed'),
-    ('开源中国', 'https://www.oschina.net/news/rss'),
-    ('雷锋网', 'https://www.leiphone.com/feed'),
-    ('极客公园', 'https://www.geekpark.net/rss'),
-    ('InfoQ', 'https://www.infoq.cn/feed'),
+    ('IT之家', 'https://www.ithome.com/rss/', 'rss'),
+    ('量子位', 'https://www.qbitai.com/feed', 'rss'),
+    ('开源中国', 'https://www.oschina.net/news/rss', 'rss'),
+    ('雷锋网', 'https://www.leiphone.com/feed', 'rss'),
+    ('极客公园', 'https://www.geekpark.net/rss', 'rss'),
+    ('InfoQ', 'https://www.infoq.cn/feed', 'rss'),
+    # lid=2516：新浪滚动新闻的科技/财经混合流，带 intro 摘要，更新到分钟级
+    ('新浪财经', 'https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2516&num=40&page=1', 'sina_roll'),
+    # global 频道偏全球宏观+产业，同一条会返回多次，交给 is_duplicate 去重
+    ('华尔街见闻', 'https://api-one.wallstcn.com/apiv1/content/articles?channel=global&limit=30&accept=article', 'wallstcn'),
 ]
 
 # 源健康阈值（E011）：单源失败必须被看见，不能再「悄悄从 6 个源变成 5 个源」。
@@ -98,17 +113,43 @@ STRONG_RE = re.compile(
 # 单独的 AI 两个字母按大小写匹配，避免命中 AirPods 一类词
 AI_RE = re.compile(r'(?<![A-Za-z])AI(?![A-Za-z])')
 
-# 黑名单：AI 垂类源里也会混进来的东西
-BLOCK_RE = re.compile(
+# 大公司与关键人物（2026-11-14 加）：栏目定位是「AI 产业」，主体就是这些名字。
+# 但光有名字不够——「微软 365 宕机」「苹果发布会」都会被命中，跟 AI 无关，
+# 所以必须再叠一个产业语境词（见 INDUSTRY_RE）才放行。
+# 注意命名：ENTITY_RE 已被下面的 HTML 实体清理占用，别重名（2026-11-14 踩过）。
+BIGCO_RE = re.compile(
+    r'英伟达|NVIDIA|黄仁勋|台积电|TSMC|AMD|英特尔|Intel|高通|三星|SK\s*海力士|博通|阿斯麦|ASML|'
+    r'Arm|马斯克|Musk|奥特曼|Altman|苏姿丰|孙正义|李飞飞|杨立昆|'
+    r'微软|Microsoft|谷歌|Google|Meta|亚马逊|Amazon|苹果|Apple|特斯拉|Tesla|'
+    r'字节|腾讯|阿里|百度|华为|美团|小米'
+)
+
+# 产业语境：公司治理、资本动作、人事、产业政策。命中它 + BIGCO_RE 才算产业新闻。
+INDUSTRY_RE = re.compile(
+    r'董事会|CEO|CTO|COO|辞任|辞职|离任|离职|卸任|接任|接棒|任命|高管|创始人|掌门人|联名|请愿|'
+    r'收购|并购|入股|融资|投资|IPO|上市|估值|市值|财报|营收|利润|亏损|订单|产能|扩产|建厂|代工|供应链|'
+    r'出口管制|制裁|禁令|监管|反垄断|调查|诉讼|和解|'
+    r'裁员|竞业|重组|拆分|签约|战略|'
+    r'股价|大涨|大跌|暴跌|涨停|跌停'
+)
+
+# 永不放行：赛事、促销、厂商稿这类，跟 AI 产业无关。
+# 「如何让 / 嘉宾 / 圆桌」是雷锋网式厂商活动稿的高频词。
+HARD_BLOCK_RE = re.compile(
     r'德杯|电竞|LPL|KPL|夺冠|赛事|季后赛|球赛|世界杯|'
-    r'金价|房价|股价|股市|保险|招聘会|招聘|'
     r'咖啡|奶茶|早鸟|特惠|门票|优惠|扫码|抽奖|福利|双十一|双11|'
     r'报名|评选|直播预告|开奖|'
-    # 厂商稿与活动报道：雷锋网这类内容多，标题通常是「XX 如何让 AI 走进业务」「N 位嘉宾判断」
     r'如何让|怎么让|嘉宾|圆桌|专访|对谈|实录|闭门|沙龙|'
-    # 厂商自家产品的更新贴，不是新闻（开源中国常出这种「本周更新：上线 XX 模块」）
     r'本周更新|产品更新|更新日志|版本更新说明'
 )
+
+# 软黑名单：这些词本身正常，只是出现在纯消费级新闻里才算噪音。
+# 「股价」在「英伟达股价」里是正经产业新闻，「招聘」在「董事会尚未选定 CEO 招聘猎头」里也是——
+# 所以只在【不是产业新闻】时才拦（2026-11-14 前是硬拦，黄仁勋那条就是这么被丢的）。
+SOFT_BLOCK_RE = re.compile(r'金价|房价|股价|股市|保险|招聘会|招聘')
+
+# 兼容旧引用：两段合起来就是原 BLOCK_RE 的语义
+BLOCK_RE = re.compile(f'{HARD_BLOCK_RE.pattern}|{SOFT_BLOCK_RE.pattern}')
 
 # 分类：只输出这套规范值，别再让 category 长出 130 种写法
 CATEGORY_RULES = [
@@ -117,6 +158,12 @@ CATEGORY_RULES = [
     ('机器人', 'Robotics', r'机器人|具身|人形|机械臂|灵巧手'),
     ('大模型', 'Large Models', r'大模型|语言模型|基础模型|推理模型|GPT|Claude|Gemini|LLM|Qwen|DeepSeek|Kimi|通义|文心|混元|豆包|智谱|MiniMax'),
     ('AI投融资', 'AI Investment & Financing', r'融资|估值|IPO|上市|收购|并购|募资|领投'),
+    # 2026-11-14 加：产业/人物/大公司类。放在「AI投融资」之后——「英伟达融资」这类
+    # 两者同分时按顺序取靠前的，归投融资比归产业更准。
+    # 只放「具体公司 + 治理动作」。CEO/高管 这类泛词不进分类规则——否则
+    # 「礼来 CEO 回应 AI 攻克癌症」这种非科技公司新闻也会被归到 AI产业（2026-11-14 实测）。
+    ('AI产业', 'AI Industry', r'董事会|辞任|离任|接任|掌门人|创始人|裁员|重组|拆分|'
+                              r'英伟达|黄仁勋|台积电|马斯克|奥特曼|苏姿丰|反垄断|制裁|禁令|出口管制'),
     ('开源', 'Open Source', r'开源'),
     ('AI工具', 'AI Tools', r'工具|插件|编辑器|编程|代码|Copilot|IDE'),
     ('AI应用', 'AI Applications', r'应用|落地|产品|客户|收入|发布|上线'),
@@ -232,6 +279,30 @@ def _child_text(el, names):
     return ''
 
 
+CST = timezone(timedelta(hours=8))
+
+
+def _aware(dt):
+    """统一成带时区的 datetime。RSS 的 pubDate 有时不带时区，JSON 源给的是时间戳，
+    混在一起排序会抛「can't compare offset-naive and offset-aware」。"""
+    if dt is None:
+        return None
+    return dt if dt.tzinfo else dt.replace(tzinfo=CST)
+
+
+def _ts_to_dt(ts):
+    """秒级时间戳 → 东八区 aware datetime（新浪、华尔街见闻都用秒级）"""
+    try:
+        v = int(str(ts).strip())
+    except (TypeError, ValueError):
+        return None
+    if v > 10 ** 11:  # 毫秒
+        v //= 1000
+    if v <= 0:
+        return None
+    return datetime.fromtimestamp(v, tz=CST)
+
+
 def parse_feed(raw, source):
     """兼容 RSS 2.0 和 Atom，不依赖 feedparser。
 
@@ -273,7 +344,7 @@ def parse_feed(raw, source):
         raw_date = _child_text(it, {'pubdate', 'published', 'updated', 'date'})
         if raw_date:
             try:
-                published = parsedate_to_datetime(raw_date.strip())
+                published = _aware(parsedate_to_datetime(raw_date.strip()))
             except (TypeError, ValueError):
                 published = None
         if title:
@@ -285,6 +356,66 @@ def parse_feed(raw, source):
                 'published': published,
             })
     return entries, repaired
+
+
+def parse_sina_roll(raw, source):
+    """新浪滚动新闻 JSON：result.data[] 里 title / intro / url / ctime。
+    intro 是现成的一句话摘要，比正文干净，直接用。"""
+    data = json.loads(_decode_lenient(raw))
+    block = data.get('result') if isinstance(data, dict) else None
+    items = (block.get('data') if isinstance(block, dict) else None) or []
+    if not isinstance(items, list):
+        raise ValueError(f'返回结构异常：{str(items)[:60]}')
+    entries = []
+    for it in items:
+        title = clean_html(it.get('title') or it.get('stitle') or '')
+        summary = clean_html(it.get('intro') or it.get('summary') or '')
+        link = (it.get('url') or it.get('wapurl') or '').strip()
+        if not title or not link:
+            continue
+        entries.append({
+            'title': title,
+            'summary': summary,
+            'url': link,
+            'source': source,
+            'published': _ts_to_dt(it.get('ctime')),
+        })
+    return entries, False
+
+
+def parse_wallstcn(raw, source):
+    """华尔街见闻 JSON：data.items[]，字段 title / content_short / uri / display_time。
+    同一条内容会在一页里重复出现好几次，交给后面的 is_duplicate 去重。"""
+    data = json.loads(_decode_lenient(raw))
+    block = data.get('data') if isinstance(data, dict) else None
+    # limit 超过 30 时这个接口会返回 data 为字符串的错误体，当作源故障处理
+    if not isinstance(block, dict):
+        raise ValueError(f'返回结构异常：{str(block)[:60]}')
+    items = block.get('items') or []
+    entries = []
+    for it in items:
+        title = clean_html(it.get('title') or '')
+        summary = clean_html(it.get('content_short') or it.get('content') or '')
+        link = (it.get('uri') or '').strip()
+        if link.startswith('/'):
+            link = 'https://wallstreetcn.com' + link
+        if not title or not link:
+            continue
+        entries.append({
+            'title': title,
+            'summary': summary,
+            'url': link,
+            'source': source,
+            'published': _ts_to_dt(it.get('display_time')),
+        })
+    return entries, False
+
+
+PARSERS = {
+    'rss': parse_feed,
+    'sina_roll': parse_sina_roll,
+    'wallstcn': parse_wallstcn,
+}
 
 
 def _err_brief(exc):
@@ -309,14 +440,15 @@ def fetch_ai_news(retry=2):
     被日志里的一行 WARNING 带过去，收尾要出健康表。
     """
     news, health = [], []
-    logger.info(f"开始采集 {len(RSS_FEEDS)} 个 AI 垂类源")
-    for source, url in RSS_FEEDS:
+    logger.info(f"开始采集 {len(RSS_FEEDS)} 个源（科技垂类 + 产业财经）")
+    for source, url, kind in RSS_FEEDS:
+        parse = PARSERS[kind]
         started = time.time()
         entries, last, attempts, repaired = None, None, 0, False
         for attempt in range(retry + 1):
             attempts = attempt + 1
             try:
-                entries, repaired = parse_feed(http_get(url), source)
+                entries, repaired = parse(http_get(url), source)
                 break
             except Exception as e:  # noqa: BLE001 - 单源失败不能影响整体
                 last = e
@@ -415,6 +547,14 @@ def is_ai_title(title):
     return bool(STRONG_RE.search(title)) or bool(AI_RE.search(title))
 
 
+def is_industry_title(title):
+    """产业新闻：大公司/关键人物 + 产业语境，两个条件都要满足。
+    「微软 365 宕机」只有实体没语境 → 不算；「英伟达董事会澄清 CEO 招聘」都有 → 算。
+    这条规则是 2026-11-14 补的：此前黄仁勋辞任一类的标题，只是「英伟达+黄仁勋」两个名字，
+    没有 AI 技术词，被判成「非AI标题」当场丢掉。"""
+    return bool(BIGCO_RE.search(title)) and bool(INDUSTRY_RE.search(title))
+
+
 def is_roundup_title(title):
     """合集型标题：一家源把几条新闻塞进同一个标题（极客公园那种「A；B；C」早报）。
     这种条目既不能当单条新闻用，摘要也会把三件事揉在一起，直接丢掉。"""
@@ -438,7 +578,8 @@ def filter_noise(entries):
     kept, dropped = [], []
     for e in entries:
         title = e['title']
-        if not is_ai_title(title):
+        industry = is_industry_title(title)
+        if not is_ai_title(title) and not industry:
             dropped.append(('非AI标题', title))
             continue
         if is_roundup_title(title):
@@ -447,7 +588,12 @@ def filter_noise(entries):
         if CONSUMER_HW_RE.search(title) and not AI_CONTEXT_RE.search(title):
             dropped.append(('非AI消费硬件', title))
             continue
-        if BLOCK_RE.search(title):
+        if HARD_BLOCK_RE.search(title):
+            dropped.append(('黑名单', title))
+            continue
+        # 软黑名单只在「不是产业新闻」时生效：「股价 / 招聘」出现在
+        # 「英伟达董事会尚未选定 CEO 招聘猎头」里，是正经产业新闻，不能拦
+        if SOFT_BLOCK_RE.search(title) and not industry:
             dropped.append(('黑名单', title))
             continue
         if len(e['summary']) < 40:

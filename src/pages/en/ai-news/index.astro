@@ -4,13 +4,26 @@ import { dailyNewsSummaries } from '../../../data/ai-news-summary';
 import { sourceNameEn } from '../../../data/news-sources';
 import { t } from '../../../i18n/utils';
 
-const allCategories = ['LLM', 'Hardware', 'Industry', 'Investment', 'Policy', 'Research', 'Tools'];
+// Category list is derived from the data: the stored categoryEn values are now
+// "AI Industry" / "AI Chips" / "AI Applications" etc., so the old hard-coded
+// seven labels (LLM/Hardware/Industry...) no longer matched anything (fixed 2026-11-14).
+const catCount = new Map<string, number>();
+for (const day of dailyNewsSummaries) {
+  for (const item of day.newsItems) {
+    const name = item.categoryEn || item.category;
+    catCount.set(name, (catCount.get(name) ?? 0) + 1);
+  }
+}
+const allCategories = [...catCount.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 12)
+  .map(([name]) => name);
 
 const newsJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "AI News | Guanwu",
-  "description": "Daily AI industry news roundup with one-line commentary",
+  "description": "Daily AI industry news: what the big companies are doing, where the key people are going, and where the money and policy are heading",
   "url": "https://ban-bai.com/en/ai-news/",
   "inLanguage": "en",
   "author": {
@@ -31,7 +44,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
   <section class="page-section">
     <h1>{t('navAiNews', 'en')}</h1>
     <p class="subtitle">
-      Daily AI industry news roundup with one-line commentary
+      Daily AI industry news: what the big companies are doing, where the key people are going, and where money and policy are heading
     </p>
 
     <!-- Search + filters -->
@@ -251,9 +264,26 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     font-size: 11px;
     padding: 2px 6px;
     color: #fff;
+    background: #64748b;  /* fallback for categories without a dedicated colour */
     border-radius: 3px;
     display: inline-block;
     margin-bottom: 6px;
+  }
+  .news-item-category[data-category="AI Industry"] {
+    background: #0ea5e9;
+  }
+  .news-item-category[data-category="AI Investment & Financing"],
+  .news-item-category[data-category="AI Funding"] {
+    background: #22c55e;
+  }
+  .news-item-category[data-category="AI Safety"] {
+    background: #ef4444;
+  }
+  .news-item-category[data-category="AI Chips"] {
+    background: #f97316;
+  }
+  .news-item-category[data-category="Robotics"] {
+    background: #a855f7;
   }
   .news-item-category[data-category="LLM"] {
     background: #8b5cf6;

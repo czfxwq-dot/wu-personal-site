@@ -11,8 +11,8 @@ function formatDate(dateStr: string): string {
 const newsJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "AI新闻 | 观吾",
-  "description": "每天AI行业重大新闻汇总 + 一句话点评",
+  "name": "AI新闻 | AI 产业日报 - 观吾",
+  "description": "每天 AI 产业大事：大公司在做什么、关键人物去哪了、钱和政策往哪走",
   "url": "https://ban-bai.com/ai-news/",
   "author": {
     "@type": "Person",
@@ -26,13 +26,27 @@ const newsJsonLd = {
 };
 
 const allDates = dailyNewsSummaries.map(d => d.date);
+
+// 类别下拉按数据实际值动态生成：历史条目里 category 有 80 多种写法
+// （AI应用 / AI芯片 / AI产业 / 大模型…），写死 7 项会导致「选产业匹配不到 AI产业」，
+// 筛选器等于失效（2026-11-14 修）。取出现次数前 12 名，覆盖绝大多数条目。
+const catCount = new Map<string, number>();
+for (const day of dailyNewsSummaries) {
+  for (const item of day.newsItems) {
+    catCount.set(item.category, (catCount.get(item.category) ?? 0) + 1);
+  }
+}
+const categories = [...catCount.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 12)
+  .map(([name]) => name);
 ---
 
-<BaseLayout title="AI新闻 | 每天AI行业重大新闻汇总 - 观吾" jsonLd={newsJsonLd} ogDescription="每天AI行业重大新闻汇总 + 一句话点评，覆盖大模型、硬件、产业、投资、政策等方向" navActive="ai-news">
+<BaseLayout title="AI新闻 | AI 产业日报：大公司、关键人物、资本与政策 - 观吾" jsonLd={newsJsonLd} ogDescription="每天 AI 产业大事：大公司在做什么、关键人物去哪了、钱和政策往哪走，覆盖大模型、芯片、机器人、投融资与监管" navActive="ai-news">
   <section class="page-section">
     <h1>AI新闻</h1>
     <p class="subtitle">
-      每天AI行业重大新闻汇总 + 一句话点评
+      每天 AI 产业大事：大公司在做什么、关键人物去哪了、钱和政策往哪走
     </p>
 
     <!-- 搜索+日期筛选栏 -->
@@ -49,13 +63,7 @@ const allDates = dailyNewsSummaries.map(d => d.date);
       </select>
       <select id="news-category-filter" class="date-filter">
         <option value="">全部类别</option>
-        <option value="大模型">大模型</option>
-        <option value="硬件">硬件</option>
-        <option value="产业">产业</option>
-        <option value="投资">投资</option>
-        <option value="政策">政策</option>
-        <option value="研究">研究</option>
-        <option value="工具">工具</option>
+        {categories.map(c => <option value={c}>{c}</option>)}
       </select>
       <span id="news-count" class="result-count">共 {dailyNewsSummaries.length} 天</span>
     </div>
@@ -264,9 +272,25 @@ const allDates = dailyNewsSummaries.map(d => d.date);
     font-size: 11px;
     padding: 2px 6px;
     color: #fff;
+    background: #64748b;  /* 兜底：没单独配色的类别（AI应用/机器人/AI安全…）用中性灰 */
     border-radius: 3px;
     display: inline-block;
     margin-bottom: 6px;
+  }
+  .news-item-category[data-category="AI产业"] {
+    background: #0ea5e9;
+  }
+  .news-item-category[data-category="AI投融资"] {
+    background: #22c55e;
+  }
+  .news-item-category[data-category="AI安全"] {
+    background: #ef4444;
+  }
+  .news-item-category[data-category="AI芯片"] {
+    background: #f97316;
+  }
+  .news-item-category[data-category="机器人"] {
+    background: #a855f7;
   }
   .news-item-category[data-category="硬件"] {
     background: #f97316;
