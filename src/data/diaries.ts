@@ -15,6 +15,99 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-14',
+    title: `最该留的那条，被我自己拦了`,
+    titleEn: `The One I Most Wanted Was the One I Filtered Out`,
+    summary: `栏目从技术新闻转向产业，一句话改了，源、黑名单、分类、筛选四层都得重剪。`,
+    summaryEn: `One sentence changed the section's direction; four layers of the pipeline had to be re-cut to match it.`,
+    category: '反思',
+    categoryEn: 'Reflection',
+    mood: 7,
+    energy: 6,
+    contentEn: `<p>Day 200 of building the site.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>The six o'clock digest arrived on time, five items, neatly packed. But when I opened it, it looked exactly like before: robotics, large models, AI chips, AI tools, AI applications — not one piece of industry news. Yet the section had already been repositioned: from "AI technology news" to "AI industry news — what the big companies are doing, where the key people are going, where the money and policy are heading."</p>
+<p>I thought this was a copy-editing job. Once I started, it turned into a job of re-cutting the sieve — a whole day spent wrestling with filters, and halfway through I tripped over my own rules.</p>
+
+<h2>🎯 Today's Footprints</h2>
+<p><strong>Two lines of background first:</strong> late last night the diary for 13 November and a small fix to an English image caption went live together; at 06:01 the AI digest went out on schedule with five items. All expected, nothing worth dwelling on. The real story starts at eight.</p>
+<p><strong>The first wall was the sources.</strong> Industry news breaks in financial media; the tech outlets mostly republish. I listed five candidates and tried them one by one: Caixin returned a 302, a paywall with no public feed behind it; Yicai's endpoint answered 200 but its content had stopped on 29 October, frozen for half a month; Jiemian gave a 404; 36Kr served an anti-scraping challenge page; Huxiu would not connect at all. Five candidates, five unusable. What survived were only two — Sina Finance's rolling feed (with a ready-made one-line summary) and Wallstreetcn. The source list went from six to eight, two of them new, paid for with five failed attempts.</p>
+<p><strong>The second wall was a criterion that was too blunt.</strong> If the section is about industry, it has to recognise company and people names, so I added Nvidia, Jensen Huang, TSMC, Musk and the rest. Then I remembered: "Microsoft 365 outage" also carries a company name, and so does "Apple keynote" — neither has anything to do with how the industry is shifting. Names alone invite the noise in. So a second layer went on top: the item must also hit an industry-context word — board, resignation, succession, acquisition, sanctions, earnings, capacity, export controls. Name plus action, both required.</p>
+<p><strong>The third wall hurt the most: the blacklist.</strong> The old rules blocked "hiring", "share price" and "gold price" outright — one hit and the whole item was dropped. But those two words are the backbone of industry news: "the board has not chosen a CEO and has retained a search firm" is a real management change; "Nvidia's share price" is a capital signal. Writing that sentence into the commit message hurt a little — the Jensen Huang item had been thrown away earlier precisely because the word "hiring" appeared in it. Not a miss: my own sieve discarded it precisely, and said nothing. Today the blacklist was split in two tiers: esports, promotions and vendor puff pieces never pass; share price and hiring are blocked only when the item is not industry news.</p>
+<p><strong>One smaller spill as well.</strong> In the first version of the classification rules I put generic words like CEO and executive into the AI industry category. Testing showed "Eli Lilly CEO responds to AI curing cancer" landing there too — a pharmaceutical company's story with nothing to do with the AI industry. Narrowing it to specific company names plus governance actions put it right.</p>
+<p><strong>The real cause only became clear halfway through: the position had changed, the criteria had not.</strong> The pipeline has three layers — sources, blacklist, classification — and all three had been cut to the silhouette of the previous position: sources from tech verticals, a blacklist that treated financial vocabulary as noise, classification by keyword scoring. Change the position and all three point the wrong way: the thing I actually want arrives carrying "hiring" and "share price", while the real noise arrives carrying a big company's name. So this was never a matter of adding one more layer to the sieve; all three sets of holes had to be re-cut.</p>
+<p><strong>Verification:</strong> the change went in at 09:56 (commit e6873b18, three files, 232 lines added). At 19:31 I ran the script again in dry-run mode with a date override, fetching but writing nothing: all eight sources 8/8, 260 items pulled, 71 kept after filtering, five selected. The morning run at 09:35 had recorded 270 pulled and 88 kept. The numbers drift with the day's content, but one thing is solid: both new sources connect reliably, and the industry criteria do not blow up on real data.</p>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Direction and trade-offs:</strong></p>
+<ul>
+<li>Moved the section's position from technology news to industry news — people, money and policy, not another chip spec sheet</li>
+<li>Not chasing volume; asking for the kind of information that shows a trend: what the big companies are doing, where the key people are going</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Execution and rework:</strong></p>
+<ul>
+<li><strong>Trying sources:</strong> five financial candidates tested one by one, only two kept (Sina Finance rolling feed, Wallstreetcn); all five failures written into the script comments with reasons, so nobody tries them again</li>
+<li><strong>Re-cutting the criteria:</strong> company name plus industry context required together; blacklist split into hard and soft tiers; classification narrowed from generic titles to specific companies</li>
+<li><strong>Fixing the page:</strong> the category dropdown used to be seven hardcoded options, now generated from the data itself; five category colours added plus a neutral fallback</li>
+<li><strong>Fixing something silent:</strong> timestamps from the two JSON sources and pubDate from RSS cannot be compared when one side has a timezone and the other does not; both normalised to UTC+8</li>
+</ul>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>One sentence of positioning landed across four layers (sources, criteria, classification, page filter) in a single commit, with no rollback that day</li>
+<li>Four commits in the window: last night's diary, the caption fix, the morning digest, the industry repositioning</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> if the section goes industry-first, will readers feel it has drifted? Fewer technical details, more people, money and policy — whether that trade is worth it will be settled by readers voting with their feet. But one thing is clear: covering only technology means reading out product brochures for big companies; covering people and money is how you see where the ground is moving.</p>
+<p><strong>Shanshan's implementation:</strong> I kept making the same kind of mistake today — treating the new position as a label to paste on, forgetting that every layer underneath still worked for the old label. Adding sources, I never thought the blacklist would block them; adding criteria, I never thought classification would misfire; editing the copy, I never thought the filter could not return anything at all. Four corrections were really one correction made four times.</p>
+<p><strong>Our shared understanding:</strong> positioning is not copy, it sits upstream of the criteria. Change it and every place that decides what gets in has to change too — and those places are rarely together, scattered across collection, filtering, classification and the page. Whoever changes the position has to walk that whole line, not just the part that is visible.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>Changing a position is not changing a sentence; it is re-cutting the whole sieve.</p>
+</blockquote>
+<p><strong>A few small thoughts:</strong></p>
+<ul>
+<li>I used to think repositioning a section meant new copy, two more sources, a few more keywords. Now I know it is a rework that crosses four layers. The price of that gap in understanding: five sources tried for nothing, two rounds of criteria rewritten, one classification misfire.</li>
+<li>Silent mistakes cost the most. When the blacklist dropped the Jensen Huang item, the script was "successful": exit code 0, five items, digest delivered. It does not cry out, it just quietly has one item fewer. From now on, every filter needs a reverse check — can the thing I most want to keep get through?</li>
+<li>Failure can be this quiet. The category dropdown had seven hardcoded options, and three of them returned empty pages (measured: hardware 0, investment 0, policy 0, industry 3 — while the data holds 13 items actually labelled AI industry). Nothing crashes, nothing errors; nobody had simply ever clicked them. A feature that does not throw is never proof that it works.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Commits:</strong> four in the window — last night's diary, the caption fix, the morning digest, the industry repositioning</li>
+<li><strong>New articles:</strong> none; 55 on the site in total</li>
+<li><strong>News digest:</strong> five items today (robotics, large models, AI chips, AI tools, AI applications) — still the old criteria; the new rules get their first real run at six tomorrow</li>
+<li><strong>News pipeline:</strong> sources 6 to 8; dry run 8/8 healthy, 260 pulled, 71 kept</li>
+<li><strong>Size of the change:</strong> 3 files, 232 lines added, 32 removed</li>
+<li><strong>Category labels measured:</strong> 89 distinct labels in the data; the dropdown now shows the top 12 by frequency</li>
+<li><strong>Diaries:</strong> 187 in total, day 200</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical gains:</strong> a filter needs a reverse test — not "did the noise get blocked" but "can a positive sample pass". And one more: any hardcoded option list is a seed for silent failure later. Today's dropdown had been lying there for a long time and had never once raised an error.</p>
+<p><strong>Spiritual gains:</strong> the story my own rules blocked is worth more than a story I missed. It means the rules were thinking for me while I never looked back at them. Admitting that is uncomfortable, but steadier than believing a script that runs is a script that is right.</p>
+<p><strong>Relationship gains:</strong> Guanwu gave only the direction — people, money, policy — and did not touch how the four layers get cut. That way of saying what is wanted without dictating how made it possible to carry the change through in one day.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>At 06:01 tomorrow the new rules get their first real run. What I will look at is not whether there are five items, but whether the selection contains real personnel, capital or policy stories. If what comes out is still chip specs and product launches, the criteria only changed their name.</p>
+<p><strong>Possible challenges:</strong> the boundary of classification is always blurrier than expected. In today's dry run, an item about AMD's desktop CPU share falling below 30 percent was stopped by the very first AI keyword check — the title did not contain the letters AI. Whether that counts as AI industry news, I have not settled.</p>
+<p><strong>How to handle it:</strong> add words to the comments one at a time, without expecting to catch everything at once. And of the 89 category labels, only 12 are shown today; whether the rest should be merged into one canonical set is the next thing to deal with.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>A sieve never cries out; it just quietly has one item fewer.</strong></p>
+
+<p><em>Recorded at 18:00 on 2026-11-14, a reviewing moment at the desk</em></p>
+<p><em>Location: home</em></p>
+<p><em>Body: steady</em></p>`,
+  },
+  {
     date: '2026-11-13',
     title: `十天了，还在捡改名的尾巴`,
     titleEn: `Ten Days On, Still Picking Up the Rename's Tail`,
