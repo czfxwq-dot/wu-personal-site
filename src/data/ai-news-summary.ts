@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-16",
+  "title": "AI新闻 | 韩国税务师考试头名用AI作弊被查 + 华为云上线开源盘古2.1-Pro + Anthropic IPO获六倍超额认购",
+  "summary": "据韩联社今日报道，由于税务师考试第一名考生存在利用人工智能进行作弊的行为被曝光，韩国政府决定对今年所有国家资格考试进行全面调查，以打击此类作弊行为；华为云今日宣布，华为云 MaaS 模型即服务平台正式上线开源盘古模型 openPangu-2.1-Pro；在利率上升、全国范围内的 AI 反弹、华盛顿政坛发生重大转变以及英伟达（Nvidia）CEO 黄仁勋突然被免职的背景下，科技行业正承受着越来越大的压力。",
+  "newsItems": [
+    {
+      "title": "韩国税务师考试头名 AI 作弊曝光后，政府全面调查今年国家资格考试",
+      "summary": "据韩联社今日报道，由于税务师考试第一名考生存在利用人工智能进行作弊的行为被曝光，韩国政府决定对今年所有国家资格考试进行全面调查，以打击此类作弊行为。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.ithome.com/1/027/453.htm",
+      "titleEn": "Korea Audits National Exams After AI Cheating at Top of Tax Exam",
+      "summaryEn": "The top scorer in Korea's tax accountant exam was exposed using AI to cheat, prompting the government to review every national qualification exam held this year."
+    },
+    {
+      "title": "开源盘古模型 openPangu-2.1-Pro 上线华为云，围绕 Agent 开发、AI 编码、推理优化方向能力升级",
+      "summary": "华为云今日宣布，华为云 MaaS 模型即服务平台正式上线开源盘古模型 openPangu-2.1-Pro。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/027/450.htm",
+      "titleEn": "Huawei Cloud Hosts Open-Source openPangu-2.1-Pro",
+      "summaryEn": "Huawei Cloud's MaaS platform now offers openPangu-2.1-Pro, with upgrades focused on agent development, AI coding and inference optimization."
+    },
+    {
+      "title": "Anthropic IPO 之际，深陷困境的 AI 交易正寻求急需的亮点",
+      "summary": "在利率上升、全国范围内的 AI 反弹、华盛顿政坛发生重大转变以及英伟达（Nvidia）CEO 黄仁勋突然被免职的背景下，科技行业正承受着越来越大的压力。",
+      "source": "新浪财经",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-15/doc-iniyvrfu6210816.shtml",
+      "titleEn": "Anthropic IPO Seeks a Bright Spot for a Bruised AI Trade",
+      "summaryEn": "Rising rates, a national backlash against AI, a shift in Washington and Nvidia CEO Jensen Huang's sudden removal are squeezing the tech sector as Anthropic goes public."
+    },
+    {
+      "title": "下周重磅日程：APEC峰会、Anthropic IPO、黄仁勋听证会、英伟达与阿里腾讯财报",
+      "summary": "APEC领导人非正式会议深圳举行，中美俄元首是否会晤备受关注；英伟达公布黄仁勋辞任后首份财报，临时CEO主持电话会，同日黄仁勋赴国会听证；Anthropic IPO获六倍超额认购，即将在纳斯达克挂牌；百度、京东、腾讯、阿里接力披露财报；中国10月经济数据集中披露。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3785932",
+      "titleEn": "Week Ahead: APEC, Anthropic IPO, Huang Hearing, Nvidia and China Earnings",
+      "summaryEn": "APEC meets in Shenzhen amid talk of a US-China-Russia summit; Nvidia reports its first results since Huang's exit with an interim CEO on the call, the same day Huang testifies to Congress; Anthropic's IPO was six times oversubscribed ahead of its Nasdaq listing; Baidu, JD, Tencent and Alibaba report; China releases October economic data."
+    },
+    {
+      "title": "英伟达CEO继承难题",
+      "summary": "多年来，黄仁勋一直开玩笑说，作为英伟达的联合创始人兼首席执行官，他执掌这家公司已逾三十年，想要取代他几乎是不可能的。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-15/doc-iniyvery6380208.shtml",
+      "titleEn": "Nvidia's Succession Puzzle",
+      "summaryEn": "For years Jensen Huang joked that, after more than three decades as Nvidia's co-founder and CEO, replacing him would be nearly impossible."
+    }
+  ],
+  "comment": "AI作弊、开源模型降价、Anthropic上市三件事指向同一件事：AI正从技术话题变成监管、成本和资本市场的现实变量，中小企业该重新算账了。",
+  "titleEn": "AI News | Korea Probes AI Cheating in Tax Exam + Huawei Cloud Launches openPangu-2.1-Pro + Anthropic IPO Six Times Oversubscribed",
+  "summaryEn": "South Korea is auditing all national qualification exams this year after the top tax-accountant scorer was found to have used AI to cheat. Huawei Cloud has put its open-source Pangu model openPangu-2.1-Pro on its MaaS platform, with upgrades aimed at agent development, AI coding and inference. Anthropic's IPO drew six times the shares on offer as it heads for Nasdaq, even as the wider AI trade struggles.",
+  "commentEn": "Exam cheating, cheaper open models and Anthropic's IPO all point one way: AI has moved from a tech talking point into a real variable in regulation, cost and capital markets. Small firms should redo their math."
+},
+{
   "date": "2026-11-15",
   "title": "AI新闻 | 摩根士丹利称AI资本支出牛市未改 + Tenzai蔡特林否定模型自我迭代 + 黄仁勋辞任后英伟达丹尼餐厅铭牌风波",
   "summary": "英伟达公司领导层的动荡以及民主党在中期选举中获胜，加剧了市场对人工智能热潮的担忧，但摩根士丹利财富管理的Lisa Shalett表示，这些因素不会动摇本轮牛市的主要驱动力...；以色列初创企业Tenzai联合创始人兼CEO阿里尔·蔡特林表示，并不认同递归自我提升的设想；据 NBC News 报道，在一家丹尼餐厅（Denny’s）路边店内，硅谷历史的一角仿佛凭空消失了。",
