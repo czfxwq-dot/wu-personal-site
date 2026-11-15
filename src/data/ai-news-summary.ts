@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-15",
+  "title": "AI新闻 | 摩根士丹利称AI资本支出牛市未改 + Tenzai蔡特林否定模型自我迭代 + 黄仁勋辞任后英伟达丹尼餐厅铭牌风波",
+  "summary": "英伟达公司领导层的动荡以及民主党在中期选举中获胜，加剧了市场对人工智能热潮的担忧，但摩根士丹利财富管理的Lisa Shalett表示，这些因素不会动摇本轮牛市的主要驱动力...；以色列初创企业Tenzai联合创始人兼CEO阿里尔·蔡特林表示，并不认同递归自我提升的设想；据 NBC News 报道，在一家丹尼餐厅（Denny’s）路边店内，硅谷历史的一角仿佛凭空消失了。",
+  "newsItems": [
+    {
+      "title": "摩根士丹利财富管理Shalett：AI资本支出驱动的牛市逻辑依然稳固",
+      "summary": "英伟达公司领导层的动荡以及民主党在中期选举中获胜，加剧了市场对人工智能热潮的担忧，但摩根士丹利财富管理的Lisa Shalett表示，这些因素不会动摇本轮牛市的主要驱动力...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-15/doc-iniytwwt3669681.shtml",
+      "titleEn": "Morgan Stanley's Shalett: AI Capex Bull Case Still Intact",
+      "summaryEn": "Despite turmoil in Nvidia's leadership and Democratic midterm wins, Morgan Stanley Wealth Management's Lisa Shalett says the main driver of the bull run remains firm."
+    },
+    {
+      "title": "前沿 AI 研发回报持续缩水 行业专家否定模型快速自我迭代前景",
+      "summary": "以色列初创企业Tenzai联合创始人兼CEO阿里尔·蔡特林表示，并不认同递归自我提升的设想。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/7x24/2026-11-15/doc-iniytwwt3667857.shtml",
+      "titleEn": "Tenzai's Zeitlin Dismisses Rapid Model Self-Improvement",
+      "summaryEn": "Ariel Zeitlin, co-founder and CEO of Israeli startup Tenzai, says he does not buy the recursive self-improvement scenario for frontier AI, as returns on cutting-edge R&D keep shrinking."
+    },
+    {
+      "title": "黄仁勋辞任 CEO 后，英伟达诞生地丹尼餐厅移除纪念铭牌、又宣布将重新挂回",
+      "summary": "据 NBC News 报道，在一家丹尼餐厅（Denny’s）路边店内，硅谷历史的一角仿佛凭空消失了。",
+      "source": "IT之家",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://www.ithome.com/1/027/233.htm",
+      "titleEn": "Denny's Pulls, Then Restores Nvidia Plaque After Huang Departure",
+      "summaryEn": "The Denny's roadside diner where Nvidia was founded removed a commemorative plaque, then announced it would put it back, after Jensen Huang stepped down as CEO."
+    },
+    {
+      "title": "白宫“超级智能工作组”呼吁放宽问责政策，鼓励 AI 企业报告网络安全事件",
+      "summary": "据彭博社报道，当地时间 13 日，美国政府新设的“超级智能工作组”在白宫开会，建议联邦机构放宽网络安全事件的问责政策，鼓励 AI 企业主动报告重大安全事件。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.ithome.com/1/027/229.htm",
+      "titleEn": "White House Superintelligence Task Force Urges Looser Liability Rules",
+      "summaryEn": "The newly formed task force met at the White House and recommended federal agencies ease cyber-incident liability policies to encourage AI firms to report major security breaches voluntarily."
+    },
+    {
+      "title": "华尔街与硅谷强推Anthropic上市：一场“大而不能败”的AI保卫战",
+      "summary": "22家顶级投行联合承销，英伟达、微软等七大科技巨头承诺上市后立即注资260亿美元。在AI泡沫忧虑与黄仁勋辞职的双重阴影下，这场\"太关键、不能失败\"的资本盛事，正考验整个科技生态系统对AI未来的信仰底线。",
+      "source": "华尔街见闻",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://wallstreetcn.com/articles/3785948",
+      "titleEn": "Wall Street and Silicon Valley Push Anthropic Toward IPO",
+      "summaryEn": "Twenty-two top investment banks are underwriting the listing, with seven tech giants including Nvidia and Microsoft pledging $26 billion right after. Amid bubble worries and Huang's exit, the deal is framed as too critical to fail."
+    }
+  ],
+  "comment": "黄仁勋辞任、投行力推Anthropic上市、白宫松绑问责，三件事都指向同一件事：AI叙事正从技术驱动转向资本与政策托底，而前沿回报缩水的质疑声被有意压低。",
+  "titleEn": "AI News | Morgan Stanley Says AI Capex Bull Case Holds + Tenzai's Zeitlin Rejects Recursive Self-Improvement + Nvidia's Denny's Plaque Pulled After Huang Exit",
+  "summaryEn": "Morgan Stanley's Lisa Shalett argues Nvidia leadership turmoil and Democratic midterm gains won't derail the AI capex-driven bull market. Tenzai CEO Ariel Zeitlin pushes back on the idea that frontier models can rapidly self-improve. Meanwhile, the Denny's where Nvidia was founded removed and then said it would restore a commemorative plaque after Jensen Huang stepped down as CEO.",
+  "commentEn": "Jensen Huang's exit, banks rushing Anthropic to IPO and the White House easing liability rules all point one way: the AI story is shifting from technical breakthroughs to capital and policy backstops, while doubts about thinning frontier returns get quietly muted."
+},
+{
   "date": "2026-11-14",
   "title": "AI新闻 | OpenAI推ChatGPT Wallet支付 + 华为麒麟9050九核16线程 + 中金蚂蚁共探AI财富管理",
   "summary": "八年研究，两个落地系统，超六万GitHub Stars。 作者丨李秋悦 编辑丨吴 彤 一支女团跳舞，镜头不必再听导演安排，观众甚至能看到拍摄时不存在的机位。传统MV拍摄，摄影机架在哪里，观众看到的就是哪个角度。现在用多台摄像机同时记录舞者动作，再重建出一个三维动态场景，镜头可以任意调换位置；从队形正面绕到侧面，穿过舞者之间，甚至换一个从未真正架设过的机位，重；OpenAI 今天（13 日）宣布推出支付功能 ChatGPT Wallet，让旗下 dot AI 智能体代替用户购物；华为麒麟官方公众号继续揭秘首款「逻辑折叠」技术 τ 芯片 —— 麒麟 9050 系列更多配置信息，新一代灵犀 CPU 详情已公开。",
