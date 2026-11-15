@@ -16,6 +16,8 @@ export const SOURCE_NAMES_EN: Record<string, string> = {
   '机器之心': 'Synced',
   '量子位': 'QbitAI',
   '财联社': 'Cailian Press',
+  '新浪财经': 'Sina Finance',
+  '华尔街见闻': 'Wallstreetcn',
   '证券时报': 'Securities Times',
   '腾讯新闻': 'Tencent News',
   '钛媒体': 'TMTPost',
