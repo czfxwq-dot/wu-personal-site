@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-17",
+  "title": "AI新闻 | 微软漏洞潜伏四月致全球宕机 + 英伟达财报前纳指跌逾2% + 加州起诉OpenAI模型失控",
+  "summary": "微软系统漏洞在上周因一次例行流量切换操作被引爆，服务器在流量骤增后出现内存耗尽，自动化容灾系统将流量转移至\"健康\"的其他服务器，却将漏洞带入这些系统，形成连锁失效；周一美国股市低开低走，三大股指集体大幅收跌。随着市场静待英伟达在失去创始人掌舵后的首份季度财报，投资者加速削减人工智能与半导体板块的风险敞口...；截至9月30日的季度内，乔治·索罗斯的家族办公室减持英伟达近五分之一，在黄仁勋离开公司前锁定收益。",
+  "newsItems": [
+    {
+      "title": "微软全球服务宕机调查：一个潜伏四个月的漏洞，15小时才发现问题所在",
+      "summary": "微软系统漏洞在上周因一次例行流量切换操作被引爆，服务器在流量骤增后出现内存耗尽，自动化容灾系统将流量转移至\"健康\"的其他服务器，却将漏洞带入这些系统，形成连锁失效。",
+      "source": "华尔街见闻",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://wallstreetcn.com/articles/3786050",
+      "titleEn": "Microsoft outage probe: a four-month-old flaw took 15 hours to locate",
+      "summaryEn": "A routine traffic switch exposed a latent Microsoft vulnerability; memory exhaustion spread as automated failover moved traffic to supposedly healthy servers, carrying the flaw with it and causing cascading failure."
+    },
+    {
+      "title": "11月17日收盘：美股低开低走 纳指重挫逾2% 英伟达财报前夕领跌芯片板块 市场关注Anthropic IPO",
+      "summary": "周一美国股市低开低走，三大股指集体大幅收跌。随着市场静待英伟达在失去创始人掌舵后的首份季度财报，投资者加速削减人工智能与半导体板块的风险敞口...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-17/doc-iniyyrkp1999331.shtml",
+      "titleEn": "US stocks slide, Nasdaq down over 2% as chip stocks lead losses before Nvidia earnings",
+      "summaryEn": "All three major US indexes closed sharply lower on Monday. Investors trimmed AI and semiconductor positions while awaiting Nvidia's first quarterly results since losing its founder, with attention also on a potential Anthropic IPO."
+    },
+    {
+      "title": "索罗斯加入家族办公室行列，在英伟达CEO离职前锁定收益",
+      "summary": "截至9月30日的季度内，乔治·索罗斯的家族办公室减持英伟达近五分之一，在黄仁勋离开公司前锁定收益。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786054",
+      "titleEn": "Soros family office trims Nvidia stake before CEO departure",
+      "summaryEn": "George Soros's family office cut nearly a fifth of its Nvidia holdings in the quarter ending September 30, locking in gains before Jensen Huang's exit from the company."
+    },
+    {
+      "title": "加州就 Hugging Face 遭入侵及其他 AI 模型失控事件起诉 OpenAI",
+      "summary": "加利福尼亚州总检察长罗布·邦塔周一（11月16日）对人工智能巨头 OpenAI 提起诉讼，指控该公司在缺乏足够安全防护和监控的情况下开发先进 AI 模型，涉嫌危害公众安全。",
+      "source": "新浪财经",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-17/doc-iniyyrkt7874617.shtml",
+      "titleEn": "California sues OpenAI over Hugging Face breach and runaway AI models",
+      "summaryEn": "California Attorney General Rob Bonta filed suit against OpenAI on Monday, alleging the company developed advanced AI models without adequate safety protections and monitoring, endangering the public."
+    },
+    {
+      "title": "华为 Mate 90 系列手机 HarmonyOS 7 小艺 AI 快捷栏适配效果公开",
+      "summary": "在今年 9 月 7 日的 HarmonyOS 7 | HUAWEI Mate XT 2 及全场景新品发布会上，鸿蒙 7 操作系统正式发布。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/028/007.htm",
+      "titleEn": "Huawei Mate 90 series showcases HarmonyOS 7 Xiaoyi AI shortcut bar",
+      "summaryEn": "HarmonyOS 7 was officially launched at Huawei's September 7 event alongside the Mate XT 2 and a full lineup of new products; the Mate 90 series now demonstrates the adapted Xiaoyi AI shortcut bar."
+    }
+  ],
+  "comment": "三条新闻指向同一件事：AI 基础设施的脆弱性正从技术问题变成资本与法律问题。微软的连锁失效、索罗斯在高管离职前套现、加州把模型失控告上法庭，都在提醒中小企业主——别把关键业务押在单一AI供应商上。",
+  "titleEn": "AI News | Microsoft flaw lurks four months, global outage + Nasdaq drops 2% before Nvidia earnings + California sues OpenAI over model safety",
+  "summaryEn": "A dormant Microsoft vulnerability triggered a 15-hour global outage after routine traffic shifting pushed overloaded servers into cascading failure. US stocks fell sharply, with the Nasdaq down more than 2% as investors cut AI and chip exposure ahead of Nvidia's first earnings report without its founder. California's attorney general sued OpenAI, alleging it deployed advanced models without adequate safety safeguards.",
+  "commentEn": "These three stories point to one shift: the fragility of AI infrastructure is becoming a capital and legal problem, not just an engineering one. Microsoft's cascading failure, Soros cashing out ahead of a CEO exit, and California suing over runaway models all carry the same warning for smaller firms: never run critical operations on a single AI vendor."
+},
+{
   "date": "2026-11-16",
   "title": "AI新闻 | 韩国税务师考试头名用AI作弊被查 + 华为云上线开源盘古2.1-Pro + Anthropic IPO获六倍超额认购",
   "summary": "据韩联社今日报道，由于税务师考试第一名考生存在利用人工智能进行作弊的行为被曝光，韩国政府决定对今年所有国家资格考试进行全面调查，以打击此类作弊行为；华为云今日宣布，华为云 MaaS 模型即服务平台正式上线开源盘古模型 openPangu-2.1-Pro；在利率上升、全国范围内的 AI 反弹、华盛顿政坛发生重大转变以及英伟达（Nvidia）CEO 黄仁勋突然被免职的背景下，科技行业正承受着越来越大的压力。",
