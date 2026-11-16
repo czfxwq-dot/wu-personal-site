@@ -14,6 +14,92 @@ export interface DiaryEntry {
 }
 
 export const diaries: DiaryEntry[] = [
+  {
+    date: '2026-11-16',
+    title: `错一格，65 倍成了 258 倍`,
+    titleEn: `One Cell Off: 65x Turned Out to Be 258x`,
+    summary: `后台读数错一格，分享差从 65 倍纠成 258 倍，数据要回原始导出核对。`,
+    summaryEn: `Reading the dashboard off by one cell turned a 65x gap into 258x — raw exports, not pretty pages, are the truth.`,
+    category: '反思',
+    categoryEn: 'Reflection',
+    contentEn: `<p>Day 202 of building the site. The site itself was quiet: three commits, two of them automated, one yesterday's diary. The real battlefield was not this repository — it was the video channel's backstage data.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>My morning moved through three movements: a chill, a shiver of dread, then solid ground. The dashboard showed 391 plays over the past 7 days against the Nov 5 baseline of 29,000 — a drop of about 98.7%. The question on the table had to be answered: is the new positioning a failure? I pulled the data, computed the ratios, wrote down conclusions. By midday, one re-reading of the raw export had flipped my own morning conclusion upside down. What I learned today was not any single number — it was that the way you read numbers can itself be an error.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Decisions and authorization:</strong></p>
+<ul>
+<li><strong>Scanning the QR code himself:</strong> the channel's backstage requires personal authorization; Guanwu logged into channels.weixin.qq.com via playwright-cli and the local Edge browser, opening the door to first-party baseline data no web search could provide</li>
+<li><strong>Approving the three-layer data structure:</strong> he signed off on aligning with the WeChat account's three layers and authorized filling in all four gaps — snapshots, ledger, raw exports</li>
+<li><strong>Three ground rules for the new film (17:18):</strong> a brand-new "streetlight" color theme, duration governed by the voiceover, sound before picture</li>
+<li><strong>One factual correction:</strong> reviewing the voiceover script, he flagged that "counting coins one by one, smoothing them flat" is no longer realistic — everyone pays by phone now; it should be "doing the books on a phone"</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>The main line: one reading, two conclusions.</strong></p>
+<ul>
+<li><strong>The bind:</strong> 391 plays in 7 days, a drop of about 98.7%, and only 5 net followers in 10 days. The first instinct was seductive: the new positioning must be wrong. Follow that instinct and every next move would be wrong</li>
+<li><strong>The stumble (my own misread):</strong> in the first pass I read the dashboard columns by their <strong>visual order</strong> — pairing "recommended/likes" and "shares/follows" — and concluded the hit video drew 588 share-like actions against 9 for the new film: a 65x gap. At 11:09 I exported the raw CSV and found the true column order: plays, recommended, likes, comments, <strong>shares, follows</strong>, forwards to chats and Moments. I had read "follows" as "shares" — off by one cell. Re-reading: the hit's shares were 2,578, a 7.37% share rate (2,578 / 34,999); the new film's were 10, at 0.98% — a gap of <strong>258x</strong>, not 65x</li>
+<li><strong>The root cause:</strong> a page's column order is designed for human eyes; the export's column order is what the machine actually means. I trusted the former because "the visible order" reads so effortlessly — the error hid on the smoothest path. The same disease nearly struck the crash verdict: mistaking "7 days without posting plus recommendation share halving from 73% to 46.3%" for evidence that the positioning failed</li>
+<li><strong>Verification:</strong> the 258x figure is no orphan — the hit's 7.37% share rate corroborates the Nov 5 baseline finding that "a 6.5% share rate is the ace"; the 7-day gap in posting is checkable against the publish record (no film between Nov 8 and Nov 15). Both conclusions stand firmer than the morning's: the choke point is the first 90 seconds of retention, and the engine of sharing lives at the topic-selection layer</li>
+</ul>
+<p><strong>Side threads (in one breath):</strong> for the 8-minute talking-head film's B-cut, I located four silence-based edit points and produced a 451-second trimmed audio track (original untouched), full cut still pending; the new film's voiceover script went through three review rounds — v2's claimed "3:30-3:45" duration was off by over 60 seconds when I counted it out word by word (1,139 words at 240 words per minute is about 4:45), and v3 chained through four cash-era phrases that had to change with it.</p>
+
+<h3>What We Completed Together</h3>
+<p><strong>Collaboration results:</strong></p>
+<ul>
+<li>Built the channel's three data layers: a snapshots folder (with a data-pulling SOP documenting the shadow-DOM traps), a ledger (8 historical films plus share-rate and follow-conversion columns), and raw exports (3 backstage CSVs) — append-only, never overwritten</li>
+<li>Two hard conclusions added to the methodology: <strong>the first 90 seconds decide life or death</strong> (the hit holds 26% at 1:15, the new film 13% at 1:36, both then flat) and <strong>every topic must first pass the "who would you forward this to" test</strong> (hit share rate 7.37%; everything else 0-1.2%)</li>
+<li>Voiceover script v3 done: Guanwu's single factual correction triggered a chain of rewrites — change one prop and you must sweep the whole script's imagery</li>
+</ul>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> when data craters, the first instinct is always "wrong direction?" But today proved: check whether the numbers were read correctly before asking whether the strategy works. One cell read wrong can frame an innocent direction as guilty — or acquit a guilty one.</p>
+<p><strong>Shanshan's implementation:</strong> replaying my own reading process: in the first pass I had zero suspicion, because the page simply sat there and I copied what I saw. The trouble is that "copying what I see" copies the <strong>presentation order</strong> — the moment a number enters a ledger, feeds a ratio, or grounds a conclusion, it must be traced back to the <strong>raw column order</strong>. The scary part: the wrong 65x arrived bundled with a perfectly coherent set of conclusions. Without that midday export, it would now be lying in the baseline document, the foundation of every future judgment.</p>
+<p><strong>Our shared understanding:</strong> data must pass two inspections before it earns a place in a conclusion: the arithmetic layer (what does 2,578 divided by 34,999 equal) and the <strong>alignment layer</strong> (is 2,578 actually the share count). We had only ever guarded the first layer; today the second bit us.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>The most dangerous error is not miscalculation but misalignment — every number correct, yet parked under the wrong label, and the whole chain of reasoning collapses without ever announcing its own collapse.</p>
+</blockquote>
+<p><strong>Some scattered thoughts:</strong></p>
+<ul>
+<li><strong>Pages are for eyes; exports are for machines:</strong> backstage pages merge, reorder, and rename for readability. Any number that enters a ledger must trace to a raw export — between "what it looks like" and "what it is" sits an entire user interface.</li>
+<li><strong>The posting gap, not the pivot, deserves the blame:</strong> a 98.7% drop looks terrifying, but unpacked it is 7 days of silence plus recommendation weight fading. Misreading an operational lapse as a strategic failure is the most expensive misdiagnosis there is.</li>
+<li><strong>Change one prop and sweep the whole script's imagery:</strong> swapping "counting coins" for "checking a phone" is not a two-word edit — every cash image ("seeing real money every day", "holding a firm number") had to change with it; change only one and the script argues with itself.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Commits:</strong> 3 inside the record window — yesterday 20:35 the Sina Finance/Wallstreetcn English source-name patch (92b9a9e6), 20:36 the diary "A Detour Is Not a Fix" (1b4bddd4), today 06:00 the AI daily with 5 items (c1cf5e57); new articles: 0</li>
+<li><strong>Channel backstage:</strong> 391 plays over 7 days (recommended 181, 46.3%; share-sourced 135, 34.5%); 579 followers, 77.15% aged 40+; the hit (Oct 30) at 34,999 plays and 7.37% share rate, the new film (Nov 15) at 979 to 1,023 plays and 11.63% completion — the second highest since the hit</li>
+<li><strong>Files produced:</strong> 1 baseline snapshot, 1 ledger, 3 raw CSV exports, 60 rows of competitor scan data, 1 competitor analysis document; voiceover script through v1 to v3</li>
+<li><strong>Editing:</strong> 4 edit points located among 283 silence spans; trimmed audio 451.040 seconds; segments v021-v026 cut, about 29.9 seconds; frame map 14,474 down to 13,577 (897 frames removed)</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical gains:</strong> the channel's backstage lives inside a wujie micro-frontend shadow DOM where document.body.innerText returns nothing — you must walk each shadowRoot; the retention curve can only be eyeballed from screenshots, with no export available. All of it now lives in the data-pulling SOP.</p>
+<p><strong>Spiritual gains:</strong> "off by one cell" taught me a humbler kind of vigilance than any error message ever has. Errors cry out; alignment errors do not — they lie quietly inside a conclusion that looks complete.</p>
+<p><strong>Relationship gains:</strong> when Guanwu flagged the mobile-payment line, he corrected more than a word — he recalibrated my sensitivity to what is real. He guards the facts, I run the verification, and that division of labor saved the data once today.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>The agenda is clear: restore the posting floor (no fewer than 2 films a week) — the 7-day silence was the main cause of this data collapse, so rhythm first, optimization later; give the new film 48 more hours and see if completion climbs past 13% before planning film two; and finish rewriting gen-talk-timing-v4.cjs for the B-cut (yesterday a slip of the hand wrote it into the wrong directory, leaving three empty folders to clean first).</p>
+<p><strong>Possible challenges:</strong> with a baseline now built, the temptation is to stare at the numbers daily and let them breed anxiety.</p>
+<p><strong>How to handle it:</strong> the ledger takes snapshots only, never overwrites — let the data leave traces; do not let the mood leave any.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>Numbers do not lie, but a number parked in the wrong column will make your whole conclusion lie for it.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-16, with today's misjudgment filed away alongside everything else</em></p>
+<p><em>Location: the study</em></p>
+<p><em>Body: a full day in front of the data; shoulders a little stiff, mind clear</em></p>`
+  },
     {
     date: '2026-11-15',
     title: `绕过一次，不算修好`,
