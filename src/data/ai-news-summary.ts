@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-18",
+  "title": "AI新闻 | 英伟达Q3营收利润双超预期 + 黄仁勋表态愿回归公司 + SEC调查英伟达信息披露",
+  "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、英伟达前首席执行官黄仁勋发布辞职后首份声明，称愿意回归公司 2、美国国家安全局机密内部通信网络中断 3...；做空机构浑水披露做空英伟达仓位，并质疑英伟达前高管Ajay Puri与超微电脑前首席增长官Cenly Chen之间存在未披露的密切关联；英伟达给出的营收展望超过了华尔街的预期，表明需求在首席执行官黄仁勋被迫下台后依然强劲。 该公司在周二公布的财报中预计，第四财季营收将在1300亿美元上下浮动3%。",
+  "newsItems": [
+    {
+      "title": "11月18日外盘头条：黄仁勋称愿意回归公司 英伟达Q3利润和营收均超预期 美国国家安全局内部通信网络中断",
+      "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、英伟达前首席执行官黄仁勋发布辞职后首份声明，称愿意回归公司 2、美国国家安全局机密内部通信网络中断 3...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-18/doc-inizayrr1779236.shtml",
+      "titleEn": "Overnight headlines: Huang open to returning, Nvidia beats estimates, NSA internal network down",
+      "summaryEn": "Huang said in his first statement since resigning that he would be willing to come back to the company. The NSA's classified internal communications network suffered an outage, and Nvidia's results topped expectations."
+    },
+    {
+      "title": "黄仁勋听证会前夕再添变数：浑水披露英伟达空头仓位，质疑芯片分配环节存利益关联",
+      "summary": "做空机构浑水披露做空英伟达仓位，并质疑英伟达前高管Ajay Puri与超微电脑前首席增长官Cenly Chen之间存在未披露的密切关联。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786131",
+      "titleEn": "Muddy Waters reveals Nvidia short ahead of hearing",
+      "summaryEn": "The short seller disclosed a bearish position and questioned an undisclosed close relationship between former Nvidia executive Ajay Puri and Cenly Chen, ex-chief growth officer at Super Micro."
+    },
+    {
+      "title": "英伟达终迎利好 黄仁勋事件后的首份财报给出了稳健财测",
+      "summary": "英伟达给出的营收展望超过了华尔街的预期，表明需求在首席执行官黄仁勋被迫下台后依然强劲。 该公司在周二公布的财报中预计，第四财季营收将在1300亿美元上下浮动3%。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-18/doc-inizayrp4997728.shtml",
+      "titleEn": "Nvidia offers steady guidance in first report since Huang exit",
+      "summaryEn": "Nvidia guided fourth-quarter revenue to about $130 billion, plus or minus 3%, above Wall Street forecasts and a sign demand remains strong after Huang's departure."
+    },
+    {
+      "title": "英伟达 2027 财年前三季度归母净利润 1832.97 亿美元，同比增长 137.72%",
+      "summary": "英伟达今日发布 2027 财年（2026 年 1 月 26 日～2027 年 1 月 31 日）前三季度（2026 年 1 月 26 日～2026 年 10 月 25 日）及第三财季（2026 年 7 月 27 日～2026 年 10 月 25 日）报告： 2027 财年前三季度 营业总收入：2936.81 亿美元（IT之家注：现汇率约合 1.96 万亿元人…",
+      "source": "IT之家",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://www.ithome.com/1/028/575.htm",
+      "titleEn": "Nvidia posts $183.3B net profit for first nine months of fiscal 2027",
+      "summaryEn": "Revenue for the period reached $293.7 billion, up 98.7% year on year, with gross margin at 74.9%. Net profit attributable to shareholders rose 137.7% to $183.3 billion."
+    },
+    {
+      "title": "报道：美SEC调查英伟达，包括是否通过信息披露误导投资者",
+      "summary": "据美媒报道，美国证券交易委员会（SEC）正在对英伟达展开调查，目前尚无法立即获悉此次调查的全部具体焦点，但其中包括审查公司的信息披露是否误导了投资者。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786134",
+      "titleEn": "SEC reportedly probes Nvidia over investor disclosures",
+      "summaryEn": "US regulators are examining Nvidia, including whether its public disclosures misled investors, according to US media reports. The full scope of the inquiry is not yet known."
+    }
+  ],
+  "comment": "黄仁勋被迫下台后，英伟达的营收和利润依然强劲，说明其增长靠的是算力需求本身，与某一位高管去留关系不大；但浑水做空、SEC调查信息披露与NSA通信中断同期发生，提示真正的风险在治理与合规，不在订单。",
+  "titleEn": "AI News | Nvidia Q3 beats on profit and revenue + Huang says he would return + SEC probes Nvidia disclosures",
+  "summaryEn": "Nvidia posted forecast-beating third-quarter profit and revenue, with guidance of about $130 billion for the next quarter even after Jensen Huang was forced out. Huang said in his first statement since stepping down that he is willing to return. Meanwhile Muddy Waters disclosed a short position and the SEC opened a probe into whether Nvidia's disclosures misled investors.",
+  "commentEn": "Nvidia's blowout quarter shows the boom is driven by demand for compute, not by any single executive. Yet the timing of Muddy Waters' short bet, the SEC's disclosure probe and the NSA network outage suggests the real risk sits in governance and compliance, not in the order book."
+},
+{
   "date": "2026-11-17",
   "title": "AI新闻 | 微软漏洞潜伏四月致全球宕机 + 英伟达财报前纳指跌逾2% + 加州起诉OpenAI模型失控",
   "summary": "微软系统漏洞在上周因一次例行流量切换操作被引爆，服务器在流量骤增后出现内存耗尽，自动化容灾系统将流量转移至\"健康\"的其他服务器，却将漏洞带入这些系统，形成连锁失效；周一美国股市低开低走，三大股指集体大幅收跌。随着市场静待英伟达在失去创始人掌舵后的首份季度财报，投资者加速削减人工智能与半导体板块的风险敞口...；截至9月30日的季度内，乔治·索罗斯的家族办公室减持英伟达近五分之一，在黄仁勋离开公司前锁定收益。",
