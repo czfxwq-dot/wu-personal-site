@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-19",
+  "title": "AI新闻 | 11月19日外盘头条 + Anthropic据悉IPO发行定价在每股83美… + 英伟达临时CEO承诺向员工发放加薪和股权激励",
+  "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、美国民主党提名杰弗里斯为众议院议长 2、 美联储会议纪要显示几乎所有官员预计还需加息 3...；知情人士称，Anthropic PBC将首次公开募股（IPO）发行价定为每股83美元，高于此前推介区间；英伟达临时CEO克雷斯在黄仁勋卸任后首次全员大会上承诺，将于12月提前落地加薪及股权激励方案，以应对领导层变动期间的人才流失风险。",
+  "newsItems": [
+    {
+      "title": "11月19日外盘头条：美联储会议纪要释放鹰派信号 英伟达临时CEO承诺加薪 CoreWeave称英伟达仍是关键合作伙伴",
+      "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、美国民主党提名杰弗里斯为众议院议长 2、 美联储会议纪要显示几乎所有官员预计还需加息 3...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-19/doc-inizfcqr1234693.shtml",
+      "titleEn": "Fed minutes signal hawkish stance; Nvidia interim CEO vows raises; CoreWeave calls Nvidia key partner",
+      "summaryEn": "Overnight headlines: Democrats nominated Jeffries for House Speaker, Fed minutes showed nearly all officials expect more rate hikes, Nvidia's interim CEO promised raises, and CoreWeave said Nvidia remains a critical partner."
+    },
+    {
+      "title": "Anthropic据悉IPO发行定价在每股83美元 高于此前推介区间",
+      "summary": "知情人士称，Anthropic PBC将首次公开募股（IPO）发行价定为每股83美元，高于此前推介区间。",
+      "source": "新浪财经",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-19/doc-inizfcqr1226518.shtml",
+      "titleEn": "Anthropic said to price IPO at $83 a share, above range",
+      "summaryEn": "People familiar with the matter said Anthropic PBC set its IPO price at $83 per share, higher than the previously marketed range."
+    },
+    {
+      "title": "英伟达临时CEO承诺向员工发放加薪和股权激励",
+      "summary": "英伟达临时CEO克雷斯在黄仁勋卸任后首次全员大会上承诺，将于12月提前落地加薪及股权激励方案，以应对领导层变动期间的人才流失风险。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786233",
+      "titleEn": "Nvidia interim CEO pledges pay raises and equity grants to staff",
+      "summaryEn": "Interim CEO Cress, in the first all-hands meeting since Jensen Huang stepped down, promised to roll out raises and equity incentives early in December to guard against talent loss during the leadership change."
+    },
+    {
+      "title": "报道：Anthropic IPO定价上调至83美元，认购逼近5000亿美元",
+      "summary": "据美媒报道，Anthropic机构投资者的认购需求约达4000亿美元，散户需求也接近1000亿美元。",
+      "source": "华尔街见闻",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://wallstreetcn.com/articles/3786222",
+      "titleEn": "Anthropic IPO price raised to $83 as demand nears $500 billion",
+      "summaryEn": "US media reported roughly $400 billion in institutional demand and close to $100 billion from retail investors for Anthropic's offering."
+    },
+    {
+      "title": "腾讯：更多企业转向国产芯片，将助推国内供应链建设提速",
+      "summary": "腾讯昨日发布第三季度财报。财报显示，其第三季度实现营收 2073.36 亿元，同比增长 8%；毛利 1159.11 亿元，同比增长 7%；归母净利润为 636.12 亿元，同比增长 0.8%。据《科创板日报》报道，对于持续增加的 AI 投入，腾讯管理层在业绩会上表示，公司当前资本开支主要用于 AI 基础设施建设。这类投入并非一次性消耗，建成后的基础设施可以持…",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/029/124.htm",
+      "titleEn": "Tencent: more firms turning to domestic chips, speeding up China's supply chain",
+      "summaryEn": "Tencent reported third-quarter revenue of 207.3 billion yuan, up 8%, with net profit up 0.8%. Management said capex is mainly going to AI infrastructure, which can be reused for training and token generation, and that cost pressure should ease by 2028 as 2026-2027 builds come online; it also expects procurement costs to improve as more enterprises adopt domestic chips."
+    }
+  ],
+  "comment": "Anthropic被五千亿美元资金追捧，英伟达却要先靠加薪稳住人心，腾讯则把算力押给国产芯片——资本在抢AI入口，硬件与供应链的账才刚开始算。",
+  "titleEn": "AI News | Anthropic prices IPO at $83 on $500B demand + Nvidia interim CEO pledges December raises + Tencent says shift to domestic chips speeds supply chain",
+  "summaryEn": "Anthropic set its IPO price at $83 a share, above its marketed range, with institutional and retail demand approaching $500 billion. Nvidia's interim CEO promised early pay raises and equity grants in December to keep talent during the leadership transition. Tencent said more enterprises are moving to Chinese-made chips, which should accelerate the buildout of domestic supply chains.",
+  "commentEn": "Investors are throwing half a trillion dollars at Anthropic while Nvidia has to buy loyalty with raises and Tencent bets its compute on domestic chips: the money is chasing AI's front door, but the real bill is being written in hardware and supply chains."
+},
+{
   "date": "2026-11-18",
   "title": "AI新闻 | 英伟达Q3营收利润双超预期 + 黄仁勋表态愿回归公司 + SEC调查英伟达信息披露",
   "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、英伟达前首席执行官黄仁勋发布辞职后首份声明，称愿意回归公司 2、美国国家安全局机密内部通信网络中断 3...；做空机构浑水披露做空英伟达仓位，并质疑英伟达前高管Ajay Puri与超微电脑前首席增长官Cenly Chen之间存在未披露的密切关联；英伟达给出的营收展望超过了华尔街的预期，表明需求在首席执行官黄仁勋被迫下台后依然强劲。 该公司在周二公布的财报中预计，第四财季营收将在1300亿美元上下浮动3%。",
