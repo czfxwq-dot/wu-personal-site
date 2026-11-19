@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-20",
+  "title": "AI新闻 | Anthropic上市首日市值1.3万亿 + SpaceX发债60亿买英伟达芯片 + 苹果迫使英国公开秘密令状",
+  "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、Anthropic首秀市值达1.3万亿美元 又一巨型AI公司登陆纳斯达克 2、特朗普9月交易记录曝光：加仓英伟达、SpaceX...；Anthropic登陆华尔街首日大涨17%，收盘约97美元。这家Claude大模型开发商完成810亿美元募资，创下史上最大IPO纪录，投资者争相抢筹这轮AI热潮核心标的；据媒体报道，本次发售包括约60亿美元债券，规模已从此前的40亿美元上调，于周四向投资者开放认购，其余约260亿美元票据此前已完成配售。",
+  "newsItems": [
+    {
+      "title": "11月20日外盘头条：Anthropic首秀市值达1.3万亿美元 特朗普9月交易记录曝光 美联储官员未排除更大幅度加息",
+      "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、Anthropic首秀市值达1.3万亿美元 又一巨型AI公司登陆纳斯达克 2、特朗普9月交易记录曝光：加仓英伟达、SpaceX...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-20/doc-inizinvp5784689.shtml",
+      "titleEn": "Anthropic's Nasdaq debut values the company at $1.3 trillion",
+      "summaryEn": "The Claude developer rose 17% to close near $97 on its first trading day after raising $81 billion, the biggest IPO ever, as investors scrambled for a core AI play."
+    },
+    {
+      "title": "Anthropic首秀市值达1.3万亿美元 又一巨型AI公司登陆纳斯达克",
+      "summary": "Anthropic登陆华尔街首日大涨17%，收盘约97美元。这家Claude大模型开发商完成810亿美元募资，创下史上最大IPO纪录，投资者争相抢筹这轮AI热潮核心标的。",
+      "source": "新浪财经",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-20/doc-inizinvp5782425.shtml",
+      "titleEn": "Anthropic's first day lifts its market value to $1.3 trillion",
+      "summaryEn": "Anthropic listed on Wall Street with a 17% first-day gain to about $97 a share. The Claude maker raised $81 billion in the largest IPO on record, drawing heavy demand from investors chasing the AI boom."
+    },
+    {
+      "title": "SpaceX周四拟发债60亿美元，完成全部320亿美元债券融资，用于购买英伟达芯片",
+      "summary": "据媒体报道，本次发售包括约60亿美元债券，规模已从此前的40亿美元上调，于周四向投资者开放认购，其余约260亿美元票据此前已完成配售。",
+      "source": "华尔街见闻",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://wallstreetcn.com/articles/3786315",
+      "titleEn": "SpaceX to sell $6 billion in bonds Thursday to fund Nvidia chip purchases",
+      "summaryEn": "The offering was upsized from $4 billion and opens to investors on Thursday, completing a roughly $32 billion debt package that includes $26 billion in notes already placed."
+    },
+    {
+      "title": "苹果赢下英国用户数据诉讼首回合，政府秘密令状被迫公开",
+      "summary": "英国调查权力法庭最新裁定，政府以“国家安全”为由隐瞒秘密监控令的理由不成立，这不仅迫使英国内政部首次公开承认曾要求苹果交出加密数据，也让这场原本全程保密的诉讼得以转入公开法庭审理。",
+      "source": "华尔街见闻",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://wallstreetcn.com/articles/3786314",
+      "titleEn": "Apple wins first round in UK user-data case as secret order is disclosed",
+      "summaryEn": "Britain's Investigatory Powers Tribunal ruled the government's national-security grounds for hiding a surveillance order were invalid, forcing the Home Office to admit it demanded encrypted data from Apple and moving the case into open court."
+    },
+    {
+      "title": "Anthropic 完成史上最大规模 IPO，上市估值达 1.5 万亿美元",
+      "summary": "北京时间今天（19 日）深夜，AI 初创企业 Anthropic 正式登陆美股，以 813 亿美元（IT之家注：现汇率约合 5,431.47 亿元人民币）的募资额创下 IPO 历史纪录。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/029/708.htm",
+      "titleEn": "Anthropic completes record IPO at $1.5 trillion valuation",
+      "summaryEn": "The AI startup listed on US markets, raising $81.3 billion and setting an IPO record, with its valuation reaching $1.5 trillion."
+    }
+  ],
+  "comment": "Anthropic上市和SpaceX发债买芯片说明，AI竞赛已变成资本竞赛，谁融资多谁先跑；苹果诉讼则提醒，算力扩张越快，数据主权和隐私的冲突只会更硬。",
+  "titleEn": "AI News | Anthropic debuts at $1.3T valuation + SpaceX raises $6B to buy Nvidia chips + Apple forces UK to disclose secret order",
+  "summaryEn": "Anthropic went public on Nasdaq, jumping 17% on its first day to a valuation of about $1.3 trillion after raising $81 billion, the largest IPO on record. SpaceX is selling $6 billion in bonds to complete a $32 billion financing package aimed at buying Nvidia chips. Meanwhile, a UK tribunal ruled that the government's grounds for concealing a secret order demanding Apple hand over encrypted data were invalid, pushing the case into open court.",
+  "commentEn": "Anthropic's listing and SpaceX's bond sale to buy chips show that the AI race has become a capital race: whoever raises more runs ahead. The Apple case is a reminder that the faster compute expands, the harder the clash over data sovereignty and privacy will be."
+},
+{
   "date": "2026-11-19",
   "title": "AI新闻 | 11月19日外盘头条 + Anthropic据悉IPO发行定价在每股83美… + 英伟达临时CEO承诺向员工发放加薪和股权激励",
   "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、美国民主党提名杰弗里斯为众议院议长 2、 美联储会议纪要显示几乎所有官员预计还需加息 3...；知情人士称，Anthropic PBC将首次公开募股（IPO）发行价定为每股83美元，高于此前推介区间；英伟达临时CEO克雷斯在黄仁勋卸任后首次全员大会上承诺，将于12月提前落地加薪及股权激励方案，以应对领导层变动期间的人才流失风险。",
