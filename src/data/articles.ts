@@ -15,6 +15,91 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'street-stalls-retreat',
+    date: '2026-11-16',
+    title: `满街烟火气背后：多出来的是机会，还是退路？`,
+    titleEn: `Behind the Street Stalls: Opportunity, or Retreat?`,
+    excerpt: `街上一头是灯，一头是空铺子。地摊经济不是风口，是门面先退、人跟着退一步；不是失业变多了，是活变碎了。不敢花钱也不是消费降级，是收入预期降级——热闹本身，撑不起复苏。`,
+    excerptEn: `Lights on one end of the street, empty shops on the other. The "stall economy" is not a trend — storefronts retreated first, and people followed one step behind. Work has not vanished, it has fragmented. People dare not spend not because goods are pricey, but because income expectations have downgraded. Liveliness alone cannot prove a recovery.`,
+    tag: '商业思考',
+    tagEn: 'Business Reflections',
+    contentEn: `<h2>Street stalls are booming — is this economic recovery?</h2>
+
+<p>No. What the street has gained is not opportunity, but retreat.</p>
+
+<p><img src="/images/articles/street-stalls-retreat/img1.jpg" alt="Illustration" /></p>
+
+<p>Walking out at night, the roadside stalls stretch beyond sight. Grilled sausages, socks, freshly squeezed juice — strings of lights, sizzling oil pans, people edging along shoulder to shoulder. It looks livelier than the past two years.</p>
+
+<p>Walk a bit further, and the storefronts that once bore "for transfer" signs are still empty, the paper on the glass faded by the sun.</p>
+
+<p>Lights on one end, empty shops on the other, on the same street. You have probably walked past like this too, without thinking much.</p>
+
+<p>These stalls did not sprout out of nowhere.</p>
+
+<p>The storefronts stepped back first, and people followed, one step behind.</p>
+
+<p>If you pass an industrial park, you have probably seen it: the buildings still stand, the workshop lights stay on, but the shift schedules keep shrinking.</p>
+
+<p>When orders thin out, many companies do not lay people off in bulk right away. They cut shifts first, lower performance bonuses, stop renewing expiring contracts, stop adding positions. Getting paid monthly, once a stable thing, slowly becomes less reliable.</p>
+
+<p>The storefront's ledger is even harder. Rent, utilities, property fees — they keep running whether you open for business or not. When only a handful of customers pass by in a day, the shutter comes down, and one more person hits the street looking for a way out.</p>
+
+<p>Claiming a spot before dark, pushing the cart over, laying everything out one item at a time.</p>
+
+<p>Busiest right after mealtime; after that, it is all waiting.</p>
+
+<p>Rain means no earnings, and the stock prepared before setting out has to be eaten at home.</p>
+
+<p>Closing later than an office job, then going back to prep for the next day. And the next day, the same.</p>
+
+<p>Nobody schedules shifts for them, and nobody shields them from the weather.</p>
+
+<p>So for "cash in hand every day", what is valuable is not the money — it is the word "today".</p>
+
+<p><img src="/images/articles/street-stalls-retreat/img2.jpg" alt="Illustration" /></p>
+
+<p>Nobody suddenly fell in love with freedom; they cannot afford to wait for next month. Waiting a month brings too many variables; closing the stall each day means holding something certain. But that certainty is bought with something else.</p>
+
+<p>Weather, illness, unsold goods, social insurance to cover on their own, a sudden need for money at home — these risks used to be absorbed by an employer; now they have to weigh each one themselves. That ledger matters far more than "is stall-keeping free".</p>
+
+<p>The browsers have not decreased; the buyers have. It is not that people cannot afford a grilled sausage — it is that they feel unsure about next month. Any spare cash goes first into savings, into paying down loans, kept as ballast. And the stall keeper faces exactly these same people.</p>
+
+<p>This can be blamed on no one's lack of diligence, nor on the stinginess of passersby.</p>
+
+<p>What is most easily misread is the narrative beyond the street.</p>
+
+<p>The same state changes its name when the context changes.</p>
+
+<p>On camera it is "the warmth of everyday life is back"; in statistics tables it is "flexible employment"; in the stall keeper's heart it is "at least I saw cash today".</p>
+
+<p>The four characters of "stall economy" — once the word "economy" attaches, it sounds like an emerging industry, a rising wind, something done well. But taken apart, there is no formed industry here — only individual people pushing little carts onto the street.</p>
+
+<p>Calling a step back a trend is the quietest kind of misreading. It does not merely dress bad news in good words; it erases the situation of the people behind the lively scene.</p>
+
+<p>So this is not more unemployment — it is work getting fragmented.</p>
+
+<p>People are still working, often longer than before — just without an employer, without shifts, without monthly pay, without that layer that used to shield them a little. These fragmented livelihoods are visible on the street, but hard for many statistics to capture.</p>
+
+<p><img src="/images/articles/street-stalls-retreat/img3.jpg" alt="Illustration" /></p>
+
+<p>Nor is it a simple downgrade of consumption — it is a downgrade of income expectations. People dare not spend not because goods are expensive, but because they dare not make promises about next month's income.</p>
+
+<p>The liveliness itself cannot yet serve as proof of recovery. The livelier the street, the thinner the space elsewhere to hold jobs and secure incomes. The noisy warmth of the stalls is just retreat laid out in the open.</p>
+
+<p>What deserves to be seen was never that row of colored lights — it is the reason someone stands here pushing them.</p>
+
+<p>A person pushing a little cart onto the street does not mean they chose this path. Often the other doors will not open, and this one has the lowest threshold — you do not even have to knock.</p>
+
+<p>This step was never meant to be carried by one person alone, bearing all the risk.</p>
+
+<p>Next time you see some "economy" catching fire, ask one question first: has what multiplied — opportunity, or retreat? That question works better than the liveliness itself.</p>
+
+<p>If someone at home is weighing "maybe I will set up a stall too", or feels "flexible work is so free", you might forward this piece to them — not to talk them out of it, but to make clear that the risks once absorbed by others will now have to be counted by themselves.</p>
+
+<p>What new kinds of work have appeared on your street these past two years? Tell us in the comments — I would like to see what it looks like elsewhere.</p>`,
+  },
+  {
     slug: 'you-always-complaint',
     date: '2026-11-10',
     title: `我们说的都是“你总是”，心里想的是“我想要”`,
