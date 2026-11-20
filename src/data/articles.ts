@@ -15,6 +15,137 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'ai-life-audit',
+    date: '2026-11-19',
+    title: `每天都很忙，却说不出自己缺什么？AI 问了我十几个问题`,
+    titleEn: `Busy Every Day, Yet Unable to Name What I Lack? AI Asked Me a Dozen Questions`,
+    excerpt: `照 Dan Koe 的 Human 3.0 写了段提示词发给 AI，让它一个问题一个问题地问。报告说我四项全在第二层：不是生活出了问题，是投入和目标对不上；写文章脑子里没有具体的人；每天都很忙，却说不出自己到底缺什么。`,
+    excerptEn: `I built a prompt from Dan Koe's Human 3.0 and had the AI question me one question at a time. The report said all four of my life quadrants sit on the second layer: not a broken life, but inputs and goals out of alignment; no specific reader in mind when writing; busy every day, yet unable to name what I actually lack.`,
+    tag: 'AI落地',
+    tagEn: 'AI in Practice',
+    contentEn: `<p>After a dozen-plus questions, the AI stopped and said: let me write up your report.</p>
+
+<p>One line in the report kept me staring at the screen for a long while:</p>
+
+<p>You are not chasing a life you don't have.</p>
+
+<p>The life you want, you are already living it, more or less.</p>
+
+<p>It is rare for a 50-year-old to be pressed into his chair by a single sentence.</p>
+
+<p>This starts with Dan Koe. Early this year he wrote "How to Fix Your Entire Life in One Day", timed with X's million-dollar prize for long-form writers, and it spread widely. I read it years ago, and read it again this year.</p>
+
+<p>But what really hooked me was not that essay — it was another thing of his called Human 3.0, a model of life.</p>
+
+<p>I wrote a prompt based on it and sent it to the AI, asking it to question me. It didn't dump a batch at once; it asked one question at a time. Around the thirteenth, I said that was enough.</p>
+
+<p><img src="/images/articles/ai-life-audit/img1.png" alt="Illustration" /></p>
+
+<p>01 | It doesn't ask whether you work hard enough — only which subject you are lopsided in</p>
+
+<p>Human 3.0 splits life into four parts: mind (cognition, thinking, emotions), body (sleep, health, energy), spirit (values, relationships, sense of meaning), and career (work, income, freedom).</p>
+
+<p>Why is this split useful? Because we habitually try to solve everything from one quadrant. When work goes badly, the first instinct is to quit; when the heart feels empty, the first instinct is to buy two psychology books.</p>
+
+<p>You cannot fix loneliness by working harder, nor fix being broke with meditation and the law of attraction. First you must know which subject the problem is in.</p>
+
+<p>When my report came out, all four items were at the second layer. No subject was terrible; none was presentable either.</p>
+
+<p>But it did not stop at the platitude "everything is average". It first asked me to recall: your ideal day — did it actually happen at any point in the last 30 days?</p>
+
+<p>I listed six items; five had happened: dinner with family, pushing work forward with colleagues, chatting and watching a movie after a workout, work moving along. The only one that hadn't: a day out with family.</p>
+
+<p>So it said: this is not "something wrong with your life" — it is "inputs and goals not matching". What you truly lack is only two things: contiguous time for experience, and results on the account.</p>
+
+<p>For a 50-year-old, the scariest thing is not a collapsed life. It is being busy every day yet unable to name what you are actually missing.</p>
+
+<p>02 | I have stayed on the second layer for many years</p>
+
+<p>The model also divides each subject into three layers.</p>
+
+<p>The first layer: others tell you how to live — study hard, work hard, marry and buy a home; socialization tasks are handed down one by one. The second layer: you must decide how to live yourself — earn money, build a career, work out. The third layer is not more grinding; it is balance — the freedom, money, experiences and stability you want are all coordinated within one plan.</p>
+
+<p>The second layer has a well-hidden trap: you turn yourself into a project that can never finish being optimized.</p>
+
+<p>All four items on the second layer — that is me.</p>
+
+<p>I get to decide what I do — carrying four lines alone, an autonomy rare among my peers. But the AI pointed out the price: not a single line has a clear numeric standard.</p>
+
+<p>I described my account as "the numbers aren't great, but there's some progress".</p>
+
+<p>It said: this sentence contains two judgments and not a single number.</p>
+
+<p>That is exactly what it looks like. No alarm, no applause. Busy every day, yet nothing can answer "has it actually worked or not".</p>
+
+<p>03 | Getting it and feeling flat doesn't mean you are ungrateful</p>
+
+<p>One more thing — I don't know if you are like this too.</p>
+
+<p>Something you wanted badly before — once you actually get it, it doesn't feel that happy, that exciting.</p>
+
+<p>I used to think this was called ingratitude, and was even embarrassed to admit it. Human 3.0 gives it another name: misalignment — you are not greedy; the old way of living can no longer hold who you have become.</p>
+
+<p>So change is necessary. Not "nice to change things up" — necessary.</p>
+
+<p><img src="/images/articles/ai-life-audit/img2.png" alt="Illustration" /></p>
+
+<p>04 | The three sharpest cuts in the report</p>
+
+<p>The first: the phone time between 11 and 12.</p>
+
+<p>Six hours of phone a day sounds alarming, but most of it goes to self-media and learning AI — it didn't scold me for that. It picked out only one stretch: after lying down at 11, I sometimes scroll past midnight. It said that is my only obvious leak.</p>
+
+<p>However "justified" the daytime scrolling is, it cannot offset that stretch after lying down.</p>
+
+<p>The second: one action, judged by two sets of standards.</p>
+
+<p>While writing, judge it by the standard of "journaling", written for myself; after publishing, judge it by the standard of "the account", watching the numbers. Then both ends feel wrong.</p>
+
+<p>One action serving two standards serves neither well.</p>
+
+<p>The third cut the deepest. It asked: before you write, is there a specific person in your head?</p>
+
+<p>I said sure, a cohort: 30 to 50 years old, urban, educated.</p>
+
+<p>It said: this definition excludes no one, therefore it does nothing while you write.</p>
+
+<p>Later a specific name came to me: Lao Yang, 50, worried at the time about his son's college and their father-son relationship.</p>
+
+<p>But what was I writing for him? AI, frontier news, mid-life insights.</p>
+
+<p>The answer he wanted and the goods I shipped never matched at all.</p>
+
+<p>The biggest lever it gave me was not working twice as hard, nor learning yet another method —</p>
+
+<p>it was to let one specific person sit across your writing desk, long-term.</p>
+
+<p>The move costs nothing: before writing, put down one line with three blanks — who is this for, what happened to them yesterday, what do they most want to know now.</p>
+
+<p>If the three blanks can't be filled, don't write the piece yet.</p>
+
+<p>Over 30 days you will accumulate a list of people. It said this list says more about whom you write for than the follower count does.</p>
+
+<p>05 | Where AI sits in this tool: not thinking for you, but pressing the questions for you</p>
+
+<p>I am not going to wrap this piece up with three takeaways.</p>
+
+<p>This check-up report could be done with pen and paper; it's just that no one asks in such detail. Here AI is not thinking for you — it does the one thing you cannot do yourself: press on, question by question, neither letting you off nor flattering you.</p>
+
+<p>It doesn't ask "where do you think you can improve"; it asks "where did that hour between 11 and 12 go". Specific to the event, you cannot bluff.</p>
+
+<p>If you want this prompt, leave a comment — just type "want it". I'll reply to each one and send it to you as-is.</p>
+
+<p>Once you have it, give yourself half an hour tonight and send it to the AI. Don't rush to conclusions; the value is entirely in the questioning — many people only discover at round three that it isn't that they don't know what they want; they have simply never been asked seriously.</p>
+
+<p>When you're done, come back and tell me: which question stopped you.</p>
+
+<p>The model comes from Dan Koe's Human 3.0.</p>
+
+<p>AI can take the questions to a place you could never reach on your own.</p>
+
+<p>But the answers only you can give.</p>`,
+  },
+  {
     slug: 'street-stalls-retreat',
     date: '2026-11-16',
     title: `满街烟火气背后：多出来的是机会，还是退路？`,
