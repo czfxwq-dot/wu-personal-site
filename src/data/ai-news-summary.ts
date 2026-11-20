@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-21",
+  "title": "AI新闻 | SEC调查英伟达会计股价腰斩 + 特朗普力挺黄仁勋回归 + 华为星芒AI手机4999元起",
+  "summary": "据媒体报道，美国SEC已就英伟达的会计实践展开调查，这是英伟达所遭遇的最新法律危机。调查本身并不构成违规证据，许多调查最终不会引发执法行动。英伟达股价单周重挫23%，创2008年10月份以来最大单周跌幅；周五收跌14%，报125.5美元，较10月高点243.4美元接近腰斩；市值跌至3.03万亿美元，被谷歌超越，位列美股第四；特朗普在美国白宫新闻发布会上明确表示，希望看到黄仁勋获得第二次机会。他称赞后者是“世界上真正最聪明的头脑之一”。他强调，正是黄仁勋的领导使美国在技术领域领先其他公司长达十年之久；英伟达在黄仁勋被迫离开后面临的挑战有增无减，这家芯片制造商被曝出美国证券交易委员会正调查其会计操作后股价进一步重挫。",
+  "newsItems": [
+    {
+      "title": "英伟达再遭SEC调查，会计问题是审查重点，股价已较10月高点腰斩",
+      "summary": "据媒体报道，美国SEC已就英伟达的会计实践展开调查，这是英伟达所遭遇的最新法律危机。调查本身并不构成违规证据，许多调查最终不会引发执法行动。英伟达股价单周重挫23%，创2008年10月份以来最大单周跌幅；周五收跌14%，报125.5美元，较10月高点243.4美元接近腰斩；市值跌至3.03万亿美元，被谷歌超越，位列美股第四。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786409",
+      "titleEn": "SEC Opens Probe Into Nvidia's Accounting; Shares Halve From October Peak",
+      "summaryEn": "US regulators are examining Nvidia's accounting practices, the latest legal headache for the chipmaker. The stock fell 23% in a single week, its worst since October 2008, closing at $125.5 versus a peak of $243.4, with a market value of $3.03 trillion that now trails Alphabet for fourth place among US companies."
+    },
+    {
+      "title": "特朗普呼吁黄仁勋在“重大道歉”后重返英伟达出任CEO",
+      "summary": "特朗普在美国白宫新闻发布会上明确表示，希望看到黄仁勋获得第二次机会。他称赞后者是“世界上真正最聪明的头脑之一”。他强调，正是黄仁勋的领导使美国在技术领域领先其他公司长达十年之久。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786408",
+      "titleEn": "Trump Wants Jensen Huang Back at Nvidia After 'Major Apology'",
+      "summaryEn": "Speaking at a White House press conference, Trump said Huang deserves a second chance and praised him as one of the truly brightest minds in the world, crediting his leadership with keeping the US a decade ahead in technology."
+    },
+    {
+      "title": "英伟达重挫 报道称美国监管机构正调查该公司的会计操作",
+      "summary": "英伟达在黄仁勋被迫离开后面临的挑战有增无减，这家芯片制造商被曝出美国证券交易委员会正调查其会计操作后股价进一步重挫。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-21/doc-inizmrup5236680.shtml",
+      "titleEn": "Nvidia Slides Further as Accounting Investigation Reported",
+      "summaryEn": "The chipmaker's troubles have deepened since Huang's departure, with reports of an SEC inquiry into its accounting sending the shares down again."
+    },
+    {
+      "title": "独占特性确认：华为 Mate 系列旗舰机“无缘”OSTA 小星芒、AI 屏等功能",
+      "summary": "首款为 AI 而生的鸿蒙手机 —— 华为星芒 OSTA O1 Pro 已于昨日下午正式发布，叠加国补后 4999 元起。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/030/284.htm",
+      "titleEn": "Huawei Flagship Mate Phones Excluded From OSTA Star-Glow and AI Screen Features",
+      "summaryEn": "Huawei's first AI-centric HarmonyOS phone, the Star-Glow OSTA O1 Pro, launched at 4,999 yuan after subsidies, but the exclusive OSTA features will not reach the Mate flagship line."
+    },
+    {
+      "title": "全球AI抛售潮提振日元和瑞郎避险需求 美元走弱",
+      "summary": "日元和瑞郎的表现优于其他主要货币，市场对人工智能（AI）热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。",
+      "source": "新浪财经",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-21/doc-inizmmns7008761.shtml",
+      "titleEn": "Global AI Selloff Lifts Yen and Franc as Dollar Softens",
+      "summaryEn": "The yen and Swiss franc outperformed other major currencies as mounting doubts about the durability of the AI boom drove safe-haven demand and weighed on the dollar."
+    }
+  ],
+  "comment": "这轮抛售的本质是市场不再为“算力信仰”无条件买单：SEC查账、黄仁勋去职传闻、避险资金涌向日元瑞郎，三件事指向同一件事——英伟达从增长故事变成风险源，而华为此时推AI手机，是在抢叙事空档。",
+  "titleEn": "AI News | SEC Probes Nvidia Accounting as Stock Halves + Trump Backs Huang's Return + Huawei's 4,999-Yuan AI Phone",
+  "summaryEn": "The SEC has opened an inquiry into Nvidia's accounting, and the stock has lost nearly half its value from October's peak, with one-week losses not seen since 2008. Trump publicly urged Jensen Huang to return as CEO, calling him one of the world's sharpest minds. Meanwhile, Huawei unveiled its AI-native HarmonyOS phone starting at 4,999 yuan, and the global AI selloff is pushing investors toward the yen and Swiss franc.",
+  "commentEn": "The selloff marks the moment investors stopped paying blindly for the compute faith: an SEC probe, questions over Jensen Huang's future and money fleeing to the yen and franc all say the same thing — Nvidia has turned from growth story into risk factor, and Huawei's AI phone launch is timed to fill the narrative gap."
+},
+{
   "date": "2026-11-20",
   "title": "AI新闻 | Anthropic上市首日市值1.3万亿 + SpaceX发债60亿买英伟达芯片 + 苹果迫使英国公开秘密令状",
   "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、Anthropic首秀市值达1.3万亿美元 又一巨型AI公司登陆纳斯达克 2、特朗普9月交易记录曝光：加仓英伟达、SpaceX...；Anthropic登陆华尔街首日大涨17%，收盘约97美元。这家Claude大模型开发商完成810亿美元募资，创下史上最大IPO纪录，投资者争相抢筹这轮AI热潮核心标的；据媒体报道，本次发售包括约60亿美元债券，规模已从此前的40亿美元上调，于周四向投资者开放认购，其余约260亿美元票据此前已完成配售。",
