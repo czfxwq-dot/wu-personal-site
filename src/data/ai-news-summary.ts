@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-22",
+  "title": "AI新闻 | 亚马逊75亿美元收购Decart + 美财长查英伟达滥售 + 三星三年存储产能被锁定",
+  "summary": "亚马逊即将达成一项75亿美元收购AI初创公司Decart的交易。双方谈判已进入后期阶段，交易最早可能于下周初敲定，但谈判仍存在破裂可能；美国财政部长贝森特表示：“随着（英伟达）临时管理层调查究竟发生了什么，我们将看看该公司是否在某种程度上滥售；据路透社报道，当地时间 21 日，韩国总统李在明前往韩国东南部城市蔚山，视察当地一座在建数据中心，并敦促韩国加快在全球 AI 竞赛中的步伐。",
+  "newsItems": [
+    {
+      "title": "亚马逊接近以75亿美元收购AI初创企业Decart",
+      "summary": "亚马逊即将达成一项75亿美元收购AI初创公司Decart的交易。双方谈判已进入后期阶段，交易最早可能于下周初敲定，但谈判仍存在破裂可能。",
+      "source": "新浪财经",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://finance.sina.com.cn/7x24/2026-11-22/doc-inizpqms6400684.shtml",
+      "titleEn": "Amazon near $7.5B deal for AI startup Decart",
+      "summaryEn": "Amazon is in late-stage talks to buy AI startup Decart for $7.5 billion, with a deal possibly announced early next week, though the negotiations could still fall apart."
+    },
+    {
+      "title": "美国财长贝森特：调查将确定英伟达是否有“滥售”行为",
+      "summary": "美国财政部长贝森特表示：“随着（英伟达）临时管理层调查究竟发生了什么，我们将看看该公司是否在某种程度上滥售。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-22/doc-inizpqmw9384620.shtml",
+      "titleEn": "Bessent: probe to determine if Nvidia over-sold",
+      "summaryEn": "US Treasury Secretary Scott Bessent said an investigation into Nvidia's interim management will establish whether the company engaged in a degree of improper selling."
+    },
+    {
+      "title": "韩国总统李在明：速度在 AI 竞赛中至关重要",
+      "summary": "据路透社报道，当地时间 21 日，韩国总统李在明前往韩国东南部城市蔚山，视察当地一座在建数据中心，并敦促韩国加快在全球 AI 竞赛中的步伐。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/030/506.htm",
+      "titleEn": "South Korea's Lee says speed is critical in AI race",
+      "summaryEn": "President Lee Jae-myung visited a data center under construction in Ulsan and urged South Korea to accelerate its pace in the global AI competition, citing speed as decisive."
+    },
+    {
+      "title": "曝三星未来三年大部分存储芯片产能已被锁定，有客户希望供货保障至 2031 年",
+      "summary": "韩媒 Economy Tribune 今天（21 日）下午爆料称，三星电子 2027 年至 2029 年的大部分存储芯片产能都已被合同预订。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/030/475.htm",
+      "titleEn": "Samsung memory capacity locked up for three years",
+      "summaryEn": "Samsung Electronics has most of its memory chip output for 2027-2029 already booked under contracts, with some customers seeking supply guarantees through 2031."
+    },
+    {
+      "title": "郭明錤：谷歌将明年博通设计TPU出货量下调20%，计划增加联发科份额",
+      "summary": "知名苹果及供应链分析师郭明錤指出，谷歌将博通设计的TPU 8i系列2027年出货量削减约100万颗，同时计划增加联发科设计的TPU 8t采购量。",
+      "source": "华尔街见闻",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://wallstreetcn.com/articles/3786438",
+      "titleEn": "Google trims Broadcom TPU orders, adds MediaTek",
+      "summaryEn": "Analyst Ming-Chi Kuo says Google will cut about 1 million units from its 2027 Broadcom-designed TPU 8i shipments while increasing purchases of MediaTek-designed TPU 8t chips."
+    }
+  ],
+  "comment": "算力与芯片正被资本和订单提前瓜分：亚马逊买模型、三星产能锁到2029年、谷歌调TPU订单，英伟达则被监管盯上。AI竞争已从拼技术转向拼资源锁定和合规。",
+  "titleEn": "AI News | Amazon nears $7.5B Decart deal + US Treasury probes Nvidia sales + Samsung memory booked through 2029",
+  "summaryEn": "Amazon is close to a $7.5 billion acquisition of AI startup Decart, signaling a rush to own model capability outright. Meanwhile, US Treasury Secretary Bessent said an investigation will determine whether Nvidia engaged in improper sales practices. On the supply side, Samsung's memory chip output for 2027-2029 is largely contracted, and Google is cutting Broadcom-designed TPU volumes while adding MediaTek share.",
+  "commentEn": "Compute and chips are being carved up ahead of demand: Amazon buys a model maker, Samsung's output is booked through 2029, Google reshuffles TPU orders, and Nvidia faces regulatory scrutiny. The AI race is shifting from technical prowess to locking in resources and staying compliant."
+},
+{
   "date": "2026-11-21",
   "title": "AI新闻 | SEC调查英伟达会计股价腰斩 + 特朗普力挺黄仁勋回归 + 华为星芒AI手机4999元起",
   "summary": "据媒体报道，美国SEC已就英伟达的会计实践展开调查，这是英伟达所遭遇的最新法律危机。调查本身并不构成违规证据，许多调查最终不会引发执法行动。英伟达股价单周重挫23%，创2008年10月份以来最大单周跌幅；周五收跌14%，报125.5美元，较10月高点243.4美元接近腰斩；市值跌至3.03万亿美元，被谷歌超越，位列美股第四；特朗普在美国白宫新闻发布会上明确表示，希望看到黄仁勋获得第二次机会。他称赞后者是“世界上真正最聪明的头脑之一”。他强调，正是黄仁勋的领导使美国在技术领域领先其他公司长达十年之久；英伟达在黄仁勋被迫离开后面临的挑战有增无减，这家芯片制造商被曝出美国证券交易委员会正调查其会计操作后股价进一步重挫。",
