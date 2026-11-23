@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-23",
+  "title": "AI新闻 | Anthropic绿鞋提前行权险破发 + AI服务器签约后涨价45% + Claude Code半年动摇VS Code",
+  "summary": "上市仅1天即行权狂揽122亿美元。争议核心在于：在发行规模已上调19%、科技股下挫、260亿美元内部股解禁抛售的重压下，公司为保巨额现金落袋为安，竟提前放弃了用于托底股价的“保险”机制。此举让投资者直面破发风险，暴露出其无视市况、趁机极限融资的投机心态；数据中心设备厂商正在大幅上调搭载英伟达芯片的AI服务器售价——合同与买家签署数月之后，厂商才提出涨价，AI基础设施的成本暴涨压力正被转嫁给下游客户；据科技媒体 Windows Latest 今天报道，这几天，不少开发者炫耀自己已经好几个月没打开过 VS Code。",
+  "newsItems": [
+    {
+      "title": "绿鞋提前行权导致“次日无人护盘”，Anthropic差点破发，被质疑“急于拿钱”",
+      "summary": "上市仅1天即行权狂揽122亿美元。争议核心在于：在发行规模已上调19%、科技股下挫、260亿美元内部股解禁抛售的重压下，公司为保巨额现金落袋为安，竟提前放弃了用于托底股价的“保险”机制。此举让投资者直面破发风险，暴露出其无视市况、趁机极限融资的投机心态。",
+      "source": "华尔街见闻",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://wallstreetcn.com/articles/3786474",
+      "titleEn": "Anthropic exercises greenshoe early, nearly breaks issue price",
+      "summaryEn": "Just one day after listing, Anthropic exercised its greenshoe to raise $12.2 billion, abandoning the stabilisation mechanism meant to support the stock. With the deal already upsized 19%, tech shares falling and $26 billion of insider shares unlocked, the move left investors exposed and raised questions about a rush for cash."
+    },
+    {
+      "title": "科技供应商在订单签约数月后上调AI服务器价格，最高涨幅达45%",
+      "summary": "数据中心设备厂商正在大幅上调搭载英伟达芯片的AI服务器售价——合同与买家签署数月之后，厂商才提出涨价，AI基础设施的成本暴涨压力正被转嫁给下游客户。",
+      "source": "新浪财经",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-23/doc-inizsqqq0695848.shtml",
+      "titleEn": "AI server prices jump up to 45% after contracts signed",
+      "summaryEn": "Data-centre equipment vendors are sharply raising prices for NVIDIA-powered AI servers months after buyers signed contracts, shifting the surging cost of AI infrastructure onto customers."
+    },
+    {
+      "title": "微软 CEO 纳德拉感叹：Claude Code 仅半年动摇 VS Code 地位",
+      "summary": "据科技媒体 Windows Latest 今天报道，这几天，不少开发者炫耀自己已经好几个月没打开过 VS Code。",
+      "source": "IT之家",
+      "category": "AI工具",
+      "categoryEn": "AI Tools",
+      "url": "https://www.ithome.com/1/030/733.htm",
+      "titleEn": "Nadella says Claude Code has shaken VS Code in half a year",
+      "summaryEn": "Microsoft CEO Satya Nadella acknowledged that Claude Code has challenged VS Code's position within roughly six months, as developers report going months without opening the editor."
+    },
+    {
+      "title": "古尔曼：苹果若想在 AI 时代生存下去，需进行结构和文化层面的全面改革",
+      "summary": "彭博社记者马克 · 古尔曼昨日在新一期《Power On》通讯中认为，苹果传统的软件开发方式可能阻碍其进入 AI 时代。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/030/730.htm",
+      "titleEn": "Gurman: Apple needs structural and cultural overhaul to survive the AI era",
+      "summaryEn": "Bloomberg's Mark Gurman argues in Power On that Apple's traditional software development approach may hold it back in the AI era, and that the company needs change at both the structural and cultural level."
+    },
+    {
+      "title": "OpenAI首席科学家呼吁头部AI企业商定AI研发上限",
+      "summary": "OpenAI首席科学家呼吁各大主流AI模型研发企业商定研发红线，在人类理解、监测AI行为的能力达到某个明确里程碑之前，不得突破这些红线。",
+      "source": "新浪财经",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-23/doc-inizskhn2384486.shtml",
+      "titleEn": "OpenAI chief scientist calls for industry-wide AI research limits",
+      "summaryEn": "OpenAI's chief scientist is urging leading AI developers to agree on red lines that would bar more capable systems until humans can clearly understand and monitor AI behaviour at a defined milestone."
+    }
+  ],
+  "comment": "三件事指向同一条线：AI的钱和算力都在被提前透支。Anthropic抢现金、服务器商毁约涨价，是上游把风险甩给下游；而Claude Code半年就撬动VS Code，说明真正被重估的是软件入口本身。",
+  "titleEn": "AI News | Anthropic's greenshoe exit nearly breaks IPO + AI servers repriced up to 45% + Claude Code shakes VS Code in six months",
+  "summaryEn": "Anthropic exercised its greenshoe a day after listing to lock in $12.2 billion, giving up the price support that would have cushioned its debut. Server makers are raising prices on NVIDIA-based AI systems by as much as 45% months after contracts were signed, passing infrastructure costs to buyers. Meanwhile, Microsoft's Nadella notes that Claude Code has challenged VS Code's dominance in just half a year.",
+  "commentEn": "All three point the same way: AI money and compute are being spent before they are earned. Anthropic grabbing cash early and server vendors repricing signed deals both push risk downstream, while Claude Code unsettling VS Code in six months shows it is the software entry point itself that is being repriced."
+},
+{
   "date": "2026-11-22",
   "title": "AI新闻 | 亚马逊75亿美元收购Decart + 美财长查英伟达滥售 + 三星三年存储产能被锁定",
   "summary": "亚马逊即将达成一项75亿美元收购AI初创公司Decart的交易。双方谈判已进入后期阶段，交易最早可能于下周初敲定，但谈判仍存在破裂可能；美国财政部长贝森特表示：“随着（英伟达）临时管理层调查究竟发生了什么，我们将看看该公司是否在某种程度上滥售；据路透社报道，当地时间 21 日，韩国总统李在明前往韩国东南部城市蔚山，视察当地一座在建数据中心，并敦促韩国加快在全球 AI 竞赛中的步伐。",
