@@ -33,7 +33,7 @@ const nextDiary = currentIndex > 0 ? diaries[currentIndex - 1] : null;
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": `Guanwu Diary | ${diary.date}`,
+  "headline": title,
   "description": summary,
   "datePublished": diary.date,
   "dateModified": diary.date,

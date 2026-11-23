@@ -17,7 +17,7 @@ export const GET: APIRoute = async (context) => {
   // 添加日记
   diaries.forEach((diary) => {
     items.push({
-      title: `工作日记 | ${diary.date}`,
+      title: diary.title || `工作日记 | ${diary.date}`,
       pubDate: new Date(diary.date),
       description: diary.summary || '今日工作记录与思考',
       link: `/diary/${diary.date}/`,

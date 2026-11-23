@@ -36,7 +36,7 @@ const nextDiary = currentIndex > 0 ? sortedDiaries[currentIndex - 1] : null;
 const diaryJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": `观吾日记 | ${diary.data.date}`,
+  "headline": title,
   "description": summary,
   "datePublished": diary.data.date,
   "dateModified": diary.data.date,
