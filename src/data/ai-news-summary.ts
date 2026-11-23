@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-24",
+  "title": "AI新闻 | 黄仁勋复职英伟达市值单日增9520亿 + 美众议院候任议长称将全面调查英伟达 + 苹果拟推RED版HomePod mini 2",
+  "summary": "这将是苹果自2023年Apple Watch Series 9之后，时隔两年多再度推出Product(RED)硬件产品；全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、原油：油价下跌 供应趋于充裕且伊朗局势暂缓 2、黄仁勋复职带动AI相关股票普涨 英伟达市值数小时增逾1万亿美元 3...；特朗普称董事会此举是“正确且恰当的决定”，并表示没有证据表明黄仁勋的行为违法。董事会确认其复职不存在国家安全风险，但相关调查仍将继续。复职消息公布后，市场对公司领导层前景的担忧迅速缓解，股价大涨31.48%，市值单日增长9520亿美元，创历史纪录。",
+  "newsItems": [
+    {
+      "title": "时隔多年重启公益联名，苹果拟推（RED）特别版 HomePod mini 2 与 AirPods Max 2",
+      "summary": "这将是苹果自2023年Apple Watch Series 9之后，时隔两年多再度推出Product(RED)硬件产品。",
+      "source": "华尔街见闻",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://wallstreetcn.com/articles/3786551",
+      "titleEn": "Apple Revives (RED) Line With HomePod mini 2 and AirPods Max 2",
+      "summaryEn": "Apple plans special (RED) versions of the HomePod mini 2 and AirPods Max 2, marking its first Product(RED) hardware since the Apple Watch Series 9 in 2023."
+    },
+    {
+      "title": "11月24日外盘头条：特朗普介入推动 黄仁勋重掌英伟达 公司市值增加9500亿美元 AI相关股票普涨",
+      "summary": "全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、原油：油价下跌 供应趋于充裕且伊朗局势暂缓 2、黄仁勋复职带动AI相关股票普涨 英伟达市值数小时增逾1万亿美元 3...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-24/doc-inizupfs0261380.shtml",
+      "titleEn": "Huang's Return Sparks Broad AI Stock Rally, Nvidia Up $950B",
+      "summaryEn": "Global business headlines centered on Jensen Huang's comeback, which lifted AI-linked shares across the board and added roughly $950 billion to Nvidia's value in hours, alongside falling oil prices on ample supply and easing Iran tensions."
+    },
+    {
+      "title": "黄仁勋重掌英伟达帅印！股价暴涨31%，市值单日增长近万亿",
+      "summary": "特朗普称董事会此举是“正确且恰当的决定”，并表示没有证据表明黄仁勋的行为违法。董事会确认其复职不存在国家安全风险，但相关调查仍将继续。复职消息公布后，市场对公司领导层前景的担忧迅速缓解，股价大涨31.48%，市值单日增长9520亿美元，创历史纪录。",
+      "source": "华尔街见闻",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://wallstreetcn.com/articles/3786536",
+      "titleEn": "Nvidia Shares Surge 31% as Huang Retakes Helm",
+      "summaryEn": "Trump called the board's move correct and appropriate and said there was no evidence Huang broke the law. The board found no national-security risk in his return, though inquiries continue; shares rose 31.48%, adding $952 billion in a single day, a record."
+    },
+    {
+      "title": "美国众议院候任议长杰弗里斯：国会将对英伟达展开全面调查",
+      "summary": "“国会不会因任何阻力而放弃对英伟达商业不当行为展开迅速、彻底且广泛的调查，”美国众议院候任议长哈基姆·杰弗里斯在电邮声明中表示。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-24/doc-inizuhxq2080803.shtml",
+      "titleEn": "Incoming House Speaker Jeffries: Congress Will Fully Probe Nvidia",
+      "summaryEn": "Hakeem Jeffries said in an email statement that Congress will not abandon its swift, thorough and wide-ranging investigation into Nvidia's alleged business misconduct, whatever resistance it meets."
+    },
+    {
+      "title": "英伟达恢复黄仁勋 CEO 职务，马斯克称“错误已更正”",
+      "summary": "英伟达今日宣布，即日起恢复黄仁勋（Jensen Huang）总裁兼首席执行官及董事会成员职务。",
+      "source": "IT之家",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://www.ithome.com/1/031/218.htm",
+      "titleEn": "Nvidia Reinstates Huang as CEO; Musk Says 'Mistake Corrected'",
+      "summaryEn": "Nvidia announced the immediate restoration of Jensen Huang as president, CEO and board member, a move Elon Musk welcomed as a correction of an earlier error."
+    }
+  ],
+  "comment": "黄仁勋复职一天就把英伟达市值推高近万亿美元，但国会调查随即压上，说明市场为“人”定价，政治却要为“规则”定价；苹果重启RED联名，则是在AI喧嚣外做稳健的品牌加法。",
+  "titleEn": "AI News | Huang's Return Lifts Nvidia by $952B in a Day + Incoming House Speaker Vows Full Nvidia Probe + Apple Plans (RED) HomePod mini 2",
+  "summaryEn": "Nvidia restored Jensen Huang as CEO, and the stock jumped 31%, adding a record $952 billion in market value within hours. The incoming U.S. House Speaker, Hakeem Jeffries, said Congress will press a swift and sweeping investigation into the company regardless of any pushback. Separately, Apple is preparing (RED) editions of HomePod mini 2 and AirPods Max 2, its first such hardware since 2023.",
+  "commentEn": "Jensen Huang's return added nearly a trillion dollars to Nvidia's value in a single day, yet a congressional probe is already closing in, showing markets price the man while politics prices the rules. Apple's quiet return to (RED) hardware is a steady brand play amid the AI frenzy."
+},
+{
   "date": "2026-11-23",
   "title": "AI新闻 | Anthropic绿鞋提前行权险破发 + AI服务器签约后涨价45% + Claude Code半年动摇VS Code",
   "summary": "上市仅1天即行权狂揽122亿美元。争议核心在于：在发行规模已上调19%、科技股下挫、260亿美元内部股解禁抛售的重压下，公司为保巨额现金落袋为安，竟提前放弃了用于托底股价的“保险”机制。此举让投资者直面破发风险，暴露出其无视市况、趁机极限融资的投机心态；数据中心设备厂商正在大幅上调搭载英伟达芯片的AI服务器售价——合同与买家签署数月之后，厂商才提出涨价，AI基础设施的成本暴涨压力正被转嫁给下游客户；据科技媒体 Windows Latest 今天报道，这几天，不少开发者炫耀自己已经好几个月没打开过 VS Code。",
