@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-25",
+  "title": "AI新闻 | Anthropic跌破83美元发行价 + 华为Mate X8外屏伴随式AI + 东擎推物理AI开发平台",
+  "summary": "周二美股收盘，Anthropic PBC股价收跌6.54%，报每股81.905美元，较83美元的IPO发行价低1.31%，令上周蜂拥参与这家人工智能公司创纪录上市交易的投资者浮盈尽数蒸发；美股三大指数收盘涨跌不一，市场在经历前一日的剧烈逼空反弹后迅速进入结构性分化阶段。随着黄仁勋重返首席执行官岗位，投资者正在重新评估英伟达及人工智能交易的下一步走...；华为今日下午正式发布了 Mate X8 大折旗舰手机，并带来了小艺伴随式 AI。华为官方在发布会现场演示的伴随式 AI 是在内屏侧触发的。IT之家从官网了解到，Mate X8 还将带来外屏伴随式 AI 新交互，HarmonyOS 7.0.0.135 及以上版本可用。据介绍，小艺伴随式 AI 通过智能感知屏幕与场景提供全文摘要、长文导读、备忘待办、话题推荐等服。",
+  "newsItems": [
+    {
+      "title": "Anthropic上市第四个交易日收跌6.54%，正式跌破83美元IPO发行价",
+      "summary": "周二美股收盘，Anthropic PBC股价收跌6.54%，报每股81.905美元，较83美元的IPO发行价低1.31%，令上周蜂拥参与这家人工智能公司创纪录上市交易的投资者浮盈尽数蒸发。",
+      "source": "新浪财经",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-25/doc-inizwwns8625687.shtml",
+      "titleEn": "Anthropic Falls 6.54% on Fourth Trading Day, Breaking Below $83 IPO Price",
+      "summaryEn": "Anthropic PBC closed at $81.905, down 6.54% and 1.31% under its $83 IPO price, erasing the paper gains of investors who joined last week's record listing."
+    },
+    {
+      "title": "11月25日收盘：美股涨跌不一 芯片板块重挫 英伟达跌近6% Anthropic跌破IPO发行价",
+      "summary": "美股三大指数收盘涨跌不一，市场在经历前一日的剧烈逼空反弹后迅速进入结构性分化阶段。随着黄仁勋重返首席执行官岗位，投资者正在重新评估英伟达及人工智能交易的下一步走...",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-25/doc-inizwwnr1839951.shtml",
+      "titleEn": "Mixed Close as Chip Stocks Slump; Nvidia Down Nearly 6%, Anthropic Below IPO Price",
+      "summaryEn": "US indexes ended mixed as the market split structurally after the prior day's short-squeeze rally. With Jensen Huang back as CEO, investors are reassessing Nvidia and the next leg of the AI trade."
+    },
+    {
+      "title": "华为折叠机外屏伴随式 AI 新交互将至，Mate X8 升级 HarmonyOS 7.0.0.135 可用",
+      "summary": "华为今日下午正式发布了 Mate X8 大折旗舰手机，并带来了小艺伴随式 AI。华为官方在发布会现场演示的伴随式 AI 是在内屏侧触发的。IT之家从官网了解到，Mate X8 还将带来外屏伴随式 AI 新交互，HarmonyOS 7.0.0.135 及以上版本可用。据介绍，小艺伴随式 AI 通过智能感知屏幕与场景提供全文摘要、长文导读、备忘待办、话题推荐等服…",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/031/886.htm",
+      "titleEn": "Huawei Mate X8 to Add Outer-Screen Ambient AI on HarmonyOS 7.0.0.135",
+      "summaryEn": "Huawei launched the Mate X8 foldable with its Xiaoyi ambient AI, demoed on the inner screen. The outer-screen interaction requires HarmonyOS 7.0.0.135 or above and offers summaries, guided reading, to-dos and topic suggestions."
+    },
+    {
+      "title": "东擎发布基于英特尔酷睿 Ultra X7 处理器 358H 的整合式物理 AI 开发平台",
+      "summary": "东擎 (ASRock Industrial) 今日宣布携手 Intel（英特尔），推出基于酷睿 Ultra X7 处理器 358H 的整合式物理 AI 开发平台 RBK-100。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/031/880.htm",
+      "titleEn": "ASRock Industrial Debuts Physical AI Platform on Intel Core Ultra X7 358H",
+      "summaryEn": "ASRock Industrial teamed with Intel to launch RBK-100, an integrated physical AI development platform built on the Core Ultra X7 358H processor."
+    },
+    {
+      "title": "RNOISE Prompt Forge V5.2 发布：零 LLM 确定性 AI 音乐 Prompt 编译器与 MCP 2.0 协议引擎",
+      "summary": "随着 Suno V6、Udio 2.0、Sonauto V2、DiffRhythm Pro 及 Stable Audio 2.5 等多款生成式音频引擎快速发展，开发者与音乐创作者在跨平台编排 AI 音乐提示词时普遍面临三类工程痛点：一是不同音频引擎的标签语法、结构控制符与时间轴格式差异巨大，手动改写效率低；二是依赖通用大语言模型动态生成 Prompt 时，存…",
+      "source": "开源中国",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://www.oschina.net/news/503778",
+      "titleEn": "RNOISE Prompt Forge V5.2 Adds Deterministic AI Music Prompt Compiler and MCP 2.0 Engine",
+      "summaryEn": "RNOISE released Prompt Forge V5.2, a deterministic, LLM-free prompt compiler for AI music plus an MCP 2.0 protocol engine, addressing inconsistent tag syntax and slow manual rewriting across engines like Suno V6 and Udio 2.0."
+    }
+  ],
+  "comment": "资本端给AI降温，Anthropic破发与英伟达重挫同一天发生；而华为把AI塞进折叠机外屏、东擎把AI推进物理世界，落地仍在加速。估值回归与场景扩张正同时发生。",
+  "titleEn": "AI News | Anthropic Slips Below $83 IPO Price + Huawei Mate X8 Outer-Screen AI + ASRock Industrial Physical AI Platform",
+  "summaryEn": "Anthropic closed below its $83 IPO price on its fourth trading day, wiping out early gains, while chip stocks including Nvidia fell sharply. Huawei unveiled Mate X8 with an outer-screen ambient AI assistant powered by HarmonyOS 7.0.0.135. ASRock Industrial and Intel launched RBK-100, an integrated physical AI development platform built on the Core Ultra X7 358H.",
+  "commentEn": "Capital is cooling on AI: Anthropic's broken IPO price and Nvidia's slide landed on the same day. Yet Huawei is pushing AI onto foldable outer screens and ASRock Industrial is pushing it into the physical world. Valuation is resetting while deployment keeps accelerating."
+},
+{
   "date": "2026-11-24",
   "title": "AI新闻 | 黄仁勋复职英伟达市值单日增9520亿 + 美众议院候任议长称将全面调查英伟达 + 苹果拟推RED版HomePod mini 2",
   "summary": "这将是苹果自2023年Apple Watch Series 9之后，时隔两年多再度推出Product(RED)硬件产品；全球财经媒体昨夜今晨共同关注的头条新闻主要有： 1、原油：油价下跌 供应趋于充裕且伊朗局势暂缓 2、黄仁勋复职带动AI相关股票普涨 英伟达市值数小时增逾1万亿美元 3...；特朗普称董事会此举是“正确且恰当的决定”，并表示没有证据表明黄仁勋的行为违法。董事会确认其复职不存在国家安全风险，但相关调查仍将继续。复职消息公布后，市场对公司领导层前景的担忧迅速缓解，股价大涨31.48%，市值单日增长9520亿美元，创历史纪录。",
