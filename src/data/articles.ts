@@ -15,6 +15,177 @@ export interface ArticleEntry {
 
 const articleList: ArticleEntry[] = [
   {
+    slug: 'graduates-1299-jobs-mismatch',
+    date: '2026-11-21',
+    title: `1299 万毕业生，企业却在喊招不到人`,
+    titleEn: `1.299 Million Graduates, Yet Companies Say They Can't Hire`,
+    excerpt: `2027 届毕业生预计 1299 万人，但真正的问题是结构错位：同一年里，一边是工厂招不到人，一边是毕业生投不出简历。AI 正在抬高入门门槛，学历决定你能不能进门，证据决定你能走多远。`,
+    excerptEn: `China's class of 2027 is projected at 12.99 million graduates, but the real problem is structural mismatch: in the same year, factories cannot find workers while graduates cannot land interviews. AI is raising the entry bar — your degree gets you through the door, but evidence of what you have done decides how far you go.`,
+    tag: 'AI观点',
+    tagEn: 'AI Perspective',
+    contentEn: `<p>Let's put the number out first: China's class of 2027 college graduates is projected at 12.99 million.</p>
+
+<p>If you graduate this year, that number will land on you in three ways: the crush of job fairs, resumes sent with no reply, and the family question "how's it going lately".</p>
+
+<p>On November 19, the Secretariat of the Central Education Work Leading Group together with the Ministries of Education, Human Resources, Industry and IT, and SASAC held a meeting in Beijing, where the figure was disclosed. Xinhua, Guangming Daily and China Economic Net all reported it the same day, with almost identical headlines: a projected 12.99 million.</p>
+
+<p>Every year around this time the number gets trotted out again. The phrasing changes; the emotion doesn't — "hard to find jobs", "degrees are devalued", "the toughest year ever".</p>
+
+<p>Today I want to say something not so pleasant: 12.99 million is not the worst news.</p>
+
+<p>The worst news is hiding next to it — in the same year, factories cannot hire while graduates cannot get interviews.</p>
+
+<p>That both are true at once means the problem is not how many people there are.</p>
+
+<h2>01 Put down the "too many people" explanation first</h2>
+
+<p>"Too many people" gets said every year; it has been said for a decade and more. It explains some things, but not the key one: if it were purely about numbers, why would companies on the other side be crying about labor shortages?</p>
+
+<p>The Ministry of Human Resources' own wording is clear: manufacturing has long faced structural, matching-related and cyclical recruitment difficulties. In fields like high-end equipment and integrated circuits, skilled talent supply is insufficient; for ordinary positions, "the match between people and jobs is poor". (MOHRSS website, July 2026)</p>
+
+<p>Translated into plain language: it is not that there are no jobs — jobs and people do not line up.</p>
+
+<p>Now the whole picture. MOHRSS data for the first three quarters of 2026: 10.52 million new urban jobs nationwide, 87.7% of the annual target completed, average surveyed urban unemployment rate at 5.2%, overall stable.</p>
+
+<p>Now the other side. In 2017, the Ministries of Education, Human Resources and Industry jointly issued the Manufacturing Talent Development Plan, projecting that by 2025 the talent gap in manufacturing's ten key sectors would approach 30 million.</p>
+
+<p>Nine years later, that projection's horizon has passed, and MOHRSS's phrasing this year is still the same one: structural, matching-related, cyclical recruitment difficulty. Numbers go stale; the gap has not filled itself.</p>
+
+<p>These two figures use different yardsticks and cannot be subtracted directly — one is a cumulative gap, the other this year's headcount. But the direction is clear: where people are needed and where people are queueing are not the same place.</p>
+
+<p>So this round of hardship is not "aggregate oversupply" — it is "structural misalignment".</p>
+
+<h2>02 Four popular explanations, each half right</h2>
+
+<p>First: too many people.</p>
+
+<p>What it gets right: competition is real, resumes do get drowned. What it misses: it cannot explain the other fact — in the same year, some companies cannot fill their openings.</p>
+
+<p>Second: degrees are devalued.</p>
+
+<p>What it gets right: a bachelor's diploma no longer comes bundled with a job. What it misses: it treats "devaluation" as the conclusion rather than the cause. What is actually happening is that the yardstick companies measure people with has changed, and the diploma is only one cell in it.</p>
+
+<p>Third: the economy is bad.</p>
+
+<p>What it gets right: demand-side contraction is real. What it misses: it mistakes structural change for cyclical fluctuation. Cycles come back; structures do not.</p>
+
+<p>Fourth: hide out for two years in grad school or civil-service exams.</p>
+
+<p>What it gets right: it is a stable short-term choice, two more years of preparation, possibly a higher starting point. Some positions genuinely require a master's degree — that is investment, not avoidance.</p>
+
+<p>What it misses: it mistakes "delay" for "solving". Two years on, you still have to trade something for a job, and the entry bar will not stand still waiting — AI has already finished doing the entry-level work. You can hide from this year; you cannot hide from the question "what have you actually done".</p>
+
+<p>Laid side by side, the four explanations account for eighty percent. The remaining twenty percent decides where you will be this time next year.</p>
+
+<h2>03 What is actually changing: jobs are rotating their blood, and the bar is rising</h2>
+
+<p>The first layer of change: jobs are rotating their blood.</p>
+
+<p>The policy text says it plainly: expand employment space in advanced manufacturing and modern services, push state-owned enterprises to stabilize and expand hiring, and help small and medium enterprises absorb more people. Why exactly those two industries? Because that is where the shortage is. Once smart factories spread, what is wanted are people who understand machinery, automation, and data at the same time; people trained in a single traditional engineering discipline have too narrow a knowledge span to bridge the gap.</p>
+
+<p>The second layer: the bar is rising — and it is AI doing the raising.</p>
+
+<p>What AI takes away is not jobs, but the work you could pass by "filling in a template": first drafts, first-pass screening, boilerplate code, basic customer-service scripts. These are exactly the gates through which new graduates used to enter most easily. With the entrance narrowed, companies ask one level deeper: besides filling in templates, what else can you do?</p>
+
+<p>The third layer: how people are evaluated has changed. It used to be school, GPA, and the name of your internship company; now more and more positions first look at something harder: have you taken one thing from start to finish, and can you explain it clearly?</p>
+
+<p>Stack these three layers and you have the origin of that seam.</p>
+
+<h2>04 Five sentences of policy, translated into three you can use</h2>
+
+<p>The meeting deployed five directions, in policy language: use the policy "opening move" well, deliver the "key move" of job expansion, secure the "focal point" of services, strengthen the "safety net" of assistance for those in difficulty, and keep eyes on the industry "weathervane".</p>
+
+<p>No need to memorize. You only need to know three sentences.</p>
+
+<p>First: the window is tilting toward key industries and key regions. "Support key regions in raising their employment capacity and help key industries absorb more workers" — recruitment quotas are not scattered evenly; they concentrate in advanced manufacturing, modern services, and specific regions. If you stare only at one city and one type of job, what you see will always be crowding.</p>
+
+<p>Second: the path to reskill is officially paved, and it is cheap. "Continuously promote university-enterprise co-built micro-majors" and "deepen the linked review of admissions, training and employment" — the micro-major is not a concept invented by training companies; it is already in policy documents, hooked to all three stages: admissions, training, and employment.</p>
+
+<p>Third: for those already out of school with nothing lined up, there is a guaranteed fallback channel. "Implement paired assistance for graduates of disadvantaged groups" and "continue the service campaign for unemployed graduates who have left school" — many people do not know this channel exists, and never use it. It is not charity; it is a public service you paid tuition for and are entitled to.</p>
+
+<h2>05 How to play that half a card outside your major</h2>
+
+<p>First, get the concept straight; do not be intimidated by the jargon.</p>
+
+<p>A micro-major is a small-scale, short-cycle, modular set of courses opened outside your major, organized around a new field or a class of job requirements. It does not stretch your studies like a second degree; its job is to fill one short board quickly, or carry you from major A to position B.</p>
+
+<p>This is not new meeting-speak from this year. In October 2026, the General Office of the State Council's "Opinions on Adapting to AI Development to Build an Employment-Friendly Mode of Development" put it more concretely — "increase the number of AI micro-major programs". In other words, this path has already been written into a national-level document.</p>
+
+<p>Industry-education integration, plainly put, means companies genuinely step in to teach: the projects the company is running, the standards the industry recognizes, the pits actually stepped in — brought straight into the classroom and the training workshop. Ideally, the homework students submit and the deliverables the job requires are the same set. It solves the most common complaint: "what I learned is useless".</p>
+
+<p>Put the two terms together and, on your side, it comes down to a three-piece set:</p>
+
+<p>Keep the roots with your major — that is your disciplinary chassis; do not drop it;</p>
+
+<p>Fill in tools with a micro-major — data analysis, smart production lines, cross-border business, content operations; pick the one directly tied to your target position;</p>
+
+<p>Settle real projects into evidence — one project whose cause and effect you can explain is worth ten certificates.</p>
+
+<p>But honesty is required here, because this is also the boundary of the whole scheme:</p>
+
+<p>A micro-major is not a second degree and cannot replace your disciplinary foundation; what companies recognize is "can you get hands-on", not "how many courses you attended"; and do not use the micro-major as a safe harbor, packaging "I don't want to work yet" as "I'm still learning".</p>
+
+<p>If you cannot hold those three lines, that half a card is a dead card.</p>
+
+<h2>06 On the resume: change "I participated" into "what I did"</h2>
+
+<p>Capability acquired, you still have to be seen.</p>
+
+<p>Many resumes stall on the same sentences: "participated in project X", "assisted with daily work". The problem with these is not modesty but zero information — they show neither what you did nor whether you could do the next job.</p>
+
+<p>The fix is simple; fill in one cell at a time:</p>
+
+<p>Background and role — which project, which segment I carried; actions and methods — what exactly I did, with which methods and tools; quantifiable results — after it was done, what changed, and by how much.</p>
+
+<p>Two contrast pairs.</p>
+
+<p>For business, operations, and analysis roles:</p>
+
+<p>Before: participated in a university-enterprise cooperation project, responsible for collecting data and writing analysis reports, assisted the team in completing delivery.</p>
+
+<p>After: applied what I learned in the data-analysis micro-major to independently own the data segment of a real enterprise business-survey project; cleaned multi-dimensional business data, located a flow bottleneck in one process stage, produced an optimization plan and wrote it up as a project report, confirmed by the enterprise mentor, with the plan adopted in the next round of process improvement.</p>
+
+<p>For technical, engineering, and manufacturing roles:</p>
+
+<p>Before: during the internship, followed engineers to learn, participated in equipment debugging, completed assigned tasks on time.</p>
+
+<p>After: drawing on field experience from industry-education integration training, independently owned the testing and troubleshooting of one module; reproduced anomalies by standard methods, located root causes and documented reproduction paths, helping compress troubleshooting time from days to within one day, and produced a reusable test guide.</p>
+
+<p>See the difference: the first way of writing says "I was present"; the second says "I solved something".</p>
+
+<p>What if there is no result to write? Write process evidence: a document, a reproduction path, a suggestion once adopted by a mentor. Do not invent numbers — invented numbers cannot survive follow-up questions, and one follow-up question destroys the whole resume.</p>
+
+<h2>07 "Proficient in AI tools" — why nobody believes this line</h2>
+
+<p>Many resumes now carry the line "proficient in AI tools". It is basically useless, because it only proves you can open a web page.</p>
+
+<p>The useful version reads like this: used it to compress a task from days to hours, and stated clearly what you verified and what errors you caught. AI can organize information, draft first versions, and do preliminary analysis for you; it cannot judge boundaries for you, bear consequences for you, or push a stuck thing through on-site.</p>
+
+<p>So do not get the order backwards: first there is a real thing, then we talk tools. Otherwise you are just another "participant".</p>
+
+<h2>08 Three things you can do today</h2>
+
+<p>I won't push optimism, and there is no chicken soup here. This piece only wants to leave you three actions you can start today.</p>
+
+<p>One: find three job postings for your target positions, copy them out, and circle the keywords. When you finish, you will find fewer than ten words recur. Those ten words are what you must align with.</p>
+
+<p>Two: take a sheet of paper; on the left write the actions you can truly perform, on the right the ten words. The mismatch is the micro-major and the projects you need to fill. Do not choose courses by feel — choose by this seam.</p>
+
+<p>Three: find one person and have them ask you three questions: what did you solve, how did you verify it, where did you get stuck. If you cannot answer all three, that experience still sits on the word "participated".</p>
+
+<p>If you are a parent, there is really only one thing to do: don't push them to spray applications everywhere. Sit down, spread three target job postings on the table, circle the ten words together, then ask one question — of these words, how many can you match right now?</p>
+
+<p>12.99 million is a frightening number, but it should not be the reason you stop. What decides where you go is never how many people graduate alongside you; it is whether, when asked "what have you done", you can give a concrete, verifiable, clearly stated answer.</p>
+
+<p>Your degree decides whether you can enter the door; evidence decides how far you can go.</p>
+
+<p>In the end there is only one sentence: the map has changed; stop looking for the road with the old one.</p>
+
+<p>If someone around you is worrying over this — a child, a colleague, a classmate — send them this piece. Not to comfort them, but to save them from sending dozens more resumes that get no reply.</p>
+
+<p>One question for the comments: how many applications did you send before your first interview? I want to see this year's real temperature.</p>`
+  },
+  {
     slug: 'ai-life-audit',
     date: '2026-11-19',
     title: `每天都很忙，却说不出自己缺什么？AI 问了我十几个问题`,
