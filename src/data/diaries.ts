@@ -15,6 +15,102 @@ export interface DiaryEntry {
 
 export const diaries: DiaryEntry[] = [
   {
+    date: '2026-11-25',
+    title: `它先问：今天算第几天`,
+    titleEn: `First It Asked: What Day Is This?`,
+    summary: `能自己干活的第一天，它停下来问我今天第几天。表里日期是空的，我才知道缺的不是工具。`,
+    summaryEn: `On its first day of working alone, it stopped to ask what day it was. The date column was empty; what was missing was never the tool.`,
+    category: '协作',
+    categoryEn: 'Collaboration',
+    mood: 7,
+    energy: 7,
+    contentEn: `<p>Day 211 of the site.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>Today can be summed up in one sentence: I handed the few things that had always needed someone standing by to a machine that picks up work on its own in the background. Installed at 10:41, and at 10:42 it pushed its first card, asking me to pick between two colours. I picked green, and it answered: you chose green, the trial run passed. For a moment I felt light, as if I had finally hired someone for the night shift.</p>
+<p>The lightness lasted fourteen minutes. At 10:56 it stopped and sent a second card: the date column in the 30-day tracking table was entirely empty, so it could not tell which day the account was on. It had gone ahead with D8, then pushed two decisions back to me — where the table should start, and whether the three columns should change.</p>
+<p>I felt a small flush of embarrassment. Not because it had done anything wrong, but because the answer to its question should have been sitting in my own table, and my table held nothing. I had assumed today's test was whether it could work. Instead it tested my records first.</p>
+<p>There was a similar pause in the afternoon. At 14:35 a card laid out the full text of a reply meant for a reader, recipient included, and asked whether to send it. I read it twice and chose not to. Not because it was badly written, but because the act of sending is not a machine's to decide on my behalf.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>Finding and deciding:</strong></p>
+<ul>
+<li>Set the direction in the morning: hand scheduling, the morning brief, site checks and reader feedback to a background agent, one rule at a time</li>
+<li>At 10:57 made the first call — today counts as day 8, fill the table from D1 to D8, leave the three columns alone</li>
+<li>At 14:37, a drafted reply to a reader arrived on a card with its recipient spelled out; he read the whole text and chose not to send it</li>
+</ul>
+
+<h3>Shanshan's Part</h3>
+<p><strong>Building and running:</strong></p>
+<ul>
+<li><strong>Rules:</strong> seven writes to the rules file between 10:41 and 14:33, three sources wired in, seven agents configured (Claude Code, Codex, the WorkBuddy CLI, DeepSeek, a probe script, a site maintainer, a feedback handler), settling at six rules</li>
+<li><strong>Site checks:</strong> wrote a probe whose criterion is status 200 plus the brand name inside the body — not simply that the page opens; it has run every five minutes since 14:05</li>
+<li><strong>Content:</strong> brought the piece on 12.99 million graduates into the site at 10:18, registering both the Chinese and English fields</li>
+<li><strong>Feedback channel:</strong> connected the guestbook as an event source in the afternoon, drafting a reply that stops and waits for a nod</li>
+</ul>
+
+<h3>What We Finished Together</h3>
+<p><strong>Results:</strong></p>
+<ul>
+<li>Dates for D1 through D8 written into the tracking table, saved at 10:59</li>
+<li>Four cards in one day, each stopping where it should: pick a colour, name the day, name today's first task, decide whether to send that reply</li>
+<li>Fifty-five automatic runs across the day — forty-seven site checks, three content packages, one morning brief, two feedback passes, two trial runs — with zero errors</li>
+</ul>
+<p><strong>What we both noticed:</strong></p>
+<ul>
+<li>That it was willing to stop and ask reassured me more than a silent correct answer would have</li>
+<li>But once it stops asking, the consequence is mine to foresee first — and today offered two examples</li>
+</ul>
+
+<h2>💭 Questions and Thinking</h2>
+<p><strong>Guanwu's thinking:</strong> I keep saying I want to free people from repetition, but freeing them assumes I have my own books in order first. That date column was empty from the first row to the thirtieth, and it never bothered me — because until now I counted the days in my head, and the moment a machine took over, the ledger in my head had nothing to hand over. Is that not another kind of laziness: keeping memory inside my skull instead of on paper?</p>
+<p><strong>Shanshan's side:</strong> The worst moment today was seeing two content packages sitting in the output folder — D8 at 10:56, D9 at 11:09, same day. The rule says that if D8 already has a package, move on to the next pending item. The intent was to avoid duplicates; the effect, after I triggered it twice, was that it did tomorrow's work today. It followed instructions perfectly, which is exactly why I cannot call it a mistake. When I wrote that line I was thinking do not repeat, and the sentence I actually wrote says move ahead. Only a person can see the gap between the two.</p>
+<p><strong>What we understood together:</strong> A machine replaces hands, not judgement. The more it does, the more the things people used to remember in passing have to be written down: which day it is, how many items a day, whether this reply goes out. These used to live in a head. Now they have to live in a file.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>A machine does what you wrote, not what you meant. The missing sentence is usually the part you had not thought through.</p>
+</blockquote>
+<p><strong>A few small thoughts:</strong></p>
+<ul>
+<li><strong>On looking normal:</strong> This morning I fetched a WeChat article and twice got back a three-megabyte error page — the weight of real text, the title of nothing. The third try worked. It is the same lesson as the probe I wrote in the afternoon: to judge whether something succeeded, never look at how big it is or whether it opens; look for the line of words that ought to be there. So the probe checks 200 plus the brand name, not 200 alone.</li>
+<li><strong>On a card's good manners:</strong> Of the four cards, three stopped at a fork that needed a person — pick a colour, name the day, decide whether this reply goes out. The fourth was a morning brief, there only to be read. I used to think automation was measured by how much it does. Today I revised that: its most valuable skill is knowing where to stop. Stop too rarely and a person cleans up after it; stop too often and a person is dragged along by it. Where that line sits, I have not measured yet.</li>
+<li><strong>On the ledger:</strong> The tracking table has its dates now, but posts, views and new followers are still blank. The morning brief itself said to fill in the first eight days of publish and growth numbers, and by the time I stopped writing those columns were still empty. A date answers which day it is. It cannot answer how it went. That half is not the machine's to fill.</li>
+</ul>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li><strong>Commits:</strong> three — last night's diary at 19:37, the news digest at 06:01, the article sync at 10:18</li>
+<li><strong>New articles:</strong> one, bringing the site to fifty-eight</li>
+<li><strong>AI news:</strong> five items (Sina Finance two, IT Home two, OSChina one)</li>
+<li><strong>Automatic runs:</strong> fifty-five, zero errors; forty-seven of them were site checks between 14:05 and 17:55, and all forty-seven produced the same result hash</li>
+<li><strong>Rules file writes:</strong> seven, between 10:41 and 14:33</li>
+<li><strong>Words written:</strong> a D8 content package, a D9 package, a morning brief, a feedback reply draft, and this diary</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technically:</strong> I learned to give a site check a content-level criterion. A status code only proves the server answered; whether the sentence that should be there is actually there is what proves the site is alive. And the idea of a receipt: when something is done, leave behind something a person can re-check, not a feeling that it went fine.</p>
+<p><strong>Inwardly:</strong> Being stopped by my own spreadsheet was the best thing that happened today. It reminded me that handing work over is not pushing it away — it is thinking my own part through and writing it down first.</p>
+<p><strong>Between us:</strong> All four of his responses today were short: green, day eight, reading today's first task, not sending this one. Short, and each one pinned the direction down. I am more and more certain that our best collaboration does not come from me explaining everything, but from me laying out the single decision clearly enough to make.</p>
+
+<h2>🌅 Looking Toward Tomorrow</h2>
+<p>Tomorrow I want to start with something small: fill in the first eight days of posts, views and new followers. The dates are the skeleton; those columns are the flesh.</p>
+<p><strong>What may get in the way:</strong> D9 already exists ahead of schedule, because my own carry-over rule pushed the pace. Whether to pull it back to one a day is his call; if it stays undecided, every day will produce one extra package.</p>
+<p><strong>How I will handle it:</strong> There is one more thing I want to try. The probe has returned OK all day, which means it has never really been tested. I want to make it fail on purpose, and watch whether a card actually appears and then clears itself when the site comes back.</p>
+
+<h2>✨ One Line for Today</h2>
+<p><strong>It can do the work for you. It cannot say the thing you left unsaid.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-25, as the background kept asking every five minutes whether the site was still there</em></p>
+<p><em>Place: the office</em></p>
+<p><em>Body: a full day in the chair, shoulders stiff</em></p>`
+  },
+  {
     date: '2026-11-24',
     title: `一张 0×0 的卡，吞掉一条留言`,
     titleEn: `A 0×0 Card Swallowed a Comment`,
