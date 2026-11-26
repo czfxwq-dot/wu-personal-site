@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-26",
+  "title": "AI新闻 | 摩根大通预测AI企业明年发债4500亿美元 + ElevenLabs目标估值330亿美元 + 数千枚英伟达B300流入转售市场",
+  "summary": "摩根大通分析师表示，尽管蓬勃发展的AI产业往后增长可能趋于平缓，企业明年仍将通过公开的投资级债券市场筹集4，500亿美元，为AI相关资本支出提供资金；据彭博社今天报道，AI 语音初创公司 ElevenLabs 已就新一轮融资进行初步洽谈，目标估值 330 亿美元（IT之家注：现汇率约合 2,203.8 亿元人民币）；CNBC 昨日（11 月 25 日）报道，在美国收紧相关规定后，英伟达 GPU 销售商正急于为手中的高端芯片寻找新买家。",
+  "newsItems": [
+    {
+      "title": "摩根大通称AI企业明年料发债4,500亿美元 后年资本支出恐迎平台期",
+      "summary": "摩根大通分析师表示，尽管蓬勃发展的AI产业往后增长可能趋于平缓，企业明年仍将通过公开的投资级债券市场筹集4，500亿美元，为AI相关资本支出提供资金。",
+      "source": "新浪财经",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-26/doc-inizzftp1481285.shtml",
+      "titleEn": "JPMorgan: AI firms to raise $450B in bonds next year, capex may plateau in 2028",
+      "summaryEn": "Analysts at JPMorgan say the AI industry will still tap public investment-grade markets for $450 billion next year to fund capex, even though growth in the sector may level off afterward."
+    },
+    {
+      "title": "AI 语音初创公司 ElevenLabs 就 2027 年融资进行初步谈判，目标估值 330 亿美元",
+      "summary": "据彭博社今天报道，AI 语音初创公司 ElevenLabs 已就新一轮融资进行初步洽谈，目标估值 330 亿美元（IT之家注：现汇率约合 2,203.8 亿元人民币）。",
+      "source": "IT之家",
+      "category": "AI投融资",
+      "categoryEn": "AI Investment & Financing",
+      "url": "https://www.ithome.com/1/032/548.htm",
+      "titleEn": "ElevenLabs in early talks for 2027 round at $33B valuation",
+      "summaryEn": "The AI voice startup has begun preliminary discussions on a new funding round that would value it at $33 billion, Bloomberg reported."
+    },
+    {
+      "title": "高端 GPU“急寻下家”：数千枚英伟达 B300 涌入海外转售市场",
+      "summary": "CNBC 昨日（11 月 25 日）报道，在美国收紧相关规定后，英伟达 GPU 销售商正急于为手中的高端芯片寻找新买家。",
+      "source": "IT之家",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.ithome.com/1/032/547.htm",
+      "titleEn": "Thousands of Nvidia B300 GPUs flood overseas resale channels",
+      "summaryEn": "After Washington tightened export rules, GPU sellers are rushing to find new buyers for high-end Nvidia chips, with thousands of B300 units appearing on overseas secondary markets, CNBC reported."
+    },
+    {
+      "title": "标普将英伟达评级加入负面观察名单，质疑董事会独立性",
+      "summary": "标普周三将英伟达的信用评级列入可能下调的负面观察名单，并指出该公司CEO黄仁勋的离职和随后的回归，暴露了这家芯片制造商在管理层和董事会监督方面存在的薄弱环节。",
+      "source": "新浪财经",
+      "category": "AI产业",
+      "categoryEn": "AI Industry",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-26/doc-inizzftp1454465.shtml",
+      "titleEn": "S&P puts Nvidia on negative watch over board independence concerns",
+      "summaryEn": "S&P placed Nvidia's credit rating on a negative watch, citing weak management and board oversight exposed by CEO Jensen Huang's departure and subsequent return."
+    },
+    {
+      "title": "算力唤醒真实世界：九章云极发布物理AI工厂与生态开放计划",
+      "summary": "11月25日，以“算力唤醒真实世界”为主题的2026物理AI行业峰会暨九章云极智算生态大会在深圳举行。",
+      "source": "量子位",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.qbitai.com/2026/11/512582.html",
+      "titleEn": "Jiuzhang Cloud launches physical AI factory and open ecosystem plan",
+      "summaryEn": "At its 2026 physical AI summit in Shenzhen, Jiuzhang Cloud unveiled a computing-driven 'physical AI factory' and an ecosystem opening initiative aimed at bringing compute into the real world."
+    }
+  ],
+  "comment": "钱还在往AI里涌，但渠道变了：一边是发债和一级市场高估值继续加注，一边是高端GPU被转售、英伟达评级被盯上——资本热度未退，风险定价已经开始分化。",
+  "titleEn": "AI News | JPMorgan sees $450B AI bond issuance in 2026 + ElevenLabs eyes $33B valuation + Thousands of Nvidia B300 chips hit resale market",
+  "summaryEn": "JPMorgan expects AI companies to raise $450 billion in investment-grade bonds next year, even as capex growth is seen flattening in 2028. ElevenLabs is in early talks for a round valuing it at $33 billion. Meanwhile, thousands of Nvidia B300 GPUs are surfacing on overseas resale markets as sellers hunt for new buyers after tightened US rules.",
+  "commentEn": "Money keeps pouring into AI, but the plumbing is shifting: debt issuance and lofty private valuations on one side, resold high-end GPUs and a credit watch on Nvidia on the other. The enthusiasm hasn't cooled, yet risk is already being priced unevenly."
+},
+{
   "date": "2026-11-25",
   "title": "AI新闻 | Anthropic跌破83美元发行价 + 华为Mate X8外屏伴随式AI + 东擎推物理AI开发平台",
   "summary": "周二美股收盘，Anthropic PBC股价收跌6.54%，报每股81.905美元，较83美元的IPO发行价低1.31%，令上周蜂拥参与这家人工智能公司创纪录上市交易的投资者浮盈尽数蒸发；美股三大指数收盘涨跌不一，市场在经历前一日的剧烈逼空反弹后迅速进入结构性分化阶段。随着黄仁勋重返首席执行官岗位，投资者正在重新评估英伟达及人工智能交易的下一步走...；华为今日下午正式发布了 Mate X8 大折旗舰手机，并带来了小艺伴随式 AI。华为官方在发布会现场演示的伴随式 AI 是在内屏侧触发的。IT之家从官网了解到，Mate X8 还将带来外屏伴随式 AI 新交互，HarmonyOS 7.0.0.135 及以上版本可用。据介绍，小艺伴随式 AI 通过智能感知屏幕与场景提供全文摘要、长文导读、备忘待办、话题推荐等服。",
