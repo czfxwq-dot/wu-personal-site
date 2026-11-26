@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-27",
+  "title": "AI新闻 | Anthropic以影响力定工程师晋升 + 英国央行警惕未公开模型威胁加密 + 瑞士五起AI智能体攻击关键设施",
+  "summary": "随着Claude‑Code这类AI编码工具极大压缩软件开发周期，Anthropic正在调整软件工程师的晋升评判标准：相比投入的工时，项目实际影响力被放到更核心位置，例如系统延迟降低...；英国央行行长对近期人工智能在数学领域取得的突破发出警示。外界担忧，这套用于保障整个金融体系数据安全的加密技术正面临威胁；据路透社报道，瑞士联邦网络安全局（BACS）周四通报，过去几天瑞士发生五起网络攻击，攻击者使用 AI 智能体针对企业以及关键基础设施运营方发起入侵。",
+  "newsItems": [
+    {
+      "title": "Anthropic团队主管称，AI正在改变工程师的晋升方式",
+      "summary": "随着Claude‑Code这类AI编码工具极大压缩软件开发周期，Anthropic正在调整软件工程师的晋升评判标准：相比投入的工时，项目实际影响力被放到更核心位置，例如系统延迟降低...",
+      "source": "新浪财经",
+      "category": "大模型",
+      "categoryEn": "Large Models",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-27/doc-inkaayat1259896.shtml",
+      "titleEn": "Anthropic shifts engineer promotions from hours to impact",
+      "summaryEn": "With tools like Claude Code compressing software development cycles, Anthropic is reworking its promotion criteria for engineers, weighting measurable project impact such as lower system latency more heavily than time invested."
+    },
+    {
+      "title": "英国央行行长：未公开的AI模型引发加密安全担忧",
+      "summary": "英国央行行长对近期人工智能在数学领域取得的突破发出警示。外界担忧，这套用于保障整个金融体系数据安全的加密技术正面临威胁。",
+      "source": "新浪财经",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-27/doc-inkaayay5828442.shtml",
+      "titleEn": "Bank of England governor flags encryption risk from unreleased AI models",
+      "summaryEn": "The Bank of England governor raised alarm over recent AI breakthroughs in mathematics, amid fears that the encryption safeguarding data across the financial system could be at risk."
+    },
+    {
+      "title": "瑞士发生五起 AI 智能体网络攻击，电力供水通信系统遭入侵",
+      "summary": "据路透社报道，瑞士联邦网络安全局（BACS）周四通报，过去几天瑞士发生五起网络攻击，攻击者使用 AI 智能体针对企业以及关键基础设施运营方发起入侵。",
+      "source": "IT之家",
+      "category": "AI安全",
+      "categoryEn": "AI Safety",
+      "url": "https://www.ithome.com/1/033/131.htm",
+      "titleEn": "Five AI-agent attacks hit Swiss power, water and telecom systems",
+      "summaryEn": "Switzerland's Federal Office for Cybersecurity reported five attacks in recent days in which AI agents were used to breach companies and critical infrastructure operators, according to Reuters."
+    },
+    {
+      "title": "腾讯用 AI 挑战药物研发领域前沿难题：成果登 Nature，在减重降糖、肿瘤免疫方向完成验证",
+      "summary": "腾讯今日宣布，11 月 25 日，腾讯生命科学实验室的一项 AI for Science 研究成果，正式以第一单位登上《Nature》主刊。",
+      "source": "IT之家",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://www.ithome.com/1/033/125.htm",
+      "titleEn": "Tencent AI drug-discovery work published in Nature",
+      "summaryEn": "Tencent's life sciences lab published AI for Science research as first author in Nature, with validation in weight-loss and glucose-lowering as well as tumor immunology directions."
+    },
+    {
+      "title": "深耕核心零部件，钛虎机器人轻量化关节模组Lite-1系列助力整机降本增效",
+      "summary": "近日，钛虎机器人科技（上海）有限公司（以下简称“钛虎机器人”）正式发布面向机器人批量落地场景的轻量化关节模组Lite-1系列。",
+      "source": "雷锋网",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.leiphone.com/category/industrynews/hYv4Caentt6byJhj.html",
+      "titleEn": "Titan Robot launches Lite-1 lightweight joint modules",
+      "summaryEn": "Titan Robot Technology of Shanghai released its Lite-1 series of lightweight joint modules aimed at lowering cost and improving efficiency for robots moving into mass deployment."
+    }
+  ],
+  "comment": "AI一边压缩软件与药物研发周期，一边把攻击自动化，瑞士关键设施被AI智能体入侵就是预警；企业别只看效率，加密与安全预算要同步加。",
+  "titleEn": "AI News | Anthropic ties promotions to impact + BOE warns of unreleased AI models vs encryption + Five AI-agent attacks hit Swiss utilities",
+  "summaryEn": "Anthropic is rewriting how it evaluates engineers, putting real project impact above hours logged as coding assistants shorten development cycles. The Bank of England governor warned that unreleased AI models could undermine the cryptography protecting financial data. Meanwhile, Switzerland reported five AI-agent-driven intrusions targeting companies and critical infrastructure operators.",
+  "commentEn": "AI is compressing drug and software timelines while automating attacks; the Swiss infrastructure intrusions show the same capability cuts both ways. Firms chasing efficiency must raise security and cryptography budgets in step."
+},
+{
   "date": "2026-11-26",
   "title": "AI新闻 | 摩根大通预测AI企业明年发债4500亿美元 + ElevenLabs目标估值330亿美元 + 数千枚英伟达B300流入转售市场",
   "summary": "摩根大通分析师表示，尽管蓬勃发展的AI产业往后增长可能趋于平缓，企业明年仍将通过公开的投资级债券市场筹集4，500亿美元，为AI相关资本支出提供资金；据彭博社今天报道，AI 语音初创公司 ElevenLabs 已就新一轮融资进行初步洽谈，目标估值 330 亿美元（IT之家注：现汇率约合 2,203.8 亿元人民币）；CNBC 昨日（11 月 25 日）报道，在美国收紧相关规定后，英伟达 GPU 销售商正急于为手中的高端芯片寻找新买家。",
