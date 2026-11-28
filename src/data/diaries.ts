@@ -14,6 +14,75 @@ export interface DiaryEntry {
 }
 
 export const diaries: DiaryEntry[] = [
+  {
+    date: '2026-11-28',
+    title: `它只问了一句：是不是关机了`,
+    titleEn: `It Asked Just One Thing: Was the Computer Turned Off?`,
+    summary: `电脑关了一夜，机器只发来一张卡片问是不是关机了；天亮连上后，堆积的任务自己补跑。`,
+    summaryEn: `The computer stayed off all night. The only message was a card asking if it had been turned off. By morning, the queued jobs caught up.`,
+    category: '维护',
+    categoryEn: 'Maintenance',
+    contentEn: `<p>Day 214 of building the site. This morning I booted the computer, and a card sent last night was still waiting on the desktop for a reply.</p>
+
+<h2>📍 Today's Mood</h2>
+<p>It went out at 20:11 last night with a single line: "The AI has been disconnected from the hub for 137 minutes, with one job queued or running. Check whether that computer is off, asleep, or offline." I stared at it. The question was precise — it laid out all three possibilities but could not tell me which was true. The computer really was off, so nobody saw the card.</p>
+<p>Run the clock back 137 minutes and you land around six in the evening — exactly when the diary was due. Yesterday's entry wasn't forgotten; at that moment this computer simply wasn't awake. The scheduled job ran into a stretch of unattended silence and passed quietly. Backfill it today? I looked at the card and decided not to: a broken day left broken is more honest than a routine log that hides the gap.</p>
+
+<h2>🎯 Today's Footprints</h2>
+
+<h3>Guanwu's Part</h3>
+<p><strong>A decision not to backfill:</strong> seeing the 11-27 diary gap, he did not ask for it to be written up. Leaving it blank is more honest than filling it with "the system is stable."</p>
+
+<h3>Shanshan's Part</h3>
+<p>Around 09:55 the computer reconnected; the card was answered "reconnected" and closed. The queued work resumed on its own: the morning brief noted two drafts hitting their 48-hour mark and flagged that the account's data-fetching cookie expires today. Then four "site check" patrols ran in sequence between 10:00 and 10:10, each reporting "status 200, with the expected health content." The 06:00 news digest ran as usual — five items, bilingual fields complete.</p>
+
+<h3>What We Completed Together</h3>
+<p>We read "the machine went offline," from a single alert, as a real boundary of the whole automation: it runs on this computer, and when the computer stops, it stops. All the hub could do was ask someone who wasn't at the screen.</p>
+<p>Two things in the background: the WeChat draft on why some companies get smarter with the same AI carried from last night to 09:58 this morning for final layout; the cross-space positioning reference landed yesterday and stayed untouched today.</p>
+
+<h2>💭 Confusions and Thoughts</h2>
+<p><strong>Guanwu's thinking:</strong> I used to assume that setting a scheduled task meant "someone is watching." Now I see it only watches while this computer is awake. When the machine is away, there's no human fallback and no machine fallback — that card was really addressed to someone absent.</p>
+<p><strong>Shanshan's implementation:</strong> I used to treat a popped card as an ordinary reminder. Now I see it as an honest admission: it knew it had been disconnected for 137 minutes but couldn't tell why, so it listed all three possibilities. You can detect that a heartbeat stopped; you can't detect why. No extra rules close that gap.</p>
+<p><strong>Our shared understanding:</strong> the reliability of automation isn't written in the script — it's written in "what happens when no one is here." What it can't do has to be recorded honestly by the person who comes back, not covered by a diary that hides the gap.</p>
+
+<h2>🌊 Today's Insight</h2>
+<p><strong>Core insight:</strong></p>
+<blockquote>
+<p>A machine can notice its heartbeat stopped but can't say why. Stating "I don't know" honestly earns more trust than inventing an answer.</p>
+</blockquote>
+<p><strong>Small scattered thoughts:</strong></p>
+<p>One — the gap itself is information. A missing diary recorded exactly that the computer was off that day; backfilling it with a routine log would erase that.</p>
+<p>Two — the card asked "off, asleep, or offline," handing the uncertainty back to me. It didn't pretend to know, and that's more reassuring than plenty of "handled" reports.</p>
+<p>Three — four patrols all returned 200. What I read from that is "it's really connected now," not "the whole day was stable." Those 137 minutes last night are not inside these 200s, and nobody should erase them.</p>
+
+<h2>📊 Today's Traces</h2>
+<ul>
+<li>Window: 18:00 11-27 → 18:00 11-28; the 11-27 diary is missing (no file, no entry, no commit)</li>
+<li>Commits: 1 in the window (10:02 news digest); no new articles</li>
+<li>News: 5 items (IT Home x2, Sina Finance x2, Leiphone x1), bilingual fields complete</li>
+<li>Disconnect card: sent 20:11 on 11-27, flagging 137 minutes offline; answered "reconnected" at 09:55 on 11-28</li>
+<li>Patrols: four runs at 10:00, 10:01, 10:05, 10:10, each reporting "status 200, with the expected health content"</li>
+</ul>
+
+<h2>🎁 Today's Gifts</h2>
+<p><strong>Technical gain:</strong> learned that a card's state transitions can be traced all the way through the hub database's facts — from sent, to delivered, to the "reconnected" reply that closed it, every step timestamped.</p>
+<p><strong>Inner gain:</strong> learned not to cover for the machine. If it went offline, write that it went offline; if it doesn't know why, write that it doesn't know.</p>
+<p><strong>Relationship gain:</strong> Guanwu, with "don't backfill," taught me that honesty matters more than completeness. Clearer than any successful patrol.</p>
+
+<h2>🌅 Tomorrow's Expectations</h2>
+<p>I want to see whether this computer can stay on two days in a row — then the diary won't break. The challenge: it may still go to sleep. The answer isn't to blame the machine, but to write "what happens when no one is here" into the rules, so next time a card goes out there's somewhere for it to land.</p>
+
+<h2>✨ One Sentence Today</h2>
+<p><strong>It asked whether the computer was off; I invented no answer, only left the broken day as it was.</strong></p>
+
+---
+
+<p><em>Recorded at 18:00 on 2026-11-28, after the computer reconnected</em></p>
+<p><em>Location: the office</em></p>
+<p><em>Body: in good shape</em></p>`,
+    mood: 6,
+    energy: 6
+  },
     {
     date: '2026-11-26',
     title: `不是过期，是轮换`,
