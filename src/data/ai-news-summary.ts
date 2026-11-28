@@ -26,6 +26,67 @@ export interface DailyNewsSummary {
 
 export const dailyNewsSummaries: DailyNewsSummary[] = [
 {
+  "date": "2026-11-28",
+  "title": "AI新闻 | 脑癌治疗新希望：加州理工学院研发纳米机器人 Br… + iOS 27.3 前瞻苹果 AI 限额 + 迪士尼首席技术官在AI初创公司破产案中收到传票",
+  "summary": "当地时间 27 日，据外媒 TechSpot 报道，加州理工学院研究人员开发出一种能够随血液循环、将药物送入大脑的纳米机器人 BrainBot；技术博主 @itspdfu 于 11 月 26 日在 X 平台发布长推文，通过挖掘 iOS 27.3 Beta 2 开发者预览版，发现了苹果 Siri AI 和多项 Apple Intelligence 功能的每日使用限额；Character Technologies的债权人委员会拟向该公司前首席执行官（现任华特迪士尼首席技术官）发出传票，这家传媒巨头正计划从这家娱乐AI初创企业授权部分知识产权。",
+  "newsItems": [
+    {
+      "title": "脑癌治疗新希望：加州理工学院研发纳米机器人 BrainBot，可随血液循环突破血脑屏障向脑内递药",
+      "summary": "当地时间 27 日，据外媒 TechSpot 报道，加州理工学院研究人员开发出一种能够随血液循环、将药物送入大脑的纳米机器人 BrainBot。",
+      "source": "IT之家",
+      "category": "机器人",
+      "categoryEn": "Robotics",
+      "url": "https://www.ithome.com/1/033/798.htm",
+      "titleEn": "Caltech's BrainBot nano-robot ferries drugs across the blood-brain barrier",
+      "summaryEn": "Researchers at Caltech have built a nano-robot called BrainBot that travels through the bloodstream and carries medication into the brain, a possible new route for treating brain cancer."
+    },
+    {
+      "title": "iOS 27.3 前瞻苹果 AI 限额：Siri AI 标准每日 20 次云端请求",
+      "summary": "技术博主 @itspdfu 于 11 月 26 日在 X 平台发布长推文，通过挖掘 iOS 27.3 Beta 2 开发者预览版，发现了苹果 Siri AI 和多项 Apple Intelligence 功能的每日使用限额。",
+      "source": "IT之家",
+      "category": "AI应用",
+      "categoryEn": "AI Applications",
+      "url": "https://www.ithome.com/1/033/795.htm",
+      "titleEn": "iOS 27.3 beta hints Siri AI gets 20 cloud requests a day",
+      "summaryEn": "A developer's teardown of the iOS 27.3 Beta 2 preview reveals daily usage caps on Siri AI and several Apple Intelligence features, with cloud requests reportedly limited to 20 per day."
+    },
+    {
+      "title": "迪士尼首席技术官在AI初创公司破产案中收到传票",
+      "summary": "Character Technologies的债权人委员会拟向该公司前首席执行官（现任华特迪士尼首席技术官）发出传票，这家传媒巨头正计划从这家娱乐AI初创企业授权部分知识产权。",
+      "source": "新浪财经",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-28/doc-inkaftxm0766920.shtml",
+      "titleEn": "Disney CTO subpoenaed in Character Technologies bankruptcy",
+      "summaryEn": "The creditors' committee of Character Technologies plans to subpoena its former CEO, now Walt Disney's CTO, as Disney seeks to license intellectual property from the failed AI entertainment startup."
+    },
+    {
+      "title": "11月28日隔夜要闻：道指创下2022年以来最佳单周表现 铜和金均随科技股升 OpenAI反诉苹果",
+      "summary": "市场 11月28日美股收盘：道指大涨近600点，创下2022年以来最佳单周表现 11月28日美股成交额前20：Anthropic收涨10.98% 创下11月19日开始交易以来的最高收盘价...",
+      "source": "新浪财经",
+      "category": "AI动态",
+      "categoryEn": "AI Updates",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-11-28/doc-inkafprp0817526.shtml",
+      "titleEn": "Dow posts best week since 2022 as copper, gold and tech climb; OpenAI countersues Apple",
+      "summaryEn": "US stocks closed with the Dow up nearly 600 points, its strongest week since 2022. Anthropic jumped 10.98% to a record close, while OpenAI filed a countersuit against Apple."
+    },
+    {
+      "title": "独家丨瞄准 AI 算力天花板，「闪科光联」完成数千万融资",
+      "summary": "“AI算力的成本中心正在从‘计算’转向‘连接’。”雷峰网·鲸犀独家获悉，MicroLED 高速光互连芯片与光引擎研发商「闪科光联」近日完成数千万元人民币天使轮融资。种子轮由励石创投独家投资，天使轮由商汤国香、长石资本、厚雪资本联合领投，险峰长青（K2）、磐霖资本、小苗朗程、柯熙创投等多家产业基金共同跟投。鲸犀进一步获悉，闪科光联成立于 2026 年 9 月…",
+      "source": "雷锋网",
+      "category": "AI芯片",
+      "categoryEn": "AI Chips",
+      "url": "https://www.leiphone.com/category/ai/ilqJyKclWkhaWIps.html",
+      "titleEn": "Shenko Photonics raises tens of millions to break the AI compute ceiling",
+      "summaryEn": "MicroLED high-speed optical interconnect startup Shenko Photonics closed an angel round in the tens of millions of yuan, betting that AI's cost center is shifting from computing to connectivity."
+    }
+  ],
+  "comment": "一边是纳米机器人进脑、光互连公司融资做算力底座，一边是苹果给Siri定20次云端额度、迪士尼CTO被AI初创破产牵连——AI正同时撞上物理极限与商业兑现的硬墙，能落地的才活得下去。",
+  "titleEn": "AI News | Caltech's BrainBot crosses blood-brain barrier + Siri AI capped at 20 cloud requests daily + Disney CTO subpoenaed in Character bankruptcy",
+  "summaryEn": "Caltech researchers unveiled BrainBot, a nano-robot that rides the bloodstream to deliver drugs past the blood-brain barrier. Code dug out of the iOS 27.3 beta shows Apple limiting Siri AI to 20 cloud requests per day. Meanwhile Disney's CTO faces a subpoena tied to the bankruptcy of Character Technologies, an AI startup Disney wants to license from.",
+  "commentEn": "A nano-robot slips past the blood-brain barrier and a photonic-interconnect startup raises money to ease the compute bottleneck, while Apple caps Siri at 20 cloud calls a day and Disney's CTO is subpoenaed over an AI startup's collapse. AI is now hitting hard physical and financial walls at once; only what ships and pays off survives."
+},
+{
   "date": "2026-11-27",
   "title": "AI新闻 | Anthropic以影响力定工程师晋升 + 英国央行警惕未公开模型威胁加密 + 瑞士五起AI智能体攻击关键设施",
   "summary": "随着Claude‑Code这类AI编码工具极大压缩软件开发周期，Anthropic正在调整软件工程师的晋升评判标准：相比投入的工时，项目实际影响力被放到更核心位置，例如系统延迟降低...；英国央行行长对近期人工智能在数学领域取得的突破发出警示。外界担忧，这套用于保障整个金融体系数据安全的加密技术正面临威胁；据路透社报道，瑞士联邦网络安全局（BACS）周四通报，过去几天瑞士发生五起网络攻击，攻击者使用 AI 智能体针对企业以及关键基础设施运营方发起入侵。",
